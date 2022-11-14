@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class=main>
+<link rel=stylesheet href=gnatdoc.css><body class=content><h1>ZLib.Streams</h1><h2>Entities</h2><h3>Simple Types</h3><ul><li><a href=#6e952b31993c01869272a3534a7d6d0c46d7368621014467a35f31ab3b88c5ba>Stream_Mode</a></ul><h3>Tagged Types</h3><ul><li><a href=#490ddd9a09be6aed60811045b481d0f52d8e42362f77e5a81d8ebabda6973020>Stream_Type</a></ul><h3>Access Types</h3><ul><li><a href=#71033b5a946aeb27f0a99a0c1a6758033c7448c357cfe6a2a443d00ba787a5d9>Stream_Access</a></ul><h3>Subprograms</h3><ul><li><a href=#a23a33ff7f23076a205186de868b830a1f3132bac7ac29038ac4f4869bde3f49>Close</a><li><a href=#9c6ca302ff6124fff3679a5e61c23b2724de9ab55df627b91795c8b739cb2cee>Create</a><li><a href=#f62bee02d2c2f1e04ebac488a2cf969ee19a948c7306792cd3f9cdd632b1c4c9>Flush</a><li><a href=#2cb3fce900174bae9307cc1ea189110ae472ffde1382001138cc0cec08374004>Is_Open</a><li><a href=#a42780f090eae58391857e2272c88942c6d47a859ed09f594a512c58def7d258>Read</a><li><a href=#1ba1d17fd429b6987240e7a4ed42d28b66cf2269a2c42f5b2b5808119df11e2a>Read_Total_In</a><li><a href=#91512e16d75e1b52182b27ebd52d1dd45ff1b63e48b1fe2373cab3b2dfe1c10c>Read_Total_Out</a><li><a href=#96b20a99bd8fc90cd5085dfa123e54407a59091f5c7bd86e3b8a8ae108b44703>Write</a><li><a href=#05883f7e7ae918d297c437947dd911f7d4f8b9112ade48f52de8d7d2c037788e>Write_Total_In</a><li><a href=#de5b11550d2412a73705f76877a9887c009c13c462f4d34d7c1c263eff7a1cd9>Write_Total_Out</a></ul><h2>Description</h2><p>$Id: zlib-streams.ads,v 1.12 2004/05/31 10:53:40 vagul Exp $<h4 id=a23a33ff7f23076a205186de868b830a1f3132bac7ac29038ac4f4869bde3f49>Close</h4><pre class=ada-code-snippet><code>procedure Close (Stream : in out Stream_Type)
+</code></pre><h5>Parameters</h5><dl><dt>Stream<dd></dl><h4 id=9c6ca302ff6124fff3679a5e61c23b2724de9ab55df627b91795c8b739cb2cee>Create</h4><pre class=ada-code-snippet><code>procedure Create
+  (Stream            :    out Stream_Type;
+   Mode              : in     Stream_Mode;
+   Back              : in     Stream_Access;
+   Back_Compressed   : in     Boolean;
+   Level             : in     Compression_Level := Default_Compression;
+   Strategy          : in     Strategy_Type     := Default_Strategy;
+   Header            : in     Header_Type       := Default;
+   Read_Buffer_Size  : in     Ada.Streams.Stream_Element_Offset
+                                 := Default_Buffer_Size;
+   Write_Buffer_Size : in     Ada.Streams.Stream_Element_Offset
+                                 := Default_Buffer_Size)
+</code></pre><p>Create the Comression/Decompression stream. If mode is In_Stream then Write operation is disabled. If mode is Out_Stream then Read operation is disabled.<h5>Parameters</h5><dl><dt>Stream<dd><dt>Mode<dd><dt>Back<dd><dt>Back_Compressed<dd><dt>Level<dd><dt>Strategy<dd><dt>Header<dd><dt>Read_Buffer_Size<dd><dt>Write_Buffer_Size<dd></dl><h4 id=f62bee02d2c2f1e04ebac488a2cf969ee19a948c7306792cd3f9cdd632b1c4c9>Flush</h4><pre class=ada-code-snippet><code>procedure Flush
+  (Stream : in out Stream_Type;
+   Mode   : in     Flush_Mode := Sync_Flush)
+</code></pre><p>Flush the written data to the back stream, all data placed to the compressor is flushing to the Back stream. Should not be used untill necessary, becouse it is decreasing compression.<h5>Parameters</h5><dl><dt>Stream<dd><dt>Mode<dd></dl><h4 id=2cb3fce900174bae9307cc1ea189110ae472ffde1382001138cc0cec08374004>Is_Open</h4><pre class=ada-code-snippet><code>function Is_Open (Stream : Stream_Type) return Boolean
+</code></pre><h5>Parameters</h5><dl><dt>Stream<dd></dl><h5>Return Value</h5><dl><dd></dl><h4 id=a42780f090eae58391857e2272c88942c6d47a859ed09f594a512c58def7d258>Read</h4><pre class=ada-code-snippet><code>procedure Read
+  (Stream : in out Stream_Type;
+   Item   :    out Ada.Streams.Stream_Element_Array;
+   Last   :    out Ada.Streams.Stream_Element_Offset)
+</code></pre><h5>Parameters</h5><dl><dt>Stream<dd><dt>Item<dd><dt>Last<dd></dl><h4 id=1ba1d17fd429b6987240e7a4ed42d28b66cf2269a2c42f5b2b5808119df11e2a>Read_Total_In</h4><pre class=ada-code-snippet><code>function Read_Total_In (Stream : in Stream_Type) return Count
+</code></pre><p>Return total number of bytes read from back stream so far.<h5>Parameters</h5><dl><dt>Stream<dd></dl><h5>Return Value</h5><dl><dd></dl><h4 id=91512e16d75e1b52182b27ebd52d1dd45ff1b63e48b1fe2373cab3b2dfe1c10c>Read_Total_Out</h4><pre class=ada-code-snippet><code>function Read_Total_Out (Stream : in Stream_Type) return Count
+</code></pre><p>Return total number of bytes read so far.<h5>Parameters</h5><dl><dt>Stream<dd></dl><h5>Return Value</h5><dl><dd></dl><h4 id=71033b5a946aeb27f0a99a0c1a6758033c7448c357cfe6a2a443d00ba787a5d9>Stream_Access</h4><pre class=ada-code-snippet><code>type Stream_Access is access all Ada.Streams.Root_Stream_Type'Class;
+</code></pre><h4 id=6e952b31993c01869272a3534a7d6d0c46d7368621014467a35f31ab3b88c5ba>Stream_Mode</h4><pre class=ada-code-snippet><code>type Stream_Mode is (In_Stream, Out_Stream, Duplex);
+</code></pre><h5>Enumeration Literal</h5><dl><dt>In_Stream<dd><dt>Out_Stream<dd><dt>Duplex<dd></dl><h4 id=490ddd9a09be6aed60811045b481d0f52d8e42362f77e5a81d8ebabda6973020>Stream_Type</h4><pre class=ada-code-snippet><code>type Stream_Type is
+   new Ada.Streams.Root_Stream_Type with private;
+</code></pre><h4 id=96b20a99bd8fc90cd5085dfa123e54407a59091f5c7bd86e3b8a8ae108b44703>Write</h4><pre class=ada-code-snippet><code>procedure Write
+  (Stream : in out Stream_Type;
+   Item   : in     Ada.Streams.Stream_Element_Array)
+</code></pre><h5>Parameters</h5><dl><dt>Stream<dd><dt>Item<dd></dl><h4 id=05883f7e7ae918d297c437947dd911f7d4f8b9112ade48f52de8d7d2c037788e>Write_Total_In</h4><pre class=ada-code-snippet><code>function Write_Total_In (Stream : in Stream_Type) return Count
+</code></pre><p>Return total number of bytes written so far.<h5>Parameters</h5><dl><dt>Stream<dd></dl><h5>Return Value</h5><dl><dd></dl><h4 id=de5b11550d2412a73705f76877a9887c009c13c462f4d34d7c1c263eff7a1cd9>Write_Total_Out</h4><pre class=ada-code-snippet><code>function Write_Total_Out (Stream : in Stream_Type) return Count
+</code></pre><p>Return total number of bytes written to the back stream.<h5>Parameters</h5><dl><dt>Stream<dd></dl><h5>Return Value</h5><dl><dd></dl>

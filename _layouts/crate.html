@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<h1>{{ page.crate }} </h1>
+{% assign crate_info = site.data.global_doc_info[page.crate] %}
+<ul>
+  <li>
+    <a href="{{ crate_info['latest'] }}">latest</a>
+  </li>
+{% for release in crate_info['releases'] %}
+  <li>
+    <a href="{{ release[0] }}">
+   {{ release[0] }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+{{ content }}

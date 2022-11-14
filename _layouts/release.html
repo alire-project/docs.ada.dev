@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>{{ page.crate}} {{ page.version }}</h1>
+
+<ul>
+{% for release in site.data.global_doc_info[page.crate] %}
+  <li>
+    <a href="{{ release[0] }}">
+   {{ release[0] }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+{{ content }}

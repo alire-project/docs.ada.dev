@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html class=main>
+<link rel=stylesheet href=gnatdoc.css><body class=content><h1>AAA.Caches</h1><h2>Entities</h2><h3>Interface Types</h3><ul><li><a href=#b1ea00a5a1f92c096742f959241897d08dcfa16af2468a8c1cf86abb49e839b6>Cache</a></ul><h3>Subprograms</h3><ul><li><a href=#8eb33072448b5452f2955f7b773c56d4a10aea6315e7e8c58d0ca0dd959c3d12>Discard</a><li><a href=#d81f874db857db84262b9cb3f0f1a26411844fe0512cc252322a8c125d6a8684>Has_Element</a></ul><h2>Description</h2><h4 id=b1ea00a5a1f92c096742f959241897d08dcfa16af2468a8c1cf86abb49e839b6>Cache</h4><pre class=ada-code-snippet><code>type Cache is limited interface;
+</code></pre><h4 id=8eb33072448b5452f2955f7b773c56d4a10aea6315e7e8c58d0ca0dd959c3d12>Discard</h4><pre class=ada-code-snippet><code>procedure Discard (This : in out Cache)
+</code></pre><p>Discard the cached value and force a reload on next use<h5>Parameters</h5><dl><dt>This<dd></dl><h4 id=d81f874db857db84262b9cb3f0f1a26411844fe0512cc252322a8c125d6a8684>Has_Element</h4><pre class=ada-code-snippet><code>function Has_Element (This : Cache) return Boolean
+</code></pre><p>Say if there is a cached value<h5>Parameters</h5><dl><dt>This<dd></dl><h5>Return Value</h5><dl><dd></dl>

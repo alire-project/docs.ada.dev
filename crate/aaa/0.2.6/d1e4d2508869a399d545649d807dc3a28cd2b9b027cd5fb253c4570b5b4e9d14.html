@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html class=main>
+<link rel=stylesheet href=gnatdoc.css><body class=content><h1>AAA.Processes</h1><h2>Entities</h2><h3>Record Types</h3><ul><li><a href=#8b7f40161f48490bdf803819148f877712c17130853f77e2381920612b8fc986>Result</a></ul><h3>Subprograms</h3><ul><li><a href=#3150b988121935bc0bf801090ce8c3de091cb666f5ee7e076ef2d968f4a20f9f>Run</a></ul><h2>Description</h2><h4 id=8b7f40161f48490bdf803819148f877712c17130853f77e2381920612b8fc986>Result</h4><pre class=ada-code-snippet><code>type Result is record
+   Exit_Code : aliased Integer;
+   Output    : Strings.Vector;
+end record;
+</code></pre><h5>Record fields</h5><dl><dt>Exit_Code<dd><dt>Output<dd></dl><h4 id=3150b988121935bc0bf801090ce8c3de091cb666f5ee7e076ef2d968f4a20f9f>Run</h4><pre class=ada-code-snippet><code>function Run (Command_Line   : Strings.Vector;
+              Input          : String := "";
+              Err_To_Out     : Boolean := False;
+              Raise_On_Error : Boolean := True)
+              return Result
+</code></pre><p>Run a command, giving optional Input to it, and capture its output, optionally including stderr output. If the child's process exit code is /= 0, Child_Error will be raised when Raise_On_Error. CR &amp; LF sequences will be interpreted as plain LF sequences. NOTE: due to unresolved problems with Windows polling, on Windows Input *must* be "", and a temporary file will be created on the current directory during process spawning. (Might affect git status and the like, for example.)<h5>Parameters</h5><dl><dt>Command_Line<dd><dt>Input<dd><dt>Err_To_Out<dd><dt>Raise_On_Error<dd></dl><h5>Return Value</h5><dl><dd></dl>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html class=main>
+<link rel=stylesheet href=gnatdoc.css><body class=content><h1>AAA.Table_IO</h1><h2>Entities</h2><h3>Array Types</h3><ul><li><a href=#99392b484d545cc60fa4fbb0e119d6e4098c00d00f1adbdfc102b75013665c9a>Alignments</a></ul><h3>Record Types</h3><ul><li><a href=#901a09521a388a06cb54fc7f4596da75bef2f9125b8e797f18966c9b782b633f>Reference</a></ul><h3>Tagged Types</h3><ul><li><a href=#b399768e2ee99928e4f1549116734ec77e988b0fcd37b685aa71f30f47298173>Table</a></ul><h3>Subprograms</h3><ul><li><a href=#0e528c2d81e270b8608b71e23ce437ad00f111634c9a4fa3ca43d813deac73cf>Append</a><li><a href=#ea5b29f015fa07a8b6969eaeddbbb65bdcc9f04912eee32f5084ddaa62ea1afa>Append</a><li><a href=#5480987dda82d3af61e4828aa084491de8f90811e45c55a69b9d59abb439454e>New_Row</a><li><a href=#2d2f4e03f780ebb053672722193cfd2b7d63c3c863f5d3c4a3df5d8c26d9e024>Print</a></ul><h2>Description</h2><h4 id=99392b484d545cc60fa4fbb0e119d6e4098c00d00f1adbdfc102b75013665c9a>Alignments</h4><pre class=ada-code-snippet><code>type Alignments is array (Positive range &lt;>) of Ada.Strings.Alignment;
+</code></pre><h4 id=0e528c2d81e270b8608b71e23ce437ad00f111634c9a4fa3ca43d813deac73cf>Append</h4><pre class=ada-code-snippet><code>function Append (T : in out Table; Cell : String) return Reference
+</code></pre><h5>Parameters</h5><dl><dt>T<dd><dt>Cell<dd></dl><h5>Return Value</h5><dl><dd></dl><h4 id=ea5b29f015fa07a8b6969eaeddbbb65bdcc9f04912eee32f5084ddaa62ea1afa>Append</h4><pre class=ada-code-snippet><code>procedure Append (T : in out Table; Cell : String)
+</code></pre><h5>Parameters</h5><dl><dt>T<dd><dt>Cell<dd></dl><h4 id=5480987dda82d3af61e4828aa084491de8f90811e45c55a69b9d59abb439454e>New_Row</h4><pre class=ada-code-snippet><code>procedure New_Row (T : in out Table)
+</code></pre><h5>Parameters</h5><dl><dt>T<dd></dl><h4 id=2d2f4e03f780ebb053672722193cfd2b7d63c3c863f5d3c4a3df5d8c26d9e024>Print</h4><pre class=ada-code-snippet><code>procedure Print (T         : Table;
+                 Separator : String := " ";
+                 Align     : Alignments := (1 .. 0 => &lt;>))
+</code></pre><h5>Parameters</h5><dl><dt>T<dd><dt>Separator<dd><dt>Align<dd></dl><h4 id=901a09521a388a06cb54fc7f4596da75bef2f9125b8e797f18966c9b782b633f>Reference</h4><pre class=ada-code-snippet><code>type Reference (Table : access Table_IO.Table) Is limited null Record
+  with Implicit_Dereference => Table;
+</code></pre><h5>Record fields</h5><dl><dt>Table<dd></dl><h4 id=b399768e2ee99928e4f1549116734ec77e988b0fcd37b685aa71f30f47298173>Table</h4><pre class=ada-code-snippet><code>type Table is tagged private;
+</code></pre>

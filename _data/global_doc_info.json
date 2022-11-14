@@ -1,0 +1,42 @@
+{
+  "aaa": {
+    "latest": "0.2.6",
+    "releases": {
+      "0.1.0": {
+        "date": "2022/11/18-19:10:49",
+        "status": "doc build OK"
+      },
+      "0.2.6": {
+        "date": "2022/11/18-19:10:47",
+        "status": "doc build OK"
+      }
+    }
+  },
+  "geste": {
+    "latest": "1.1.0",
+    "releases": {
+      "1.1.0": {
+        "gnatdoc_error": "<ConcreteTypeDecl [\"Value\"] geste-maths_types.ads:47:4-49:28> => <OrdinaryFixedPointDef geste-maths_types.ads:47:18-47:67>\n\nraised LANGKIT_SUPPORT.ERRORS.PROPERTY_ERROR : geste-sprite.ads:49:31-49:41: dereferencing a null access\nERROR: Command [\"gnatdoc4\", \"-P\", \"geste.gpr\", \"--output-dir\", \"/home/chouteau/src/github/alire/docs.ada.dev/crate/geste/1.1.0\", \"--no-subprojects\"] exited with code 1\n",
+        "status": "doc build FAIL"
+      }
+    }
+  },
+  "tash": {
+    "latest": "8.7.0",
+    "releases": {
+      "8.7.0": {
+        "gnatdoc_error": "<PackageRenamingDecl [\"C\"] cargv.ads:22:4-22:35>\n<PackageRenamingDecl [\"C\"] chelper.ads:20:4-20:35>\n<PackageRenamingDecl [\"C\"] tcl-ada.ads:52:4-52:35>\n<ExceptionDecl [\"Tcl_Error_Exception\"] tcl-ada.ads:54:4-54:36>\n<PackageRenamingDecl [\"C\"] tcl-tk-ada.ads:37:4-37:35>\n\nraised LANGKIT_SUPPORT.ERRORS.PROPERTY_ERROR : tcl-tk-ada.ads:646:4-650:24: Infinite recursion detected\nERROR: Command [\"gnatdoc4\", \"-P\", \"tash.gpr\", \"--output-dir\", \"/home/chouteau/src/github/alire/docs.ada.dev/crate/tash/8.7.0\", \"--no-subprojects\"] exited with code 1\n",
+        "status": "doc build FAIL"
+      }
+    }
+  },
+  "zlib_ada": {
+    "latest": "1.3.0",
+    "releases": {
+      "1.3.0": {
+        "date": "2022/11/18-19:10:51",
+        "status": "doc build OK"
+      }
+    }
+  }
+}
