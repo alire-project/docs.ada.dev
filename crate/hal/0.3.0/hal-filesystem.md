@@ -1,0 +1,127 @@
+---
+crate: hal
+layout: gnatdoc
+gnatdoc: {
+name: "HAL.Filesystem",
+qualified_name: "HAL.Filesystem",
+signature: "hal.filesystem",
+enclosing: "hal",
+is_private: false,
+documentation: "----------------------------------------------------------------------------\n                                                                          --\n                     Copyright (C) 2015-2017, AdaCore                     --\n                                                                          --\n  Redistribution and use in source and binary forms, with or without      --\n  modification, are permitted provided that the following conditions are  --\n  met:                                                                    --\n     1. Redistributions of source code must retain the above copyright    --\n        notice, this list of conditions and the following disclaimer.     --\n     2. Redistributions in binary form must reproduce the above copyright --\n        notice, this list of conditions and the following disclaimer in   --\n        the documentation and/or other materials provided with the        --\n        distribution.                                                     --\n     3. Neither the name of the copyright holder nor the names of its     --\n        contributors may be used to endorse or promote products derived   --\n        from this software without specific prior written permission.     --\n                                                                          --\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS    --\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT      --\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR  --\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT   --\n   HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, --\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT       --\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,  --\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY  --\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT    --\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  --\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   --\n                                                                          --\n----------------------------------------------------------------------------",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "File_Mode",
+       qualified_name: "HAL.Filesystem.File_Mode",
+       signature: "hal.filesystem.file_mode",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type File_Mode is (Read_Only, Write_Only, Read_Write);",
+       }   ,
+       {
+       name: "File_Size",
+       qualified_name: "HAL.Filesystem.File_Size",
+       signature: "hal.filesystem.file_size",
+       enclosing: "",
+       is_private: false,
+       documentation: "Modern fs all support 64-bit file size. Only old or limited ones support\nmax 32-bit (FAT in particular). So let's see big and not limit ourselves\nin this API with 32-bit only.",
+       documentation_snippet: "type File_Size is new HAL.UInt64;",
+       }   ,
+       {
+       name: "Seek_Mode",
+       qualified_name: "HAL.Filesystem.Seek_Mode",
+       signature: "hal.filesystem.seek_mode",
+       enclosing: "",
+       is_private: false,
+       documentation: "\n@enum From_Start\n  Seek from the end of the file, backward\n@enum From_End\n  Seek from the current position, forward\n@enum Forward\n  Seek from the current position, backward\n@enum Backward",
+       documentation_snippet: "type Seek_Mode is\n  (\n   From_Start,\n   From_End,\n   Forward,\n   Backward);",
+       }   ,
+       {
+       name: "Status_Code",
+       qualified_name: "HAL.Filesystem.Status_Code",
+       signature: "hal.filesystem.status_code",
+       enclosing: "",
+       is_private: false,
+       documentation: "\n@enum OK\n@enum Non_Empty_Directory\n@enum Disk_Error\n  A hardware error occurred in the low level disk I/O\n@enum Disk_Full\n@enum Internal_Error\n@enum Drive_Not_Ready\n@enum No_Such_File\n@enum No_Such_Path\n@enum Not_Mounted\n  The mount point is invalid\n@enum Invalid_Name\n@enum Access_Denied\n@enum Already_Exists\n@enum Invalid_Object_Entry\n@enum Write_Protected\n@enum Invalid_Drive\n@enum No_Filesystem\n  The volume is not a FAT volume\n@enum Locked\n@enum Too_Many_Open_Files\n  All available handles are used\n@enum Invalid_Parameter\n@enum Input_Output_Error\n@enum No_MBR_Found\n@enum No_Partition_Found\n@enum No_More_Entries\n@enum Read_Only_File_System\n@enum Operation_Not_Permitted",
+       documentation_snippet: "type Status_Code is\n  (OK,\n   Non_Empty_Directory,\n   Disk_Error,\n   Disk_Full,\n   Internal_Error,\n   Drive_Not_Ready,\n   No_Such_File,\n   No_Such_Path,\n   Not_Mounted,\n   Invalid_Name,\n   Access_Denied,\n   Already_Exists,\n   Invalid_Object_Entry,\n   Write_Protected,\n   Invalid_Drive,\n   No_Filesystem,\n   Locked,\n   Too_Many_Open_Files,\n   Invalid_Parameter,\n   Input_Output_Error,\n   No_MBR_Found,\n   No_Partition_Found,\n   No_More_Entries,\n   Read_Only_File_System,\n   Operation_Not_Permitted);",
+       }   ,
+   ]
+,interface_types:    [
+       {
+       name: "Directory_Handle",
+       qualified_name: "HAL.Filesystem.Directory_Handle",
+       signature: "hal.filesystem.directory_handle",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Directory_Handle is limited interface;",
+       }   ,
+       {
+       name: "File_Handle",
+       qualified_name: "HAL.Filesystem.File_Handle",
+       signature: "hal.filesystem.file_handle",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type File_Handle is limited interface;",
+       }   ,
+       {
+       name: "Filesystem_Driver",
+       qualified_name: "HAL.Filesystem.Filesystem_Driver",
+       signature: "hal.filesystem.filesystem_driver",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Filesystem_Driver is limited interface;",
+       }   ,
+       {
+       name: "Node_Handle",
+       qualified_name: "HAL.Filesystem.Node_Handle",
+       signature: "hal.filesystem.node_handle",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Node_Handle is interface;",
+       }   ,
+   ]
+,access_types:    [
+       {
+       name: "Any_Directory_Handle",
+       qualified_name: "HAL.Filesystem.Any_Directory_Handle",
+       signature: "hal.filesystem.any_directory_handle",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Any_Directory_Handle is access all Directory_Handle'Class;",
+       }   ,
+       {
+       name: "Any_File_Handle",
+       qualified_name: "HAL.Filesystem.Any_File_Handle",
+       signature: "hal.filesystem.any_file_handle",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Any_File_Handle is access all File_Handle'Class;",
+       }   ,
+       {
+       name: "Any_Filesystem_Driver",
+       qualified_name: "HAL.Filesystem.Any_Filesystem_Driver",
+       signature: "hal.filesystem.any_filesystem_driver",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Any_Filesystem_Driver is access all Filesystem_Driver'Class;",
+       }   ,
+       {
+       name: "Any_Node_Handle",
+       qualified_name: "HAL.Filesystem.Any_Node_Handle",
+       signature: "hal.filesystem.any_node_handle",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Any_Node_Handle is access all Node_Handle'Class;",
+       }   ,
+   ]
+,}
+---

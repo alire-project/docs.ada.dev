@@ -1,0 +1,147 @@
+---
+crate: dynamo
+layout: gnatdoc
+gnatdoc: {
+name: "Sinput",
+qualified_name: "Sinput",
+signature: "sinput",
+enclosing: "",
+is_private: false,
+documentation: "In GNAT, a physical line is ended by any of the sequences LF, CR/LF, or\nCR. LF is used in typical Unix systems, CR/LF in DOS systems, and CR\nalone in System 7. In addition, we recognize any of these sequences in\nany of the operating systems, for better behavior in treating foreign\nfiles (e.g. a Unix file with LF terminators transferred to a DOS system).\nFinally, wide character codes in categories Separator, Line and Separator,\nParagraph are considered to be physical line terminators.",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "Instance_Id",
+       qualified_name: "Sinput.Instance_Id",
+       signature: "sinput.instance_id",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Instance_Id is new Nat;",
+       }   ,
+       {
+       name: "License_Type",
+       qualified_name: "Sinput.License_Type",
+       signature: "sinput.license_type",
+       enclosing: "",
+       is_private: false,
+       documentation: "\n@enum Unknown\n  Licensing status of this source unit is unknown\n@enum Restricted\n  This is a non-GPL'ed unit that is restricted from depending\n  on GPL'ed units (e.g. proprietary code is in this category)\n@enum GPL\n  This file is licensed under the unmodified GPL. It is not allowed\n  to depend on Non_GPL units, and Non_GPL units may not depend on\n  this source unit.\n@enum Modified_GPL\n  This file is licensed under the GNAT modified GPL (see header of\n  This file for wording of the modification). It may depend on other\n  Modified_GPL units or on unrestricted units.\n@enum Unrestricted\n  The license on this file is permitted to depend on any other\n  units, or have other units depend on it, without violating the\n  license of this unit. Examples are public domain units, and\n  units defined in the RM).",
+       documentation_snippet: "type License_Type is\n  (Unknown,\n   Restricted,\n   GPL,\n   Modified_GPL,\n   Unrestricted);",
+       }   ,
+       {
+       name: "Type_Of_File",
+       qualified_name: "Sinput.Type_Of_File",
+       signature: "sinput.type_of_file",
+       enclosing: "",
+       is_private: false,
+       documentation: "\n@enum Src\n  Normal Ada source file\n@enum Config\n  Configuration pragma file\n@enum Def\n  Preprocessing definition file\n@enum Preproc\n  Source file with preprocessing commands to be preprocessed",
+       documentation_snippet: "type Type_Of_File is (\n   Src,\n   Config,\n   Def,\n   Preproc);",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "SFI",
+       qualified_name: "Sinput.SFI",
+       signature: "sinput.sfi",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype SFI is Source_File_Index;",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "Internal_Source_Ptr",
+       qualified_name: "Sinput.Internal_Source_Ptr",
+       signature: "sinput.internal_source_ptr",
+       enclosing: "",
+       is_private: false,
+       documentation: "Pointer to internal source buffer",
+       documentation_snippet: "Internal_Source_Ptr : constant Source_Buffer_Ptr :=\n                        Internal_Source'Unrestricted_Access;",
+       }   ,
+       {
+       name: "No_Instance_Id",
+       qualified_name: "Sinput.No_Instance_Id",
+       signature: "sinput.no_instance_id",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "No_Instance_Id : constant Instance_Id;",
+       }   ,
+   ]
+,variables:    [
+       {
+       name: "Current_Source_File",
+       qualified_name: "Sinput.Current_Source_File",
+       signature: "sinput.current_source_file",
+       enclosing: "",
+       is_private: false,
+       documentation: "Source_File table index of source file currently being scanned.\nInitialized so that some tools (such as gprbuild) can be built with\n-gnatVa and pragma Initialized_Scalars without problems.",
+       documentation_snippet: "Current_Source_File : Source_File_Index := No_Source_File;",
+       }   ,
+       {
+       name: "Current_Source_Unit",
+       qualified_name: "Sinput.Current_Source_Unit",
+       signature: "sinput.current_source_unit",
+       enclosing: "",
+       is_private: false,
+       documentation: "Unit number of source file currently being scanned. The special value\nof No_Unit indicates that the configuration pragma file is currently\nbeing scanned (this has no entry in the unit table).",
+       documentation_snippet: "Current_Source_Unit : Unit_Number_Type;",
+       }   ,
+       {
+       name: "Internal_Source",
+       qualified_name: "Sinput.Internal_Source",
+       signature: "sinput.internal_source",
+       enclosing: "",
+       is_private: false,
+       documentation: "This buffer is used internally in the compiler when the lexical analyzer\nis used to scan a string from within the compiler. The procedure is to\nestablish Internal_Source_Ptr as the value of Source, set the string to\nbe scanned, appropriately terminated, in this buffer, and set Scan_Ptr\nto point to the start of the buffer. It is a fatal error if the scanner\nsignals an error while scanning a token in this internal buffer.",
+       documentation_snippet: "Internal_Source : aliased Source_Buffer (1 .. 81);",
+       }   ,
+       {
+       name: "Main_Source_File",
+       qualified_name: "Sinput.Main_Source_File",
+       signature: "sinput.main_source_file",
+       enclosing: "",
+       is_private: false,
+       documentation: "This is set to the source file index of the main unit",
+       documentation_snippet: "Main_Source_File : Source_File_Index := No_Source_File;",
+       }   ,
+       {
+       name: "Source",
+       qualified_name: "Sinput.Source",
+       signature: "sinput.source",
+       enclosing: "",
+       is_private: false,
+       documentation: "Current source (copy of Source_File.Table (Current_Source_Unit).Source)",
+       documentation_snippet: "Source : Source_Buffer_Ptr;",
+       }   ,
+       {
+       name: "Source_File_Index_Table",
+       qualified_name: "Sinput.Source_File_Index_Table",
+       signature: "sinput.source_file_index_table",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Source_File_Index_Table :\n  array (Int range 0 .. 1 + (Int'Last / Source_Align)) of Source_File_Index;",
+       }   ,
+       {
+       name: "Source_gnat_adc",
+       qualified_name: "Sinput.Source_gnat_adc",
+       signature: "sinput.source_gnat_adc",
+       enclosing: "",
+       is_private: false,
+       documentation: "This is set if a gnat.adc file is present to reference this file",
+       documentation_snippet: "Source_gnat_adc : Source_File_Index := No_Source_File;",
+       }   ,
+       {
+       name: "System_Source_File_Index",
+       qualified_name: "Sinput.System_Source_File_Index",
+       signature: "sinput.system_source_file_index",
+       enclosing: "",
+       is_private: false,
+       documentation: "The file system.ads is always read by the compiler to determine the\nsettings of the target parameters in the private part of System. This\nvariable records the source file index of system.ads. Typically this\nwill be 1 since system.ads is read first.",
+       documentation_snippet: "System_Source_File_Index : SFI;",
+       }   ,
+   ]
+,}
+---

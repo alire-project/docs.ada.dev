@@ -1,0 +1,13 @@
+---
+crate: asfml
+layout: gnatdoc
+gnatdoc: {
+name: "Sf.Network.TcpSocket",
+qualified_name: "Sf.Network.TcpSocket",
+signature: "sf.network.tcpsocket",
+enclosing: "sf.network",
+is_private: false,
+documentation: "//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////",
+documentation_snippet: "",
+}
+---

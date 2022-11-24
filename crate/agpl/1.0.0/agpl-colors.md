@@ -1,0 +1,107 @@
+---
+crate: agpl
+layout: gnatdoc
+gnatdoc: {
+name: "Agpl.Colors",
+qualified_name: "Agpl.Colors",
+signature: "agpl.colors",
+enclosing: "agpl",
+is_private: false,
+documentation: "",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "Alpha",
+       qualified_name: "Agpl.Colors.Alpha",
+       signature: "agpl.colors.alpha",
+       enclosing: "",
+       is_private: false,
+       documentation: "1.0 => Totally transparent",
+       documentation_snippet: "type Alpha      is new Normalized_Component;",
+       }   ,
+       {
+       name: "Blue",
+       qualified_name: "Agpl.Colors.Blue",
+       signature: "agpl.colors.blue",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Blue       is new Normalized_Component;",
+       }   ,
+       {
+       name: "Green",
+       qualified_name: "Agpl.Colors.Green",
+       signature: "agpl.colors.green",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Green      is new Normalized_Component;",
+       }   ,
+       {
+       name: "Hue",
+       qualified_name: "Agpl.Colors.Hue",
+       signature: "agpl.colors.hue",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Hue        is mod 360;",
+       }   ,
+       {
+       name: "Normalized_Component",
+       qualified_name: "Agpl.Colors.Normalized_Component",
+       signature: "agpl.colors.normalized_component",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Normalized_Component is new Float range 0.0 .. 1.0;",
+       }   ,
+       {
+       name: "Red",
+       qualified_name: "Agpl.Colors.Red",
+       signature: "agpl.colors.red",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Red        is new Normalized_Component;",
+       }   ,
+       {
+       name: "Saturation",
+       qualified_name: "Agpl.Colors.Saturation",
+       signature: "agpl.colors.saturation",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Saturation is new Normalized_Component;",
+       }   ,
+       {
+       name: "Value",
+       qualified_name: "Agpl.Colors.Value",
+       signature: "agpl.colors.value",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Value      is new Normalized_Component;",
+       }   ,
+   ]
+,record_types:    [
+       {
+       name: "HSV_Color",
+       qualified_name: "Agpl.Colors.HSV_Color",
+       signature: "agpl.colors.hsv_color",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type HSV_Color is record\n   H : Hue;\n   S : Saturation;\n   V : Value;\nend record;",
+       }   ,
+       {
+       name: "RGB_Color",
+       qualified_name: "Agpl.Colors.RGB_Color",
+       signature: "agpl.colors.rgb_color",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type RGB_Color is record\n   R : Red;\n   G : Green;\n   B : Blue;\nend record;",
+       }   ,
+   ]
+,}
+---

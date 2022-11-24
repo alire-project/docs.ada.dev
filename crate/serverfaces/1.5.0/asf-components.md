@@ -1,0 +1,107 @@
+---
+crate: serverfaces
+layout: gnatdoc
+gnatdoc: {
+name: "ASF.Components",
+qualified_name: "ASF.Components",
+signature: "asf.components",
+enclosing: "asf",
+is_private: false,
+documentation: "Flag indicating whether or not this component should be rendered\n(during Render Response Phase), or processed on any subsequent form submit.\nThe default value for this property is true.",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "UIAttribute",
+       qualified_name: "ASF.Components.UIAttribute",
+       signature: "asf.components.uiattribute",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type UIAttribute is private;",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "ACTION_NAME",
+       qualified_name: "ASF.Components.ACTION_NAME",
+       signature: "asf.components.action_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "ACTION_NAME            : constant String := \"action\";",
+       }   ,
+       {
+       name: "CONVERTER_MESSAGE_NAME",
+       qualified_name: "ASF.Components.CONVERTER_MESSAGE_NAME",
+       signature: "asf.components.converter_message_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "CONVERTER_MESSAGE_NAME : constant String := \"converterMessage\";",
+       }   ,
+       {
+       name: "CONVERTER_NAME",
+       qualified_name: "ASF.Components.CONVERTER_NAME",
+       signature: "asf.components.converter_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "CONVERTER_NAME         : constant String := \"converter\";",
+       }   ,
+       {
+       name: "LABEL_NAME",
+       qualified_name: "ASF.Components.LABEL_NAME",
+       signature: "asf.components.label_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "LABEL_NAME             : constant String := \"label\";",
+       }   ,
+       {
+       name: "RENDERED_NAME",
+       qualified_name: "ASF.Components.RENDERED_NAME",
+       signature: "asf.components.rendered_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "RENDERED_NAME          : constant String := \"rendered\";",
+       }   ,
+       {
+       name: "REQUIRED_MESSAGE_NAME",
+       qualified_name: "ASF.Components.REQUIRED_MESSAGE_NAME",
+       signature: "asf.components.required_message_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "REQUIRED_MESSAGE_NAME  : constant String := \"requiredMessage\";",
+       }   ,
+       {
+       name: "REQUIRED_NAME",
+       qualified_name: "ASF.Components.REQUIRED_NAME",
+       signature: "asf.components.required_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "REQUIRED_NAME          : constant String := \"required\";",
+       }   ,
+       {
+       name: "VALIDATOR_MESSAGE_NAME",
+       qualified_name: "ASF.Components.VALIDATOR_MESSAGE_NAME",
+       signature: "asf.components.validator_message_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "VALIDATOR_MESSAGE_NAME : constant String := \"validatorMessage\";",
+       }   ,
+       {
+       name: "VALUE_NAME",
+       qualified_name: "ASF.Components.VALUE_NAME",
+       signature: "asf.components.value_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "VALUE_NAME             : constant String := \"value\";",
+       }   ,
+   ]
+,}
+---

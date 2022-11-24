@@ -20,15 +20,9 @@ def save_global_doc_info():
     with open(os.path.join(root_dir, GLOBAL_DATA_FILE), 'w') as f:
         json.dump(global_doc_info, f, indent=2, sort_keys=True)
 
-def make_crate_index_md(crate):
-    with open(os.path.join(root_dir, "crate", crate, "index.md"), 'w') as f:
-        f.write("""---
-layout: crate
-crate: %s
----
-""" % crate)
 
 def make_crate_latest_md(crate):
+    os.makedirs(os.path.join(root_dir, "crate", name), exist_ok=True)
     with open(os.path.join(root_dir, "crate", crate, "latest.md"), 'w') as f:
         f.write("""---
 layout: latest_redirect
@@ -36,7 +30,9 @@ crate: %s
 ---
 """ % crate)
 
+
 def make_eror_release_index_md(crate, version, error):
+    os.makedirs(os.path.join(root_dir, "crate", name, version), exist_ok=True)
     with open(os.path.join(root_dir, "crate", crate, version, "index.md"), 'w') as f:
         f.write("""---
 layout: gnatdoc_error
@@ -48,18 +44,25 @@ version: %s
 ```
 """ % (crate, version, error))
 
-# output = subprocess.run(['alr', '--no-tty', '-n', 'search',
-#                             '--list'], stdout=subprocess.PIPE).stdout
+
+def get_stdout(outcome):
+    return outcome.stdout.decode('utf-8', errors='replace')
 
 
-# crates = output.decode('utf-8').splitlines()
-crates = ["aaa     0.2.6    as a a a",
-          "aaa     0.1.0    as a a a",
-          "zlib_ada 1.3.0 a a a",
-          "tash 8.7.0 a a a",
-          "geste 1.1.0 a a a "]
+output = subprocess.run(['alr', '--no-tty', '-n', 'search',
+                            '--list'], stdout=subprocess.PIPE).stdout
 
-pattern = "^([a-z_]*)[\s]+[UX]*[ ]*?([0-9][0-9.a-z+-]+)[\s]+(.*)$"
+
+crates = output.decode('utf-8').splitlines()
+# crates = ["aaa     0.2.6    as a a a",
+#           "aaa     0.1.0    as a a a",
+#           "rp2040_hal  1.1.0    as a a a",
+#           "zlib_ada 1.3.0 a a a",
+#           "tash 8.7.0 a a a",
+#           "geste 1.0.0 a a a ",
+#           "geste 1.1.0 a a a "]
+
+pattern = "^([a-z0-9_]*)[\s]+[UX]*[ ]*?([0-9][0-9.a-z+-]+)[\s]+(.*)$"
 for line in crates:
     print(line)
     match = re.search (pattern, line)
@@ -99,26 +102,40 @@ for line in crates:
                                      stderr=subprocess.STDOUT)
             if outcome.returncode != 0:
                 release_doc_info['status'] = "alr get failed"
-                release_doc_info['alr_get_error'] = outcome.stdout.decode('utf-8')
+                release_doc_info['alr_get_error'] = get_stdout(outcome)
                 make_eror_release_index_md(name, version,
-                                           outcome.stdout.decode('utf-8'))
+                                           get_stdout(outcome))
             else:
                 # Enter crate dir
                 os.chdir(getdir)
 
-                outcome = subprocess.run(['alr', '-n', 'exec', "-P", "--", "gnatdoc4",
-                                          "--output-dir", doc_output_dir, "--no-subprojects"],
+                outcome = subprocess.run(['alr', '-n', 'show', '--jekyll'],
                                          stdout=subprocess.PIPE,
                                          stderr=subprocess.STDOUT)
 
-                if outcome.returncode == 0:
-                    release_doc_info['status'] = "doc build OK"
-                    release_doc_info['date'] = datetime.now().strftime("%Y/%m/%d-%H:%M:%S")
+                if outcome.returncode != 0:
+                    release_doc_info['status'] = "alr show --jekyll FAIL"
+                    release_doc_info['alr_show_error'] = get_stdout(outcome)
                 else:
-                    release_doc_info['status'] = "doc build FAIL"
-                    release_doc_info['gnatdoc_error'] = outcome.stdout.decode('utf-8')
-                    make_eror_release_index_md(name, version,
-                                               outcome.stdout.decode('utf-8'))
+
+                    os.makedirs(os.path.join(root_dir, "crate", name), exist_ok=True)
+                    with open(os.path.join(root_dir, "crate", name, "index.md"), 'w') as f:
+                        f.write(get_stdout(outcome))
+
+                    outcome = subprocess.run(['alr', '-n', 'exec', "-P", "--", "gnatdoc4",
+                                              "--output-dir", doc_output_dir,
+                                              "--front-matter", "crate: " + name,
+                                              "--no-subprojects"],
+                                             stdout=subprocess.PIPE,
+                                             stderr=subprocess.STDOUT)
+
+                    if outcome.returncode != 0:
+                        release_doc_info['status'] = "doc build FAIL"
+                        release_doc_info['gnatdoc_error'] = get_stdout(outcome)
+                        make_eror_release_index_md(name, version, get_stdout(outcome))
+                    else:
+                        release_doc_info['status'] = "doc build OK"
+                        release_doc_info['date'] = datetime.now().strftime("%Y/%m/%d-%H:%M:%S")
 
             global_doc_info[name]['releases'][version] = release_doc_info
 
@@ -126,7 +143,6 @@ for line in crates:
                    semver.compare(version, global_doc_info[name]['latest']) > 0:
                 global_doc_info[name]['latest'] = version
 
-            make_crate_index_md(name)
             make_crate_latest_md(name)
             save_global_doc_info()
 

@@ -18,9 +18,11 @@ description: A catalog of ready-to-use Ada docs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+sidebar-width: 300px
+
 # Build settings
 markdown: kramdown
-# theme: devlopr
+highlighter: rouge
 plugins:
   - jekyll-feed
 
@@ -36,4 +38,3 @@ exclude:
 collections:
   crate:
     output: true
-

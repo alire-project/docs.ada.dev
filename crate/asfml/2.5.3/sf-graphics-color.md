@@ -1,0 +1,107 @@
+---
+crate: asfml
+layout: gnatdoc
+gnatdoc: {
+name: "Sf.Graphics.Color",
+qualified_name: "Sf.Graphics.Color",
+signature: "sf.graphics.color",
+enclosing: "sf.graphics",
+is_private: false,
+documentation: "//////////////////////////////////////////////////////////\n/ sfColor is an utility class for manipulating colors\n//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////\n/ @brief Utility class for manpulating RGBA colors\n/\n//////////////////////////////////////////////////////////",
+documentation_snippet: "",
+record_types:    [
+       {
+       name: "sfColor",
+       qualified_name: "Sf.Graphics.Color.sfColor",
+       signature: "sf.graphics.color.sfcolor",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type sfColor is record\n   r : aliased sfUint8;\n   g : aliased sfUint8;\n   b : aliased sfUint8;\n   a : aliased sfUint8;\nend record;",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "sfBlack",
+       qualified_name: "Sf.Graphics.Color.sfBlack",
+       signature: "sf.graphics.color.sfblack",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfBlack   : constant sfColor := (0, 0, 0, 255);",
+       }   ,
+       {
+       name: "sfBlue",
+       qualified_name: "Sf.Graphics.Color.sfBlue",
+       signature: "sf.graphics.color.sfblue",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfBlue    : constant sfColor := (0, 0, 255, 255);",
+       }   ,
+       {
+       name: "sfCyan",
+       qualified_name: "Sf.Graphics.Color.sfCyan",
+       signature: "sf.graphics.color.sfcyan",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfCyan    : constant sfColor := (0, 255, 255, 255);",
+       }   ,
+       {
+       name: "sfGreen",
+       qualified_name: "Sf.Graphics.Color.sfGreen",
+       signature: "sf.graphics.color.sfgreen",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfGreen   : constant sfColor := (0, 255, 0, 255);",
+       }   ,
+       {
+       name: "sfMagenta",
+       qualified_name: "Sf.Graphics.Color.sfMagenta",
+       signature: "sf.graphics.color.sfmagenta",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfMagenta : constant sfColor := (255, 0, 255, 255);",
+       }   ,
+       {
+       name: "sfRed",
+       qualified_name: "Sf.Graphics.Color.sfRed",
+       signature: "sf.graphics.color.sfred",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfRed     : constant sfColor := (255, 0, 0, 255);",
+       }   ,
+       {
+       name: "sfTransparent",
+       qualified_name: "Sf.Graphics.Color.sfTransparent",
+       signature: "sf.graphics.color.sftransparent",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfTransparent : constant sfColor := (0, 0, 0, 0);",
+       }   ,
+       {
+       name: "sfWhite",
+       qualified_name: "Sf.Graphics.Color.sfWhite",
+       signature: "sf.graphics.color.sfwhite",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfWhite   : constant sfColor := (255, 255, 255, 255);",
+       }   ,
+       {
+       name: "sfYellow",
+       qualified_name: "Sf.Graphics.Color.sfYellow",
+       signature: "sf.graphics.color.sfyellow",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "sfYellow  : constant sfColor := (255, 255, 0, 255);",
+       }   ,
+   ]
+,}
+---

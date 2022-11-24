@@ -1,0 +1,13 @@
+---
+crate: asfml
+layout: gnatdoc
+gnatdoc: {
+name: "Sf.Window.Context",
+qualified_name: "Sf.Window.Context",
+signature: "sf.window.context",
+enclosing: "sf.window",
+is_private: false,
+documentation: "//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////",
+documentation_snippet: "",
+}
+---

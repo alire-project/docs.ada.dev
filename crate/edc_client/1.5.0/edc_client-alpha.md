@@ -1,0 +1,87 @@
+---
+crate: edc_client
+layout: gnatdoc
+gnatdoc: {
+name: "Edc_Client.Alpha",
+qualified_name: "Edc_Client.Alpha",
+signature: "edc_client.alpha",
+enclosing: "edc_client",
+is_private: false,
+documentation: "------------------------------------------------------------------------\n  Type for displaying a single letter",
+documentation_snippet: "",
+subtypes:    [
+       {
+       name: "Cmd_Double_Letters_String",
+       qualified_name: "Edc_Client.Alpha.Cmd_Double_Letters_String",
+       signature: "edc_client.alpha.cmd_double_letters_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Cmd_Double_Letters_String is String (1 .. 6);",
+       }   ,
+       {
+       name: "Cmd_Eight_Letters_String",
+       qualified_name: "Edc_Client.Alpha.Cmd_Eight_Letters_String",
+       signature: "edc_client.alpha.cmd_eight_letters_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Cmd_Eight_Letters_String is String (1 .. 12);",
+       }   ,
+       {
+       name: "Cmd_Four_Letters_String",
+       qualified_name: "Edc_Client.Alpha.Cmd_Four_Letters_String",
+       signature: "edc_client.alpha.cmd_four_letters_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Cmd_Four_Letters_String is String (1 .. 8);",
+       }   ,
+       {
+       name: "Cmd_Single_Letter_String",
+       qualified_name: "Edc_Client.Alpha.Cmd_Single_Letter_String",
+       signature: "edc_client.alpha.cmd_single_letter_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Cmd_Single_Letter_String is String (1 .. 5);",
+       }   ,
+       {
+       name: "Double_Letters_String",
+       qualified_name: "Edc_Client.Alpha.Double_Letters_String",
+       signature: "edc_client.alpha.double_letters_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Double_Letters_String is String (1 .. 2);",
+       }   ,
+       {
+       name: "Eight_Letters_String",
+       qualified_name: "Edc_Client.Alpha.Eight_Letters_String",
+       signature: "edc_client.alpha.eight_letters_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Eight_Letters_String is String (1 .. 8);",
+       }   ,
+       {
+       name: "Four_Letters_String",
+       qualified_name: "Edc_Client.Alpha.Four_Letters_String",
+       signature: "edc_client.alpha.four_letters_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Four_Letters_String is String (1 .. 4);",
+       }   ,
+       {
+       name: "Single_Letter_String",
+       qualified_name: "Edc_Client.Alpha.Single_Letter_String",
+       signature: "edc_client.alpha.single_letter_string",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Single_Letter_String is String (1 .. 1);",
+       }   ,
+   ]
+,}
+---

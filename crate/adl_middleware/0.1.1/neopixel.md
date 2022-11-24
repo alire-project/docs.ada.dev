@@ -1,0 +1,147 @@
+---
+crate: adl_middleware
+layout: gnatdoc
+gnatdoc: {
+name: "NeoPixel",
+qualified_name: "NeoPixel",
+signature: "neopixel",
+enclosing: "",
+is_private: false,
+documentation: "----------------------------------------------------------------------------\n                                                                          --\n                        Copyright (C) 2019, AdaCore                       --\n                                                                          --\n  Redistribution and use in source and binary forms, with or without      --\n  modification, are permitted provided that the following conditions are  --\n  met:                                                                    --\n     1. Redistributions of source code must retain the above copyright    --\n        notice, this list of conditions and the following disclaimer.     --\n     2. Redistributions in binary form must reproduce the above copyright --\n        notice, this list of conditions and the following disclaimer in   --\n        the documentation and/or other materials provided with the        --\n        distribution.                                                     --\n     3. Neither the name of the copyright holder nor the names of its     --\n        contributors may be used to endorse or promote products derived   --\n        from this software without specific prior written permission.     --\n                                                                          --\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS    --\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT      --\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR  --\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT   --\n   HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, --\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT       --\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,  --\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY  --\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT    --\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  --\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   --\n                                                                          --\n----------------------------------------------------------------------------",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "LED_Component",
+       qualified_name: "NeoPixel.LED_Component",
+       signature: "neopixel.led_component",
+       enclosing: "",
+       is_private: false,
+       documentation: "NeoPixel RGB+white products\n\n@enum LED_Red\n@enum LED_Green\n@enum LED_Blue\n@enum LED_White",
+       documentation_snippet: "type LED_Component is (LED_Red, LED_Green, LED_Blue, LED_White);",
+       }   ,
+       {
+       name: "LED_Mode",
+       qualified_name: "NeoPixel.LED_Mode",
+       signature: "neopixel.led_mode",
+       enclosing: "",
+       is_private: false,
+       documentation: "\n@enum GRB\n  Most NeoPixel products (WS2812)\n@enum RGB\n  FLORA v1 (not v2) pixels\n@enum RGBW\n  NeoPixel RGB+white products",
+       documentation_snippet: "type LED_Mode is\n  (GRB,\n   RGB,\n   RGBW);",
+       }   ,
+       {
+       name: "LED_Strip",
+       qualified_name: "NeoPixel.LED_Strip",
+       signature: "neopixel.led_strip",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type LED_Strip (<>) is private;",
+       }   ,
+   ]
+,array_types:    [
+       {
+       name: "LED_Values",
+       qualified_name: "NeoPixel.LED_Values",
+       signature: "neopixel.led_values",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type LED_Values is array (LED_Component) of LED_Value;",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "LED_Value",
+       qualified_name: "NeoPixel.LED_Value",
+       signature: "neopixel.led_value",
+       enclosing: "",
+       is_private: false,
+       documentation: "NeoPixel RGB+white products",
+       documentation_snippet: "subtype LED_Value is UInt8;",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "Black",
+       qualified_name: "NeoPixel.Black",
+       signature: "neopixel.black",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Black  : constant LED_Values := (others => 0);",
+       }   ,
+       {
+       name: "Blue",
+       qualified_name: "NeoPixel.Blue",
+       signature: "neopixel.blue",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Blue   : constant LED_Values := (LED_Blue  => 255, others => 0);",
+       }   ,
+       {
+       name: "Green",
+       qualified_name: "NeoPixel.Green",
+       signature: "neopixel.green",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Green  : constant LED_Values := (LED_Green => 255, others => 0);",
+       }   ,
+       {
+       name: "Indigo",
+       qualified_name: "NeoPixel.Indigo",
+       signature: "neopixel.indigo",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Indigo : constant LED_Values := (LED_Red => 75, LED_Blue => 130, others => 0);",
+       }   ,
+       {
+       name: "Orange",
+       qualified_name: "NeoPixel.Orange",
+       signature: "neopixel.orange",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Orange : constant LED_Values := (LED_Red => 255, LED_Green => 165, others => 0);",
+       }   ,
+       {
+       name: "Purple",
+       qualified_name: "NeoPixel.Purple",
+       signature: "neopixel.purple",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Purple : constant LED_Values := (LED_Red | LED_Blue => 255, others => 0);",
+       }   ,
+       {
+       name: "Red",
+       qualified_name: "NeoPixel.Red",
+       signature: "neopixel.red",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Red    : constant LED_Values := (LED_Red => 255, others => 0);",
+       }   ,
+       {
+       name: "White",
+       qualified_name: "NeoPixel.White",
+       signature: "neopixel.white",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "White  : constant LED_Values := (others => 255);",
+       }   ,
+       {
+       name: "Yellow",
+       qualified_name: "NeoPixel.Yellow",
+       signature: "neopixel.yellow",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Yellow : constant LED_Values := (LED_Red | LED_Green => 255, others => 0);",
+       }   ,
+   ]
+,}
+---

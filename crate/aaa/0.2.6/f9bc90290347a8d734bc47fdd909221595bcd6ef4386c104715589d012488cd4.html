@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html class=main>
-<link rel=stylesheet href=gnatdoc.css><body class=content><h1>AAA.Debug</h1><h2>Entities</h2><h3>Subprograms</h3><ul><li><a href=#106ea67758c40f67a08eeed1b4cdec96c2fd28f29e5062cb658f313863758c6e>Image</a><li><a href=#92220bdf664ee6696533630e675e76b5034d8b9cfd1987c9b0c2c016e329622d>Put_Exception</a><li><a href=#406c4f3af7867cb0bb8fb2e657ac9b9222a8c2e6da8f674c552751a93aa3f385>Stack_Trace</a></ul><h2>Description</h2><h4 id=106ea67758c40f67a08eeed1b4cdec96c2fd28f29e5062cb658f313863758c6e>Image</h4><pre class=ada-code-snippet><code>function Image (E : Ada.Exceptions.Exception_Occurrence) return String
-</code></pre><p>Just concatenate the exception name, message and information<h5>Parameters</h5><dl><dt>E<dd></dl><h5>Return Value</h5><dl><dd></dl><h4 id=92220bdf664ee6696533630e675e76b5034d8b9cfd1987c9b0c2c016e329622d>Put_Exception</h4><pre class=ada-code-snippet><code>procedure Put_Exception (E           : Ada.Exceptions.Exception_Occurrence;
-                         Title       : String := "AAA EXCEPTION DUMP:";
-                         Stack_Trace : Boolean := True)
-</code></pre><p>Print Image and optionally Stack_Trace<h5>Parameters</h5><dl><dt>E<dd><dt>Title<dd><dt>Stack_Trace<dd></dl><h4 id=406c4f3af7867cb0bb8fb2e657ac9b9222a8c2e6da8f674c552751a93aa3f385>Stack_Trace</h4><pre class=ada-code-snippet><code>function Stack_Trace return String
-</code></pre><p>Return a string containing the call stack. To keep things Preelaborable, a fake exception is generated and the exception information retrieved. Hence efficacy of this will be dependent on your compilation switches.<h5>Return Value</h5><dl><dd></dl>

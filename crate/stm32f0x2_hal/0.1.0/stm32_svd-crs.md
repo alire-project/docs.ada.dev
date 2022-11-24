@@ -1,0 +1,127 @@
+---
+crate: stm32f0x2_hal
+layout: gnatdoc
+gnatdoc: {
+name: "STM32_SVD.CRS",
+qualified_name: "STM32_SVD.CRS",
+signature: "stm32_svd.crs",
+enclosing: "stm32_svd",
+is_private: false,
+documentation: "-------------\n Registers --\n-------------",
+documentation_snippet: "",
+record_types:    [
+       {
+       name: "CFGR_Register",
+       qualified_name: "STM32_SVD.CRS.CFGR_Register",
+       signature: "stm32_svd.crs.cfgr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type CFGR_Register is record\n   RELOAD : CFGR_RELOAD_Field := 16#BB7F#;\n   FELIM : CFGR_FELIM_Field := 16#22#;\n   SYNCDIV : CFGR_SYNCDIV_Field := 16#0#;\n   Reserved_27_27 : HAL.Bit := 16#0#;\n   SYNCSRC : CFGR_SYNCSRC_Field := 16#2#;\n   Reserved_30_30 : HAL.Bit := 16#0#;\n   SYNCPOL : Boolean := False;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "CR_Register",
+       qualified_name: "STM32_SVD.CRS.CR_Register",
+       signature: "stm32_svd.crs.cr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type CR_Register is record\n   SYNCOKIE : Boolean := False;\n   SYNCWARNIE : Boolean := False;\n   ERRIE : Boolean := False;\n   ESYNCIE : Boolean := False;\n   Reserved_4_4 : HAL.Bit := 16#0#;\n   CEN : Boolean := False;\n   AUTOTRIMEN : Boolean := False;\n   SWSYNC : Boolean := False;\n   TRIM : CR_TRIM_Field := 16#20#;\n   Reserved_14_31 : HAL.UInt18 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "CRS_Peripheral",
+       qualified_name: "STM32_SVD.CRS.CRS_Peripheral",
+       signature: "stm32_svd.crs.crs_peripheral",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type CRS_Peripheral is record\n   CR : aliased CR_Register;\n   CFGR : aliased CFGR_Register;\n   ISR : aliased ISR_Register;\n   ICR : aliased ICR_Register;\nend record with\n   Volatile;",
+       }   ,
+       {
+       name: "ICR_Register",
+       qualified_name: "STM32_SVD.CRS.ICR_Register",
+       signature: "stm32_svd.crs.icr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type ICR_Register is record\n   SYNCOKC : Boolean := False;\n   SYNCWARNC : Boolean := False;\n   ERRC : Boolean := False;\n   ESYNCC : Boolean := False;\n   Reserved_4_31 : HAL.UInt28 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "ISR_Register",
+       qualified_name: "STM32_SVD.CRS.ISR_Register",
+       signature: "stm32_svd.crs.isr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type ISR_Register is record\n   SYNCOKF : Boolean;\n   SYNCWARNF : Boolean;\n   ERRF : Boolean;\n   ESYNCF : Boolean;\n   Reserved_4_7 : HAL.UInt4;\n   SYNCERR : Boolean;\n   SYNCMISS : Boolean;\n   TRIMOVF : Boolean;\n   Reserved_11_14 : HAL.UInt4;\n   FEDIR : Boolean;\n   FECAP : ISR_FECAP_Field;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "CFGR_FELIM_Field",
+       qualified_name: "STM32_SVD.CRS.CFGR_FELIM_Field",
+       signature: "stm32_svd.crs.cfgr_felim_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CFGR_FELIM_Field is HAL.UInt8;",
+       }   ,
+       {
+       name: "CFGR_RELOAD_Field",
+       qualified_name: "STM32_SVD.CRS.CFGR_RELOAD_Field",
+       signature: "stm32_svd.crs.cfgr_reload_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CFGR_RELOAD_Field is HAL.UInt16;",
+       }   ,
+       {
+       name: "CFGR_SYNCDIV_Field",
+       qualified_name: "STM32_SVD.CRS.CFGR_SYNCDIV_Field",
+       signature: "stm32_svd.crs.cfgr_syncdiv_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CFGR_SYNCDIV_Field is HAL.UInt3;",
+       }   ,
+       {
+       name: "CFGR_SYNCSRC_Field",
+       qualified_name: "STM32_SVD.CRS.CFGR_SYNCSRC_Field",
+       signature: "stm32_svd.crs.cfgr_syncsrc_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CFGR_SYNCSRC_Field is HAL.UInt2;",
+       }   ,
+       {
+       name: "CR_TRIM_Field",
+       qualified_name: "STM32_SVD.CRS.CR_TRIM_Field",
+       signature: "stm32_svd.crs.cr_trim_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CR_TRIM_Field is HAL.UInt6;",
+       }   ,
+       {
+       name: "ISR_FECAP_Field",
+       qualified_name: "STM32_SVD.CRS.ISR_FECAP_Field",
+       signature: "stm32_svd.crs.isr_fecap_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype ISR_FECAP_Field is HAL.UInt16;",
+       }   ,
+   ]
+,variables:    [
+       {
+       name: "CRS_Periph",
+       qualified_name: "STM32_SVD.CRS.CRS_Periph",
+       signature: "stm32_svd.crs.crs_periph",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "CRS_Periph : aliased CRS_Peripheral with\n   Import,\n   Address => CRS_Base;",
+       }   ,
+   ]
+,}
+---

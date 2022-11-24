@@ -1,0 +1,88 @@
+---
+crate: lzmada
+layout: gnatdoc_index
+gnatdoc: {packages: [
+    {
+    name: "Lzma",
+    qualified_name: "Lzma",
+    signature: "lzma",
+    enclosing: "",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.Base",
+    qualified_name: "Lzma.Base",
+    signature: "lzma.base",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "  unsupported macro: LZMA_STREAM_INIT { NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, LZMA_RESERVED_ENUM, LZMA_RESERVED_ENUM }\n*\n * \\file        lzma/base.h\n * \\brief       Data types and functions used in many places in liblzma API",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.Block",
+    qualified_name: "Lzma.Block",
+    signature: "lzma.block",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.Check",
+    qualified_name: "Lzma.Check",
+    signature: "lzma.check",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.Container",
+    qualified_name: "Lzma.Container",
+    signature: "lzma.container",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.Filter",
+    qualified_name: "Lzma.Filter",
+    signature: "lzma.filter",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.StreamFlags",
+    qualified_name: "Lzma.StreamFlags",
+    signature: "lzma.streamflags",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Lzma.Vli",
+    qualified_name: "Lzma.Vli",
+    signature: "lzma.vli",
+    enclosing: "lzma",
+    is_private: false,
+    documentation: "unsupported macro: LZMA_VLI_MAX (UINT64_MAX / 2)\nunsupported macro: LZMA_VLI_UNKNOWN UINT64_MAX",
+    documentation_snippet: "",
+    },
+    {
+    name: "lzma_lzma_h",
+    qualified_name: "lzma_lzma_h",
+    signature: "lzma_lzma_h",
+    enclosing: "",
+    is_private: false,
+    documentation: "unsupported macro: LZMA_FILTER_LZMA1 LZMA_VLI_C(0x4000000000000001)\nunsupported macro: LZMA_FILTER_LZMA2 LZMA_VLI_C(0x21)\nunsupported macro: LZMA_DICT_SIZE_MIN UINT32_C(4096)\nunsupported macro: LZMA_DICT_SIZE_DEFAULT (UINT32_C(1) << 23)",
+    documentation_snippet: "",
+    },
+]
+}
+---

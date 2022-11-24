@@ -1,0 +1,88 @@
+---
+crate: templates_parser
+layout: gnatdoc_index
+gnatdoc: {packages: [
+    {
+    name: "Templates_Parser",
+    qualified_name: "Templates_Parser",
+    signature: "templates_parser",
+    enclosing: "",
+    is_private: false,
+    documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                     Copyright (C) 1999-2019, AdaCore                     --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser.Configuration",
+    qualified_name: "Templates_Parser.Configuration",
+    signature: "templates_parser.configuration",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                      Copyright (C) 2005-2012, AdaCore                    --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser.Debug",
+    qualified_name: "Templates_Parser.Debug",
+    signature: "templates_parser.debug",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                     Copyright (C) 2004-2012, AdaCore                     --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Dynamic",
+    qualified_name: "Templates_Parser.Dynamic",
+    signature: "templates_parser.dynamic",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "------------\n Lazy_Tag --\n------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser.Input",
+    qualified_name: "Templates_Parser.Input",
+    signature: "templates_parser.input",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                     Copyright (C) 2002-2013, AdaCore                     --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser.Query",
+    qualified_name: "Templates_Parser.Query",
+    signature: "templates_parser.query",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                     Copyright (C) 2003-2012, AdaCore                     --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser.Utils",
+    qualified_name: "Templates_Parser.Utils",
+    signature: "templates_parser.utils",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                     Copyright (C) 2004-2014, AdaCore                     --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser.XML",
+    qualified_name: "Templates_Parser.XML",
+    signature: "templates_parser.xml",
+    enclosing: "templates_parser",
+    is_private: false,
+    documentation: "This API provides a way to save a Translate_Set as an XML document.\nThere is special rules to know about composite tags.\n\nComposite tags :\n\n   If a tag named TAG exists, then the name TAG_DESCRIPTION is used as a\n   description for this specific tag.\n\nComposite tags (more than one nested level)\n\n   If a tag named TAG exists, then the names TAG_DIM[n]_LABELS is used as\n   a set of labels for the tag's nth axis. In this case TAG_DIM[n]_LABELS\n   must be a vector tag, each entry corresponds to a label on this\n   axis. Also TAG_DIM[n]_DESCRIPTION is used as a description for this\n   axis.\n\nHere is the DTD :\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!--Description of a tag or dimension (ex: year)-->\n<!ELEMENT Description (#PCDATA)>\n<!--a dimension-->\n<!ELEMENT Dim (Description, Labels)>\n<!ATTLIST Dim\n    n CDATA #REQUIRED\n>\n<!--entry of a CompositeTag-->\n<!ELEMENT Entry (ind+, V)>\n<!--label of an indice of a dimension (ex: 2000)-->\n<!ELEMENT Label (#PCDATA)>\n<!ATTLIST Label\n    ind CDATA #REQUIRED\n>\n<!--list of labels of one dimension (ex: 1999, 2000, 2001)-->\n<!ELEMENT Labels (Label+)>\n<!--alias and information-->\n<!ELEMENT Tag (Name, Description)>\n<!--tagged data to be published in templates-->\n<!ELEMENT Tagged (SimpleTag*, CompositeTag*)>\n<!--simple variable value-->\n<!ELEMENT V (#PCDATA)>\n<!ELEMENT ind (#PCDATA)>\n<!ATTLIST ind\n    n CDATA #REQUIRED\n>\n<!--identification name for this tag-->\n<!ELEMENT Name (#PCDATA)>\n<!--Tag with no dimension (simple variable)-->\n<!ELEMENT SimpleTag (Tag, V)>\n<!--Tag with one or more dimensions-->\n<!ELEMENT CompositeTag (Tag, Dim+, Entry)>",
+    documentation_snippet: "",
+    },
+    {
+    name: "Templates_Parser_Tasking",
+    qualified_name: "Templates_Parser_Tasking",
+    signature: "templates_parser_tasking",
+    enclosing: "",
+    is_private: false,
+    documentation: "Implements a simple semaphore. There is two implementations for this\nunit, one that is based on a protected object that is required for\ntasking applications and one that does nothing (the tasking runtime is\nnot dragged in this configuration).",
+    documentation_snippet: "",
+    },
+]
+}
+---

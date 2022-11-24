@@ -1,0 +1,87 @@
+---
+crate: rewriters
+layout: gnatdoc
+gnatdoc: {
+name: "Predefined_Rewriters_Boolean_Expression_De_Morgan",
+qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan",
+signature: "predefined_rewriters_boolean_expression_de_morgan",
+enclosing: "",
+is_private: false,
+documentation: "Rewriters for patterns that can be rewriting using De Morgan's laws\nhttps://en.wikipedia.org/wiki/De_Morgan%27s_laws",
+documentation_snippet: "",
+constants:    [
+       {
+       name: "Rewrite_De_Morgan",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan",
+       enclosing: "",
+       is_private: false,
+       documentation: "Rewriter for patterns that can be rewriting using DeMorgan's laws\nhttps://en.wikipedia.org/wiki/De_Morgan%27s_laws\n\nThe resulting code might still be simplified using\n* Not\n* Minimal Parenthesis",
+       documentation_snippet: "Rewrite_De_Morgan : constant Rewriter_Repeat :=\n  Make_Rewriter_Repeat (Rewrite_De_Morgan_Step);",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Not_All_Elements",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Not_All_Elements",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_not_all_elements",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Not_All_Elements :\n  aliased constant Rewriter_Find_And_Replace :=\n  Make_Rewriter_Find_And_Replace\n    (Make_Pattern\n       (\"not (for all $S_E of $S_Elements => $S_Cond)\", Expr_Rule),\n     Make_Pattern\n       (\"(for some $S_E of $S_Elements => not ($S_Cond))\", Expr_Rule));",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Not_All_Range",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Not_All_Range",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_not_all_range",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Not_All_Range :\n  aliased constant Rewriter_Find_And_Replace :=\n  Make_Rewriter_Find_And_Replace\n    (Make_Pattern (\"not (for all $S_I in $S_Range => $S_Cond)\",\n                   Expr_Rule),\n     Make_Pattern\n       (\"(for some $S_I in $S_Range => not ($S_Cond))\", Expr_Rule));",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Not_And",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Not_And",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_not_and",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Not_And : aliased constant Rewriter_Find_And_Replace :=\n  Make_Rewriter_Find_And_Replace\n    (Make_Pattern (\"not ($S_A and then $S_B)\", Expr_Rule),\n     Make_Pattern (\"(not ($S_A) or else not ($S_B))\", Expr_Rule));",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Not_Or",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Not_Or",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_not_or",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Not_Or : aliased constant Rewriter_Find_And_Replace :=\n  Make_Rewriter_Find_And_Replace\n    (Make_Pattern (\"not ($S_A or else $S_B)\", Expr_Rule),\n     Make_Pattern (\"(not ($S_A) and then not ($S_B))\", Expr_Rule));",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Not_Some_Elements",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Not_Some_Elements",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_not_some_elements",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Not_Some_Elements :\n  aliased constant Rewriter_Find_And_Replace :=\n  Make_Rewriter_Find_And_Replace\n    (Make_Pattern\n       (\"not (for some $S_E of $S_Elements => $S_Cond)\", Expr_Rule),\n     Make_Pattern\n       (\"(for all $S_E of $S_Elements => not ($S_Cond))\", Expr_Rule));",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Not_Some_Range",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Not_Some_Range",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_not_some_range",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Not_Some_Range :\n  aliased constant Rewriter_Find_And_Replace :=\n  Make_Rewriter_Find_And_Replace\n    (Make_Pattern (\"not (for some $S_I in $S_Range => $S_Cond)\",\n                   Expr_Rule),\n     Make_Pattern\n       (\"(for all $S_I in $S_Range => not ($S_Cond))\", Expr_Rule));",
+       }   ,
+       {
+       name: "Rewrite_De_Morgan_Step",
+       qualified_name: "Predefined_Rewriters_Boolean_Expression_De_Morgan.Rewrite_De_Morgan_Step",
+       signature: "predefined_rewriters_boolean_expression_de_morgan.rewrite_de_morgan_step",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Rewrite_De_Morgan_Step : constant Rewriter_Sequence :=\n  Make_Rewriter_Sequence\n    (Rewrite_De_Morgan_Not_And\n     & Rewrite_De_Morgan_Not_Or\n     & Rewrite_De_Morgan_Not_All_Range\n     & Rewrite_De_Morgan_Not_All_Elements\n     & Rewrite_De_Morgan_Not_Some_Range\n     & Rewrite_De_Morgan_Not_Some_Elements\n    );",
+       }   ,
+   ]
+,}
+---

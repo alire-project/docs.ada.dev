@@ -1,0 +1,13 @@
+---
+crate: asfml
+layout: gnatdoc
+gnatdoc: {
+name: "Sf.Network.UdpSocket",
+qualified_name: "Sf.Network.UdpSocket",
+signature: "sf.network.udpsocket",
+enclosing: "sf.network",
+is_private: false,
+documentation: "//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////",
+documentation_snippet: "",
+}
+---

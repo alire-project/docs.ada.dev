@@ -1,0 +1,107 @@
+---
+crate: stephes_ada_library
+layout: gnatdoc
+gnatdoc: {
+name: "SAL.Endianness",
+qualified_name: "SAL.Endianness",
+signature: "sal.endianness",
+enclosing: "sal",
+is_private: false,
+documentation: "this is for gnat on an Intel 386 compatible processor",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "Byte_Order_Type",
+       qualified_name: "SAL.Endianness.Byte_Order_Type",
+       signature: "sal.endianness.byte_order_type",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Byte_Order_Type is (Big_Endian, Little_Endian);",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "Bit_Order",
+       qualified_name: "SAL.Endianness.Bit_Order",
+       signature: "sal.endianness.bit_order",
+       enclosing: "",
+       is_private: false,
+       documentation: "opposite of High_Bit_First",
+       documentation_snippet: "Bit_Order      : constant := 1;",
+       }   ,
+       {
+       name: "Byte_Order",
+       qualified_name: "SAL.Endianness.Byte_Order",
+       signature: "sal.endianness.byte_order",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Byte_Order : constant Byte_Order_Type := Little_Endian;",
+       }   ,
+       {
+       name: "High_Bit_First",
+       qualified_name: "SAL.Endianness.High_Bit_First",
+       signature: "sal.endianness.high_bit_first",
+       enclosing: "",
+       is_private: false,
+       documentation: "opposite of High_Bit_First",
+       documentation_snippet: "High_Bit_First : constant := 0;",
+       }   ,
+       {
+       name: "Low_Bit_First",
+       qualified_name: "SAL.Endianness.Low_Bit_First",
+       signature: "sal.endianness.low_bit_first",
+       enclosing: "",
+       is_private: false,
+       documentation: "opposite of High_Bit_First",
+       documentation_snippet: "Low_Bit_First  : constant := 1;",
+       }   ,
+       {
+       name: "LSBit_16",
+       qualified_name: "SAL.Endianness.LSBit_16",
+       signature: "sal.endianness.lsbit_16",
+       enclosing: "",
+       is_private: false,
+       documentation: "0 or 55",
+       documentation_snippet: "LSBit_16 : constant :=  0;",
+       }   ,
+       {
+       name: "LSBit_32",
+       qualified_name: "SAL.Endianness.LSBit_32",
+       signature: "sal.endianness.lsbit_32",
+       enclosing: "",
+       is_private: false,
+       documentation: "0 or 55",
+       documentation_snippet: "LSBit_32 : constant :=  0;",
+       }   ,
+       {
+       name: "LSBit_56",
+       qualified_name: "SAL.Endianness.LSBit_56",
+       signature: "sal.endianness.lsbit_56",
+       enclosing: "",
+       is_private: false,
+       documentation: "0 or 55",
+       documentation_snippet: "LSBit_56 : constant :=  0;",
+       }   ,
+       {
+       name: "LSBit_8",
+       qualified_name: "SAL.Endianness.LSBit_8",
+       signature: "sal.endianness.lsbit_8",
+       enclosing: "",
+       is_private: false,
+       documentation: "0 or 55",
+       documentation_snippet: "LSBit_8  : constant :=  0;",
+       }   ,
+       {
+       name: "System_Name",
+       qualified_name: "SAL.Endianness.System_Name",
+       signature: "sal.endianness.system_name",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "System_Name : constant System.Name := System.SYSTEM_NAME_GNAT;",
+       }   ,
+   ]
+,}
+---

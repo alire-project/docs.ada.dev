@@ -1,0 +1,88 @@
+---
+crate: edc_client
+layout: gnatdoc_index
+gnatdoc: {packages: [
+    {
+    name: "Edc_Client",
+    qualified_name: "Edc_Client",
+    signature: "edc_client",
+    enclosing: "",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  This is the baud rate for the UART serial interface",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Alpha",
+    qualified_name: "Edc_Client.Alpha",
+    signature: "edc_client.alpha",
+    enclosing: "edc_client",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Type for displaying a single letter",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Alpha.Block1",
+    qualified_name: "Edc_Client.Alpha.Block1",
+    signature: "edc_client.alpha.block1",
+    enclosing: "edc_client.alpha",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Shows a Single Letter\n------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Alpha.Block2",
+    qualified_name: "Edc_Client.Alpha.Block2",
+    signature: "edc_client.alpha.block2",
+    enclosing: "edc_client.alpha",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Shows a Single Letter\n------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.LED",
+    qualified_name: "Edc_Client.LED",
+    signature: "edc_client.led",
+    enclosing: "edc_client",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Command string for controlling the LEDs\n------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Matrix",
+    qualified_name: "Edc_Client.Matrix",
+    signature: "edc_client.matrix",
+    enclosing: "edc_client",
+    is_private: false,
+    documentation: "",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Matrix.Double_Word",
+    qualified_name: "Edc_Client.Matrix.Double_Word",
+    signature: "edc_client.matrix.double_word",
+    enclosing: "edc_client.matrix",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Shows the\n     least significant byte of the least significant word on the matrix\n     This is equivalent of the most right byte on the matrix\n------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Matrix.Types",
+    qualified_name: "Edc_Client.Matrix.Types",
+    signature: "edc_client.matrix.types",
+    enclosing: "edc_client.matrix",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Command string for controlling the byte part of the display\n------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+    {
+    name: "Edc_Client.Matrix.Word",
+    qualified_name: "Edc_Client.Matrix.Word",
+    signature: "edc_client.matrix.word",
+    enclosing: "edc_client.matrix",
+    is_private: false,
+    documentation: "------------------------------------------------------------------------\n  Shows the least significant byte on the matrix\n  This is equivalent of the right byte on the matrix\n------------------------------------------------------------------------",
+    documentation_snippet: "",
+    },
+]
+}
+---

@@ -1,8 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/highlight.css' | relative_url }}">
+
+  <head>
+    {% include head.html %}
+  </head>
+
   <body>
-    <div class="page-content">
-        {{ content }}
+
+    <header class="site-header">
+      {% include header.html %}
+    </header>
+
+    <div class="sidebar">
+      {% include sidebar.html %}
     </div>
+
+    <div class="w3-main" style="margin-left:{{site.sidebar-width}}">
+
+      <div>
+        <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      {% include footer.html %}
+    </footer>
+
+    <script>
+      function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+
   </body>
 </html>

@@ -3,17 +3,76 @@ layout: default
 ---
 <h1>{{ page.crate }} </h1>
 {% assign crate_info = site.data.global_doc_info[page.crate] %}
-<ul>
-  <li>
-    <a href="{{ crate_info['latest'] }}">latest</a>
-  </li>
-{% for release in crate_info['releases'] %}
-  <li>
-    <a href="{{ release[0] }}">
-   {{ release[0] }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
 
-{{ content }}
+<h1>{{ page.title }}</h1>
+<h4>{{ page.short_description }}</h4>
+{% for link in page.websites %}
+  <a href="{{ link }}">Website</a>
+{% endfor %}
+<br>
+<b>Author{% if page.authors.size > 1 %}s{% endif %}: </b>{{ page.authors | join: ", " | xml_escape }}
+<br>
+<b>Maintainer{% if page.maintainers.size > 1 %}s{% endif %}: </b>{{ page.maintainers | join: ", " | xml_escape }}
+<br>
+<b>License{% if page.authors.licenses > 1 %}s{% endif %}: </b>{{ page.licenses | join: ", "}}
+<br>
+<b>Version: </b>{{ page.version }}
+<br>
+<b>Dependencies:</b>
+{% if page.dependencies.size > 0 %}
+<ul>
+
+  <!-- The if statement below is to handle the case where there is only one
+       dependency. Alire 1.0 and 1.1 generate a single YAML hash:
+         dependencies: {crate: "gnat", version: ">=11.2.1"}
+       instead of an array with one hash:
+         dependencies: [{crate: "gnat", version: ">=11.2.1"}]
+
+      If page.dependencies.crate is true, it means that we have a hash and not
+      an array.
+  -->
+  {% if page.dependencies.crate %}
+
+    <!-- page.dependencies is a hash  -->
+    {% assign dep = page.dependencies %}
+    <li>
+      <a href="{{ site.baseurl }}/crate/{{ dep.crate }}">{{ dep.crate }}</a> {{ dep.version }}
+    </li>
+  {% else %}
+    <!-- page.dependencies is an array  -->
+    {% for dep in page.dependencies %}
+      <li>
+        <a href="{{ site.baseurl }}/crate/{{ dep.crate }}">{{ dep.crate }}</a> {{ dep.version }}
+      </li>
+      {% endfor %}
+  {% endif %}
+</ul>
+{% else %}
+No dependency.<br>
+{% endif %}
+<b>Tags:</b>
+{% if page.tags.size > 0 %}
+  {% for tag in page.tags %}
+  <a class="crate-tag-link" href="{{ site.baseurl }}/search/?q={{ tag }}">{{ tag }}</a>
+  {% endfor %}
+{% else %}
+No tags.
+{% endif %}
+<br>
+{% assign json_url = "/badges/" | append: page.crate | append: ".json" %}
+{% assign badge_url = "https://img.shields.io/endpoint?url="
+          | append: site.data.meta.alr_site | append: json_url %}
+
+{% assign ci_badge_url = "https://img.shields.io/endpoint?url="
+          | append: site.data.meta.ci_site | append: json_url %}
+
+<b>Badge: </b><img src="{{badge_url}}" title="Copy image location: {{badge_url}}"><br>
+
+<b>Alire CI: </b>
+<a href="{{ site.data.meta.ci_site}}/crates/{{page.crate}}.html" target="_blank">
+  <img src="{{ci_badge_url}}" title="CI badge: {{ci_badge_url}}"><br>
+</a>
+<hr>
+<section>
+  {{ content }}
+</section>

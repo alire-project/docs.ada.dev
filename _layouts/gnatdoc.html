@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<h1>{{page.gnatdoc.name}}</h1>
+
+{% assign categories= "packages,simple_types,array_types,record_types,interface_types,tagged_types,access_types,subtypes,constants,variables" | split: ',' %}
+{% for category in categories %}
+  {% if page.gnatdoc[category] %}
+    <h2>{{category | replace: "_", " " | capitalize}}</h2>
+    {% for type in page.gnatdoc[category] %}
+      {% if category == "packages" %}
+        <a href="{{type.signature | replace: ".", "-" }}"><h5>{{type.name}}</h5></a><a id="{{type.signature}}"></a>
+      {% else %}
+        <h5>{{type.name}}</h5><a id="{{type.signature}}"></a>
+      {% endif %}
+      {% if type.documentation_snippet %}
+        {% highlight Ada %}{{type.documentation_snippet}}{% endhighlight %}
+      {%endif%}
+      {% if type.documentation %}
+        {{type.documentation}}
+      {%endif%}
+    {%endfor%}
+  {%endif%}
+{%endfor%}

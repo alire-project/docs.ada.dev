@@ -1,0 +1,127 @@
+---
+crate: stm32f0x2_hal
+layout: gnatdoc
+gnatdoc: {
+name: "STM32_SVD.CEC",
+qualified_name: "STM32_SVD.CEC",
+signature: "stm32_svd.cec",
+enclosing: "stm32_svd",
+is_private: false,
+documentation: "-------------\n Registers --\n-------------",
+documentation_snippet: "",
+record_types:    [
+       {
+       name: "CEC_Peripheral",
+       qualified_name: "STM32_SVD.CEC.CEC_Peripheral",
+       signature: "stm32_svd.cec.cec_peripheral",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type CEC_Peripheral is record\n   CR : aliased CR_Register;\n   CFGR : aliased CFGR_Register;\n   TXDR : aliased TXDR_Register;\n   RXDR : aliased RXDR_Register;\n   ISR : aliased ISR_Register;\n   IER : aliased IER_Register;\nend record with\n   Volatile;",
+       }   ,
+       {
+       name: "CFGR_Register",
+       qualified_name: "STM32_SVD.CEC.CFGR_Register",
+       signature: "stm32_svd.cec.cfgr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type CFGR_Register is record\n   OAR : CFGR_OAR_Field := 16#0#;\n   LSTN : Boolean := False;\n   SFT : CFGR_SFT_Field := 16#0#;\n   RXTOL : Boolean := False;\n   BRESTP : Boolean := False;\n   BREGEN : Boolean := False;\n   LBPEGEN : Boolean := False;\n   Reserved_12_31 : HAL.UInt20 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "CR_Register",
+       qualified_name: "STM32_SVD.CEC.CR_Register",
+       signature: "stm32_svd.cec.cr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type CR_Register is record\n   CECEN : Boolean := False;\n   TXSOM : Boolean := False;\n   TXEOM : Boolean := False;\n   Reserved_3_31 : HAL.UInt29 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "IER_Register",
+       qualified_name: "STM32_SVD.CEC.IER_Register",
+       signature: "stm32_svd.cec.ier_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type IER_Register is record\n   RXBRIE : Boolean := False;\n   RXENDIE : Boolean := False;\n   RXOVRIE : Boolean := False;\n   BREIE : Boolean := False;\n   SBPEIE : Boolean := False;\n   LBPEIE : Boolean := False;\n   RXACKIE : Boolean := False;\n   ARBLSTIE : Boolean := False;\n   TXBRIE : Boolean := False;\n   TXENDIE : Boolean := False;\n   TXUDRIE : Boolean := False;\n   TXERRIE : Boolean := False;\n   TXACKIE : Boolean := False;\n   Reserved_13_31 : HAL.UInt19 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "ISR_Register",
+       qualified_name: "STM32_SVD.CEC.ISR_Register",
+       signature: "stm32_svd.cec.isr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type ISR_Register is record\n   RXBR : Boolean := False;\n   RXEND : Boolean := False;\n   RXOVR : Boolean := False;\n   BRE : Boolean := False;\n   SBPE : Boolean := False;\n   LBPE : Boolean := False;\n   RXACKE : Boolean := False;\n   ARBLST : Boolean := False;\n   TXBR : Boolean := False;\n   TXEND : Boolean := False;\n   TXUDR : Boolean := False;\n   TXERR : Boolean := False;\n   TXACKE : Boolean := False;\n   Reserved_13_31 : HAL.UInt19 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "RXDR_Register",
+       qualified_name: "STM32_SVD.CEC.RXDR_Register",
+       signature: "stm32_svd.cec.rxdr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type RXDR_Register is record\n   RXDR : RXDR_RXDR_Field;\n   Reserved_8_31 : HAL.UInt24;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+       {
+       name: "TXDR_Register",
+       qualified_name: "STM32_SVD.CEC.TXDR_Register",
+       signature: "stm32_svd.cec.txdr_register",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type TXDR_Register is record\n   TXD : TXDR_TXD_Field := 16#0#;\n   Reserved_8_31 : HAL.UInt24 := 16#0#;\nend record with\n   Volatile_Full_Access,\n   Object_Size => 32,\n   Bit_Order   => System.Low_Order_First;",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "CFGR_OAR_Field",
+       qualified_name: "STM32_SVD.CEC.CFGR_OAR_Field",
+       signature: "stm32_svd.cec.cfgr_oar_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CFGR_OAR_Field is HAL.UInt4;",
+       }   ,
+       {
+       name: "CFGR_SFT_Field",
+       qualified_name: "STM32_SVD.CEC.CFGR_SFT_Field",
+       signature: "stm32_svd.cec.cfgr_sft_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype CFGR_SFT_Field is HAL.UInt3;",
+       }   ,
+       {
+       name: "RXDR_RXDR_Field",
+       qualified_name: "STM32_SVD.CEC.RXDR_RXDR_Field",
+       signature: "stm32_svd.cec.rxdr_rxdr_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype RXDR_RXDR_Field is HAL.UInt8;",
+       }   ,
+       {
+       name: "TXDR_TXD_Field",
+       qualified_name: "STM32_SVD.CEC.TXDR_TXD_Field",
+       signature: "stm32_svd.cec.txdr_txd_field",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype TXDR_TXD_Field is HAL.UInt8;",
+       }   ,
+   ]
+,variables:    [
+       {
+       name: "CEC_Periph",
+       qualified_name: "STM32_SVD.CEC.CEC_Periph",
+       signature: "stm32_svd.cec.cec_periph",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "CEC_Periph : aliased CEC_Peripheral with\n   Import,\n   Address => CEC_Base;",
+       }   ,
+   ]
+,}
+---

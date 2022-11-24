@@ -1,0 +1,24 @@
+---
+crate: servletada
+layout: gnatdoc
+gnatdoc: {
+name: "Servlet.Streams.XML",
+qualified_name: "Servlet.Streams.XML",
+signature: "servlet.streams.xml",
+enclosing: "servlet.streams",
+is_private: false,
+documentation: "---------------------------------------------------------------------\n  servlet-streams-xml -- XML Print streams for servlets\n  Copyright (C) 2022 Stephane Carrez\n  Written by Stephane Carrez (Stephane.Carrez@gmail.com)\n\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n---------------------------------------------------------------------",
+documentation_snippet: "",
+subtypes:    [
+       {
+       name: "Print_Stream",
+       qualified_name: "Servlet.Streams.XML.Print_Stream",
+       signature: "servlet.streams.xml.print_stream",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Print_Stream is Util.Serialize.IO.XML.Output_Stream;",
+       }   ,
+   ]
+,}
+---

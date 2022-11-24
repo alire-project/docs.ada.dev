@@ -1,0 +1,13 @@
+---
+crate: asfml
+layout: gnatdoc
+gnatdoc: {
+name: "Sf.Window.Clipboard",
+qualified_name: "Sf.Window.Clipboard",
+signature: "sf.window.clipboard",
+enclosing: "sf.window",
+is_private: false,
+documentation: "//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////",
+documentation_snippet: "",
+}
+---

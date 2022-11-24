@@ -1,0 +1,13 @@
+---
+crate: asfml
+layout: gnatdoc
+gnatdoc: {
+name: "Sf.System.Sleep",
+qualified_name: "Sf.System.Sleep",
+signature: "sf.system.sleep",
+enclosing: "sf.system",
+is_private: false,
+documentation: "//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////\n//////////////////////////////////////////////////////////",
+documentation_snippet: "",
+}
+---

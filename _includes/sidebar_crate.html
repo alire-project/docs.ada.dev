@@ -1,0 +1,63 @@
+{% assign crate_info = site.data.global_doc_info[page.crate] %}
+
+{% assign href = "/crate/" | append: page.crate | relative_url %}
+<a class="w3-bar-item w3-button" href="{{href}}">Crate {{page.crate}}</a>
+
+{% if page.layout == "crate" %}
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-bottom">Releases
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-border-bottom">
+      {% for release in crate_info['releases'] %}
+        {% assign ver = release[0] %}
+        {% assign href = "/crate/" | append: page.crate | append: "/"| append: ver| relative_url %}
+        <a href="{{href}}" class="w3-bar-item w3-button">
+          {{ver}}
+          {%if ver == crate_info['latest'] %} (latest){% endif%}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.layout == "gnatdoc_index" %}
+  {% assign categories= "packages,renamings,subprograms" | split: ',' %}
+  {% for category in categories %}
+    {% if page.gnatdoc[category] %}
+      <div class="w3-dropdown-hover">
+        <button class="w3-button w3-border-bottom">{{category | replace: "_", " " | capitalize}}
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block w3-border-bottom">
+            {% for type in page.gnatdoc[category] %}
+             <a href="{{type.signature | replace: ".", "-" }}" class="w3-bar-item w3-button"><code class="highlight"><span class="nf">{{type.name}}</span></code></a>
+            {%endfor%}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if page.layout == "gnatdoc" %}
+  {% assign categories= "packages,simple_types,array_types,record_types,interface_types,tagged_types,access_types,subtypes,constants,variables" | split: ',' %}
+  {% for category in categories %}
+    {% if page.gnatdoc[category] %}
+      <div class="w3-dropdown-hover">
+        <button class="w3-button w3-border-bottom">{{category | replace: "_", " " | capitalize}}
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block w3-border-bottom">
+            {% for type in page.gnatdoc[category] %}
+              {% if category == "packages" %}
+                <a href="{{type.signature | replace: ".", "-" }}" class="w3-bar-item w3-button">
+              {% else %}
+                <a href="#{{type.signature}}" class="w3-bar-item w3-button">
+              {% endif %}
+              <code class="highlight"><span class="nf">{{type.name}}</span></code></a>
+            {%endfor%}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}

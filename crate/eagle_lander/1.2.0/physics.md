@@ -1,0 +1,127 @@
+---
+crate: eagle_lander
+layout: gnatdoc
+gnatdoc: {
+name: "Physics",
+qualified_name: "Physics",
+signature: "physics",
+enclosing: "",
+is_private: false,
+documentation: "-----------------------------------------------------------------------------\n                                                                           --\n                               Eagle Lander                                --\n                                                                           --\n         Copyright (C) 2015 Fabien Chouteau (chouteau@adacore.com)         --\n                                                                           --\n    Eagle Lander is free software: you can redistribute it and/or modify   --\n    it under the terms of the GNU General Public License as published by   --\n    the Free Software Foundation, either version 3 of the License, or      --\n    (at your option) any later version.                                    --\n                                                                           --\n    Eagle Lander is distributed in the hope that it will be useful,        --\n    but WITHOUT ANY WARRANTY; without even the implied warranty of         --\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          --\n    GNU General Public License for more details.                           --\n                                                                           --\n    You should have received a copy of the GNU General Public License      --\n    along with Eagle Lander.  If not, see <http://www.gnu.org/licenses/>.  --\n                                                                           --\n-----------------------------------------------------------------------------",
+documentation_snippet: "",
+record_types:    [
+       {
+       name: "Acc_Vect",
+       qualified_name: "Physics.Acc_Vect",
+       signature: "physics.acc_vect",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Acc_Vect is record\n   X, Y : Acceleration := Acceleration (0.0);\nend record;",
+       }   ,
+       {
+       name: "Force_Vect",
+       qualified_name: "Physics.Force_Vect",
+       signature: "physics.force_vect",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Force_Vect is record\n   X, Y : Force := Force (0.0);\nend record;",
+       }   ,
+       {
+       name: "Position",
+       qualified_name: "Physics.Position",
+       signature: "physics.position",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Position is record\n   X, Y : Length := 0.0 * m;\nend record;",
+       }   ,
+       {
+       name: "Speed_Vect",
+       qualified_name: "Physics.Speed_Vect",
+       signature: "physics.speed_vect",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Speed_Vect is record\n   X, Y : Speed := Speed (0.0);\nend record;",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "Acceleration",
+       qualified_name: "Physics.Acceleration",
+       signature: "physics.acceleration",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Acceleration is Mks_Type\n  with\n   Dimension => (\n     Symbol => \"m/s2\",\n     Meter  =>  1,\n     Second => -2,\n     others => 0);",
+       }   ,
+       {
+       name: "Anglular_Acceleration",
+       qualified_name: "Physics.Anglular_Acceleration",
+       signature: "physics.anglular_acceleration",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Anglular_Acceleration is Mks_Type\n  with\n   Dimension => (\n     Symbol => \"rad/s2\",\n     Second => -2,\n     others => 0);",
+       }   ,
+       {
+       name: "Angular_Velocity",
+       qualified_name: "Physics.Angular_Velocity",
+       signature: "physics.angular_velocity",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Angular_Velocity is Mks_Type\n  with\n   Dimension => (\n     Symbol => \"rad/s\",\n     Second => -1,\n     others => 0);",
+       }   ,
+       {
+       name: "Dimentionless",
+       qualified_name: "Physics.Dimentionless",
+       signature: "physics.dimentionless",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Dimentionless is Mks_Type;",
+       }   ,
+       {
+       name: "Moment_Of_Inertia",
+       qualified_name: "Physics.Moment_Of_Inertia",
+       signature: "physics.moment_of_inertia",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Moment_Of_Inertia is Mks_Type\n  with\n   Dimension => (\n     Symbol => \"kg.m2.rad-2\",\n     Meter    => 2,\n     Kilogram => 1,\n     others   => 0);",
+       }   ,
+       {
+       name: "Specific_Impulse",
+       qualified_name: "Physics.Specific_Impulse",
+       signature: "physics.specific_impulse",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Specific_Impulse is Mks_Type\n  with\n   Dimension => (\n     Symbol => \"Ns/kg\",\n     Meter    => 1,\n     Kilogram => 0,\n     Second   => -1,\n     others   => 0);",
+       }   ,
+       {
+       name: "Torque",
+       qualified_name: "Physics.Torque",
+       signature: "physics.torque",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Torque is Mks_Type\n  with\n   Dimension => (\n     Symbol => \"Nm\",\n     Meter    => 2,\n     Kilogram => 1,\n     Second   => -2,\n     others   => 0);",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "Simulation_Frequency",
+       qualified_name: "Physics.Simulation_Frequency",
+       signature: "physics.simulation_frequency",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Simulation_Frequency : constant := 20;",
+       }   ,
+   ]
+,}
+---

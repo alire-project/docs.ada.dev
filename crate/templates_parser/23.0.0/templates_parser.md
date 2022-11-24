@@ -1,0 +1,307 @@
+---
+crate: templates_parser
+layout: gnatdoc
+gnatdoc: {
+name: "Templates_Parser",
+qualified_name: "Templates_Parser",
+signature: "templates_parser",
+enclosing: "",
+is_private: false,
+documentation: "----------------------------------------------------------------------------\n                             Templates Parser                             --\n                                                                          --\n                     Copyright (C) 1999-2019, AdaCore                     --\n                                                                          --\n  This library is free software;  you can redistribute it and/or modify   --\n  it under terms of the  GNU General Public License  as published by the  --\n  Free Software  Foundation;  either version 3,  or (at your  option) any --\n  later version. This library is distributed in the hope that it will be  --\n  useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of --\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                    --\n                                                                          --\n  As a special exception under Section 7 of GPL version 3, you are        --\n  granted additional permissions described in the GCC Runtime Library     --\n  Exception, version 3.1, as published by the Free Software Foundation.   --\n                                                                          --\n  You should have received a copy of the GNU General Public License and   --\n  a copy of the GCC Runtime Library Exception along with this program;    --\n  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see   --\n  <http://www.gnu.org/licenses/>.                                         --\n                                                                          --\n  As a special exception, if other files instantiate generics from this   --\n  unit, or you link this unit with other files to produce an executable,  --\n  this  unit  does not  by itself cause  the resulting executable to be   --\n  covered by the GNU General Public License. This exception does not      --\n  however invalidate any other reasons why the executable file  might be  --\n  covered by the  GNU Public License.                                     --\n----------------------------------------------------------------------------",
+documentation_snippet: "",
+packages:    [
+       {
+       name: "Dynamic",
+       qualified_name: "Templates_Parser.Dynamic",
+       signature: "templates_parser.dynamic",
+       enclosing: "templates_parser",
+       is_private: false,
+       documentation: "------------\n Lazy_Tag --\n------------",
+       documentation_snippet: "",
+array_types:           [
+              {
+              name: "Path",
+              qualified_name: "Templates_Parser.Dynamic.Path",
+              signature: "templates_parser.dynamic.path",
+              enclosing: "",
+              is_private: false,
+              documentation: "A Path gives the full position of a given element in the cursor tag",
+              documentation_snippet: "type Path is array (Positive range <>) of Natural;",
+              }          ,
+          ]
+,tagged_types:           [
+              {
+              name: "Cursor_Tag",
+              qualified_name: "Templates_Parser.Dynamic.Cursor_Tag",
+              signature: "templates_parser.dynamic.cursor_tag",
+              enclosing: "",
+              is_private: false,
+              documentation: "In some cases it is difficult and not efficient to have to map all\nAda data into a template Tag. A Cursor_Tag object gives the ability\nto iterate through a data structure which is living on the Ada side\nonly.",
+              documentation_snippet: "type Cursor_Tag is abstract tagged private;",
+              }          ,
+              {
+              name: "Lazy_Tag",
+              qualified_name: "Templates_Parser.Dynamic.Lazy_Tag",
+              signature: "templates_parser.dynamic.lazy_tag",
+              enclosing: "",
+              is_private: false,
+              documentation: "",
+              documentation_snippet: "type Lazy_Tag is abstract tagged private;",
+              }          ,
+          ]
+,access_types:           [
+              {
+              name: "Cursor_Tag_Access",
+              qualified_name: "Templates_Parser.Dynamic.Cursor_Tag_Access",
+              signature: "templates_parser.dynamic.cursor_tag_access",
+              enclosing: "",
+              is_private: false,
+              documentation: "In some cases it is difficult and not efficient to have to map all\nAda data into a template Tag. A Cursor_Tag object gives the ability\nto iterate through a data structure which is living on the Ada side\nonly.",
+              documentation_snippet: "type Cursor_Tag_Access is access all Cursor_Tag'Class;",
+              }          ,
+              {
+              name: "Lazy_Tag_Access",
+              qualified_name: "Templates_Parser.Dynamic.Lazy_Tag_Access",
+              signature: "templates_parser.dynamic.lazy_tag_access",
+              enclosing: "",
+              is_private: false,
+              documentation: "",
+              documentation_snippet: "type Lazy_Tag_Access is access all Lazy_Tag'Class;",
+              }          ,
+          ]
+,constants:           [
+              {
+              name: "Null_Cursor_Tag",
+              qualified_name: "Templates_Parser.Dynamic.Null_Cursor_Tag",
+              signature: "templates_parser.dynamic.null_cursor_tag",
+              enclosing: "",
+              is_private: false,
+              documentation: "",
+              documentation_snippet: "Null_Cursor_Tag : constant Cursor_Tag_Access;",
+              }          ,
+              {
+              name: "Null_Lazy_Tag",
+              qualified_name: "Templates_Parser.Dynamic.Null_Lazy_Tag",
+              signature: "templates_parser.dynamic.null_lazy_tag",
+              enclosing: "",
+              is_private: false,
+              documentation: "",
+              documentation_snippet: "Null_Lazy_Tag : constant Lazy_Tag_Access;",
+              }          ,
+          ]
+,       }   ,
+   ]
+,simple_types:    [
+       {
+       name: "Association",
+       qualified_name: "Templates_Parser.Association",
+       signature: "templates_parser.association",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Association is private;",
+       }   ,
+       {
+       name: "Association_Kind",
+       qualified_name: "Templates_Parser.Association_Kind",
+       signature: "templates_parser.association_kind",
+       enclosing: "",
+       is_private: false,
+       documentation: "The kind of association which is either Std (a simple value), a vector\ntag or a Matrix tag.\n\n@enum Std\n@enum Composite",
+       documentation_snippet: "type Association_Kind is (Std, Composite);",
+       }   ,
+       {
+       name: "Reason_Kind",
+       qualified_name: "Templates_Parser.Reason_Kind",
+       signature: "templates_parser.reason_kind",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Reason_Kind is (Unused, Undefined);",
+       }   ,
+       {
+       name: "Tag",
+       qualified_name: "Templates_Parser.Tag",
+       signature: "templates_parser.tag",
+       enclosing: "",
+       is_private: false,
+       documentation: "A tag is using a by reference semantic",
+       documentation_snippet: "type Tag is private;",
+       }   ,
+       {
+       name: "Translate_Set",
+       qualified_name: "Templates_Parser.Translate_Set",
+       signature: "templates_parser.translate_set",
+       enclosing: "",
+       is_private: false,
+       documentation: "This is a set of association like Translate_Table but it is possible to\ninsert item into this set more easily, furthermore there is no need to\nknow the number of item before hand. This is the object used internally\nby the templates engine as it is far more efficient to retrieve a\nspecific item from it.",
+       documentation_snippet: "type Translate_Set is private;",
+       }   ,
+   ]
+,array_types:    [
+       {
+       name: "Parameter_Set",
+       qualified_name: "Templates_Parser.Parameter_Set",
+       signature: "templates_parser.parameter_set",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Parameter_Set is array (Natural range <>) of Unbounded_String;",
+       }   ,
+       {
+       name: "Translate_Table",
+       qualified_name: "Templates_Parser.Translate_Table",
+       signature: "templates_parser.translate_table",
+       enclosing: "",
+       is_private: false,
+       documentation: "A table with a set of associations, note that it is better to use\nTranslate_Set below as it is more efficient.",
+       documentation_snippet: "type Translate_Table is array (Positive range <>) of Association;",
+       }   ,
+   ]
+,record_types:    [
+       {
+       name: "Filter_Context",
+       qualified_name: "Templates_Parser.Filter_Context",
+       signature: "templates_parser.filter_context",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Filter_Context is record\n   Translations : Translate_Set;\n   Lazy_Tag     : Dynamic.Lazy_Tag_Access;\nend record;",
+       }   ,
+   ]
+,tagged_types:    [
+       {
+       name: "User_Filter",
+       qualified_name: "Templates_Parser.User_Filter",
+       signature: "templates_parser.user_filter",
+       enclosing: "",
+       is_private: false,
+       documentation: "User filters can also be implemented through a tagged type, which allows\nyou to add your own user data and reuse a filter in several\napplications, perhaps with a slightly different behavior each time.\nIt is possible for the callback to modify the data stored in Filter, but\nthis needs to be done with care, since multiple concurrent calls to\nCallback might happen.",
+       documentation_snippet: "type User_Filter is abstract tagged private;",
+       }   ,
+   ]
+,access_types:    [
+       {
+       name: "Callback",
+       qualified_name: "Templates_Parser.Callback",
+       signature: "templates_parser.callback",
+       enclosing: "",
+       is_private: false,
+       documentation: "User's filter callback\n\n@param Value\n@param Parameters\n@param Context\n\n@return",
+       documentation_snippet: "type Callback is access function\n  (Value      : String;\n   Parameters : String;\n   Context    : Filter_Context) return String;",
+       }   ,
+       {
+       name: "Callback_No_Param",
+       qualified_name: "Templates_Parser.Callback_No_Param",
+       signature: "templates_parser.callback_no_param",
+       enclosing: "",
+       is_private: false,
+       documentation: "User's filter callback\n\n@param Value\n@param Context\n\n@return",
+       documentation_snippet: "type Callback_No_Param is access function\n  (Value   : String;\n   Context : Filter_Context) return String;",
+       }   ,
+       {
+       name: "Macro_Callback",
+       qualified_name: "Templates_Parser.Macro_Callback",
+       signature: "templates_parser.macro_callback",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Macro_Callback is access\n  function (Name : String; Parameters : Parameter_Set) return String;",
+       }   ,
+       {
+       name: "User_Filter_Access",
+       qualified_name: "Templates_Parser.User_Filter_Access",
+       signature: "templates_parser.user_filter_access",
+       enclosing: "",
+       is_private: false,
+       documentation: "User filters can also be implemented through a tagged type, which allows\nyou to add your own user data and reuse a filter in several\napplications, perhaps with a slightly different behavior each time.\nIt is possible for the callback to modify the data stored in Filter, but\nthis needs to be done with care, since multiple concurrent calls to\nCallback might happen.",
+       documentation_snippet: "type User_Filter_Access is access all User_Filter'Class;",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "Matrix_Tag",
+       qualified_name: "Templates_Parser.Matrix_Tag",
+       signature: "templates_parser.matrix_tag",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Matrix_Tag is Tag;",
+       }   ,
+       {
+       name: "Vector_Tag",
+       qualified_name: "Templates_Parser.Vector_Tag",
+       signature: "templates_parser.vector_tag",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Vector_Tag is Tag;",
+       }   ,
+   ]
+,constants:    [
+       {
+       name: "Default_Begin_Tag",
+       qualified_name: "Templates_Parser.Default_Begin_Tag",
+       signature: "templates_parser.default_begin_tag",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Default_Begin_Tag : constant String := \"@_\";",
+       }   ,
+       {
+       name: "Default_End_Tag",
+       qualified_name: "Templates_Parser.Default_End_Tag",
+       signature: "templates_parser.default_end_tag",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Default_End_Tag   : constant String := \"_@\";",
+       }   ,
+       {
+       name: "Default_Separator",
+       qualified_name: "Templates_Parser.Default_Separator",
+       signature: "templates_parser.default_separator",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Default_Separator : constant String := \", \";",
+       }   ,
+       {
+       name: "No_Parameter",
+       qualified_name: "Templates_Parser.No_Parameter",
+       signature: "templates_parser.no_parameter",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "No_Parameter : constant Parameter_Set;",
+       }   ,
+       {
+       name: "No_Translation",
+       qualified_name: "Templates_Parser.No_Translation",
+       signature: "templates_parser.no_translation",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "No_Translation : constant Translate_Table;",
+       }   ,
+       {
+       name: "Null_Association",
+       qualified_name: "Templates_Parser.Null_Association",
+       signature: "templates_parser.null_association",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Null_Association : constant Association;",
+       }   ,
+       {
+       name: "Null_Set",
+       qualified_name: "Templates_Parser.Null_Set",
+       signature: "templates_parser.null_set",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "Null_Set : constant Translate_Set;",
+       }   ,
+   ]
+,}
+---

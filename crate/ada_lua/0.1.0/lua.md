@@ -1,0 +1,127 @@
+---
+crate: ada_lua
+layout: gnatdoc
+gnatdoc: {
+name: "Lua",
+qualified_name: "Lua",
+signature: "lua",
+enclosing: "",
+is_private: false,
+documentation: "",
+documentation_snippet: "",
+simple_types:    [
+       {
+       name: "Lua_Arith_Op",
+       qualified_name: "Lua.Lua_Arith_Op",
+       signature: "lua.lua_arith_op",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Lua_Arith_Op is\n  (LUA_OPADD,\n   LUA_OPSUB,\n   LUA_OPMUL,\n   LUA_OPDIV,\n   LUA_OPMOD,\n   LUA_OPPOW,\n   LUA_OPUNM);",
+       }   ,
+       {
+       name: "Lua_Compare_Op",
+       qualified_name: "Lua.Lua_Compare_Op",
+       signature: "lua.lua_compare_op",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Lua_Compare_Op is\n  (LUA_OPEQ,\n   LUA_OPLT,\n   LUA_OPLE);",
+       }   ,
+       {
+       name: "Lua_Light_User_Data",
+       qualified_name: "Lua.Lua_Light_User_Data",
+       signature: "lua.lua_light_user_data",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Lua_Light_User_Data is new System.Address;",
+       }   ,
+       {
+       name: "Lua_Return_Code",
+       qualified_name: "Lua.Lua_Return_Code",
+       signature: "lua.lua_return_code",
+       enclosing: "",
+       is_private: false,
+       documentation: "Status types\n\n@enum LUA_OK\n@enum LUA_YIELD\n@enum LUA_ERRRUN\n@enum LUA_ERRSYNTAX\n@enum LUA_ERRMEM\n@enum LUA_ERRGCMM\n@enum LUA_ERRERR\n@enum LUA_ERRFILE",
+       documentation_snippet: "type Lua_Return_Code is\n  (LUA_OK,\n   LUA_YIELD,\n   LUA_ERRRUN,\n   LUA_ERRSYNTAX,\n   LUA_ERRMEM,\n   LUA_ERRGCMM,\n   LUA_ERRERR,\n   LUA_ERRFILE);",
+       }   ,
+       {
+       name: "Lua_State",
+       qualified_name: "Lua.Lua_State",
+       signature: "lua.lua_state",
+       enclosing: "",
+       is_private: false,
+       documentation: "Lua state is the structure containing the state of the interpreter.",
+       documentation_snippet: "type Lua_State is new System.Address;",
+       }   ,
+       {
+       name: "Lua_Type",
+       qualified_name: "Lua.Lua_Type",
+       signature: "lua.lua_type",
+       enclosing: "",
+       is_private: false,
+       documentation: "Lua types\n\n@enum LUA_TNONE\n@enum LUA_TNIL\n@enum LUA_TBOOLEAN\n@enum LUA_TLIGHTUSERDATA\n@enum LUA_TNUMBER\n@enum LUA_TSTRING\n@enum LUA_TTABLE\n@enum LUA_TFUNCTION\n@enum LUA_TUSERDATA\n@enum LUA_TTHREAD",
+       documentation_snippet: "type Lua_Type is\n  (LUA_TNONE,\n   LUA_TNIL,\n   LUA_TBOOLEAN,\n   LUA_TLIGHTUSERDATA,\n   LUA_TNUMBER,\n   LUA_TSTRING,\n   LUA_TTABLE,\n   LUA_TFUNCTION,\n   LUA_TUSERDATA,\n   LUA_TTHREAD);",
+       }   ,
+       {
+       name: "Lua_User_Data",
+       qualified_name: "Lua.Lua_User_Data",
+       signature: "lua.lua_user_data",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Lua_User_Data is new System.Address;",
+       }   ,
+   ]
+,access_types:    [
+       {
+       name: "Lua_Function",
+       qualified_name: "Lua.Lua_Function",
+       signature: "lua.lua_function",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "type Lua_Function is access function (State : Lua_State) return Integer;",
+       }   ,
+   ]
+,subtypes:    [
+       {
+       name: "Lua_Float",
+       qualified_name: "Lua.Lua_Float",
+       signature: "lua.lua_float",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Lua_Float is Long_Float;",
+       }   ,
+       {
+       name: "Lua_Index",
+       qualified_name: "Lua.Lua_Index",
+       signature: "lua.lua_index",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Lua_Index is Integer;",
+       }   ,
+       {
+       name: "Lua_Integer",
+       qualified_name: "Lua.Lua_Integer",
+       signature: "lua.lua_integer",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Lua_Integer is ptrdiff_t;",
+       }   ,
+       {
+       name: "Lua_Unsigned",
+       qualified_name: "Lua.Lua_Unsigned",
+       signature: "lua.lua_unsigned",
+       enclosing: "",
+       is_private: false,
+       documentation: "",
+       documentation_snippet: "subtype Lua_Unsigned is unsigned;",
+       }   ,
+   ]
+,}
+---

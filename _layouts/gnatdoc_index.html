@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>{{page.crate}}</h1>
+
+{% assign categories= "global_packages,global_renames,global_subprograms" | split: ',' %}
+{% for category in categories %}
+  {% if page.gnatdoc[category] %}
+    <h2>{{category | replace: "_", " " | capitalize}}</h2>
+    {% for item in page.gnatdoc[category] %}
+      <a href="{{ item.signature | replace: ".", "-" }}">{{item.name}}</a><a id="{{item.signature}}"></a>
+    {%endfor%}
+  {% endif %}
+{% endfor %}
