@@ -56,6 +56,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Cache Alire data
+        uses: actions/cache@v5
+        with:
+          path: ~/.local/share/alire
+          key: ${{ runner.os }}-alire
+
       - name: Set up Alire
         uses: alire-project/setup-alire@v5
 
@@ -117,7 +123,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Set up Alire
-        uses: alire-project/setup-alire@v3
+        uses: alire-project/setup-alire@v5
 
       - name: Download gnatdoc binary
         uses: actions/download-artifact@v4
