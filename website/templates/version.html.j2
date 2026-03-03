@@ -1,0 +1,110 @@
+{% extends "base.html.j2" %}
+
+{% set desc = manifest.description or '' %}
+
+{% block title %}{{ manifest.crate }} {{ manifest.version }} — Ada/SPARK Documentation{% endblock %}
+{% block description %}{{ desc or ('Ada/SPARK package ' + manifest.crate + ' ' + manifest.version + ' — API documentation') }}{% endblock %}
+{% block keywords %}Ada, SPARK, Alire, {{ manifest.crate }}, {{ manifest.version }}{% if top_level_units %}, {{ top_level_units | join(', ') }}{% endif %}{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "{{ manifest.crate }}",
+  "version": "{{ manifest.version }}",
+  "description": {{ (desc) | tojson }},
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "{{ base_url }}/{{ manifest.crate }}/{{ manifest.version }}/",
+  "codeRepository": "{{ manifest.repository.url if manifest.repository else 'https://alire.ada.dev/crates/' + manifest.crate }}",
+  {% if manifest.authors %}
+  "author": [{% for a in manifest.authors %}{"@type": "Person", "name": {{ a | tojson }}}{% if not loop.last %},{% endif %}{% endfor %}],
+  {% endif %}
+  {% if manifest.licenses %}
+  "license": {{ manifest.licenses | join(', ') | tojson }}
+  {% endif %}
+}
+</script>
+{% endblock %}
+
+{% block breadcrumb %}
+<ol class="breadcrumb">
+  <li><a href="{{ base_url }}/">Registry</a></li>
+  <li><a href="{{ base_url }}/{{ manifest.crate }}/">{{ manifest.crate }}</a></li>
+  <li aria-current="page">{{ manifest.version }}</li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-version">
+  <h1>
+    <a href="{{ base_url }}/{{ manifest.crate }}/">{{ manifest.crate }}</a>
+    <span class="version-tag">{{ manifest.version }}</span>
+  </h1>
+
+  {% if desc %}
+  <p class="crate-description">{{ desc }}</p>
+  {% endif %}
+
+  {% if manifest.long_description %}
+  <div class="long-description">{{ manifest.long_description }}</div>
+  {% endif %}
+
+  <dl class="meta-list">
+    {% if manifest.authors %}
+    <dt>Authors</dt>
+    <dd>{{ manifest.authors | join(', ') }}</dd>
+    {% endif %}
+
+    {% if manifest.licenses %}
+    <dt>License</dt>
+    <dd>{{ manifest.licenses | join(', ') }}</dd>
+    {% endif %}
+
+    {% if manifest.repository %}
+    <dt>Repository</dt>
+    <dd><a href="{{ manifest.repository.url }}">{{ manifest.repository.url }}</a></dd>
+    {% elif manifest.website %}
+    <dt>Website</dt>
+    <dd><a href="{{ manifest.website }}">{{ manifest.website }}</a></dd>
+    {% endif %}
+
+    {% if manifest.tags %}
+    <dt>Tags</dt>
+    <dd>{% for tag in manifest.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</dd>
+    {% endif %}
+  </dl>
+
+  {% if manifest.dependencies %}
+  <section class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      {% for dep in manifest.dependencies %}
+      <li>
+        <a href="{{ base_url }}/{{ dep.crate }}/">{{ dep.crate }}</a>
+        <span class="dep-version">{{ dep.version }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if manifest.units %}
+  <section class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      {% for unit in manifest.units %}
+      <li>
+        <a href="{{ base_url }}/{{ manifest.crate }}/{{ manifest.version }}/{{ unit.file | replace('.json', '') }}/">{{ unit.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% else %}
+  <section class="units-section">
+    <h2>API Units</h2>
+    <p>No API units indexed for this version.</p>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

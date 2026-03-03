@@ -1,0 +1,201 @@
+{% extends "base.html.j2" %}
+
+{% set m      = latest_manifest %}
+{% set latest = crate.latest or '' %}
+{% set desc   = (m.description if m else crate.description) or '' %}
+
+{% block title %}{{ crate.name }} — Ada/SPARK Documentation{% endblock %}
+{% block description %}{{ desc or ('Ada/SPARK package ' + crate.name + ' — API documentation') }}{% endblock %}
+{% block keywords %}Ada, SPARK, Alire, {{ crate.name }}{% if crate.tags %}, {{ crate.tags | join(', ') }}{% endif %}{% if top_level_units %}, {{ top_level_units | join(', ') }}{% endif %}{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "{{ crate.name }}",
+  {% if latest %}"version": "{{ latest }}",{% endif %}
+  "description": {{ (desc) | tojson }},
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "{{ base_url }}/{{ crate.name }}/",
+  "codeRepository": "{{ m.repository.url if m and m.repository else 'https://alire.ada.dev/crates/' + crate.name }}"
+  {% if m and m.authors %}
+  ,"author": [{% for a in m.authors %}{"@type": "Person", "name": {{ a | tojson }}}{% if not loop.last %},{% endif %}{% endfor %}]
+  {% endif %}
+  {% if m and m.licenses %}
+  ,"license": {{ m.licenses | join(', ') | tojson }}
+  {% endif %}
+}
+</script>
+{% endblock %}
+
+{% block breadcrumb %}
+<ol class="breadcrumb">
+  <li><a href="{{ base_url }}/">Registry</a></li>
+  <li aria-current="page">{{ crate.name }}</li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>{{ crate.name }}</h1>
+    {% if crate.versions | length > 1 %}
+    <div class="version-selector">
+      <select id="version-select" aria-label="Select version">
+        {% for v in crate.versions | reverse %}
+        <option value="{{ v }}"{% if v == latest %} selected{% endif %}>{{ v }}{% if v == latest %} (latest){% endif %}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% elif latest %}
+    <span class="version-tag">{{ latest }}</span>
+    {% endif %}
+  </div>
+
+  {% if desc %}
+  <p class="crate-description">{{ desc }}</p>
+  {% endif %}
+
+  {% if m and m.long_description %}
+  <div class="long-description">{{ m.long_description }}</div>
+  {% endif %}
+
+  <dl class="meta-list">
+    {% if m and m.authors %}
+    <dt>Authors</dt>
+    <dd>{{ m.authors | join(', ') }}</dd>
+    {% endif %}
+
+    {% if m and m.licenses %}
+    <dt>License</dt>
+    <dd>{{ m.licenses | join(', ') }}</dd>
+    {% endif %}
+
+    {% if m and m.repository %}
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="{{ m.repository.url }}">{{ m.repository.url }}</a></dd>
+    {% elif m and m.website %}
+    <dt>Website</dt>
+    <dd id="meta-repo"><a href="{{ m.website }}">{{ m.website }}</a></dd>
+    {% else %}
+    <dt id="meta-repo-label" style="display:none">Repository</dt>
+    <dd id="meta-repo" style="display:none"></dd>
+    {% endif %}
+
+    {% if crate.tags %}
+    <dt>Tags</dt>
+    <dd>{% for tag in crate.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</dd>
+    {% endif %}
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    {% if m and m.dependencies %}
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      {% for dep in m.dependencies %}
+      <li>
+        <a href="{{ base_url }}/{{ dep.crate }}/">{{ dep.crate }}</a>
+        <span class="dep-version">{{ dep.version }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    {% if m and m.units %}
+    <ul class="unit-list">
+      {% for unit in m.units %}
+      <li>
+        <a href="{{ base_url }}/{{ crate.name }}/{{ latest }}/{{ unit.file | replace('.json', '') }}/">{{ unit.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No API units indexed for this version.</p>
+    {% endif %}
+  </section>
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+{% if crate.versions | length > 1 %}
+<script>
+(function () {
+  var select  = document.getElementById('version-select');
+  var crate   = {{ crate.name | tojson }};
+  var baseUrl = {{ (base_url or '') | tojson }};
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  select.addEventListener('change', function () {
+    var version = select.value;
+    fetch('/data/' + crate + '/' + version + '/index.json')
+      .then(function (r) { return r.json(); })
+      .then(function (m) { applyManifest(m, version); })
+      .catch(function (e) { console.error('Could not load version ' + version, e); });
+  });
+
+  function applyManifest(m, version) {
+    // Units
+    var uSection = document.getElementById('units-section');
+    if (uSection) {
+      var units = m.units || [];
+      if (units.length === 0) {
+        uSection.innerHTML = '<h2>API Units</h2><p>No API units indexed for this version.</p>';
+      } else {
+        var items = units.map(function (u) {
+          var stem = u.file.replace(/\.json$/, '');
+          var href = esc(baseUrl + '/' + crate + '/' + version + '/' + stem + '/');
+          return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
+        }).join('');
+        uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
+      }
+    }
+
+    // Dependencies
+    var dSection = document.getElementById('deps-section');
+    if (dSection) {
+      var deps = m.dependencies || [];
+      if (deps.length === 0) {
+        dSection.innerHTML = '';
+      } else {
+        var ditems = deps.map(function (d) {
+          return '<li><a href="' + esc(baseUrl + '/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+               + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
+        }).join('');
+        dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';
+      }
+    }
+
+    // Repository / website link
+    var repoEl = document.getElementById('meta-repo');
+    if (repoEl) {
+      var url = m.repository ? m.repository.url : (m.website || '');
+      var labelEl = document.getElementById('meta-repo-label') || repoEl.previousElementSibling;
+      if (url) {
+        repoEl.innerHTML = '<a href="' + esc(url) + '">' + esc(url) + '</a>';
+        repoEl.style.display = '';
+        if (labelEl) labelEl.style.display = '';
+      } else {
+        repoEl.innerHTML = '';
+        repoEl.style.display = 'none';
+        if (labelEl) labelEl.style.display = 'none';
+      }
+    }
+
+    // Page title
+    document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Ada/SPARK Package Registry{% endblock %}
+{% block description %}Browse API documentation for Ada and SPARK packages from the Alire index. Covers all publicly indexed crates.{% endblock %}
+{% block keywords %}Ada, SPARK, Alire, Ada packages, Ada API documentation, Ada library{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ada/SPARK Package Registry",
+  "description": "API documentation for Ada and SPARK packages from the Alire index.",
+  "url": "{{ base_url }}/"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="page-index">
+  <h1>Ada/SPARK Package Registry</h1>
+  <p class="page-intro">
+    API documentation for Ada and SPARK packages from the
+    <a href="https://alire.ada.dev">Alire</a> index.
+    {% if updated %}Last updated {{ updated[:10] }}.{% endif %}
+  </p>
+
+  {% if recent_crates %}
+  <section class="recently-documented">
+    <h2>Recently documented</h2>
+    <ul class="crate-list">
+      {% for crate in recent_crates %}
+      <li class="crate-item">
+        <a class="crate-name" href="{{ base_url }}/{{ crate.name }}/">{{ crate.name }}</a>
+        {% if crate.latest %}
+        <span class="crate-version">{{ crate.latest }}</span>
+        {% endif %}
+        {% if crate.description %}
+        <span class="crate-desc">{{ crate.description }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <div class="search-bar">
+    <label for="crate-search" class="sr-only">Search crates</label>
+    <input id="crate-search" type="search" placeholder="Search crates…"
+           autocomplete="off" spellcheck="false">
+    <span id="crate-count" class="search-count"></span>
+  </div>
+
+  {% if crates %}
+  <ul class="crate-list" id="crate-list">
+    {% for crate in crates %}
+    <li class="crate-item" data-name="{{ crate.name }}"
+        data-tags="{{ crate.tags | join(' ') if crate.tags else '' }}">
+      <a class="crate-name" href="{{ base_url }}/{{ crate.name }}/">{{ crate.name }}</a>
+      {% if crate.latest %}
+      <span class="crate-version">{{ crate.latest }}</span>
+      {% endif %}
+      {% if crate.description %}
+      <span class="crate-desc">{{ crate.description }}</span>
+      {% endif %}
+      {% if crate.tags %}
+      <span class="crate-tags" aria-label="Tags">
+        {% for tag in crate.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <p id="no-results" class="no-results" hidden>No crates match your search.</p>
+  {% else %}
+  <p>No crates have been indexed yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function () {
+  const input = document.getElementById('crate-search');
+  const list  = document.getElementById('crate-list');
+  const count = document.getElementById('crate-count');
+  const none  = document.getElementById('no-results');
+  if (!input || !list) return;
+
+  const items = Array.from(list.querySelectorAll('.crate-item'));
+  count.textContent = items.length + ' crate' + (items.length !== 1 ? 's' : '');
+
+  input.addEventListener('input', function () {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    items.forEach(function (li) {
+      const match = !q
+        || li.dataset.name.includes(q)
+        || (li.dataset.tags || '').includes(q)
+        || (li.querySelector('.crate-desc') || {}).textContent.toLowerCase().includes(q);
+      li.hidden = !match;
+      if (match) visible++;
+    });
+    count.textContent = visible + ' crate' + (visible !== 1 ? 's' : '');
+    none.hidden = visible > 0;
+  });
+}());
+</script>
+{% endblock %}

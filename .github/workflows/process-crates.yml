@@ -1,0 +1,202 @@
+name: Process new Alire crates
+
+# Runs nightly to find and document new/updated Alire crate versions.
+#
+# Architecture — three jobs:
+#
+#   prepare   Build gnatdoc once, enumerate pending crates, upload the binary.
+#
+#   process   One job per crate (max-parallel caps concurrency).  Each job
+#             downloads the gnatdoc binary, processes its crate, and uploads
+#             only that crate's data directory as its own artifact.
+#
+#   collect   Downloads all per-crate artifacts and commits them in a single
+#             push, then triggers the deploy workflow.
+#
+# Per-crate artifacts give full output isolation: a failure in one crate
+# never affects another, and the collect job assembles only what succeeded.
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 02:00 UTC daily
+  workflow_dispatch:
+    inputs:
+      crate:
+        description: >
+          Specific crate to process (name=version, e.g. midi=1.0.0).
+          Leave empty to process all new crates up to --limit.
+        required: false
+        default: ''
+      limit:
+        description: Maximum number of crates to process in this run
+        required: false
+        default: '100'
+      max_parallel:
+        description: Maximum number of concurrent worker jobs
+        required: false
+        default: '10'
+      retry_errors:
+        description: 'Retry crates that previously failed (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  # --------------------------------------------------------------------------
+  # Job 1 — prepare
+  # Build gnatdoc, enumerate pending crates, upload the binary.
+  # --------------------------------------------------------------------------
+  prepare:
+    name: Build gnatdoc + enumerate crates
+    runs-on: ubuntu-latest
+    outputs:
+      matrix:   ${{ steps.enumerate.outputs.matrix }}
+      has_work: ${{ steps.enumerate.outputs.has_work }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Alire
+        uses: alire-project/setup-alire@v3
+
+      - name: Get GNATdoc with JSON backend
+        uses: actions/checkout@v6
+        with:
+          repository: 'Fabien-Chouteau/gnatdoc'
+          ref: '26.0-json-backend'
+          path: 'gnatdoc'
+
+      - name: Build gnatdoc
+        run: cd gnatdoc && alr -n build
+
+      - name: Upload gnatdoc binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: gnatdoc-binary
+          path: gnatdoc/bin/gnatdoc
+          retention-days: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install -r website/scripts/requirements.txt
+
+      - name: Enumerate crates
+        id: enumerate
+        run: |
+          python3 website/scripts/ci_prepare.py \
+            --data    website/data \
+            --limit   "${{ github.event.inputs.limit || '100' }}" \
+            ${{ github.event.inputs.crate        && format('--crate {0}',  github.event.inputs.crate) || '' }} \
+            ${{ github.event.inputs.retry_errors == 'true' && '--retry-errors' || '' }} \
+            >> "$GITHUB_OUTPUT"
+
+  # --------------------------------------------------------------------------
+  # Job 2 — process (one job per crate)
+  # --------------------------------------------------------------------------
+  process:
+    name: "${{ matrix.crate }}=${{ matrix.version }}"
+    needs: prepare
+    if: needs.prepare.outputs.has_work == 'true'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJson(github.event.inputs.max_parallel || '10') }}
+      matrix:
+        include: ${{ fromJson(needs.prepare.outputs.matrix) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Alire
+        uses: alire-project/setup-alire@v3
+
+      - name: Download gnatdoc binary
+        uses: actions/download-artifact@v4
+        with:
+          name: gnatdoc-binary
+          path: bin/
+
+      - name: Make gnatdoc executable
+        run: chmod +x bin/gnatdoc
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install -r website/scripts/requirements.txt
+
+      - name: Process crate
+        run: |
+          python3 website/scripts/process_crate.py \
+            --crate           "${{ matrix.crate }}" \
+            --version         "${{ matrix.version }}" \
+            --data-dir        website/data \
+            --gnatdoc         bin/gnatdoc \
+            --output-tarball  "/tmp/${{ matrix.crate }}-${{ matrix.version }}.tar.gz" \
+            ${{ github.event.inputs.retry_errors == 'true' && '--force' || '' }}
+
+      - name: Upload crate artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: "data-${{ matrix.crate }}-${{ matrix.version }}"
+          path: "/tmp/${{ matrix.crate }}-${{ matrix.version }}.tar.gz"
+          retention-days: 1
+          if-no-files-found: ignore
+
+  # --------------------------------------------------------------------------
+  # Job 3 — collect
+  # Merge all per-crate artifacts and commit in a single push.
+  # --------------------------------------------------------------------------
+  collect:
+    name: Commit data + trigger deploy
+    needs: [prepare, process]
+    if: always() && needs.prepare.outputs.has_work == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Download all crate artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: data-*-*
+          path: /tmp/artifacts/
+          merge-multiple: true
+          # Each artifact is a single {crate}-{version}.tar.gz file.
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Merge artifacts and commit
+        run: |
+          python3 website/scripts/ci_collect.py \
+            --artifacts /tmp/artifacts \
+            --data-dir  website/data
+
+      - name: Trigger deploy
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: context.ref,
+            });
