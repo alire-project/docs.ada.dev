@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "bbs_ansiterm",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:52:53Z",
+  "description": "Generate Escape Sequences for ANSI terminals",
+  "long_description": "Constants, functions, and procedures for generating ANSI escape sequences.\nIf you need something that provides more than this, you should take a look\nat one of the curses/ncurses variants.\nRefer to the documentation for more information.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "vt100",
+    "escape",
+    "ansi"
+  ],
+  "repository": {
+    "url": "https://github.com/BrentSeidel/ANSITerm",
+    "host": "github",
+    "commit": "a8537e1458bf13771638d2f7f9223097cae50e22"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBS.ANSI",
+      "id": "e3efcd6022bb0a75",
+      "file": "bbs-ansi.json"
+    }
+  ]
+}
