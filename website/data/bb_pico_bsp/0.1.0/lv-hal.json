@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"bb_pico_bsp","version":"0.1.0","id":"f3dea4d2505318ef","name":"Lv.Hal","qualified_name":"Lv.Hal","kind":"ada_package","location":{"file":"../../../home/runner/.local/share/alire/builds/lvgl_ada_0.2.0_ccf8da85/f8535339200a7ffe8a63d5f4cfd859d8b94ca5f4138515158659d002618091f7/src/lv-hal.ads","line":1,"column":9},"code":"package Lv.Hal"}
