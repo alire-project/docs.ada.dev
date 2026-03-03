@@ -66,6 +66,9 @@ jobs:
           ref: '26.0-json-backend'
           path: 'gnatdoc'
 
+      - name: Alire Update
+        run: cd gnatdoc && alr -n update
+
       - name: Build gnatdoc
         run: cd gnatdoc && alr -n build
 
