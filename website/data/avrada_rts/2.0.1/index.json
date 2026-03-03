@@ -1,0 +1,168 @@
+{
+  "schema_version": "1",
+  "crate": "avrada_rts",
+  "version": "2.0.1",
+  "documented_at": "2026-03-03T17:52:08Z",
+  "description": "Minimal run time system (RTS) for AVR 8bit controllers",
+  "authors": [
+    "Adacore",
+    "Rolf Ebert"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "avr",
+    "embedded",
+    "rts"
+  ],
+  "website": "https://sourceforge.net/projects/avr-ada/",
+  "repository": {
+    "url": "https://github.com/RREE/AVRAda_RTS",
+    "host": "github",
+    "commit": "92a5f15aa224e5848fea1be3aa8694f256bae9b6"
+  },
+  "dependencies": [
+    {
+      "crate": "gnat_avr_elf",
+      "version": "^11 | ^12.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ada",
+      "id": "fdee430d40bd57de",
+      "file": "ada.json"
+    },
+    {
+      "name": "Ada.Calendar",
+      "id": "d553551d1f78eada",
+      "file": "ada-calendar.json"
+    },
+    {
+      "name": "Ada.Calendar.Delays",
+      "id": "b714f5f7397daea4",
+      "file": "ada-calendar-delays.json"
+    },
+    {
+      "name": "Ada.Characters",
+      "id": "88ccccd9c18adf27",
+      "file": "ada-characters.json"
+    },
+    {
+      "name": "Ada.Characters.Latin_1",
+      "id": "d243ff69541fc5e7",
+      "file": "ada-characters-latin_1.json"
+    },
+    {
+      "name": "Ada.Characters.Latin_9",
+      "id": "54ac7392a2fb6f35",
+      "file": "ada-characters-latin_9.json"
+    },
+    {
+      "name": "Ada.Containers",
+      "id": "7874552fdb0305ce",
+      "file": "ada-containers.json"
+    },
+    {
+      "name": "Ada.Exceptions",
+      "id": "810723b594d2ace2",
+      "file": "ada-exceptions.json"
+    },
+    {
+      "name": "Ada.Tags",
+      "id": "abd86bffdfb5869d",
+      "file": "ada-tags.json"
+    },
+    {
+      "name": "Avrada_Rts_Config",
+      "id": "561911cbb1b66886",
+      "file": "avrada_rts_config.json"
+    },
+    {
+      "name": "GNAT",
+      "id": "6d0ed7a7e79fbdcd",
+      "file": "gnat.json"
+    },
+    {
+      "name": "GNAT.Source_Info",
+      "id": "49141f88d566bbec",
+      "file": "gnat-source_info.json"
+    },
+    {
+      "name": "Interfaces",
+      "id": "0274021b904cdec6",
+      "file": "interfaces.json"
+    },
+    {
+      "name": "Interfaces.C",
+      "id": "a1821cabe66a1908",
+      "file": "interfaces-c.json"
+    },
+    {
+      "name": "System",
+      "id": "bbc5e661e106c6dc",
+      "file": "system.json"
+    },
+    {
+      "name": "System.Assertions",
+      "id": "fa3c29f20750844b",
+      "file": "system-assertions.json"
+    },
+    {
+      "name": "System.Bit_Ops",
+      "id": "b34253201319ed0e",
+      "file": "system-bit_ops.json"
+    },
+    {
+      "name": "System.GCC_Builtins",
+      "id": "faeb8bb23c23dd53",
+      "file": "system-gcc_builtins.json"
+    },
+    {
+      "name": "System.Int_Img",
+      "id": "2eb751ae04e9eeaf",
+      "file": "system-int_img.json"
+    },
+    {
+      "name": "System.Machine_Code",
+      "id": "ee8511a7b043b74a",
+      "file": "system-machine_code.json"
+    },
+    {
+      "name": "System.Memory",
+      "id": "0d96fcd3839fe5c5",
+      "file": "system-memory.json"
+    },
+    {
+      "name": "System.Parameters",
+      "id": "d74ff6123d170e05",
+      "file": "system-parameters.json"
+    },
+    {
+      "name": "System.Secondary_Stack",
+      "id": "e1be837dd7c93ca9",
+      "file": "system-secondary_stack.json"
+    },
+    {
+      "name": "System.Secondary_Stack.Single_Task",
+      "id": "c8408cfa1814f098",
+      "file": "system-secondary_stack-single_task.json"
+    },
+    {
+      "name": "System.Standard_Library",
+      "id": "5aee9e386d95565e",
+      "file": "system-standard_library.json"
+    },
+    {
+      "name": "System.Storage_Elements",
+      "id": "a89cf829e01dbec1",
+      "file": "system-storage_elements.json"
+    },
+    {
+      "name": "System.Unsigned_Types",
+      "id": "ce7adb8ba0c3c6f4",
+      "file": "system-unsigned_types.json"
+    }
+  ]
+}
