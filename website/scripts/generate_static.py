@@ -33,6 +33,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from packaging.version import Version, InvalidVersion
+
 try:
     import jinja2
 except ImportError:
@@ -95,6 +97,72 @@ def crate_documented_at(data_dir: Path, crate_entry: dict) -> str:
     )
 
 
+def rebuild_global_index(data_dir: Path) -> None:
+    """Rebuild data/index.json from scratch by scanning all per-version manifests.
+
+    Walks data/{crate}/{version}/index.json for every crate/version present in
+    data_dir, builds the full crate list, and writes data/index.json.
+    Metadata (description, tags, documented_at) is taken from each crate's
+    latest version.
+    """
+    crates_map: dict[str, dict] = {}
+
+    for index_file in sorted(data_dir.glob("*/*/index.json")):
+        rel = index_file.relative_to(data_dir)
+        if len(rel.parts) != 3:  # not crate/version/index.json
+            continue
+        crate_name, version = rel.parts[0], rel.parts[1]
+
+        try:
+            with open(index_file, encoding="utf-8") as fh:
+                data = json.load(fh)
+        except Exception:
+            continue
+
+        if crate_name not in crates_map:
+            crates_map[crate_name] = {"versions": [], "data": {}}
+        crates_map[crate_name]["versions"].append(version)
+        crates_map[crate_name]["data"][version] = data
+
+    crates = []
+    for crate_name in sorted(crates_map):
+        entry = crates_map[crate_name]
+
+        def version_key(v: str):
+            try:
+                return (0, Version(v))
+            except InvalidVersion:
+                # Fallback: treat invalid versions as greater than valid ones,
+                # and sort lexicographically among themselves
+                return (1, v)
+
+        versions = sorted(entry["versions"], key=version_key)
+        latest = versions[-1]
+        latest_data = entry["data"].get(latest, {})
+        crates.append(
+            {
+                "name": crate_name,
+                "description": latest_data.get("description", ""),
+                "tags": latest_data.get("tags", []),
+                "documented_at": latest_data.get("documented_at", ""),
+                "versions": versions,
+                "latest": latest,
+            }
+        )
+
+    global_index = {
+        "schema_version": "1",
+        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "crates": crates,
+    }
+
+    index_path = data_dir / "index.json"
+    with open(index_path, "w", encoding="utf-8") as fh:
+        json.dump(global_index, fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
+    print(f"  Rebuilt global index: {len(crates)} crate(s) → {index_path}")
+
+
 # ---------------------------------------------------------------------------
 # Core generator
 # ---------------------------------------------------------------------------
@@ -108,6 +176,10 @@ def generate_static(
     base_url: str,
 ) -> int:
     """Generate all static pages. Returns the number of pages written."""
+
+    # --- Rebuild global index first ----------------------------------------
+    print("Rebuilding global index...")
+    rebuild_global_index(data_dir)
 
     # --- Jinja2 environment ------------------------------------------------
     env = jinja2.Environment(
