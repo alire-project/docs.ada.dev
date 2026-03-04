@@ -97,11 +97,11 @@ def crate_documented_at(data_dir: Path, crate_entry: dict) -> str:
     )
 
 
-def rebuild_global_index(data_dir: Path) -> None:
-    """Rebuild data/index.json from scratch by scanning all per-version manifests.
+def rebuild_global_index(data_dir: Path) -> dict:
+    """Rebuild global index from scratch by scanning all per-version manifests.
 
     Walks data/{crate}/{version}/index.json for every crate/version present in
-    data_dir, builds the full crate list, and writes data/index.json.
+    data_dir, builds the full crate list, and returns the index data structure.
     Metadata (description, tags, documented_at) is taken from each crate's
     latest version.
     """
@@ -156,11 +156,8 @@ def rebuild_global_index(data_dir: Path) -> None:
         "crates": crates,
     }
 
-    index_path = data_dir / "index.json"
-    with open(index_path, "w", encoding="utf-8") as fh:
-        json.dump(global_index, fh, indent=2, ensure_ascii=False)
-        fh.write("\n")
-    print(f"  Rebuilt global index: {len(crates)} crate(s) → {index_path}")
+    print(f"  Rebuilt global index: {len(crates)} crate(s)")
+    return global_index
 
 
 # ---------------------------------------------------------------------------
@@ -179,7 +176,15 @@ def generate_static(
 
     # --- Rebuild global index first ----------------------------------------
     print("Rebuilding global index...")
-    rebuild_global_index(data_dir)
+    index_data = rebuild_global_index(data_dir)
+
+    schema_version = index_data.get("schema_version", "1")
+    if schema_version != "1":
+        print(
+            f"Error: unsupported schema_version {schema_version!r} in index.json",
+            file=sys.stderr,
+        )
+        return 0
 
     # --- Jinja2 environment ------------------------------------------------
     env = jinja2.Environment(
@@ -190,20 +195,6 @@ def generate_static(
     )
     env.globals["base_url"] = base_url.rstrip("/")
     env.globals["now"] = datetime.now(timezone.utc).isoformat()
-
-    # --- Load global index -------------------------------------------------
-    index_data = load_json(data_dir / "index.json")
-    if index_data is None:
-        print(f"Error: {data_dir / 'index.json'} not found.", file=sys.stderr)
-        return 0
-
-    schema_version = index_data.get("schema_version", "1")
-    if schema_version != "1":
-        print(
-            f"Error: unsupported schema_version {schema_version!r} in index.json",
-            file=sys.stderr,
-        )
-        return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
     pages_written = 0
@@ -271,6 +262,13 @@ def generate_static(
             "assets not copied",
             file=sys.stderr,
         )
+
+    # --- Write global index to disk ----------------------------------------
+    index_path = data_dir / "index.json"
+    with open(index_path, "w", encoding="utf-8") as fh:
+        json.dump(index_data, fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
+    print(f"  Wrote  {index_path}")
 
     # --- Link data directory into site tree --------------------------------
     # The JS frontend fetches /data/{crate}/{version}/{unit}.json at runtime,
