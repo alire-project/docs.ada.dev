@@ -270,23 +270,15 @@ def generate_static(
         fh.write("\n")
     print(f"  Wrote  {index_path}")
 
-    # --- Link data directory into site tree --------------------------------
+    # --- Copy data directory into site tree --------------------------------
     # The JS frontend fetches /data/{crate}/{version}/{unit}.json at runtime,
-    # so the data directory must be reachable under the site root.
-    # We create a symlink site/data → data_dir if both are on the same
-    # filesystem; otherwise we skip (CI can arrange the layout separately).
-    data_link = output_dir / "data"
+    # so the data directory must be available under the site root.
+    data_out = output_dir / "data"
     if data_dir.is_dir():
-        if data_link.exists() or data_link.is_symlink():
-            data_link.unlink()
-        try:
-            data_link.symlink_to(data_dir.resolve())
-            print(f"  Linked {data_link} → {data_dir.resolve()}")
-        except OSError as exc:
-            print(
-                f"  Warning: could not symlink data directory: {exc}",
-                file=sys.stderr,
-            )
+        if data_out.exists():
+            shutil.rmtree(data_out)
+        shutil.copytree(data_dir, data_out)
+        print(f"  Copied {data_dir} → {data_out}")
 
     return pages_written
 
