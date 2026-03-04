@@ -63,7 +63,14 @@ jobs:
         run: pip install -r website/scripts/requirements.txt
 
       # ------------------------------------------------------------------
-      # 3. Generate static pages
+      # 3. Configure GitHub Pages
+      # ------------------------------------------------------------------
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      # ------------------------------------------------------------------
+      # 4. Generate static pages
       # ------------------------------------------------------------------
       - name: Generate static pages
         run: |
@@ -75,23 +82,12 @@ jobs:
             --base-url  "${{ steps.pages.outputs.base_url }}"
 
       # ------------------------------------------------------------------
-      # 4. Configure GitHub Pages
-      # ------------------------------------------------------------------
-      - name: Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v4
-
-      # ------------------------------------------------------------------
       # 5. Upload site artifact
       # ------------------------------------------------------------------
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload website/site/ but resolve the data symlink so all JSON
-          # files are included in the artifact.
           path: website/site
-          # Follow symlinks so site/data/ (→ website/data/) is included.
-          follow-symlinks: true
 
       # ------------------------------------------------------------------
       # 6. Deploy to GitHub Pages
