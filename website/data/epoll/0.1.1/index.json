@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "epoll",
+  "version": "0.1.1",
+  "documented_at": "2026-03-04T02:59:49Z",
+  "description": "Linux epoll binding",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "linux",
+    "epoll",
+    "net"
+  ],
+  "website": "https://github.com/JeremyGrosser/epoll-ada",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/epoll-ada",
+    "host": "github",
+    "commit": "5475faed094db88b70de29afe74e204dff87447c"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Epoll",
+      "id": "503ce33bb0387d7d",
+      "file": "epoll.json"
+    }
+  ]
+}

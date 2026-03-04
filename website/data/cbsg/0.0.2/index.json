@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "cbsg",
+  "version": "0.0.2",
+  "documented_at": "2026-03-04T02:54:25Z",
+  "description": "Corporate Bullshit Generator",
+  "long_description": "#                The Corporate Bullshit Generator\n### *When Artificial Intelligence meets Business Intelligence*\n\n## Description\n\n   The Corporate Bullshit Generator is a high-performance random text generator\n   that is focused on corporate language. It is able to produce, per second,\n   1000 full A4 pages of inspired and inspirational sentences like \"Our turn-key branding strategy\n   drives corporate, scalable, wide-ranging and profit-oriented idiosyncratic incentives.\"\n\n## Features\n\n   * 1700+ smart-sounding nouns, adjectives, adverbs, constructs\n   * context-sensitive\n   * includes a random boss title generator (e.g.: General President of Facilities\n       Management, Executive Co-Head of Business Planning)\n   * the Delirium random English grammar framework can be used for various text generators\n\n### License\n\nThe Corporate Bullshit Generator is free, open-source and released under the MIT license.\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "text",
+    "console"
+  ],
+  "website": "https://github.com/zertovitch/cbsg",
+  "repository": {
+    "url": "https://sourceforge.net/projects/cbsg",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CGI",
+      "id": "f1111223887f55ca",
+      "file": "cgi.json"
+    },
+    {
+      "name": "Corporate_Bullshit",
+      "id": "4724c516c2175e3e",
+      "file": "corporate_bullshit.json"
+    },
+    {
+      "name": "Delirium",
+      "id": "a945157a1f7a9f25",
+      "file": "delirium.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "aws",
+  "version": "25.2.0",
+  "failed_at": "2026-03-03T17:52:09Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

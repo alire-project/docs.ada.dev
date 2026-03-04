@@ -1,0 +1,309 @@
+{
+  "schema_version": "1",
+  "crate": "adacl_sar",
+  "version": "7.1.0",
+  "documented_at": "2026-03-03T17:49:34Z",
+  "description": "AdaCL: Search and Replace with Wide/Wide-Wide Support",
+  "long_description": "Powerful search-and-replace library for Ada 2022, developed by Martin Krischik, with wide and wide-wide character support.\n\nFeatures:\n- Load, transform, and store text\n- Vector-based text transformations for efficient processing\n- Supports standard, wide, and wide-wide characters for internationalisation\n- Embedded transformations for internal text processing\n- Extensible transformations via tagged types for complex operations\n- Integrates with the Ada Class Library (AdaCL) for robust text handling\n\nLicensed under GPL-3.0-or-later. Integrates with the Ada Class Library (AdaCL).\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_sar/src/)\nDocumentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl_sar/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "strings",
+    "search",
+    "replace",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^7.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AdaCL.SAR",
+      "id": "8543b6a84707d05f",
+      "file": "adacl-sar.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter",
+      "id": "0c8373732a09359e",
+      "file": "adacl-sar-filter.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Insert",
+      "id": "6793557c0e7ca04c",
+      "file": "adacl-sar-filter-insert.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Insert.Line",
+      "id": "44eb45171b1b1dbb",
+      "file": "adacl-sar-filter-insert-line.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Insert.Text",
+      "id": "3598b7cca57e8c96",
+      "file": "adacl-sar-filter-insert-text.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Remove",
+      "id": "0d94f78d41f0fb58",
+      "file": "adacl-sar-filter-remove.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Remove.Comment",
+      "id": "2df09dfbf75f7d25",
+      "file": "adacl-sar-filter-remove-comment.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Remove.Line",
+      "id": "6b46b71c66fc11b6",
+      "file": "adacl-sar-filter-remove-line.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Remove.Tab",
+      "id": "cb9c8496ade12af7",
+      "file": "adacl-sar-filter-remove-tab.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Replace",
+      "id": "ac1fe08ef1cc3aa7",
+      "file": "adacl-sar-filter-replace.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Replace.Indent",
+      "id": "78c426f3fe7a40fd",
+      "file": "adacl-sar-filter-replace-indent.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Replace.Text",
+      "id": "c0036351f70557b6",
+      "file": "adacl-sar-filter-replace-text.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filter.Trim",
+      "id": "b500c570703eb5e5",
+      "file": "adacl-sar-filter-trim.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filters",
+      "id": "20174ad4ad3cf0f5",
+      "file": "adacl-sar-filters.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filters.Search",
+      "id": "5c0b8593afaa182d",
+      "file": "adacl-sar-filters-search.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filters.Search.Excludes",
+      "id": "5e555d6eca06fab6",
+      "file": "adacl-sar-filters-search-excludes.json"
+    },
+    {
+      "name": "AdaCL.SAR.Filters.Search.Includes",
+      "id": "a954a96dfd770de1",
+      "file": "adacl-sar-filters-search-includes.json"
+    },
+    {
+      "name": "AdaCL.SAR.Line",
+      "id": "66e56fe4883dfebc",
+      "file": "adacl-sar-line.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR",
+      "id": "fe84affd006bf91e",
+      "file": "adacl-wide_sar.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter",
+      "id": "da2c53c48f99d594",
+      "file": "adacl-wide_sar-filter.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Insert",
+      "id": "5ec5546bde85f1c6",
+      "file": "adacl-wide_sar-filter-insert.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Insert.Line",
+      "id": "d974f2d5947c2e59",
+      "file": "adacl-wide_sar-filter-insert-line.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Insert.Text",
+      "id": "45331215714bcee1",
+      "file": "adacl-wide_sar-filter-insert-text.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Remove",
+      "id": "9e5efdfeb73b207f",
+      "file": "adacl-wide_sar-filter-remove.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Remove.Comment",
+      "id": "43fa863eaa222cf8",
+      "file": "adacl-wide_sar-filter-remove-comment.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Remove.Line",
+      "id": "d05f9969ef1596ce",
+      "file": "adacl-wide_sar-filter-remove-line.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Remove.Tab",
+      "id": "fb5da13a0451245f",
+      "file": "adacl-wide_sar-filter-remove-tab.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Replace",
+      "id": "3489d2880abed18c",
+      "file": "adacl-wide_sar-filter-replace.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Replace.Indent",
+      "id": "a26c127a39892973",
+      "file": "adacl-wide_sar-filter-replace-indent.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Replace.Text",
+      "id": "27411861b7f5b0de",
+      "file": "adacl-wide_sar-filter-replace-text.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filter.Trim",
+      "id": "dac61ba562c8b1be",
+      "file": "adacl-wide_sar-filter-trim.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filters",
+      "id": "73d76b6fa3994d42",
+      "file": "adacl-wide_sar-filters.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filters.Search",
+      "id": "23a1c2988d47a25a",
+      "file": "adacl-wide_sar-filters-search.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filters.Search.Excludes",
+      "id": "a500e4ba99265c5e",
+      "file": "adacl-wide_sar-filters-search-excludes.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Filters.Search.Includes",
+      "id": "35d816e7364466a0",
+      "file": "adacl-wide_sar-filters-search-includes.json"
+    },
+    {
+      "name": "AdaCL.Wide_SAR.Line",
+      "id": "16ff4aa4d8c6b0d2",
+      "file": "adacl-wide_sar-line.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR",
+      "id": "de80b2d65d9a18a4",
+      "file": "adacl-wide_wide_sar.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter",
+      "id": "36813e9c2868dbfe",
+      "file": "adacl-wide_wide_sar-filter.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Insert",
+      "id": "2d1780a3181b8d68",
+      "file": "adacl-wide_wide_sar-filter-insert.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Insert.Line",
+      "id": "697e09893e364921",
+      "file": "adacl-wide_wide_sar-filter-insert-line.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Insert.Text",
+      "id": "bbd2e8f96b84d3dc",
+      "file": "adacl-wide_wide_sar-filter-insert-text.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Remove",
+      "id": "32c99dbe20fad9ab",
+      "file": "adacl-wide_wide_sar-filter-remove.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Remove.Comment",
+      "id": "fb43fbbf1898df20",
+      "file": "adacl-wide_wide_sar-filter-remove-comment.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Remove.Line",
+      "id": "610ae15a473ba182",
+      "file": "adacl-wide_wide_sar-filter-remove-line.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Remove.Tab",
+      "id": "0692ac1b2b76413c",
+      "file": "adacl-wide_wide_sar-filter-remove-tab.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Replace",
+      "id": "785c7cd45f162d7e",
+      "file": "adacl-wide_wide_sar-filter-replace.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Replace.Indent",
+      "id": "30ae40cc7ad9aa40",
+      "file": "adacl-wide_wide_sar-filter-replace-indent.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Replace.Text",
+      "id": "83237b0fee118fbd",
+      "file": "adacl-wide_wide_sar-filter-replace-text.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filter.Trim",
+      "id": "5993b345f06c9d3a",
+      "file": "adacl-wide_wide_sar-filter-trim.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filters",
+      "id": "05e993363a789bca",
+      "file": "adacl-wide_wide_sar-filters.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filters.Search",
+      "id": "3e884d0cc141bf81",
+      "file": "adacl-wide_wide_sar-filters-search.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filters.Search.Excludes",
+      "id": "0bc6beca15b489eb",
+      "file": "adacl-wide_wide_sar-filters-search-excludes.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Filters.Search.Includes",
+      "id": "9bce22ba79333c33",
+      "file": "adacl-wide_wide_sar-filters-search-includes.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_SAR.Line",
+      "id": "fe935e511ace91b0",
+      "file": "adacl-wide_wide_sar-line.json"
+    },
+    {
+      "name": "Adacl_Sar_Config",
+      "id": "9463f6bf92b43dfd",
+      "file": "adacl_sar_config.json"
+    }
+  ]
+}

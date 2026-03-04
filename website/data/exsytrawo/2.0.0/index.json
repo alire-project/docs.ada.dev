@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "exsytrawo",
+  "version": "2.0.0",
+  "documented_at": "2026-03-04T03:00:06Z",
+  "description": "Exception Symbolic Traceback Workaround for macOS",
+  "authors": [
+    "Pascal Pignard"
+  ],
+  "licenses": [
+    "CECILL-C"
+  ],
+  "tags": [
+    "exception",
+    "symbolic",
+    "traceback"
+  ],
+  "website": "https://github.com/Blady-Com/exsytrawo",
+  "repository": {
+    "url": "https://github.com/Blady-Com/exsytrawo",
+    "host": "github",
+    "commit": "695116804bb17c6c8202898f3ee628b1061fe552"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Excep_Sym_Trace_Workaround",
+      "id": "2b5ffcd06546df1b",
+      "file": "excep_sym_trace_workaround.json"
+    }
+  ]
+}
