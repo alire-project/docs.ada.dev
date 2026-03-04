@@ -92,9 +92,36 @@ def crate_documented_at(data_dir: Path, crate_entry: dict) -> str:
         return data["documented_at"]
     # mtime fallback (reliable locally; unreliable after a git checkout)
     mtime = path.stat().st_mtime
-    return datetime.fromtimestamp(mtime, tz=timezone.utc).strftime(
-        "%Y-%m-%dT%H:%M:%SZ"
+    return datetime.fromtimestamp(mtime, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def collect_failed_builds(data_dir: Path) -> list[dict]:
+    """Collect all failed documentation builds.
+
+    Scans data/{crate}/{version}/error.json for all failed builds and
+    returns a list of error records sorted by failure time (newest first).
+    """
+    failed_builds = []
+
+    for error_file in sorted(data_dir.glob("*/*/error.json")):
+        rel = error_file.relative_to(data_dir)
+        if len(rel.parts) != 3:  # not crate/version/error.json
+            continue
+
+        try:
+            with open(error_file, encoding="utf-8") as fh:
+                error_data = json.load(fh)
+            failed_builds.append(error_data)
+        except Exception:
+            continue
+
+    # Sort by failed_at timestamp, newest first
+    failed_builds.sort(
+        key=lambda x: x.get("failed_at", ""),
+        reverse=True
     )
+
+    return failed_builds
 
 
 def rebuild_global_index(data_dir: Path) -> dict:
@@ -215,6 +242,13 @@ def generate_static(
     _write(output_dir / "index.html", html)
     pages_written += 1
 
+    # --- Failed builds page ------------------------------------------------
+    failed_builds = collect_failed_builds(data_dir)
+    tmpl = env.get_template("errors.html.j2")
+    html = tmpl.render(failed_builds=failed_builds)
+    _write(output_dir / "errors.html", html)
+    pages_written += 1
+
     # --- Per-crate and per-version pages -----------------------------------
     for crate_entry in index_data.get("crates", []):
         crate_name = crate_entry["name"]
@@ -224,9 +258,7 @@ def generate_static(
         # Load latest version manifest (for crate landing page)
         latest_manifest: dict | None = None
         if latest:
-            latest_manifest = load_json(
-                data_dir / crate_name / latest / "index.json"
-            )
+            latest_manifest = load_json(data_dir / crate_name / latest / "index.json")
 
         # Crate page (one per crate — shows latest version with version switcher)
         crate_out = output_dir / crate_name
@@ -296,7 +328,10 @@ def generate_static(
     data_out = output_dir / "data"
     if data_dir.is_dir():
         if data_out.exists():
+            print(f"  Removing {data_out}...")
             shutil.rmtree(data_out)
+            print(f"  Removed {data_out}")
+        print(f"  Copying {data_dir} → {data_out}...")
         shutil.copytree(data_dir, data_out)
         print(f"  Copied {data_dir} → {data_out}")
 

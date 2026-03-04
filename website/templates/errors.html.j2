@@ -1,0 +1,45 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Failed Documentation Builds — Ada/SPARK Docs{% endblock %}
+{% block description %}List of crate versions that failed documentation generation.{% endblock %}
+
+{% block content %}
+<div class="errors-page">
+  <header class="page-header">
+    <h1>Failed Documentation Builds</h1>
+    <p class="subtitle">
+      Crate versions that encountered errors during documentation generation.
+    </p>
+  </header>
+
+  {% if failed_builds %}
+  <p class="count">{{ failed_builds|length }} failed build(s)</p>
+
+  <div class="errors-list">
+    {% for error in failed_builds %}
+    <article class="error-card">
+      <header class="error-header">
+        <h2 class="error-title">
+          <a href="{{ base_url }}/{{ error.crate }}/">{{ error.crate }}</a>
+          <span class="version">{{ error.version }}</span>
+        </h2>
+        <time class="error-time" datetime="{{ error.failed_at }}">
+          Failed {{ error.failed_at[:10] }}
+        </time>
+      </header>
+      <div class="error-details">
+        <dl>
+          <dt>Stage:</dt>
+          <dd><code>{{ error.stage }}</code></dd>
+          <dt>Message:</dt>
+          <dd><code>{{ error.message }}</code></dd>
+        </dl>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">No failed builds found.</p>
+  {% endif %}
+</div>
+{% endblock %}
