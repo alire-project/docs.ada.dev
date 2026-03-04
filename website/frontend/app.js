@@ -19,6 +19,22 @@
   'use strict';
 
   // -------------------------------------------------------------------------
+  // Base URL (injected at build time via window.BASE_URL)
+  // -------------------------------------------------------------------------
+
+  var BASE_URL = window.BASE_URL || '';
+
+  /**
+   * Resolve a path relative to the base URL.
+   */
+  function resolvePath(path) {
+    if (!path) return BASE_URL || '/';
+    if (path.startsWith('http://') || path.startsWith('https://')) return path;
+    if (!path.startsWith('/')) path = '/' + path;
+    return (BASE_URL + path).replace(/\/+/g, '/');
+  }
+
+  // -------------------------------------------------------------------------
   // Utility: Markdown → HTML
   // -------------------------------------------------------------------------
 
@@ -57,6 +73,10 @@
    * Returns null if the path does not match a unit page pattern.
    */
   function parsePath(pathname) {
+    // Strip base URL first
+    if (BASE_URL && pathname.startsWith(BASE_URL)) {
+      pathname = pathname.substring(BASE_URL.length);
+    }
     // Strip leading slash and split
     var parts = pathname.replace(/^\//, '').replace(/\/$/, '').split('/');
     if (parts.length >= 3) {
@@ -70,9 +90,7 @@
   // -------------------------------------------------------------------------
 
   async function fetchUnit(crate, version, unit) {
-    // Base URL: works for both root-relative paths and subdirectory deployments.
-    // We look for /data/ relative to the site root.
-    var url = '/data/' + crate + '/' + version + '/' + unit + '.json';
+    var url = resolvePath('/data/' + crate + '/' + version + '/' + unit + '.json');
     var resp = await fetch(url);
     if (!resp.ok) {
       throw new Error('HTTP ' + resp.status + ' fetching ' + url);
@@ -81,7 +99,7 @@
   }
 
   async function fetchVersionManifest(crate, version) {
-    var url = '/data/' + crate + '/' + version + '/index.json';
+    var url = resolvePath('/data/' + crate + '/' + version + '/index.json');
     try {
       var resp = await fetch(url);
       if (!resp.ok) return null;
@@ -180,7 +198,7 @@
   /** Build a URL for an entity reference cross-link. */
   function xrefUrl(ref) {
     if (!ref || !ref.crate || !ref.version || !ref.unit) return null;
-    var url = '/' + ref.crate + '/' + ref.version + '/' + ref.unit + '/';
+    var url = resolvePath('/' + ref.crate + '/' + ref.version + '/' + ref.unit + '/');
     if (ref.id) url += '#' + ref.id;
     return url;
   }

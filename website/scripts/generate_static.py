@@ -242,20 +242,40 @@ def generate_static(
         _write(crate_out / "index.html", html)
         pages_written += 1
 
-    # --- Copy frontend assets ----------------------------------------------
+    # --- Process and copy frontend assets ----------------------------------
     assets_out = output_dir / "assets"
     if frontend_dir.is_dir():
         if assets_out.exists():
             shutil.rmtree(assets_out)
-        shutil.copytree(frontend_dir, assets_out)
-        print(f"  Copied {frontend_dir} → {assets_out}")
+        assets_out.mkdir(parents=True, exist_ok=True)
 
-        # Also place 404.html at the site root (GitHub Pages fallback for
-        # client-side unit page routing).
-        app_shell = frontend_dir / "index.html"
-        if app_shell.exists():
-            shutil.copy(app_shell, output_dir / "404.html")
-            print(f"  Wrote  {output_dir / '404.html'}")
+        # Process index.html as a Jinja2 template to inject base_url
+        app_shell_template = frontend_dir / "index.html"
+        if app_shell_template.exists():
+            with open(app_shell_template, encoding="utf-8") as fh:
+                template_content = fh.read()
+            template = env.from_string(template_content)
+            rendered_html = template.render()
+
+            # Write to both assets/index.html and 404.html at site root
+            _write(assets_out / "index.html", rendered_html)
+            _write(output_dir / "404.html", rendered_html)
+        else:
+            print(
+                f"  Warning: {app_shell_template} not found",
+                file=sys.stderr,
+            )
+
+        # Copy all other frontend files (CSS, JS, etc.)
+        for item in frontend_dir.iterdir():
+            if item.name == "index.html":
+                continue  # Already processed as template
+            if item.is_file():
+                shutil.copy(item, assets_out / item.name)
+                print(f"  Copied {item} → {assets_out / item.name}")
+            elif item.is_dir():
+                shutil.copytree(item, assets_out / item.name)
+                print(f"  Copied {item} → {assets_out / item.name}")
     else:
         print(
             f"  Warning: frontend directory {frontend_dir} not found; "
