@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lace","version":"0.1.0","id":"e77b717de8531c1b","name":"lace.Strings","qualified_name":"lace.Strings","kind":"ada_package","location":{"file":"../source/strings/lace-strings.ads","line":1,"column":9},"code":"package lace.Strings"}
