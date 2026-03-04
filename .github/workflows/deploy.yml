@@ -8,9 +8,9 @@ name: Deploy documentation site
 #     website/templates/ (e.g. a manual frontend update).
 #   - Manually via workflow_dispatch.
 #
-# The deploy step uses the built-in GitHub Pages Actions deployment, which
+# The deploy step pushes the generated site to the gh-pages branch, which
 # requires the repository to have GitHub Pages enabled with source set to
-# "GitHub Actions" in Settings → Pages.
+# "Deploy from a branch" → "gh-pages" in Settings → Pages.
 
 on:
   workflow_dispatch: {}
@@ -30,19 +30,13 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: write
 
     # Only one deploy can run at a time; cancel any in-progress run when a
     # newer one is queued.
     concurrency:
       group: pages
       cancel-in-progress: true
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
 
     steps:
       # ------------------------------------------------------------------
@@ -63,14 +57,7 @@ jobs:
         run: pip install -r website/scripts/requirements.txt
 
       # ------------------------------------------------------------------
-      # 3. Configure GitHub Pages
-      # ------------------------------------------------------------------
-      - name: Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v4
-
-      # ------------------------------------------------------------------
-      # 4. Generate static pages
+      # 3. Generate static pages
       # ------------------------------------------------------------------
       - name: Generate static pages
         run: |
@@ -79,19 +66,26 @@ jobs:
             --output    website/site     \
             --templates website/templates \
             --frontend  website/frontend  \
-            --base-url  "${{ steps.pages.outputs.base_url }}"
+            --base-url  "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
 
       # ------------------------------------------------------------------
-      # 5. Upload site artifact
+      # 4. Deploy to gh-pages branch
       # ------------------------------------------------------------------
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: website/site
+      - name: Deploy to gh-pages
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # ------------------------------------------------------------------
-      # 6. Deploy to GitHub Pages
-      # ------------------------------------------------------------------
-      - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+          # Create a temporary directory for gh-pages
+          cd website/site
+
+          # Initialize a new git repo in the site directory
+          git init
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+
+          # Force push to gh-pages branch
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:gh-pages
+
+          echo "Deployed to gh-pages branch"
