@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "gettext",
+  "version": "25.9.3",
+  "documented_at": "2026-03-04T03:01:04Z",
+  "description": "A wrapper library for gettext",
+  "long_description": "A simple but hopefully complete Ada wrapper around\n[gettext](https://www.gnu.org/software/gettext/). It should run on linux and\nwindows. Don't know for other OSes.\n\n# How to use\n\nBefore calling the `gettext` family translation functions:\n\n- You **must** set the locale using `Gettexts.Locale.Set_Locale` (even a call\n  with no arguments is enough but required).\n- You should set the directory and the domain name with\n  `Gettexts.Set_Domain_Directory` and `Gettexts.Set_Domain_Name`.\n- You should set the codeset with `Gettexts.Set_Domain_Codeset`.\n\n# Function names\n\nYou can choose between:\n\n- Standard names used in C language: `gettext`, `ngettext`, `pgettext`, `dgettext`, etc.\n- More readable Ada names: `Get_Text`, `Get_Plural_Text`, `Get_Text_With_Context`, etc.\n\n# Limits\n\nThere's no support for Ada in\n[xgettext](https://www.gnu.org/software/gettext/manual/html_node/xgettext-Invocation.html).\nBut if your code doesn't have unbalanced tick marks (like in `'Class`), you\ncan still use it to produce and update `.po` files (see `update.sh` in example\ndirectory). As a workaround, you can balance tick marks with comments `--  '`.\n",
+  "authors": [
+    "H. ROMANO"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "i18n",
+    "gettext"
+  ],
+  "website": "https://github.com/HROMANO/gettext",
+  "repository": {
+    "url": "https://github.com/HROMANO/gettext",
+    "host": "github",
+    "commit": "0300727bf0eca520ed66f032fd962949c6fd3ecd"
+  },
+  "dependencies": [
+    {
+      "crate": "case(os)",
+      "version": "{'windows': {'gettext_runtime': '*'}}"
+    }
+  ],
+  "units": [
+    {
+      "name": "Gettext_Config",
+      "id": "ebc8aa8f92069ff7",
+      "file": "gettext_config.json"
+    },
+    {
+      "name": "Gettexts",
+      "id": "d924c5fab6654dd9",
+      "file": "gettexts.json"
+    },
+    {
+      "name": "Gettexts.Locale",
+      "id": "159f1923acfb7b7a",
+      "file": "gettexts-locale.json"
+    }
+  ]
+}
