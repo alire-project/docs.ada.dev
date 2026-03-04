@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"itsybitsy_bsp","version":"0.0.4","id":"1df6976ed52a275d","name":"Itsybitsy_Bsp","qualified_name":"Itsybitsy_Bsp","kind":"ada_package","location":{"file":"src/itsybitsy_bsp.ads","line":1,"column":9},"code":"package Itsybitsy_Bsp"}
