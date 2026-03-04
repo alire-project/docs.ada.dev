@@ -428,8 +428,8 @@
     ol.className = 'breadcrumb';
     ol.setAttribute('aria-label', 'Breadcrumb');
     ol.innerHTML =
-      '<li><a href="/">Registry</a></li>'
-      + '<li><a href="/' + esc(crate) + '/">' + esc(crate) + '</a></li>'
+      '<li><a href="' + esc(resolvePath('/')) + '">Registry</a></li>'
+      + '<li><a href="' + esc(resolvePath('/' + crate + '/')) + '">' + esc(crate) + '</a></li>'
       + '<li aria-current="page">' + esc(unitName) + '</li>';
     nav.appendChild(ol);
   }
@@ -442,9 +442,14 @@
     var params = parsePath(window.location.pathname);
     if (!params) {
       // Redirect /crate/version/ (two path segments) to /crate/
-      var parts = window.location.pathname.replace(/^\//, '').replace(/\/$/, '').split('/');
+      var pathname = window.location.pathname;
+      // Strip BASE_URL first
+      if (BASE_URL && pathname.startsWith(BASE_URL)) {
+        pathname = pathname.substring(BASE_URL.length);
+      }
+      var parts = pathname.replace(/^\//, '').replace(/\/$/, '').split('/');
       if (parts.length === 2 && parts[0] && parts[1]) {
-        window.location.replace('/' + parts[0] + '/');
+        window.location.replace(resolvePath('/' + parts[0] + '/'));
       }
       return;
     }
@@ -492,7 +497,7 @@
         '<div class="error-message">'
         + '<p>Could not load documentation for <code>' + esc(params.unit) + '</code>.</p>'
         + '<p><small>' + esc(err.message) + '</small></p>'
-        + '<p><a href="/' + esc(params.crate) + '/' + esc(params.version) + '/">'
+        + '<p><a href="' + esc(resolvePath('/' + params.crate + '/' + params.version + '/')) + '">'
         + '← Back to ' + esc(params.crate) + ' ' + esc(params.version) + '</a></p>'
         + '</div>';
     }

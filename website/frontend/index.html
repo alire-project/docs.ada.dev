@@ -16,7 +16,20 @@
   <link rel="stylesheet" href="{{ base_url }}/assets/style.css">
   <script>
     // Base URL injected at build time for use by app.js
-    window.BASE_URL = "{{ base_url }}";
+    // Extract just the pathname if it's a full URL
+    (function() {
+      var baseUrl = "{{ base_url }}";
+      try {
+        // If it's a full URL, extract the pathname
+        if (baseUrl.startsWith('http://') || baseUrl.startsWith('https://')) {
+          window.BASE_URL = new URL(baseUrl).pathname.replace(/\/$/, '');
+        } else {
+          window.BASE_URL = baseUrl;
+        }
+      } catch (e) {
+        window.BASE_URL = baseUrl;
+      }
+    })();
   </script>
 </head>
 <body>
