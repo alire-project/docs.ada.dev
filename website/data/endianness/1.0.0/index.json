@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "endianness",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:59:35Z",
+  "description": "Convenience subprograms to convert between Big- and Little-endianness",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "spark",
+    "endianness",
+    "system"
+  ],
+  "website": "https://github.com/AntonMeep/endianness",
+  "repository": {
+    "url": "https://github.com/AntonMeep/endianness",
+    "host": "github",
+    "commit": "0fdb81cde626f68c726eaac5c1211a65e6a06a33"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Endianness",
+      "id": "fefbffe6775c7b77",
+      "file": "endianness.json"
+    },
+    {
+      "name": "Endianness.Interfaces",
+      "id": "91498f0f14cccfac",
+      "file": "endianness-interfaces.json"
+    },
+    {
+      "name": "Endianness.Standard",
+      "id": "a1a9deab381d777f",
+      "file": "endianness-standard.json"
+    }
+  ]
+}
