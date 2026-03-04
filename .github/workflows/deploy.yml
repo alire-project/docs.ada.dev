@@ -73,19 +73,21 @@ jobs:
       # ------------------------------------------------------------------
       - name: Deploy to gh-pages
         run: |
-          # Configure git
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Create a temporary directory for gh-pages
+          # Navigate to the built site directory
           cd website/site
 
           # Initialize a new git repo in the site directory
-          git init
+          git init -b gh-pages
+
+          # Configure git identity for this repository
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add and commit all files
           git add .
           git commit -m "Deploy to GitHub Pages"
 
           # Force push to gh-pages branch
-          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:gh-pages
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages:gh-pages
 
           echo "Deployed to gh-pages branch"
