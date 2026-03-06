@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"rxada","version":"0.1.1","id":"51715d13afeeed56","name":"Rx.Tools","qualified_name":"Rx.Tools","kind":"ada_package","location":{"file":"src/priv/rx-tools.ads","line":1,"column":9},"code":"package Rx.Tools","documentation":{"description":"Root for helper packages not directly related to RX\nThese are good candidates to move to a external library"}}
