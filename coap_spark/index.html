@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>coap_spark — Ada/SPARK Documentation</title>
+  <meta name="description" content="CoAP implementation formally verified with SPARK/Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, coap_spark, spark, coap, iot, protocol, CoAP_SPARK, Coap_Spark_Config, RFLX, Workarounds">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "coap_spark",
+"version": "0.10.0",  "description": "CoAP implementation formally verified with SPARK/Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/coap_spark/",
+  "codeRepository": "https://github.com/mgrojo/coap_spark"
+  ,"author": [{"@type": "Person", "name": "Manuel Gomez"}]
+  ,"license": "Apache-2.0 OR GPL-2.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">coap_spark</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>coap_spark</h1>
+    <span class="version-tag">0.10.0</span>
+  </div>
+
+  <p class="crate-description">CoAP implementation formally verified with SPARK/Ada</p>
+
+  <div class="long-description">CoAP-SPARK is a library implementing the Constrained Application Protocol (CoAP)
+as defined in
+[RFC 7252](https://www.rfc-editor.org/rfc/rfc7252), developed in the SPARK 
+language, the formally verified subset of the Ada programming language.
+
+This version implements client and server sides of the protocol with some limitations:
+- It does not support block-wise transfers.
+- It does not support retransmission of messages.
+- It only supports NoSec and PreSharedKey security modes.
+
+See LICENSING for licensing information.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Manuel Gomez</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 OR GPL-2.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/mgrojo/coap_spark">https://github.com/mgrojo/coap_spark</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">spark</span><span class="tag">coap</span><span class="tag">iot</span><span class="tag">protocol</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/gnatprove/">gnatprove</a>
+        <span class="dep-version">^14.1.1</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wolfssl/">wolfssl</a>
+        <span class="dep-version">^5.8.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/gnat_native/">gnat_native</a>
+        <span class="dep-version">^14.2</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark/">CoAP_SPARK</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-channel/">CoAP_SPARK.Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-client_session/">CoAP_SPARK.Client_Session</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-content_formats/">CoAP_SPARK.Content_Formats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-content_formats-application/">CoAP_SPARK.Content_Formats.application</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-content_formats-image/">CoAP_SPARK.Content_Formats.image</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-content_formats-text/">CoAP_SPARK.Content_Formats.text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-log/">CoAP_SPARK.Log</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-messages/">CoAP_SPARK.Messages</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-messages-encoding/">CoAP_SPARK.Messages.Encoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-options/">CoAP_SPARK.Options</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-options-list_sorting/">CoAP_SPARK.Options.List_Sorting</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-options-text_io/">CoAP_SPARK.Options.Text_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-options-uri/">CoAP_SPARK.Options.URI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-random/">CoAP_SPARK.Random</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-resources/">CoAP_SPARK.Resources</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-server_session/">CoAP_SPARK.Server_Session</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-uri/">CoAP_SPARK.URI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-utils/">CoAP_SPARK.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark-utils-valid_values/">CoAP_SPARK.Utils.Valid_Values</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/coap_spark_config/">Coap_Spark_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx/">RFLX</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap/">RFLX.CoAP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap-coap_message/">RFLX.CoAP.CoAP_Message</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap-option_type/">RFLX.CoAP.Option_Type</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client/">RFLX.CoAP_Client</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client-options_and_payload_data/">RFLX.CoAP_Client.Options_And_Payload_Data</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client-session/">RFLX.CoAP_Client.Session</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client-session-fsm/">RFLX.CoAP_Client.Session.FSM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client-session-fsm_allocator/">RFLX.CoAP_Client.Session.FSM_Allocator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client-session_environment/">RFLX.CoAP_Client.Session_Environment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_client-token_data/">RFLX.CoAP_Client.Token_Data</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server/">RFLX.CoAP_Server</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-application_response/">RFLX.CoAP_Server.Application_Response</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-contains/">RFLX.CoAP_Server.Contains</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-definite_message/">RFLX.CoAP_Server.Definite_Message</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-main_loop/">RFLX.CoAP_Server.Main_Loop</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-main_loop-fsm/">RFLX.CoAP_Server.Main_Loop.FSM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-main_loop-fsm_allocator/">RFLX.CoAP_Server.Main_Loop.FSM_Allocator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-main_loop_environment/">RFLX.CoAP_Server.Main_Loop_Environment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-coap_server-options_and_payload_data/">RFLX.CoAP_Server.Options_And_Payload_Data</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_arithmetic/">RFLX.RFLX_Arithmetic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_builtin_types/">RFLX.RFLX_Builtin_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_builtin_types-conversions/">RFLX.RFLX_Builtin_Types.Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_generic_types/">RFLX.RFLX_Generic_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_generic_types-generic_operations/">RFLX.RFLX_Generic_Types.Generic_Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_generic_types-generic_operators/">RFLX.RFLX_Generic_Types.Generic_Operators</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_message_sequence/">RFLX.RFLX_Message_Sequence</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/rflx-rflx_scalar_sequence/">RFLX.RFLX_Scalar_Sequence</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/coap_spark/0.10.0/workarounds/">Workarounds</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-07.
+    </p>
+  </footer>
+</body>
+</html>

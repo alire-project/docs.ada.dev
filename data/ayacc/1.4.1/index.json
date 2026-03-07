@@ -1,0 +1,169 @@
+{
+  "schema_version": "1",
+  "crate": "ayacc",
+  "version": "1.4.1",
+  "documented_at": "2026-03-03T17:52:03Z",
+  "description": "An Ada LARL(1) parser generator",
+  "long_description": "Ayacc is an Ada parser generator in the style of yacc(1).\n\nThe first implementation was written by David Taback and Deepak Tolani\nat the University of California, Irvine.  The last version that was released\nappeared to be the Ayacc 1.1 released in 1994.\n\nAyacc was used and improved by P2Ada, the Pascal to Ada translator.\nThis version of Ayacc is derived from the P2Ada ayacc implementation\nreleased in August 2010.\n\nThis version brings a number of improvements:\n\n- Ayacc now uses more standard options to configure the code generation\n- The parser was improved to configure the parser stack size and\n  support Ada child packages.\n- The grammar supports the %unit directive to control the Ada child packages.\n- Several options provide a better control of the generated code.\n- Ayacc can generate a reentrant parser.\n\n",
+  "authors": [
+    "David Taback",
+    "Deepak Tolani"
+  ],
+  "licenses": [
+    "Unlicense"
+  ],
+  "tags": [
+    "parser",
+    "generator",
+    "grammar"
+  ],
+  "website": "https://github.com/Ada-France/ayacc",
+  "repository": {
+    "url": "https://github.com/Ada-France/ayacc",
+    "host": "github",
+    "commit": "2ec635a270080bce7cd42403ba28729173ed7c88"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Actions_File",
+      "id": "d856d9b4162826b3",
+      "file": "actions_file.json"
+    },
+    {
+      "name": "Ayacc_File_Names",
+      "id": "63087789a7339577",
+      "file": "ayacc_file_names.json"
+    },
+    {
+      "name": "Error_Report_File",
+      "id": "9150e8086cf2d745",
+      "file": "error_report_file.json"
+    },
+    {
+      "name": "Goto_File",
+      "id": "e41c6f9b68d418e6",
+      "file": "goto_file.json"
+    },
+    {
+      "name": "Lalr_Symbol_Info",
+      "id": "4a31448ec77b67dc",
+      "file": "lalr_symbol_info.json"
+    },
+    {
+      "name": "Lexical_Analyzer",
+      "id": "8ff1698c6c7ac4d1",
+      "file": "lexical_analyzer.json"
+    },
+    {
+      "name": "Lists",
+      "id": "4c14c4a453f98de4",
+      "file": "lists.json"
+    },
+    {
+      "name": "Lr0_Machine",
+      "id": "438c96c8e73c62b3",
+      "file": "lr0_machine.json"
+    },
+    {
+      "name": "Options",
+      "id": "a793ab8fcc2afce5",
+      "file": "options.json"
+    },
+    {
+      "name": "Output_File",
+      "id": "1eb53676da147ec5",
+      "file": "output_file.json"
+    },
+    {
+      "name": "Parse_Table",
+      "id": "b9eade4e484e2335",
+      "file": "parse_table.json"
+    },
+    {
+      "name": "Parse_Template_File",
+      "id": "f3e368d6293f7869",
+      "file": "parse_template_file.json"
+    },
+    {
+      "name": "Parse_Template_File.Templates",
+      "id": "5d815e7a6a4dbfc9",
+      "file": "parse_template_file-templates.json"
+    },
+    {
+      "name": "Parser",
+      "id": "b17d45121150928f",
+      "file": "parser.json"
+    },
+    {
+      "name": "Ragged",
+      "id": "65e50ce38fad2edf",
+      "file": "ragged.json"
+    },
+    {
+      "name": "Rule_Table",
+      "id": "00a82a7e6d0d801f",
+      "file": "rule_table.json"
+    },
+    {
+      "name": "Set_Pack",
+      "id": "fcd250f87fa05274",
+      "file": "set_pack.json"
+    },
+    {
+      "name": "Shift_Reduce_File",
+      "id": "892696db8e862fe1",
+      "file": "shift_reduce_file.json"
+    },
+    {
+      "name": "Source_File",
+      "id": "65dc1cfa0bff0400",
+      "file": "source_file.json"
+    },
+    {
+      "name": "Stack_Pack",
+      "id": "4072ea5509c78e6f",
+      "file": "stack_pack.json"
+    },
+    {
+      "name": "Stack_Pkg",
+      "id": "3d9586b7ab5069e9",
+      "file": "stack_pkg.json"
+    },
+    {
+      "name": "Str_Pack",
+      "id": "2ea321779f9a44c4",
+      "file": "str_pack.json"
+    },
+    {
+      "name": "String_Pkg",
+      "id": "d7d30973fad9feff",
+      "file": "string_pkg.json"
+    },
+    {
+      "name": "String_Scanner",
+      "id": "161a5e69c88d2288",
+      "file": "string_scanner.json"
+    },
+    {
+      "name": "Symbol_Info",
+      "id": "315191fb78016cc9",
+      "file": "symbol_info.json"
+    },
+    {
+      "name": "Symbol_Table",
+      "id": "ba3e33f1d5e43c48",
+      "file": "symbol_table.json"
+    },
+    {
+      "name": "Tokens_File",
+      "id": "19292813f375510b",
+      "file": "tokens_file.json"
+    },
+    {
+      "name": "Verbose_File",
+      "id": "9b7f0a446bd3f76a",
+      "file": "verbose_file.json"
+    }
+  ]
+}

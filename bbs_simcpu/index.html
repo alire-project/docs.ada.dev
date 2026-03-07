@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bbs_simcpu — Ada/SPARK Documentation</title>
+  <meta name="description" content="CPU Simulator for multiple CPUs">
+  <meta name="keywords" content="Ada, SPARK, Alire, bbs_simcpu, cpu-simulator, 6502, i8080, i8085, z80, m68000">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "bbs_simcpu",
+"version": "0.4.0",  "description": "CPU Simulator for multiple CPUs",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/bbs_simcpu/",
+  "codeRepository": "https://github.com/BrentSeidel/Sim-CPU"
+  ,"author": [{"@type": "Person", "name": "Brent Seidel"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">bbs_simcpu</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>bbs_simcpu</h1>
+    <span class="version-tag">0.4.0</span>
+  </div>
+
+  <p class="crate-description">CPU Simulator for multiple CPUs</p>
+
+  <div class="long-description">This contains simulators for the 6502, 8080/8085/Z80 and 680000/68008 processors.
+More will probably be added with time.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Brent Seidel</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/BrentSeidel/Sim-CPU">https://github.com/BrentSeidel/Sim-CPU</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">cpu-simulator</span><span class="tag">6502</span><span class="tag">i8080</span><span class="tag">i8085</span><span class="tag">z80</span><span class="tag">m68000</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs/">bbs</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu/">BBS.Sim_CPU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-bus/">BBS.Sim_CPU.bus</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-bus-mem8/">BBS.Sim_CPU.bus.mem8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu/">BBS.Sim_CPU.CPU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-example/">BBS.Sim_CPU.CPU.example</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-i8080/">BBS.Sim_CPU.CPU.i8080</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-i8080-z80/">BBS.Sim_CPU.CPU.i8080.z80</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000/">BBS.Sim_CPU.CPU.m68000</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-exceptions/">BBS.Sim_CPU.CPU.m68000.exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_0/">BBS.Sim_CPU.CPU.m68000.line_0</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_1/">BBS.Sim_CPU.CPU.m68000.line_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_2/">BBS.Sim_CPU.CPU.m68000.line_2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_3/">BBS.Sim_CPU.CPU.m68000.line_3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_4/">BBS.Sim_CPU.CPU.m68000.line_4</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_5/">BBS.Sim_CPU.CPU.m68000.line_5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_6/">BBS.Sim_CPU.CPU.m68000.line_6</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_7/">BBS.Sim_CPU.CPU.m68000.line_7</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_8/">BBS.Sim_CPU.CPU.m68000.line_8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_9/">BBS.Sim_CPU.CPU.m68000.line_9</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_b/">BBS.Sim_CPU.CPU.m68000.line_b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_c/">BBS.Sim_CPU.CPU.m68000.line_c</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_d/">BBS.Sim_CPU.CPU.m68000.line_d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-m68000-line_e/">BBS.Sim_CPU.CPU.m68000.line_e</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-cpu-msc6502/">BBS.Sim_CPU.CPU.msc6502</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-io/">BBS.Sim_CPU.io</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-io-clock/">BBS.Sim_CPU.io.clock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-io-disk/">BBS.Sim_CPU.io.disk</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-io-serial/">BBS.Sim_CPU.io.serial</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-io-serial-mux/">BBS.Sim_CPU.io.serial.mux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_simcpu/0.4.0/bbs-sim_cpu-io-serial-telnet/">BBS.Sim_CPU.io.serial.telnet</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-07.
+    </p>
+  </footer>
+</body>
+</html>

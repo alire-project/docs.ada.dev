@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"base64","version":"1.0.1","id":"371a286d5872a373","name":"Base64","qualified_name":"Base64","kind":"ada_package","location":{"file":"src/base64.ads","line":3,"column":9},"code":"package Base64"}

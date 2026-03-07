@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "phcpack",
+  "version": "2.4.88",
+  "failed_at": "2026-03-05T03:00:53Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

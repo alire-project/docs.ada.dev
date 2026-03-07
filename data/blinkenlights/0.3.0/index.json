@@ -1,0 +1,76 @@
+{
+  "schema_version": "1",
+  "crate": "blinkenlights",
+  "version": "0.3.0",
+  "documented_at": "2026-03-04T02:55:08Z",
+  "description": "Project to blink LEDs in interesting patterns",
+  "long_description": "This is a complex project involving 3D printing and soldering as well as\nsoftware.  Alr will take care of the software dependencies for you, but\nyou will have to read the README and documentation to find the other parts.\n\nThis project is intended to replicate the look and feel of older computers\nwith the switches and lights.  It uses the simulators from bbs_simcpu to\ndrive the LEDs and act on the switches.  Using the Intel 8080 simulator,\nI was actually able to toggle a bootstrap program in using the panel and\nget it to boot CP/M.  A boot loader (boot.ihx) is included.  CP/M is not\nincluded.  There are places on the web where you can find a disassembled\nCP/M 2.2.  Then combine it with the BIOS from bbs_simcpu and add it to a\ndisk image using the loadcpm tool.  If you use the Motorola 68000 simulator,\nit will load and run a simple multitasking OS.  The example simulator can\nbe used to flash the lights in a variaty of ways.\n\nThere is a lamp test program in the lamp-test directory that may be useful\nfor debugging the hardware.\n\nNote that since each cycle of the simulator involves multiple I2C bus\ntransactions to read switches and set LEDs, any CPU simulation will run\nrather slowly.  The intention of this project is more for display than\nsimulator usage.\n\nThere is also a web server that can be used to select the CPU variant.\nThis is most useful with the example simulator to select the light pattern.\n\nThis project runs on a Raspberry Pi 2 (or later).  It will build on most\nUnix or Unix-like systems, but unless the hardware interface matches the\nRaspberry Pi, it won't run.  You are welcome to try porting it to other\nsystems, if you like.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "embedded",
+    "simulation",
+    "i8080",
+    "m68000",
+    "hardware"
+  ],
+  "website": "https://github.com/BrentSeidel/Pi-Mainframe",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/Pi-Mainframe",
+    "host": "github",
+    "commit": "5c98f5a45c22f556ca24a6dcffae8b0b5bc69c22"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "bbs_embed_common",
+      "version": "~0.2.0"
+    },
+    {
+      "crate": "bbs_embed_linux",
+      "version": "~0.2.0"
+    },
+    {
+      "crate": "bbs_webif",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "bbs_simcpu",
+      "version": "~0.4.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "i2c",
+      "id": "85ac83cb04df5961",
+      "file": "i2c.json"
+    },
+    {
+      "name": "Panel",
+      "id": "320e00e73a7d24a9",
+      "file": "panel.json"
+    },
+    {
+      "name": "web",
+      "id": "4b5e57f6eb2f42b9",
+      "file": "web.json"
+    },
+    {
+      "name": "web.internal",
+      "id": "9f39fb0b6f5ab68a",
+      "file": "web-internal.json"
+    },
+    {
+      "name": "web.xml",
+      "id": "2affb7b078dbcc3a",
+      "file": "web-xml.json"
+    }
+  ]
+}

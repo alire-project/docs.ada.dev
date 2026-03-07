@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"27e44e80b1f536a0","name":"Agpl.Search","qualified_name":"Agpl.Search","kind":"ada_package","location":{"file":"src/agpl-search.ads","line":1,"column":9},"code":"package Agpl.Search","documentation":{"description":"Root for searching algorithms."}}

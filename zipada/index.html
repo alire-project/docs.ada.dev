@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zipada — Ada/SPARK Documentation</title>
+  <meta name="description" content="Manage Zip Archives and raw BZip2 and LZMA streams">
+  <meta name="keywords" content="Ada, SPARK, Alire, zipada, zip, archive, compression, deflate, lzma, bzip2, lzw, shrink, BWT, BZip2, Data_Segmentation, Dual_IO, Flexible_temp_files, Huffman, LZ77, LZH, LZMA, Rezip_lib, Suffix_Arrays, UnZip, Zip, Zip_Console_IO, Zip_Streams">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "zipada",
+"version": "61.0.0",  "description": "Manage Zip Archives and raw BZip2 and LZMA streams",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/zipada/",
+  "codeRepository": "https://sourceforge.net/projects/unzip-ada"
+  ,"author": [{"@type": "Person", "name": "Gautier de Montmollin"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">zipada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>zipada</h1>
+    <span class="version-tag">61.0.0</span>
+  </div>
+
+  <p class="crate-description">Manage Zip Archives and raw BZip2 and LZMA streams</p>
+
+  <div class="long-description">![Zip-Ada logo](https://unzip-ada.sourceforge.io/za_logo.png)
+
+Zip-Ada is a free, open-source programming library for dealing with the Zip compressed archive file format.
+The full sources of Zip-Ada are in Ada, compilable on every compiler and for every system (*).
+
+Key features of Zip-Ada:
+
+* Files and streams supported, for archives and entries, for compression and decompression
+* Task safe
+* Endian-neutral
+* Standalone
+* Zip methods supported for compression: Reduce, Shrink, Deflate, BZip2, LZMA.
+* Zip methods supported for decompression: the above methods, plus: Implode, Deflate64
+* Library is in pure Ada 2012 (nothing compiler/system specific), can be used in projects in Ada 2012 and later versions of the language
+* Unconditionally portable (*)
+* Tests and demos included
+
+The library includes LZMA &amp; BZip2 independant compressor &amp; decompressor pairs
+(can be used outside of the Zip archive context).
+
+___
+
+(*) within limits of compiler&#39;s provided integer types and target architecture capacity.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Gautier de Montmollin</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/unzip-ada">https://sourceforge.net/projects/unzip-ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">zip</span><span class="tag">archive</span><span class="tag">compression</span><span class="tag">deflate</span><span class="tag">lzma</span><span class="tag">bzip2</span><span class="tag">lzw</span><span class="tag">shrink</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/bwt/">BWT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/bzip2/">BZip2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/bzip2-decoding/">BZip2.Decoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/bzip2-encoding/">BZip2.Encoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/data_segmentation/">Data_Segmentation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io/">Dual_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io-decimal_io/">Dual_IO.Decimal_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io-enumeration_io/">Dual_IO.Enumeration_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io-fixed_io/">Dual_IO.Fixed_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io-float_io/">Dual_IO.Float_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io-integer_io/">Dual_IO.Integer_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/dual_io-modular_io/">Dual_IO.Modular_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/flexible_temp_files/">Flexible_temp_files</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/huffman/">Huffman</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/huffman-encoding/">Huffman.Encoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/lz77/">LZ77</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/lzh/">LZH</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/lzma/">LZMA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/lzma-decoding/">LZMA.Decoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/lzma-encoding/">LZMA.Encoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/rezip_lib/">Rezip_lib</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/suffix_arrays/">Suffix_Arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/unzip/">UnZip</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/unzip-streams/">UnZip.Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip/">Zip</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip-compress/">Zip.Compress</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip-crc_crypto/">Zip.CRC_Crypto</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip-create/">Zip.Create</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip-headers/">Zip.Headers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip_console_io/">Zip_Console_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip_console_io-summary/">Zip_Console_IO.Summary</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip_streams/">Zip_Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/zipada/61.0.0/zip_streams-calendar/">Zip_Streams.Calendar</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-07.
+    </p>
+  </footer>
+</body>
+</html>
