@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>remoteio — Ada/SPARK Documentation</title>
+  <meta name="description" content="Remote I/O Protocol Client Library for GNAT Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, remoteio, embedded, linux, remoteio, adc, dac, gpio, i2c, motor, pwm, sensor, serial, servo, spi, stepper, A4988, Accelerometer, ADC, ADC121C021, ADS1015, Analog, Angle, Arduino, BMP280, ClickBoard, Cytron_MD13S, DAC, Debug, errno, GPIO, Grove_ADC, Grove_TB6612, Grove_Temperature, Grove_Temperature_Humidity, Gyroscope, HDC1080, HID, HTS221, HTU21D, Humidity, I2C, IO_Interfaces, Joystick, Keyboard, LCD16397, LEGORC, libzmq, LPS25H, LSM9DS1, Magnetometer, MAX31855, MAX7219, MCP23x17, MCP3202, MCP3204, MCP3208, MCP4822, Messaging, Motor, MPL3115A2, NNG, PCA8574, PCA9534, PCA9685, Pressure, PWM, RemoteIO, Remoteio_Config, Resistance, Servo, SPI, Stepper, Stream_Framing_Protocol, TCS3472, Temperature, TH02, Thermistor, TLC1543, TMP102, TrueColor, Voltage, Watchdog, Wio_E5, ZeroMQ">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "remoteio",
+"version": "2.23808.1",  "description": "Remote I/O Protocol Client Library for GNAT Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/remoteio/",
+  "codeRepository": "https://raw.githubusercontent.com/pmunts/alire-crates/b3f6d7a36ff1fbdd2bd480da31160b37fa4fee44/remoteio/remoteio-2.23808.1.tbz2"
+  ,"author": [{"@type": "Person", "name": "Philip Munts"}]
+  ,"license": "BSD-1-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">remoteio</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>remoteio</h1>
+    <span class="version-tag">2.23808.1</span>
+  </div>
+
+  <p class="crate-description">Remote I/O Protocol Client Library for GNAT Ada</p>
+
+  <div class="long-description">This crate contains a subset of the [**Linux Simple I/O
+Library**](https://github.com/pmunts/libsimpleio) Ada packages that are
+relevant for building [**Remote I/O
+Protocol**](https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf)
+client programs.
+
+This crate can be built for Linux, MacOS, or Windows targets.
+
+The **Remote I/O Protocol** is a lightweight message protocol for
+performing remote I/O operations. The protocol is implemented using a
+request/reply pattern, where the master device (*e.g.* a Linux computer)
+transmits an I/O request in a 64-byte message to the slave device
+(*e.g.* a single chip microcontroller). The slave device performs the
+requested I/O operation and returns an I/O response in a 64-byte message
+back to the master device.
+
+The protocol is kept as simple as possible (exactly one 64-byte request
+message and one 64- byte response message) to allow using low end single
+chip microcontrollers such as the
+[PIC16F1455](https://www.microchip.com/en-us/product/PIC16F1455) for the
+slave device. Although particularly suited for USB raw HID devices, this
+protocol can use any transport mechanism that can reliably transmit and
+receive 64-byte messages.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Philip Munts</dd>
+
+    <dt>License</dt>
+    <dd>BSD-1-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://raw.githubusercontent.com/pmunts/alire-crates/b3f6d7a36ff1fbdd2bd480da31160b37fa4fee44/remoteio/remoteio-2.23808.1.tbz2">https://raw.githubusercontent.com/pmunts/alire-crates/b3f6d7a36ff1fbdd2bd480da31160b37fa4fee44/remoteio/remoteio-2.23808.1.tbz2</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">linux</span><span class="tag">remoteio</span><span class="tag">adc</span><span class="tag">dac</span><span class="tag">gpio</span><span class="tag">i2c</span><span class="tag">motor</span><span class="tag">pwm</span><span class="tag">sensor</span><span class="tag">serial</span><span class="tag">servo</span><span class="tag">spi</span><span class="tag">stepper</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/case(os)/">case(os)</a>
+        <span class="dep-version">{&#39;linux&#39;: {&#39;libhidapi&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/case(os)/">case(os)</a>
+        <span class="dep-version">{&#39;linux&#39;: {&#39;libusb&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/case(distribution)/">case(distribution)</a>
+        <span class="dep-version">{&#39;homebrew|macports&#39;: {&#39;libhidapi&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/case(distribution)/">case(distribution)</a>
+        <span class="dep-version">{&#39;homebrew|macports&#39;: {&#39;libusb&#39;: &#39;*&#39;}}</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/a4988/">A4988</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/accelerometer/">Accelerometer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/adc/">ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/adc-remoteio/">ADC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/adc121c021/">ADC121C021</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/ads1015/">ADS1015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/analog/">Analog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/angle/">Angle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/arduino/">Arduino</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/bmp280/">BMP280</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard/">ClickBoard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-adc/">ClickBoard.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-adc-remoteio/">ClickBoard.ADC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-altitude/">ClickBoard.Altitude</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-altitude-remoteio/">ClickBoard.Altitude.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-expand/">ClickBoard.Expand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-expand-remoteio/">ClickBoard.Expand.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-expand2/">ClickBoard.Expand2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-expand2-remoteio/">ClickBoard.Expand2.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-htu21d/">ClickBoard.HTU21D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-htu21d-remoteio/">ClickBoard.HTU21D.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-leds_8x8/">ClickBoard.LEDs_8x8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-leds_8x8-remoteio/">ClickBoard.LEDs_8x8.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-pwm_click/">ClickBoard.PWM_Click</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-pwm_click-remoteio/">ClickBoard.PWM_Click.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-relay/">ClickBoard.Relay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-relay-remoteio/">ClickBoard.Relay.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-remoteio/">ClickBoard.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-servers/">ClickBoard.Servers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-sevensegment/">ClickBoard.SevenSegment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-sevensegment-remoteio/">ClickBoard.SevenSegment.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-template/">ClickBoard.Template</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-thermo/">ClickBoard.Thermo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-thermo-remoteio/">ClickBoard.Thermo.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-thermo3/">ClickBoard.Thermo3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/clickboard-thermo3-remoteio/">ClickBoard.Thermo3.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/cytron_md13s/">Cytron_MD13S</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/dac/">DAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/dac-remoteio/">DAC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/debug/">Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/errno/">errno</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/gpio/">GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/gpio-pwm/">GPIO.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/gpio-remoteio/">GPIO.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/grove_adc/">Grove_ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/grove_tb6612/">Grove_TB6612</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/grove_tb6612-motor/">Grove_TB6612.Motor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/grove_tb6612-stepper/">Grove_TB6612.Stepper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/grove_temperature/">Grove_Temperature</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/grove_temperature_humidity/">Grove_Temperature_Humidity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/gyroscope/">Gyroscope</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/hdc1080/">HDC1080</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/hid/">HID</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/hid-hidapi/">HID.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/hid-libusb/">HID.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/hid-munts/">HID.Munts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/hts221/">HTS221</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/htu21d/">HTU21D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/humidity/">Humidity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/i2c/">I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/i2c-remoteio/">I2C.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/io_interfaces/">IO_Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/joystick/">Joystick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/keyboard/">Keyboard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/lcd16397/">LCD16397</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/legorc/">LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/libzmq/">libzmq</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/lps25h/">LPS25H</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/lsm9ds1/">LSM9DS1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/magnetometer/">Magnetometer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/max31855/">MAX31855</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/max7219/">MAX7219</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp23x17/">MCP23x17</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp23x17-byte/">MCP23x17.Byte</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp23x17-gpio/">MCP23x17.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp23x17-word/">MCP23x17.Word</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp3202/">MCP3202</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp3204/">MCP3204</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp3208/">MCP3208</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mcp4822/">MCP4822</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging/">Messaging</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging-fixed/">Messaging.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging-fixed-ada_streams/">Messaging.Fixed.Ada_Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging-fixed-gnat_udp/">Messaging.Fixed.GNAT_UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging-fixed-wioe5_ham1/">Messaging.Fixed.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging-fixed-zeromq/">Messaging.Fixed.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/messaging-text/">Messaging.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/motor/">Motor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/motor-legorc/">Motor.LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/motor-pwm/">Motor.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/motor-servo/">Motor.Servo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/mpl3115a2/">MPL3115A2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/nng/">NNG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/nng-pub/">NNG.Pub</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/nng-sub/">NNG.Sub</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca8574/">PCA8574</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca8574-gpio/">PCA8574.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca9534/">PCA9534</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca9534-gpio/">PCA9534.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca9685/">PCA9685</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca9685-gpio/">PCA9685.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pca9685-pwm/">PCA9685.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pressure/">Pressure</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pwm/">PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/pwm-remoteio/">PWM.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio/">RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-abstract_device/">RemoteIO.Abstract_Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-adc_dac_pi_zero/">RemoteIO.ADC_DAC_Pi_Zero</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-arduino/">RemoteIO.Arduino</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-automation_phat/">RemoteIO.Automation_pHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-beaglebone/">RemoteIO.BeagleBone</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-beagleplay/">RemoteIO.BeaglePlay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client/">RemoteIO.Client</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-hidapi/">RemoteIO.Client.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-libusb/">RemoteIO.Client.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-serial/">RemoteIO.Client.Serial</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-stream/">RemoteIO.Client.Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-udp/">RemoteIO.Client.UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-wioe5_ham1/">RemoteIO.Client.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-client-zeromq/">RemoteIO.Client.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-enviro_phat/">RemoteIO.Enviro_pHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-grove_base_hat_zero/">RemoteIO.Grove_Base_Hat_Zero</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-lpc1114/">RemoteIO.LPC1114</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-lpc1114-adc/">RemoteIO.LPC1114.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-lpc1114-gpio/">RemoteIO.LPC1114.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-lpc1114-legorc/">RemoteIO.LPC1114.LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-lpc1114-pwm/">RemoteIO.LPC1114.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-lpc1114-timers/">RemoteIO.LPC1114.Timers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-munts_0008/">RemoteIO.MUNTS_0008</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-munts_0009/">RemoteIO.MUNTS_0009</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-munts_0015/">RemoteIO.MUNTS_0015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-munts_0016/">RemoteIO.MUNTS_0016</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-munts_0018/">RemoteIO.MUNTS_0018</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-pocketbeagle/">RemoteIO.PocketBeagle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-qwiic_hat/">RemoteIO.Qwiic_HAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio-raspberrypi/">RemoteIO.RaspberryPi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/remoteio_config/">Remoteio_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/resistance/">Resistance</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/servo/">Servo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/servo-pwm_template/">Servo.PWM_Template</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/spi/">SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/spi-remoteio/">SPI.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/stepper/">Stepper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/stream_framing_protocol/">Stream_Framing_Protocol</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/tcs3472/">TCS3472</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/temperature/">Temperature</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/th02/">TH02</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/thermistor/">Thermistor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/thermistor-ntc_b_parms/">Thermistor.NTC_B_Parms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/tlc1543/">TLC1543</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/tmp102/">TMP102</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/truecolor/">TrueColor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/voltage/">Voltage</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/watchdog/">Watchdog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/wio_e5/">Wio_E5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/wio_e5-ham1/">Wio_E5.Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/wio_e5-ham2/">Wio_E5.Ham2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/wio_e5-p2p/">Wio_E5.P2P</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/zeromq/">ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/zeromq-context/">ZeroMQ.Context</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/remoteio/2.23808.1/zeromq-sockets/">ZeroMQ.Sockets</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-13.
+    </p>
+  </footer>
+</body>
+</html>

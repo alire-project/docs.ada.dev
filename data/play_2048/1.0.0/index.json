@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "play_2048",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T03:01:36Z",
+  "description": "2048 game: merge tiles with the same number until you add up to 2048",
+  "authors": [
+    "Manuel Gomez"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "game",
+    "puzzle",
+    "cross-platform",
+    "sfml"
+  ],
+  "website": "https://github.com/mgrojo/play_2048/",
+  "repository": {
+    "url": "https://github.com/mgrojo/play_2048",
+    "host": "github",
+    "commit": "ddfe6faa729006cf78c6ceaa597e0a517a1f5aac"
+  },
+  "dependencies": [
+    {
+      "crate": "asfml",
+      "version": "^2.5.0"
+    },
+    {
+      "crate": "ada_toml",
+      "version": "~0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Game",
+      "id": "6ca5cab77e702c78",
+      "file": "game.json"
+    },
+    {
+      "name": "Storage",
+      "id": "49a25f9feefaffec",
+      "file": "storage.json"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"honki_tonks_zivilisationen","version":"0.5.5305","id":"c6d0f5891d61462a","name":"ChangelogVorlage","qualified_name":"ChangelogVorlage","kind":"ada_package","location":{"file":"src/Changelog/ChangelogVorlage.ads","line":1,"column":9},"code":"package ChangelogVorlage","documentation":{"description":"Version 0.0. => 0.0. (31..202):"}}

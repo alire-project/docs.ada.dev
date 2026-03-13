@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ayacc — Ada/SPARK Documentation</title>
+  <meta name="description" content="An Ada LARL(1) parser generator">
+  <meta name="keywords" content="Ada, SPARK, Alire, ayacc, parser, generator, grammar, Actions_File, Ayacc_File_Names, Error_Report_File, Goto_File, Lalr_Symbol_Info, Lexical_Analyzer, Lists, Lr0_Machine, Options, Output_File, Parse_Table, Parse_Template_File, Parser, Ragged, Rule_Table, Set_Pack, Shift_Reduce_File, Source_File, Stack_Pack, Stack_Pkg, Str_Pack, String_Pkg, String_Scanner, Symbol_Info, Symbol_Table, Tokens_File, Verbose_File">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ayacc",
+"version": "1.4.1",  "description": "An Ada LARL(1) parser generator",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ayacc/",
+  "codeRepository": "https://github.com/Ada-France/ayacc"
+  ,"author": [{"@type": "Person", "name": "David Taback"},{"@type": "Person", "name": "Deepak Tolani"}]
+  ,"license": "Unlicense"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">ayacc</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ayacc</h1>
+    <span class="version-tag">1.4.1</span>
+  </div>
+
+  <p class="crate-description">An Ada LARL(1) parser generator</p>
+
+  <div class="long-description">Ayacc is an Ada parser generator in the style of yacc(1).
+
+The first implementation was written by David Taback and Deepak Tolani
+at the University of California, Irvine.  The last version that was released
+appeared to be the Ayacc 1.1 released in 1994.
+
+Ayacc was used and improved by P2Ada, the Pascal to Ada translator.
+This version of Ayacc is derived from the P2Ada ayacc implementation
+released in August 2010.
+
+This version brings a number of improvements:
+
+- Ayacc now uses more standard options to configure the code generation
+- The parser was improved to configure the parser stack size and
+  support Ada child packages.
+- The grammar supports the %unit directive to control the Ada child packages.
+- Several options provide a better control of the generated code.
+- Ayacc can generate a reentrant parser.
+
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>David Taback, Deepak Tolani</dd>
+
+    <dt>License</dt>
+    <dd>Unlicense</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Ada-France/ayacc">https://github.com/Ada-France/ayacc</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">parser</span><span class="tag">generator</span><span class="tag">grammar</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/actions_file/">Actions_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/ayacc_file_names/">Ayacc_File_Names</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/error_report_file/">Error_Report_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/goto_file/">Goto_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/lalr_symbol_info/">Lalr_Symbol_Info</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/lexical_analyzer/">Lexical_Analyzer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/lists/">Lists</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/lr0_machine/">Lr0_Machine</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/options/">Options</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/output_file/">Output_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/parse_table/">Parse_Table</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/parse_template_file/">Parse_Template_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/parse_template_file-templates/">Parse_Template_File.Templates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/parser/">Parser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/ragged/">Ragged</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/rule_table/">Rule_Table</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/set_pack/">Set_Pack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/shift_reduce_file/">Shift_Reduce_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/source_file/">Source_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/stack_pack/">Stack_Pack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/stack_pkg/">Stack_Pkg</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/str_pack/">Str_Pack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/string_pkg/">String_Pkg</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/string_scanner/">String_Scanner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/symbol_info/">Symbol_Info</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/symbol_table/">Symbol_Table</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/tokens_file/">Tokens_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/ayacc/1.4.1/verbose_file/">Verbose_File</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-13.
+    </p>
+  </footer>
+</body>
+</html>

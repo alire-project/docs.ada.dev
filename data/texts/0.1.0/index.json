@@ -1,0 +1,56 @@
+{
+  "schema_version": "1",
+  "crate": "texts",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:59:59Z",
+  "description": "A no-frills library to deal with Unicode texts in Ada 2012",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "text",
+    "unicode",
+    "utf",
+    "encoding"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/texts",
+    "host": "github",
+    "commit": "db89994b470bd5070ac8458f6610bd48264340f9"
+  },
+  "dependencies": [
+    {
+      "crate": "aaa",
+      "version": "~0.3"
+    },
+    {
+      "crate": "umwi",
+      "version": "~0.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Texts",
+      "id": "a4b992ab42964e5b",
+      "file": "texts.json"
+    },
+    {
+      "name": "Texts.Containers",
+      "id": "9fe3f2fc543c85c1",
+      "file": "texts-containers.json"
+    },
+    {
+      "name": "Texts.Unicode",
+      "id": "5cadadc28073670f",
+      "file": "texts-unicode.json"
+    },
+    {
+      "name": "Texts_Config",
+      "id": "ffb91401c2540401",
+      "file": "texts_config.json"
+    }
+  ]
+}

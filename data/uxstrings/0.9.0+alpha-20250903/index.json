@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "crate": "uxstrings",
+  "version": "0.9.0+alpha-20250903",
+  "documented_at": "2026-03-07T02:49:47Z",
+  "description": "Unicode Extended Strings utilities",
+  "authors": [
+    "Pascal Pignard"
+  ],
+  "licenses": [
+    "CECILL-C"
+  ],
+  "tags": [
+    "unicode",
+    "dynamic",
+    "string"
+  ],
+  "website": "https://github.com/Blady-Com/UXStrings",
+  "repository": {
+    "url": "https://github.com/Blady-Com/UXStrings",
+    "host": "github",
+    "commit": "04400aa894d62a543065f0df841695fba52e201d"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Strings_Edit",
+      "id": "ccdf688721a642db",
+      "file": "strings_edit.json"
+    },
+    {
+      "name": "Strings_Edit.Integer_Edit",
+      "id": "5cbb87a9282da89f",
+      "file": "strings_edit-integer_edit.json"
+    },
+    {
+      "name": "Strings_Edit.UTF8",
+      "id": "f897c42764cacf23",
+      "file": "strings_edit-utf8.json"
+    },
+    {
+      "name": "Strings_Edit.UTF8.Handling",
+      "id": "a890899af66b880b",
+      "file": "strings_edit-utf8-handling.json"
+    },
+    {
+      "name": "UXStrings",
+      "id": "499fdc759a499f66",
+      "file": "uxstrings.json"
+    },
+    {
+      "name": "UXStrings.Conversions",
+      "id": "87dd59e4f463c718",
+      "file": "uxstrings-conversions.json"
+    },
+    {
+      "name": "UXStrings.Formatting",
+      "id": "05ebd8fa61cbe2dc",
+      "file": "uxstrings-formatting.json"
+    },
+    {
+      "name": "UXStrings.Lists",
+      "id": "8b9c1edcd5e06f62",
+      "file": "uxstrings-lists.json"
+    },
+    {
+      "name": "UXStrings.Text_IO",
+      "id": "bdac4925addb727f",
+      "file": "uxstrings-text_io.json"
+    },
+    {
+      "name": "UXStrings.Text_IO.Text_Streams",
+      "id": "11e8d2ee7946db9a",
+      "file": "uxstrings-text_io-text_streams.json"
+    }
+  ]
+}

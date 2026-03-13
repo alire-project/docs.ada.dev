@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "mavlink_ardupilotmega_v2",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T02:56:52Z",
+  "description": "MAVLink, ardupilotmega dialect",
+  "authors": [
+    "Fil Andrii",
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "embedded",
+    "network",
+    "drone"
+  ],
+  "website": "https://github.com/reznikmm/mavlink_ardupilotmega",
+  "repository": {
+    "url": "https://github.com/reznikmm/mavlink_ardupilotmega",
+    "host": "github",
+    "commit": "2c1ea302ce05b9360a2f7e9b9fc12753d8497199"
+  },
+  "dependencies": [
+    {
+      "crate": "mavlink_common_v2",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": []
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "tiled_code_gen",
+  "version": "0.1.0",
+  "failed_at": "2026-03-06T03:00:12Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

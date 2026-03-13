@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"flux","version":"1.0.0","id":"7618a340b299efec","name":"Flux.Traits.File_IO","qualified_name":"Flux.Traits.File_IO","kind":"ada_package","location":{"file":"src/file_io/flux-traits-file_io.ads","line":1,"column":9},"code":"package Flux.Traits.File_IO"}

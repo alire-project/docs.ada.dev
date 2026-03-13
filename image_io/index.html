@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>image_io — Ada/SPARK Documentation</title>
+  <meta name="description" content="Output in BMP,PPM,QOI;input in BMP,GIF,JPG,PNG,PNM,QOI,TGA">
+  <meta name="keywords" content="Ada, SPARK, Alire, image_io, image, io, bmp, ppm, qoi, gif, jpg, png, pnm, tga, Image_IO, Image_Io_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "image_io",
+"version": "20240725.0.0",  "description": "Output in BMP,PPM,QOI;input in BMP,GIF,JPG,PNG,PNM,QOI,TGA",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/image_io/",
+  "codeRepository": "https://github.com/bracke/Image_IO"
+  ,"author": [{"@type": "Person", "name": "Jeff Carter"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">image_io</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>image_io</h1>
+    <span class="version-tag">20240725.0.0</span>
+  </div>
+
+  <p class="crate-description">Output in BMP,PPM,QOI;input in BMP,GIF,JPG,PNG,PNM,QOI,TGA</p>
+
+  <div class="long-description"># Image_IO
+Output in BMP, PNG, PPM, and QOI formats; input in BMP, GIF, JPG, PNG, PNM, QOI, and TGA formats
+
+Package Image_IO.Operations provides the ability to input and output images.
+
+PNG is a lossless compressed format that is widely supported. Uncompressed BMP is a universal format that is very large. PPM is intended to be a set of portable formats, but lacks support by default on some platforms. QOI is a lossless compressed format, but not widely supported.
+
+Write_P3 uses [PragmARC.Text_IO](https://github.com/jrcarter/PragmARC/blob/Ada-12/pragmarc-text_io.ads) to obtain uniform line terminators across platforms. This can be easily changed to Ada.Text_IO if the line terminators are not a concern.
+
+Write_PNG uses [Z_Compression](https://github.com/jrcarter/Z_Compression) and [CRC-32](https://github.com/jrcarter/CRC-32).
+
+Read is a wrapper around [Generic Image Decoder (GID)](https://github.com/zertovitch/gid) for the most common use: reading an image from a file. GID may be used to decode images from other sources, but that generality makes it complex to use. Read ignores transparency (Alpha channel) and only reads the first frame of an animation.
+
+Pure_RGB is a demo program that reads an image using Read, modifies it to change all color components to the closest of 0 or 255, and outputs the result using Write_PNG. It is invoked with
+
+     pure_rgb &lt;name&gt;
+
+The output name is the input name with &#34;.png&#34; appended. Pure_RGB does no error handling; if the input file name is omitted, doesn&#39;t exist, or is not a supported image format, the program will terminate with an unhandled exception.
+
+Image_IO and Pure_RGB have been compiled and tested with GNAT 12.3.0 on Linux and ObjectAda 10.5U7 on Windows.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Jeff Carter</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/bracke/Image_IO">https://github.com/bracke/Image_IO</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">image</span><span class="tag">io</span><span class="tag">bmp</span><span class="tag">ppm</span><span class="tag">qoi</span><span class="tag">gif</span><span class="tag">jpg</span><span class="tag">png</span><span class="tag">pnm</span><span class="tag">tga</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/pragmarc/">pragmarc</a>
+        <span class="dep-version">^20240323.0.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/gid/">gid</a>
+        <span class="dep-version">^13.0.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/crc_32/">crc_32</a>
+        <span class="dep-version">^20240725.0.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/z_compression/">z_compression</a>
+        <span class="dep-version">^20240724.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/image_io/20240725.0.0/image_io/">Image_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/image_io/20240725.0.0/image_io-holders/">Image_IO.Holders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/image_io/20240725.0.0/image_io-operations/">Image_IO.Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/image_io/20240725.0.0/image_io_config/">Image_Io_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-13.
+    </p>
+  </footer>
+</body>
+</html>

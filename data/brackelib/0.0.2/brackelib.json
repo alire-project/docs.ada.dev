@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"brackelib","version":"0.0.2","id":"7363ba5b14bb6818","name":"Brackelib","qualified_name":"Brackelib","kind":"ada_package","location":{"file":"src/brackelib.ads","line":2,"column":9},"code":"package Brackelib","documentation":{"description":"@summary Root package for Brackelib."}}

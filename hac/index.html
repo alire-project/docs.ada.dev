@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hac — Ada/SPARK Documentation</title>
+  <meta name="description" content="HAC Ada Compiler: a small, quick Ada compiler covering a subset of Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, hac, hac, compiler, virtual-machine, native, semantic, parser, advent-of-code, HAC_Pkg, HAC_Sys, HAT">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "hac",
+"version": "0.42.0",  "description": "HAC Ada Compiler: a small, quick Ada compiler covering a subset of Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/hac/",
+  "codeRepository": "https://sourceforge.net/projects/hacadacompiler"
+  ,"author": [{"@type": "Person", "name": "Gautier de Montmollin"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">hac</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>hac</h1>
+    <span class="version-tag">0.42.0</span>
+  </div>
+
+  <p class="crate-description">HAC Ada Compiler: a small, quick Ada compiler covering a subset of Ada</p>
+
+  <div class="long-description">&amp;nbsp;&lt;img src=&#34;https://hacadacompiler.sourceforge.io/hac_anim.gif&#34; alt=&#34;hac logo&#34; width=&#34;464&#34; height=&#34;auto&#34;&gt;
+
+HAC (HAC Ada Compiler) is a small, quickly compiling, open-source Ada compiler, covering a subset of the Ada language.
+HAC is perhaps the first open-source (albeit partial) Ada compiler fully programmed in Ada itself.
+
+Features:
+
+* **Quick**: short programming-compilation-run-test cycles.
+* Perfect for scripting jobs.
+* Compiles Ada sources from any stream - file, internet, editor data, Zip archive, ...
+* Compilation leaves zero compilation temp file - all is done in memory!
+* Portable, fully programmed in Ada.
+* Can be embedded into another software - see the [**LEA**](https://l-e-a.sourceforge.io/) editor - and even exchange data with it - see the `demo/data_exchange/exchange_native_side.adb` demo.
+* **Free**, open-source.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Gautier de Montmollin</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/hacadacompiler">https://sourceforge.net/projects/hacadacompiler</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">hac</span><span class="tag">compiler</span><span class="tag">virtual-machine</span><span class="tag">native</span><span class="tag">semantic</span><span class="tag">parser</span><span class="tag">advent-of-code</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_pkg/">HAC_Pkg</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_pkg-path_management/">HAC_Pkg.Path_Management</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys/">HAC_Sys</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-builder/">HAC_Sys.Builder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-co_defs/">HAC_Sys.Co_Defs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-compiler/">HAC_Sys.Compiler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-compiler-pcode_emit/">HAC_Sys.Compiler.PCode_Emit</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-defs/">HAC_Sys.Defs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-errors/">HAC_Sys.Errors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-files/">HAC_Sys.Files</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-files-default/">HAC_Sys.Files.Default</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-interfacing/">HAC_Sys.Interfacing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-librarian/">HAC_Sys.Librarian</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-multi_precision_integers/">HAC_Sys.Multi_Precision_Integers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-parser/">HAC_Sys.Parser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-parser-enter_def/">HAC_Sys.Parser.Enter_Def</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-parser-helpers/">HAC_Sys.Parser.Helpers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-parser-modularity/">HAC_Sys.Parser.Modularity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-parser-packages/">HAC_Sys.Parser.Packages</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-pcode/">HAC_Sys.PCode</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-pcode-interpreter/">HAC_Sys.PCode.Interpreter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-pcode-interpreter-console_traits/">HAC_Sys.PCode.Interpreter.Console_Traits</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-pcode-interpreter-exceptions/">HAC_Sys.PCode.Interpreter.Exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-pcode-interpreter-in_defs/">HAC_Sys.PCode.Interpreter.In_Defs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-pcode-interpreter-system_calls_traits/">HAC_Sys.PCode.Interpreter.System_Calls_Traits</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-scanner/">HAC_Sys.Scanner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-targets/">HAC_Sys.Targets</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-targets-amd64_windows_console_fasm/">HAC_Sys.Targets.AMD64_Windows_Console_FASM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-targets-hac_virtual_machine/">HAC_Sys.Targets.HAC_Virtual_Machine</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hac_sys-targets-semantics/">HAC_Sys.Targets.Semantics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hac/0.42.0/hat/">HAT</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-13.
+    </p>
+  </footer>
+</body>
+</html>

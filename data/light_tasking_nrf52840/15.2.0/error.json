@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "light_tasking_nrf52840",
+  "version": "15.2.0",
+  "failed_at": "2026-03-13T02:56:28Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}
