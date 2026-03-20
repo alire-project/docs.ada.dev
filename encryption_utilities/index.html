@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>encryption_utilities — Ada/SPARK Documentation</title>
+  <meta name="description" content="Utility programs for the encryption algorithms included in the PragmARC">
+  <meta name="keywords" content="Ada, SPARK, Alire, encryption_utilities, threefish256, threefish512, threefish1024, xor, Encryption_Utilities_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "encryption_utilities",
+"version": "20220701.0.0",  "description": "Utility programs for the encryption algorithms included in the PragmARC",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/encryption_utilities/",
+  "codeRepository": "https://github.com/bracke/Encryption-utilities"
+  ,"author": [{"@type": "Person", "name": "Jeff Carter"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">encryption_utilities</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>encryption_utilities</h1>
+    <span class="version-tag">20220701.0.0</span>
+  </div>
+
+  <p class="crate-description">Utility programs for the encryption algorithms included in the PragmARC</p>
+
+  <div class="long-description"># Encryption utilities
+
+The PragmAda Reusable Components (https://github.com/jrcarter/PragmARC) contain implementations of the Threefish-256 (implemented directly from the specification in Section 3.3 of the Skein paper V1.3 [https://www.schneier.com/skein.pdf]), Threefish-512, Threefish-1024, and XOR encryption algorithms. Threefish-512 and Threefish-1024 are provided by Daniel Norte de Moraes (https://github.com/danieagle).
+
+Test cases specifically for Threefish are at https://sites.google.com/site/bartoszmalkowski/threefish and https://github.com/bmalkow/java-bc-threefish.
+
+Tf_Test runs the test cases for Threefish-256 successfully (on a little-endian machine). It also encrypts certain blocks and presents the encrypted blocks, and shows that they decrypt correctly. Tf_Test uses PragmARC.Images from https://github.com/jrcarter/PragmARC. Tf_Test_512 and Tf_Test_1024, provided by Daniel Norte de Moraes (https://github.com/danieagle), do the same for Threefish-512 and Threefish-1024.
+
+TF_Crypt is a command-line program for encrypting and decrypting files with Threefish-256. TF_Crypt uses Password_Line. Files encrypted with TF_Crypt built with GNAT and running on Linux are correctly decrypted by TF_Crypt build with ObjectAda and running on Windows, and vice versa.
+
+Xcrypt is a command-line program for encrypting and decrypting files with XOR. It uses Password_Line. Since XOR is symmetrical, the same algorithm is used for encrypting and decrypting. One can encrypt twice with multiple keys, and decrypt with the keys in any order. This gives results equivalent to encrypting with a key length of the least common multiple of the lengths of the keys.
+
+Password_Line is a function for obtaining secret input from a user without echoing it to the screen. It has been tested and works with GNAT on Linux and Windows and ObjectAda 10.3 on Windows.
+
+Tf_Test*, TF_Crypt, and Xcrypt are GPL-3; Password_Line is GMGPL.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Jeff Carter</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/bracke/Encryption-utilities">https://github.com/bracke/Encryption-utilities</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">threefish256</span><span class="tag">threefish512</span><span class="tag">threefish1024</span><span class="tag">xor</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/pragmarc/">pragmarc</a>
+        <span class="dep-version">^20240323.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/encryption_utilities/20220701.0.0/encryption_utilities_config/">Encryption_Utilities_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

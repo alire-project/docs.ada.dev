@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>light_rp2040 — Ada/SPARK Documentation</title>
+  <meta name="description" content="light runtime for the RP2040 SoC">
+  <meta name="keywords" content="Ada, SPARK, Alire, light_rp2040, embedded, runtime, Ada, GNAT, Interfaces, Light_Rp2040_Config, System">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "light_rp2040",
+"version": "15.2.0",  "description": "light runtime for the RP2040 SoC",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/light_rp2040/",
+  "codeRepository": "https://github.com/damaki/community-bb-runtimes"
+  ,"author": [{"@type": "Person", "name": "AdaCore"},{"@type": "Person", "name": "Daniel King"}]
+  ,"license": "GPL-3.0-or-later WITH GCC-exception-3.1"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">light_rp2040</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>light_rp2040</h1>
+    <span class="version-tag">15.2.0</span>
+  </div>
+
+  <p class="crate-description">light runtime for the RP2040 SoC</p>
+
+  <div class="long-description">## Usage
+
+First edit your `alire.toml` file and add the following elements:
+ - Add `light_rp2040` in the dependency list:
+   ```toml
+   [[depends-on]]
+   light_rp2040 = &#34;*&#34;
+   ```
+
+Then edit your project file to add the following elements:
+ - &#34;with&#34; the run-time project files. With this, gprbuild will compile the run-time before your application
+   ```ada
+   with &#34;runtime_build.gpr&#34;;
+   ```
+ - Specify the `Target` and `Runtime` attributes:
+   ```ada
+      for Target use runtime_build&#39;Target;
+      for Runtime (&#34;Ada&#34;) use runtime_build&#39;Runtime (&#34;Ada&#34;);
+   ```
+ - specify the `Linker` switches:
+   ```ada
+   package Linker is
+     for Switches (&#34;Ada&#34;) use Runtime_Build.Linker_Switches &amp; (&#34;-Wl,--gc-sections&#34;);
+   end Linker;
+   ```
+   Note that `--gc-switches` is recommended as it reduces flash and RAM usage
+   by removing unused code and data, but it is not mandatory.
+
+See the project website for details on configuring the runtime.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>AdaCore, Daniel King</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later WITH GCC-exception-3.1</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/damaki/community-bb-runtimes">https://github.com/damaki/community-bb-runtimes</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">runtime</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/gnat_arm_elf/">gnat_arm_elf</a>
+        <span class="dep-version">^15</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada/">Ada</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-assertions/">Ada.Assertions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-characters/">Ada.Characters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-characters-handling/">Ada.Characters.Handling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-characters-latin_1/">Ada.Characters.Latin_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-exceptions/">Ada.Exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics/">Ada.Numerics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics-aux/">Ada.Numerics.Aux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics-big_numbers/">Ada.Numerics.Big_Numbers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics-big_numbers-big_integers_ghost/">Ada.Numerics.Big_Numbers.Big_Integers_Ghost</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics-big_numbers-big_integers_ghost-signed_conversions/">Ada.Numerics.Big_Numbers.Big_Integers_Ghost.Signed_Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics-big_numbers-big_integers_ghost-unsigned_conversions/">Ada.Numerics.Big_Numbers.Big_Integers_Ghost.Unsigned_Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-numerics-generic_elementary_functions/">Ada.Numerics.Generic_Elementary_Functions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings/">Ada.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-bounded/">Ada.Strings.Bounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-bounded-generic_bounded_length/">Ada.Strings.Bounded.Generic_Bounded_Length</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-fixed/">Ada.Strings.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-maps/">Ada.Strings.Maps</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-maps-constants/">Ada.Strings.Maps.Constants</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-search/">Ada.Strings.Search</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-strings-superbounded/">Ada.Strings.Superbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-tags/">Ada.Tags</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/ada-text_io/">Ada.Text_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/gnat/">GNAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/gnat-debug_utilities/">GNAT.Debug_Utilities</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/gnat-io/">GNAT.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/gnat-secondary_stack_info/">GNAT.Secondary_Stack_Info</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/gnat-source_info/">GNAT.Source_Info</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces/">Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-c/">Interfaces.C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-c-extensions/">Interfaces.C.Extensions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-c-pointers/">Interfaces.C.Pointers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-c-strings/">Interfaces.C.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040/">Interfaces.RP2040</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-clocks/">Interfaces.RP2040.CLOCKS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-pll_sys/">Interfaces.RP2040.PLL_SYS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-psm/">Interfaces.RP2040.PSM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-resets/">Interfaces.RP2040.RESETS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-rosc/">Interfaces.RP2040.ROSC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-sio/">Interfaces.RP2040.SIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-timer/">Interfaces.RP2040.TIMER</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-watchdog/">Interfaces.RP2040.WATCHDOG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/interfaces-rp2040-xosc/">Interfaces.RP2040.XOSC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/light_rp2040_config/">Light_Rp2040_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system/">System</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-address_operations/">System.Address_Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-address_to_access_conversions/">System.Address_To_Access_Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-arith_32/">System.Arith_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-arith_64/">System.Arith_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-arith_double/">System.Arith_Double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-assertions/">System.Assertions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-atomic_counters/">System.Atomic_Counters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-atomic_primitives/">System.Atomic_Primitives</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-bb/">System.BB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-bb-armv6m_atomic/">System.BB.Armv6m_Atomic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-bb-board_parameters/">System.BB.Board_Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-bb-mcu_parameters/">System.BB.MCU_Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-bit_ops/">System.Bit_Ops</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-boolean_array_operations/">System.Boolean_Array_Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-bootrom/">System.Bootrom</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-byte_swapping/">System.Byte_Swapping</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-case_util/">System.Case_Util</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_signed_16/">System.Compare_Array_Signed_16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_signed_32/">System.Compare_Array_Signed_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_signed_64/">System.Compare_Array_Signed_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_signed_8/">System.Compare_Array_Signed_8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_unsigned_16/">System.Compare_Array_Unsigned_16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_unsigned_32/">System.Compare_Array_Unsigned_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_unsigned_64/">System.Compare_Array_Unsigned_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-compare_array_unsigned_8/">System.Compare_Array_Unsigned_8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-double_real/">System.Double_Real</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exn_flt/">System.Exn_Flt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exn_int/">System.Exn_Int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exn_lflt/">System.Exn_LFlt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exn_llf/">System.Exn_LLF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exn_lli/">System.Exn_LLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exp_int/">System.Exp_Int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exp_lli/">System.Exp_LLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exp_llu/">System.Exp_LLU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exp_mod/">System.Exp_Mod</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exp_uns/">System.Exp_Uns</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-exponn/">System.Exponn</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-expont/">System.Expont</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-fat_flt/">System.Fat_Flt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-fat_gen/">System.Fat_Gen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-fat_lflt/">System.Fat_LFlt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-fat_llf/">System.Fat_LLF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-float_control/">System.Float_Control</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-generic_c_math_interface/">System.Generic_C_Math_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-generic_vector_operations/">System.Generic_Vector_Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_d/">System.Image_D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_f/">System.Image_F</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_i/">System.Image_I</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_n/">System.Image_N</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_r/">System.Image_R</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_u/">System.Image_U</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-image_w/">System.Image_W</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_bool/">System.Img_Bool</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_char/">System.Img_Char</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_decimal_32/">System.Img_Decimal_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_decimal_64/">System.Img_Decimal_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_enum_16/">System.Img_Enum_16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_enum_32/">System.Img_Enum_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_enum_8/">System.Img_Enum_8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_fixed_32/">System.Img_Fixed_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_fixed_64/">System.Img_Fixed_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_flt/">System.Img_Flt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_int/">System.Img_Int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_lflt/">System.Img_LFlt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_llf/">System.Img_LLF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_lli/">System.Img_LLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_llu/">System.Img_LLU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_llw/">System.Img_LLW</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_uns/">System.Img_Uns</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_util/">System.Img_Util</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-img_wiu/">System.Img_WIU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm/">System.Libm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm-generic_approximations/">System.Libm.Generic_Approximations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm_double/">System.Libm_Double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm_double-squareroot/">System.Libm_Double.Squareroot</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm_prefix/">System.Libm_Prefix</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm_single/">System.Libm_Single</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-libm_single-squareroot/">System.Libm_Single.Squareroot</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-machine_code/">System.Machine_Code</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-machine_reset/">System.Machine_Reset</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-memory/">System.Memory</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-memory_compare/">System.Memory_Compare</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-memory_copy/">System.Memory_Copy</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-memory_move/">System.Memory_Move</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-memory_set/">System.Memory_Set</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-memory_types/">System.Memory_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_03/">System.Pack_03</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_05/">System.Pack_05</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_06/">System.Pack_06</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_07/">System.Pack_07</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_09/">System.Pack_09</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_10/">System.Pack_10</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_11/">System.Pack_11</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_12/">System.Pack_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_13/">System.Pack_13</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_14/">System.Pack_14</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_15/">System.Pack_15</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_17/">System.Pack_17</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_18/">System.Pack_18</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_19/">System.Pack_19</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_20/">System.Pack_20</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_21/">System.Pack_21</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_22/">System.Pack_22</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_23/">System.Pack_23</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_25/">System.Pack_25</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_26/">System.Pack_26</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_27/">System.Pack_27</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_28/">System.Pack_28</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_29/">System.Pack_29</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_30/">System.Pack_30</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_31/">System.Pack_31</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_33/">System.Pack_33</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_34/">System.Pack_34</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_35/">System.Pack_35</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_36/">System.Pack_36</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_37/">System.Pack_37</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_38/">System.Pack_38</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_39/">System.Pack_39</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_41/">System.Pack_41</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_42/">System.Pack_42</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_43/">System.Pack_43</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_44/">System.Pack_44</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_45/">System.Pack_45</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_46/">System.Pack_46</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_47/">System.Pack_47</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_49/">System.Pack_49</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_50/">System.Pack_50</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_51/">System.Pack_51</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_52/">System.Pack_52</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_53/">System.Pack_53</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_54/">System.Pack_54</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_55/">System.Pack_55</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_57/">System.Pack_57</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_58/">System.Pack_58</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_59/">System.Pack_59</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_60/">System.Pack_60</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_61/">System.Pack_61</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_62/">System.Pack_62</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-pack_63/">System.Pack_63</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-parameters/">System.Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-powten_flt/">System.Powten_Flt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-powten_lflt/">System.Powten_LFlt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-powten_llf/">System.Powten_LLF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-return_stack/">System.Return_Stack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-secondary_stack/">System.Secondary_Stack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-secondary_stack-single_task/">System.Secondary_Stack.Single_Task</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-semihosting/">System.Semihosting</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-spark/">System.SPARK</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-spark-cut_operations/">System.SPARK.Cut_Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-stack_checking/">System.Stack_Checking</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-storage_elements/">System.Storage_Elements</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-text_io/">System.Text_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-unsigned_types/">System.Unsigned_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_bool/">System.Val_Bool</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_char/">System.Val_Char</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_decimal_32/">System.Val_Decimal_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_decimal_64/">System.Val_Decimal_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_enum_16/">System.Val_Enum_16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_enum_32/">System.Val_Enum_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_enum_8/">System.Val_Enum_8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_fixed_32/">System.Val_Fixed_32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_fixed_64/">System.Val_Fixed_64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_flt/">System.Val_Flt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_int/">System.Val_Int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_lflt/">System.Val_LFlt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_llf/">System.Val_LLF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_lli/">System.Val_LLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_llu/">System.Val_LLU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_real/">System.Val_Real</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_spec/">System.Val_Spec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_uns/">System.Val_Uns</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-val_util/">System.Val_Util</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_d/">System.Value_D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_f/">System.Value_F</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_i/">System.Value_I</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_i_spec/">System.Value_I_Spec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_n/">System.Value_N</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_r/">System.Value_R</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_u/">System.Value_U</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-value_u_spec/">System.Value_U_Spec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-vectors/">System.Vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-vectors-boolean_operations/">System.Vectors.Boolean_Operations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-vs_int/">System.Vs_Int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-vs_lli/">System.Vs_LLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-vs_llu/">System.Vs_LLU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-vs_uns/">System.Vs_Uns</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-wid_int/">System.Wid_Int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-wid_lli/">System.Wid_LLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-wid_llu/">System.Wid_LLU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-wid_uns/">System.Wid_Uns</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/light_rp2040/15.2.0/system-width_u/">System.Width_U</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

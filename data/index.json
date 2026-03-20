@@ -1,0 +1,5761 @@
+{
+  "schema_version": "1",
+  "updated": "2026-03-20T02:57:14Z",
+  "crates": [
+    {
+      "name": "a0b_stm32g474",
+      "description": "A0B: STM32G474 base support and SVD files",
+      "tags": [
+        "a0b",
+        "embedded",
+        "stm32",
+        "stm32g4",
+        "stm32g474"
+      ],
+      "documented_at": "2026-03-03T17:47:48Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "a0b_stm32g474_gpio",
+      "description": "A0B: STM32G474 GPIO/EXTI",
+      "tags": [
+        "a0b",
+        "embedded",
+        "gpio",
+        "exti",
+        "stm32",
+        "stm32g4",
+        "stm32g474"
+      ],
+      "documented_at": "2026-03-03T17:47:57Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "a0b_stm32g4_gpio",
+      "description": "A0B: STM32G4 GPIO",
+      "tags": [
+        "a0b",
+        "embedded",
+        "stm32",
+        "stm32g4",
+        "gpio",
+        "exti"
+      ],
+      "documented_at": "2026-03-03T17:48:22Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "a0b_stm32h723",
+      "description": "STM32H723 base and SVD package",
+      "tags": [
+        "a0b",
+        "embedded",
+        "svd",
+        "stm32",
+        "stm32h7",
+        "stm32h723"
+      ],
+      "documented_at": "2026-03-03T17:47:47Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "a0b_time",
+      "description": "A0B Monotonic Time",
+      "tags": [
+        "a0b",
+        "embedded",
+        "time"
+      ],
+      "documented_at": "2026-03-03T17:47:51Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "a0b_timer",
+      "description": "A0B Timer",
+      "tags": [
+        "a0b",
+        "embedded",
+        "timer"
+      ],
+      "documented_at": "2026-03-03T17:47:46Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "aaa",
+      "description": "Alex's Ada Assortment (of miscellaneous utilities)",
+      "tags": [
+        "miscellanea",
+        "utility"
+      ],
+      "documented_at": "2026-03-03T17:47:29Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "aaa_texts",
+      "description": "Utilities to deal with enriched human texts (ANSI, Unicode)",
+      "tags": [
+        "unicode",
+        "ansi",
+        "console",
+        "terminal",
+        "tables"
+      ],
+      "documented_at": "2026-03-03T17:47:29Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "ada_fuse",
+      "description": "Ada bindings for Fuse (Filesystem in Userspace)",
+      "tags": [],
+      "documented_at": "2026-03-03T17:48:00Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "ada_lua",
+      "description": "An Ada binding for lua",
+      "tags": [
+        "lua",
+        "binding",
+        "script"
+      ],
+      "documented_at": "2026-03-03T17:48:39Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "ada_sqlite3",
+      "description": "Sqlite3 bindings for Ada with embedded SQLite engine",
+      "tags": [
+        "sqlite",
+        "database",
+        "sql",
+        "embedded"
+      ],
+      "documented_at": "2026-03-03T17:49:02Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "ada_toml",
+      "description": "TOML parser for Ada",
+      "tags": [],
+      "documented_at": "2026-03-03T17:48:44Z",
+      "versions": [
+        "0.5.0"
+      ],
+      "latest": "0.5.0"
+    },
+    {
+      "name": "ada_voxel_space_demo",
+      "description": "Voxel Space render engine demo in Ada",
+      "tags": [],
+      "documented_at": "2026-03-03T17:49:11Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "adacl",
+      "description": "Ada Class Library: Strings, Tracing, AUnit, Smart Pointers, Getopt",
+      "tags": [
+        "library",
+        "command-line",
+        "trace",
+        "logging",
+        "string",
+        "aunit",
+        "assert",
+        "container",
+        "smart-pointer",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-03T17:48:49Z",
+      "versions": [
+        "7.1.0"
+      ],
+      "latest": "7.1.0"
+    },
+    {
+      "name": "adacl_aunit",
+      "description": "Ada 2022 AUnit with readable asserts & paramerised test",
+      "tags": [
+        "library",
+        "aunit",
+        "assert",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-03T17:49:07Z",
+      "versions": [
+        "7.1.0"
+      ],
+      "latest": "7.1.0"
+    },
+    {
+      "name": "adacl_eastrings",
+      "description": "AdaCL: Encoding-Aware String Utilities",
+      "tags": [
+        "library",
+        "strings",
+        "i18n",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-03T17:48:59Z",
+      "versions": [
+        "7.1.0"
+      ],
+      "latest": "7.1.0"
+    },
+    {
+      "name": "adacl_regexp",
+      "description": "AdaCL: Regex and SPITBOL Patterns with Wide Character Support",
+      "tags": [
+        "library",
+        "strings",
+        "wide-strings",
+        "search",
+        "regexp",
+        "unicode",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-03T17:49:17Z",
+      "versions": [
+        "7.1.0"
+      ],
+      "latest": "7.1.0"
+    },
+    {
+      "name": "adacl_sar",
+      "description": "AdaCL: Search and Replace with Wide/Wide-Wide Support",
+      "tags": [
+        "library",
+        "strings",
+        "search",
+        "replace",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-03T17:49:34Z",
+      "versions": [
+        "7.1.0"
+      ],
+      "latest": "7.1.0"
+    },
+    {
+      "name": "adamodbus",
+      "description": "SPARK-verified Ada 2022 Modbus library with SunSpec support and C API",
+      "tags": [
+        "modbus",
+        "embedded",
+        "protocol",
+        "serial",
+        "tcp",
+        "spark",
+        "industrial",
+        "sunspec",
+        "energy",
+        "solar"
+      ],
+      "documented_at": "2026-03-03T17:49:20Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "adare_dilithium5",
+      "description": "Post Quantum Computer Resistant Cryptograph Sign, Dilithium5 Ada bind.",
+      "tags": [
+        "signature",
+        "pqc"
+      ],
+      "documented_at": "2026-03-03T17:49:37Z",
+      "versions": [
+        "0.2.3"
+      ],
+      "latest": "0.2.3"
+    },
+    {
+      "name": "adare_hqc256",
+      "description": "Post Quantum Computer Resistant Cryptograph KEM, HQC 256 Ada bind.",
+      "tags": [
+        "kem",
+        "pqc",
+        "ss512bits"
+      ],
+      "documented_at": "2026-03-03T17:49:28Z",
+      "versions": [
+        "0.2.3"
+      ],
+      "latest": "0.2.3"
+    },
+    {
+      "name": "adasat",
+      "description": "Implementation of a DPLL-based SAT solver in Ada.",
+      "tags": [
+        "sat",
+        "solver",
+        "theories"
+      ],
+      "documented_at": "2026-03-04T16:10:14Z",
+      "versions": [
+        "24.0.0",
+        "25.0.0"
+      ],
+      "latest": "25.0.0"
+    },
+    {
+      "name": "adl_middleware",
+      "description": "Middleware layer of the Ada Drivers Library project",
+      "tags": [
+        "embedded",
+        "nostd",
+        "fat",
+        "bitmap"
+      ],
+      "documented_at": "2026-03-03T17:49:36Z",
+      "versions": [
+        "0.4.0"
+      ],
+      "latest": "0.4.0"
+    },
+    {
+      "name": "admpfr",
+      "description": "Ada bindings for MPFR",
+      "tags": [
+        "mpfr",
+        "floating-point",
+        "bindings"
+      ],
+      "documented_at": "2026-03-03T17:49:44Z",
+      "versions": [
+        "4.1.0+20220920"
+      ],
+      "latest": "4.1.0+20220920"
+    },
+    {
+      "name": "aflex",
+      "description": "An Ada Lexical Analyzer Generator",
+      "tags": [
+        "parser",
+        "generator",
+        "grammar"
+      ],
+      "documented_at": "2026-03-03T17:50:08Z",
+      "versions": [
+        "1.7.0"
+      ],
+      "latest": "1.7.0"
+    },
+    {
+      "name": "agpl",
+      "description": "Ada General Purpose Library with a robotics flavor",
+      "tags": [],
+      "documented_at": "2026-03-03T17:50:20Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "ajunitgen",
+      "description": "Generator of JUnit-compatible XML reports",
+      "tags": [
+        "junit",
+        "xml"
+      ],
+      "documented_at": "2026-03-03T17:50:12Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "ali_parse",
+      "description": "ALI_Parse - parsing and processing GNAT's .ali files",
+      "tags": [
+        "webview"
+      ],
+      "documented_at": "2026-03-03T17:50:33Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "alr2appimage",
+      "description": "Tool to create an AppImage executable from an Alire crate",
+      "tags": [
+        "utility",
+        "appimage",
+        "alire",
+        "linux",
+        "packaging"
+      ],
+      "documented_at": "2026-03-03T17:50:25Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "amqp",
+      "description": "AMQP 0-9-1 client library for Ada",
+      "tags": [
+        "amqp",
+        "messaging",
+        "rabbitmq",
+        "protocol"
+      ],
+      "documented_at": "2026-03-03T17:50:29Z",
+      "versions": [
+        "0.3.1"
+      ],
+      "latest": "0.3.1"
+    },
+    {
+      "name": "ansiada",
+      "description": "ANSI escape sequences",
+      "tags": [
+        "ansi",
+        "terminal",
+        "escape"
+      ],
+      "documented_at": "2026-03-03T17:50:45Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "anteforth",
+      "description": "A Forth virtual machine",
+      "tags": [
+        "forth",
+        "vm",
+        "spark"
+      ],
+      "documented_at": "2026-03-03T17:51:00Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "aoa_22",
+      "description": "Advent of Ada 22 Solutions",
+      "tags": [
+        "adventofada",
+        "2022"
+      ],
+      "documented_at": "2026-03-03T17:50:52Z",
+      "versions": [
+        "20220720.0.0"
+      ],
+      "latest": "20220720.0.0"
+    },
+    {
+      "name": "aoa_23",
+      "description": "Some Advent of Ada 2023 solutions",
+      "tags": [
+        "2023"
+      ],
+      "documented_at": "2026-03-03T17:51:06Z",
+      "versions": [
+        "20230119.0.0"
+      ],
+      "latest": "20230119.0.0"
+    },
+    {
+      "name": "apdf",
+      "description": "Portable package for producing dynamically PDF documents",
+      "tags": [
+        "pdf",
+        "adobe",
+        "acrobat"
+      ],
+      "documented_at": "2026-03-03T17:51:16Z",
+      "versions": [
+        "9.0.0"
+      ],
+      "latest": "9.0.0"
+    },
+    {
+      "name": "astro",
+      "description": "Library for astronomical calculations",
+      "tags": [
+        "astronomy",
+        "sun",
+        "moon",
+        "planets"
+      ],
+      "documented_at": "2026-03-03T17:51:22Z",
+      "versions": [
+        "1.4.1"
+      ],
+      "latest": "1.4.1"
+    },
+    {
+      "name": "atari_atr_tools",
+      "description": "Cross-platform tool for ATR disk images for Atari 8-bit systems",
+      "tags": [
+        "atari",
+        "tools",
+        "retrocomputing",
+        "ada-2022"
+      ],
+      "documented_at": "2026-03-03T17:51:33Z",
+      "versions": [
+        "1.5.1"
+      ],
+      "latest": "1.5.1"
+    },
+    {
+      "name": "atari_exe_tools",
+      "description": "Cross-platform tool for analysing and inspecting Atari 8-bit EXE files",
+      "tags": [
+        "atari",
+        "tools",
+        "retrocomputing",
+        "ada-2022"
+      ],
+      "documented_at": "2026-03-03T17:51:33Z",
+      "versions": [
+        "1.5.1"
+      ],
+      "latest": "1.5.1"
+    },
+    {
+      "name": "atomic",
+      "description": "Standalone Ada/SPARK bindings to GCC atomic built-ins",
+      "tags": [
+        "atomic",
+        "spark",
+        "embedded",
+        "nostd"
+      ],
+      "documented_at": "2026-03-19T03:00:30Z",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "audio_base",
+      "description": "Basic Ada packages for audio applications",
+      "tags": [
+        "audio",
+        "riff"
+      ],
+      "documented_at": "2026-03-03T17:51:39Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "audio_wavefiles",
+      "description": "Ada Wavefile Library",
+      "tags": [
+        "audio",
+        "riff",
+        "wavefiles"
+      ],
+      "documented_at": "2026-03-03T17:51:44Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "aunit",
+      "description": "Ada unit test framework",
+      "tags": [
+        "unit",
+        "test",
+        "unit-test"
+      ],
+      "documented_at": "2026-03-03T17:51:36Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "avltrees",
+      "description": "Threaded AVL trees library for Ada",
+      "tags": [
+        "ada1987",
+        "data-structures"
+      ],
+      "documented_at": "2026-03-03T17:51:36Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "avrada_examples",
+      "description": "Sample applications in Ada for AVR microcontrollers",
+      "tags": [
+        "avr",
+        "embedded",
+        "demo"
+      ],
+      "documented_at": "2026-03-03T17:51:53Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "avrada_lib",
+      "description": "Library of drivers for AVR microcontrollers",
+      "tags": [
+        "avr",
+        "embedded",
+        "drivers"
+      ],
+      "documented_at": "2026-03-03T17:51:57Z",
+      "versions": [
+        "2.1.0"
+      ],
+      "latest": "2.1.0"
+    },
+    {
+      "name": "avrada_mcu",
+      "description": "Device (MCU) specific definitions for AVR microcontrollers",
+      "tags": [
+        "avr",
+        "embedded",
+        "rts"
+      ],
+      "documented_at": "2026-03-03T17:51:57Z",
+      "versions": [
+        "2.2.0"
+      ],
+      "latest": "2.2.0"
+    },
+    {
+      "name": "avrada_rts",
+      "description": "Minimal run time system (RTS) for AVR 8bit controllers",
+      "tags": [
+        "avr",
+        "embedded",
+        "rts"
+      ],
+      "documented_at": "2026-03-03T17:52:08Z",
+      "versions": [
+        "2.0.1"
+      ],
+      "latest": "2.0.1"
+    },
+    {
+      "name": "ayacc",
+      "description": "An Ada LARL(1) parser generator",
+      "tags": [
+        "parser",
+        "generator",
+        "grammar"
+      ],
+      "documented_at": "2026-03-03T17:52:03Z",
+      "versions": [
+        "1.4.1"
+      ],
+      "latest": "1.4.1"
+    },
+    {
+      "name": "b2ssum",
+      "description": "BLAKE2s file hash utility",
+      "tags": [
+        "ada1995",
+        "hash",
+        "blake2",
+        "blake2s"
+      ],
+      "documented_at": "2026-03-03T17:52:20Z",
+      "versions": [
+        "0.1.3"
+      ],
+      "latest": "0.1.3"
+    },
+    {
+      "name": "bar_codes",
+      "description": "Generate various types of bar codes (1D or 2D) on various media",
+      "tags": [
+        "bar",
+        "code",
+        "barcode",
+        "bar-code",
+        "datamatrix",
+        "data-matrix",
+        "qr",
+        "qrcode",
+        "qr-code",
+        "code128",
+        "msi",
+        "ean13",
+        "upca",
+        "pbm",
+        "pdf",
+        "png",
+        "svg"
+      ],
+      "documented_at": "2026-03-03T17:52:23Z",
+      "versions": [
+        "6.0.0"
+      ],
+      "latest": "6.0.0"
+    },
+    {
+      "name": "bare_runtime",
+      "description": "Minimal Ada/SPARK run-time for embedded or other restricted targets",
+      "tags": [
+        "embedded",
+        "runtime"
+      ],
+      "documented_at": "2026-03-03T17:52:43Z",
+      "versions": [
+        "14.0.0"
+      ],
+      "latest": "14.0.0"
+    },
+    {
+      "name": "basalt",
+      "description": "Collection of formally verified building blocks",
+      "tags": [
+        "embedded",
+        "nostd",
+        "queue",
+        "spark",
+        "stack",
+        "string",
+        "utils"
+      ],
+      "documented_at": "2026-03-03T17:52:33Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "base32",
+      "description": "Simple base32 codec",
+      "tags": [
+        "base32",
+        "encoder",
+        "decoder",
+        "codec"
+      ],
+      "documented_at": "2026-03-03T17:52:45Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "base64",
+      "description": "Base64 encoding/decoding routines",
+      "tags": [
+        "base64"
+      ],
+      "documented_at": "2026-03-03T17:52:36Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "bb_pico_bsp",
+      "description": "Ada BSP for the Keyboard Featherwing + RPI PICO",
+      "tags": [
+        "embedded",
+        "pico",
+        "handheld",
+        "featherwing"
+      ],
+      "documented_at": "2026-03-03T18:01:36Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "bbqueue",
+      "description": "DMA friendly lock-free BipBuffer",
+      "tags": [
+        "spark",
+        "nostd",
+        "embedded",
+        "lockfree",
+        "dma",
+        "bipbuffer"
+      ],
+      "documented_at": "2026-03-03T17:52:43Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "bbs",
+      "description": "Root package for other crates and contains some physical units",
+      "tags": [
+        "units"
+      ],
+      "documented_at": "2026-03-03T17:52:48Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "bbs_ansiterm",
+      "description": "Generate Escape Sequences for ANSI terminals",
+      "tags": [
+        "vt100",
+        "escape",
+        "ansi"
+      ],
+      "documented_at": "2026-03-03T17:52:53Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "bbs_embed_common",
+      "description": "Abstract hardware drivers and drivers for some i2c bus devices.",
+      "tags": [
+        "embedded"
+      ],
+      "documented_at": "2026-03-03T17:53:05Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "bbs_embed_linux",
+      "description": "Physical device drivers for Raspberry Pi and BeagleBone Black",
+      "tags": [
+        "embedded",
+        "devices",
+        "hardware"
+      ],
+      "documented_at": "2026-03-03T17:53:06Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "bbs_lisp",
+      "description": "Embedable tiny lisp interpreter",
+      "tags": [
+        "lisp",
+        "embedded"
+      ],
+      "documented_at": "2026-03-03T17:53:03Z",
+      "versions": [
+        "0.2.2"
+      ],
+      "latest": "0.2.2"
+    },
+    {
+      "name": "bbs_simcpu",
+      "description": "CPU Simulator for multiple CPUs",
+      "tags": [
+        "cpu-simulator",
+        "6502",
+        "i8080",
+        "i8085",
+        "z80",
+        "m68000"
+      ],
+      "documented_at": "2026-03-03T17:53:09Z",
+      "versions": [
+        "0.4.0"
+      ],
+      "latest": "0.4.0"
+    },
+    {
+      "name": "bbs_webif",
+      "description": "Simple web server to provide an interface to embedded instruments",
+      "tags": [
+        "http",
+        "html",
+        "embedded",
+        "web"
+      ],
+      "documented_at": "2026-03-03T17:53:09Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "bbt",
+      "description": "Black box test runner",
+      "tags": [
+        "test",
+        "testing",
+        "gherkin",
+        "markdown",
+        "tdd",
+        "bdd"
+      ],
+      "documented_at": "2026-03-13T02:55:06Z",
+      "versions": [
+        "0.2.0",
+        "0.2.1"
+      ],
+      "latest": "0.2.1"
+    },
+    {
+      "name": "bigints",
+      "description": "Experimental SPARK Constant Time Big Integer library",
+      "tags": [
+        "bigint",
+        "cryptography",
+        "constant-time",
+        "spark",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-07T02:49:18Z",
+      "versions": [
+        "0.1.0",
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "binary_trees",
+      "description": " Ordered binary trees implemented without access types",
+      "tags": [
+        "binarytrees",
+        "trees",
+        "noaccess"
+      ],
+      "documented_at": "2026-03-03T17:53:21Z",
+      "versions": [
+        "20240519.0.0"
+      ],
+      "latest": "20240519.0.0"
+    },
+    {
+      "name": "bit_sets",
+      "description": "A packed boolean array that saves space and is performant",
+      "tags": [
+        "bit",
+        "set",
+        "boolean",
+        "array",
+        "packed",
+        "performance"
+      ],
+      "documented_at": "2026-03-03T17:53:39Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "blake2s",
+      "description": "SPARK83 implementation of the BLAKE2s hash function",
+      "tags": [
+        "ada1987",
+        "spark",
+        "hash",
+        "blake2",
+        "blake2s"
+      ],
+      "documented_at": "2026-03-03T17:53:34Z",
+      "versions": [
+        "0.1.3"
+      ],
+      "latest": "0.1.3"
+    },
+    {
+      "name": "blinkenlights",
+      "description": "Project to blink LEDs in interesting patterns",
+      "tags": [
+        "embedded",
+        "simulation",
+        "i8080",
+        "m68000",
+        "hardware"
+      ],
+      "documented_at": "2026-03-04T02:55:08Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "bme280",
+      "description": "Driver for BME280 Humidity sensor",
+      "tags": [
+        "sensor",
+        "humidity",
+        "temperature",
+        "pressure",
+        "driver"
+      ],
+      "documented_at": "2026-03-04T02:53:49Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "brackelib",
+      "description": "Library which contains various utility packages.",
+      "tags": [
+        "utility",
+        "adt",
+        "stack",
+        "queue"
+      ],
+      "documented_at": "2026-03-04T02:53:46Z",
+      "versions": [
+        "0.0.2"
+      ],
+      "latest": "0.0.2"
+    },
+    {
+      "name": "braillart",
+      "description": "Use Braille patterns as a dot-matrix printer",
+      "tags": [
+        "braille",
+        "art",
+        "ascii",
+        "unicode"
+      ],
+      "documented_at": "2026-03-04T02:53:39Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "byteflippers",
+      "description": "Signed/modular types for system, big and little endian reading/writing.",
+      "tags": [
+        "byte",
+        "endian",
+        "flip",
+        "swap",
+        "msb",
+        "lsb",
+        "big-endian",
+        "little-endian"
+      ],
+      "documented_at": "2026-03-04T02:53:49Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "c_strings",
+      "description": "Manage Ada <-> C string conversions conveniently",
+      "tags": [
+        "string",
+        "conversion",
+        "c"
+      ],
+      "documented_at": "2026-03-04T02:54:03Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "canberra_ada",
+      "description": "Ada 2012 bindings for libcanberra",
+      "tags": [
+        "canberra",
+        "audio",
+        "sound",
+        "linux"
+      ],
+      "documented_at": "2026-03-04T02:54:22Z",
+      "versions": [
+        "2.0.2"
+      ],
+      "latest": "2.0.2"
+    },
+    {
+      "name": "cards",
+      "description": "52-card deck playing card library",
+      "tags": [
+        "playing-cards",
+        "deck",
+        "game"
+      ],
+      "documented_at": "2026-03-04T02:54:16Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "cashe",
+      "description": "A fixed-point decimal money library written in Ada.",
+      "tags": [
+        "currency",
+        "money",
+        "decimal",
+        "finance"
+      ],
+      "documented_at": "2026-03-04T02:54:21Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "cbsg",
+      "description": "Corporate Bullshit Generator",
+      "tags": [
+        "text",
+        "console"
+      ],
+      "documented_at": "2026-03-04T02:54:25Z",
+      "versions": [
+        "0.0.2"
+      ],
+      "latest": "0.0.2"
+    },
+    {
+      "name": "cgk",
+      "description": "Computational Geometry Kernel",
+      "tags": [
+        "computational",
+        "geometry"
+      ],
+      "documented_at": "2026-03-04T02:54:23Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "chacha20",
+      "description": "ChaCha20 implementation in Ada.",
+      "tags": [
+        "chacha20",
+        "security",
+        "cryptography"
+      ],
+      "documented_at": "2026-03-04T02:54:27Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "checksum",
+      "description": "Algorithms for error-checking",
+      "tags": [
+        "crc",
+        "crc32",
+        "adler32",
+        "redundancy",
+        "error",
+        "checking",
+        "error-checking"
+      ],
+      "documented_at": "2026-03-04T02:54:40Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "chests",
+      "description": "Chests are bounded containers",
+      "tags": [
+        "containers",
+        "bounded",
+        "nostd",
+        "embedded"
+      ],
+      "documented_at": "2026-03-04T02:54:52Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "chipmunk2d",
+      "description": "Ada bindings for Chipmunk2D",
+      "tags": [
+        "gamedev",
+        "binding"
+      ],
+      "documented_at": "2026-03-04T02:54:57Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "clic",
+      "description": "Command Line Interface Components",
+      "tags": [
+        "cli",
+        "command-line",
+        "user-input",
+        "tty"
+      ],
+      "documented_at": "2026-03-04T02:54:51Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "cmd_ada",
+      "description": "Command based text UI, inspired by Python cmd module",
+      "tags": [
+        "ui",
+        "command-line"
+      ],
+      "documented_at": "2026-03-04T02:54:51Z",
+      "versions": [
+        "0.0.1"
+      ],
+      "latest": "0.0.1"
+    },
+    {
+      "name": "coap_client",
+      "description": "Client program for the CoAP-SPARK library.",
+      "tags": [
+        "coap",
+        "spark",
+        "client",
+        "iot",
+        "protocol"
+      ],
+      "documented_at": "2026-03-04T02:58:29Z",
+      "versions": [
+        "0.10.0"
+      ],
+      "latest": "0.10.0"
+    },
+    {
+      "name": "coap_spark",
+      "description": "CoAP implementation formally verified with SPARK/Ada",
+      "tags": [
+        "spark",
+        "coap",
+        "iot",
+        "protocol"
+      ],
+      "documented_at": "2026-03-04T02:57:57Z",
+      "versions": [
+        "0.10.0"
+      ],
+      "latest": "0.10.0"
+    },
+    {
+      "name": "cobs",
+      "description": "Consistent Overhead Byte Stuffing (COBS) encoder/decoder",
+      "tags": [
+        "cobs",
+        "spark",
+        "embedded",
+        "nostd"
+      ],
+      "documented_at": "2026-03-04T02:55:17Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "conic_fit",
+      "description": "Least squares fitting of quadratic curves and surfaces",
+      "tags": [
+        "ellipse",
+        "fitting",
+        "projection"
+      ],
+      "documented_at": "2026-03-04T02:55:21Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "controlled_io",
+      "description": "Files that are open while they exist and closed when they don't ",
+      "tags": [
+        "io",
+        "files",
+        "controlled",
+        "scope",
+        "binary",
+        "text"
+      ],
+      "documented_at": "2026-03-04T02:55:17Z",
+      "versions": [
+        "20240401.0.1"
+      ],
+      "latest": "20240401.0.1"
+    },
+    {
+      "name": "crc_32",
+      "description": "Cyclic Redundancy Check to verify data integrity (ISO 3309)",
+      "tags": [
+        "crc",
+        "iso3309",
+        "data",
+        "redundancy",
+        "verification"
+      ],
+      "documented_at": "2026-03-04T02:55:36Z",
+      "versions": [
+        "20240725.0.0"
+      ],
+      "latest": "20240725.0.0"
+    },
+    {
+      "name": "cre8or_generic_image_handling",
+      "description": "Generic image file and data handling using stb_images",
+      "tags": [
+        "cre8or",
+        "images",
+        "pictures",
+        "binding",
+        "stb",
+        "stb-images",
+        "gamedev",
+        "graphics"
+      ],
+      "documented_at": "2026-03-04T02:55:51Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "cre8or_generic_image_handling_example",
+      "description": "Generic image handling example project",
+      "tags": [
+        "cre8or",
+        "images",
+        "pictures",
+        "binding",
+        "example",
+        "stb",
+        "stb-images",
+        "gamedev",
+        "graphics"
+      ],
+      "documented_at": "2026-03-04T02:55:53Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "czmq_ada",
+      "description": "Ada bindings for CZMQ (high-level C API for ZeroMQ)",
+      "tags": [
+        "zeromq",
+        "messaging",
+        "networking",
+        "bindings"
+      ],
+      "documented_at": "2026-03-17T02:56:52Z",
+      "versions": [
+        "0.1.0",
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "dcf",
+      "description": "Ada 2012 library for document container files, Zip-based archive files",
+      "tags": [
+        "zip",
+        "document",
+        "container",
+        "archive"
+      ],
+      "documented_at": "2026-03-04T02:56:05Z",
+      "versions": [
+        "2.0.3"
+      ],
+      "latest": "2.0.3"
+    },
+    {
+      "name": "den",
+      "description": "Directory Enumeration Softlink Aware",
+      "tags": [
+        "directory",
+        "folder",
+        "enumeration",
+        "traversal",
+        "softlink"
+      ],
+      "documented_at": "2026-03-04T02:56:13Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "dg_loada",
+      "description": "dg_loada loads (restores) legacy DG AOS/VS DUMP_II files",
+      "tags": [
+        "legacy",
+        "recovering-data",
+        "dg",
+        "data-general",
+        "aos-vs"
+      ],
+      "documented_at": "2026-03-04T02:56:18Z",
+      "versions": [
+        "1.4.3"
+      ],
+      "latest": "1.4.3"
+    },
+    {
+      "name": "dir_iterators",
+      "description": "Ways of moving around directory trees",
+      "tags": [
+        "dir",
+        "files",
+        "walk"
+      ],
+      "documented_at": "2026-03-04T02:56:33Z",
+      "versions": [
+        "0.0.5"
+      ],
+      "latest": "0.0.5"
+    },
+    {
+      "name": "dirty_booleans",
+      "description": "Comparisons with 0/1, T/F, Y/N, Yes/No, etc.",
+      "tags": [
+        "boolean",
+        "dirty",
+        "comparison"
+      ],
+      "documented_at": "2026-03-04T02:56:41Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "distance",
+      "description": "A formally verified library for calculating numeric, text distances",
+      "tags": [
+        "ada",
+        "spark",
+        "distance",
+        "metrics",
+        "algorithms",
+        "mathematics",
+        "string",
+        "similarity",
+        "levenshtein",
+        "geospatial",
+        "high-integrity",
+        "alire",
+        "data-science"
+      ],
+      "documented_at": "2026-03-04T02:56:44Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "dotenv",
+      "description": "Loads environment variables from .env for Ada projects.",
+      "tags": [
+        "dotenv",
+        "env",
+        "environment",
+        "variables",
+        "config",
+        "settings"
+      ],
+      "documented_at": "2026-03-04T02:56:40Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "dummyserver",
+      "description": "DummyServer is a terminal program that serves dummy content",
+      "tags": [
+        "http",
+        "server",
+        "test",
+        "terminal",
+        "console"
+      ],
+      "documented_at": "2026-03-04T02:56:49Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "easy_graphics",
+      "description": "Very Simple Graphics Package",
+      "tags": [
+        "graphics",
+        "image",
+        "ppm",
+        "pam",
+        "gif",
+        "turtle"
+      ],
+      "documented_at": "2026-03-04T02:57:02Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "edc_client",
+      "description": "Client library for: github.com/hgrodriguez/embedded-dashboard-console",
+      "tags": [
+        "embedded",
+        "rp2040"
+      ],
+      "documented_at": "2026-03-04T02:57:06Z",
+      "versions": [
+        "1.5.2"
+      ],
+      "latest": "1.5.2"
+    },
+    {
+      "name": "eeprom_i2c",
+      "description": "EEPROM I2C drivers library for embedded platforms",
+      "tags": [
+        "embedded",
+        "nostd",
+        "eeprom",
+        "rp2040",
+        "i2c"
+      ],
+      "documented_at": "2026-03-04T02:57:08Z",
+      "versions": [
+        "8.0.1"
+      ],
+      "latest": "8.0.1"
+    },
+    {
+      "name": "elada",
+      "description": "Expression Language Library (JSR245)",
+      "tags": [
+        "web",
+        "expression",
+        "expander",
+        "parser"
+      ],
+      "documented_at": "2026-03-04T02:57:17Z",
+      "versions": [
+        "1.8.8"
+      ],
+      "latest": "1.8.8"
+    },
+    {
+      "name": "elevator",
+      "description": "A Simple Elevator System",
+      "tags": [
+        "elevator",
+        "teaching"
+      ],
+      "documented_at": "2026-03-04T02:57:49Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "elogs",
+      "description": "Embedded logging, proven absent of runtime errors",
+      "tags": [
+        "spark",
+        "embedded",
+        "zfp",
+        "logging",
+        "log"
+      ],
+      "documented_at": "2026-03-04T02:57:30Z",
+      "versions": [
+        "1.3.2"
+      ],
+      "latest": "1.3.2"
+    },
+    {
+      "name": "embedded_components",
+      "description": "Platform agnostic drivers to interface external components",
+      "tags": [
+        "embedded",
+        "nostd"
+      ],
+      "documented_at": "2026-03-04T02:58:16Z",
+      "versions": [
+        "0.4.0"
+      ],
+      "latest": "0.4.0"
+    },
+    {
+      "name": "emojis",
+      "description": "A library to replace names between colons with emojis",
+      "tags": [
+        "emoji",
+        "string",
+        "text",
+        "unicode"
+      ],
+      "documented_at": "2026-03-04T02:59:19Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "encryption_utilities",
+      "description": "Utility programs for the encryption algorithms included in the PragmARC",
+      "tags": [
+        "threefish256",
+        "threefish512",
+        "threefish1024",
+        "xor"
+      ],
+      "documented_at": "2026-03-04T02:59:17Z",
+      "versions": [
+        "20220701.0.0"
+      ],
+      "latest": "20220701.0.0"
+    },
+    {
+      "name": "endianness",
+      "description": "Convenience subprograms to convert between Big- and Little-endianness",
+      "tags": [
+        "spark",
+        "endianness",
+        "system"
+      ],
+      "documented_at": "2026-03-04T02:59:35Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "enet",
+      "description": "Ada Embedded Network Stack",
+      "tags": [
+        "network",
+        "ip",
+        "ipv4",
+        "icmp",
+        "udp",
+        "arp",
+        "dns",
+        "dhcp",
+        "ntp"
+      ],
+      "documented_at": "2026-03-04T02:59:39Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "ephemeris",
+      "description": "Library for reading astronomical ephemerides from JPL DE200 files",
+      "tags": [
+        "ephemeris",
+        "astronomy",
+        "sun",
+        "moon",
+        "planets"
+      ],
+      "documented_at": "2026-03-04T03:00:39Z",
+      "versions": [
+        "1.2.0"
+      ],
+      "latest": "1.2.0"
+    },
+    {
+      "name": "epoll",
+      "description": "Linux epoll binding",
+      "tags": [
+        "linux",
+        "epoll",
+        "net"
+      ],
+      "documented_at": "2026-03-04T02:59:49Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "esp_idf",
+      "description": "Ada binding for the ESP-IDF SDK",
+      "tags": [
+        "embedded",
+        "nostd",
+        "esp",
+        "binding",
+        "riscv",
+        "xtensa"
+      ],
+      "documented_at": "2026-03-04T02:59:44Z",
+      "versions": [
+        "5.0.2-1"
+      ],
+      "latest": "5.0.2-1"
+    },
+    {
+      "name": "ethernet",
+      "description": "Root crate for ethernet namespace and MDIO/SMI/MIIM interface",
+      "tags": [
+        "network",
+        "mdio",
+        "smi",
+        "miim",
+        "phy",
+        "driver"
+      ],
+      "documented_at": "2026-03-04T02:59:51Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "euler_tools",
+      "description": "Assortment of mathematical functions to solve Project Euler problems.",
+      "tags": [
+        "project-euler",
+        "mathematics"
+      ],
+      "documented_at": "2026-03-04T02:59:49Z",
+      "versions": [
+        "1.3.0"
+      ],
+      "latest": "1.3.0"
+    },
+    {
+      "name": "excel_writer",
+      "description": "Produce Excel spreadsheets",
+      "tags": [
+        "excel",
+        "spreadsheet",
+        "xls",
+        "csv"
+      ],
+      "documented_at": "2026-03-04T03:00:08Z",
+      "versions": [
+        "19.0.1"
+      ],
+      "latest": "19.0.1"
+    },
+    {
+      "name": "exsytrawo",
+      "description": "Exception Symbolic Traceback Workaround for macOS",
+      "tags": [
+        "exception",
+        "symbolic",
+        "traceback"
+      ],
+      "documented_at": "2026-03-04T03:00:06Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "felix",
+      "description": "X/Open Native Language System (NLS) for Ada",
+      "tags": [
+        "ada1995",
+        "i18n",
+        "nls",
+        "localization",
+        "localisation",
+        "l10n"
+      ],
+      "documented_at": "2026-03-04T03:00:13Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "file_formats_java_class",
+      "description": "File format reader for the Java programming language CLASS file format",
+      "tags": [
+        "file",
+        "formats",
+        "java",
+        "class"
+      ],
+      "documented_at": "2026-03-04T03:00:22Z",
+      "versions": [
+        "7.0.0"
+      ],
+      "latest": "7.0.0"
+    },
+    {
+      "name": "flux",
+      "description": "Experimental data stream library for Ada",
+      "tags": [],
+      "documented_at": "2026-03-04T03:00:20Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "format_strings",
+      "description": "Build formatted strings",
+      "tags": [
+        "format",
+        "formatting",
+        "strings",
+        "templates"
+      ],
+      "documented_at": "2026-03-04T03:00:28Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "gade",
+      "description": "A Game Boy emulation library in Ada",
+      "tags": [
+        "ada",
+        "gameboy",
+        "emulator",
+        "library"
+      ],
+      "documented_at": "2026-03-13T02:54:41Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "garlic",
+      "description": "GNAT Library for Ada Distributed Environment (garlic)",
+      "tags": [
+        "dsa",
+        "distributed",
+        "annex",
+        "network",
+        "glade"
+      ],
+      "documented_at": "2026-03-04T03:00:38Z",
+      "versions": [
+        "6.0.1"
+      ],
+      "latest": "6.0.1"
+    },
+    {
+      "name": "geo_coords",
+      "description": "Geo coordinates calculation for determining Location, Distance, Bearing",
+      "tags": [
+        "geo",
+        "coordinates",
+        "latitude",
+        "longitude",
+        "distance",
+        "bearing",
+        "haversine"
+      ],
+      "documented_at": "2026-03-04T03:00:37Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "geo_mag",
+      "description": "Library for magnetic declination calculation",
+      "tags": [
+        "navigation",
+        "wmm",
+        "azimuth",
+        "declination",
+        "magnetism"
+      ],
+      "documented_at": "2026-03-04T03:00:47Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "geste",
+      "description": "GEneric Sprite and Tile Engine",
+      "tags": [
+        "game",
+        "nostd",
+        "rendering",
+        "sprite"
+      ],
+      "documented_at": "2026-03-04T03:00:48Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "get_password",
+      "description": "Read a string without echo, in password-like style",
+      "tags": [
+        "password",
+        "echo",
+        "textio"
+      ],
+      "documented_at": "2026-03-04T03:00:49Z",
+      "versions": [
+        "1.0.0-rc"
+      ],
+      "latest": "1.0.0-rc"
+    },
+    {
+      "name": "getopt",
+      "description": "POSIX getopt(3) for Ada",
+      "tags": [
+        "arguments",
+        "options",
+        "flags",
+        "getopt"
+      ],
+      "documented_at": "2026-03-04T03:00:51Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "gettext",
+      "description": "A wrapper library for gettext",
+      "tags": [
+        "i18n",
+        "gettext"
+      ],
+      "documented_at": "2026-03-04T03:01:04Z",
+      "versions": [
+        "25.9.3"
+      ],
+      "latest": "25.9.3"
+    },
+    {
+      "name": "gfx_core",
+      "description": "Modular Portable Graphics Library, Core Components",
+      "tags": [
+        "graphics"
+      ],
+      "documented_at": "2026-03-04T03:01:06Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "gfx_rasteriser",
+      "description": "Modular Portable Graphics Library, Primitive's Rasteriser",
+      "tags": [
+        "graphics"
+      ],
+      "documented_at": "2026-03-04T03:01:04Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "gid",
+      "description": "Generic Image Decoder - decode a broad variety of image formats",
+      "tags": [
+        "image",
+        "animated",
+        "animation",
+        "bitmap",
+        "color",
+        "decoder",
+        "decoding",
+        "decompress",
+        "digitization",
+        "lossless",
+        "lossy",
+        "rbg",
+        "steganography",
+        "transparency",
+        "transparent",
+        "bmp",
+        "gif",
+        "jpeg",
+        "jpg",
+        "pbm",
+        "pgm",
+        "png",
+        "pnm",
+        "ppm",
+        "qoi",
+        "tga",
+        "targa"
+      ],
+      "documented_at": "2026-03-04T12:27:05Z",
+      "versions": [
+        "13.0.1"
+      ],
+      "latest": "13.0.1"
+    },
+    {
+      "name": "gnat_math_extensions",
+      "description": "Eigenvalues, eigenvectors for non-symmetric, non-Hermitian matrices",
+      "tags": [
+        "matrices",
+        "blas",
+        "lapack"
+      ],
+      "documented_at": "2026-03-04T12:27:20Z",
+      "versions": [
+        "1.2.0"
+      ],
+      "latest": "1.2.0"
+    },
+    {
+      "name": "gnatcoll",
+      "description": "GNAT Components Collection - Core packages",
+      "tags": [
+        "gnatcoll",
+        "json",
+        "email",
+        "refcount",
+        "vfs"
+      ],
+      "documented_at": "2026-03-04T12:27:14Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_gmp",
+      "description": "GNAT Components Collection - GNU Multiple Precision Arithmetic binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "gmp",
+        "arbitrary",
+        "precision",
+        "arithmetic"
+      ],
+      "documented_at": "2026-03-04T12:27:12Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_iconv",
+      "description": "GNAT Components Collection - iconv binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "iconv",
+        "i18n"
+      ],
+      "documented_at": "2026-03-04T12:52:17Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_lzma",
+      "description": "GNAT Components Collection - lzma binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "lzma",
+        "compression",
+        "7z",
+        "7zip"
+      ],
+      "documented_at": "2026-03-04T12:52:21Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_minimal",
+      "description": "GNAT Components Collection - Minimal",
+      "tags": [
+        "gnatcoll",
+        "asserts",
+        "encoders",
+        "stream",
+        "storage"
+      ],
+      "documented_at": "2026-03-04T12:52:22Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_omp",
+      "description": "GNAT Components Collection - OpenMP binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "openmp",
+        "libgomp"
+      ],
+      "documented_at": "2026-03-04T12:52:21Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_postgres",
+      "description": "GNAT Components Collection - postgres",
+      "tags": [
+        "gnatcoll",
+        "gnatcoll-db",
+        "postgres",
+        "postgresql",
+        "database"
+      ],
+      "documented_at": "2026-03-04T12:52:22Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_readline",
+      "description": "GNAT Components Collection - readline binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "readline",
+        "cli"
+      ],
+      "documented_at": "2026-03-04T12:52:21Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_sql",
+      "description": "GNAT Components Collection - sql",
+      "tags": [
+        "gnatcoll",
+        "gnatcoll-db",
+        "sql",
+        "database"
+      ],
+      "documented_at": "2026-03-04T12:52:26Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_syslog",
+      "description": "GNAT Components Collection - syslog binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "syslog",
+        "logging"
+      ],
+      "documented_at": "2026-03-04T13:06:19Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatcoll_zlib",
+      "description": "GNAT Components Collection - zlib binding",
+      "tags": [
+        "gnatcoll",
+        "bindings",
+        "zlib",
+        "compression",
+        "zip",
+        "deflate"
+      ],
+      "documented_at": "2026-03-04T13:06:14Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "gnatdist_garlic",
+      "description": "The configuration tool gnatdist for GARLIC",
+      "tags": [
+        "dsa",
+        "distributed",
+        "annex",
+        "network",
+        "glade"
+      ],
+      "documented_at": "2026-03-04T13:06:17Z",
+      "versions": [
+        "6.0.1"
+      ],
+      "latest": "6.0.1"
+    },
+    {
+      "name": "gsl",
+      "description": "Ada binding to Gnu Scientific Library 2.7",
+      "tags": [],
+      "documented_at": "2026-03-04T13:38:08Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "hac",
+      "description": "HAC Ada Compiler: a small, quick Ada compiler covering a subset of Ada",
+      "tags": [
+        "hac",
+        "compiler",
+        "virtual-machine",
+        "native",
+        "semantic",
+        "parser",
+        "advent-of-code"
+      ],
+      "documented_at": "2026-03-04T13:38:03Z",
+      "versions": [
+        "0.42.0"
+      ],
+      "latest": "0.42.0"
+    },
+    {
+      "name": "hal",
+      "description": "Hardware Abstraction Layer (HAL)",
+      "tags": [
+        "embedded",
+        "hal",
+        "nostd"
+      ],
+      "documented_at": "2026-03-04T13:38:08Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "hangman",
+      "description": "Hangman game for the console",
+      "tags": [],
+      "documented_at": "2026-03-04T13:37:54Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "hello",
+      "description": "'Hello, world!' demonstration project",
+      "tags": [
+        "hello",
+        "demo"
+      ],
+      "documented_at": "2026-03-04T15:17:19Z",
+      "versions": [
+        "1.0.2"
+      ],
+      "latest": "1.0.2"
+    },
+    {
+      "name": "hex_format",
+      "description": "Hexadecimal string formatting for modular types",
+      "tags": [
+        "hex",
+        "pure",
+        "embedded",
+        "string",
+        "text",
+        "format"
+      ],
+      "documented_at": "2026-03-04T15:17:23Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "hex_string",
+      "description": "Get a string of almost any type as hex with underscores",
+      "tags": [
+        "embedded",
+        "hex",
+        "spark"
+      ],
+      "documented_at": "2026-03-04T15:17:13Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "hirtos",
+      "description": "High-Integrity RTOS",
+      "tags": [
+        "rtos"
+      ],
+      "documented_at": "2026-03-04T15:17:15Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "hirtos_separation_kernel",
+      "description": "High-Integrity RTOS Separation Kernel",
+      "tags": [
+        "hypervisor"
+      ],
+      "documented_at": "2026-03-04T15:17:33Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "hmac",
+      "description": "HMAC implemented in Ada",
+      "tags": [
+        "cryptography",
+        "security",
+        "hmac"
+      ],
+      "documented_at": "2026-03-04T15:17:17Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "hmc5883",
+      "description": "Driver for HMC5883L magnetic sensor",
+      "tags": [
+        "sensor",
+        "magnetometer",
+        "driver"
+      ],
+      "documented_at": "2026-03-04T15:17:17Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "hnumerics",
+      "description": "Operations for dual numbers",
+      "tags": [
+        "dual-numbers",
+        "numerics"
+      ],
+      "documented_at": "2026-03-04T15:17:12Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "honki_tonks_zivilisationen",
+      "description": "The Code of my 4X turn-based strategy game.",
+      "tags": [
+        "game",
+        "sfml",
+        "4x",
+        "roundbased",
+        "strategy",
+        "cross-platform",
+        "multimedia",
+        "2d"
+      ],
+      "documented_at": "2026-03-04T15:17:34Z",
+      "versions": [
+        "0.5.5305"
+      ],
+      "latest": "0.5.5305"
+    },
+    {
+      "name": "hp41cx_tools",
+      "description": "Cross-platform tools to supercharge your HP-41CX emulator experience",
+      "tags": [
+        "calculator",
+        "tools",
+        "retrocomputing",
+        "ada-2022",
+        "hp-41cx",
+        "dm41x",
+        "px41cx",
+        "cross-platform"
+      ],
+      "documented_at": "2026-03-04T16:51:11Z",
+      "versions": [
+        "1.8.10"
+      ],
+      "latest": "1.8.10"
+    },
+    {
+      "name": "hungarian",
+      "description": "Ada wrapper for the fast Stachniss' Hungarian solver",
+      "tags": [],
+      "documented_at": "2026-03-04T16:51:02Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "image_io",
+      "description": "Output in BMP,PPM,QOI;input in BMP,GIF,JPG,PNG,PNM,QOI,TGA",
+      "tags": [
+        "image",
+        "io",
+        "bmp",
+        "ppm",
+        "qoi",
+        "gif",
+        "jpg",
+        "png",
+        "pnm",
+        "tga"
+      ],
+      "documented_at": "2026-03-04T16:51:00Z",
+      "versions": [
+        "20240725.0.0"
+      ],
+      "latest": "20240725.0.0"
+    },
+    {
+      "name": "image_random",
+      "description": "True random numbers from a digital camera ",
+      "tags": [
+        "random",
+        "numbers",
+        "camera"
+      ],
+      "documented_at": "2026-03-04T16:50:48Z",
+      "versions": [
+        "20200720.0.0"
+      ],
+      "latest": "20200720.0.0"
+    },
+    {
+      "name": "ini_files",
+      "description": "A standalone, portable Ada package for configuration files",
+      "tags": [
+        "ini",
+        "ini-file",
+        "cfg",
+        "cfg-file",
+        "config",
+        "configuration"
+      ],
+      "documented_at": "2026-03-04T16:50:51Z",
+      "versions": [
+        "11.0.0"
+      ],
+      "latest": "11.0.0"
+    },
+    {
+      "name": "intl",
+      "description": "NLS thin Ada binding",
+      "tags": [
+        "i18n",
+        "nls",
+        "bindings"
+      ],
+      "documented_at": "2026-03-04T16:50:50Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "io_utils",
+      "description": "A terminal IO library",
+      "tags": [
+        "user-input",
+        "tty"
+      ],
+      "documented_at": "2026-03-04T16:51:18Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "iso",
+      "description": "ISO Standard references for Ada such as 1366 & 4217 (Country & Currency)",
+      "tags": [
+        "countries",
+        "currencies",
+        "iso-1366",
+        "iso-4217"
+      ],
+      "documented_at": "2026-03-04T16:51:12Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "iterators",
+      "description": "Functional iterators a la Rust",
+      "tags": [
+        "iterators",
+        "functional"
+      ],
+      "documented_at": "2026-03-04T16:51:34Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "itsybitsy_bsp",
+      "description": "Board support package for Arduino ItsyBitsy",
+      "tags": [
+        "embedded",
+        "nostd",
+        "itsybitsy",
+        "rp2040",
+        "bsp"
+      ],
+      "documented_at": "2026-03-04T16:51:53Z",
+      "versions": [
+        "0.0.4"
+      ],
+      "latest": "0.0.4"
+    },
+    {
+      "name": "itsybitsy_rp2040_bsp",
+      "description": "Board support package for Arduino ItsyBitsy RP2040",
+      "tags": [
+        "embedded",
+        "nostd",
+        "itsybitsy",
+        "rp2040",
+        "bsp"
+      ],
+      "documented_at": "2026-03-04T16:51:41Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "j2ada",
+      "description": "Almost Java to Ada translator",
+      "tags": [
+        "java",
+        "translator"
+      ],
+      "documented_at": "2026-03-04T16:51:36Z",
+      "versions": [
+        "1.4.2"
+      ],
+      "latest": "1.4.2"
+    },
+    {
+      "name": "jintp",
+      "description": "Template parser in Ada based on Jinja2",
+      "tags": [
+        "templates",
+        "jinja",
+        "jinja2"
+      ],
+      "documented_at": "2026-03-04T16:51:39Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "journada",
+      "description": "Simple and nice configurable logging",
+      "tags": [
+        "log",
+        "logging",
+        "vt100"
+      ],
+      "documented_at": "2026-03-04T16:51:39Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "json",
+      "description": "An Ada 2012 library for parsing JSON",
+      "tags": [
+        "json"
+      ],
+      "documented_at": "2026-03-04T16:51:36Z",
+      "versions": [
+        "6.0.0"
+      ],
+      "latest": "6.0.0"
+    },
+    {
+      "name": "keystoreada",
+      "description": "Ada Keystore",
+      "tags": [
+        "security",
+        "storage",
+        "nosql"
+      ],
+      "documented_at": "2026-03-04T16:52:06Z",
+      "versions": [
+        "1.4.2"
+      ],
+      "latest": "1.4.2"
+    },
+    {
+      "name": "labs_radar",
+      "description": "Introductory Ada exercises based around a fake radar codebase",
+      "tags": [
+        "training",
+        "labs"
+      ],
+      "documented_at": "2026-03-04T16:52:00Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "labs_standalone",
+      "description": "Ada exercices for training",
+      "tags": [
+        "training",
+        "labs",
+        "algorithmic"
+      ],
+      "documented_at": "2026-03-04T16:52:14Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace",
+      "description": "Contains a set of low level re-usable Ada components.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:10Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_box2d",
+      "description": "Provides a thin Ada binding to the 'box2d' C++ project.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:07Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_bullet",
+      "description": "Provides a thin Ada binding to the 'bullet' C++ project.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:27Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_c_math",
+      "description": "A binding to the C math code used by box2d & bullet bindings.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:28Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_collada",
+      "description": "A Collada parser.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:33Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_math",
+      "description": "Provides an Ada package family covering pure and applied mathematics.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:43Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_physics",
+      "description": "Provides 2D/3D rigid body dynamics simulation.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:47Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_shared",
+      "description": "Default settings for GPR files in the Lace project.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:52:59Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_swig",
+      "description": "Provides packages required by bindings produced by the 'swig4ada' tool.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:53:05Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lace_xml",
+      "description": "Provides simple XML read/write support.",
+      "tags": [],
+      "documented_at": "2026-03-04T16:53:02Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "langkit_support",
+      "description": "Runtime support library for Langkit-generated libraries",
+      "tags": [],
+      "documented_at": "2026-03-04T16:53:12Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "learnadainy",
+      "description": "Learn Ada in Y Minutes",
+      "tags": [
+        "education"
+      ],
+      "documented_at": "2026-03-04T16:53:19Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "levenshtein_distance",
+      "description": "Implementation of levenshtein distance.",
+      "tags": [
+        "levenshtein",
+        "distance",
+        "algorithm"
+      ],
+      "documented_at": "2026-03-04T16:53:18Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "libcrc",
+      "description": "Cyclic Redundancy Check (CRC) Library",
+      "tags": [
+        "crc",
+        "crc32",
+        "spark",
+        "error-checking"
+      ],
+      "documented_at": "2026-03-04T16:53:36Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "libhello",
+      "description": "Basic library demonstration project",
+      "tags": [
+        "hello",
+        "demo",
+        "library"
+      ],
+      "documented_at": "2026-03-04T16:53:53Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "libkeccak",
+      "description": "SHA-3 and related algorithms",
+      "tags": [
+        "spark",
+        "cryptography",
+        "security",
+        "hash",
+        "sha3",
+        "keccak",
+        "gimli",
+        "ascon",
+        "shake",
+        "cshake",
+        "kmac",
+        "tuplehash",
+        "parallelhash",
+        "kangarootwelve"
+      ],
+      "documented_at": "2026-03-04T16:53:56Z",
+      "versions": [
+        "3.0.0"
+      ],
+      "latest": "3.0.0"
+    },
+    {
+      "name": "libsimpleio",
+      "description": "Linux Simple I/O Library",
+      "tags": [
+        "embedded",
+        "linux",
+        "libsimpleio",
+        "remoteio",
+        "beaglebone",
+        "pocketbeagle",
+        "raspberrypi",
+        "raspberry",
+        "pi",
+        "adc",
+        "dac",
+        "gpio",
+        "hid",
+        "i2c",
+        "motor",
+        "pwm",
+        "sensor",
+        "serial",
+        "servo",
+        "spi",
+        "stepper",
+        "watchdog",
+        "wioe5"
+      ],
+      "documented_at": "2026-03-04T16:54:02Z",
+      "versions": [
+        "2.23808.1"
+      ],
+      "latest": "2.23808.1"
+    },
+    {
+      "name": "light_arduino_due",
+      "description": "Arduino Due Board Support Package for `light` GNAT Runtime",
+      "tags": [
+        "a0b",
+        "embedded",
+        "bsp",
+        "light",
+        "atsam3x8e",
+        "sam3x8e",
+        "arduino",
+        "due"
+      ],
+      "documented_at": "2026-03-04T16:54:23Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "light_blackpill_stm32f401",
+      "description": "BlackPill STM32F401 BSP for `light` GNAT Runtime",
+      "tags": [
+        "embedded",
+        "bsp",
+        "light",
+        "blackpill",
+        "stm32",
+        "stm32f4",
+        "stm32f401"
+      ],
+      "documented_at": "2026-03-04T16:54:43Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "light_fk723m1_zgt6",
+      "description": "FK723M1-ZGT6 BSP for `light` GNAT Runtime",
+      "tags": [
+        "a0b",
+        "embedded",
+        "bsp",
+        "light",
+        "stm32",
+        "stm32h7",
+        "stm32h723",
+        "fk723m1"
+      ],
+      "documented_at": "2026-03-04T16:54:32Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "light_nrf52832",
+      "description": "light runtime for the NRF52832 SoC",
+      "tags": [
+        "embedded",
+        "runtime"
+      ],
+      "documented_at": "2026-03-13T02:56:03Z",
+      "versions": [
+        "15.0.1",
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_nrf52833",
+      "description": "light runtime for the NRF52833 SoC",
+      "tags": [
+        "embedded",
+        "runtime"
+      ],
+      "documented_at": "2026-03-13T02:55:50Z",
+      "versions": [
+        "15.0.1",
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_nrf52840",
+      "description": "light runtime for the NRF52840 SoC",
+      "tags": [
+        "embedded",
+        "runtime"
+      ],
+      "documented_at": "2026-03-13T02:55:58Z",
+      "versions": [
+        "15.0.1",
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_rp2040",
+      "description": "light runtime for the RP2040 SoC",
+      "tags": [
+        "embedded",
+        "runtime"
+      ],
+      "documented_at": "2026-03-13T02:55:45Z",
+      "versions": [
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_rp2350",
+      "description": "light runtime for the RP2350 SoC",
+      "tags": [
+        "embedded",
+        "runtime"
+      ],
+      "documented_at": "2026-03-13T02:55:51Z",
+      "versions": [
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_stm32f0xx",
+      "description": "light runtime for the STM32F0XX SoC",
+      "tags": [
+        "embedded",
+        "runtime",
+        "stm32f0"
+      ],
+      "documented_at": "2026-03-13T02:55:54Z",
+      "versions": [
+        "15.0.1",
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_stm32g0xx",
+      "description": "light runtime for the STM32G0XX SoC",
+      "tags": [
+        "embedded",
+        "runtime",
+        "stm32g0"
+      ],
+      "documented_at": "2026-03-13T02:55:49Z",
+      "versions": [
+        "15.0.1",
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_stm32g4xx",
+      "description": "light runtime for the STM32G4XX SoC",
+      "tags": [
+        "embedded",
+        "runtime",
+        "stm32g4"
+      ],
+      "documented_at": "2026-03-13T02:56:01Z",
+      "versions": [
+        "15.0.1",
+        "15.2.0"
+      ],
+      "latest": "15.2.0"
+    },
+    {
+      "name": "light_weact_stm32g474",
+      "description": "WeAct STM32G474 BSP for `light` GNAT Runtime",
+      "tags": [
+        "embedded",
+        "bsp",
+        "light",
+        "weact",
+        "stm32",
+        "stm32g4",
+        "stm32g474"
+      ],
+      "documented_at": "2026-03-04T16:55:47Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lined",
+      "description": "Ada Implementation of the Line Editor from Software Tools",
+      "tags": [
+        "line",
+        "editor"
+      ],
+      "documented_at": "2026-03-04T16:55:37Z",
+      "versions": [
+        "20240419.0.0"
+      ],
+      "latest": "20240419.0.0"
+    },
+    {
+      "name": "linenoise_ada",
+      "description": "Bindings to the Linenoise line editing library",
+      "tags": [
+        "linenoise",
+        "readline",
+        "line-editing"
+      ],
+      "documented_at": "2026-03-04T16:55:38Z",
+      "versions": [
+        "1.1.2"
+      ],
+      "latest": "1.1.2"
+    },
+    {
+      "name": "linux_hal",
+      "description": "HAL drivers for Linux userspace",
+      "tags": [
+        "embedded",
+        "hal",
+        "linux",
+        "i2c",
+        "smbus",
+        "gpio",
+        "spi",
+        "audio"
+      ],
+      "documented_at": "2026-03-04T16:55:58Z",
+      "versions": [
+        "1.2.0"
+      ],
+      "latest": "1.2.0"
+    },
+    {
+      "name": "lispcli",
+      "description": "Simple program for exploring tiny lisp",
+      "tags": [
+        "lisp"
+      ],
+      "documented_at": "2026-03-04T16:55:59Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "list_image",
+      "description": "helper to dump iterable containers with customizable style",
+      "tags": [
+        "list",
+        "iterator",
+        "container",
+        "markdown",
+        "html"
+      ],
+      "documented_at": "2026-03-04T16:55:48Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "littlefs",
+      "description": "Ada/SPARK binding for the LittleFS flash embedded filesystem",
+      "tags": [
+        "embedded",
+        "filesystem",
+        "nostd",
+        "flash"
+      ],
+      "documented_at": "2026-03-04T16:56:08Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "lml",
+      "description": "Lightweight Markup Language conversions",
+      "tags": [
+        "markup",
+        "language",
+        "conversion",
+        "json",
+        "yaml",
+        "toml"
+      ],
+      "documented_at": "2026-03-04T16:56:11Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "loadcpm",
+      "description": "Write CP/M (or other similar binary) to floppy disk image",
+      "tags": [
+        "cpm"
+      ],
+      "documented_at": "2026-03-04T16:56:18Z",
+      "versions": [
+        "0.2.1"
+      ],
+      "latest": "0.2.1"
+    },
+    {
+      "name": "loga",
+      "description": "Simple library for simple logging. Like npm package \"debug\", but for Ada",
+      "tags": [
+        "logging"
+      ],
+      "documented_at": "2026-03-04T16:56:04Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "ltp_305",
+      "description": "Driver for Pimoroni LED",
+      "tags": [
+        "embedded",
+        "led",
+        "rp2040",
+        "i2c"
+      ],
+      "documented_at": "2026-03-04T16:56:16Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "lvgl_ada_examples",
+      "description": "Examples for the LVGL embedded GUI framework Ada binding",
+      "tags": [
+        "gui",
+        "lvgl"
+      ],
+      "documented_at": "2026-03-04T16:57:11Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "lwt",
+      "description": "Light-weight Threading Library implementing Ada 2022 parallel features",
+      "tags": [
+        "ada2022",
+        "parallel",
+        "openmp"
+      ],
+      "documented_at": "2026-03-04T16:56:32Z",
+      "versions": [
+        "1.2.0"
+      ],
+      "latest": "1.2.0"
+    },
+    {
+      "name": "lzmada",
+      "description": "Ada LZMA Library Binding",
+      "tags": [
+        "compression",
+        "lzma"
+      ],
+      "documented_at": "2026-03-04T16:56:41Z",
+      "versions": [
+        "1.1.5"
+      ],
+      "latest": "1.1.5"
+    },
+    {
+      "name": "magicada",
+      "description": "Magic Number Recognition Library Ada binding",
+      "tags": [
+        "magic",
+        "file",
+        "bindings"
+      ],
+      "documented_at": "2026-03-04T16:56:48Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "mandelbrot_ascii",
+      "description": "Mandelbrot renderer using Unicode glyphs",
+      "tags": [],
+      "documented_at": "2026-03-04T16:56:49Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "markdown",
+      "description": "Markdown parser",
+      "tags": [
+        "markdown",
+        "gfm",
+        "commonmark"
+      ],
+      "documented_at": "2026-03-04T16:57:17Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "mathpaqs",
+      "description": "A collection of mathematical, 100% portable, packages",
+      "tags": [
+        "algebra",
+        "contour",
+        "contour-plot",
+        "formula-parser",
+        "fractal",
+        "kutta",
+        "linear-algebra",
+        "mathematics",
+        "matrix",
+        "numerics",
+        "pareto",
+        "poisson",
+        "polynomial",
+        "probability",
+        "random",
+        "rational",
+        "runge",
+        "runge-kutta",
+        "statistics"
+      ],
+      "documented_at": "2026-03-04T16:57:11Z",
+      "versions": [
+        "20260205.0.0"
+      ],
+      "latest": "20260205.0.0"
+    },
+    {
+      "name": "mavlink_ardupilotmega",
+      "description": "MAVLink, ardupilotmega dialect",
+      "tags": [
+        "embedded",
+        "network",
+        "drone"
+      ],
+      "documented_at": "2026-03-05T02:56:41Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "mavlink_ardupilotmega_v2",
+      "description": "MAVLink, ardupilotmega dialect",
+      "tags": [
+        "embedded",
+        "network",
+        "drone"
+      ],
+      "documented_at": "2026-03-05T02:56:52Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "mavlink_common",
+      "description": "MAVLink -- Micro Air Vehicle Message Marshalling Library.",
+      "tags": [
+        "embedded",
+        "network",
+        "drone"
+      ],
+      "documented_at": "2026-03-05T02:57:08Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "mavlink_common_v2",
+      "description": "MAVLink v2-- Micro Air Vehicle Message Marshalling Library.",
+      "tags": [
+        "embedded",
+        "network",
+        "drone"
+      ],
+      "documented_at": "2026-03-05T02:57:00Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "mavlink_shared",
+      "description": "MAVLink -- Micro Air Vehicle Message Marshalling Library (shared code).",
+      "tags": [
+        "embedded",
+        "network",
+        "drone"
+      ],
+      "documented_at": "2026-03-05T02:56:57Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "mcp2221",
+      "description": "MCP2221 USB Raw HID I/O Expander Library for GNAT Ada",
+      "tags": [
+        "embedded",
+        "linux",
+        "mcp2221",
+        "adc",
+        "dac",
+        "gpio",
+        "i2c",
+        "motor",
+        "pwm",
+        "sensor",
+        "serial",
+        "servo",
+        "spi",
+        "stepper"
+      ],
+      "documented_at": "2026-03-05T02:57:10Z",
+      "versions": [
+        "2.22792.1"
+      ],
+      "latest": "2.22792.1"
+    },
+    {
+      "name": "mcp9808_i2c",
+      "description": "MCP9808 I2C library",
+      "tags": [
+        "mcp9808",
+        "sensor",
+        "temperature",
+        "i2c"
+      ],
+      "documented_at": "2026-03-05T02:57:04Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "metaphone",
+      "description": "The Double Metaphone algorithm based off the Python version",
+      "tags": [
+        "metaphone",
+        "phonetic",
+        "english"
+      ],
+      "documented_at": "2026-03-05T02:57:00Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "microbit_bsp",
+      "description": "Board Support Package for the BBC micro:bit v1",
+      "tags": [
+        "embedded",
+        "nostd",
+        "microbit",
+        "bbc",
+        "nrf51",
+        "bsp"
+      ],
+      "documented_at": "2026-03-05T02:57:25Z",
+      "versions": [
+        "0.2.1"
+      ],
+      "latest": "0.2.1"
+    },
+    {
+      "name": "midi",
+      "description": "Library to encode and decode MIDI messages",
+      "tags": [
+        "midi",
+        "embedded",
+        "nostd"
+      ],
+      "documented_at": "2026-03-05T02:57:29Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "minimal_containers",
+      "description": "Much reduced version of Ada.Containers (bounded Maps, Vectors)",
+      "tags": [
+        "containers"
+      ],
+      "documented_at": "2026-03-05T02:57:29Z",
+      "versions": [
+        "1.2.1"
+      ],
+      "latest": "1.2.1"
+    },
+    {
+      "name": "minirest",
+      "description": "Minimalist Ada REST client library",
+      "tags": [
+        "rest"
+      ],
+      "documented_at": "2026-03-05T02:57:34Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "minisamd51_bsp",
+      "description": "Board Support Package for the MiniSAM D51",
+      "tags": [
+        "embedded",
+        "nostd",
+        "samd51",
+        "minisam"
+      ],
+      "documented_at": "2026-03-05T02:57:54Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "minisamd51_example",
+      "description": "Example project for the MiniSAM D51",
+      "tags": [
+        "embedded",
+        "nostd",
+        "samd51",
+        "minisam"
+      ],
+      "documented_at": "2026-03-05T02:57:56Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "mold",
+      "description": "Meta-variable Operations for Lean Development (cli)",
+      "tags": [
+        "template",
+        "template-engine",
+        "template-repo"
+      ],
+      "documented_at": "2026-03-05T02:57:39Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "mold_lib",
+      "description": "Meta-variable Operations for Lean Development (lib)",
+      "tags": [
+        "template",
+        "template-engine",
+        "template-repo"
+      ],
+      "documented_at": "2026-03-05T02:57:53Z",
+      "versions": [
+        "2.3.1"
+      ],
+      "latest": "2.3.1"
+    },
+    {
+      "name": "mos6502_create_led",
+      "description": "Create ROM with little program",
+      "tags": [
+        "mos-6502",
+        "tools",
+        "retrocomputing",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-05T02:58:06Z",
+      "versions": [
+        "1.5.1"
+      ],
+      "latest": "1.5.1"
+    },
+    {
+      "name": "mos6502_create_nop",
+      "description": "Create NOP ROM",
+      "tags": [
+        "mos-6502",
+        "tools",
+        "retrocomputing",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-05T02:58:03Z",
+      "versions": [
+        "1.5.1"
+      ],
+      "latest": "1.5.1"
+    },
+    {
+      "name": "mos6502_create_reset",
+      "description": "Create ROM with reset vector",
+      "tags": [
+        "mos-6502",
+        "tools",
+        "retrocomputing",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-05T02:58:02Z",
+      "versions": [
+        "1.5.1"
+      ],
+      "latest": "1.5.1"
+    },
+    {
+      "name": "mqttlib",
+      "description": "Ada binding to the mosquitto library for MQTT",
+      "tags": [
+        "mqtt",
+        "mosquitto"
+      ],
+      "documented_at": "2026-03-05T02:58:05Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "ncursesada",
+      "description": "Ada binding to the ncurses text user interface library",
+      "tags": [
+        "ncurses",
+        "binding"
+      ],
+      "documented_at": "2026-03-05T02:58:39Z",
+      "versions": [
+        "6.5.0"
+      ],
+      "latest": "6.5.0"
+    },
+    {
+      "name": "nmea_0183",
+      "description": "NMEA 0183 message decoder",
+      "tags": [
+        "gps",
+        "parser"
+      ],
+      "documented_at": "2026-03-05T02:58:33Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "noise_nugget_sdk",
+      "description": "Ada Software Development Kit for the Noise Nugget",
+      "tags": [
+        "embedded",
+        "audio",
+        "synth",
+        "dsp"
+      ],
+      "documented_at": "2026-03-05T03:02:03Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "nstd",
+      "description": "Non-Standard Libraries",
+      "tags": [
+        "strings",
+        "utf-8",
+        "unicode"
+      ],
+      "documented_at": "2026-03-05T02:58:48Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "octet_memory_stream",
+      "description": "Provides a Root_Stream_Type wrapper over an array of octets in memory.",
+      "tags": [
+        "octet",
+        "byte",
+        "buffer",
+        "stream",
+        "ada",
+        "streams",
+        "memory"
+      ],
+      "documented_at": "2026-03-05T02:58:48Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "openglada",
+      "description": "Thick Ada binding for OpenGL",
+      "tags": [
+        "opengl",
+        "binding",
+        "rendering",
+        "graphics"
+      ],
+      "documented_at": "2026-03-05T02:59:16Z",
+      "versions": [
+        "0.9.0"
+      ],
+      "latest": "0.9.0"
+    },
+    {
+      "name": "openglada_glfw",
+      "description": "GLFW binding for use with OpenGLAda",
+      "tags": [
+        "opengl",
+        "glfw",
+        "binding",
+        "gui"
+      ],
+      "documented_at": "2026-03-05T02:59:34Z",
+      "versions": [
+        "0.9.0"
+      ],
+      "latest": "0.9.0"
+    },
+    {
+      "name": "openglada_images",
+      "description": "Image loading library for OpenGLAda",
+      "tags": [
+        "opengl",
+        "rendering",
+        "graphics"
+      ],
+      "documented_at": "2026-03-05T02:59:22Z",
+      "versions": [
+        "0.9.0"
+      ],
+      "latest": "0.9.0"
+    },
+    {
+      "name": "opentoken",
+      "description": "facility for performing token analysis and parsing within Ada",
+      "tags": [
+        "lexer",
+        "parser"
+      ],
+      "documented_at": "2026-03-05T02:59:30Z",
+      "versions": [
+        "6.0.3"
+      ],
+      "latest": "6.0.3"
+    },
+    {
+      "name": "optional",
+      "description": "Optional values a la java.lang.Optional",
+      "tags": [
+        "optional",
+        "functional"
+      ],
+      "documented_at": "2026-03-05T02:59:51Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "pager2",
+      "description": "Manipulate \"paged files\" found on the Ada Software Repository",
+      "tags": [
+        "application",
+        "archive"
+      ],
+      "documented_at": "2026-03-05T03:00:36Z",
+      "versions": [
+        "2.0.1"
+      ],
+      "latest": "2.0.1"
+    },
+    {
+      "name": "parallelize",
+      "description": "Execute multiple commands in parallel",
+      "tags": [
+        "parallel",
+        "execution"
+      ],
+      "documented_at": "2026-03-05T03:00:36Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "parse_args",
+      "description": "An Ada 2012 package to parse command line arguments and options",
+      "tags": [
+        "cli",
+        "command-line"
+      ],
+      "documented_at": "2026-03-05T03:00:49Z",
+      "versions": [
+        "0.9.0"
+      ],
+      "latest": "0.9.0"
+    },
+    {
+      "name": "partord",
+      "description": "Small library for sorting with partial orders",
+      "tags": [
+        "sorting"
+      ],
+      "documented_at": "2026-03-05T03:00:55Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "pbkdf2",
+      "description": "PBKDF2 implemented in Ada",
+      "tags": [
+        "cryptography",
+        "security",
+        "pbkdf2"
+      ],
+      "documented_at": "2026-03-05T03:00:50Z",
+      "versions": [
+        "3.0.0"
+      ],
+      "latest": "3.0.0"
+    },
+    {
+      "name": "pico_ada_c01_blink",
+      "description": "Chapter 1: Blinking LEDs",
+      "tags": [
+        "raspberry",
+        "pi",
+        "pico",
+        "rp2040",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-20T02:56:45Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "pico_ada_c01_blink_lt",
+      "description": "Chapter 1 Reloaded: Dual-Core Light Tasking",
+      "tags": [
+        "raspberry",
+        "pi",
+        "pico",
+        "rp2040",
+        "tasking",
+        "light-tasking",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-20T02:56:28Z",
+      "versions": [
+        "1.1.0"
+      ],
+      "latest": "1.1.0"
+    },
+    {
+      "name": "pico_bsp",
+      "description": "Board support package for Raspberry Pi Pico",
+      "tags": [
+        "embedded",
+        "nostd",
+        "raspberrypi",
+        "pico",
+        "rp2040",
+        "bsp"
+      ],
+      "documented_at": "2026-03-05T03:01:20Z",
+      "versions": [
+        "2.2.0"
+      ],
+      "latest": "2.2.0"
+    },
+    {
+      "name": "pico_ultrasonic_ranger",
+      "description": "Driver for the Grove ultrasonic ranger. Depends on the RP Pico HAL.",
+      "tags": [
+        "pico",
+        "ranger",
+        "distance",
+        "grove",
+        "ultrasonic"
+      ],
+      "documented_at": "2026-03-05T03:01:44Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "pla_util",
+      "description": "A power line adapter utility",
+      "tags": [
+        "powerline"
+      ],
+      "documented_at": "2026-03-05T03:01:24Z",
+      "versions": [
+        "2.1.3"
+      ],
+      "latest": "2.1.3"
+    },
+    {
+      "name": "play_2048",
+      "description": "2048 game: merge tiles with the same number until you add up to 2048",
+      "tags": [
+        "game",
+        "puzzle",
+        "cross-platform",
+        "sfml"
+      ],
+      "documented_at": "2026-03-05T03:01:36Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "portable_minimal_ada_rts",
+      "description": "Portable Minimal Ada Runtime Library",
+      "tags": [
+        "rts"
+      ],
+      "documented_at": "2026-03-05T03:01:18Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "powerjoular",
+      "description": "Monitoring the power consumption of multiple platforms and processes",
+      "tags": [
+        "linux",
+        "power",
+        "energy"
+      ],
+      "documented_at": "2026-03-05T03:01:23Z",
+      "versions": [
+        "1.0.4"
+      ],
+      "latest": "1.0.4"
+    },
+    {
+      "name": "pragmarc",
+      "description": "The PragmAda Reusable Components",
+      "tags": [
+        "cards",
+        "conversions",
+        "datastructures",
+        "encryption",
+        "matching",
+        "randomness",
+        "safety",
+        "sorting",
+        "taskcom",
+        "tty",
+        "containers"
+      ],
+      "documented_at": "2026-03-05T03:01:56Z",
+      "versions": [
+        "20240810.0.0"
+      ],
+      "latest": "20240810.0.0"
+    },
+    {
+      "name": "press_utils",
+      "description": "Some utilities and a pretty complete argparse framework",
+      "tags": [
+        "utils",
+        "argparse"
+      ],
+      "documented_at": "2026-03-05T03:01:47Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "prettier_ada",
+      "description": "Port of the Prettier formatter to Ada",
+      "tags": [
+        "format",
+        "formatter"
+      ],
+      "documented_at": "2026-03-05T03:02:06Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "printer_toolkit",
+      "description": "Printer toolkit to write reports",
+      "tags": [
+        "reports",
+        "console",
+        "charts"
+      ],
+      "documented_at": "2026-03-06T02:55:07Z",
+      "versions": [
+        "0.3.0"
+      ],
+      "latest": "0.3.0"
+    },
+    {
+      "name": "progress_indicators",
+      "description": "Ways of displaying progress in command line tools.",
+      "tags": [
+        "command-line",
+        "console",
+        "terminal",
+        "progress"
+      ],
+      "documented_at": "2026-03-06T02:55:14Z",
+      "versions": [
+        "0.0.1"
+      ],
+      "latest": "0.0.1"
+    },
+    {
+      "name": "prolog",
+      "description": "Simple Prolog library",
+      "tags": [
+        "prolog",
+        "logic"
+      ],
+      "documented_at": "2026-03-06T02:55:15Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "ptf",
+      "description": "Portable Text Formatter",
+      "tags": [
+        "documentation",
+        "tools"
+      ],
+      "documented_at": "2026-03-06T02:55:09Z",
+      "versions": [
+        "1.2.2"
+      ],
+      "latest": "1.2.2"
+    },
+    {
+      "name": "pygamer_bsp",
+      "description": "Board Support Package for the AdaFruit PyGamer",
+      "tags": [
+        "embedded",
+        "nostd",
+        "pygamer",
+        "adafruit",
+        "game",
+        "console",
+        "bsp"
+      ],
+      "documented_at": "2026-03-06T02:55:11Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "pygamer_simulator",
+      "description": "SDL simulator of the AdaFruit PyGamer console",
+      "tags": [
+        "pygamer",
+        "adafruit",
+        "game",
+        "console",
+        "simulator"
+      ],
+      "documented_at": "2026-03-06T02:55:20Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "qmc5883",
+      "description": "Driver for QMC5883L magnetic sensor",
+      "tags": [
+        "sensor",
+        "magnetometer",
+        "driver"
+      ],
+      "documented_at": "2026-03-06T02:55:09Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "qoi",
+      "description": "Ada/SPARK implementation of the Quite Ok Image format",
+      "tags": [
+        "image",
+        "encoding",
+        "qoi"
+      ],
+      "documented_at": "2026-03-06T02:55:08Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rabbitmq",
+      "description": "Ada bindings for the librabbitmq C client library",
+      "tags": [
+        "rabbitmq",
+        "amqp",
+        "message",
+        "queue"
+      ],
+      "documented_at": "2026-03-06T02:55:48Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "raiden",
+      "description": "An Ada implemenetation of a block cipher called Raiden.",
+      "tags": [
+        "cryptography",
+        "security",
+        "cipher"
+      ],
+      "documented_at": "2026-03-06T02:55:34Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "rand",
+      "description": "Random number generation toolkit",
+      "tags": [
+        "random",
+        "chacha20",
+        "rng",
+        "getrandom",
+        "security"
+      ],
+      "documented_at": "2026-03-06T02:55:39Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rand_bigints",
+      "description": "Random big integer generation",
+      "tags": [
+        "random",
+        "bigint",
+        "ada2022"
+      ],
+      "documented_at": "2026-03-07T02:49:17Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "rand_chacha",
+      "description": "ChaCha20/12/8 based PRNG",
+      "tags": [],
+      "documented_at": "2026-03-06T02:55:42Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rand_core",
+      "description": "Core interfaces for random number generation",
+      "tags": [],
+      "documented_at": "2026-03-06T02:55:42Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rand_distributions",
+      "description": "Collection of standard random distributions",
+      "tags": [],
+      "documented_at": "2026-03-06T02:55:55Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rand_sys",
+      "description": "Random number generator from system entropy",
+      "tags": [],
+      "documented_at": "2026-03-06T02:55:51Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rand_xoshiro256",
+      "description": "Xoshiro256 style PRNG",
+      "tags": [],
+      "documented_at": "2026-03-06T02:55:55Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "raspberry_bsp",
+      "description": "Board Support package for Raspberry PI v1, v2 and B+",
+      "tags": [
+        "raspberry",
+        "pi"
+      ],
+      "documented_at": "2026-03-06T02:55:45Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "remoteio",
+      "description": "Remote I/O Protocol Client Library for GNAT Ada",
+      "tags": [
+        "embedded",
+        "linux",
+        "remoteio",
+        "adc",
+        "dac",
+        "gpio",
+        "i2c",
+        "motor",
+        "pwm",
+        "sensor",
+        "serial",
+        "servo",
+        "spi",
+        "stepper"
+      ],
+      "documented_at": "2026-03-06T02:56:18Z",
+      "versions": [
+        "2.23808.1"
+      ],
+      "latest": "2.23808.1"
+    },
+    {
+      "name": "resources",
+      "description": "Utility library to handle project resources at run-time",
+      "tags": [
+        "utils"
+      ],
+      "documented_at": "2026-03-06T02:56:18Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rp2040_hal",
+      "description": "Drivers and HAL for the RP2040 micro-controller family",
+      "tags": [
+        "embedded",
+        "nostd",
+        "rp2040",
+        "raspberrypi",
+        "drivers"
+      ],
+      "documented_at": "2026-03-06T02:56:54Z",
+      "versions": [
+        "2.7.0"
+      ],
+      "latest": "2.7.0"
+    },
+    {
+      "name": "rpio",
+      "description": "Driver for the BCM2835's GPIO, as seen on the Raspberry Pi",
+      "tags": [
+        "raspberry-pi",
+        "gpio",
+        "bcm2835"
+      ],
+      "documented_at": "2026-03-06T02:56:24Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "rsfile",
+      "description": "Randomly pick a file with probability proportional to its size",
+      "tags": [
+        "command-line",
+        "tool",
+        "random",
+        "file-size"
+      ],
+      "documented_at": "2026-03-06T02:56:30Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "rtmidi",
+      "description": "Ada \"middleweight\" binding for the rtMIDI library",
+      "tags": [
+        "midi",
+        "rtmidi",
+        "music"
+      ],
+      "documented_at": "2026-03-06T02:56:41Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "rxada",
+      "description": "Experimental implementation of ReactiveX in Ada",
+      "tags": [
+        "rx",
+        "reactive",
+        "reactivex",
+        "observer"
+      ],
+      "documented_at": "2026-03-06T02:56:39Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "saatana",
+      "description": "SPARK/Ada Algorithms Targeting Advanced Network Applications",
+      "tags": [
+        "cryptography",
+        "spark"
+      ],
+      "documented_at": "2026-03-06T02:56:38Z",
+      "versions": [
+        "2.0.2"
+      ],
+      "latest": "2.0.2"
+    },
+    {
+      "name": "scatcdsk_lib",
+      "description": "Reusable software components extracted from the SCATC DSK",
+      "tags": [
+        "tools",
+        "reuse"
+      ],
+      "documented_at": "2026-03-06T02:56:49Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "sciada",
+      "description": "Collection of Scientific Operations",
+      "tags": [
+        "sci",
+        "scientific",
+        "correlations",
+        "occurrences",
+        "similarities",
+        "statistics"
+      ],
+      "documented_at": "2026-03-06T02:56:56Z",
+      "versions": [
+        "0.4.0"
+      ],
+      "latest": "0.4.0"
+    },
+    {
+      "name": "scripted_testing",
+      "description": "Integration testing",
+      "tags": [
+        "testing",
+        "integration",
+        "scripting"
+      ],
+      "documented_at": "2026-03-06T02:57:02Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "sdlada",
+      "description": "Ada 2012 SDL 2.x bindings.",
+      "tags": [
+        "gamedev",
+        "games",
+        "portable",
+        "cross-platform"
+      ],
+      "documented_at": "2026-03-06T02:57:29Z",
+      "versions": [
+        "2.5.20"
+      ],
+      "latest": "2.5.20"
+    },
+    {
+      "name": "secretada",
+      "description": "Secret service Ada binding",
+      "tags": [
+        "secret",
+        "bindings"
+      ],
+      "documented_at": "2026-03-06T02:57:21Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "semantic_versioning",
+      "description": "Semantic Versioning in Ada",
+      "tags": [
+        "semver",
+        "semantic",
+        "versioning"
+      ],
+      "documented_at": "2026-03-06T02:57:04Z",
+      "versions": [
+        "2.1.0"
+      ],
+      "latest": "2.1.0"
+    },
+    {
+      "name": "septum",
+      "description": "An interactive context-based text search tool for large codebases.",
+      "tags": [
+        "search",
+        "code",
+        "text"
+      ],
+      "documented_at": "2026-03-06T02:57:13Z",
+      "versions": [
+        "0.0.9"
+      ],
+      "latest": "0.0.9"
+    },
+    {
+      "name": "sh1107",
+      "description": "Driver for the SH1107/OLED 128x128 monochrome display",
+      "tags": [
+        "embedded",
+        "rp2040"
+      ],
+      "documented_at": "2026-03-06T02:57:36Z",
+      "versions": [
+        "1.2.2"
+      ],
+      "latest": "1.2.2"
+    },
+    {
+      "name": "sha1",
+      "description": "Secure Hash Algorithm 1 implemented in Ada",
+      "tags": [
+        "cryptography",
+        "security",
+        "sha1"
+      ],
+      "documented_at": "2026-03-06T02:57:38Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "sha2",
+      "description": "Secure Hash Algorithm 2 implemented in Ada",
+      "tags": [
+        "cryptography",
+        "security",
+        "sha2"
+      ],
+      "documented_at": "2026-03-06T02:57:47Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "shoot_n_loot",
+      "description": "Platform game for the AdaFruit PyGamer console",
+      "tags": [
+        "pygamer",
+        "game",
+        "simulator"
+      ],
+      "documented_at": "2026-03-06T02:58:36Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "si_units",
+      "description": "Pretty print physical values in properly scaled metric (SI) units.",
+      "tags": [
+        "utilities",
+        "formatting"
+      ],
+      "documented_at": "2026-03-06T02:58:00Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "simcpucli",
+      "description": "CLI for CPU simulator",
+      "tags": [
+        "cpu-simulator"
+      ],
+      "documented_at": "2026-03-06T02:58:06Z",
+      "versions": [
+        "0.4.0"
+      ],
+      "latest": "0.4.0"
+    },
+    {
+      "name": "simh_tapes",
+      "description": "Library to handle SimH Standard magnetic tape image files",
+      "tags": [
+        "legacy",
+        "magtape",
+        "magnetic",
+        "tape",
+        "emulation",
+        "simulation"
+      ],
+      "documented_at": "2026-03-06T02:58:03Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "simple_logging",
+      "description": "Simple logging to console",
+      "tags": [
+        "logging",
+        "utility"
+      ],
+      "documented_at": "2026-03-06T02:58:05Z",
+      "versions": [
+        "3.0.0"
+      ],
+      "latest": "3.0.0"
+    },
+    {
+      "name": "simple_regex",
+      "description": "Port of Rob Pike's simple regex from the Practice of Programming.",
+      "tags": [
+        "regex",
+        "text"
+      ],
+      "documented_at": "2026-03-06T02:58:04Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "slip",
+      "description": "SLIP Protocol Implementation",
+      "tags": [
+        "embedded",
+        "protocols",
+        "spark"
+      ],
+      "documented_at": "2026-03-06T02:58:11Z",
+      "versions": [
+        "0.0.1"
+      ],
+      "latest": "0.0.1"
+    },
+    {
+      "name": "socketcan",
+      "description": "An Ada language binding to SocketCAN for GNU/Linux systems",
+      "tags": [],
+      "documented_at": "2026-03-06T02:58:13Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "softdev",
+      "description": "Serial protocols implemented in software",
+      "tags": [
+        "embedded",
+        "i2c"
+      ],
+      "documented_at": "2026-03-06T02:58:32Z",
+      "versions": [
+        "1.2.0"
+      ],
+      "latest": "1.2.0"
+    },
+    {
+      "name": "spark_math",
+      "description": "Formally verified mathematical library in SPARK",
+      "tags": [
+        "spark",
+        "verification",
+        "math",
+        "sqrt",
+        "fixed-point"
+      ],
+      "documented_at": "2026-03-06T02:58:35Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "spark_unbound",
+      "description": "Unbound data structures in Ada-Spark",
+      "tags": [
+        "spark",
+        "unbound"
+      ],
+      "documented_at": "2026-03-06T02:58:37Z",
+      "versions": [
+        "0.2.1"
+      ],
+      "latest": "0.2.1"
+    },
+    {
+      "name": "sparkfun_qwiic_motor_driver",
+      "description": "Interface to the SparkFun Qwiic motor driver.",
+      "tags": [
+        "hal",
+        "motor-driver",
+        "sparkfun",
+        "i2c"
+      ],
+      "documented_at": "2026-03-06T02:58:33Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "sparklib",
+      "description": "Companion libraries for SPARK programming",
+      "tags": [],
+      "documented_at": "2026-03-06T02:58:32Z",
+      "versions": [
+        "15.1.0"
+      ],
+      "latest": "15.1.0"
+    },
+    {
+      "name": "sparknacl",
+      "description": "Verified SPARK 2014 re-implementation of TweetNaCl cryptographic library",
+      "tags": [
+        "spark",
+        "cryptography",
+        "security",
+        "nacl",
+        "curve25519",
+        "ed25519",
+        "tweetnacl"
+      ],
+      "documented_at": "2026-03-06T02:58:48Z",
+      "versions": [
+        "4.0.1"
+      ],
+      "latest": "4.0.1"
+    },
+    {
+      "name": "spawn",
+      "description": "A simple library to spawn processes and communicate with them.",
+      "tags": [
+        "process",
+        "launch",
+        "pipe"
+      ],
+      "documented_at": "2026-03-06T02:58:39Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "spdx",
+      "description": "SPDX License Expression Validator",
+      "tags": [
+        "spdx",
+        "license"
+      ],
+      "documented_at": "2026-03-06T02:59:09Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "specfun",
+      "description": "Native Ada library of special functions (e.g., beta, gamma)",
+      "tags": [
+        "special-fun",
+        "numerics",
+        "beta-function",
+        "gamma-function",
+        "beta-incomplete"
+      ],
+      "documented_at": "2026-03-06T02:59:13Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "splitter",
+      "description": "A function to emulate \"split\" as implemented in Ruby",
+      "tags": [
+        "strings",
+        "split",
+        "token",
+        "tokenizer",
+        "parsing"
+      ],
+      "documented_at": "2026-03-06T02:59:08Z",
+      "versions": [
+        "1.0.2"
+      ],
+      "latest": "1.0.2"
+    },
+    {
+      "name": "spoon",
+      "description": "Use posix_spawn() to spawn processes without forking",
+      "tags": [
+        "posix",
+        "spawn",
+        "process"
+      ],
+      "documented_at": "2026-03-06T02:59:02Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "st7789",
+      "description": "SPI based driver for the ST7789 TFT display",
+      "tags": [
+        "embedded",
+        "nostd",
+        "framebuffer",
+        "bitmap",
+        "display",
+        "driver",
+        "drivers",
+        "spi"
+      ],
+      "documented_at": "2026-03-06T02:59:07Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "stephes_ada_library",
+      "description": "Stephe's Ada library; miscellaneous useful stuff.",
+      "tags": [
+        "containers",
+        "trees"
+      ],
+      "documented_at": "2026-03-06T02:59:28Z",
+      "versions": [
+        "3.7.3"
+      ],
+      "latest": "3.7.3"
+    },
+    {
+      "name": "stm32f0x2_hal",
+      "description": "Drivers and HAL for stm32f0x2 mcu family",
+      "tags": [
+        "embedded",
+        "stm32f0",
+        "nostd",
+        "drivers"
+      ],
+      "documented_at": "2026-03-06T02:59:36Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "stopwatch",
+      "description": "Keep track of elapsed time",
+      "tags": [
+        "timer",
+        "stopwatch",
+        "chronometer"
+      ],
+      "documented_at": "2026-03-06T02:59:30Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "strategy",
+      "description": "Property-based testing framework",
+      "tags": [
+        "test",
+        "property",
+        "testing"
+      ],
+      "documented_at": "2026-03-06T02:59:34Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "swan",
+      "description": "Stuff We All Need - utilities collection for ada",
+      "tags": [
+        "utilities",
+        "buffers",
+        "collections"
+      ],
+      "documented_at": "2026-03-06T02:59:46Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "system_random",
+      "description": "Minimal library to retrieve random data from system sources",
+      "tags": [
+        "system",
+        "cryptography",
+        "random",
+        "security"
+      ],
+      "documented_at": "2026-03-06T02:59:36Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "tash",
+      "description": "Binding to Tcl/Tk",
+      "tags": [
+        "scripting",
+        "tcl",
+        "tk"
+      ],
+      "documented_at": "2026-03-06T02:59:49Z",
+      "versions": [
+        "8.7.2"
+      ],
+      "latest": "8.7.2"
+    },
+    {
+      "name": "task_coroutines",
+      "description": "Coroutines and generators using only standard tasking features",
+      "tags": [
+        "coroutine",
+        "generator"
+      ],
+      "documented_at": "2026-03-06T02:59:57Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "tb6612_driver",
+      "description": "Driver for the TB6612 dual DC motor driver IC.",
+      "tags": [
+        "motor",
+        "driver",
+        "embedded",
+        "hal"
+      ],
+      "documented_at": "2026-03-06T03:00:02Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "testlog",
+      "description": "Log test activity to support unit testing of Ada packages",
+      "tags": [
+        "unit",
+        "test",
+        "unit-test"
+      ],
+      "documented_at": "2026-03-06T03:00:01Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "texts",
+      "description": "A no-frills library to deal with Unicode texts in Ada 2012",
+      "tags": [
+        "text",
+        "unicode",
+        "utf",
+        "encoding"
+      ],
+      "documented_at": "2026-03-06T02:59:59Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "tiny_rp2040_bsp",
+      "description": "Board support package for Pimoroni Tiny RP2040",
+      "tags": [
+        "embedded",
+        "nostd",
+        "tiny",
+        "rp2040",
+        "bsp"
+      ],
+      "documented_at": "2026-03-06T03:00:43Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "tiny_text",
+      "description": "Low resolution bitmap font with a small memory footprint",
+      "tags": [
+        "font",
+        "hal",
+        "bitmap",
+        "text"
+      ],
+      "documented_at": "2026-03-06T03:00:22Z",
+      "versions": [
+        "1.5.1"
+      ],
+      "latest": "1.5.1"
+    },
+    {
+      "name": "tinyaml",
+      "description": "A strict YAML subset parser for Ada, inspired by StrictYAML",
+      "tags": [
+        "yaml",
+        "parser",
+        "validation",
+        "configuration",
+        "strictyaml"
+      ],
+      "documented_at": "2026-03-06T03:00:21Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "tlsada",
+      "description": "Bindings for libtls",
+      "tags": [
+        "tls",
+        "ssl"
+      ],
+      "documented_at": "2026-03-06T03:00:30Z",
+      "versions": [
+        "2.5.2"
+      ],
+      "latest": "2.5.2"
+    },
+    {
+      "name": "toml_slicer",
+      "description": "Edit TOML files directly without parsing",
+      "tags": [
+        "toml",
+        "edition"
+      ],
+      "documented_at": "2026-03-06T03:00:37Z",
+      "versions": [
+        "0.1.2"
+      ],
+      "latest": "0.1.2"
+    },
+    {
+      "name": "trendy_terminal",
+      "description": "Terminal options, setup, tab completion and hinting.",
+      "tags": [
+        "terminal",
+        "command-line",
+        "console",
+        "vt100"
+      ],
+      "documented_at": "2026-03-06T03:00:25Z",
+      "versions": [
+        "0.0.5"
+      ],
+      "latest": "0.0.5"
+    },
+    {
+      "name": "trendy_test",
+      "description": "Minimal Effort Ada Unit Testing Library",
+      "tags": [
+        "test",
+        "unit-test",
+        "unit"
+      ],
+      "documented_at": "2026-03-06T03:00:25Z",
+      "versions": [
+        "0.0.4"
+      ],
+      "latest": "0.0.4"
+    },
+    {
+      "name": "tresses",
+      "description": "Synth library inspired by Mutable Instruments Braids",
+      "tags": [
+        "embedded",
+        "audio",
+        "synthesis",
+        "nostd"
+      ],
+      "documented_at": "2026-03-07T02:49:15Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "ulid",
+      "description": "Universally Unique Lexicographically Sortable Identifier",
+      "tags": [
+        "ulid",
+        "uuid",
+        "guid",
+        "identifier",
+        "timestamp"
+      ],
+      "documented_at": "2026-03-07T02:49:13Z",
+      "versions": [
+        "20240921.0.0"
+      ],
+      "latest": "20240921.0.0"
+    },
+    {
+      "name": "umwi",
+      "description": "Unicode Monospace Width Information",
+      "tags": [
+        "unicode",
+        "emoji",
+        "emoticon",
+        "monospace",
+        "east",
+        "asian",
+        "width",
+        "grapheme",
+        "cluster",
+        "combining"
+      ],
+      "documented_at": "2026-03-07T02:49:11Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "universal_text_file",
+      "description": "Proposed universal format for Unicode text files",
+      "tags": [
+        "format",
+        "unicode",
+        "text"
+      ],
+      "documented_at": "2026-03-07T02:49:20Z",
+      "versions": [
+        "20220720.0.0"
+      ],
+      "latest": "20220720.0.0"
+    },
+    {
+      "name": "uri_ada",
+      "description": "Processing of URI strings",
+      "tags": [
+        "uri",
+        "url",
+        "utility"
+      ],
+      "documented_at": "2026-03-07T02:49:13Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "uri_mime",
+      "description": "URI & MIME Type Parsing and Manupulation",
+      "tags": [
+        "uri",
+        "url",
+        "mime",
+        "media-type"
+      ],
+      "documented_at": "2026-03-07T02:49:13Z",
+      "versions": [
+        "1.4.0"
+      ],
+      "latest": "1.4.0"
+    },
+    {
+      "name": "usb_embedded",
+      "description": "An Ada USB stack for embedded devices",
+      "tags": [
+        "embedded",
+        "usb",
+        "hid",
+        "midi",
+        "nostd"
+      ],
+      "documented_at": "2026-03-07T02:49:12Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "utf8test",
+      "description": "Test the terminal behavior when outputting Latin-1 and UTF-8 strings",
+      "tags": [
+        "unicode",
+        "utf-8",
+        "latin-1",
+        "terminal"
+      ],
+      "documented_at": "2026-03-07T02:49:39Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "utilada_curl",
+      "description": "Utility Library REST support on top of CURL",
+      "tags": [
+        "web",
+        "http",
+        "rest"
+      ],
+      "documented_at": "2026-03-07T02:49:53Z",
+      "versions": [
+        "2.8.2"
+      ],
+      "latest": "2.8.2"
+    },
+    {
+      "name": "utilada_lzma",
+      "description": "Utility Library streams with LZMA support",
+      "tags": [
+        "lzma",
+        "streams"
+      ],
+      "documented_at": "2026-03-07T02:49:47Z",
+      "versions": [
+        "2.8.2"
+      ],
+      "latest": "2.8.2"
+    },
+    {
+      "name": "utilada_unit",
+      "description": "Utility Library testing framework with Ahven",
+      "tags": [
+        "testing"
+      ],
+      "documented_at": "2026-03-07T02:49:42Z",
+      "versions": [
+        "2.8.2"
+      ],
+      "latest": "2.8.2"
+    },
+    {
+      "name": "uuids",
+      "description": "Implementation of RFC 9562 Universally Unique IDentifiers (UUIDs)",
+      "tags": [
+        "uuid",
+        "guid"
+      ],
+      "documented_at": "2026-03-07T02:49:46Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "uxstrings",
+      "description": "Unicode Extended Strings utilities",
+      "tags": [
+        "unicode",
+        "dynamic",
+        "string"
+      ],
+      "documented_at": "2026-03-07T02:49:47Z",
+      "versions": [
+        "0.9.0+alpha-20250903"
+      ],
+      "latest": "0.9.0+alpha-20250903"
+    },
+    {
+      "name": "vanilla",
+      "description": "Simple replace in character stream",
+      "tags": [
+        "simple",
+        "substitute",
+        "replace",
+        "vanilla"
+      ],
+      "documented_at": "2026-03-07T02:49:50Z",
+      "versions": [
+        "0.9.8"
+      ],
+      "latest": "0.9.8"
+    },
+    {
+      "name": "vaton",
+      "description": "Verified Ascii To Number conversion written in Ada/SPARK",
+      "tags": [
+        "spark"
+      ],
+      "documented_at": "2026-03-07T02:50:11Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "virtapu",
+      "description": "A virtual Audio Processing Unit to simulate 8-bit era game sounds",
+      "tags": [
+        "nostd",
+        "audio",
+        "synth",
+        "game"
+      ],
+      "documented_at": "2026-03-07T02:50:13Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "wayland_ada_info",
+      "description": "A tool to display information about supported Wayland interfaces",
+      "tags": [
+        "wayland"
+      ],
+      "documented_at": "2026-03-07T02:50:17Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "wayland_ada_scanner",
+      "description": "A tool to generate thick Ada 2012 bindings for Wayland protocols",
+      "tags": [
+        "wayland",
+        "egl"
+      ],
+      "documented_at": "2026-03-07T02:50:24Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "wayland_client_ada",
+      "description": "Ada 2012 bindings for libwayland-client and the Wayland protocol",
+      "tags": [
+        "wayland",
+        "client"
+      ],
+      "documented_at": "2026-03-07T02:50:29Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "wayland_cursor_ada",
+      "description": "Ada 2012 bindings for libwayland-cursor",
+      "tags": [
+        "wayland"
+      ],
+      "documented_at": "2026-03-07T02:50:37Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "wayland_egl_ada",
+      "description": "Ada 2012 bindings for libwayland-egl",
+      "tags": [
+        "wayland",
+        "egl"
+      ],
+      "documented_at": "2026-03-07T02:50:38Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "wayland_protocols_ada",
+      "description": "Ada 2012 bindings for various Wayland protocols",
+      "tags": [
+        "wayland",
+        "protocols"
+      ],
+      "documented_at": "2026-03-07T02:50:49Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "webif_example",
+      "description": "Example usage of simple web interface library.",
+      "tags": [
+        "web",
+        "http",
+        "embedded"
+      ],
+      "documented_at": "2026-03-07T02:50:43Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "weechat_ada",
+      "description": "Ada 2012 library for WeeChat plug-ins",
+      "tags": [
+        "chat",
+        "irc",
+        "weechat"
+      ],
+      "documented_at": "2026-03-07T02:50:45Z",
+      "versions": [
+        "3.0.1"
+      ],
+      "latest": "3.0.1"
+    },
+    {
+      "name": "whitakers_words",
+      "description": "William Whitaker's WORDS, a Latin dictionary",
+      "tags": [],
+      "documented_at": "2026-03-07T02:50:52Z",
+      "versions": [
+        "0.20240801.0"
+      ],
+      "latest": "0.20240801.0"
+    },
+    {
+      "name": "wikiada",
+      "description": "Parser and renderer for Markdown and other wiki syntaxes",
+      "tags": [
+        "wiki-engine",
+        "markdown",
+        "mediawiki",
+        "dotclear",
+        "html",
+        "parser",
+        "renderer"
+      ],
+      "documented_at": "2026-03-07T02:51:20Z",
+      "versions": [
+        "1.5.0"
+      ],
+      "latest": "1.5.0"
+    },
+    {
+      "name": "wikibook",
+      "description": "WikiBook Ada Programing",
+      "tags": [
+        "tutorial",
+        "wikibook"
+      ],
+      "documented_at": "2026-03-07T02:50:55Z",
+      "versions": [
+        "1.0.1"
+      ],
+      "latest": "1.0.1"
+    },
+    {
+      "name": "wioe5_ham1",
+      "description": "Wio-E5 LoRa Transceiver Module Device Driver",
+      "tags": [
+        "embedded",
+        "linux",
+        "wioe5",
+        "lora",
+        "radio",
+        "wireless",
+        "ham"
+      ],
+      "documented_at": "2026-03-07T02:51:11Z",
+      "versions": [
+        "1.23340.1"
+      ],
+      "latest": "1.23340.1"
+    },
+    {
+      "name": "wioe5_ham2",
+      "description": "Wio-E5 LoRa Transceiver Module Device Driver",
+      "tags": [
+        "embedded",
+        "linux",
+        "wioe5",
+        "lora",
+        "radio",
+        "wireless",
+        "ham"
+      ],
+      "documented_at": "2026-03-07T02:51:07Z",
+      "versions": [
+        "1.23340.1"
+      ],
+      "latest": "1.23340.1"
+    },
+    {
+      "name": "wioe5_p2p",
+      "description": "Wio-E5 LoRa Transceiver Module P2P Mode Device Driver",
+      "tags": [
+        "embedded",
+        "linux",
+        "wioe5",
+        "lora",
+        "radio",
+        "wireless"
+      ],
+      "documented_at": "2026-03-07T02:51:10Z",
+      "versions": [
+        "1.23340.1"
+      ],
+      "latest": "1.23340.1"
+    },
+    {
+      "name": "wl_lib",
+      "description": "Handy library packages",
+      "tags": [
+        "miscellanea",
+        "utility"
+      ],
+      "documented_at": "2026-03-07T02:51:17Z",
+      "versions": [
+        "0.1.4"
+      ],
+      "latest": "0.1.4"
+    },
+    {
+      "name": "wordle",
+      "description": "Wordle for the terminal",
+      "tags": [
+        "wordle",
+        "console",
+        "terminal",
+        "game"
+      ],
+      "documented_at": "2026-03-07T02:51:34Z",
+      "versions": [
+        "0.1.1"
+      ],
+      "latest": "0.1.1"
+    },
+    {
+      "name": "wordlelib",
+      "description": "Library to track progress in a game of Wordle",
+      "tags": [
+        "wordle",
+        "game",
+        "console",
+        "terminal"
+      ],
+      "documented_at": "2026-03-07T02:51:35Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "wordlist",
+      "description": "An English word list",
+      "tags": [
+        "wordlist",
+        "english"
+      ],
+      "documented_at": "2026-03-07T02:51:32Z",
+      "versions": [
+        "0.1.3"
+      ],
+      "latest": "0.1.3"
+    },
+    {
+      "name": "workers",
+      "description": "Simple task pool for parallelization",
+      "tags": [
+        "tasking",
+        "parallelization",
+        "pool"
+      ],
+      "documented_at": "2026-03-07T02:51:37Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "x1804",
+      "description": "Translate MIL-HDBK-1804 PDL into Section 4 of the DoD-STD-2167A SDD",
+      "tags": [
+        "parser",
+        "documentation",
+        "tools"
+      ],
+      "documented_at": "2026-03-07T02:51:42Z",
+      "versions": [
+        "1.0.2"
+      ],
+      "latest": "1.0.2"
+    },
+    {
+      "name": "xdg_base_dir",
+      "description": "XDG Base Directory Specification",
+      "tags": [
+        "xdg"
+      ],
+      "documented_at": "2026-03-07T02:51:38Z",
+      "versions": [
+        "1.0.0"
+      ],
+      "latest": "1.0.0"
+    },
+    {
+      "name": "xdiff",
+      "description": "This is an Ada binding and C xdiff library",
+      "tags": [
+        "text",
+        "diff"
+      ],
+      "documented_at": "2026-03-07T02:51:51Z",
+      "versions": [
+        "26.0.0"
+      ],
+      "latest": "26.0.0"
+    },
+    {
+      "name": "xml_ez_out",
+      "description": "Creation of XML-formatted output from Ada programs",
+      "tags": [],
+      "documented_at": "2026-03-07T02:52:12Z",
+      "versions": [
+        "1.6.0"
+      ],
+      "latest": "1.6.0"
+    },
+    {
+      "name": "xoshiro",
+      "description": "xoshiro128++ and xoshiro256++ pseudo-random number generators",
+      "tags": [
+        "xoshiro",
+        "rng",
+        "random",
+        "spark"
+      ],
+      "documented_at": "2026-03-07T02:52:03Z",
+      "versions": [
+        "2.0.0"
+      ],
+      "latest": "2.0.0"
+    },
+    {
+      "name": "yeison",
+      "description": "A JSON-like data structure using Ada 2022 features",
+      "tags": [
+        "json",
+        "yaml",
+        "toml",
+        "containers"
+      ],
+      "documented_at": "2026-03-07T02:52:04Z",
+      "versions": [
+        "0.1.0"
+      ],
+      "latest": "0.1.0"
+    },
+    {
+      "name": "yeison_12",
+      "description": "A JSON-like data structure (Ada 2012 version)",
+      "tags": [
+        "json",
+        "yaml",
+        "toml",
+        "containers"
+      ],
+      "documented_at": "2026-03-07T02:52:18Z",
+      "versions": [
+        "0.2.0"
+      ],
+      "latest": "0.2.0"
+    },
+    {
+      "name": "z_compression",
+      "description": "Standalone version of the Zlib Deflate compression algorithm",
+      "tags": [
+        "zlib",
+        "deflate",
+        "compression"
+      ],
+      "documented_at": "2026-03-07T02:52:19Z",
+      "versions": [
+        "20240724.0.0"
+      ],
+      "latest": "20240724.0.0"
+    },
+    {
+      "name": "zblib",
+      "description": "Library for ZanyBlue Ada Localization",
+      "tags": [
+        "localization",
+        "l10n",
+        "international",
+        "i18n"
+      ],
+      "documented_at": "2026-03-07T02:52:34Z",
+      "versions": [
+        "1.4.0"
+      ],
+      "latest": "1.4.0"
+    },
+    {
+      "name": "zipada",
+      "description": "Manage Zip Archives and raw BZip2 and LZMA streams",
+      "tags": [
+        "zip",
+        "zip64",
+        "archive",
+        "lossless",
+        "compression",
+        "decompression",
+        "encoding",
+        "decoding",
+        "lz77",
+        "deflate",
+        "lzma",
+        "bwt",
+        "bzip2",
+        "lzw",
+        "shrink"
+      ],
+      "documented_at": "2026-03-17T02:56:48Z",
+      "versions": [
+        "61.0.0",
+        "62.0.0"
+      ],
+      "latest": "62.0.0"
+    },
+    {
+      "name": "zipdcf",
+      "description": "Tools that can (un)zip document container files, Zip-based archive files",
+      "tags": [
+        "zip",
+        "document",
+        "container",
+        "archive"
+      ],
+      "documented_at": "2026-03-07T02:52:46Z",
+      "versions": [
+        "2.0.3"
+      ],
+      "latest": "2.0.3"
+    },
+    {
+      "name": "zlib_ada",
+      "description": "ZLib for Ada thick binding",
+      "tags": [],
+      "documented_at": "2026-03-07T02:52:54Z",
+      "versions": [
+        "1.3.0"
+      ],
+      "latest": "1.3.0"
+    }
+  ]
+}

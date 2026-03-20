@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "texcad",
+  "version": "4.5.3",
+  "failed_at": "2026-03-06T02:59:58Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

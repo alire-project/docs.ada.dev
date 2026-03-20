@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "brackelib",
+  "version": "0.0.2",
+  "documented_at": "2026-03-04T02:53:46Z",
+  "description": "Library which contains various utility packages.",
+  "long_description": "Ada library which contains various utility packages. Currently only a few implementations of abstract data types.",
+  "authors": [
+    "Bent Bracke"
+  ],
+  "licenses": [
+    "CC0-1.0"
+  ],
+  "tags": [
+    "utility",
+    "adt",
+    "stack",
+    "queue"
+  ],
+  "website": "https://github.com/bracke/brackelib",
+  "repository": {
+    "url": "https://github.com/bracke/brackelib",
+    "host": "github",
+    "commit": "e08b60411a7469999cf69419780c76237aaa4d35"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Brackelib",
+      "id": "7363ba5b14bb6818",
+      "file": "brackelib.json"
+    },
+    {
+      "name": "Brackelib.Queues",
+      "id": "95c5a0c5bcec9d63",
+      "file": "brackelib-queues.json"
+    },
+    {
+      "name": "Brackelib.Stacks",
+      "id": "d03760a99720126b",
+      "file": "brackelib-stacks.json"
+    }
+  ]
+}

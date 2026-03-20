@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>geste — Ada/SPARK Documentation</title>
+  <meta name="description" content="GEneric Sprite and Tile Engine">
+  <meta name="keywords" content="Ada, SPARK, Alire, geste, game, nostd, rendering, sprite, GESTE, GESTE_Fonts">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "geste",
+"version": "1.1.0",  "description": "GEneric Sprite and Tile Engine",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/geste/",
+  "codeRepository": "https://github.com/Fabien-Chouteau/GESTE"
+  ,"author": [{"@type": "Person", "name": "Fabien Chouteau \u003cfabien.chouteau@gmail.com\u003e"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">geste</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>geste</h1>
+    <span class="version-tag">1.1.0</span>
+  </div>
+
+  <p class="crate-description">GEneric Sprite and Tile Engine</p>
+
+  <div class="long-description">
+[![Build Status](https://travis-ci.org/Fabien-Chouteau/GESTE.svg?branch=master)](https://travis-ci.org/Fabien-Chouteau/GESTE)
+[![codecov](https://codecov.io/gh/Fabien-Chouteau/GESTE/branch/master/graph/badge.svg)](https://codecov.io/gh/Fabien-Chouteau/GESTE)
+
+GESTE is a sprite and tile 2D render engine designed to run on
+micro-controllers low performance systems. GESTE also provides a basic math and
+physic engine using fixed point arithmetic.
+
+## Creating maps
+
+GESTE is developed in parallel with
+[tiled-code-gen](https://github.com/Fabien-Chouteau/tiled-code-gen), a tool
+that generates code from the [Tiled Map Editor](https://www.mapeditor.org/).
+
+## Examples
+
+The crate `geste_examples` contains 3 examples of different game genre:
+ - platformer
+ - RPG
+ - racing
+
+## Design
+
+### Layers
+
+In GESTE, a scene is made of layers. Native layers can be `Sprite`, `Grid` or
+`Text`. You can implement you own type of layers if you want to.
+
+ - `Sprite` layers display a single tile at a given position
+ - `Grid` layers display a grid of tiles at a given position
+ - `Text` layers display a text at a given position
+
+Layers have a priority which tells in which order they will be drawn on the
+screen.
+
+### Rendering
+
+The rendering algorithm is somewhat similar to ray casting. Instead of taking
+each objects of the scene and drawing it on the screen, the engine takes each
+pixel and tries to find its color from the different objects of the scene.
+
+For each pixel of the area that is being drawn, GESTE will go through the list
+of layers and see if the corresponding pixel inside the layer is transparent or
+not. When a non transparent pixel is found, the pixel is pushed to the screen
+and the procedure starts again for the next pixel. If all the layers have a
+transparent pixel, the background color is used.
+
+The more layers to go through, the more time time it will take to render a
+pixel.
+
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Fabien Chouteau &lt;fabien.chouteau@gmail.com&gt;</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Fabien-Chouteau/GESTE">https://github.com/Fabien-Chouteau/GESTE</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">game</span><span class="tag">nostd</span><span class="tag">rendering</span><span class="tag">sprite</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste/">GESTE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-grid/">GESTE.Grid</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-layer/">GESTE.Layer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-maths/">GESTE.Maths</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-maths_tables/">GESTE.Maths_Tables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-maths_types/">GESTE.Maths_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-physics/">GESTE.Physics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-sprite/">GESTE.Sprite</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-sprite-animated/">GESTE.Sprite.Animated</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-sprite-rotated/">GESTE.Sprite.Rotated</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-text/">GESTE.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste-tile_bank/">GESTE.Tile_Bank</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts/">GESTE_Fonts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemono12pt7b/">GESTE_Fonts.FreeMono12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemono18pt7b/">GESTE_Fonts.FreeMono18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemono24pt7b/">GESTE_Fonts.FreeMono24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemono5pt7b/">GESTE_Fonts.FreeMono5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemono6pt7b/">GESTE_Fonts.FreeMono6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemono8pt7b/">GESTE_Fonts.FreeMono8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonobold12pt7b/">GESTE_Fonts.FreeMonoBold12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonobold18pt7b/">GESTE_Fonts.FreeMonoBold18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonobold24pt7b/">GESTE_Fonts.FreeMonoBold24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonobold5pt7b/">GESTE_Fonts.FreeMonoBold5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonobold6pt7b/">GESTE_Fonts.FreeMonoBold6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonobold8pt7b/">GESTE_Fonts.FreeMonoBold8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonoboldoblique12pt7b/">GESTE_Fonts.FreeMonoBoldOblique12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonoboldoblique18pt7b/">GESTE_Fonts.FreeMonoBoldOblique18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonoboldoblique24pt7b/">GESTE_Fonts.FreeMonoBoldOblique24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonoboldoblique5pt7b/">GESTE_Fonts.FreeMonoBoldOblique5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonoboldoblique6pt7b/">GESTE_Fonts.FreeMonoBoldOblique6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonoboldoblique8pt7b/">GESTE_Fonts.FreeMonoBoldOblique8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonooblique12pt7b/">GESTE_Fonts.FreeMonoOblique12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonooblique18pt7b/">GESTE_Fonts.FreeMonoOblique18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonooblique24pt7b/">GESTE_Fonts.FreeMonoOblique24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonooblique5pt7b/">GESTE_Fonts.FreeMonoOblique5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonooblique6pt7b/">GESTE_Fonts.FreeMonoOblique6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freemonooblique8pt7b/">GESTE_Fonts.FreeMonoOblique8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesans12pt7b/">GESTE_Fonts.FreeSans12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesans18pt7b/">GESTE_Fonts.FreeSans18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesans24pt7b/">GESTE_Fonts.FreeSans24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesans5pt7b/">GESTE_Fonts.FreeSans5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesans6pt7b/">GESTE_Fonts.FreeSans6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesans8pt7b/">GESTE_Fonts.FreeSans8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansbold12pt7b/">GESTE_Fonts.FreeSansBold12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansbold18pt7b/">GESTE_Fonts.FreeSansBold18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansbold24pt7b/">GESTE_Fonts.FreeSansBold24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansbold5pt7b/">GESTE_Fonts.FreeSansBold5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansbold6pt7b/">GESTE_Fonts.FreeSansBold6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansbold8pt7b/">GESTE_Fonts.FreeSansBold8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansboldoblique12pt7b/">GESTE_Fonts.FreeSansBoldOblique12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansboldoblique18pt7b/">GESTE_Fonts.FreeSansBoldOblique18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansboldoblique24pt7b/">GESTE_Fonts.FreeSansBoldOblique24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansboldoblique5pt7b/">GESTE_Fonts.FreeSansBoldOblique5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansboldoblique6pt7b/">GESTE_Fonts.FreeSansBoldOblique6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansboldoblique8pt7b/">GESTE_Fonts.FreeSansBoldOblique8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansoblique12pt7b/">GESTE_Fonts.FreeSansOblique12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansoblique18pt7b/">GESTE_Fonts.FreeSansOblique18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansoblique24pt7b/">GESTE_Fonts.FreeSansOblique24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansoblique5pt7b/">GESTE_Fonts.FreeSansOblique5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansoblique6pt7b/">GESTE_Fonts.FreeSansOblique6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freesansoblique8pt7b/">GESTE_Fonts.FreeSansOblique8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserif12pt7b/">GESTE_Fonts.FreeSerif12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserif18pt7b/">GESTE_Fonts.FreeSerif18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserif24pt7b/">GESTE_Fonts.FreeSerif24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserif5pt7b/">GESTE_Fonts.FreeSerif5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserif6pt7b/">GESTE_Fonts.FreeSerif6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserif8pt7b/">GESTE_Fonts.FreeSerif8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbold12pt7b/">GESTE_Fonts.FreeSerifBold12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbold18pt7b/">GESTE_Fonts.FreeSerifBold18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbold24pt7b/">GESTE_Fonts.FreeSerifBold24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbold5pt7b/">GESTE_Fonts.FreeSerifBold5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbold6pt7b/">GESTE_Fonts.FreeSerifBold6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbold8pt7b/">GESTE_Fonts.FreeSerifBold8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbolditalic12pt7b/">GESTE_Fonts.FreeSerifBoldItalic12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbolditalic18pt7b/">GESTE_Fonts.FreeSerifBoldItalic18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbolditalic24pt7b/">GESTE_Fonts.FreeSerifBoldItalic24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbolditalic5pt7b/">GESTE_Fonts.FreeSerifBoldItalic5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbolditalic6pt7b/">GESTE_Fonts.FreeSerifBoldItalic6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifbolditalic8pt7b/">GESTE_Fonts.FreeSerifBoldItalic8pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifitalic12pt7b/">GESTE_Fonts.FreeSerifItalic12pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifitalic18pt7b/">GESTE_Fonts.FreeSerifItalic18pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifitalic24pt7b/">GESTE_Fonts.FreeSerifItalic24pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifitalic5pt7b/">GESTE_Fonts.FreeSerifItalic5pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifitalic6pt7b/">GESTE_Fonts.FreeSerifItalic6pt7b</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/1.1.0/geste_fonts-freeserifitalic8pt7b/">GESTE_Fonts.FreeSerifItalic8pt7b</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

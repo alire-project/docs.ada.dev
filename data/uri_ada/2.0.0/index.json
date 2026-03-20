@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "crate": "uri_ada",
+  "version": "2.0.0",
+  "documented_at": "2026-03-07T02:49:13Z",
+  "description": "Processing of URI strings",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "uri",
+    "url",
+    "utility"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/uri-ada",
+    "host": "github",
+    "commit": "02a0780d7757e9e79b3410c3a34960655cacea3d"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "URI_Ada",
+      "id": "0881e6cbbdeca495",
+      "file": "uri_ada.json"
+    }
+  ]
+}

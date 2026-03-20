@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adacl — Ada/SPARK Documentation</title>
+  <meta name="description" content="Ada Class Library: Strings, Tracing, AUnit, Smart Pointers, Getopt">
+  <meta name="keywords" content="Ada, SPARK, Alire, adacl, library, command-line, trace, logging, string, aunit, assert, container, smart-pointer, ada2022, AdaCL, Adacl_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "adacl",
+"version": "7.1.0",  "description": "Ada Class Library: Strings, Tracing, AUnit, Smart Pointers, Getopt",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/adacl/",
+  "codeRepository": "https://sourceforge.net/projects/adacl"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">adacl</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>adacl</h1>
+    <span class="version-tag">7.1.0</span>
+  </div>
+
+  <p class="crate-description">Ada Class Library: Strings, Tracing, AUnit, Smart Pointers, Getopt</p>
+
+  <div class="long-description">A versatile Ada 2022 class library for robust application development.
+
+Features:
+- Getopt: Command-line argument parser with wide character support
+- Strings: Utilities for String, Wide_String, and Wide_Wide_String
+- Calendar: Time and date utilities with wide character support
+- Tracing: Diagnostic trace utility with wide character support
+- Protected Queue: Supports finish, wait, and abort operations
+- Smart Pointers:
+  - Reference-counted pointers
+  - Unique pointers (C++-style)
+  - Shared pointers (C++-style)
+
+Related crates:
+- AUnit: AUnit-Compatible Assertions for access, array, discrete, floating-point, fixed-point, decimal, and vector types
+- EAStrings: Encoding-aware string utilities
+- RegEx: SPITBOL-inspired pattern matching and regular expressions for String, Wide_String, and Wide_Wide_String
+- SAR: Text search and replace for String, Wide_String, and Wide_Wide_String
+
+Source: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl/src/)
+Documentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl/index.html)
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/adacl">https://sourceforge.net/projects/adacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">library</span><span class="tag">command-line</span><span class="tag">trace</span><span class="tag">logging</span><span class="tag">string</span><span class="tag">aunit</span><span class="tag">assert</span><span class="tag">container</span><span class="tag">smart-pointer</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl/">AdaCL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-base/">AdaCL.Base</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-calendar/">AdaCL.Calendar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-command_line/">AdaCL.Command_Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-command_line-getopt/">AdaCL.Command_Line.GetOpt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-limited_base/">AdaCL.Limited_Base</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-os/">AdaCL.OS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-os-low_level/">AdaCL.OS.Low_Level</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer/">AdaCL.Pointer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer-element/">AdaCL.Pointer.Element</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer-holder/">AdaCL.Pointer.Holder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer-shared/">AdaCL.Pointer.Shared</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer-shared_with_delete/">AdaCL.Pointer.Shared_With_Delete</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer-unique/">AdaCL.Pointer.Unique</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-pointer-unique_with_delete/">AdaCL.Pointer.Unique_With_Delete</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-queue/">AdaCL.Queue</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-queue-interfaces/">AdaCL.Queue.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-queue-protect/">AdaCL.Queue.Protect</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-strings/">AdaCL.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-strings-bin/">AdaCL.Strings.Bin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-strings-hex/">AdaCL.Strings.Hex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-strings-io/">AdaCL.Strings.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-trace/">AdaCL.Trace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_strings/">AdaCL.Wide_Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_strings-bin/">AdaCL.Wide_Strings.Bin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_strings-hex/">AdaCL.Wide_Strings.Hex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_strings-io/">AdaCL.Wide_Strings.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_wide_strings/">AdaCL.Wide_Wide_Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_wide_strings-bin/">AdaCL.Wide_Wide_Strings.Bin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_wide_strings-hex/">AdaCL.Wide_Wide_Strings.Hex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl-wide_wide_strings-io/">AdaCL.Wide_Wide_Strings.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/adacl/7.1.0/adacl_config/">Adacl_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

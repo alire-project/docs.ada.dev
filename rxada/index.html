@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rxada — Ada/SPARK Documentation</title>
+  <meta name="description" content="Experimental implementation of ReactiveX in Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, rxada, rx, reactive, reactivex, observer, Rx">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "rxada",
+"version": "0.1.1",  "description": "Experimental implementation of ReactiveX in Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/rxada/",
+  "codeRepository": "https://github.com/mosteo/rxada"
+  ,"author": [{"@type": "Person", "name": "Alejandro R. Mosteo"}]
+  ,"license": "LGPL-3.0-only"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">rxada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>rxada</h1>
+    <span class="version-tag">0.1.1</span>
+  </div>
+
+  <p class="crate-description">Experimental implementation of ReactiveX in Ada</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Alejandro R. Mosteo</dd>
+
+    <dt>License</dt>
+    <dd>LGPL-3.0-only</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/mosteo/rxada">https://github.com/mosteo/rxada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">rx</span><span class="tag">reactive</span><span class="tag">reactivex</span><span class="tag">observer</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx/">Rx</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-actions/">Rx.Actions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-actions-transform/">Rx.Actions.Transform</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-actions-typed/">Rx.Actions.Typed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-collections/">Rx.Collections</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-contracts/">Rx.Contracts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-conversions/">Rx.Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-debug/">Rx.Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-debug-heavy/">Rx.Debug.Heavy</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-debug-observers/">Rx.Debug.Observers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-defaults/">Rx.Defaults</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-definites/">Rx.Definites</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-dispatchers/">Rx.Dispatchers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-dispatchers-events/">Rx.Dispatchers.Events</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-dispatchers-immediate/">Rx.Dispatchers.Immediate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-dispatchers-pools/">Rx.Dispatchers.Pools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-dispatchers-single/">Rx.Dispatchers.Single</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-dispatchers-subscribe/">Rx.Dispatchers.Subscribe</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-errors/">Rx.Errors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-factories/">Rx.Factories</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl/">Rx.Impl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-casts/">Rx.Impl.Casts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-definite_observables/">Rx.Impl.Definite_Observables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-definite_observers/">Rx.Impl.Definite_Observers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-events/">Rx.Impl.Events</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-holders/">Rx.Impl.Holders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-links/">Rx.Impl.Links</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-preservers/">Rx.Impl.Preservers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-shared_observer/">Rx.Impl.Shared_Observer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-std/">Rx.Impl.Std</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-std-numeric/">Rx.Impl.Std.Numeric</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-transformers/">Rx.Impl.Transformers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-transformers-linkers/">Rx.Impl.Transformers.Linkers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-impl-typed/">Rx.Impl.Typed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-indefinites/">Rx.Indefinites</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-numeric_observables/">Rx.Numeric_Observables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-numeric_operators/">Rx.Numeric_Operators</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-observables/">Rx.Observables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-observables-image/">Rx.Observables.Image</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-observables-linkers/">Rx.Observables.Linkers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op/">Rx.Op</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-buffer/">Rx.Op.Buffer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-count/">Rx.Op.Count</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-debounce/">Rx.Op.Debounce</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-distinct/">Rx.Op.Distinct</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-do_on/">Rx.Op.Do_On</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-element_at/">Rx.Op.Element_At</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-filter/">Rx.Op.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-flatmap/">Rx.Op.Flatmap</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-funnel/">Rx.Op.Funnel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-hold/">Rx.Op.Hold</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-last/">Rx.Op.Last</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-length/">Rx.Op.Length</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-limit/">Rx.Op.Limit</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-map/">Rx.Op.Map</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-merge/">Rx.Op.Merge</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-no_op/">Rx.Op.No_Op</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-observe_on/">Rx.Op.Observe_On</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-print/">Rx.Op.Print</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-repeat/">Rx.Op.Repeat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-sample/">Rx.Op.Sample</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-scan/">Rx.Op.Scan</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-serialize/">Rx.Op.Serialize</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-split/">Rx.Op.Split</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-stopwatch/">Rx.Op.Stopwatch</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-subscribe_on/">Rx.Op.Subscribe_On</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-op-take/">Rx.Op.Take</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-operators/">Rx.Operators</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-operators-counters/">Rx.Operators.Counters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-operators-linkers/">Rx.Operators.Linkers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-schedulers/">Rx.Schedulers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-schedulers-pools/">Rx.Schedulers.Pools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src/">Rx.Src</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-create/">Rx.Src.Create</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-create-with_state/">Rx.Src.Create.With_State</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-defer/">Rx.Src.Defer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-empty/">Rx.Src.Empty</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-from/">Rx.Src.From</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-from-from_array/">Rx.Src.From.From_Array</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-from-from_iterable/">Rx.Src.From.From_Iterable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-interval/">Rx.Src.Interval</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-just/">Rx.Src.Just</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-ranges/">Rx.Src.Ranges</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-start/">Rx.Src.Start</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-src-timer/">Rx.Src.Timer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-std/">Rx.Std</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-std-casts/">Rx.Std.Casts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-std-images/">Rx.Std.Images</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-subjects/">Rx.Subjects</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-subscribe/">Rx.Subscribe</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-subscribers/">Rx.Subscribers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-subscriptions/">Rx.Subscriptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-tests/">Rx.Tests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-tools/">Rx.Tools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-tools-holders/">Rx.Tools.Holders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-tools-lazies/">Rx.Tools.Lazies</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-tools-semaphores/">Rx.Tools.Semaphores</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-tools-shared_data/">Rx.Tools.Shared_Data</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-traits/">Rx.Traits</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-traits-arrays/">Rx.Traits.Arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-traits-definite_defaults/">Rx.Traits.Definite_Defaults</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-traits-indefinite_defaults/">Rx.Traits.Indefinite_Defaults</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-traits-iterable/">Rx.Traits.Iterable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-traits-types/">Rx.Traits.Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-types/">Rx.Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rxada/0.1.1/rx-valueless/">Rx.Valueless</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

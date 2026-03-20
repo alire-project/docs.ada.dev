@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>shoot_n_loot — Ada/SPARK Documentation</title>
+  <meta name="description" content="Platform game for the AdaFruit PyGamer console">
+  <meta name="keywords" content="Ada, SPARK, Alire, shoot_n_loot, pygamer, game, simulator, Chests, Game, Game_Assets, GESTE_Config, Levels, Menus, Monsters, Music_2, Player, Projectile, Render, Score_Display, Sound">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "shoot_n_loot",
+"version": "1.0.0",  "description": "Platform game for the AdaFruit PyGamer console",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/shoot_n_loot/",
+  "codeRepository": "https://github.com/Fabien-Chouteau/shoot-n-loot"
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">shoot_n_loot</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>shoot_n_loot</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <p class="crate-description">Platform game for the AdaFruit PyGamer console</p>
+
+
+  <dl class="meta-list">
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Fabien-Chouteau/shoot-n-loot">https://github.com/Fabien-Chouteau/shoot-n-loot</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">pygamer</span><span class="tag">game</span><span class="tag">simulator</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/geste/">geste</a>
+        <span class="dep-version">^1.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/pygamer_bsp/">pygamer_bsp</a>
+        <span class="dep-version">~1.0.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/pygamer_simulator/">pygamer_simulator</a>
+        <span class="dep-version">~1.0.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/virtapu/">virtapu</a>
+        <span class="dep-version">~0.2.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/chests/">Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game/">Game</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets/">Game_Assets</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_0/">Game_Assets.level_0</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_0-back/">Game_Assets.level_0.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_0-backcolor/">Game_Assets.level_0.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_0-chests/">Game_Assets.level_0.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_0-front/">Game_Assets.level_0.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_0-markers/">Game_Assets.level_0.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_1/">Game_Assets.level_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_1-back/">Game_Assets.level_1.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_1-backcolor/">Game_Assets.level_1.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_1-chests/">Game_Assets.level_1.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_1-front/">Game_Assets.level_1.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_1-markers/">Game_Assets.level_1.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_2/">Game_Assets.level_2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_2-back/">Game_Assets.level_2.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_2-backcolor/">Game_Assets.level_2.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_2-chests/">Game_Assets.level_2.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_2-front/">Game_Assets.level_2.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_2-markers/">Game_Assets.level_2.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3/">Game_Assets.level_3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3-back/">Game_Assets.level_3.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3-backcolor/">Game_Assets.level_3.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3-chests/">Game_Assets.level_3.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3-front/">Game_Assets.level_3.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3-markers/">Game_Assets.level_3.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_3-monsters/">Game_Assets.level_3.Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4/">Game_Assets.level_4</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4-back/">Game_Assets.level_4.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4-backcolor/">Game_Assets.level_4.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4-chests/">Game_Assets.level_4.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4-front/">Game_Assets.level_4.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4-markers/">Game_Assets.level_4.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_4-monsters/">Game_Assets.level_4.Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5/">Game_Assets.level_5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5-back/">Game_Assets.level_5.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5-backcolor/">Game_Assets.level_5.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5-chests/">Game_Assets.level_5.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5-front/">Game_Assets.level_5.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5-markers/">Game_Assets.level_5.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_5-monsters/">Game_Assets.level_5.Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6/">Game_Assets.level_6</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6-back/">Game_Assets.level_6.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6-backcolor/">Game_Assets.level_6.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6-chests/">Game_Assets.level_6.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6-front/">Game_Assets.level_6.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6-markers/">Game_Assets.level_6.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_6-monsters/">Game_Assets.level_6.Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7/">Game_Assets.level_7</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7-back/">Game_Assets.level_7.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7-backcolor/">Game_Assets.level_7.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7-chests/">Game_Assets.level_7.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7-front/">Game_Assets.level_7.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7-markers/">Game_Assets.level_7.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_7-monsters/">Game_Assets.level_7.Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8/">Game_Assets.level_8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8-back/">Game_Assets.level_8.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8-backcolor/">Game_Assets.level_8.Backcolor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8-chests/">Game_Assets.level_8.Chests</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8-front/">Game_Assets.level_8.Front</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8-markers/">Game_Assets.level_8.Markers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-level_8-monsters/">Game_Assets.level_8.Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-misc_objects/">Game_Assets.Misc_Objects</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-misc_objects-item/">Game_Assets.Misc_Objects.Item</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-misc_objects-tile_layer_1/">Game_Assets.Misc_Objects.Tile_Layer_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-tileset/">Game_Assets.Tileset</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-tileset_collisions/">Game_Assets.Tileset_Collisions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen/">Game_Assets.title_screen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen-back/">Game_Assets.title_screen.Back</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen-credits/">Game_Assets.title_screen.Credits</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen-gameover/">Game_Assets.title_screen.Gameover</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen-help/">Game_Assets.title_screen.Help</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen-menu/">Game_Assets.title_screen.Menu</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/game_assets-title_screen-victory/">Game_Assets.title_screen.Victory</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/geste_config/">GESTE_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/levels/">Levels</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/menus/">Menus</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/monsters/">Monsters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/music_2/">Music_2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/player/">Player</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/projectile/">Projectile</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/render/">Render</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/score_display/">Score_Display</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/shoot_n_loot/1.0.0/sound/">Sound</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

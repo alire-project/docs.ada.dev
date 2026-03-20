@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"00c62d7693281658","name":"DOM.Core.Comments","qualified_name":"DOM.Core.Comments","kind":"ada_package","location":{"file":"3rdparty/xmlada/dom-core-comments.ads","line":2,"column":9},"code":"package DOM.Core.Comments"}

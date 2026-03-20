@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bbs_embed_common — Ada/SPARK Documentation</title>
+  <meta name="description" content="Abstract hardware drivers and drivers for some i2c bus devices.">
+  <meta name="keywords" content="Ada, SPARK, Alire, bbs_embed_common, embedded">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "bbs_embed_common",
+"version": "0.2.0",  "description": "Abstract hardware drivers and drivers for some i2c bus devices.",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/bbs_embed_common/",
+  "codeRepository": "https://github.com/BrentSeidel/BBS-BBB-Ada"
+  ,"author": [{"@type": "Person", "name": "Brent Seidel"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">bbs_embed_common</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>bbs_embed_common</h1>
+    <span class="version-tag">0.2.0</span>
+  </div>
+
+  <p class="crate-description">Abstract hardware drivers and drivers for some i2c bus devices.</p>
+
+  <div class="long-description">This crate contains base classes for some hardware devices such as Analog
+Inputs, GPIO pins, I2C bus, and SPI bus.  It also contains drivers for
+devices that use, for example, an I2C bus.
+
+By itself, this crate isn&#39;t much use.  It will need to be used with the
+bbs_embed_linux crate which contains hardware drivers for the Raspberry Pi
+and BeagleBone Black.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Brent Seidel</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/BrentSeidel/BBS-BBB-Ada">https://github.com/BrentSeidel/BBS-BBB-Ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs/">bbs</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed/">BBS.embed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-ain/">BBS.embed.AIN</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-gpio/">BBS.embed.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-gpio-tb6612/">BBS.embed.gpio.tb6612</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c/">BBS.embed.i2c</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-ads1015/">BBS.embed.I2C.ADS1015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-bme280/">BBS.embed.i2c.BME280</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-bmp180/">BBS.embed.i2c.BMP180</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-devices/">BBS.embed.i2c.devices</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-l3gd20h/">BBS.embed.i2c.L3GD20H</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-lsm303dlhc/">BBS.embed.i2c.LSM303DLHC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-mcp23008/">BBS.embed.i2c.MCP23008</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-mcp23017/">BBS.embed.i2c.MCP23017</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-mcp4725/">BBS.embed.i2c.MCP4725</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-i2c-pca9685/">BBS.embed.i2c.PCA9685</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-log/">BBS.embed.log</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-spi/">BBS.embed.SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/bbs_embed_common/0.2.0/bbs-embed-spi-ra8875/">BBS.embed.SPI.RA8875</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

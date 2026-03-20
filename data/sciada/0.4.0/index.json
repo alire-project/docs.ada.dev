@@ -1,0 +1,136 @@
+{
+  "schema_version": "1",
+  "crate": "sciada",
+  "version": "0.4.0",
+  "documented_at": "2026-03-06T02:56:56Z",
+  "description": "Collection of Scientific Operations",
+  "long_description": "SCI Ada provides a collections of algorithms commonly used for data analysis:\n\n- [SCI.Correlations.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-correlations.ads?ref_type=heads) computes correlations between values,\n- [SCI.Occurrences.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-occurrences.ads?ref_type=heads) helps in identifying occurrences of items,\n- [SCI.Similarities.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-similarities.ads?ref_type=heads) provides metrics to compute similarities between sets.\n- [SCI.Sparse.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-sparse.ads?ref_type=heads) defines sparse arrays.\n- [SCI.Statistics.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-statistics.ads?ref_type=heads) defines some classical statistics operations.\n- [SCI.Vectorizers.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-vectorizers.ads?ref_type=heads) transforms a list of tokens to a vector.\n\n## Documentation\n\n- [Programmer's Guide](https://ada-sci.readthedocs.io/en/latest/)\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "sci",
+    "scientific",
+    "correlations",
+    "occurrences",
+    "similarities",
+    "statistics"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-sci",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-sci",
+    "host": "gitlab",
+    "commit": "af24740d7b5d51436497abaf2bb59398752b6ae3"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SCI",
+      "id": "eea87b5defd7b21c",
+      "file": "sci.json"
+    },
+    {
+      "name": "SCI.Correlations",
+      "id": "712f0db50d0d4ffa",
+      "file": "sci-correlations.json"
+    },
+    {
+      "name": "SCI.Correlations.Pearson",
+      "id": "2438184f6dc32d73",
+      "file": "sci-correlations-pearson.json"
+    },
+    {
+      "name": "SCI.Numbers",
+      "id": "fc449bca11007629",
+      "file": "sci-numbers.json"
+    },
+    {
+      "name": "SCI.Numbers.Conversion",
+      "id": "ba786785ba5e4ddb",
+      "file": "sci-numbers-conversion.json"
+    },
+    {
+      "name": "SCI.Numbers.Number",
+      "id": "a3f32eea58ecb0b2",
+      "file": "sci-numbers-number.json"
+    },
+    {
+      "name": "SCI.Occurrences",
+      "id": "cccf770bd4471f05",
+      "file": "sci-occurrences.json"
+    },
+    {
+      "name": "SCI.Occurrences.Arrays",
+      "id": "337f60594a51ddec",
+      "file": "sci-occurrences-arrays.json"
+    },
+    {
+      "name": "SCI.Occurrences.Finites",
+      "id": "34747b606a646b39",
+      "file": "sci-occurrences-finites.json"
+    },
+    {
+      "name": "SCI.Similarities",
+      "id": "4885c0613e45a788",
+      "file": "sci-similarities.json"
+    },
+    {
+      "name": "SCI.Similarities.COO_Arrays",
+      "id": "10fdc75a21cafa2d",
+      "file": "sci-similarities-coo_arrays.json"
+    },
+    {
+      "name": "SCI.Similarities.Indefinite_Hashed_Sets",
+      "id": "8cdea7675b6a32a4",
+      "file": "sci-similarities-indefinite_hashed_sets.json"
+    },
+    {
+      "name": "SCI.Similarities.Indefinite_Ordered_Sets",
+      "id": "3ae0215881238701",
+      "file": "sci-similarities-indefinite_ordered_sets.json"
+    },
+    {
+      "name": "SCI.Sparse",
+      "id": "c196f7463dac327b",
+      "file": "sci-sparse.json"
+    },
+    {
+      "name": "SCI.Sparse.COO_Arrays",
+      "id": "5daebd4de448d3f5",
+      "file": "sci-sparse-coo_arrays.json"
+    },
+    {
+      "name": "SCI.Statistics",
+      "id": "66dd873aa7408c49",
+      "file": "sci-statistics.json"
+    },
+    {
+      "name": "SCI.Statistics.Descriptive",
+      "id": "a31be2bd7063fc97",
+      "file": "sci-statistics-descriptive.json"
+    },
+    {
+      "name": "SCI.Vectorizers",
+      "id": "144d5f160fa476cf",
+      "file": "sci-vectorizers.json"
+    },
+    {
+      "name": "SCI.Vectorizers.Counters",
+      "id": "99b83445a77ad27d",
+      "file": "sci-vectorizers-counters.json"
+    },
+    {
+      "name": "SCI.Vectorizers.Indefinite_Counters",
+      "id": "faf986f21eaf19bb",
+      "file": "sci-vectorizers-indefinite_counters.json"
+    },
+    {
+      "name": "SCI.Vectorizers.Transformers",
+      "id": "9ba45c7643cbfbb2",
+      "file": "sci-vectorizers-transformers.json"
+    }
+  ]
+}

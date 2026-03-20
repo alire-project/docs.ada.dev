@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tresses — Ada/SPARK Documentation</title>
+  <meta name="description" content="Synth library inspired by Mutable Instruments Braids">
+  <meta name="keywords" content="Ada, SPARK, Alire, tresses, embedded, audio, synthesis, nostd, Tresses, Tresses_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "tresses",
+"version": "2.0.0",  "description": "Synth library inspired by Mutable Instruments Braids",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/tresses/",
+  "codeRepository": "https://github.com/wee-noise-maker/tresses"
+  ,"author": [{"@type": "Person", "name": "Fabien Chouteau"}]
+  ,"license": "MIT OR Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">tresses</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>tresses</h1>
+    <span class="version-tag">2.0.0</span>
+  </div>
+
+  <p class="crate-description">Synth library inspired by Mutable Instruments Braids</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Fabien Chouteau</dd>
+
+    <dt>License</dt>
+    <dd>MIT OR Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/wee-noise-maker/tresses">https://github.com/wee-noise-maker/tresses</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">audio</span><span class="tag">synthesis</span><span class="tag">nostd</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/midi/">midi</a>
+        <span class="dep-version">^1.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses/">Tresses</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-analog_oscillator/">Tresses.Analog_Oscillator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums/">Tresses.Drums</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-bell/">Tresses.Drums.Bell</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-clap/">Tresses.Drums.Clap</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-cymbal/">Tresses.Drums.Cymbal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-generic_sample_hats/">Tresses.Drums.Generic_Sample_Hats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-generic_sample_hats_half_rate/">Tresses.Drums.Generic_Sample_Hats_Half_Rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-generic_waveform_kick/">Tresses.Drums.Generic_Waveform_Kick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-generic_waveform_snare/">Tresses.Drums.Generic_Waveform_Snare</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-kick/">Tresses.Drums.Kick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-macro/">Tresses.Drums.Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-percussion/">Tresses.Drums.Percussion</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-drums-snare/">Tresses.Drums.Snare</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-dsp/">Tresses.DSP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-envelopes/">Tresses.Envelopes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-envelopes-ar/">Tresses.Envelopes.AR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-excitation/">Tresses.Excitation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fft/">Tresses.FFT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fft-fixed/">Tresses.FFT.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-filters/">Tresses.Filters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-filters-ladder/">Tresses.Filters.Ladder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-filters-svf/">Tresses.Filters.SVF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx/">Tresses.FX</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-bitcrusher/">Tresses.FX.Bitcrusher</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-delay_line/">Tresses.FX.Delay_Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-overdrive/">Tresses.FX.Overdrive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-reverb/">Tresses.FX.Reverb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-voice/">Tresses.FX.Voice</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-voice-stereo_bitcrusher/">Tresses.FX.Voice.Stereo_Bitcrusher</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-voice-stereo_filter/">Tresses.FX.Voice.Stereo_Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-voice-stereo_overdrive/">Tresses.FX.Voice.Stereo_Overdrive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-fx-voice-stereo_reverb/">Tresses.FX.Voice.Stereo_Reverb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-interfaces/">Tresses.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-lfo/">Tresses.LFO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-macro/">Tresses.Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-phase_distortion_oscillator/">Tresses.Phase_Distortion_Oscillator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-random/">Tresses.Random</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-resources/">Tresses.Resources</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples/">Tresses.Samples</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_707hh_close/">Tresses.Samples.Sample_707hh_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_707hh_close_half_rate/">Tresses.Samples.Sample_707hh_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_707hh_open/">Tresses.Samples.Sample_707hh_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_707hh_open_half_rate/">Tresses.Samples.Sample_707hh_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_909hh_close/">Tresses.Samples.Sample_909hh_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_909hh_close_half_rate/">Tresses.Samples.Sample_909hh_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_909hh_open/">Tresses.Samples.Sample_909hh_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-samples-sample_909hh_open_half_rate/">Tresses.Samples.Sample_909hh_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices/">Tresses.Voices</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-acid/">Tresses.Voices.Acid</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-analog_macro/">Tresses.Voices.Analog_Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-bass_808/">Tresses.Voices.Bass_808</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-chip_echo/">Tresses.Voices.Chip_Echo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-chip_phaser/">Tresses.Voices.Chip_Phaser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-chip_portamento/">Tresses.Voices.Chip_Portamento</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-fm_op2/">Tresses.Voices.FM_OP2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-house_bass/">Tresses.Voices.House_Bass</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-macro/">Tresses.Voices.Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-phase_distortion/">Tresses.Voices.Phase_Distortion</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-phase_distortion_instantiations/">Tresses.Voices.Phase_Distortion_Instantiations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-pluck/">Tresses.Voices.Pluck</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-pluck_bass/">Tresses.Voices.Pluck_Bass</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-plucked/">Tresses.Voices.Plucked</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-reese/">Tresses.Voices.Reese</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-sand/">Tresses.Voices.Sand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-saw_swarm/">Tresses.Voices.Saw_Swarm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses-voices-screech/">Tresses.Voices.Screech</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tresses/2.0.0/tresses_config/">Tresses_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-20.
+    </p>
+  </footer>
+</body>
+</html>

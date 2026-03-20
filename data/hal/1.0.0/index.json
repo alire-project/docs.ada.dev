@@ -1,0 +1,105 @@
+{
+  "schema_version": "1",
+  "crate": "hal",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T13:38:08Z",
+  "description": "Hardware Abstraction Layer (HAL)",
+  "long_description": "# hal\n\nHardware Abstraction Layer: interfaces definitions to abstract access to common\nhardware devices and protocols\n\nThis crate is a snapshot of the `hal` in [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/hal/src).\n\nAny bug report, issue, contribution must be adressed to the [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/) repo.\n\n",
+  "authors": [],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "hal",
+    "nostd"
+  ],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/hal",
+    "host": "github",
+    "commit": "084c64129b8993181d4078397bf022c7ea886c79"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "HAL",
+      "id": "232554cace01d137",
+      "file": "hal.json"
+    },
+    {
+      "name": "HAL.Audio",
+      "id": "a50c6ec5b3b7af3f",
+      "file": "hal-audio.json"
+    },
+    {
+      "name": "HAL.Bitmap",
+      "id": "36023c9b287c8fd8",
+      "file": "hal-bitmap.json"
+    },
+    {
+      "name": "HAL.Block_Drivers",
+      "id": "803f9f71fbb260f5",
+      "file": "hal-block_drivers.json"
+    },
+    {
+      "name": "HAL.DSI",
+      "id": "e30ad3309f610475",
+      "file": "hal-dsi.json"
+    },
+    {
+      "name": "HAL.Filesystem",
+      "id": "58b042ba658b2fd1",
+      "file": "hal-filesystem.json"
+    },
+    {
+      "name": "HAL.Flash",
+      "id": "51e9b8470eab73d3",
+      "file": "hal-flash.json"
+    },
+    {
+      "name": "HAL.Framebuffer",
+      "id": "208ca8168935a316",
+      "file": "hal-framebuffer.json"
+    },
+    {
+      "name": "HAL.GPIO",
+      "id": "0f2e70ab77862cc0",
+      "file": "hal-gpio.json"
+    },
+    {
+      "name": "HAL.I2C",
+      "id": "6e97dbefc5ec4eb1",
+      "file": "hal-i2c.json"
+    },
+    {
+      "name": "HAL.Real_Time_Clock",
+      "id": "1fa219593732dc0f",
+      "file": "hal-real_time_clock.json"
+    },
+    {
+      "name": "HAL.SDMMC",
+      "id": "b5fe3d00a6a139dd",
+      "file": "hal-sdmmc.json"
+    },
+    {
+      "name": "HAL.SPI",
+      "id": "07cae14624ddbdb1",
+      "file": "hal-spi.json"
+    },
+    {
+      "name": "HAL.Time",
+      "id": "75fa4546ae0c6a79",
+      "file": "hal-time.json"
+    },
+    {
+      "name": "HAL.Touch_Panel",
+      "id": "6c35c2760354010e",
+      "file": "hal-touch_panel.json"
+    },
+    {
+      "name": "HAL.UART",
+      "id": "fc7bc7d8bd0817a0",
+      "file": "hal-uart.json"
+    }
+  ]
+}
