@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "crate": "coap_client",
+  "version": "0.10.0",
+  "documented_at": "2026-03-04T02:58:29Z",
+  "description": "Client program for the CoAP-SPARK library.",
+  "authors": [
+    "Manuel Gomez"
+  ],
+  "licenses": [
+    "Apache-2.0 OR GPL-2.0-or-later"
+  ],
+  "tags": [
+    "coap",
+    "spark",
+    "client",
+    "iot",
+    "protocol"
+  ],
+  "website": "https://github.com/mgrojo/coap_spark",
+  "repository": {
+    "url": "https://github.com/mgrojo/coap_spark",
+    "host": "github",
+    "commit": "31eb05decafd9dc328b8242f8e4bd9364a20fe39",
+    "subdir": "client/"
+  },
+  "dependencies": [
+    {
+      "crate": "coap_spark",
+      "version": "~0.10.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Coap_Client_Config",
+      "id": "f157ede729b4bf47",
+      "file": "coap_client_config.json"
+    },
+    {
+      "name": "CoAP_Secure",
+      "id": "ab864f767fcc1259",
+      "file": "coap_secure.json"
+    }
+  ]
+}

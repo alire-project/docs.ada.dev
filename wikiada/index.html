@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wikiada — Ada/SPARK Documentation</title>
+  <meta name="description" content="Parser and renderer for Markdown and other wiki syntaxes">
+  <meta name="keywords" content="Ada, SPARK, Alire, wikiada, wiki-engine, markdown, mediawiki, dotclear, html, parser, renderer, Wiki">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "wikiada",
+"version": "1.5.0",  "description": "Parser and renderer for Markdown and other wiki syntaxes",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/wikiada/",
+  "codeRepository": "https://gitlab.com/stcarrez/ada-wiki"
+  ,"author": [{"@type": "Person", "name": "Stephane.Carrez@gmail.com"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">wikiada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>wikiada</h1>
+    <span class="version-tag">1.5.0</span>
+  </div>
+
+  <p class="crate-description">Parser and renderer for Markdown and other wiki syntaxes</p>
+
+  <div class="long-description">[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-wiki/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-wiki/summary)
+[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-wiki/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-wiki/xunits)
+[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-wiki/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-wiki/summary)
+
+Ada Wiki is a small library that provides a parser and renderer for Markdown and several
+other Wiki syntaxes.  The library allows to:
+
+* Parse a Markdown text but other Wiki such as Mediawiki, Creole, PhpBB, Dotclear and Google Code,
+* Parse HTML content in embedded wiki text,
+* Filter out the wiki, HTML or text through customizable filters,
+* Render the wiki text in HTML, text or another wiki format
+
+The Ada Wiki library is used by [Ada Web Application](https://gitlab.com/stcarrez/ada-awa)
+for the implementation of the blog and wiki online plugins and by [mdshow](https://gitlab.com/stcarrez/mdshow) a terminal based
+Markdown viewer.
+
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Stephane.Carrez@gmail.com</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/stcarrez/ada-wiki">https://gitlab.com/stcarrez/ada-wiki</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">wiki-engine</span><span class="tag">markdown</span><span class="tag">mediawiki</span><span class="tag">dotclear</span><span class="tag">html</span><span class="tag">parser</span><span class="tag">renderer</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/utilada/">utilada</a>
+        <span class="dep-version">^2.8.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki/">Wiki</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-attributes/">Wiki.Attributes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-documents/">Wiki.Documents</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-filters/">Wiki.Filters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-filters-autolink/">Wiki.Filters.Autolink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-filters-collectors/">Wiki.Filters.Collectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-filters-html/">Wiki.Filters.Html</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-filters-toc/">Wiki.Filters.TOC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-filters-variables/">Wiki.Filters.Variables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-helpers/">Wiki.Helpers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-nodes/">Wiki.Nodes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-nodes-lists/">Wiki.Nodes.Lists</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-parsers/">Wiki.Parsers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-plugins/">Wiki.Plugins</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-plugins-conditions/">Wiki.Plugins.Conditions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-plugins-templates/">Wiki.Plugins.Templates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-plugins-variables/">Wiki.Plugins.Variables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-render/">Wiki.Render</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-render-html/">Wiki.Render.Html</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-render-links/">Wiki.Render.Links</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-render-text/">Wiki.Render.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-render-wiki/">Wiki.Render.Wiki</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-stacks/">Wiki.Stacks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-streams/">Wiki.Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-streams-builders/">Wiki.Streams.Builders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-streams-html/">Wiki.Streams.Html</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-streams-html-stream/">Wiki.Streams.Html.Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-streams-text_io/">Wiki.Streams.Text_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-strings/">Wiki.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wikiada/1.5.0/wiki-utils/">Wiki.Utils</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

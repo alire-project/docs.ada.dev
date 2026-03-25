@@ -1,0 +1,73 @@
+{
+  "schema_version": "1",
+  "crate": "amqp",
+  "version": "0.3.1",
+  "documented_at": "2026-03-03T17:50:29Z",
+  "description": "AMQP 0-9-1 client library for Ada",
+  "authors": [
+    "Jochen Lillich <contact@geewiz.dev>"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "amqp",
+    "messaging",
+    "rabbitmq",
+    "protocol"
+  ],
+  "website": "https://github.com/geewiz/amqp_ada",
+  "repository": {
+    "url": "https://github.com/geewiz/amqp_ada",
+    "host": "github",
+    "commit": "985b2735cbe25c3c3dd0d82fd959f719f627aba3"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AMQP",
+      "id": "529c11cbae32ee58",
+      "file": "amqp.json"
+    },
+    {
+      "name": "AMQP.Channel",
+      "id": "ee8bdb76ae85568b",
+      "file": "amqp-channel.json"
+    },
+    {
+      "name": "AMQP.Codec",
+      "id": "423db784028c4e3b",
+      "file": "amqp-codec.json"
+    },
+    {
+      "name": "AMQP.Connection",
+      "id": "5ba0b2971fefb143",
+      "file": "amqp-connection.json"
+    },
+    {
+      "name": "AMQP.Constants",
+      "id": "a47a08781c306313",
+      "file": "amqp-constants.json"
+    },
+    {
+      "name": "AMQP.Frames",
+      "id": "443dd99f134be27a",
+      "file": "amqp-frames.json"
+    },
+    {
+      "name": "AMQP.Methods",
+      "id": "23e51a5cc5ffa9aa",
+      "file": "amqp-methods.json"
+    },
+    {
+      "name": "AMQP.Types",
+      "id": "29c54e6fbcf78a34",
+      "file": "amqp-types.json"
+    },
+    {
+      "name": "AMQP.URL",
+      "id": "caa8d389a83ba4b6",
+      "file": "amqp-url.json"
+    }
+  ]
+}

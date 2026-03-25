@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tash — Ada/SPARK Documentation</title>
+  <meta name="description" content="Binding to Tcl/Tk">
+  <meta name="keywords" content="Ada, SPARK, Alire, tash, scripting, tcl, tk, CArgv, CHelper, Tcl">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "tash",
+"version": "8.7.2",  "description": "Binding to Tcl/Tk",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/tash/",
+  "codeRepository": "https://github.com/simonjwright/tcladashell"
+  ,"author": [{"@type": "Person", "name": "Simon Wright"}]
+  ,"license": "GPL-2.0-or-later WITH GCC-exception-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">tash</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>tash</h1>
+    <span class="version-tag">8.7.2</span>
+  </div>
+
+  <p class="crate-description">Binding to Tcl/Tk</p>
+
+  <div class="long-description">Tash (previously known as Tcl Ada Shell) is an Ada binding to Tcl/Tk.
+
+Its purpose is to
+
+* allow a Tcl program to use Ada in place of C to implement Tcl
+  commands where additional execution speed, more complex data
+  structures, or better name space management is needed, and
+
+* support the rapid development of Platform-Independent Graphical User
+  Interfaces via Tk.
+
+Please note that, on macOS, tash assumes that Tcl/Tk is provided via
+[Homebrew](https://brew.sh).
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Simon Wright</dd>
+
+    <dt>License</dt>
+    <dd>GPL-2.0-or-later WITH GCC-exception-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/simonjwright/tcladashell">https://github.com/simonjwright/tcladashell</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">scripting</span><span class="tag">tcl</span><span class="tag">tk</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/libtcl/">libtcl</a>
+        <span class="dep-version">~8.6.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/libtk/">libtk</a>
+        <span class="dep-version">~8.6.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/cargv/">CArgv</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/chelper/">CHelper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl/">Tcl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada/">Tcl.Ada</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_assocdata/">Tcl.Ada.Generic_AssocData</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_asyncevents/">Tcl.Ada.Generic_AsyncEvents</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_callwhendeleted/">Tcl.Ada.Generic_CallWhenDeleted</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_channel/">Tcl.Ada.Generic_Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_channeldriver/">Tcl.Ada.Generic_ChannelDriver</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_channelhandler/">Tcl.Ada.Generic_ChannelHandler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_closehandler/">Tcl.Ada.Generic_CloseHandler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_command/">Tcl.Ada.Generic_Command</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_eventqueueandnotifier/">Tcl.Ada.Generic_EventQueueAndNotifier</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_exithandler/">Tcl.Ada.Generic_ExitHandler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_filehandler/">Tcl.Ada.Generic_FileHandler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_getopenfile/">Tcl.Ada.Generic_GetOpenFile</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_hash/">Tcl.Ada.Generic_Hash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_idle/">Tcl.Ada.Generic_Idle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_managestorage/">Tcl.Ada.Generic_ManageStorage</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_mathfunc/">Tcl.Ada.Generic_MathFunc</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_objcommand/">Tcl.Ada.Generic_ObjCommand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_pkgrequire/">Tcl.Ada.Generic_PkgRequire</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_stackchannel/">Tcl.Ada.Generic_StackChannel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_tcpchannel/">Tcl.Ada.Generic_TcpChannel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_timerhandler/">Tcl.Ada.Generic_TimerHandler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_trace/">Tcl.Ada.Generic_Trace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-ada-generic_tracevar/">Tcl.Ada.Generic_TraceVar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-async/">Tcl.Async</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-tk/">Tcl.Tk</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/tash/8.7.2/tcl-tk-ada/">Tcl.Tk.Ada</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

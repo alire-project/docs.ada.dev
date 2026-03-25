@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wioe5_ham2 — Ada/SPARK Documentation</title>
+  <meta name="description" content="Wio-E5 LoRa Transceiver Module Device Driver">
+  <meta name="keywords" content="Ada, SPARK, Alire, wioe5_ham2, embedded, linux, wioe5, lora, radio, wireless, ham, Wio_E5, Wioe5_Ham2_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "wioe5_ham2",
+"version": "1.23340.1",  "description": "Wio-E5 LoRa Transceiver Module Device Driver",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/wioe5_ham2/",
+  "codeRepository": "https://raw.githubusercontent.com/pmunts/alire-crates/e9ba76f0065303a6c855598f0b349766c77c7243/wioe5_ham2/wioe5_ham2-1.23340.1.tbz2"
+  ,"author": [{"@type": "Person", "name": "Philip Munts"}]
+  ,"license": "BSD-1-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">wioe5_ham2</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>wioe5_ham2</h1>
+    <span class="version-tag">1.23340.1</span>
+  </div>
+
+  <p class="crate-description">Wio-E5 LoRa Transceiver Module Device Driver</p>
+
+  <div class="long-description"># Introduction
+
+This crate provides the device driver package **Wio_E5.Ham2** for the
+Seeed Studio [Wio-E5 LoRa Transceiver
+Module](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module)
+operating in test *aka* P2P (so-called Peer to Peer or Point to Point)
+broadcast mode.
+
+See
+[WioE5LoRaP2P.pdf](https://repo.munts.com/libsimpleio/doc/WioE5LoRaP2P.pdf)
+for more information about the [LoRa wireless
+system](https://www.semtech.com/lora/what-is-lora) and operating the
+Wio-E5 module in P2P mode.
+
+**Wio_E5.Ham2** is derived from **Wio_E5.P2P** (see crate
+[wioe5_p2p](https://alire.ada.dev/crates/wioe5_p2p.html)). It reserves
+the first twenty-two bytes of the payload for address information to
+implement ***[Amateur
+Radio](https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service)
+Unicast Flavor #2***, which creates a amateur radio [Local Area
+Network](https://en.wikipedia.org/wiki/Local_area_network), operated
+under a *Technician* or higher license, in the [33-cm
+band](https://en.wikipedia.org/wiki/33-centimeter_band) (902 to 928 MHz
+in the United States, 915 to 928 MHz in New Zealand, and possible
+allocations in other [ITU Region
+2](https://w6hs.net/itu-region-2-member-countries) countries).
+
+*The code for this crate has been extracted from the [Linux Simple I/O
+Library project](https://github.com/pmunts/libsimpleio).*
+
+# API
+
+The API for this device driver is documented in the
+[Wio-E5.Ham2](https://github.com/pmunts/libsimpleio/blob/master/ada/devices/wioe5/wio_e5-ham2.ads)
+package specification.
+
+**Wio-E5.Ham2** is a generic package that must be instantiated with two
+**Positive** value parameters, for maximum payload size (1 to 241 bytes)
+and FIFO queue depth. The default values for the generic formal
+parameters will prove satisfactory for most purposes. Depending on what
+kind of data you are going to be sending, you might want reduce the
+maximum payload size to match some other protocol, such as 64 bytes for
+the [Remote I/O
+Protocol](https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf).
+
+# Minimal Test Program
+
+    WITH Wio_E5.Ham2;
+
+    PROCEDURE HelloWorld IS
+
+      PACKAGE LoRa IS NEW Wio_E5.Ham2;
+
+      dev : LoRa.Device;
+
+    BEGIN
+      dev := LoRa.Create(&#34;/dev/ttyUSB0&#34;, 115200, &#34;XX0XXX    &#34;, 1, 915.0);
+      dev.Send(&#34;Hello, World!&#34;, &#34;YY0YYY    &#34;, 1);
+      dev.Shutdown;
+    END HelloWorld;
+
+More example programs are available at:
+&lt;https://github.com/pmunts/libsimpleio/tree/master/ada/programs/wioe5/ham2&gt;.
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Philip Munts</dd>
+
+    <dt>License</dt>
+    <dd>BSD-1-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://raw.githubusercontent.com/pmunts/alire-crates/e9ba76f0065303a6c855598f0b349766c77c7243/wioe5_ham2/wioe5_ham2-1.23340.1.tbz2">https://raw.githubusercontent.com/pmunts/alire-crates/e9ba76f0065303a6c855598f0b349766c77c7243/wioe5_ham2/wioe5_ham2-1.23340.1.tbz2</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">linux</span><span class="tag">wioe5</span><span class="tag">lora</span><span class="tag">radio</span><span class="tag">wireless</span><span class="tag">ham</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wioe5_ham2/1.23340.1/wio_e5/">Wio_E5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wioe5_ham2/1.23340.1/wio_e5-ham2/">Wio_E5.Ham2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/wioe5_ham2/1.23340.1/wioe5_ham2_config/">Wioe5_Ham2_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

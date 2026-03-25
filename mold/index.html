@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mold — Ada/SPARK Documentation</title>
+  <meta name="description" content="Meta-variable Operations for Lean Development (cli)">
+  <meta name="keywords" content="Ada, SPARK, Alire, mold, template, template-engine, template-repo, Mold_Apply, Mold_CLI, Mold_Config, Mold_Show_Variables, Mold_Tools">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "mold",
+"version": "1.1.0",  "description": "Meta-variable Operations for Lean Development (cli)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/mold/",
+  "codeRepository": "https://github.com/rocher/mold"
+  ,"author": [{"@type": "Person", "name": "Francesc Rocher"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">mold</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>mold</h1>
+    <span class="version-tag">1.1.0</span>
+  </div>
+
+  <p class="crate-description">Meta-variable Operations for Lean Development (cli)</p>
+
+  <div class="long-description">[![Alire](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/mold.json)](https://alire.ada.dev/crates/mold.html)
+[![Alire CI/CD](https://img.shields.io/endpoint?url=https://alire-crate-ci.ada.dev/badges/mold.json)](https://alire-crate-ci.ada.dev/crates/mold.html)
+![unit-test](https://github.com/rocher/mold/actions/workflows/unit-test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/rocher/mold/graph/badge.svg?token=LB83SI4I0Y)](https://codecov.io/gh/rocher/mold)
+[![GitHub release](https://img.shields.io/github/release/rocher/mold.svg)](https://github.com/rocher/mold/releases/latest)
+[![License](https://img.shields.io/github/license/rocher/mold.svg?color=blue)](https://github.com/rocher/mold/blob/master/LICENSE)
+
+## Welcome to **Mold (cli)**
+
+&gt; **MOLD**: *Meta-variable Operations for Lean Development*
+
+Mold is a Template Processor, or Template Engine, to work with repository
+templates. The main motivation of Mold is to have repositories in GitHub used
+as template repositories to create new, customized repositories for other
+users.
+
+Main features supported in Mold include
+
+  * variable replacement in mold files (*.mold)
+
+  * for a given directory, variable replacement recursively for all mold files
+    in all subdirectories
+
+  * variable replacement in file names
+
+  * inclusion of other templates
+
+  * definition of variables with a simple TOML file
+
+  * predefined and custom text filters to easy text transformations
+
+  * predefined variables to use in templates
+
+  * support for optional and mandatory variables
+
+  * support for custom filter and variables
+
+Variable replacement can be specified as *normal*, *optional* or *mandatory*.
+For example, the variable `foo = &#34;bar&#34;` can be specified with `{{foo}}`,
+`{{?foo}}` (optional) or `{{#foo}}` (mandatory). The difference is the handling
+of errors when an undefined variable is encountered.
+
+All mold files must end with the extension `.mold`, for example
+`README.md.mold`. Destination files (with variables replaced) have the same
+name without the mold extension: `README.md`. This simplifies the work done in
+large subdirectories with few templates.
+
+This crate contains the Ada library and unit tests. For a CLI tool, please
+take a look at the crate `mold`.
+
+## Reference Guide
+
+Please visit [Mold documentation](https://rocher.github.io/mold) for more
+information.
+
+---
+## License
+MIT (c) 2023-2025 Francesc Rocher
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Francesc Rocher</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/rocher/mold">https://github.com/rocher/mold</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">template</span><span class="tag">template-engine</span><span class="tag">template-repo</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/clic/">clic</a>
+        <span class="dep-version">~0.3.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/mold_lib/">mold_lib</a>
+        <span class="dep-version">^2.3.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/simple_logging/">simple_logging</a>
+        <span class="dep-version">^1.2.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/mold/1.1.0/mold_apply/">Mold_Apply</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/mold/1.1.0/mold_cli/">Mold_CLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/mold/1.1.0/mold_config/">Mold_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/mold/1.1.0/mold_show_variables/">Mold_Show_Variables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/mold/1.1.0/mold_tools/">Mold_Tools</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

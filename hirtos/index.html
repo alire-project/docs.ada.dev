@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hirtos — Ada/SPARK Documentation</title>
+  <meta name="description" content="High-Integrity RTOS">
+  <meta name="keywords" content="Ada, SPARK, Alire, hirtos, rtos, Ada, Bit_Sized_Integer_Types, Generic_Execution_Stack, Generic_Linked_List, GNAT, HiRTOS, Hirtos_Config, HiRTOS_Config_Parameters, HiRTOS_Cpu_Arch_Interface, HiRTOS_Cpu_Arch_Parameters, HiRTOS_Cpu_Multi_Core_Interface, HiRTOS_Cpu_Startup_Interface, HiRTOS_Low_Level_Debug_Interface, HiRTOS_Platform_Interface, HiRTOS_Platform_Parameters, Interfaces, Memory_Utils, Number_Conversion_Utils, System, Uart_Driver">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "hirtos",
+"version": "2.0.0",  "description": "High-Integrity RTOS",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/hirtos/",
+  "codeRepository": "https://github.com/jgrivera67/HiRTOS"
+  ,"author": [{"@type": "Person", "name": "J. German Rivera"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">hirtos</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>hirtos</h1>
+    <span class="version-tag">2.0.0</span>
+  </div>
+
+  <p class="crate-description">High-Integrity RTOS</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>J. German Rivera</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/jgrivera67/HiRTOS">https://github.com/jgrivera67/HiRTOS</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">rtos</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/ada/">Ada</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/ada-assertions/">Ada.Assertions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/ada-exceptions/">Ada.Exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/bit_sized_integer_types/">Bit_Sized_Integer_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/generic_execution_stack/">Generic_Execution_Stack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/generic_linked_list/">Generic_Linked_List</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/gnat/">GNAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/gnat-source_info/">GNAT.Source_Info</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos/">HiRTOS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-condvar/">HiRTOS.Condvar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-debug/">HiRTOS.Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-interrupt_handling/">HiRTOS.Interrupt_Handling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-memory_protection/">HiRTOS.Memory_Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-mutex/">HiRTOS.Mutex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-thread/">HiRTOS.Thread</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos-timer/">HiRTOS.Timer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_config/">Hirtos_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_config_parameters/">HiRTOS_Config_Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface/">HiRTOS_Cpu_Arch_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-interrupt_controller/">HiRTOS_Cpu_Arch_Interface.Interrupt_Controller</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-interrupt_handling/">HiRTOS_Cpu_Arch_Interface.Interrupt_Handling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-interrupt_handling-arch_specific/">HiRTOS_Cpu_Arch_Interface.Interrupt_Handling.Arch_Specific</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-interrupts/">HiRTOS_Cpu_Arch_Interface.Interrupts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-memory_protection/">HiRTOS_Cpu_Arch_Interface.Memory_Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-system_registers/">HiRTOS_Cpu_Arch_Interface.System_Registers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-thread_context/">HiRTOS_Cpu_Arch_Interface.Thread_Context</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_interface-tick_timer/">HiRTOS_Cpu_Arch_Interface.Tick_Timer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_arch_parameters/">HiRTOS_Cpu_Arch_Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_multi_core_interface/">HiRTOS_Cpu_Multi_Core_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_cpu_startup_interface/">HiRTOS_Cpu_Startup_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_low_level_debug_interface/">HiRTOS_Low_Level_Debug_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_platform_interface/">HiRTOS_Platform_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/hirtos_platform_parameters/">HiRTOS_Platform_Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/interfaces/">Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/interfaces-c/">Interfaces.C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/memory_utils/">Memory_Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/number_conversion_utils/">Number_Conversion_Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system/">System</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-address_to_access_conversions/">System.Address_To_Access_Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-assertions/">System.Assertions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-fat_flt/">System.Fat_Flt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-fat_gen/">System.Fat_Gen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-fat_lflt/">System.Fat_LFlt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-fat_llf/">System.Fat_LLF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-machine_code/">System.Machine_Code</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-parameters/">System.Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-secondary_stack/">System.Secondary_Stack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-storage_elements/">System.Storage_Elements</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/system-unsigned_types/">System.Unsigned_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hirtos/2.0.0/uart_driver/">Uart_Driver</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

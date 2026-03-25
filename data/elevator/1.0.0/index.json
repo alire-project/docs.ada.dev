@@ -1,0 +1,81 @@
+{
+  "schema_version": "1",
+  "crate": "elevator",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:57:49Z",
+  "description": "A Simple Elevator System",
+  "authors": [
+    "Thai Son Hoang"
+  ],
+  "licenses": [
+    "CC-BY-SA-4.0"
+  ],
+  "tags": [
+    "elevator",
+    "teaching"
+  ],
+  "website": "https://github.com/ada-Soton/elevator",
+  "repository": {
+    "url": "https://github.com/ada-Soton/elevator",
+    "host": "github",
+    "commit": "b439645aabfe091eef46b3a3174e47ffa86e3930"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatprove",
+      "version": "^12.1.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Button_Package",
+      "id": "d8f0e0c2060d99ef",
+      "file": "button_package.json"
+    },
+    {
+      "name": "Cabin_Package",
+      "id": "9fd750792093520e",
+      "file": "cabin_package.json"
+    },
+    {
+      "name": "Controller_Package",
+      "id": "187acfd4e3aa9960",
+      "file": "controller_package.json"
+    },
+    {
+      "name": "Direction_Package",
+      "id": "23f26afcab4a149a",
+      "file": "direction_package.json"
+    },
+    {
+      "name": "Door_Package",
+      "id": "72a4f193223fed44",
+      "file": "door_package.json"
+    },
+    {
+      "name": "Elevator",
+      "id": "41762bcf88c5e714",
+      "file": "elevator.json"
+    },
+    {
+      "name": "Elevator_Config",
+      "id": "33754cdf2c8ad1f6",
+      "file": "elevator_config.json"
+    },
+    {
+      "name": "Floor_Package",
+      "id": "9128206ad20d9b2a",
+      "file": "floor_package.json"
+    },
+    {
+      "name": "Motor_Package",
+      "id": "7267e238e17f2744",
+      "file": "motor_package.json"
+    },
+    {
+      "name": "User_Package",
+      "id": "eb29718d00d0c091",
+      "file": "user_package.json"
+    }
+  ]
+}

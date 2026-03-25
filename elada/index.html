@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elada — Ada/SPARK Documentation</title>
+  <meta name="description" content="Expression Language Library (JSR245)">
+  <meta name="keywords" content="Ada, SPARK, Alire, elada, web, expression, expander, parser, EL">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "elada",
+"version": "1.8.8",  "description": "Expression Language Library (JSR245)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/elada/",
+  "codeRepository": "https://gitlab.com/stcarrez/ada-el"
+  ,"author": [{"@type": "Person", "name": "Stephane.Carrez@gmail.com"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">elada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>elada</h1>
+    <span class="version-tag">1.8.8</span>
+  </div>
+
+  <p class="crate-description">Expression Language Library (JSR245)</p>
+
+  <div class="long-description">[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-el/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-el/summary)
+[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-el/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-el/xunits)
+[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-el/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-el/summary)
+
+This Ada05 library provides the support for a simple Expression Language
+close to the Java Unified Expression Language (EL).
+
+The API provided by the EL library is inspired from the Java
+Unified Expression Language shared by the JSP 2.1 and JSF 1.2 technologies.
+See Expression Language specification in JSR245
+(https://jcp.org/en/jsr/summary?id=245)
+
+The EL expression is intensively used in web development applications built
+on top of various Java technologies but also on top of
+[Ada Web Application](https://gitlab.com/stcarrez/ada-awa)
+and [Ada Server Faces](https://gitlab.com/stcarrez/ada-asf).
+
+
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Stephane.Carrez@gmail.com</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/stcarrez/ada-el">https://gitlab.com/stcarrez/ada-el</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">web</span><span class="tag">expression</span><span class="tag">expander</span><span class="tag">parser</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/utilada/">utilada</a>
+        <span class="dep-version">^2.8.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el/">EL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-beans/">EL.Beans</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-contexts/">EL.Contexts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-contexts-default/">EL.Contexts.Default</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-contexts-properties/">EL.Contexts.Properties</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-contexts-tls/">EL.Contexts.TLS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-expressions/">EL.Expressions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-functions/">EL.Functions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-functions-default/">EL.Functions.Default</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-functions-namespaces/">EL.Functions.Namespaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods/">EL.Methods</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-func_1/">EL.Methods.Func_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-func_1-bind/">EL.Methods.Func_1.Bind</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-proc_1/">EL.Methods.Proc_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-proc_1-bind/">EL.Methods.Proc_1.Bind</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-proc_2/">EL.Methods.Proc_2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-proc_2-bind/">EL.Methods.Proc_2.Bind</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-proc_in/">EL.Methods.Proc_In</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-methods-proc_in-bind/">EL.Methods.Proc_In.Bind</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-utils/">EL.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-variables/">EL.Variables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/elada/1.8.8/el-variables-default/">EL.Variables.Default</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

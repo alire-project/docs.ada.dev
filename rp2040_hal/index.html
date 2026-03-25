@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rp2040_hal — Ada/SPARK Documentation</title>
+  <meta name="description" content="Drivers and HAL for the RP2040 micro-controller family">
+  <meta name="keywords" content="Ada, SPARK, Alire, rp2040_hal, embedded, nostd, rp2040, raspberrypi, drivers, RP, Rp2040_Hal_Config, RP2040_SVD, RP_Interrupts">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "rp2040_hal",
+"version": "2.7.0",  "description": "Drivers and HAL for the RP2040 micro-controller family",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/rp2040_hal/",
+  "codeRepository": "https://github.com/JeremyGrosser/rp2040_hal"
+  ,"author": [{"@type": "Person", "name": "Jeremy Grosser"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">rp2040_hal</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>rp2040_hal</h1>
+    <span class="version-tag">2.7.0</span>
+  </div>
+
+  <p class="crate-description">Drivers and HAL for the RP2040 micro-controller family</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Jeremy Grosser</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/JeremyGrosser/rp2040_hal">https://github.com/JeremyGrosser/rp2040_hal</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">nostd</span><span class="tag">rp2040</span><span class="tag">raspberrypi</span><span class="tag">drivers</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/atomic/">atomic</a>
+        <span class="dep-version">^1</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/cortex_m/">cortex_m</a>
+        <span class="dep-version">^1</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/gnat_arm_elf/">gnat_arm_elf</a>
+        <span class="dep-version">&gt;=14 &amp; /=15.1.2</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/hal/">hal</a>
+        <span class="dep-version">^1</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/usb_embedded/">usb_embedded</a>
+        <span class="dep-version">^1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp/">RP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-adc/">RP.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-clock/">RP.Clock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-device/">RP.Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-dma/">RP.DMA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-flash/">RP.Flash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-flash-cache/">RP.Flash.Cache</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-gpio/">RP.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-gpio-interrupts/">RP.GPIO.Interrupts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-i2c/">RP.I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-i2c_master/">RP.I2C_Master</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-interpolator/">RP.Interpolator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-multicore/">RP.Multicore</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-multicore-fifo/">RP.Multicore.FIFO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-multicore-spinlocks/">RP.Multicore.Spinlocks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio/">RP.PIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-audio_i2s/">RP.PIO.Audio_I2S</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-audio_i2s_pio/">RP.PIO.Audio_I2S_PIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-encoding/">RP.PIO.Encoding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-touch_sense/">RP.PIO.Touch_Sense</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-touch_sense_charge_pio/">RP.PIO.Touch_Sense_Charge_PIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-touch_sense_discharge_pio/">RP.PIO.Touch_Sense_Discharge_PIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-ws2812/">RP.PIO.WS2812</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pio-ws2812_pio/">RP.PIO.WS2812_PIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pwm/">RP.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-pwm-interrupts/">RP.PWM.Interrupts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-reset/">RP.Reset</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-rom/">RP.ROM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-rom-floating_point/">RP.ROM.Floating_Point</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-rtc/">RP.RTC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-spi/">RP.SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-timer/">RP.Timer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-timer-interrupts/">RP.Timer.Interrupts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-uart/">RP.UART</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-usb_device/">RP.USB_Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp-watchdog/">RP.Watchdog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_hal_config/">Rp2040_Hal_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd/">RP2040_SVD</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-adc/">RP2040_SVD.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-busctrl/">RP2040_SVD.BUSCTRL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-clocks/">RP2040_SVD.CLOCKS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-dma/">RP2040_SVD.DMA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-i2c/">RP2040_SVD.I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-interrupts/">RP2040_SVD.Interrupts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-io_bank0/">RP2040_SVD.IO_BANK0</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-io_qspi/">RP2040_SVD.IO_QSPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-pads_bank0/">RP2040_SVD.PADS_BANK0</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-pads_qspi/">RP2040_SVD.PADS_QSPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-pio/">RP2040_SVD.PIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-pll/">RP2040_SVD.PLL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-ppb/">RP2040_SVD.PPB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-psm/">RP2040_SVD.PSM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-pwm/">RP2040_SVD.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-resets/">RP2040_SVD.RESETS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-rosc/">RP2040_SVD.ROSC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-rtc/">RP2040_SVD.RTC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-sio/">RP2040_SVD.SIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-spi/">RP2040_SVD.SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-syscfg/">RP2040_SVD.SYSCFG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-sysinfo/">RP2040_SVD.SYSINFO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-tbman/">RP2040_SVD.TBMAN</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-timer/">RP2040_SVD.TIMER</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-uart/">RP2040_SVD.UART</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-usbctrl_dpram/">RP2040_SVD.USBCTRL_DPRAM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-usbctrl_regs/">RP2040_SVD.USBCTRL_REGS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-vreg_and_chip_reset/">RP2040_SVD.VREG_AND_CHIP_RESET</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-watchdog/">RP2040_SVD.WATCHDOG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-xip_ctrl/">RP2040_SVD.XIP_CTRL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-xip_ssi/">RP2040_SVD.XIP_SSI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp2040_svd-xosc/">RP2040_SVD.XOSC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/rp2040_hal/2.7.0/rp_interrupts/">RP_Interrupts</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

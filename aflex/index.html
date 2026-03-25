@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aflex — Ada/SPARK Documentation</title>
+  <meta name="description" content="An Ada Lexical Analyzer Generator">
+  <meta name="keywords" content="Ada, SPARK, Alire, aflex, parser, generator, grammar, Aflex_Scanner, ascan_DFA, ascan_IO, Ccl, Command_Line_Interface, Dfa, Ecs, External_File_Manager, Gen, Lex_Parser, Main_Body, Misc, Misc_Defs, Nfa, Parse_Tokens, scanner, Skeleton_Manager, Sym, Tblcmp, Template_Manager, Vstrings">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "aflex",
+"version": "1.7.0",  "description": "An Ada Lexical Analyzer Generator",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/aflex/",
+  "codeRepository": "https://github.com/Ada-France/aflex"
+  ,"author": [{"@type": "Person", "name": "John Self"}]
+  ,"license": "Unlicense"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li aria-current="page">aflex</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>aflex</h1>
+    <span class="version-tag">1.7.0</span>
+  </div>
+
+  <p class="crate-description">An Ada Lexical Analyzer Generator</p>
+
+  <div class="long-description">Aflex is a lexical analyzer generating tool similar to the Unix tool lex.
+
+The first implementation was written by John Self of the Arcadia project
+at the University of California, Irvine.  The last version that was released
+appeared to be the aflex 1.4a released in 1994.
+
+Aflex was used and improved by P2Ada, the Pascal to Ada translator.
+This version of Aflex is derived from the P2Ada aflex implementation
+released in August 2010.
+
+This version brings a number of improvements:
+
+- Aflex generates the spec and body files as separate files so that
+  there is no need to use gnatchop to split the DFA and IO files.
+- Aflex uses the lex file name to generate the package name and
+  it supports child package with the `%unit` directive.
+- Aflex supports reentrant scanner through the use of `%option reentrant`,
+  `%yyvar` and `%yydecl` directives.
+
+</div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>John Self</dd>
+
+    <dt>License</dt>
+    <dd>Unlicense</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Ada-France/aflex">https://github.com/Ada-France/aflex</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">parser</span><span class="tag">generator</span><span class="tag">grammar</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/aflex_scanner/">Aflex_Scanner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/ascan_dfa/">ascan_DFA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/ascan_io/">ascan_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/ccl/">Ccl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/command_line_interface/">Command_Line_Interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/dfa/">Dfa</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/ecs/">Ecs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/external_file_manager/">External_File_Manager</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/gen/">Gen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/lex_parser/">Lex_Parser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/main_body/">Main_Body</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/misc/">Misc</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/misc_defs/">Misc_Defs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/nfa/">Nfa</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/parse_tokens/">Parse_Tokens</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/scanner/">scanner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/skeleton_manager/">Skeleton_Manager</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/sym/">Sym</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/tblcmp/">Tblcmp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/template_manager/">Template_Manager</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/template_manager-templates/">Template_Manager.Templates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/aflex/1.7.0/vstrings/">Vstrings</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-03-25.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "ltp_305",
+  "version": "1.1.0",
+  "documented_at": "2026-03-04T16:56:16Z",
+  "description": "Driver for Pimoroni LED",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "led",
+    "rp2040",
+    "i2c"
+  ],
+  "website": "https://github.com/hgrodriguez/ltp_305",
+  "repository": {
+    "url": "https://github.com/hgrodriguez/ltp_305",
+    "host": "github",
+    "commit": "861fb30017acf0a3b86add4abfee358d564f373f"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Font",
+      "id": "795ea3efa43d0872",
+      "file": "font.json"
+    },
+    {
+      "name": "LTP_305",
+      "id": "94fec2f69125c148",
+      "file": "ltp_305.json"
+    },
+    {
+      "name": "Ltp_305_Config",
+      "id": "1ede0068543bf7ac",
+      "file": "ltp_305_config.json"
+    }
+  ]
+}
