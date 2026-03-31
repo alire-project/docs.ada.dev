@@ -95,10 +95,12 @@
     const q = input.value.trim().toLowerCase();
     let visible = 0;
     items.forEach(function (li) {
+      const descEl = li.querySelector('.crate-desc');
+      const descText = descEl ? descEl.textContent.toLowerCase() : '';
       const match = !q
         || li.dataset.name.includes(q)
         || (li.dataset.tags || '').includes(q)
-        || (li.querySelector('.crate-desc') || {}).textContent.toLowerCase().includes(q);
+        || descText.includes(q);
       li.hidden = !match;
       if (match) visible++;
     });
