@@ -37,6 +37,7 @@ from packaging.version import Version, InvalidVersion
 
 try:
     import jinja2
+    from markupsafe import Markup
 except ImportError:
     print(
         "Error: jinja2 is required. Install with: pip install jinja2",
@@ -243,7 +244,7 @@ def generate_static(
             "sane_lists",   # Better list handling
             "smarty",       # Smart quotes and dashes
         ])
-        return jinja2.Markup(md.convert(text))
+        return Markup(md.convert(text))
 
     env.filters["markdown"] = markdown_filter
 
