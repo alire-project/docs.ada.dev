@@ -59,7 +59,7 @@
   {% endif %}
 
   {% if m and m.long_description %}
-  <div class="long-description">{{ m.long_description }}</div>
+  <div class="long-description">{{ m.long_description | markdown }}</div>
   {% endif %}
 
   <dl class="meta-list">

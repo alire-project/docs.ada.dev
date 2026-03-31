@@ -44,6 +44,15 @@ except ImportError:
     )
     sys.exit(1)
 
+try:
+    import markdown
+except ImportError:
+    print(
+        "Error: markdown is required. Install with: pip install markdown",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
 _SCRIPTS_DIR = Path(__file__).resolve().parent
 _WEBSITE_DIR = _SCRIPTS_DIR.parent
 
@@ -222,6 +231,21 @@ def generate_static(
     )
     env.globals["base_url"] = base_url.rstrip("/")
     env.globals["now"] = datetime.now(timezone.utc).isoformat()
+
+    # Add markdown filter
+    def markdown_filter(text):
+        if not text:
+            return ""
+        # Use extensions similar to GitHub-flavored markdown
+        md = markdown.Markdown(extensions=[
+            "extra",        # Tables, fenced code blocks, etc.
+            "nl2br",        # Newline to <br>
+            "sane_lists",   # Better list handling
+            "smarty",       # Smart quotes and dashes
+        ])
+        return jinja2.Markup(md.convert(text))
+
+    env.filters["markdown"] = markdown_filter
 
     output_dir.mkdir(parents=True, exist_ok=True)
     pages_written = 0

@@ -41,6 +41,13 @@
   function renderMd(text) {
     if (!text) return '';
     if (typeof marked !== 'undefined') {
+      // Configure marked for GitHub-flavored markdown
+      marked.setOptions({
+        gfm: true,           // GitHub Flavored Markdown
+        breaks: true,        // Convert \n to <br>
+        headerIds: false,    // Don't add IDs to headers (cleaner output)
+        mangle: false        // Don't mangle email addresses
+      });
       return marked.parse(String(text));
     }
     // Plain-text fallback: escape HTML and preserve newlines.
