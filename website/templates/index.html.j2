@@ -47,7 +47,7 @@
 
   <div class="search-bar">
     <label for="crate-search" class="sr-only">Search crates</label>
-    <input id="crate-search" type="search" placeholder="Search crates…"
+    <input id="crate-search" type="search" placeholder="Search crates by name, tags, or description…"
            autocomplete="off" spellcheck="false">
     <span id="crate-count" class="search-count"></span>
   </div>
@@ -91,21 +91,95 @@
   const items = Array.from(list.querySelectorAll('.crate-item'));
   count.textContent = items.length + ' crate' + (items.length !== 1 ? 's' : '');
 
-  input.addEventListener('input', function () {
-    const q = input.value.trim().toLowerCase();
-    let visible = 0;
-    items.forEach(function (li) {
+  // Fuzzy matching: calculate similarity score between two strings
+  function fuzzyScore(str, query) {
+    str = str.toLowerCase();
+    query = query.toLowerCase();
+
+    // Exact match gets highest score
+    if (str === query) return 1000;
+    if (str.includes(query)) return 500 + (100 - str.indexOf(query));
+
+    // Fuzzy match: check how many query chars appear in order
+    let score = 0;
+    let strIdx = 0;
+    let queryIdx = 0;
+    let consecutiveMatches = 0;
+
+    while (strIdx < str.length && queryIdx < query.length) {
+      if (str[strIdx] === query[queryIdx]) {
+        score += 10 + consecutiveMatches * 5; // Bonus for consecutive matches
+        consecutiveMatches++;
+        queryIdx++;
+      } else {
+        consecutiveMatches = 0;
+      }
+      strIdx++;
+    }
+
+    // If we matched all query characters, it's a valid fuzzy match
+    if (queryIdx === query.length) {
+      return score;
+    }
+
+    return 0; // No match
+  }
+
+  // Search and rank results
+  function searchCrates(query) {
+    if (!query) {
+      // No query: show all items in original order
+      items.forEach(function (li) {
+        li.hidden = false;
+        li.style.order = '';
+      });
+      return items.length;
+    }
+
+    const results = items.map(function (li) {
+      const name = li.dataset.name || '';
+      const tags = li.dataset.tags || '';
       const descEl = li.querySelector('.crate-desc');
-      const descText = descEl ? descEl.textContent.toLowerCase() : '';
-      const match = !q
-        || li.dataset.name.includes(q)
-        || (li.dataset.tags || '').includes(q)
-        || descText.includes(q);
-      li.hidden = !match;
-      if (match) visible++;
+      const desc = descEl ? descEl.textContent : '';
+
+      // Calculate scores for different fields
+      const nameScore = fuzzyScore(name, query) * 3; // Name matches worth 3x
+      const tagScore = fuzzyScore(tags, query) * 2;  // Tag matches worth 2x
+      const descScore = fuzzyScore(desc, query);      // Description matches worth 1x
+
+      const totalScore = nameScore + tagScore + descScore;
+
+      return { element: li, score: totalScore };
     });
-    count.textContent = visible + ' crate' + (visible !== 1 ? 's' : '');
-    none.hidden = visible > 0;
+
+    // Sort by score (highest first) and show/hide based on match
+    let visible = 0;
+    results
+      .sort(function (a, b) { return b.score - a.score; })
+      .forEach(function (result, index) {
+        if (result.score > 0) {
+          result.element.hidden = false;
+          result.element.style.order = index; // Reorder by relevance
+          visible++;
+        } else {
+          result.element.hidden = true;
+          result.element.style.order = '';
+        }
+      });
+
+    return visible;
+  }
+
+  // Debounce search for performance
+  let searchTimeout;
+  input.addEventListener('input', function () {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(function () {
+      const q = input.value.trim();
+      const visible = searchCrates(q);
+      count.textContent = visible + ' crate' + (visible !== 1 ? 's' : '');
+      none.hidden = visible > 0;
+    }, 150); // 150ms debounce
   });
 }());
 </script>
