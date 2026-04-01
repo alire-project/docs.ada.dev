@@ -1,0 +1,293 @@
+{
+  "schema_version": "1",
+  "crate": "langkit_support",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T16:53:12Z",
+  "description": "Runtime support library for Langkit-generated libraries",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [],
+  "website": "https://github.com/AdaCore/langkit",
+  "repository": {
+    "url": "https://github.com/AdaCore/langkit",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "adasat",
+      "version": "^26"
+    },
+    {
+      "crate": "gnatcoll",
+      "version": "^26"
+    },
+    {
+      "crate": "gnatcoll_gmp",
+      "version": "^26"
+    },
+    {
+      "crate": "gnatcoll_iconv",
+      "version": "^26"
+    },
+    {
+      "crate": "prettier_ada",
+      "version": "^26"
+    }
+  ],
+  "units": [
+    {
+      "name": "Langkit_Support",
+      "id": "471e4a32dd364d0d",
+      "file": "langkit_support.json"
+    },
+    {
+      "name": "Langkit_Support.Adalog",
+      "id": "4d5b9ce1d0ce2148",
+      "file": "langkit_support-adalog.json"
+    },
+    {
+      "name": "Langkit_Support.Adalog.Debug",
+      "id": "801e5b853382f022",
+      "file": "langkit_support-adalog-debug.json"
+    },
+    {
+      "name": "Langkit_Support.Adalog.Generic_Main_Support",
+      "id": "6652248a633cd560",
+      "file": "langkit_support-adalog-generic_main_support.json"
+    },
+    {
+      "name": "Langkit_Support.Adalog.Logic_Var",
+      "id": "ca0212219442f138",
+      "file": "langkit_support-adalog-logic_var.json"
+    },
+    {
+      "name": "Langkit_Support.Adalog.Solver",
+      "id": "47f51a1c57adb437",
+      "file": "langkit_support-adalog-solver.json"
+    },
+    {
+      "name": "Langkit_Support.Adalog.Solver_Interface",
+      "id": "0cce101a31296354",
+      "file": "langkit_support-adalog-solver_interface.json"
+    },
+    {
+      "name": "Langkit_Support.Array_Utils",
+      "id": "4b7ec694abc564f9",
+      "file": "langkit_support-array_utils.json"
+    },
+    {
+      "name": "Langkit_Support.Boxes",
+      "id": "2ad681a056bf24bc",
+      "file": "langkit_support-boxes.json"
+    },
+    {
+      "name": "Langkit_Support.Bump_Ptr_Vectors",
+      "id": "7397fcf56d961c33",
+      "file": "langkit_support-bump_ptr_vectors.json"
+    },
+    {
+      "name": "Langkit_Support.Cheap_Sets",
+      "id": "2082e45253e524e0",
+      "file": "langkit_support-cheap_sets.json"
+    },
+    {
+      "name": "Langkit_Support.Diagnostics",
+      "id": "b43a6695685a8d29",
+      "file": "langkit_support-diagnostics.json"
+    },
+    {
+      "name": "Langkit_Support.Diagnostics.Output",
+      "id": "19e538621a10d70b",
+      "file": "langkit_support-diagnostics-output.json"
+    },
+    {
+      "name": "Langkit_Support.Errors",
+      "id": "998e7f58de34be9e",
+      "file": "langkit_support-errors.json"
+    },
+    {
+      "name": "Langkit_Support.Errors.Introspection",
+      "id": "54a126cd6a89f42b",
+      "file": "langkit_support-errors-introspection.json"
+    },
+    {
+      "name": "Langkit_Support.Errors.Rewriting",
+      "id": "7bf36b64cede5287",
+      "file": "langkit_support-errors-rewriting.json"
+    },
+    {
+      "name": "Langkit_Support.Errors.Unparsing",
+      "id": "eff64818dde8c00c",
+      "file": "langkit_support-errors-unparsing.json"
+    },
+    {
+      "name": "Langkit_Support.File_Readers",
+      "id": "43a7372d9b120530",
+      "file": "langkit_support-file_readers.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_API",
+      "id": "73a94cabbd9ea958",
+      "file": "langkit_support-generic_api.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_API.Analysis",
+      "id": "7810fe6f24536950",
+      "file": "langkit_support-generic_api-analysis.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_API.Introspection",
+      "id": "f7c99e463a85f856",
+      "file": "langkit_support-generic_api-introspection.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_API.Rewriting",
+      "id": "f90d0d42bdd67fb7",
+      "file": "langkit_support-generic_api-rewriting.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_API.Unparsing",
+      "id": "06a54d9b8053ff9a",
+      "file": "langkit_support-generic_api-unparsing.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_Bump_Ptr",
+      "id": "e706d8fa9b5a3187",
+      "file": "langkit_support-generic_bump_ptr.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_Bump_Ptr.Alloc",
+      "id": "e8e85087403e922d",
+      "file": "langkit_support-generic_bump_ptr-alloc.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_Bump_Ptr.Array_Alloc",
+      "id": "ab546245223cf2d8",
+      "file": "langkit_support-generic_bump_ptr-array_alloc.json"
+    },
+    {
+      "name": "Langkit_Support.Generic_Bump_Ptr.Tagged_Alloc",
+      "id": "8c175e22b939252a",
+      "file": "langkit_support-generic_bump_ptr-tagged_alloc.json"
+    },
+    {
+      "name": "Langkit_Support.Hashes",
+      "id": "2128fa49ef64db5a",
+      "file": "langkit_support-hashes.json"
+    },
+    {
+      "name": "Langkit_Support.Images",
+      "id": "0c3ae6cf056cdf03",
+      "file": "langkit_support-images.json"
+    },
+    {
+      "name": "Langkit_Support.Internal",
+      "id": "1a82d144777b9006",
+      "file": "langkit_support-internal.json"
+    },
+    {
+      "name": "Langkit_Support.Internal.Analysis",
+      "id": "db20bb7640c94725",
+      "file": "langkit_support-internal-analysis.json"
+    },
+    {
+      "name": "Langkit_Support.Internal.Conversions",
+      "id": "7c20d4c8d44166a9",
+      "file": "langkit_support-internal-conversions.json"
+    },
+    {
+      "name": "Langkit_Support.Internal.Descriptor",
+      "id": "161e5e9b5a3dc89a",
+      "file": "langkit_support-internal-descriptor.json"
+    },
+    {
+      "name": "Langkit_Support.Internal.Introspection",
+      "id": "cbf9489204aaee7a",
+      "file": "langkit_support-internal-introspection.json"
+    },
+    {
+      "name": "Langkit_Support.Internal.Unparsing",
+      "id": "04b8a17945ff10ed",
+      "file": "langkit_support-internal-unparsing.json"
+    },
+    {
+      "name": "Langkit_Support.Iterators",
+      "id": "625cf5054275ccac",
+      "file": "langkit_support-iterators.json"
+    },
+    {
+      "name": "Langkit_Support.Lexical_Envs",
+      "id": "4a30d40b1b1c009a",
+      "file": "langkit_support-lexical_envs.json"
+    },
+    {
+      "name": "Langkit_Support.Lexical_Envs_Impl",
+      "id": "8dcef5b050c9fcd1",
+      "file": "langkit_support-lexical_envs_impl.json"
+    },
+    {
+      "name": "Langkit_Support.Names",
+      "id": "e1cf5c11c439f9dd",
+      "file": "langkit_support-names.json"
+    },
+    {
+      "name": "Langkit_Support.Names.Maps",
+      "id": "61acfe072850c8aa",
+      "file": "langkit_support-names-maps.json"
+    },
+    {
+      "name": "Langkit_Support.Packrat",
+      "id": "b125dfd4c7b006ae",
+      "file": "langkit_support-packrat.json"
+    },
+    {
+      "name": "Langkit_Support.Slocs",
+      "id": "603e09a7eb4e4c82",
+      "file": "langkit_support-slocs.json"
+    },
+    {
+      "name": "Langkit_Support.Symbols",
+      "id": "833f03439439d8a0",
+      "file": "langkit_support-symbols.json"
+    },
+    {
+      "name": "Langkit_Support.Symbols.Precomputed",
+      "id": "4fbff6ed2fe64897",
+      "file": "langkit_support-symbols-precomputed.json"
+    },
+    {
+      "name": "Langkit_Support.Text",
+      "id": "5f901d0b3248dd38",
+      "file": "langkit_support-text.json"
+    },
+    {
+      "name": "Langkit_Support.Text.Chars",
+      "id": "a81b530014904275",
+      "file": "langkit_support-text-chars.json"
+    },
+    {
+      "name": "Langkit_Support.Token_Data_Handlers",
+      "id": "bb589a3283f58d67",
+      "file": "langkit_support-token_data_handlers.json"
+    },
+    {
+      "name": "Langkit_Support.Tree_Traversal_Iterator",
+      "id": "5ea5688d920c901e",
+      "file": "langkit_support-tree_traversal_iterator.json"
+    },
+    {
+      "name": "Langkit_Support.Types",
+      "id": "84cb81f336dd2dae",
+      "file": "langkit_support-types.json"
+    },
+    {
+      "name": "Langkit_Support.Vectors",
+      "id": "146855de9ccdb8cf",
+      "file": "langkit_support-vectors.json"
+    }
+  ]
+}

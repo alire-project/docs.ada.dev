@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "svd2ada",
+  "version": "0.1.0",
+  "failed_at": "2026-03-06T02:59:36Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

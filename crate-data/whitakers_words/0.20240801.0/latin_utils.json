@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"whitakers_words","version":"0.20240801.0","id":"0d72f943a9ba0816","name":"Latin_Utils","qualified_name":"Latin_Utils","kind":"ada_package","location":{"file":"src/latin_utils/latin_utils.ads","line":21,"column":9},"code":"package Latin_Utils","documentation":{"description":"-------------------------------------------------------------------------"}}

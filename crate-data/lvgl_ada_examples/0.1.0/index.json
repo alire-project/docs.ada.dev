@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "lvgl_ada_examples",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:57:11Z",
+  "description": "Examples for the LVGL embedded GUI framework Ada binding",
+  "authors": [],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "gui",
+    "lvgl"
+  ],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/lvgl-ada-examples",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "lvgl_ada",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "lvgl_ada_simulator",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "LV_Conf",
+      "id": "dbc8bb57329af7cc",
+      "file": "lv_conf.json"
+    },
+    {
+      "name": "Test_Theme_1",
+      "id": "04473dfb1033e942",
+      "file": "test_theme_1.json"
+    }
+  ]
+}

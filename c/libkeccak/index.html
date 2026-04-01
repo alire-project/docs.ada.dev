@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>libkeccak — Ada/SPARK Documentation</title>
+  <meta name="description" content="SHA-3 and related algorithms">
+  <meta name="keywords" content="Ada, SPARK, Alire, libkeccak, spark, cryptography, security, hash, sha3, keccak, gimli, ascon, shake, cshake, kmac, tuplehash, parallelhash, kangarootwelve, Ascon, CSHAKE, Gimli, KangarooTwelve, Keccak, Ketje, KMAC, MarsupilamiFourteen, Parallel_Hash, RawSHAKE, SHA3, SHAKE, Tuple_Hash">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "libkeccak",
+"version": "3.0.0",  "description": "SHA-3 and related algorithms",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/libkeccak/",
+  "codeRepository": "https://github.com/damaki/libkeccak"
+  ,"author": [{"@type": "Person", "name": "Daniel King"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">libkeccak</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>libkeccak</h1>
+    <span class="version-tag">3.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="3.0.0">3.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="3.0.0" selected>3.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">SHA-3 and related algorithms</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Daniel King</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/damaki/libkeccak">https://github.com/damaki/libkeccak</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">spark</span><span class="tag">cryptography</span><span class="tag">security</span><span class="tag">hash</span><span class="tag">sha3</span><span class="tag">keccak</span><span class="tag">gimli</span><span class="tag">ascon</span><span class="tag">shake</span><span class="tag">cshake</span><span class="tag">kmac</span><span class="tag">tuplehash</span><span class="tag">parallelhash</span><span class="tag">kangarootwelve</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/ascon/">Ascon</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/ascon-permutations/">Ascon.Permutations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/cshake/">CSHAKE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/cshake-implementation/">CSHAKE.Implementation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/gimli/">Gimli</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/kangarootwelve/">KangarooTwelve</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak/">Keccak</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-arch/">Keccak.Arch</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_cshake/">Keccak.Generic_CSHAKE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_duplex/">Keccak.Generic_Duplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_hash/">Keccak.Generic_Hash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_kangarootwelve/">Keccak.Generic_KangarooTwelve</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf/">Keccak.Generic_KeccakF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf-bit_lanes/">Keccak.Generic_KeccakF.Bit_Lanes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf-byte_lanes/">Keccak.Generic_KeccakF.Byte_Lanes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf-byte_lanes-twisted/">Keccak.Generic_KeccakF.Byte_Lanes.Twisted</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf-lane_complementing_permutation/">Keccak.Generic_KeccakF.Lane_Complementing_Permutation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf-optimized_permutation/">Keccak.Generic_KeccakF.Optimized_Permutation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_keccakf-reference_permutation/">Keccak.Generic_KeccakF.Reference_Permutation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_kmac/">Keccak.Generic_KMAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_monkeyduplex/">Keccak.Generic_MonkeyDuplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_monkeywrap/">Keccak.Generic_MonkeyWrap</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_cshake/">Keccak.Generic_Parallel_CSHAKE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_hash/">Keccak.Generic_Parallel_Hash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_keccakf/">Keccak.Generic_Parallel_KeccakF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_permutation_parallel_fallback/">Keccak.Generic_Parallel_Permutation_Parallel_Fallback</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_permutation_serial_fallback/">Keccak.Generic_Parallel_Permutation_Serial_Fallback</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_sponge/">Keccak.Generic_Parallel_Sponge</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_parallel_xof/">Keccak.Generic_Parallel_XOF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_sponge/">Keccak.Generic_Sponge</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_tuple_hash/">Keccak.Generic_Tuple_Hash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-generic_xof/">Keccak.Generic_XOF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_100/">Keccak.Keccak_100</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_100-rounds_12/">Keccak.Keccak_100.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_100-rounds_16/">Keccak.Keccak_100.Rounds_16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_1600/">Keccak.Keccak_1600</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_1600-rounds_12/">Keccak.Keccak_1600.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_1600-rounds_14/">Keccak.Keccak_1600.Rounds_14</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_1600-rounds_24/">Keccak.Keccak_1600.Rounds_24</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_200/">Keccak.Keccak_200</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_200-rounds_12/">Keccak.Keccak_200.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_200-rounds_18/">Keccak.Keccak_200.Rounds_18</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_25/">Keccak.Keccak_25</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_25-rounds_12/">Keccak.Keccak_25.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_400/">Keccak.Keccak_400</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_400-rounds_12/">Keccak.Keccak_400.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_400-rounds_20/">Keccak.Keccak_400.Rounds_20</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_50/">Keccak.Keccak_50</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_50-rounds_12/">Keccak.Keccak_50.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_50-rounds_14/">Keccak.Keccak_50.Rounds_14</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_800/">Keccak.Keccak_800</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_800-rounds_12/">Keccak.Keccak_800.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-keccak_800-rounds_22/">Keccak.Keccak_800.Rounds_22</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-padding/">Keccak.Padding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-parallel_keccak_1600/">Keccak.Parallel_Keccak_1600</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-parallel_keccak_1600-rounds_12/">Keccak.Parallel_Keccak_1600.Rounds_12</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-parallel_keccak_1600-rounds_14/">Keccak.Parallel_Keccak_1600.Rounds_14</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-parallel_keccak_1600-rounds_24/">Keccak.Parallel_Keccak_1600.Rounds_24</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-types/">Keccak.Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/keccak-util/">Keccak.Util</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/ketje/">Ketje</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/ketje-implementation/">Ketje.Implementation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/kmac/">KMAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/marsupilamifourteen/">MarsupilamiFourteen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/parallel_hash/">Parallel_Hash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/parallel_hash-implementation/">Parallel_Hash.Implementation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/rawshake/">RawSHAKE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/sha3/">SHA3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/shake/">SHAKE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libkeccak/3.0.0/tuple_hash/">Tuple_Hash</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

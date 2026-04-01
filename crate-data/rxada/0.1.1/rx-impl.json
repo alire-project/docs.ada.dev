@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"rxada","version":"0.1.1","id":"7b43107dbbd5cf97","name":"Rx.Impl","qualified_name":"Rx.Impl","kind":"ada_package","location":{"file":"src/priv/rx-impl.ads","line":1,"column":9},"code":"package Rx.Impl","documentation":{"description":"Root for implementation helper packages"}}

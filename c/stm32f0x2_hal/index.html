@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>stm32f0x2_hal — Ada/SPARK Documentation</title>
+  <meta name="description" content="Drivers and HAL for stm32f0x2 mcu family">
+  <meta name="keywords" content="Ada, SPARK, Alire, stm32f0x2_hal, embedded, stm32f0, nostd, drivers, STM32, STM32_SVD">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "stm32f0x2_hal",
+"version": "0.1.0",  "description": "Drivers and HAL for stm32f0x2 mcu family",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/stm32f0x2_hal/",
+  "codeRepository": "https://github.com/dkm/stm32f0x2_hal-ada"
+  ,"author": [{"@type": "Person", "name": "AdaCore"},{"@type": "Person", "name": "Marc Poulhi\u00e8s"}]
+  ,"license": "GPL-3.0-or-later AND BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">stm32f0x2_hal</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>stm32f0x2_hal</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Drivers and HAL for stm32f0x2 mcu family</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>AdaCore, Marc Poulhiès</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later AND BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/dkm/stm32f0x2_hal-ada">https://github.com/dkm/stm32f0x2_hal-ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">stm32f0</span><span class="tag">nostd</span><span class="tag">drivers</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cortex_m/">cortex_m</a>
+        <span class="dep-version">~0.5</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnat_arm_elf/">gnat_arm_elf</a>
+        <span class="dep-version">^12</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hal/">hal</a>
+        <span class="dep-version">~0.3</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/usb_embedded/">usb_embedded</a>
+        <span class="dep-version">~0.3</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32/">STM32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-device/">STM32.Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-exti/">STM32.EXTI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-gpio/">STM32.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-rcc/">STM32.RCC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-spi/">STM32.SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-syscfg/">STM32.SYSCFG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-timers/">STM32.Timers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-usarts/">STM32.USARTs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-usb_btable/">STM32.USB_Btable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-usb_device/">STM32.USB_Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32-usb_serialtrace/">STM32.USB_Serialtrace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd/">STM32_SVD</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-adc/">STM32_SVD.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-can/">STM32_SVD.CAN</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-cec/">STM32_SVD.CEC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-crc/">STM32_SVD.CRC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-crs/">STM32_SVD.CRS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-dac/">STM32_SVD.DAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-dbgmcu/">STM32_SVD.DBGMCU</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-dma/">STM32_SVD.DMA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-exti/">STM32_SVD.EXTI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-flash/">STM32_SVD.Flash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-gpio/">STM32_SVD.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-i2c/">STM32_SVD.I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-iwdg/">STM32_SVD.IWDG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-nvic/">STM32_SVD.NVIC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-pwr/">STM32_SVD.PWR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-rcc/">STM32_SVD.RCC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-rtc/">STM32_SVD.RTC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-scb/">STM32_SVD.SCB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-spi/">STM32_SVD.SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-stk/">STM32_SVD.STK</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-syscfg/">STM32_SVD.SYSCFG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-tim/">STM32_SVD.TIM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-tsc/">STM32_SVD.TSC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-usart/">STM32_SVD.USART</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-usb/">STM32_SVD.USB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/stm32f0x2_hal/0.1.0/stm32_svd-wwdg/">STM32_SVD.WWDG</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

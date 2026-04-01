@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>atari_atr_tools — Ada/SPARK Documentation</title>
+  <meta name="description" content="Cross-platform tool for ATR disk images for Atari 8-bit systems">
+  <meta name="keywords" content="Ada, SPARK, Alire, atari_atr_tools, atari, tools, retrocomputing, ada-2022, Atari_Atr_Tools_Config, Atr_Tools">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "atari_atr_tools",
+"version": "1.5.1",  "description": "Cross-platform tool for ATR disk images for Atari 8-bit systems",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/atari_atr_tools/",
+  "codeRepository": "https://sourceforge.net/projects/tutorial-6502"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">atari_atr_tools</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>atari_atr_tools</h1>
+    <span class="version-tag">1.5.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.5.1">1.5.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.5.1" selected>1.5.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Cross-platform tool for ATR disk images for Atari 8-bit systems</p>
+
+  <div class="long-description"><p>Atari ATR Tools is a versatile, cross-platform utility written in Ada 2022 for managing ATR disk image files used by Atari 8-bit emulators (e.g., Altirra, Atari800) and hardware add-ons like SIO2PC. Unlike most existing tools, which are Windows-only, this tool runs seamlessly on macOS, Linux, and Windows, making it ideal for retro computing enthusiasts across all major platforms.</p>
+<p>Key features include:</p>
+<p><strong>Header Analysis</strong>: Display detailed metadata of ATR files, including sector<br />
+size, disk density, track count, and boot sector presence.</p>
+<pre><code class="language-sh">  &gt; atr_tools-main --print-header test-DD-DS-80.atr
+  File name        : test-DD-DS-80.atr
+  Magic            :      16#296#
+  Paragraphs       :        46056
+  Sector size      :          256
+  Flags            :         2#1#
+  Bad Sectors      :            0
+  Unused           :        16#0#
+  Sectors          :         2880
+  Bytes            :       736896
+  Boot Sectors     : true
+  Floppy disk double density, double sided, 80 track
+</code></pre>
+<p><strong>Floppy Image Creation</strong>: Format and create ATR files for various disk<br />
+configurations (e.g., single-sided, double-density, 80 tracks).</p>
+<pre><code class="language-sh">&gt; atr_tools-main --verbose --format-floppy --density=DD --side=SS --track=80 test-DD-SS-80.atr
+File created     : test-DD-SS-80.atr
+Sector size      :          256
+Sector per track :           18
+Tracks per side  :           80
+Sides per disk   :            1
+</code></pre>
+<p>The tool includes a comprehensive test suite to ensure reliability across platforms and configurations. Source code and tests are available on SourceForge. Detailed GNATdoc documentation can be found at <a href="https://tutorial-6502.sourceforge.io/gnatdoc/atr_tools/index.html">6502 Tutorial</a>.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/tutorial-6502">https://sourceforge.net/projects/tutorial-6502</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">atari</span><span class="tag">tools</span><span class="tag">retrocomputing</span><span class="tag">ada-2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^6.3.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atari_atr_tools/1.5.1/atari_atr_tools_config/">Atari_Atr_Tools_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atari_atr_tools/1.5.1/atr_tools/">Atr_Tools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atari_atr_tools/1.5.1/atr_tools-ape_file_header/">Atr_Tools.APE_File_Header</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atari_atr_tools/1.5.1/atr_tools-commandline/">Atr_Tools.CommandLine</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atari_atr_tools/1.5.1/atr_tools-file_body/">Atr_Tools.File_Body</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atari_atr_tools/1.5.1/atr_tools-file_header/">Atr_Tools.File_Header</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

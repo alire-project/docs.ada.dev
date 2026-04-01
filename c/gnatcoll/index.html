@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gnatcoll — Ada/SPARK Documentation</title>
+  <meta name="description" content="GNAT Components Collection - Core packages">
+  <meta name="keywords" content="Ada, SPARK, Alire, gnatcoll, gnatcoll, json, email, refcount, vfs">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "gnatcoll",
+"version": "26.0.0",  "description": "GNAT Components Collection - Core packages",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/gnatcoll/",
+  "codeRepository": "https://github.com/AdaCore/gnatcoll-core"
+  ,"author": [{"@type": "Person", "name": "AdaCore"}]
+  ,"license": "GPL-3.0-or-later WITH GCC-exception-3.1"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">gnatcoll</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>gnatcoll</h1>
+    <span class="version-tag">26.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="26.0.0">26.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="26.0.0" selected>26.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">GNAT Components Collection - Core packages</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>AdaCore</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later WITH GCC-exception-3.1</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/AdaCore/gnatcoll-core">https://github.com/AdaCore/gnatcoll-core</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">gnatcoll</span><span class="tag">json</span><span class="tag">email</span><span class="tag">refcount</span><span class="tag">vfs</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll_minimal/">gnatcoll_minimal</a>
+        <span class="dep-version">~26.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-arg_lists/">GNATCOLL.Arg_Lists</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-buffer/">GNATCOLL.Buffer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-config/">GNATCOLL.Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-directed_graph/">GNATCOLL.Directed_Graph</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-email/">GNATCOLL.Email</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-email-mailboxes/">GNATCOLL.Email.Mailboxes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-email-parser/">GNATCOLL.Email.Parser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-email-utils/">GNATCOLL.Email.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-file_indexes/">GNATCOLL.File_Indexes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-file_paths/">GNATCOLL.File_Paths</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-formatters/">GNATCOLL.Formatters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-geometry/">GNATCOLL.Geometry</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-hash/">GNATCOLL.Hash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-hash-blake3/">GNATCOLL.Hash.Blake3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-hash-xxhash/">GNATCOLL.Hash.xxHash</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-json/">GNATCOLL.JSON</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-mmap/">GNATCOLL.Mmap</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-mmap-data_getters/">GNATCOLL.Mmap.Data_Getters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-mmap-system/">GNATCOLL.Mmap.System</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse/">GNATCOLL.Opt_Parse</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-misc_parsers/">GNATCOLL.Opt_Parse.Misc_Parsers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-misc_parsers-parse_indexed_option_list/">GNATCOLL.Opt_Parse.Misc_Parsers.Parse_Indexed_Option_List</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-parse_enum_option/">GNATCOLL.Opt_Parse.Parse_Enum_Option</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-parse_flag/">GNATCOLL.Opt_Parse.Parse_Flag</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-parse_option/">GNATCOLL.Opt_Parse.Parse_Option</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-parse_option_list/">GNATCOLL.Opt_Parse.Parse_Option_List</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-parse_positional_arg/">GNATCOLL.Opt_Parse.Parse_Positional_Arg</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-opt_parse-parse_positional_arg_list/">GNATCOLL.Opt_Parse.Parse_Positional_Arg_List</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os/">GNATCOLL.OS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-constants/">GNATCOLL.OS.Constants</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-dir/">GNATCOLL.OS.Dir</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-dir_types/">GNATCOLL.OS.Dir_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-fs/">GNATCOLL.OS.FS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-fsutil/">GNATCOLL.OS.FSUtil</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-libc/">GNATCOLL.OS.Libc</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-libc-dirent/">GNATCOLL.OS.Libc.Dirent</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-libc-spawn/">GNATCOLL.OS.Libc.Spawn</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-libc-stat/">GNATCOLL.OS.Libc.Stat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-libc-utime/">GNATCOLL.OS.Libc.Utime</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-libc_constants/">GNATCOLL.OS.Libc_Constants</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-process/">GNATCOLL.OS.Process</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-process_types/">GNATCOLL.OS.Process_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-random/">GNATCOLL.OS.Random</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-stat/">GNATCOLL.OS.Stat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-os-temp/">GNATCOLL.OS.Temp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-paragraph_filling/">GNATCOLL.Paragraph_Filling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-plugins/">GNATCOLL.Plugins</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-pools/">GNATCOLL.Pools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-random/">GNATCOLL.Random</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-remote/">GNATCOLL.Remote</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-remote-db/">GNATCOLL.Remote.Db</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-scripts/">GNATCOLL.Scripts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-scripts-impl/">GNATCOLL.Scripts.Impl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-scripts-utils/">GNATCOLL.Scripts.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-string_builders/">GNATCOLL.String_Builders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-string_list_builders/">GNATCOLL.String_List_Builders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-strings_impl/">GNATCOLL.Strings_Impl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-strings_impl-strings/">GNATCOLL.Strings_Impl.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-symbols/">GNATCOLL.Symbols</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-templates/">GNATCOLL.Templates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-terminal/">GNATCOLL.Terminal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-traces/">GNATCOLL.Traces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-utils/">GNATCOLL.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-vfs/">GNATCOLL.VFS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-vfs_types/">GNATCOLL.VFS_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-vfs_utils/">GNATCOLL.VFS_Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-wstring_builders/">GNATCOLL.WString_Builders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnatcoll/26.0.0/gnatcoll-wstring_list_builders/">GNATCOLL.WString_List_Builders</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "saatana",
+  "version": "2.0.2",
+  "documented_at": "2026-03-06T02:56:38Z",
+  "description": "SPARK/Ada Algorithms Targeting Advanced Network Applications",
+  "long_description": "Saatana - SPARK/Ada Algorithms Targeting Advanced Network Applications\nA collection of cryptographic algorithms, proven for correctness in SPARK.\n\nCurrently contains [![Phelix](https://www.schneier.com/academic/archives/2005/01/phelix.html)](https://www.schneier.com/academic/archives/2005/01/phelix.html)\n",
+  "authors": [
+    "Vinzent Saranen"
+  ],
+  "licenses": [
+    "WTFPL"
+  ],
+  "tags": [
+    "cryptography",
+    "spark"
+  ],
+  "website": "https://github.heisenbug.eu/Saatana",
+  "repository": {
+    "url": "https://github.com/HeisenbugLtd/Saatana",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Saatana",
+      "id": "bb2cacd9c4565a14",
+      "file": "saatana.json"
+    },
+    {
+      "name": "Saatana.Crypto",
+      "id": "0412ef416ac30102",
+      "file": "saatana-crypto.json"
+    },
+    {
+      "name": "Saatana.Crypto.Phelix",
+      "id": "fe90f698b44eafa8",
+      "file": "saatana-crypto-phelix.json"
+    },
+    {
+      "name": "Saatana.Crypto.Phelix.Test_Vectors",
+      "id": "85f51b8f9409266d",
+      "file": "saatana-crypto-phelix-test_vectors.json"
+    },
+    {
+      "name": "Saatana.Crypto.Stream_Tools",
+      "id": "a4fecc286a3406d4",
+      "file": "saatana-crypto-stream_tools.json"
+    }
+  ]
+}

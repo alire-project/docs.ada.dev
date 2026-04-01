@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gsl — Ada/SPARK Documentation</title>
+  <meta name="description" content="Ada binding to Gnu Scientific Library 2.7">
+  <meta name="keywords" content="Ada, SPARK, Alire, gsl, errno, gsl, Gsl_Config, math">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "gsl",
+"version": "0.1.0",  "description": "Ada binding to Gnu Scientific Library 2.7",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/gsl/",
+  "codeRepository": "https://gitlab.com/ada23/adagsl"
+  ,"author": [{"@type": "Person", "name": "R Srinivasan"}]
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">gsl</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>gsl</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Ada binding to Gnu Scientific Library 2.7</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>R Srinivasan</dd>
+
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/ada23/adagsl">https://gitlab.com/ada23/adagsl</a></dd>
+
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libgsl/">libgsl</a>
+        <span class="dep-version">^2.7</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/errno/">errno</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl/">gsl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-blas_types/">gsl.blas_types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-block/">gsl.block</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-block_double/">gsl.block_double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-bspline/">gsl.bspline</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-bst/">gsl.bst</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-bst_avl/">gsl.bst_avl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-bst_rb/">gsl.bst_rb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-bst_types/">gsl.bst_types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-cblas/">gsl.cblas</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-chebyshev/">gsl.chebyshev</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-combination/">gsl.combination</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-complex/">gsl.complex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-complex-math/">gsl.complex.math</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-const/">gsl.const</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-const-cgs/">gsl.const.cgs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-const-cgsm/">gsl.const.cgsm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-const-mks/">gsl.const.mks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-const-mksa/">gsl.const.mksa</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-const-num/">gsl.const.num</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-deriv/">gsl.deriv</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-errno/">gsl.errno</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-fft/">gsl.fft</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-fft-complex/">gsl.fft.complex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-fft-halfcomplex/">gsl.fft.halfcomplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-fft-real/">gsl.fft.real</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-filter/">gsl.filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-fit/">gsl.fit</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-integration/">gsl.integration</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-interp/">gsl.interp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-interp2d/">gsl.interp2d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-math/">gsl.math</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-matrix_double/">gsl.matrix_double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-mode/">gsl.mode</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-movstat/">gsl.movstat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-multifit/">gsl.multifit</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-permutation/">gsl.permutation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-pow_int/">gsl.pow_int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-qrng/">gsl.qrng</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-randist/">gsl.randist</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-rng/">gsl.rng</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-rstat/">gsl.rstat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf/">gsl.sf</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-airy/">gsl.sf.airy</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-bessel/">gsl.sf.bessel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-clausen/">gsl.sf.clausen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-coulomb/">gsl.sf.coulomb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-gamma/">gsl.sf.gamma</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-result/">gsl.sf.result</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-trig/">gsl.sf.trig</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sf-zeta/">gsl.sf.zeta</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sort_double/">gsl.sort_double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-spblas/">gsl.spblas</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-spline/">gsl.spline</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-spline2d/">gsl.spline2d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-spmatrix_double/">gsl.spmatrix_double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-statistics/">gsl.statistics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-sys/">gsl.sys</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-vector/">gsl.vector</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-vector_double/">gsl.vector_double</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-vector_int/">gsl.vector_int</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-version/">gsl.version</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-wavelet/">gsl.wavelet</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl-wavelet2d/">gsl.wavelet2d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/gsl_config/">Gsl_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gsl/0.1.0/math/">math</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

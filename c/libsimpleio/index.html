@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>libsimpleio — Ada/SPARK Documentation</title>
+  <meta name="description" content="Linux Simple I/O Library">
+  <meta name="keywords" content="Ada, SPARK, Alire, libsimpleio, embedded, linux, libsimpleio, remoteio, beaglebone, pocketbeagle, raspberrypi, raspberry, pi, adc, dac, gpio, hid, i2c, motor, pwm, sensor, serial, servo, spi, stepper, watchdog, wioe5, A4988, Accelerometer, ADC, ADC121C021, ADS1015, Analog, Angle, Arduino, BeagleBone, BeaglePlay, BMP280, BuildHAT, ClickBoard, CPUInfo, Cytron_MD13S, DAC, Debug, Device, Email_Mail, Email_Sendmail, errno, External_Command, FTDI, GPIB, GPIO, Grove_ADC, Grove_Keypad, Grove_TB6612, Grove_Temperature, Grove_Temperature_Humidity, Gyroscope, HDC1080, HID, HP9872A, HTS221, HTU21D, Humidity, I2C, IO_Interfaces, Joystick, Keithley192, Keyboard, LCD16397, LEGORC, libADC, libDAC, libEvent, libGPIO, libgpiod, libHIDRaw, libI2C, libIIO, libIPV4, libLinux, libModbus, libmysqlclient, libPRESSURE, libPWM, libSerial, Libsimpleio_Config, libSPI, libStream, libWatchdog, libzmq, Logging, LPS25H, LSM9DS1, Magnetometer, MAX31855, MAX7219, MCP2221, MCP23x17, MCP3202, MCP3204, MCP3208, MCP4822, Messaging, Modbus, Motor, MPL3115A2, MQTT, MUNTS_0018, MySQL, ncurses, NNG, OrangePiZero2W, PCA8574, PCA9534, PCA9685, PocketBeagle, Posix, Pressure, Prologix_GPIB_USB, Prologix_GPIB_USB_GNAT, PWM, RaspberryPi, RaspberryPi4, RaspberryPi5, Reference_Counted_Table, RemoteIO, Resistance, Servo, SPI, Stepper, Stream_Framing_Protocol, TCS3472, Temperature, TH02, Thermistor, TLC1543, TMP102, TrueColor, Voltage, Watchdog, Wio_E5, ZeroMQ">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "libsimpleio",
+"version": "2.24736.1",  "description": "Linux Simple I/O Library",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/libsimpleio/",
+  "codeRepository": "https://raw.githubusercontent.com/pmunts/alire-crates/2309c881329907da24e8ee31cbbdd4d1a2b832cf/libsimpleio/libsimpleio-2.24736.1.tbz2"
+  ,"author": [{"@type": "Person", "name": "Philip Munts"}]
+  ,"license": "BSD-1-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">libsimpleio</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>libsimpleio</h1>
+    <div class="version-controls">
+      <div class="version-selector">
+        <select id="version-select" aria-label="Select version">
+          <option value="2.24736.1" selected>2.24736.1 (latest)</option>
+          <option value="2.23808.1">2.23808.1</option>
+        </select>
+      </div>
+      <button id="compare-btn" class="compare-btn" title="Compare versions">
+        Compare versions
+      </button>
+    </div>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="2.24736.1">2.24736.1</option>
+              <option value="2.23808.1">2.23808.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="2.24736.1" selected>2.24736.1</option>
+              <option value="2.23808.1">2.23808.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Linux Simple I/O Library</p>
+
+  <div class="long-description"><h1>Introduction</h1>
+<p>This crate provides an Ada binding to the <a href="https://github.com/pmunts/libsimpleio">Linux Simple I/O<br />
+Library</a>, <em>aka</em> <strong>libsimpleio</strong>.</p>
+<h1>Linux Simple I/O Library</h1>
+<p><strong>libsimpleio</strong> is an attempt to encapsulate (as much as possible) the<br />
+ugliness of Linux I/O device access. It provides services for the<br />
+following types of I/O devices:</p>
+<ul>
+<li><a href="https://wiki.analog.com/software/linux/docs/iio/iio">Industrial I/O<br />
+  Subsystem</a> A/D<br />
+  (Analog to Digital) Converter Devices</li>
+<li><a href="https://wiki.analog.com/software/linux/docs/iio/iio">Industrial I/O<br />
+  Subsystem</a> D/A<br />
+  (Digital to Analog) Converter Devices</li>
+<li>GPIO (General Purpose Input/Output) Pins</li>
+<li>Raw HID (Human Interface Device) Devices</li>
+<li>I2C (Inter-Integrated Circuit) Bus Devices</li>
+<li>PWM (Pulse Width Modulated) Output Devices</li>
+<li><a href="https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf">Remote I/O<br />
+  Protocol</a><br />
+  Devices</li>
+<li>Serial Ports</li>
+<li>SPI (Serial Peripheral Interface) Bus Devices</li>
+<li><a href="https://repo.munts.com/libsimpleio/doc/StreamFramingProtocol.pdf">Stream Framing<br />
+  Protocol</a><br />
+  Devices</li>
+<li>TCP and UDP over IPv4 Network Devices</li>
+<li>Watchdog Timer Devices</li>
+</ul>
+<p><strong>libsimpleio</strong> exports a small number of C wrapper or shim functions.<br />
+These shim functions present a more coherent API (Application<br />
+Programming Interface) than Linux kernel <strong><code>ioctl()</code></strong> services and the<br />
+myriad other different Linux device I/O API&rsquo;s. The <strong>libsimpleio</strong> shim<br />
+functions are designed to be easily called from Ada, C++, C#, Java, Free<br />
+Pascal and other programming languages.</p>
+<p>The <strong><code>man</code></strong> pages specifying the <strong>libsimpleio</strong> API (Application<br />
+Programming Interface) are available for viewing at<br />
+<a href="https://repo.munts.com/libsimpleio/doc/libsimpleio.html">https://repo.munts.com/libsimpleio/doc/libsimpleio.html</a>.</p>
+<h1>Ada Binding for the Linux Simple I/O Library</h1>
+<p>The Ada binding consists of several software component layers.</p>
+<p>The bottom software component layer consists of the <strong>C shim functions</strong><br />
+discussed in the previous section.</p>
+<p>The next software component layer consists of <strong>binding packages</strong> that<br />
+declare the C shim functions as Ada procedures. Each of the binding<br />
+packages corresponds to a single C source file (<em>e.g.</em> package<br />
+<strong><code>libadc</code></strong> corresponds to <strong><code>libadc.c</code></strong>). Each of the C shim<br />
+functions are declared as external Ada procedures using<br />
+<strong><code>pragma Import</code></strong>. The Ada procedure names do not necessarily match<br />
+the C function names (<em>e.g.</em> the C function <strong><code>ADC_Open()</code></strong> is declared<br />
+as Ada procedure <strong><code>libadc.Open</code></strong>). Many of the binding packages also<br />
+declare constants as well (<em>e.g.</em> <strong><code>DIRECTION_INPUT</code></strong> in<br />
+<strong><code>libgpio.ads</code></strong>).</p>
+<p>With very few exceptions, you will never need to directly call any of<br />
+the procedures nor reference any of the constants declared in the<br />
+<strong><code>libxxx</code></strong> binding packages.</p>
+<p>The next software component layer consists of <strong>object packages</strong> that<br />
+declare OOP (Object Oriented Programming) object types and methods for<br />
+each of the I/O subsystems. This layer uses Ada interface types,<br />
+access-to-interface types, and private tagged records extensively.</p>
+<p>For example, the package <strong><code>GPIO</code></strong> defines an interface type<br />
+<strong><code>PinInterface</code></strong>, an access to <strong><code>PinInterface</code></strong> type named<br />
+<strong><code>Pin</code></strong>, and primitive operation subprograms <strong><code>Get</code></strong> and <strong><code>Put</code></strong>.</p>
+<p>The child package <strong><code>GPIO.libsimpleio</code></strong> declares a private tagged<br />
+record type <strong><code>PinSubclass</code></strong> that <em>implements</em> <strong><code>GPIO.PinInterface</code></strong>,<br />
+subprograms <strong><code>Get</code></strong> and <strong><code>Put</code></strong> that are required to implement<br />
+<strong><code>GPIO.PinInterface</code></strong>, and a constructor function <strong><code>Create</code></strong> that<br />
+returns an <strong><code>GPIO.Pin</code></strong> access value.</p>
+<p>Every package that implements <strong><code>GPIO.PinInterface</code></strong> will also declare<br />
+a constructor function <strong><code>Create</code></strong> that returns <strong><code>GPIO.Pin</code></strong>.</p>
+<p>This architecture allows code similar to the following fragment:</p>
+<pre><code>MyPins : array (1 .. 3) of GPIO.pin;
+
+GPIO(1) := GPIO.libsimpleio.Create(...);
+GPIO(2) := GPIO.UserLED.Create(...);
+GPIO(3) := GPIO.PWM.Create(...);
+</code></pre>
+<p>The three GPIO pins can be stored in the same array and manipulated in<br />
+exactly the same manner even though the hardware implementation for each<br />
+pin is radically different.</p>
+<p>The topmost software component layer consists of <strong>device packages</strong><br />
+that implement support for particular I/O devices and are built upon the<br />
+lower layers. Most of the device packages correspond to integrated<br />
+circuits, such as the <a href="https://www.nxp.com/products/interfaces/ic-spi-serial-interface-devices/ic-general-purpose-i-o/8-bit-ic-bus-and-smbus-low-power-i-o-port-with-interrupt:PCA9534">PCA9534 I2C GPIO<br />
+Expander</a>.<br />
+A few implement support for boards or modules, such the <a href="https://www.seeedstudio.com/Grove-Temperature-Sensor.html">Grove<br />
+Temperature<br />
+Sensor</a><br />
+module.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Philip Munts</dd>
+
+    <dt>License</dt>
+    <dd>BSD-1-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://raw.githubusercontent.com/pmunts/alire-crates/2309c881329907da24e8ee31cbbdd4d1a2b832cf/libsimpleio/libsimpleio-2.24736.1.tbz2">https://raw.githubusercontent.com/pmunts/alire-crates/2309c881329907da24e8ee31cbbdd4d1a2b832cf/libsimpleio/libsimpleio-2.24736.1.tbz2</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">linux</span><span class="tag">libsimpleio</span><span class="tag">remoteio</span><span class="tag">beaglebone</span><span class="tag">pocketbeagle</span><span class="tag">raspberrypi</span><span class="tag">raspberry</span><span class="tag">pi</span><span class="tag">adc</span><span class="tag">dac</span><span class="tag">gpio</span><span class="tag">hid</span><span class="tag">i2c</span><span class="tag">motor</span><span class="tag">pwm</span><span class="tag">sensor</span><span class="tag">serial</span><span class="tag">servo</span><span class="tag">spi</span><span class="tag">stepper</span><span class="tag">watchdog</span><span class="tag">wioe5</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/a4988/">A4988</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/accelerometer/">Accelerometer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/adc/">ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/adc-libsimpleio/">ADC.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/adc-remoteio/">ADC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/adc121c021/">ADC121C021</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/ads1015/">ADS1015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/analog/">Analog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/angle/">Angle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/arduino/">Arduino</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/beaglebone/">BeagleBone</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/beagleplay/">BeaglePlay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/bmp280/">BMP280</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/buildhat/">BuildHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/buildhat-firmware/">BuildHAT.Firmware</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/buildhat-passivemotor/">BuildHAT.PassiveMotor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard/">ClickBoard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-adc/">ClickBoard.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-adc-remoteio/">ClickBoard.ADC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-adc-simpleio/">ClickBoard.ADC.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-altitude/">ClickBoard.Altitude</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-altitude-remoteio/">ClickBoard.Altitude.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-altitude-simpleio/">ClickBoard.Altitude.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-expand/">ClickBoard.Expand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-expand-remoteio/">ClickBoard.Expand.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-expand-simpleio/">ClickBoard.Expand.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-expand2/">ClickBoard.Expand2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-expand2-remoteio/">ClickBoard.Expand2.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-expand2-simpleio/">ClickBoard.Expand2.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-htu21d/">ClickBoard.HTU21D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-htu21d-remoteio/">ClickBoard.HTU21D.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-htu21d-simpleio/">ClickBoard.HTU21D.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-leds_8x8/">ClickBoard.LEDs_8x8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-leds_8x8-remoteio/">ClickBoard.LEDs_8x8.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-leds_8x8-simpleio/">ClickBoard.LEDs_8x8.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-pwm_click/">ClickBoard.PWM_Click</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-pwm_click-remoteio/">ClickBoard.PWM_Click.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-pwm_click-simpleio/">ClickBoard.PWM_Click.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-relay/">ClickBoard.Relay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-relay-remoteio/">ClickBoard.Relay.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-relay-simpleio/">ClickBoard.Relay.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-remoteio/">ClickBoard.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-servers/">ClickBoard.Servers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-sevensegment/">ClickBoard.SevenSegment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-sevensegment-remoteio/">ClickBoard.SevenSegment.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-sevensegment-simpleio/">ClickBoard.SevenSegment.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-shields/">ClickBoard.Shields</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-simpleio/">ClickBoard.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-template/">ClickBoard.Template</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-thermo/">ClickBoard.Thermo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-thermo-remoteio/">ClickBoard.Thermo.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-thermo-simpleio/">ClickBoard.Thermo.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-thermo3/">ClickBoard.Thermo3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-thermo3-remoteio/">ClickBoard.Thermo3.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/clickboard-thermo3-simpleio/">ClickBoard.Thermo3.SimpleIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/cpuinfo/">CPUInfo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/cytron_md13s/">Cytron_MD13S</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/dac/">DAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/dac-libsimpleio/">DAC.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/dac-remoteio/">DAC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/debug/">Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/debug-syslog/">Debug.syslog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/device/">Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/email_mail/">Email_Mail</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/email_sendmail/">Email_Sendmail</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/errno/">errno</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/external_command/">External_Command</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/external_command-pipeline/">External_Command.Pipeline</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/ftdi/">FTDI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/ftdi-mpsse/">FTDI.MPSSE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/ftdi-mpsse-gpio/">FTDI.MPSSE.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpib/">GPIB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpib-slave/">GPIB.Slave</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio/">GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio-libgpiod/">GPIO.libgpiod</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio-libsimpleio/">GPIO.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio-pwm/">GPIO.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio-pwm-libsimpleio/">GPIO.PWM.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio-remoteio/">GPIO.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gpio-userled/">GPIO.UserLED</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_adc/">Grove_ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_keypad/">Grove_Keypad</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_tb6612/">Grove_TB6612</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_tb6612-motor/">Grove_TB6612.Motor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_tb6612-stepper/">Grove_TB6612.Stepper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_temperature/">Grove_Temperature</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/grove_temperature_humidity/">Grove_Temperature_Humidity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/gyroscope/">Gyroscope</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hdc1080/">HDC1080</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hid/">HID</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hid-hidapi/">HID.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hid-libsimpleio/">HID.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hid-libusb/">HID.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hid-munts/">HID.Munts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hid-posix/">HID.Posix</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hp9872a/">HP9872A</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/hts221/">HTS221</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/htu21d/">HTU21D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/humidity/">Humidity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/i2c/">I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/i2c-libsimpleio/">I2C.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/i2c-remoteio/">I2C.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/io_interfaces/">IO_Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/joystick/">Joystick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/keithley192/">Keithley192</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/keyboard/">Keyboard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/lcd16397/">LCD16397</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/legorc/">LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libadc/">libADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libdac/">libDAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libevent/">libEvent</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libgpio/">libGPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libgpiod/">libgpiod</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libhidraw/">libHIDRaw</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libi2c/">libI2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libiio/">libIIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libipv4/">libIPV4</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/liblinux/">libLinux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libmodbus/">libModbus</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libmysqlclient/">libmysqlclient</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libpressure/">libPRESSURE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libpwm/">libPWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libserial/">libSerial</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libsimpleio_config/">Libsimpleio_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libspi/">libSPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libstream/">libStream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libwatchdog/">libWatchdog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/libzmq/">libzmq</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/logging/">Logging</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/logging-libsimpleio/">Logging.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/lps25h/">LPS25H</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/lsm9ds1/">LSM9DS1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/magnetometer/">Magnetometer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/max31855/">MAX31855</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/max7219/">MAX7219</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221/">MCP2221</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221-adc/">MCP2221.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221-gpio/">MCP2221.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221-hidapi/">MCP2221.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221-i2c/">MCP2221.I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221-libsimpleio/">MCP2221.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp2221-libusb/">MCP2221.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp23x17/">MCP23x17</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp23x17-byte/">MCP23x17.Byte</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp23x17-gpio/">MCP23x17.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp23x17-word/">MCP23x17.Word</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp3202/">MCP3202</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp3204/">MCP3204</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp3208/">MCP3208</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mcp4822/">MCP4822</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging/">Messaging</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed/">Messaging.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed-ada_streams/">Messaging.Fixed.Ada_Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed-gnat_udp/">Messaging.Fixed.GNAT_UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed-libsimpleio_datagram/">Messaging.Fixed.libsimpleio_datagram</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed-libsimpleio_stream/">Messaging.Fixed.libsimpleio_stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed-wioe5_ham1/">Messaging.Fixed.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-fixed-zeromq/">Messaging.Fixed.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/messaging-text/">Messaging.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus/">Modbus</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus-coils/">Modbus.Coils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus-discreteinputs/">Modbus.DiscreteInputs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus-holdingregisters/">Modbus.HoldingRegisters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus-inputregisters/">Modbus.InputRegisters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus-inputshortfloat/">Modbus.InputShortFloat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/modbus-outputshortfloat/">Modbus.OutputShortFloat</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/motor/">Motor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/motor-legorc/">Motor.LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/motor-pwm/">Motor.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/motor-servo/">Motor.Servo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mpl3115a2/">MPL3115A2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mqtt/">MQTT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/munts_0018/">MUNTS_0018</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/munts_0018-analog/">MUNTS_0018.Analog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/munts_0018-button_template/">MUNTS_0018.Button_Template</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/munts_0018-i2c/">MUNTS_0018.I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/munts_0018-led/">MUNTS_0018.LED</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/munts_0018-pwm/">MUNTS_0018.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mysql/">MySQL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/mysql-libmysqlclient/">MySQL.libmysqlclient</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/ncurses/">ncurses</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/ncurses-keys/">ncurses.Keys</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/nng/">NNG</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/nng-pub/">NNG.Pub</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/nng-sub/">NNG.Sub</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/orangepizero2w/">OrangePiZero2W</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca8574/">PCA8574</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca8574-gpio/">PCA8574.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca9534/">PCA9534</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca9534-gpio/">PCA9534.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca9685/">PCA9685</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca9685-gpio/">PCA9685.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pca9685-pwm/">PCA9685.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pocketbeagle/">PocketBeagle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/posix/">Posix</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pressure/">Pressure</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/prologix_gpib_usb/">Prologix_GPIB_USB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/prologix_gpib_usb_gnat/">Prologix_GPIB_USB_GNAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pwm/">PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pwm-cli/">PWM.CLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pwm-libsimpleio/">PWM.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/pwm-remoteio/">PWM.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/raspberrypi/">RaspberryPi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/raspberrypi4/">RaspberryPi4</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/raspberrypi5/">RaspberryPi5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/reference_counted_table/">Reference_Counted_Table</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio/">RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-abstract_device/">RemoteIO.Abstract_Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-adc/">RemoteIO.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-adc_dac_pi_zero/">RemoteIO.ADC_DAC_Pi_Zero</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-arduino/">RemoteIO.Arduino</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-automation_phat/">RemoteIO.Automation_pHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-beaglebone/">RemoteIO.BeagleBone</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-beagleplay/">RemoteIO.BeaglePlay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client/">RemoteIO.Client</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-hidapi/">RemoteIO.Client.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-libsimpleio/">RemoteIO.Client.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-libusb/">RemoteIO.Client.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-posix/">RemoteIO.Client.Posix</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-serial/">RemoteIO.Client.Serial</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-stream/">RemoteIO.Client.Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-udp/">RemoteIO.Client.UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-wioe5_ham1/">RemoteIO.Client.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-client-zeromq/">RemoteIO.Client.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-common/">RemoteIO.Common</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-dac/">RemoteIO.DAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-dispatch/">RemoteIO.Dispatch</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-enviro_phat/">RemoteIO.Enviro_pHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-executive/">RemoteIO.Executive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-gpio/">RemoteIO.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-grove_base_hat_zero/">RemoteIO.Grove_Base_Hat_Zero</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-i2c/">RemoteIO.I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-lpc1114/">RemoteIO.LPC1114</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-lpc1114-adc/">RemoteIO.LPC1114.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-lpc1114-gpio/">RemoteIO.LPC1114.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-lpc1114-legorc/">RemoteIO.LPC1114.LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-lpc1114-pwm/">RemoteIO.LPC1114.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-lpc1114-timers/">RemoteIO.LPC1114.Timers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-munts_0008/">RemoteIO.MUNTS_0008</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-munts_0009/">RemoteIO.MUNTS_0009</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-munts_0015/">RemoteIO.MUNTS_0015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-munts_0016/">RemoteIO.MUNTS_0016</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-munts_0018/">RemoteIO.MUNTS_0018</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-pocketbeagle/">RemoteIO.PocketBeagle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-pwm/">RemoteIO.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-qwiic_hat/">RemoteIO.Qwiic_HAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-raspberrypi/">RemoteIO.RaspberryPi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server/">RemoteIO.Server</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-dev/">RemoteIO.Server.Dev</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-foundation/">RemoteIO.Server.Foundation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-message64/">RemoteIO.Server.Message64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-serial/">RemoteIO.Server.Serial</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-udp/">RemoteIO.Server.UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-wioe5_ham1/">RemoteIO.Server.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-server-zeromq/">RemoteIO.Server.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/remoteio-spi/">RemoteIO.SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/resistance/">Resistance</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/servo/">Servo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/servo-pwm/">Servo.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/spi/">SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/spi-libsimpleio/">SPI.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/spi-remoteio/">SPI.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/stepper/">Stepper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/stream_framing_protocol/">Stream_Framing_Protocol</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/tcs3472/">TCS3472</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/temperature/">Temperature</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/temperature-libsimpleio/">Temperature.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/temperature-libsimpleio-hwmon/">Temperature.libsimpleio.HWMon</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/temperature-libsimpleio-iio/">Temperature.libsimpleio.IIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/th02/">TH02</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/thermistor/">Thermistor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/thermistor-ntc_b_parms/">Thermistor.NTC_B_Parms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/tlc1543/">TLC1543</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/tmp102/">TMP102</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/truecolor/">TrueColor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/voltage/">Voltage</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/watchdog/">Watchdog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/watchdog-libsimpleio/">Watchdog.libsimpleio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/wio_e5/">Wio_E5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/wio_e5-ham1/">Wio_E5.Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/wio_e5-ham2/">Wio_E5.Ham2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/wio_e5-p2p/">Wio_E5.P2P</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/zeromq/">ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/zeromq-context/">ZeroMQ.Context</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsimpleio/2.24736.1/zeromq-sockets/">ZeroMQ.Sockets</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+<script>
+(function () {
+  var select  = document.getElementById('version-select');
+  var crate   = "libsimpleio";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  select.addEventListener('change', function () {
+    var version = select.value;
+    var url = baseUrl + '/crate-data/' + crate + '/' + version + '/index.json';
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (m) { applyManifest(m, version); })
+      .catch(function (e) { console.error('Could not load version ' + version, e); });
+  });
+
+  function applyManifest(m, version) {
+    // Units
+    var uSection = document.getElementById('units-section');
+    if (uSection) {
+      var units = m.units || [];
+      if (units.length === 0) {
+        uSection.innerHTML = '<h2>API Units</h2><p>No API units indexed for this version.</p>';
+      } else {
+        var items = units.map(function (u) {
+          var stem = u.file.replace(/\.json$/, '');
+          var href = esc(baseUrl + '/c/' + crate + '/' + version + '/' + stem + '/');
+          return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
+        }).join('');
+        uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
+      }
+    }
+
+    // Dependencies
+    var dSection = document.getElementById('deps-section');
+    if (dSection) {
+      var deps = m.dependencies || [];
+      if (deps.length === 0) {
+        dSection.innerHTML = '';
+      } else {
+        var ditems = deps.map(function (d) {
+          return '<li><a href="' + esc(baseUrl + '/c/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+               + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
+        }).join('');
+        dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';
+      }
+    }
+
+    // Repository / website link
+    var repoEl = document.getElementById('meta-repo');
+    if (repoEl) {
+      var url = m.repository ? m.repository.url : (m.website || '');
+      var labelEl = document.getElementById('meta-repo-label') || repoEl.previousElementSibling;
+      if (url) {
+        repoEl.innerHTML = '<a href="' + esc(url) + '">' + esc(url) + '</a>';
+        repoEl.style.display = '';
+        if (labelEl) labelEl.style.display = '';
+      } else {
+        repoEl.innerHTML = '';
+        repoEl.style.display = 'none';
+        if (labelEl) labelEl.style.display = 'none';
+      }
+    }
+
+    // Page title
+    document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+
+<script>
+// Version comparison functionality
+(function () {
+  var modal = document.getElementById('compare-modal');
+  var compareBtn = document.getElementById('compare-btn');
+  var closeBtn = document.getElementById('close-modal');
+  var runCompareBtn = document.getElementById('run-compare');
+  var compareFrom = document.getElementById('compare-from');
+  var compareTo = document.getElementById('compare-to');
+  var resultsDiv = document.getElementById('compare-results');
+  var crate = "libsimpleio";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  if (!modal || !compareBtn) return;
+
+  // Open modal
+  compareBtn.addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Run comparison
+  runCompareBtn.addEventListener('click', function () {
+    var fromVersion = compareFrom.value;
+    var toVersion = compareTo.value;
+
+    if (fromVersion === toVersion) {
+      resultsDiv.innerHTML = '<p class="error">Please select different versions to compare.</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = '<p class="loading">Loading and comparing versions...</p>';
+
+    Promise.all([
+      fetch(baseUrl + '/crate-data/' + crate + '/' + fromVersion + '/index.json').then(r => r.json()),
+      fetch(baseUrl + '/crate-data/' + crate + '/' + toVersion + '/index.json').then(r => r.json())
+    ]).then(function (results) {
+      var oldManifest = results[0];
+      var newManifest = results[1];
+      var diff = computeDiff(oldManifest, newManifest);
+      displayDiff(diff, fromVersion, toVersion);
+    }).catch(function (err) {
+      resultsDiv.innerHTML = '<p class="error">Failed to load version data: ' + err.message + '</p>';
+    });
+  });
+
+  function computeDiff(oldManifest, newManifest) {
+    var oldUnits = oldManifest.units || [];
+    var newUnits = newManifest.units || [];
+    var oldDeps = oldManifest.dependencies || [];
+    var newDeps = newManifest.dependencies || [];
+
+    // Create maps for quick lookup
+    var oldUnitMap = {};
+    oldUnits.forEach(function (u) { oldUnitMap[u.name] = u; });
+    var newUnitMap = {};
+    newUnits.forEach(function (u) { newUnitMap[u.name] = u; });
+
+    var oldDepMap = {};
+    oldDeps.forEach(function (d) { oldDepMap[d.crate] = d; });
+    var newDepMap = {};
+    newDeps.forEach(function (d) { newDepMap[d.crate] = d; });
+
+    // Compare units
+    var addedUnits = [];
+    var removedUnits = [];
+    var unchangedUnits = [];
+
+    newUnits.forEach(function (u) {
+      if (!oldUnitMap[u.name]) {
+        addedUnits.push(u.name);
+      } else {
+        unchangedUnits.push(u.name);
+      }
+    });
+
+    oldUnits.forEach(function (u) {
+      if (!newUnitMap[u.name]) {
+        removedUnits.push(u.name);
+      }
+    });
+
+    // Compare dependencies
+    var addedDeps = [];
+    var removedDeps = [];
+    var modifiedDeps = [];
+
+    newDeps.forEach(function (d) {
+      if (!oldDepMap[d.crate]) {
+        addedDeps.push(d);
+      } else if (oldDepMap[d.crate].version !== d.version) {
+        modifiedDeps.push({ crate: d.crate, old: oldDepMap[d.crate].version, new: d.version });
+      }
+    });
+
+    oldDeps.forEach(function (d) {
+      if (!newDepMap[d.crate]) {
+        removedDeps.push(d);
+      }
+    });
+
+    return {
+      units: { added: addedUnits, removed: removedUnits, unchanged: unchangedUnits },
+      dependencies: { added: addedDeps, removed: removedDeps, modified: modifiedDeps }
+    };
+  }
+
+  function esc(text) {
+    return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function displayDiff(diff, fromVersion, toVersion) {
+    var html = '<div class="diff-summary">';
+    html += '<h3>Changes from ' + esc(fromVersion) + ' to ' + esc(toVersion) + '</h3>';
+
+    var totalChanges = diff.units.added.length + diff.units.removed.length +
+                       diff.dependencies.added.length + diff.dependencies.removed.length +
+                       diff.dependencies.modified.length;
+
+    if (totalChanges === 0) {
+      html += '<p class="no-changes">No API changes detected between these versions.</p>';
+    } else {
+      // Units changes
+      if (diff.units.added.length > 0 || diff.units.removed.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>API Units (' + (diff.units.added.length + diff.units.removed.length) + ' changes)</h4>';
+
+        if (diff.units.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.units.added.length + '):</strong>';
+          html += '<ul>';
+          diff.units.added.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.units.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.units.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.units.removed.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+
+      // Dependencies changes
+      if (diff.dependencies.added.length > 0 || diff.dependencies.removed.length > 0 || diff.dependencies.modified.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>Dependencies (' + (diff.dependencies.added.length + diff.dependencies.removed.length + diff.dependencies.modified.length) + ' changes)</h4>';
+
+        if (diff.dependencies.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.dependencies.added.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.added.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code> ' + esc(d.version) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.modified.length > 0) {
+          html += '<div class="diff-group modified">';
+          html += '<strong>~ Modified (' + diff.dependencies.modified.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.modified.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code>: ' + esc(d.old) + ' → ' + esc(d.new) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.dependencies.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.removed.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    resultsDiv.innerHTML = html;
+  }
+}());
+</script>
+</body>
+</html>

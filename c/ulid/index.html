@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ulid — Ada/SPARK Documentation</title>
+  <meta name="description" content="Universally Unique Lexicographically Sortable Identifier">
+  <meta name="keywords" content="Ada, SPARK, Alire, ulid, ulid, uuid, guid, identifier, timestamp, ULID">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ulid",
+"version": "20240921.0.0",  "description": "Universally Unique Lexicographically Sortable Identifier",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ulid/",
+  "codeRepository": "https://sourceforge.net/projects/ulid-ada"
+  ,"author": [{"@type": "Person", "name": "Gautier de Montmollin"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">ulid</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ulid</h1>
+    <span class="version-tag">20240921.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="20240921.0.0">20240921.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="20240921.0.0" selected>20240921.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Universally Unique Lexicographically Sortable Identifier</p>
+
+  <div class="long-description"><p><img src="https://github.com/ulid/spec/raw/master/logo.png" alt="image" width="100" height="auto"></p>
+<p>In a nutshell, a ULID code (Universally Unique Lexicographically Sortable Identifier) is<br />
+a combination of a 48-bit time stamp (most significant part, with a millisecond accuracy),<br />
+and a 80-bit random number (least significant part), totalling 128 bits, that is 16 bytes (octets).</p>
+<p>The ULID code generation is sort of UUID (Universally Unique Identifier) system, also know as GUID (Globally Unique Identifier).<br />
+The characteristic of ULID numbers is that they can be compared and sorted by their timestamps.</p>
+<p>The package ULID provides a <code>Generate</code> function using the method described above, plus a <code>Generate_Monotonic</code> function that enables the production of a monotonically increasing sequence of ULID numbers within the same millisecond.</p>
+<p>The preferred (canonical) representation of a ULID is a certain version of the Base32 encoding (example of output: 01J80P3NJDN0Y5YX7D05421X0G).<br />
+The ULID package also provides a function <code>Encode_as_8_4_4_4_12</code> that outputs a text representation in the usual UUID 8-4-4-4-12 format (like: 01920161-d64d-5a3e-589e-c45df155547b).<br />
+Both formats are also recognized by the <code>Decode</code> function.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Gautier de Montmollin</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/ulid-ada">https://sourceforge.net/projects/ulid-ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">ulid</span><span class="tag">uuid</span><span class="tag">guid</span><span class="tag">identifier</span><span class="tag">timestamp</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ulid/20240921.0.0/ulid/">ULID</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

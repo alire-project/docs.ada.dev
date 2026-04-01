@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "base32",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:52:45Z",
+  "description": "Simple base32 codec",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "base32",
+    "encoder",
+    "decoder",
+    "codec"
+  ],
+  "website": "https://github.com/JeremyGrosser/base32",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/base32",
+    "host": "github",
+    "commit": "b200c79cbef74500956066354710ee21f08076ce"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Base32_Config",
+      "id": "b8501cddb1b378c0",
+      "file": "base32_config.json"
+    },
+    {
+      "name": "Base32_Generic",
+      "id": "b41f61ab57beae7c",
+      "file": "base32_generic.json"
+    }
+  ]
+}

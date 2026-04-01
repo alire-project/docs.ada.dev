@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pragmarc — Ada/SPARK Documentation</title>
+  <meta name="description" content="The PragmAda Reusable Components">
+  <meta name="keywords" content="Ada, SPARK, Alire, pragmarc, cards, conversions, datastructures, encryption, matching, randomness, safety, sorting, taskcom, tty, containers, PragmARC, Pragmarc_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "pragmarc",
+"version": "20240810.0.0",  "description": "The PragmAda Reusable Components",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/pragmarc/",
+  "codeRepository": "https://github.com/bracke/PragmARC"
+  ,"author": [{"@type": "Person", "name": "Jeff Carter"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">pragmarc</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>pragmarc</h1>
+    <span class="version-tag">20240810.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="20240810.0.0">20240810.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="20240810.0.0" selected>20240810.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">The PragmAda Reusable Components</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Jeff Carter</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/bracke/PragmARC">https://github.com/bracke/PragmARC</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">cards</span><span class="tag">conversions</span><span class="tag">datastructures</span><span class="tag">encryption</span><span class="tag">matching</span><span class="tag">randomness</span><span class="tag">safety</span><span class="tag">sorting</span><span class="tag">taskcom</span><span class="tag">tty</span><span class="tag">containers</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc/">PragmARC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-ansi_tty_control/">PragmARC.Ansi_Tty_Control</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-b_strings/">PragmARC.B_Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-binary_searcher/">PragmARC.Binary_Searcher</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-binary_semaphore_handler/">PragmARC.Binary_Semaphore_Handler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-cards/">PragmARC.Cards</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-cards-decks/">PragmARC.Cards.Decks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-cards-decks-general/">PragmARC.Cards.Decks.General</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-cards-decks-us/">PragmARC.Cards.Decks.US</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-cards-us/">PragmARC.Cards.US</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-comparisons/">PragmARC.Comparisons</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-concurrent_pipeline/">PragmARC.Concurrent_Pipeline</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-concurrent_pipeline-sinks/">PragmARC.Concurrent_Pipeline.Sinks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-concurrent_pipeline-transformers/">PragmARC.Concurrent_Pipeline.Transformers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-conversions/">PragmARC.Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-conversions-unbounded_strings/">PragmARC.Conversions.Unbounded_Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-conversions-vectors/">PragmARC.Conversions.Vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures/">PragmARC.Data_Structures</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-bags/">PragmARC.Data_Structures.Bags</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-bags-unbounded/">PragmARC.Data_Structures.Bags.Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-bags-unbounded-protection/">PragmARC.Data_Structures.Bags.Unbounded.Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-bags-unbounded-unprotected/">PragmARC.Data_Structures.Bags.Unbounded.Unprotected</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-lists/">PragmARC.Data_Structures.Lists</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-lists-bounded/">PragmARC.Data_Structures.Lists.Bounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-lists-bounded-protection/">PragmARC.Data_Structures.Lists.Bounded.Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-lists-unbounded/">PragmARC.Data_Structures.Lists.Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-lists-unbounded-protection/">PragmARC.Data_Structures.Lists.Unbounded.Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues/">PragmARC.Data_Structures.Queues</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-bounded/">PragmARC.Data_Structures.Queues.Bounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-bounded-protection/">PragmARC.Data_Structures.Queues.Bounded.Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-bounded-protection-blocking/">PragmARC.Data_Structures.Queues.Bounded.Protection.Blocking</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-bounded-protection-non_blocking/">PragmARC.Data_Structures.Queues.Bounded.Protection.Non_Blocking</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-bounded-unprotected/">PragmARC.Data_Structures.Queues.Bounded.Unprotected</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-unbounded/">PragmARC.Data_Structures.Queues.Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-unbounded-protection/">PragmARC.Data_Structures.Queues.Unbounded.Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-unbounded-protection-blocking/">PragmARC.Data_Structures.Queues.Unbounded.Protection.Blocking</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-unbounded-protection-non_blocking/">PragmARC.Data_Structures.Queues.Unbounded.Protection.Non_Blocking</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-queues-unbounded-unprotected/">PragmARC.Data_Structures.Queues.Unbounded.Unprotected</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-sets/">PragmARC.Data_Structures.Sets</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-sets-discrete/">PragmARC.Data_Structures.Sets.Discrete</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-skip_lists/">PragmARC.Data_Structures.Skip_Lists</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-skip_lists-unbounded/">PragmARC.Data_Structures.Skip_Lists.Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-stacks/">PragmARC.Data_Structures.Stacks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-stacks-unbounded/">PragmARC.Data_Structures.Stacks.Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-stacks-unbounded-protection/">PragmARC.Data_Structures.Stacks.Unbounded.Protection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-data_structures-stacks-unbounded-unprotected/">PragmARC.Data_Structures.Stacks.Unbounded.Unprotected</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-date_handler/">PragmARC.Date_Handler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption/">PragmARC.Encryption</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption-bifid/">PragmARC.Encryption.Bifid</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption-simple_xor/">PragmARC.Encryption.Simple_XOR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption-threefish/">PragmARC.Encryption.Threefish</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption-threefish-block_1024/">PragmARC.Encryption.Threefish.Block_1024</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption-threefish-block_256/">PragmARC.Encryption.Threefish.Block_256</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-encryption-threefish-block_512/">PragmARC.Encryption.Threefish.Block_512</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-hash_fast_variable_length/">PragmARC.Hash_Fast_Variable_Length</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-images/">PragmARC.Images</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-job_pools/">PragmARC.Job_Pools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-least_squares_fitting/">PragmARC.Least_Squares_Fitting</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-line_fields/">PragmARC.Line_Fields</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-luhn_generation/">PragmARC.Luhn_Generation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-matching/">PragmARC.Matching</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-matching-character_regular_expression/">PragmARC.Matching.Character_Regular_Expression</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-matching-quick_string/">PragmARC.Matching.Quick_String</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-matching-regular_expression/">PragmARC.Matching.Regular_Expression</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-math/">PragmARC.Math</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-menu_handler/">PragmARC.Menu_Handler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-min_max/">PragmARC.Min_Max</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-permutations/">PragmARC.Permutations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-persistent_skip_list_unbounded/">PragmARC.Persistent_Skip_List_Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-postfix_calculator/">PragmARC.Postfix_Calculator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-protected_option/">PragmARC.Protected_Option</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness/">PragmARC.Randomness</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-combined/">PragmARC.Randomness.Combined</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-isaac/">PragmARC.Randomness.ISAAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-kiss/">PragmARC.Randomness.KISS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-real_ranges/">PragmARC.Randomness.Real_Ranges</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-real_values/">PragmARC.Randomness.Real_Values</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-threefry/">PragmARC.Randomness.Threefry</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-randomness-universal/">PragmARC.Randomness.Universal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-reflection/">PragmARC.Reflection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-rem_nn_wrapper/">PragmARC.REM_NN_Wrapper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-rem_nn_wrapper-rem_nn/">PragmARC.REM_NN_Wrapper.REM_NN</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-safety/">PragmARC.Safety</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-safety-pointers/">PragmARC.Safety.Pointers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-safety-semaphores/">PragmARC.Safety.Semaphores</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-safety-suspension_objects/">PragmARC.Safety.Suspension_Objects</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-sorting/">PragmARC.Sorting</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-sorting-quick/">PragmARC.Sorting.Quick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-task_communication/">PragmARC.Task_Communication</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-task_communication-forwarders/">PragmARC.Task_Communication.Forwarders</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-task_communication-monitors/">PragmARC.Task_Communication.Monitors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-task_communication-transporters/">PragmARC.Task_Communication.Transporters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-text_io/">PragmARC.Text_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-three_way/">PragmARC.Three_Way</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-title_comparisons/">PragmARC.Title_Comparisons</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-unbounded_numbers/">PragmARC.Unbounded_Numbers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-unbounded_numbers-integers/">PragmARC.Unbounded_Numbers.Integers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-unbounded_numbers-rationals/">PragmARC.Unbounded_Numbers.Rationals</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-word_input/">PragmARC.Word_Input</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc-wrapping/">PragmARC.Wrapping</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pragmarc/20240810.0.0/pragmarc_config/">Pragmarc_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

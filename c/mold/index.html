@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mold — Ada/SPARK Documentation</title>
+  <meta name="description" content="Meta-variable Operations for Lean Development (cli)">
+  <meta name="keywords" content="Ada, SPARK, Alire, mold, template, template-engine, template-repo, Mold_Apply, Mold_CLI, Mold_Config, Mold_Show_Variables, Mold_Tools">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "mold",
+"version": "1.1.0",  "description": "Meta-variable Operations for Lean Development (cli)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/mold/",
+  "codeRepository": "https://github.com/rocher/mold"
+  ,"author": [{"@type": "Person", "name": "Francesc Rocher"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">mold</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>mold</h1>
+    <span class="version-tag">1.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.1.0">1.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.1.0" selected>1.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Meta-variable Operations for Lean Development (cli)</p>
+
+  <div class="long-description"><p><a href="https://alire.ada.dev/crates/mold.html"><img alt="Alire" src="https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/mold.json" /></a><br />
+<a href="https://alire-crate-ci.ada.dev/crates/mold.html"><img alt="Alire CI/CD" src="https://img.shields.io/endpoint?url=https://alire-crate-ci.ada.dev/badges/mold.json" /></a><br />
+<img alt="unit-test" src="https://github.com/rocher/mold/actions/workflows/unit-test.yml/badge.svg" /><br />
+<a href="https://codecov.io/gh/rocher/mold"><img alt="codecov" src="https://codecov.io/gh/rocher/mold/graph/badge.svg?token=LB83SI4I0Y" /></a><br />
+<a href="https://github.com/rocher/mold/releases/latest"><img alt="GitHub release" src="https://img.shields.io/github/release/rocher/mold.svg" /></a><br />
+<a href="https://github.com/rocher/mold/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/rocher/mold.svg?color=blue" /></a></p>
+<h2>Welcome to <strong>Mold (cli)</strong></h2>
+<blockquote>
+<p><strong>MOLD</strong>: <em>Meta-variable Operations for Lean Development</em></p>
+</blockquote>
+<p>Mold is a Template Processor, or Template Engine, to work with repository<br />
+templates. The main motivation of Mold is to have repositories in GitHub used<br />
+as template repositories to create new, customized repositories for other<br />
+users.</p>
+<p>Main features supported in Mold include</p>
+<ul>
+<li>
+<p>variable replacement in mold files (*.mold)</p>
+</li>
+<li>
+<p>for a given directory, variable replacement recursively for all mold files<br />
+    in all subdirectories</p>
+</li>
+<li>
+<p>variable replacement in file names</p>
+</li>
+<li>
+<p>inclusion of other templates</p>
+</li>
+<li>
+<p>definition of variables with a simple TOML file</p>
+</li>
+<li>
+<p>predefined and custom text filters to easy text transformations</p>
+</li>
+<li>
+<p>predefined variables to use in templates</p>
+</li>
+<li>
+<p>support for optional and mandatory variables</p>
+</li>
+<li>
+<p>support for custom filter and variables</p>
+</li>
+</ul>
+<p>Variable replacement can be specified as <em>normal</em>, <em>optional</em> or <em>mandatory</em>.<br />
+For example, the variable <code>foo = "bar"</code> can be specified with <code>{{foo}}</code>,<br />
+<code>{{?foo}}</code> (optional) or <code>{{#foo}}</code> (mandatory). The difference is the handling<br />
+of errors when an undefined variable is encountered.</p>
+<p>All mold files must end with the extension <code>.mold</code>, for example<br />
+<code>README.md.mold</code>. Destination files (with variables replaced) have the same<br />
+name without the mold extension: <code>README.md</code>. This simplifies the work done in<br />
+large subdirectories with few templates.</p>
+<p>This crate contains the Ada library and unit tests. For a CLI tool, please<br />
+take a look at the crate <code>mold</code>.</p>
+<h2>Reference Guide</h2>
+<p>Please visit <a href="https://rocher.github.io/mold">Mold documentation</a> for more<br />
+information.</p>
+<hr />
+<h2>License</h2>
+<p>MIT (c) 2023-2025 Francesc Rocher</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Francesc Rocher</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/rocher/mold">https://github.com/rocher/mold</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">template</span><span class="tag">template-engine</span><span class="tag">template-repo</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/clic/">clic</a>
+        <span class="dep-version">~0.3.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mold_lib/">mold_lib</a>
+        <span class="dep-version">^2.3.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/simple_logging/">simple_logging</a>
+        <span class="dep-version">^1.2.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mold/1.1.0/mold_apply/">Mold_Apply</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mold/1.1.0/mold_cli/">Mold_CLI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mold/1.1.0/mold_config/">Mold_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mold/1.1.0/mold_show_variables/">Mold_Show_Variables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mold/1.1.0/mold_tools/">Mold_Tools</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

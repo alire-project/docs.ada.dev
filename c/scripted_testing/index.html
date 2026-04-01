@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>scripted_testing — Ada/SPARK Documentation</title>
+  <meta name="description" content="Integration testing">
+  <meta name="keywords" content="Ada, SPARK, Alire, scripted_testing, testing, integration, scripting, Scripted_Testing">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "scripted_testing",
+"version": "2.0.0",  "description": "Integration testing",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/scripted_testing/",
+  "codeRepository": "https://github.com/simonjwright/scripted_testing"
+  ,"author": [{"@type": "Person", "name": "Simon Wright"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">scripted_testing</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>scripted_testing</h1>
+    <span class="version-tag">2.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="2.0.0">2.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="2.0.0" selected>2.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Integration testing</p>
+
+  <div class="long-description"><p>To set the scene, the Ada software under test (SUT) forms part of a system. Generally, the system will be constructed using a layered approach, and the other parts of the system that interact with the SUT are higher-level (which can call interface subprograms presented by the SUT) or lower-level (whose interfaces can be called by the SUT, or which can provide callbacks to the SUT).</p>
+<p>This package is intended for testing at a level between unit testing (using, for example, <a href="https://github.com/AdaCore/aunit">AUnit</a>) and integration testing (using real hardware). Unit testing tends to be fragile, requiring a lot of rework for even minor functional changes in the requirements.</p>
+<p>The scripting language supported is <a href="http://www.tcl.tk">Tcl</a>, and specifically the Ada binding <a href="https://github.com/simonjwright/tcladashell">Tash</a>. The reason for choosing Tcl rather than Python or Lua is that Tcl&rsquo;s interface is entirely string-based; this is important, considering the need to specify values of enumerated types.</p>
+<p>The package provides facilities to write new commands in Tcl to</p>
+<ul>
+<li>
+<p>call the interface subprograms presented by the SUT,</p>
+</li>
+<li>
+<p>set up values to be returned by calls the SUT makes to lower-level system components,</p>
+</li>
+<li>
+<p>call callbacks provided by lower-level system components,</p>
+</li>
+<li>
+<p>delay for appropriate periods, and</p>
+</li>
+<li>
+<p>check that the proper calls have been made to lower-level system components, with the required values.</p>
+</li>
+</ul>
+<p>It&rsquo;s assumed that the interface subprograms of the lower-level subsystems are stubbed so that:</p>
+<ul>
+<li>
+<p><code>in</code> and <code>in out</code> parameters can be recorded for later checking,</p>
+</li>
+<li>
+<p><code>out</code> (and <code>in out</code>) parameter values and function <code>return</code> values can be provided to be returned to the SUT,</p>
+</li>
+<li>
+<p>exceptions can be raised when required,</p>
+</li>
+<li>
+<p>the number of calls to the subprogram can be checked.</p>
+</li>
+</ul></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Simon Wright</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/simonjwright/scripted_testing">https://github.com/simonjwright/scripted_testing</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">testing</span><span class="tag">integration</span><span class="tag">scripting</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tash/">tash</a>
+        <span class="dep-version">^8.7.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/scripted_testing/2.0.0/scripted_testing/">Scripted_Testing</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

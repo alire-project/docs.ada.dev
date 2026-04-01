@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "asis",
+  "version": "2019.0.0",
+  "failed_at": "2026-03-03T17:51:09Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

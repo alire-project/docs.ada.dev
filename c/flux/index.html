@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>flux — Ada/SPARK Documentation</title>
+  <meta name="description" content="Experimental data stream library for Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, flux, Flux, Flux_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "flux",
+"version": "1.0.0",  "description": "Experimental data stream library for Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/flux/",
+  "codeRepository": "https://github.com/Fabien-Chouteau/flux"
+  ,"author": [{"@type": "Person", "name": "Fabien Chouteau"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">flux</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>flux</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Experimental data stream library for Ada</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Fabien Chouteau</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Fabien-Chouteau/flux">https://github.com/Fabien-Chouteau/flux</a></dd>
+
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux/">Flux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces/">Flux.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-as_traits/">Flux.Interfaces.As_Traits</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-as_traits-duplex/">Flux.Interfaces.As_Traits.Duplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-as_traits-sink/">Flux.Interfaces.As_Traits.Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-as_traits-source/">Flux.Interfaces.As_Traits.Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-bounded_array/">Flux.Interfaces.Bounded_Array</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-bounded_array-duplex/">Flux.Interfaces.Bounded_Array.Duplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-bounded_array-sink/">Flux.Interfaces.Bounded_Array.Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-bounded_array-source/">Flux.Interfaces.Bounded_Array.Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-file_io/">Flux.Interfaces.File_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-file_io-sink/">Flux.Interfaces.File_IO.Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-file_io-source/">Flux.Interfaces.File_IO.Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-hexdump/">Flux.Interfaces.Hexdump</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-leb128/">Flux.Interfaces.LEB128</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-seekable_source/">Flux.Interfaces.Seekable_Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-sink/">Flux.Interfaces.Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-interfaces-source/">Flux.Interfaces.Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-slice/">Flux.Slice</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits/">Flux.Traits</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-bounded_array_duplex/">Flux.Traits.Bounded_Array_Duplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-bounded_array_sink/">Flux.Traits.Bounded_Array_Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-bounded_array_source/">Flux.Traits.Bounded_Array_Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-duplex/">Flux.Traits.Duplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-file_io/">Flux.Traits.File_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-file_io-sink/">Flux.Traits.File_IO.Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-hexdump/">Flux.Traits.Hexdump</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-leb128/">Flux.Traits.LEB128</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-memory_duplex/">Flux.Traits.Memory_Duplex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-memory_sink/">Flux.Traits.Memory_Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-memory_source/">Flux.Traits.Memory_Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-seekable_source/">Flux.Traits.Seekable_Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-sink/">Flux.Traits.Sink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux-traits-source/">Flux.Traits.Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/flux/1.0.0/flux_config/">Flux_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>printer_toolkit — Ada/SPARK Documentation</title>
+  <meta name="description" content="Printer toolkit to write reports">
+  <meta name="keywords" content="Ada, SPARK, Alire, printer_toolkit, reports, console, charts, PT">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "printer_toolkit",
+"version": "0.3.0",  "description": "Printer toolkit to write reports",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/printer_toolkit/",
+  "codeRepository": "https://gitlab.com/stcarrez/printer-toolkit"
+  ,"author": [{"@type": "Person", "name": "Stephane.Carrez@gmail.com"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">printer_toolkit</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>printer_toolkit</h1>
+    <span class="version-tag">0.3.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.3.0">0.3.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.3.0" selected>0.3.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Printer toolkit to write reports</p>
+
+  <div class="long-description"><p>Printer toolkit provides support to write reports on console or to produce SVG files with almost<br />
+the same Ada code.  It can display simple bar charts as well as images on the console.</p>
+<p>The core library is provided by <code>printer_toolkit</code> and the SVG support implemented by the <code>printer_toolkit_svg</code>.<br />
+Run one of the following Alire commands or both:</p>
+<pre><code>alr with printer_toolkit
+alr with printer_toolkit_svg
+</code></pre></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Stephane.Carrez@gmail.com</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/stcarrez/printer-toolkit">https://gitlab.com/stcarrez/printer-toolkit</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">reports</span><span class="tag">console</span><span class="tag">charts</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ansiada/">ansiada</a>
+        <span class="dep-version">^1.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt/">PT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-charts/">PT.Charts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-charts-barcharts/">PT.Charts.Barcharts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-colors/">PT.Colors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-drivers/">PT.Drivers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-drivers-images/">PT.Drivers.Images</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-drivers-images-kitty/">PT.Drivers.Images.Kitty</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-drivers-texts/">PT.Drivers.Texts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-drivers-texts-gnat_io/">PT.Drivers.Texts.GNAT_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/printer_toolkit/0.3.0/pt-texts/">PT.Texts</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

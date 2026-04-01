@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "crate": "c_strings",
+  "version": "1.1.0",
+  "documented_at": "2026-03-04T02:54:03Z",
+  "description": "Manage Ada <-> C string conversions conveniently",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "string",
+    "conversion",
+    "c"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/cstrings",
+    "host": "github",
+    "commit": "13e65b8815cb9b1737af53ba3e27222072b6c767"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "C_Strings",
+      "id": "d96b4190ba3a1093",
+      "file": "c_strings.json"
+    }
+  ]
+}

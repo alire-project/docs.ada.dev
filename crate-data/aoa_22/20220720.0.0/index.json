@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "aoa_22",
+  "version": "20220720.0.0",
+  "documented_at": "2026-03-03T17:50:52Z",
+  "description": "Advent of Ada 22 Solutions",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "adventofada",
+    "2022"
+  ],
+  "website": "https://github.com/bracke/AoA_22",
+  "repository": {
+    "url": "https://github.com/bracke/AoA_22",
+    "host": "github",
+    "commit": "6d9ebd7195e134dbece445ca7eecd1c66fdc1775"
+  },
+  "dependencies": [
+    {
+      "crate": "pragmarc",
+      "version": "^20240323.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Aoa_22_Config",
+      "id": "07dcbed721196588",
+      "file": "aoa_22_config.json"
+    }
+  ]
+}

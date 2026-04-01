@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adacl_aunit — Ada/SPARK Documentation</title>
+  <meta name="description" content="Ada 2022 AUnit with readable asserts &amp; paramerised test">
+  <meta name="keywords" content="Ada, SPARK, Alire, adacl_aunit, library, aunit, assert, ada2022, Adacl_Aunit_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "adacl_aunit",
+"version": "7.1.0",  "description": "Ada 2022 AUnit with readable asserts \u0026 paramerised test",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/adacl_aunit/",
+  "codeRepository": "https://sourceforge.net/projects/adacl"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">adacl_aunit</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>adacl_aunit</h1>
+    <span class="version-tag">7.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="7.1.0">7.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="7.1.0" selected>7.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Ada 2022 AUnit with readable asserts &amp; paramerised test</p>
+
+  <div class="long-description"><p>A versatile Ada 2022 testing library, enhancing AUnit with readable assertions and parameterised tests.</p>
+<h2>Features</h2>
+<h3>AUnit-Compatible Assertions</h3>
+<ul>
+<li>Generic support for access, array, discrete, floating-point, fixed-point, decimal, vector types, and files.</li>
+<li><strong>Readable Error Messages</strong>: Assertions provide detailed feedback.</li>
+</ul>
+<p>Example for unbounded strings:</p>
+<pre><code class="language-ada">    procedure Equal
+       (Actual   : Ada.Strings.Unbounded.Unbounded_String;
+        Expected : String;
+        Name     : String;
+        Source   : String  := GNAT.Source_Info.File;
+        Line     : Natural := GNAT.Source_Info.Line)
+    is
+       use Ada.Strings.Unbounded;
+    begin
+       if not (Actual = Expected) then
+          Report_Assertion
+             (Message =&gt; &quot;In string «&quot; &amp; Name &amp; &quot;» the &quot; &amp; Actual'Image &amp; &quot; is not equal to &quot; &amp; Expected'Image,
+              Source  =&gt; Source,
+              Line    =&gt; Line);
+       end if;
+    end Equal;
+</code></pre>
+<p>This yields clear, context-rich error messages, surpassing standard AUnit<br />
+output.</p>
+<h2>Parameterised Tests</h2>
+<p>Run the same test with varied inputs and expected values, boosting coverage<br />
+efficiently.</p>
+<p>Example from hp41cx_tools:</p>
+<pre><code class="language-ada">overriding procedure Register_Tests (T : in out Test_Case) is
+   pragma Debug (AdaCL.Trace.Entering (In_Parameter =&gt; T.Name.all'Image));
+begin
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;WAKE_UP&quot;,      &quot;2024-12-01 08:00:00&quot;,   [3, 9, 4, 2, 0, 2, 8, 8, 0, 0, 0], 3942028800.0);
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;^LBLTEST&quot;,     &quot;2025-07-22 12:00:00&quot;,   [3, 9, 6, 2, 1, 7, 4, 4, 0, 0, 0], 3962174400.0);
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;TONE&quot;,         &quot;2025-11-12 09:12:34&quot;,   [3, 9, 7, 1, 9, 2, 7, 5, 5, 4, 0], 3971927554.0);
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;FRACTION&quot;,     &quot;2025-11-12 09:12:34.5&quot;, [3, 9, 7, 1, 9, 2, 7, 5, 5, 4, 5], 3971927554.5);
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;REPEAT24&quot;,     &quot;24:00:00&quot;,              [0, 0, 0, 0, 0, 8, 6, 4, 0, 0, 0], 0000086400.0);
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;REPEAT'First&quot;, &quot;0000:00:01.0&quot;,          [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], 0000000010.0);
+   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, &quot;REPEAT'Last&quot;,  &quot;9999:59:59.9&quot;,          [0, 0, 3, 5, 9, 9, 9, 9, 9, 9, 9], 0035999999.9);
+   pragma Debug (AdaCL.Trace.Exiting);
+   return;
+end Register_Tests;
+</code></pre>
+<p>Registering tests multiple times with different data enhances test coverage<br />
+without redundant code.</p>
+<p>Source: <a href="https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_aunit/test/src/">SourceForge</a><br />
+Documentation: <a href="https://adacl.sourceforge.net/gnatdoc/adacl_aunit_test/index.html">GNATdoc</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/adacl">https://sourceforge.net/projects/adacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">library</span><span class="tag">aunit</span><span class="tag">assert</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^7.0.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aunit/">aunit</a>
+        <span class="dep-version">25.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert/">AdaCL.Assert</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-arrays/">AdaCL.Assert.Arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-decimal/">AdaCL.Assert.Decimal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-discrete/">AdaCL.Assert.Discrete</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-fixed/">AdaCL.Assert.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-float/">AdaCL.Assert.Float</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-indefinite_vectors/">AdaCL.Assert.Indefinite_Vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-pointer/">AdaCL.Assert.Pointer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-assert-vectors/">AdaCL.Assert.Vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-test_cases/">AdaCL.Test_Cases</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl-test_cases-parameters/">AdaCL.Test_Cases.Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_aunit/7.1.0/adacl_aunit_config/">Adacl_Aunit_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

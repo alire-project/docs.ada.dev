@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>alr2appimage — Ada/SPARK Documentation</title>
+  <meta name="description" content="Tool to create an AppImage executable from an Alire crate">
+  <meta name="keywords" content="Ada, SPARK, Alire, alr2appimage, utility, appimage, alire, linux, packaging, Alire_TOML, Alr2appimage_Config, Desktop_File, File_Manager, Runner, String_Vectors">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "alr2appimage",
+"version": "1.0.0",  "description": "Tool to create an AppImage executable from an Alire crate",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/alr2appimage/",
+  "codeRepository": "https://github.com/mgrojo/alr2appimage"
+  ,"author": [{"@type": "Person", "name": "Manuel Gomez"}]
+  ,"license": "GPL-3.0-only"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">alr2appimage</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>alr2appimage</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Tool to create an AppImage executable from an Alire crate</p>
+
+  <div class="long-description"><p>There are two prerequisites for your project to work with this tool:<br />
+- It has to be an Alire crate with an <code>executables</code> field. Its first value<br />
+  has to be the main application program. Otherwise, the executable program<br />
+  can be specified on the command line.<br />
+- It must be installable using Alire, including all the needed resources.</p>
+<p><code>alr2appimage</code> will use the following command for installing it (this requires Alire 2.0):</p>
+<pre><code class="language-shell">alr install
+</code></pre>
+<p>Or it will run <code>gprinstall</code> inside <code>alr exec</code>, if the former fails (Alire 1.x).</p>
+<p>If you simply run the tool inside an Alire crate, it will read the<br />
+metadata from your <code>alire.toml</code> file and create a default AppImage<br />
+from it.</p>
+<p>NOTE: <code>alr2appimage</code> is an independent project; it is not<br />
+affiliated to, nor supported by, the Alire or AppImage projects.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Manuel Gomez</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-only</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/mgrojo/alr2appimage">https://github.com/mgrojo/alr2appimage</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">utility</span><span class="tag">appimage</span><span class="tag">alire</span><span class="tag">linux</span><span class="tag">packaging</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ada_toml/">ada_toml</a>
+        <span class="dep-version">^0.3.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spoon/">spoon</a>
+        <span class="dep-version">^1.0.1</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/parse_args/">parse_args</a>
+        <span class="dep-version">~0.9.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/resources/">resources</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/alr2appimage/1.0.0/alire_toml/">Alire_TOML</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/alr2appimage/1.0.0/alr2appimage_config/">Alr2appimage_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/alr2appimage/1.0.0/desktop_file/">Desktop_File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/alr2appimage/1.0.0/file_manager/">File_Manager</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/alr2appimage/1.0.0/runner/">Runner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/alr2appimage/1.0.0/string_vectors/">String_Vectors</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

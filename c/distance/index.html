@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>distance — Ada/SPARK Documentation</title>
+  <meta name="description" content="A formally verified library for calculating numeric, text distances">
+  <meta name="keywords" content="Ada, SPARK, Alire, distance, ada, spark, distance, metrics, algorithms, mathematics, string, similarity, levenshtein, geospatial, high-integrity, alire, data-science, Distance, Distance_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "distance",
+"version": "0.1.0",  "description": "A formally verified library for calculating numeric, text distances",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/distance/",
+  "codeRepository": "https://github.com/adarium-labs/distance"
+  ,"author": [{"@type": "Person", "name": "Heziode"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">distance</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>distance</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">A formally verified library for calculating numeric, text distances</p>
+
+  <div class="long-description"><h1>Distance</h1>
+<p>A formally verified Ada/SPARK library for computing distance and similarity metrics.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Numeric Distances</strong>: Euclidean, Manhattan, Minkowski, Chebyshev, Canberra</li>
+<li><strong>Statistical Measures</strong>: Cosine Similarity</li>
+<li><strong>Text Distances</strong>: Levenshtein, Damerau-Levenshtein, Hamming, Jaro-Winkler, Sørensen-Dice</li>
+</ul>
+<h2>Highlights</h2>
+<ul>
+<li>Pure Ada 2012 with SPARK annotations</li>
+<li>Generic implementations for flexible type support</li>
+<li>No external dependencies (test suite uses AUnit)</li>
+<li>Comprehensive preconditions and postconditions</li>
+</ul>
+<h2>Usage</h2>
+<pre><code class="language-ada">with Ada.Numerics.Elementary_Functions;
+with Distance.Numeric.Signatures;
+with Distance.Numeric.Euclidean_Generic;
+
+procedure Example is
+   type Float_Vector is array (Positive range &lt;&gt;) of Float;
+
+   package Float_Math is new Ada.Numerics.Elementary_Functions (Float);
+   package Float_Sig is new Distance.Numeric.Signatures
+     (Element_Type =&gt; Float,
+      Zero         =&gt; 0.0,
+      One          =&gt; 1.0,
+      Sqrt         =&gt; Float_Math.Sqrt,
+      &quot;**&quot;         =&gt; Float_Math.&quot;**&quot;,
+      Max_Element  =&gt; Float'Last);
+
+   function Euclidean is new Distance.Numeric.Euclidean_Generic
+     (Numeric_Ops =&gt; Float_Sig, Index_Type =&gt; Positive, Vector =&gt; Float_Vector);
+
+   D : Float := Euclidean ((0.0, 0.0), (3.0, 4.0));  --  D = 5.0
+begin
+   null;
+end Example;
+</code></pre>
+<p>For fixed-point and integer types, you can use <a href="https://github.com/adarium-labs/spark_math">Spark_Math</a> to provide the required operations.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Heziode</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/adarium-labs/distance">https://github.com/adarium-labs/distance</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">ada</span><span class="tag">spark</span><span class="tag">distance</span><span class="tag">metrics</span><span class="tag">algorithms</span><span class="tag">mathematics</span><span class="tag">string</span><span class="tag">similarity</span><span class="tag">levenshtein</span><span class="tag">geospatial</span><span class="tag">high-integrity</span><span class="tag">alire</span><span class="tag">data-science</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/distance/0.1.0/distance/">Distance</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/distance/0.1.0/distance-numeric/">Distance.Numeric</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/distance/0.1.0/distance-numeric-signatures/">Distance.Numeric.Signatures</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/distance/0.1.0/distance-statistical/">Distance.Statistical</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/distance/0.1.0/distance-textual/">Distance.Textual</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/distance/0.1.0/distance_config/">Distance_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

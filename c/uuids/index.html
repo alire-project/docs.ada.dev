@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>uuids — Ada/SPARK Documentation</title>
+  <meta name="description" content="Implementation of RFC 9562 Universally Unique IDentifiers (UUIDs)">
+  <meta name="keywords" content="Ada, SPARK, Alire, uuids, uuid, guid, UUIDs, Uuids_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "uuids",
+"version": "1.0.0",  "description": "Implementation of RFC 9562 Universally Unique IDentifiers (UUIDs)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/uuids/",
+  "codeRepository": "https://github.com/AJ-Ianozi/uuids"
+  ,"author": [{"@type": "Person", "name": "AJ Ianozi"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">uuids</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>uuids</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Implementation of RFC 9562 Universally Unique IDentifiers (UUIDs)</p>
+
+  <div class="long-description"><p>This library is an attempt to implement UUIDs to the RFC 9562 standard located here: https://www.ietf.org/rfc/rfc9562.html</p>
+<p>As of this writing it can identify any UUID&rsquo;s version or variant and create any kind of UUID in the spec:<br />
+* UUIDv1: Gregorian Timestamp with constant data<br />
+* UUIDv3: MD5-hashed<br />
+* UUIDv4: Randomly-generated<br />
+* UUIDv5: SHA1-hashed<br />
+* UUIDv6: Gregorian Timestamp with constant data with better database locality <br />
+* UUIDv7: UNIX Timestamp with random data, optimized for database locality<br />
+* UUIDv8: Custom UUIDs</p>
+<p>All of my unit tests are passing, but am open to more tests plus additional validation on other platforms, especially big endian.</p>
+<p>Refer to the <a href="https://github.com/AJ-Ianozi/uuids">UUIDs Readme</a> for full description.</p>
+<p>You can also read the <a href="https://aj-ianozi.github.io/uuids/toc_index.html">full API documentation</a> which has been generated with <a href="https://github.com/gumpu/ROBODoc">ROBODoc</a>.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>AJ Ianozi</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/AJ-Ianozi/uuids">https://github.com/AJ-Ianozi/uuids</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">uuid</span><span class="tag">guid</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/system_random/">system_random</a>
+        <span class="dep-version">^1.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids/">UUIDs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v1/">UUIDs.V1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v3/">UUIDs.V3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v4/">UUIDs.V4</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v5/">UUIDs.V5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v6/">UUIDs.V6</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v7/">UUIDs.V7</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids-v8/">UUIDs.V8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/uuids/1.0.0/uuids_config/">Uuids_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>

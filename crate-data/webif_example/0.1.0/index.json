@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "webif_example",
+  "version": "0.1.0",
+  "documented_at": "2026-03-07T02:50:43Z",
+  "description": "Example usage of simple web interface library.",
+  "long_description": "An example simple web server built using the bbs_webif library.  Once\nyou build it, you can run it and connect to it using port 31415.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "web",
+    "http",
+    "embedded"
+  ],
+  "website": "https://github.com/BrentSeidel/Ada-Web-Server",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/Ada-Web-Server",
+    "host": "github",
+    "commit": "43225d604aa12980c470a0d3b5ba6a95795393f1",
+    "subdir": "example/"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "bbs_webif",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": []
+}

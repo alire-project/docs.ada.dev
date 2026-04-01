@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hp41cx_tools — Ada/SPARK Documentation</title>
+  <meta name="description" content="Cross-platform tools to supercharge your HP-41CX emulator experience">
+  <meta name="keywords" content="Ada, SPARK, Alire, hp41cx_tools, calculator, tools, retrocomputing, ada-2022, hp-41cx, dm41x, px41cx, cross-platform, HP41CX_Tools, Hp41cx_Tools_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "hp41cx_tools",
+"version": "1.8.10",  "description": "Cross-platform tools to supercharge your HP-41CX emulator experience",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/hp41cx_tools/",
+  "codeRepository": "https://sourceforge.net/projects/calculator-scripts"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">hp41cx_tools</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>hp41cx_tools</h1>
+    <span class="version-tag">1.8.10</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.8.10">1.8.10</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.8.10" selected>1.8.10</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Cross-platform tools to supercharge your HP-41CX emulator experience</p>
+
+  <div class="long-description"><h2>HP-41CX Emulator Tools</h2>
+<p>Step into the golden era of retro computing with <strong>hp41cx_tools</strong>, a versatile<br />
+suite that turbocharges your HP-41CX emulator adventures! Unlike many tools<br />
+shackled to Windows, this toolkit runs flawlessly on <strong>macOS</strong>, <strong>Linux</strong>, and<br />
+<strong>Windows</strong>, making it the ultimate companion for enthusiasts using the iconic<br />
+<a href="https://paxer.net/PX-41CX/">PX-41CX</a> from Paxer or the sleek<br />
+<a href="https://www.swissmicros.com/product/dm41x">DM41X</a> from SwissMicros. Channel<br />
+your inner 1980s programming wizard and master memory dumps, FOCAL source code,<br />
+<em>and now encoding</em> with ease - compiling any FOCAL straight into upload-ready<br />
+dump files for the PX-41CY emulator.</p>
+<p>Built with the precision of <strong>Ada 2022</strong> for unshakeable reliability, these<br />
+tools decode, convert, and encode data with the finesse of the HP-41CX&rsquo;s<br />
+legendary keystrokes. Paired with intuitive <strong>ZShell scripts</strong> for macOS and<br />
+Linux, the suite streamlines complex workflows, whether you&rsquo;re on a modern<br />
+MacBook, a Linux workstation, or a Windows PC. This cross-platform prowess<br />
+ensures every retro computing fan can join the fun, no matter their<br />
+setup - grateful shoutout to Pierre Houbert&rsquo;s pioneering<br />
+<a href="https://paxer.net/PX-41CX_Interface.zip">PX41CX_Interface.xls</a> and its<br />
+VisualBasic wizardry, which lit the fuse for this focused PX-41CX/DM41X<br />
+journey.</p>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Memory Dump Decoder</strong>: Transform raw HP-41CX emulator memory dumps into<br />
+  readable FOCAL source code with pinpoint accuracy.</li>
+<li><strong>Source Code Converter</strong>: Seamlessly convert between PX-41CX and DM41X FOCAL<br />
+  code styles, bridging emulator ecosystems.</li>
+<li><strong>FOCAL Encoder</strong>: Compile modern UTF-8 encoded FOCAL programs into precise<br />
+  dump files, ready for PX-41CY emulator upload - vintage vibes meet UTF-8<br />
+  pipelines.</li>
+<li><strong>Unicode Support</strong>: Convert Unicode-encoded FOCAL programs to PX-41CX or<br />
+  DM41X formats, blending vintage charm with modern workflows.</li>
+<li><strong>Cross-Platform Power</strong>: Runs natively on macOS, Linux, and Windows - like a<br />
+  portable Ada generic, no OS exceptions.</li>
+<li><strong>Open Source</strong>: Hosted on<br />
+<a href="https://sourceforge.net/p/calculator-scripts/code/ci/master/tree/Tools/hp41cx_tools/src/">SourceForge</a>,<br />
+  ready for you to hack, extend, and share with the retro computing community.</li>
+<li><strong>Comprehensive Docs</strong>: Explore detailed guides via<br />
+<a href="https://calculator-scripts.sourceforge.io/gnatdoc/hp41cx-tools">GNATdoc</a>.</li>
+</ul>
+<h3>Why You&rsquo;ll Love It</h3>
+<p>Relive the thrill of programming the HP-41CX, the calculator that defined a<br />
+generation of scientific and hobbyist triumphs. Whether you&rsquo;re decoding vintage<br />
+memory dumps, converting code styles, or encoding fresh FOCAL scripts,<br />
+<strong>hp41cx_tools</strong> brings the past to life with unmatched versatility. Join the<br />
+retro computing revolution and make your emulator sing - on any desktop OS!</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/calculator-scripts">https://sourceforge.net/projects/calculator-scripts</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">calculator</span><span class="tag">tools</span><span class="tag">retrocomputing</span><span class="tag">ada-2022</span><span class="tag">hp-41cx</span><span class="tag">dm41x</span><span class="tag">px41cx</span><span class="tag">cross-platform</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^7.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_regexp/">adacl_regexp</a>
+        <span class="dep-version">^7.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/">adacl_sar</a>
+        <span class="dep-version">^7.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools/">HP41CX_Tools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-alarm/">HP41CX_Tools.Alarm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-commandline/">HP41CX_Tools.CommandLine</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-converter/">HP41CX_Tools.Converter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-decoder/">HP41CX_Tools.Decoder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-encoder/">HP41CX_Tools.Encoder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-filter/">HP41CX_Tools.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-programs/">HP41CX_Tools.Programs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-registers/">HP41CX_Tools.Registers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-registers-addresses/">HP41CX_Tools.Registers.Addresses</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-registers-floats/">HP41CX_Tools.Registers.Floats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-registers-keys/">HP41CX_Tools.Registers.Keys</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools-registers-lines/">HP41CX_Tools.Registers.Lines</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.10/hp41cx_tools_config/">Hp41cx_Tools_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-04-01.
+    </p>
+  </footer>
+
+</body>
+</html>
