@@ -76,7 +76,7 @@
 
   /**
    * Parse the current URL path into { crate, version, unit }.
-   * Expects paths like /crate/version/unit/ or /crate/version/unit.
+   * Expects paths like /c/crate/version/unit/ or /c/crate/version/unit.
    * Returns null if the path does not match a unit page pattern.
    */
   function parsePath(pathname) {
@@ -86,8 +86,9 @@
     }
     // Strip leading slash and split
     var parts = pathname.replace(/^\//, '').replace(/\/$/, '').split('/');
-    if (parts.length >= 3) {
-      return { crate: parts[0], version: parts[1], unit: parts[2] };
+    // Expect format: c/crate/version/unit
+    if (parts.length >= 4 && parts[0] === 'c') {
+      return { crate: parts[1], version: parts[2], unit: parts[3] };
     }
     return null;
   }
@@ -97,7 +98,7 @@
   // -------------------------------------------------------------------------
 
   async function fetchUnit(crate, version, unit) {
-    var url = resolvePath('/data/' + crate + '/' + version + '/' + unit + '.json');
+    var url = resolvePath('/crate-data/' + crate + '/' + version + '/' + unit + '.json');
     var resp = await fetch(url);
     if (!resp.ok) {
       throw new Error('HTTP ' + resp.status + ' fetching ' + url);
@@ -106,7 +107,7 @@
   }
 
   async function fetchVersionManifest(crate, version) {
-    var url = resolvePath('/data/' + crate + '/' + version + '/index.json');
+    var url = resolvePath('/crate-data/' + crate + '/' + version + '/index.json');
     try {
       var resp = await fetch(url);
       if (!resp.ok) return null;
@@ -205,7 +206,7 @@
   /** Build a URL for an entity reference cross-link. */
   function xrefUrl(ref) {
     if (!ref || !ref.crate || !ref.version || !ref.unit) return null;
-    var url = resolvePath('/' + ref.crate + '/' + ref.version + '/' + ref.unit + '/');
+    var url = resolvePath('/c/' + ref.crate + '/' + ref.version + '/' + ref.unit + '/');
     if (ref.id) url += '#' + ref.id;
     return url;
   }
@@ -436,7 +437,8 @@
     ol.setAttribute('aria-label', 'Breadcrumb');
     ol.innerHTML =
       '<li><a href="' + esc(resolvePath('/')) + '">Registry</a></li>'
-      + '<li><a href="' + esc(resolvePath('/' + crate + '/')) + '">' + esc(crate) + '</a></li>'
+      + '<li><a href="' + esc(resolvePath('/c/')) + '">Crates</a></li>'
+      + '<li><a href="' + esc(resolvePath('/c/' + crate + '/')) + '">' + esc(crate) + '</a></li>'
       + '<li aria-current="page">' + esc(unitName) + '</li>';
     nav.appendChild(ol);
   }
@@ -448,15 +450,15 @@
   async function main() {
     var params = parsePath(window.location.pathname);
     if (!params) {
-      // Redirect /crate/version/ (two path segments) to /crate/
+      // Redirect /c/crate/version/ (three path segments) to /c/crate/
       var pathname = window.location.pathname;
       // Strip BASE_URL first
       if (BASE_URL && pathname.startsWith(BASE_URL)) {
         pathname = pathname.substring(BASE_URL.length);
       }
       var parts = pathname.replace(/^\//, '').replace(/\/$/, '').split('/');
-      if (parts.length === 2 && parts[0] && parts[1]) {
-        window.location.replace(resolvePath('/' + parts[0] + '/'));
+      if (parts.length === 3 && parts[0] === 'c' && parts[1] && parts[2]) {
+        window.location.replace(resolvePath('/c/' + parts[1] + '/'));
       }
       return;
     }
@@ -504,7 +506,7 @@
         '<div class="error-message">'
         + '<p>Could not load documentation for <code>' + esc(params.unit) + '</code>.</p>'
         + '<p><small>' + esc(err.message) + '</small></p>'
-        + '<p><a href="' + esc(resolvePath('/' + params.crate + '/' + params.version + '/')) + '">'
+        + '<p><a href="' + esc(resolvePath('/c/' + params.crate + '/' + params.version + '/')) + '">'
         + '← Back to ' + esc(params.crate) + ' ' + esc(params.version) + '</a></p>'
         + '</div>';
     }

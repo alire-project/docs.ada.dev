@@ -275,6 +275,10 @@ def generate_static(
     pages_written += 1
 
     # --- Per-crate and per-version pages -----------------------------------
+    # All crate pages are under /c/ to avoid conflicts with system pages
+    crates_dir = output_dir / "c"
+    crates_dir.mkdir(parents=True, exist_ok=True)
+
     for crate_entry in index_data.get("crates", []):
         crate_name = crate_entry["name"]
         versions = crate_entry.get("versions", [])
@@ -286,7 +290,7 @@ def generate_static(
             latest_manifest = load_json(data_dir / crate_name / latest / "index.json")
 
         # Crate page (one per crate — shows latest version with version switcher)
-        crate_out = output_dir / crate_name
+        crate_out = crates_dir / crate_name
         crate_out.mkdir(parents=True, exist_ok=True)
         tmpl = env.get_template("crate.html.j2")
         html = tmpl.render(
@@ -348,9 +352,10 @@ def generate_static(
     print(f"  Wrote  {index_path}")
 
     # --- Copy data directory into site tree --------------------------------
-    # The JS frontend fetches /data/{crate}/{version}/{unit}.json at runtime,
+    # The JS frontend fetches /crate-data/{crate}/{version}/{unit}.json at runtime,
     # so the data directory must be available under the site root.
-    data_out = output_dir / "data"
+    # Using /crate-data instead of /data to avoid conflicts with a crate named "data".
+    data_out = output_dir / "crate-data"
     if data_dir.is_dir():
         if data_out.exists():
             print(f"  Removing {data_out}...")

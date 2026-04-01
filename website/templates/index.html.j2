@@ -32,7 +32,7 @@
     <ul class="crate-list">
       {% for crate in recent_crates %}
       <li class="crate-item">
-        <a class="crate-name" href="{{ base_url }}/{{ crate.name }}/">{{ crate.name }}</a>
+        <a class="crate-name" href="{{ base_url }}/c/{{ crate.name }}/">{{ crate.name }}</a>
         {% if crate.latest %}
         <span class="crate-version">{{ crate.latest }}</span>
         {% endif %}
@@ -57,7 +57,7 @@
     {% for crate in crates %}
     <li class="crate-item" data-name="{{ crate.name }}"
         data-tags="{{ crate.tags | join(' ') if crate.tags else '' }}">
-      <a class="crate-name" href="{{ base_url }}/{{ crate.name }}/">{{ crate.name }}</a>
+      <a class="crate-name" href="{{ base_url }}/c/{{ crate.name }}/">{{ crate.name }}</a>
       {% if crate.latest %}
       <span class="crate-version">{{ crate.latest }}</span>
       {% endif %}

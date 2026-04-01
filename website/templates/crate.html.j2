@@ -32,6 +32,7 @@
 {% block breadcrumb %}
 <ol class="breadcrumb">
   <li><a href="{{ base_url }}/">Registry</a></li>
+  <li><a href="{{ base_url }}/c/">Crates</a></li>
   <li aria-current="page">{{ crate.name }}</li>
 </ol>
 {% endblock %}
@@ -96,7 +97,7 @@
     <ul class="dep-list">
       {% for dep in m.dependencies %}
       <li>
-        <a href="{{ base_url }}/{{ dep.crate }}/">{{ dep.crate }}</a>
+        <a href="{{ base_url }}/c/{{ dep.crate }}/">{{ dep.crate }}</a>
         <span class="dep-version">{{ dep.version }}</span>
       </li>
       {% endfor %}
@@ -110,7 +111,7 @@
     <ul class="unit-list">
       {% for unit in m.units %}
       <li>
-        <a href="{{ base_url }}/{{ crate.name }}/{{ latest }}/{{ unit.file | replace('.json', '') }}/">{{ unit.name }}</a>
+        <a href="{{ base_url }}/c/{{ crate.name }}/{{ latest }}/{{ unit.file | replace('.json', '') }}/">{{ unit.name }}</a>
       </li>
       {% endfor %}
     </ul>
@@ -138,7 +139,8 @@
 
   select.addEventListener('change', function () {
     var version = select.value;
-    fetch('/data/' + crate + '/' + version + '/index.json')
+    var url = baseUrl + '/crate-data/' + crate + '/' + version + '/index.json';
+    fetch(url)
       .then(function (r) { return r.json(); })
       .then(function (m) { applyManifest(m, version); })
       .catch(function (e) { console.error('Could not load version ' + version, e); });
@@ -154,7 +156,7 @@
       } else {
         var items = units.map(function (u) {
           var stem = u.file.replace(/\.json$/, '');
-          var href = esc(baseUrl + '/' + crate + '/' + version + '/' + stem + '/');
+          var href = esc(baseUrl + '/c/' + crate + '/' + version + '/' + stem + '/');
           return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
         }).join('');
         uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
@@ -169,7 +171,7 @@
         dSection.innerHTML = '';
       } else {
         var ditems = deps.map(function (d) {
-          return '<li><a href="' + esc(baseUrl + '/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+          return '<li><a href="' + esc(baseUrl + '/c/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
                + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
         }).join('');
         dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';

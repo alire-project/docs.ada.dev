@@ -9,11 +9,28 @@
     a file on disk, which is how client-side unit pages are delivered.
 
     app.js reads window.location.pathname, derives the crate/version/unit,
-    fetches the corresponding JSON from /data/, and renders the documentation.
+    fetches the corresponding JSON from /crate-data/, and renders the documentation.
   -->
   <title>Ada/SPARK Documentation</title>
   <meta name="description" content="Ada/SPARK API documentation rendered from the Alire package index.">
   <link rel="stylesheet" href="/assets/style.css">
+  <script>
+    // Base URL injected at build time for use by app.js
+    // Extract just the pathname if it's a full URL
+    (function() {
+      var baseUrl = "";
+      try {
+        // If it's a full URL, extract the pathname
+        if (baseUrl.startsWith('http://') || baseUrl.startsWith('https://')) {
+          window.BASE_URL = new URL(baseUrl).pathname.replace(/\/$/, '');
+        } else {
+          window.BASE_URL = baseUrl;
+        }
+      } catch (e) {
+        window.BASE_URL = baseUrl;
+      }
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
