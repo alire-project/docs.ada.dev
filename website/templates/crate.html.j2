@@ -43,16 +43,56 @@
   <div class="crate-header">
     <h1>{{ crate.name }}</h1>
     {% if crate.versions | length > 1 %}
-    <div class="version-selector">
-      <select id="version-select" aria-label="Select version">
-        {% for v in crate.versions | reverse %}
-        <option value="{{ v }}"{% if v == latest %} selected{% endif %}>{{ v }}{% if v == latest %} (latest){% endif %}</option>
-        {% endfor %}
-      </select>
+    <div class="version-controls">
+      <div class="version-selector">
+        <select id="version-select" aria-label="Select version">
+          {% for v in crate.versions | reverse %}
+          <option value="{{ v }}"{% if v == latest %} selected{% endif %}>{{ v }}{% if v == latest %} (latest){% endif %}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button id="compare-btn" class="compare-btn" title="Compare versions">
+        Compare versions
+      </button>
     </div>
     {% elif latest %}
     <span class="version-tag">{{ latest }}</span>
     {% endif %}
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              {% for v in crate.versions | reverse %}
+              <option value="{{ v }}">{{ v }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              {% for v in crate.versions | reverse %}
+              <option value="{{ v }}"{% if v == latest %} selected{% endif %}>{{ v }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   {% if desc %}
@@ -196,6 +236,218 @@
 
     // Page title
     document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+{% endif %}
+
+{% if crate.versions | length > 1 %}
+<script>
+// Version comparison functionality
+(function () {
+  var modal = document.getElementById('compare-modal');
+  var compareBtn = document.getElementById('compare-btn');
+  var closeBtn = document.getElementById('close-modal');
+  var runCompareBtn = document.getElementById('run-compare');
+  var compareFrom = document.getElementById('compare-from');
+  var compareTo = document.getElementById('compare-to');
+  var resultsDiv = document.getElementById('compare-results');
+  var crate = {{ crate.name | tojson }};
+  var baseUrl = {{ (base_url or '') | tojson }};
+
+  if (!modal || !compareBtn) return;
+
+  // Open modal
+  compareBtn.addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Run comparison
+  runCompareBtn.addEventListener('click', function () {
+    var fromVersion = compareFrom.value;
+    var toVersion = compareTo.value;
+
+    if (fromVersion === toVersion) {
+      resultsDiv.innerHTML = '<p class="error">Please select different versions to compare.</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = '<p class="loading">Loading and comparing versions...</p>';
+
+    Promise.all([
+      fetch(baseUrl + '/crate-data/' + crate + '/' + fromVersion + '/index.json').then(r => r.json()),
+      fetch(baseUrl + '/crate-data/' + crate + '/' + toVersion + '/index.json').then(r => r.json())
+    ]).then(function (results) {
+      var oldManifest = results[0];
+      var newManifest = results[1];
+      var diff = computeDiff(oldManifest, newManifest);
+      displayDiff(diff, fromVersion, toVersion);
+    }).catch(function (err) {
+      resultsDiv.innerHTML = '<p class="error">Failed to load version data: ' + err.message + '</p>';
+    });
+  });
+
+  function computeDiff(oldManifest, newManifest) {
+    var oldUnits = oldManifest.units || [];
+    var newUnits = newManifest.units || [];
+    var oldDeps = oldManifest.dependencies || [];
+    var newDeps = newManifest.dependencies || [];
+
+    // Create maps for quick lookup
+    var oldUnitMap = {};
+    oldUnits.forEach(function (u) { oldUnitMap[u.name] = u; });
+    var newUnitMap = {};
+    newUnits.forEach(function (u) { newUnitMap[u.name] = u; });
+
+    var oldDepMap = {};
+    oldDeps.forEach(function (d) { oldDepMap[d.crate] = d; });
+    var newDepMap = {};
+    newDeps.forEach(function (d) { newDepMap[d.crate] = d; });
+
+    // Compare units
+    var addedUnits = [];
+    var removedUnits = [];
+    var unchangedUnits = [];
+
+    newUnits.forEach(function (u) {
+      if (!oldUnitMap[u.name]) {
+        addedUnits.push(u.name);
+      } else {
+        unchangedUnits.push(u.name);
+      }
+    });
+
+    oldUnits.forEach(function (u) {
+      if (!newUnitMap[u.name]) {
+        removedUnits.push(u.name);
+      }
+    });
+
+    // Compare dependencies
+    var addedDeps = [];
+    var removedDeps = [];
+    var modifiedDeps = [];
+
+    newDeps.forEach(function (d) {
+      if (!oldDepMap[d.crate]) {
+        addedDeps.push(d);
+      } else if (oldDepMap[d.crate].version !== d.version) {
+        modifiedDeps.push({ crate: d.crate, old: oldDepMap[d.crate].version, new: d.version });
+      }
+    });
+
+    oldDeps.forEach(function (d) {
+      if (!newDepMap[d.crate]) {
+        removedDeps.push(d);
+      }
+    });
+
+    return {
+      units: { added: addedUnits, removed: removedUnits, unchanged: unchangedUnits },
+      dependencies: { added: addedDeps, removed: removedDeps, modified: modifiedDeps }
+    };
+  }
+
+  function esc(text) {
+    return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function displayDiff(diff, fromVersion, toVersion) {
+    var html = '<div class="diff-summary">';
+    html += '<h3>Changes from ' + esc(fromVersion) + ' to ' + esc(toVersion) + '</h3>';
+
+    var totalChanges = diff.units.added.length + diff.units.removed.length +
+                       diff.dependencies.added.length + diff.dependencies.removed.length +
+                       diff.dependencies.modified.length;
+
+    if (totalChanges === 0) {
+      html += '<p class="no-changes">No API changes detected between these versions.</p>';
+    } else {
+      // Units changes
+      if (diff.units.added.length > 0 || diff.units.removed.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>API Units (' + (diff.units.added.length + diff.units.removed.length) + ' changes)</h4>';
+
+        if (diff.units.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.units.added.length + '):</strong>';
+          html += '<ul>';
+          diff.units.added.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.units.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.units.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.units.removed.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+
+      // Dependencies changes
+      if (diff.dependencies.added.length > 0 || diff.dependencies.removed.length > 0 || diff.dependencies.modified.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>Dependencies (' + (diff.dependencies.added.length + diff.dependencies.removed.length + diff.dependencies.modified.length) + ' changes)</h4>';
+
+        if (diff.dependencies.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.dependencies.added.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.added.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code> ' + esc(d.version) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.modified.length > 0) {
+          html += '<div class="diff-group modified">';
+          html += '<strong>~ Modified (' + diff.dependencies.modified.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.modified.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code>: ' + esc(d.old) + ' → ' + esc(d.new) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.dependencies.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.removed.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    resultsDiv.innerHTML = html;
   }
 }());
 </script>

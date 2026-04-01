@@ -18,6 +18,19 @@ All notable changes to the docs.ada.dev website will be documented in this file.
   - Enhanced search input with better placeholder text
   - Visual feedback when search is focused (highlighted count)
 
+- **Version Comparison / API Diff** (2026-04-01)
+  - Interactive modal for comparing any two versions of a crate
+  - Displays API changes between versions:
+    - Added/removed API units
+    - Added/removed/modified dependencies
+  - Color-coded diff display:
+    - Green for added items
+    - Red for removed items
+    - Orange for modified items
+  - Client-side diff computation from version manifests
+  - Keyboard support (Escape to close modal)
+  - Responsive design with dark mode support
+
 ### Changed
 - Search now ranks and sorts results by relevance instead of alphabetical order
 - Crate list changed from CSS Grid to Flexbox to support dynamic reordering

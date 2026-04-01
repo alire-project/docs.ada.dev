@@ -34,7 +34,7 @@ This document tracks planned features and improvements for the Ada/SPARK documen
 
 ### Version Comparison
 - [ ] Changelog view between versions
-- [ ] API diff - what was added/removed/changed
+- [x] API diff - what was added/removed/changed
 - [ ] Visual indicator for breaking changes
 - [ ] Link to repository tags/releases
 
