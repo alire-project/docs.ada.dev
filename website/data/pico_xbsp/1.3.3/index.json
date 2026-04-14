@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "crate": "pico_xbsp",
+  "version": "1.3.3",
+  "documented_at": "2026-04-14T03:01:28Z",
+  "description": "Extended board support package for Raspberry Pi Pico",
+  "long_description": "Extended board support package (XBSP) for the Raspberry Pi Pico.\n\nThis crate extends the official pico_bsp from Jeremy Grosser with additional,\nreusable components. It is designed for general use in any Ada project targeting\nthe RP2040-based Raspberry Pi Pico and is not limited to the Pi Ada Tutorial.\n\nIt is developed in parallel with the Pi Ada Tutorial[](https://pi-ada-tutorial.sourceforge.io/)\nand therefore also supplies the exact support packages used in the tutorial\nchapters. This dual role makes pico_xbsp equally suitable for:\n\n* Standalone embedded Ada projects that only need the extra functionality, and\n* Readers following the tutorial who want ready-made, well-documented building\n  blocks.\n\nCurrent content:\n\n1. Pico.Analog  - Simplified analogue GPIO using Pulse Width Modulation (PWM).\n2. Pico.UART_IO - Simplified UART Text Output (Input comes later).\n\nAll packages are supplied with complete GNATDOC annotations.\n\nGNATdoc documentation:\nhttps://pi-ada-tutorial.sourceforge.io/gnatdoc/\n\nSourceForge repository:\nhttps://sourceforge.net/projects/pi-ada-tutorial/\n\nThe crate will grow with each new tutorial chapter while remaining a clean,\nindependent library.\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico.Analog",
+      "id": "7a66685ae06ed0a7",
+      "file": "pico-analog.json"
+    },
+    {
+      "name": "Pico.UART_IO",
+      "id": "636767575e1011fd",
+      "file": "pico-uart_io.json"
+    },
+    {
+      "name": "Pico.Utils",
+      "id": "e1b94abf5ef3b820",
+      "file": "pico-utils.json"
+    },
+    {
+      "name": "Pico_Xbsp_Config",
+      "id": "5c6c1762e97fd390",
+      "file": "pico_xbsp_config.json"
+    }
+  ]
+}
