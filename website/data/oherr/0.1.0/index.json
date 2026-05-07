@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "oherr",
+  "version": "0.1.0",
+  "documented_at": "2026-05-07T03:01:50Z",
+  "description": "A Rust-style Result type for Ada (oh, error!).",
+  "authors": [
+    "0xA672"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0"
+  ],
+  "tags": [
+    "result",
+    "error-handling",
+    "functional",
+    "rust",
+    "option"
+  ],
+  "website": "https://github.com/0xA672/oherr",
+  "repository": {
+    "url": "https://github.com/0xA672/oherr",
+    "host": "github",
+    "commit": "5da8ddd4ac52c12b0d89712f8ad3023576fc667a"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Oh_Err",
+      "id": "dfe046c02f9787f7",
+      "file": "oh_err.json"
+    },
+    {
+      "name": "Oherr",
+      "id": "8feb6ab5e7c02dec",
+      "file": "oherr.json"
+    },
+    {
+      "name": "Oherr_Config",
+      "id": "c7e85986ba772600",
+      "file": "oherr_config.json"
+    }
+  ]
+}
