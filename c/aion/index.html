@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aion — Ada/SPARK Documentation</title>
+  <meta name="description" content="Structured Asynchronous Runtime for Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, aion, async, runtime, concurrency, networking, ada, futures, reactor, observability, Aion">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "aion",
+"version": "1.0.0",  "description": "Structured Asynchronous Runtime for Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/aion/",
+  "codeRepository": "https://github.com/MaheshChandraTeja/Aion"
+  ,"author": [{"@type": "Person", "name": "Mahesh Chandra Teja Garnepudi"},{"@type": "Person", "name": "Kairais Tech Solutions Pvt. Ltd."}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">aion</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>aion</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Structured Asynchronous Runtime for Ada</p>
+
+  <div class="long-description"><p>Aion is a structured asynchronous runtime for Ada, built for reliable<br />
+networking, deterministic concurrency, cancellation-safe tasks, futures,<br />
+timers, channels, supervision, observability, and production-grade systems<br />
+software.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Mahesh Chandra Teja Garnepudi, Kairais Tech Solutions Pvt. Ltd.</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/MaheshChandraTeja/Aion">https://github.com/MaheshChandraTeja/Aion</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">async</span><span class="tag">runtime</span><span class="tag">concurrency</span><span class="tag">networking</span><span class="tag">ada</span><span class="tag">futures</span><span class="tag">reactor</span><span class="tag">observability</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion/">Aion</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-actor/">Aion.Actor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-actor-generic_actor/">Aion.Actor.Generic_Actor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-awaitable/">Aion.Awaitable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-awaitable-generic_awaitable/">Aion.Awaitable.Generic_Awaitable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-benchmark_support/">Aion.Benchmark_Support</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-block_on/">Aion.Block_On</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-block_on-generic_block_on/">Aion.Block_On.Generic_Block_On</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-cancel/">Aion.Cancel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-cancel_source/">Aion.Cancel_Source</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-cancel_token/">Aion.Cancel_Token</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel/">Aion.Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-bounded/">Aion.Channel.Bounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-bounded-generic_bounded_channel/">Aion.Channel.Bounded.Generic_Bounded_Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-broadcast/">Aion.Channel.Broadcast</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-broadcast-generic_broadcast_channel/">Aion.Channel.Broadcast.Generic_Broadcast_Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-oneshot/">Aion.Channel.Oneshot</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-oneshot-generic_oneshot_channel/">Aion.Channel.Oneshot.Generic_Oneshot_Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-unbounded/">Aion.Channel.Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-unbounded-generic_unbounded_channel/">Aion.Channel.Unbounded.Generic_Unbounded_Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-watch/">Aion.Channel.Watch</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-channel-watch-generic_watch_channel/">Aion.Channel.Watch.Generic_Watch_Channel</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-clock/">Aion.Clock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-clock_fake/">Aion.Clock_Fake</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-completion/">Aion.Completion</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-config/">Aion.Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-deadline/">Aion.Deadline</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-diagnostics/">Aion.Diagnostics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-errors/">Aion.Errors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-future/">Aion.Future</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-future-generic_future/">Aion.Future.Generic_Future</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-internal/">Aion.Internal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-interval/">Aion.Interval</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-io_resource/">Aion.IO_Resource</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-io_token/">Aion.IO_Token</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-join_set/">Aion.Join_Set</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-metrics/">Aion.Metrics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net/">Aion.Net</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net-address/">Aion.Net.Address</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net-socket_options/">Aion.Net.Socket_Options</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net-tcp/">Aion.Net.TCP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net-tcp_listener/">Aion.Net.TCP_Listener</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net-tcp_stream/">Aion.Net.TCP_Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-net-udp/">Aion.Net.UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-platform/">Aion.Platform</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-platform-darwin/">Aion.Platform.Darwin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-platform-linux/">Aion.Platform.Linux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-platform-windows/">Aion.Platform.Windows</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-poll/">Aion.Poll</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-poll-generic_poll/">Aion.Poll.Generic_Poll</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-promise/">Aion.Promise</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-promise-generic_promise/">Aion.Promise.Generic_Promise</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-reactor/">Aion.Reactor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-reactor_backend/">Aion.Reactor_Backend</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-readiness/">Aion.Readiness</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-result/">Aion.Result</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-result-generic_result/">Aion.Result.Generic_Result</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-retry/">Aion.Retry</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-retry-generic_retry/">Aion.Retry.Generic_Retry</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-runtime/">Aion.Runtime</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-runtime-builder/">Aion.Runtime.Builder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-scheduler/">Aion.Scheduler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-scope/">Aion.Scope</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-selection/">Aion.Selection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-selection-generic_select/">Aion.Selection.Generic_Select</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-selector/">Aion.Selector</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-selector-generic_select/">Aion.Selector.Generic_Select</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-shutdown/">Aion.Shutdown</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sleep/">Aion.Sleep</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-stream/">Aion.Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-stream-generic_stream/">Aion.Stream.Generic_Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-supervisor/">Aion.Supervisor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync/">Aion.Sync</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-barrier/">Aion.Sync.Barrier</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-condvar/">Aion.Sync.Condvar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-event/">Aion.Sync.Event</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-mutex/">Aion.Sync.Mutex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-once/">Aion.Sync.Once</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-once-generic_once/">Aion.Sync.Once.Generic_Once</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-rwlock/">Aion.Sync.RWLock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-sync-semaphore/">Aion.Sync.Semaphore</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-task_group/">Aion.Task_Group</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-task_handle/">Aion.Task_Handle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-task_id/">Aion.Task_Id</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-test_support/">Aion.Test_Support</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-time/">Aion.Time</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-timeout/">Aion.Timeout</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-timeout-generic_timeout/">Aion.Timeout.Generic_Timeout</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-timer_queue/">Aion.Timer_Queue</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-tracing/">Aion.Tracing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-types/">Aion.Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-version/">Aion.Version</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-waker/">Aion.Waker</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/aion/1.0.0/aion-yield/">Aion.Yield</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

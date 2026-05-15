@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "crate": "cbor_ada",
+  "version": "0.1.1",
+  "documented_at": "2026-04-14T03:01:11Z",
+  "description": "CBOR (RFC 8949) encoding/decoding library with SPARK formal verification",
+  "long_description": "SPARK-proved CBOR encoder/decoder for Ada 2022. The encoder and decoder are\n100% formally verified at SPARK Level 2 (517 proof obligations, 0 unproved).\nNo heap allocation, pragma Pure, suitable for embedded and safety-critical\nsystems. Full RFC 8949 well-formedness validation including shortest-form\nchecking, configurable nesting depth, string length limits, and UTF-8\nvalidation (enabled by default).\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "cbor",
+    "rfc8949",
+    "serialization",
+    "spark",
+    "embedded",
+    "iot",
+    "verified"
+  ],
+  "website": "https://github.com/b-erdem/cbor_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/cbor_ada",
+    "host": "github",
+    "commit": "4e578607a67722c80c8f2e605e1aef52dbbc1fb5"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CBOR",
+      "id": "d1388bd27a8b3321",
+      "file": "cbor.json"
+    },
+    {
+      "name": "CBOR.Decoding",
+      "id": "0ddf98afc0110656",
+      "file": "cbor-decoding.json"
+    },
+    {
+      "name": "CBOR.Encoding",
+      "id": "b5d32e0250c4fb95",
+      "file": "cbor-encoding.json"
+    },
+    {
+      "name": "CBOR.Properties",
+      "id": "f14166a6edeae6d6",
+      "file": "cbor-properties.json"
+    }
+  ]
+}

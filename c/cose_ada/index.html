@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cose_ada — Ada/SPARK Documentation</title>
+  <meta name="description" content="COSE (RFC 9052 / 9053) library for Ada 2022">
+  <meta name="keywords" content="Ada, SPARK, Alire, cose_ada, cose, rfc9052, cbor, security, spark, embedded, iot, webauthn, COSE">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "cose_ada",
+"version": "0.1.0",  "description": "COSE (RFC 9052 / 9053) library for Ada 2022",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/cose_ada/",
+  "codeRepository": "https://github.com/b-erdem/cose_ada"
+  ,"author": [{"@type": "Person", "name": "Baris Erdem"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">cose_ada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>cose_ada</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">COSE (RFC 9052 / 9053) library for Ada 2022</p>
+
+  <div class="long-description"><p>COSE (CBOR Object Signing and Encryption, RFC 9052 / 9053)<br />
+implementation for Ada 2022 with partial SPARK coverage. Supports the<br />
+six COSE message types: COSE_Mac0, COSE_Mac, COSE_Sign1, COSE_Sign,<br />
+COSE_Encrypt0, and COSE_Encrypt. Algorithms: HMAC-SHA-256,<br />
+HMAC-SHA-512, EdDSA (Ed25519), and ChaCha20-Poly1305 AEAD. Uses<br />
+cbor_ada for CBOR operations, hmac_ada for HMAC, and SPARKNaCl for<br />
+Ed25519 and ChaCha20-Poly1305. No heap allocation, suitable for<br />
+embedded and safety-critical systems.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Baris Erdem</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/b-erdem/cose_ada">https://github.com/b-erdem/cose_ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">cose</span><span class="tag">rfc9052</span><span class="tag">cbor</span><span class="tag">security</span><span class="tag">spark</span><span class="tag">embedded</span><span class="tag">iot</span><span class="tag">webauthn</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cbor_ada/">cbor_ada</a>
+        <span class="dep-version">~0.2.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hmac_ada/">hmac_ada</a>
+        <span class="dep-version">~0.2.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/">sparknacl</a>
+        <span class="dep-version">^4.0.1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose/">COSE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-encrypt/">COSE.Encrypt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-encrypt0/">COSE.Encrypt0</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-headers/">COSE.Headers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-mac/">COSE.Mac</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-mac0/">COSE.Mac0</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-sign/">COSE.Sign</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/cose_ada/0.1.0/cose-sign1/">COSE.Sign1</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

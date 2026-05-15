@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>munts_rp2040_firmware_embedded — Ada/SPARK Documentation</title>
+  <meta name="description" content="Phil&#39;s RP2040 Microcontroller Embedded Profile Firmware Template">
+  <meta name="keywords" content="Ada, SPARK, Alire, munts_rp2040_firmware_embedded, Munts_Rp2040_Firmware_Embedded_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "munts_rp2040_firmware_embedded",
+"version": "2.24840.1",  "description": "Phil\u0027s RP2040 Microcontroller Embedded Profile Firmware Template",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/munts_rp2040_firmware_embedded/",
+  "codeRepository": "https://raw.githubusercontent.com/pmunts/alire-crates/10e528130a5013f04155770fc2d94aa938928b0b/munts_rp2040_firmware_embedded/munts_rp2040_firmware_embedded-2.24840.1.tbz2"
+  ,"author": [{"@type": "Person", "name": "Philip Munts"}]
+  ,"license": "BSD-1-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">munts_rp2040_firmware_embedded</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>munts_rp2040_firmware_embedded</h1>
+    <span class="version-tag">2.24840.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="2.24840.1">2.24840.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="2.24840.1" selected>2.24840.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Phil&#39;s RP2040 Microcontroller Embedded Profile Firmware Template</p>
+
+  <div class="long-description"><h1>Introduction</h1>
+<p>This crate provides a comprehensive template for developing Ada firmware<br />
+for the <a href="https://www.raspberrypi.com/products/rp2040">RP2040 ARM 32-bit<br />
+microcontroller</a>, using the<br />
+<a href="https://docs.adacore.com/gnat_ugx-docs/html/gnat_ugx/gnat_ugx/gnat_runtimes.html#embedded-run-time">GNAT Predefined Embedded<br />
+Runtime</a><br />
+implemented by the<br />
+<a href="https://alire.ada.dev/crates/embedded_rp2040.html"><code>embedded_rp2040</code></a><br />
+and <a href="https://alire.ada.dev/crates/rp2040_hal.html"><code>rp2040_hal</code></a> crates<br />
+and their dependencies.</p>
+<p>Ada firmware for a microcontroller is realized as a main program<br />
+procedure that is called by otherwise invisible runtime startup code,<br />
+exactly as C firmware is realized by a function <code>main()</code> that is called<br />
+by otherwise invisible runtime startup code.</p>
+<h1>Post-Build Script</h1>
+<p>An Alire project directory created by<br />
+<code>alr get munts_rp2040_firmware_embedded</code> will include a post-build<br />
+script named <code>postbuild.sh</code>. This script will install the newly built<br />
+firmware to a mounted RP2040 ROM boot USB file system. The RP2040 ROM<br />
+boot code implements USB mass storage emulation, in a fashion first<br />
+popularized by the late and lamented <a href="https://os.mbed.com/mbed-os">Mbed<br />
+OS</a>. To flash RP2040 firmware, you just<br />
+assert <code>BOOTSEL</code> and <code>RESET</code> hardware signals to force the RP2040 into<br />
+ROM boot mode, mount the USB mass storage device (usually done<br />
+automatically by the development machine operating system), and then<br />
+copy a <a href="https://github.com/microsoft/uf2">UF2</a> firmware image file it.<br />
+<code>postbuild.sh</code> uses the <a href="https://github.com/rej696/elf2uf2"><code>elf2uf2</code></a><br />
+utility program to copy the firmware image to the RP2040.</p>
+<p>You can explicitly specify the RP2040 mount point <em>aka</em> destination<br />
+directory with the <code>RP2040_DESTDIR</code> environment variable before running<br />
+<code>alr build</code>. Otherwise <code>postbuild.sh</code> will search for the RP2040 mount<br />
+point at expected locations for ChromeOS, Linux, macOS, and Microsoft<br />
+Windows.</p>
+<p>If an RP2040 mount point cannot be found, <code>postbuild.sh</code> does nothing.</p>
+<h1>Makefile</h1>
+<p>An Alire project directory created by<br />
+<code>alr get munts_rp2040_firmware_embedded</code> will include an optional but<br />
+useful GNU <code>Makefile</code> (also available at<br />
+<a href="https://github.com/pmunts/alire-goodies">https://github.com/pmunts/alire-goodies</a>) containing the following<br />
+<em>goals</em> or <em>targets</em>:</p>
+<ul>
+<li><code>build</code> &ndash; Accomplished by the command <code>gmake build</code>. Runs <code>alr build</code><br />
+  to build the firmware image. Result (upon success) is a 32-bit ARM ELF<br />
+  executable file in the <code>bin/</code> subdirectory.</li>
+<li><code>clean</code> &ndash; Accomplished by the command <code>gmake clean</code>. Removes all<br />
+  generated working files. What is left will be suitable for checking<br />
+  into a source control system.</li>
+<li><code>distclean</code> &ndash; Accomplished by the command <code>gmake distclean</code>. Removes<br />
+  all generated working files <em>and</em> removes Alire&rsquo;s crate download and<br />
+  build caches.</li>
+</ul>
+<p><em>Note: <code>make</code> is often a synonym (symbolic link, shell alias, etc.) for<br />
+<code>gmake</code> on Linux machines, meaning that <code>make build</code> behaves exactly the<br />
+same as <code>gmake build</code>.</em></p>
+<h1>Visual Studio Code</h1>
+<p>An Alire project directory created by<br />
+<code>alr get munts_rp2040_firmware_embedded</code> will include an optional but<br />
+useful <code>.vscode/tasks.json</code> (also available at<br />
+<a href="https://github.com/pmunts/alire-goodies">https://github.com/pmunts/alire-goodies</a>) which provides some build<br />
+tasks for <a href="https://code.visualstudio.com">Visual Studio Code</a>.</p>
+<p>You can invoke a Visual Studio build task from the application menu<br />
+<code>Terminal =&gt; Run Task...</code> or <code>Terminal =&gt; Run Build Task...</code></p>
+<p>The most straightforward way to build <em>and</em> install RP2040 firmware from<br />
+within Visual Studio Code is to simply press <strong>CONTROL + SHIFT + B</strong>.<br />
+This key code invokes the default build task which executes the command<br />
+<code>make clean build</code> which executes the command <code>alr build</code> which executes<br />
+script <code>postbuild.sh</code>.</p>
+<h1>Examples</h1>
+<h2>Command line</h2>
+<pre><code>alr -n get munts_rp2040_firmware_embedded
+alire-rename munts_rp2040_firmware_embedded_2.24820.1_45796fc8 myfirmware  # optional
+cd myfirmware
+alr -n with munts_rp2040_lib_embedded  # optional
+alr build
+</code></pre>
+<h2>Visual Studio Code</h2>
+<pre><code>alr -n get munts_rp2040_firmware_embedded
+alire-rename munts_rp2040_firmware_embedded_2.24820.1_45796fc8 myfirmware  # optional
+cd myfirmware
+alr -n with munts_rp2040_lib_embedded  # optional
+code .
+</code></pre>
+<p><em>Note: The Alire project rename script <code>alire-rename</code> is available at<br />
+<a href="https://github.com/pmunts/alire-goodies">https://github.com/pmunts/alire-goodies</a>.</em></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Philip Munts</dd>
+
+    <dt>License</dt>
+    <dd>BSD-1-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://raw.githubusercontent.com/pmunts/alire-crates/10e528130a5013f04155770fc2d94aa938928b0b/munts_rp2040_firmware_embedded/munts_rp2040_firmware_embedded-2.24840.1.tbz2">https://raw.githubusercontent.com/pmunts/alire-crates/10e528130a5013f04155770fc2d94aa938928b0b/munts_rp2040_firmware_embedded/munts_rp2040_firmware_embedded-2.24840.1.tbz2</a></dd>
+
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/embedded_rp2040/">embedded_rp2040</a>
+        <span class="dep-version">^15</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rp2040_hal/">rp2040_hal</a>
+        <span class="dep-version">^2</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/munts_rp2040_firmware_embedded/2.24840.1/munts_rp2040_firmware_embedded_config/">Munts_Rp2040_Firmware_Embedded_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

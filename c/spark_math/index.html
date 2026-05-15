@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>spark_math — Ada/SPARK Documentation</title>
+  <meta name="description" content="Formally verified mathematical library in SPARK">
+  <meta name="keywords" content="Ada, SPARK, Alire, spark_math, spark, verification, math, sqrt, fixed-point, Spark_Math, Spark_Math_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "spark_math",
+"version": "0.1.0",  "description": "Formally verified mathematical library in SPARK",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/spark_math/",
+  "codeRepository": "https://github.com/adarium-labs/spark_math"
+  ,"author": [{"@type": "Person", "name": "Heziode"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">spark_math</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>spark_math</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Formally verified mathematical library in SPARK</p>
+
+  <div class="long-description"><h1>Spark_Math</h1>
+<p><a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0%20WITH%20LLVM--exception-blue.svg" /></a><br />
+<a href="https://www.adacore.com/about-spark"><img alt="SPARK" src="https://img.shields.io/badge/SPARK-Gold-gold.svg" /></a></p>
+<p>A formally verified mathematical library written in SPARK/Ada, providing common mathematical functions for both integer and fixed-point types with compile-time proof of correctness.</p>
+<h2>Features</h2>
+<h3>Integer Math (<code>Spark_Math.Integer</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sqrt</code></td>
+<td>Integer square root (floor of sqrt N)</td>
+<td>O(log N)</td>
+</tr>
+<tr>
+<td><code>Power</code></td>
+<td>Exponentiation with overflow protection</td>
+<td>O(Exp)</td>
+</tr>
+<tr>
+<td><code>GCD</code></td>
+<td>Greatest common divisor (Euclidean algorithm)</td>
+<td>O(log min(A,B))</td>
+</tr>
+<tr>
+<td><code>Max</code></td>
+<td>Maximum of two values</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>Min</code></td>
+<td>Minimum of two values</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h3>Fixed-Point Math (<code>Spark_Math.Fixed</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sqrt</code></td>
+<td>Square root approximation (within <code>'Small</code>)</td>
+<td>O(log(N/Small))</td>
+</tr>
+<tr>
+<td><code>Max</code></td>
+<td>Maximum of two values</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>Min</code></td>
+<td>Minimum of two values</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h2>Roadmap</h2>
+<p>The goal is to provide SPARK-verified equivalents of <code>Ada.Numerics.Generic_Elementary_Functions</code> for fixed-point and integer types.</p>
+<h3>Planned Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Functions</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic</strong></td>
+<td><code>Sqrt</code></td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td><strong>Exponential</strong></td>
+<td><code>Log</code>, <code>Log(Base)</code>, <code>Exp</code>, <code>**</code></td>
+<td>Planned</td>
+</tr>
+<tr>
+<td><strong>Trigonometric</strong></td>
+<td><code>Sin</code>, <code>Cos</code>, <code>Tan</code>, <code>Cot</code></td>
+<td>Planned</td>
+</tr>
+<tr>
+<td><strong>Inverse Trig</strong></td>
+<td><code>Arcsin</code>, <code>Arccos</code>, <code>Arctan</code>, <code>Arccot</code></td>
+<td>Planned</td>
+</tr>
+<tr>
+<td><strong>Hyperbolic</strong></td>
+<td><code>Sinh</code>, <code>Cosh</code>, <code>Tanh</code>, <code>Coth</code></td>
+<td>Planned</td>
+</tr>
+<tr>
+<td><strong>Inverse Hyperbolic</strong></td>
+<td><code>Arcsinh</code>, <code>Arccosh</code>, <code>Arctanh</code>, <code>Arccoth</code></td>
+<td>Planned</td>
+</tr>
+</tbody>
+</table>
+<h3>Implementation Notes</h3>
+<p>Unlike floating-point implementations, fixed-point math requires:</p>
+<ul>
+<li><strong>CORDIC algorithms</strong> for trigonometric functions (no FPU dependency)</li>
+<li><strong>Polynomial approximations</strong> with bounded error analysis</li>
+<li><strong>Range reduction</strong> techniques proven correct in SPARK</li>
+<li><strong>Cycle parameter support</strong> for degree/radian flexibility</li>
+</ul>
+<p>Contributions for any of these functions are welcome!</p>
+<h2>Usage</h2>
+<h3>Integer Math Example</h3>
+<pre><code class="language-ada">with Spark_Math.Integer;
+
+procedure Example is
+   --  Instantiate for your integer type
+   package My_Math is new Spark_Math.Integer (Integer);
+
+   Result : Integer;
+begin
+   --  Square root (floor)
+   Result := My_Math.Sqrt (17);      --  Returns 4
+
+   --  Exponentiation
+   Result := My_Math.Power (2, 10);  --  Returns 1024
+
+   --  Greatest common divisor
+   Result := My_Math.GCD (48, 18);   --  Returns 6
+
+   --  Max and Min
+   Result := My_Math.Max (5, 3);     --  Returns 5
+   Result := My_Math.Min (5, 3);     --  Returns 3
+end Example;
+</code></pre>
+<h3>Fixed-Point Math Example</h3>
+<pre><code class="language-ada">with Spark_Math.Fixed;
+
+procedure Example is
+   --  Define your fixed-point type
+   type Voltage is delta 0.001 range 0.0 .. 100.0;
+
+   --  Instantiate for your type
+   package Voltage_Math is new Spark_Math.Fixed (Voltage);
+
+   Result : Voltage;
+begin
+   --  Square root (approximation within 'Small)
+   Result := Voltage_Math.Sqrt (4.0);   --  Returns ~= 2.0
+   Result := Voltage_Math.Sqrt (2.0);   --  Returns ~= 1.414
+
+   --  Max and Min
+   Result := Voltage_Math.Max (3.5, 2.1);  --  Returns 3.5
+   Result := Voltage_Math.Min (3.5, 2.1);  --  Returns 2.1
+end Example;
+</code></pre>
+<h2>SPARK Verification</h2>
+<p>This library is designed for formal verification with SPARK. All functions include:</p>
+<ul>
+<li><strong>Preconditions</strong> (<code>Pre</code>): Specify valid input constraints</li>
+<li><strong>Postconditions</strong> (<code>Post</code>): Guarantee output properties</li>
+<li><strong>Loop invariants</strong>: Enable proof of loop correctness</li>
+<li><strong>No runtime exceptions</strong>: All potential issues are caught at proof time</li>
+</ul>
+<h3>Verification Status</h3>
+<p>SPARK defines five proof levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stone</strong></td>
+<td>Valid SPARK code</td>
+</tr>
+<tr>
+<td><strong>Bronze</strong></td>
+<td>Initialization and correct data flow</td>
+</tr>
+<tr>
+<td><strong>Silver</strong></td>
+<td>Absence of run-time errors (AoRTE)</td>
+</tr>
+<tr>
+<td><strong>Gold</strong></td>
+<td>Proof of key integrity properties</td>
+</tr>
+<tr>
+<td><strong>Platinum</strong></td>
+<td>Full functional proof of requirements</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Spark_Math.Numerics_Core</code></td>
+<td>Gold</td>
+</tr>
+<tr>
+<td><code>Spark_Math.Integer</code></td>
+<td>Gold</td>
+</tr>
+<tr>
+<td><code>Spark_Math.Fixed</code></td>
+<td>Gold</td>
+</tr>
+</tbody>
+</table>
+<h2>Contributing</h2>
+<p>Contributions are welcome!</p>
+<h2>License</h2>
+<p>This project is licensed under the Apache-2.0 WITH LLVM-exception license. See <a href="LICENSE">LICENSE</a> for details.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Heziode</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/adarium-labs/spark_math">https://github.com/adarium-labs/spark_math</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">spark</span><span class="tag">verification</span><span class="tag">math</span><span class="tag">sqrt</span><span class="tag">fixed-point</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_math/0.1.0/spark_math/">Spark_Math</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_math/0.1.0/spark_math-fixed/">Spark_Math.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_math/0.1.0/spark_math-integer/">Spark_Math.Integer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_math/0.1.0/spark_math-numerics_core/">Spark_Math.Numerics_Core</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_math/0.1.0/spark_math_config/">Spark_Math_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

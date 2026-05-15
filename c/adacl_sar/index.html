@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adacl_sar — Ada/SPARK Documentation</title>
+  <meta name="description" content="AdaCL: Search and Replace with Wide/Wide-Wide Support">
+  <meta name="keywords" content="Ada, SPARK, Alire, adacl_sar, library, strings, search, replace, ada2022, Adacl_Sar_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "adacl_sar",
+"version": "7.1.0",  "description": "AdaCL: Search and Replace with Wide/Wide-Wide Support",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/adacl_sar/",
+  "codeRepository": "https://sourceforge.net/projects/adacl"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">adacl_sar</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>adacl_sar</h1>
+    <span class="version-tag">7.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="7.1.0">7.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="7.1.0" selected>7.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">AdaCL: Search and Replace with Wide/Wide-Wide Support</p>
+
+  <div class="long-description"><p>Powerful search-and-replace library for Ada 2022, developed by Martin Krischik, with wide and wide-wide character support.</p>
+<p>Features:<br />
+- Load, transform, and store text<br />
+- Vector-based text transformations for efficient processing<br />
+- Supports standard, wide, and wide-wide characters for internationalisation<br />
+- Embedded transformations for internal text processing<br />
+- Extensible transformations via tagged types for complex operations<br />
+- Integrates with the Ada Class Library (AdaCL) for robust text handling</p>
+<p>Licensed under GPL-3.0-or-later. Integrates with the Ada Class Library (AdaCL).</p>
+<p>Source: <a href="https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_sar/src/">SourceForge</a><br />
+Documentation: <a href="https://adacl.sourceforge.net/gnatdoc/adacl_sar/index.html">GNATdoc</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/adacl">https://sourceforge.net/projects/adacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">library</span><span class="tag">strings</span><span class="tag">search</span><span class="tag">replace</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^7.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar/">AdaCL.SAR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter/">AdaCL.SAR.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-insert/">AdaCL.SAR.Filter.Insert</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-insert-line/">AdaCL.SAR.Filter.Insert.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-insert-text/">AdaCL.SAR.Filter.Insert.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-remove/">AdaCL.SAR.Filter.Remove</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-remove-comment/">AdaCL.SAR.Filter.Remove.Comment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-remove-line/">AdaCL.SAR.Filter.Remove.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-remove-tab/">AdaCL.SAR.Filter.Remove.Tab</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-replace/">AdaCL.SAR.Filter.Replace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-replace-indent/">AdaCL.SAR.Filter.Replace.Indent</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-replace-text/">AdaCL.SAR.Filter.Replace.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filter-trim/">AdaCL.SAR.Filter.Trim</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filters/">AdaCL.SAR.Filters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filters-search/">AdaCL.SAR.Filters.Search</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filters-search-excludes/">AdaCL.SAR.Filters.Search.Excludes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-filters-search-includes/">AdaCL.SAR.Filters.Search.Includes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-sar-line/">AdaCL.SAR.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar/">AdaCL.Wide_SAR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter/">AdaCL.Wide_SAR.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-insert/">AdaCL.Wide_SAR.Filter.Insert</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-insert-line/">AdaCL.Wide_SAR.Filter.Insert.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-insert-text/">AdaCL.Wide_SAR.Filter.Insert.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-remove/">AdaCL.Wide_SAR.Filter.Remove</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-remove-comment/">AdaCL.Wide_SAR.Filter.Remove.Comment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-remove-line/">AdaCL.Wide_SAR.Filter.Remove.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-remove-tab/">AdaCL.Wide_SAR.Filter.Remove.Tab</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-replace/">AdaCL.Wide_SAR.Filter.Replace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-replace-indent/">AdaCL.Wide_SAR.Filter.Replace.Indent</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-replace-text/">AdaCL.Wide_SAR.Filter.Replace.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filter-trim/">AdaCL.Wide_SAR.Filter.Trim</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filters/">AdaCL.Wide_SAR.Filters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filters-search/">AdaCL.Wide_SAR.Filters.Search</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filters-search-excludes/">AdaCL.Wide_SAR.Filters.Search.Excludes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-filters-search-includes/">AdaCL.Wide_SAR.Filters.Search.Includes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_sar-line/">AdaCL.Wide_SAR.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar/">AdaCL.Wide_Wide_SAR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter/">AdaCL.Wide_Wide_SAR.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-insert/">AdaCL.Wide_Wide_SAR.Filter.Insert</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-insert-line/">AdaCL.Wide_Wide_SAR.Filter.Insert.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-insert-text/">AdaCL.Wide_Wide_SAR.Filter.Insert.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-remove/">AdaCL.Wide_Wide_SAR.Filter.Remove</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-remove-comment/">AdaCL.Wide_Wide_SAR.Filter.Remove.Comment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-remove-line/">AdaCL.Wide_Wide_SAR.Filter.Remove.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-remove-tab/">AdaCL.Wide_Wide_SAR.Filter.Remove.Tab</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-replace/">AdaCL.Wide_Wide_SAR.Filter.Replace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-replace-indent/">AdaCL.Wide_Wide_SAR.Filter.Replace.Indent</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-replace-text/">AdaCL.Wide_Wide_SAR.Filter.Replace.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filter-trim/">AdaCL.Wide_Wide_SAR.Filter.Trim</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filters/">AdaCL.Wide_Wide_SAR.Filters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filters-search/">AdaCL.Wide_Wide_SAR.Filters.Search</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filters-search-excludes/">AdaCL.Wide_Wide_SAR.Filters.Search.Excludes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-filters-search-includes/">AdaCL.Wide_Wide_SAR.Filters.Search.Includes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl-wide_wide_sar-line/">AdaCL.Wide_Wide_SAR.Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/7.1.0/adacl_sar_config/">Adacl_Sar_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

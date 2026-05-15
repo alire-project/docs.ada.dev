@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tresses — Ada/SPARK Documentation</title>
+  <meta name="description" content="Synth library inspired by Mutable Instruments Braids">
+  <meta name="keywords" content="Ada, SPARK, Alire, tresses, embedded, audio, synthesis, nostd, Tresses, Tresses_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "tresses",
+"version": "4.0.0",  "description": "Synth library inspired by Mutable Instruments Braids",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/tresses/",
+  "codeRepository": "https://github.com/wee-noise-maker/tresses"
+  ,"author": [{"@type": "Person", "name": "Fabien Chouteau"}]
+  ,"license": "MIT OR Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">tresses</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>tresses</h1>
+    <div class="version-controls">
+      <div class="version-selector">
+        <select id="version-select" aria-label="Select version">
+          <option value="4.0.0" selected>4.0.0 (latest)</option>
+          <option value="2.0.0">2.0.0</option>
+        </select>
+      </div>
+      <button id="compare-btn" class="compare-btn" title="Compare versions">
+        Compare versions
+      </button>
+    </div>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="4.0.0">4.0.0</option>
+              <option value="2.0.0">2.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="4.0.0" selected>4.0.0</option>
+              <option value="2.0.0">2.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Synth library inspired by Mutable Instruments Braids</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Fabien Chouteau</dd>
+
+    <dt>License</dt>
+    <dd>MIT OR Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/wee-noise-maker/tresses">https://github.com/wee-noise-maker/tresses</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">audio</span><span class="tag">synthesis</span><span class="tag">nostd</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/midi/">midi</a>
+        <span class="dep-version">^1.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses/">Tresses</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-analog_oscillator/">Tresses.Analog_Oscillator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums/">Tresses.Drums</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-bell/">Tresses.Drums.Bell</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-clap/">Tresses.Drums.Clap</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-cymbal/">Tresses.Drums.Cymbal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-generic_sample_hats/">Tresses.Drums.Generic_Sample_Hats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-generic_sample_hats_half_rate/">Tresses.Drums.Generic_Sample_Hats_Half_Rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-kick/">Tresses.Drums.Kick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-macro/">Tresses.Drums.Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-percussion/">Tresses.Drums.Percussion</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-snare/">Tresses.Drums.Snare</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-wave_clic_kick/">Tresses.Drums.Wave_Clic_Kick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-wave_kick/">Tresses.Drums.Wave_Kick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-drums-wave_snare/">Tresses.Drums.Wave_Snare</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-dsp/">Tresses.DSP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-envelopes/">Tresses.Envelopes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-envelopes-ar/">Tresses.Envelopes.AR</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-excitation/">Tresses.Excitation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fft/">Tresses.FFT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fft-fixed/">Tresses.FFT.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-filters/">Tresses.Filters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-filters-ladder/">Tresses.Filters.Ladder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-filters-svf/">Tresses.Filters.SVF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx/">Tresses.FX</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-bitcrusher/">Tresses.FX.Bitcrusher</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-delay_line/">Tresses.FX.Delay_Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-overdrive/">Tresses.FX.Overdrive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-reverb/">Tresses.FX.Reverb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-voice/">Tresses.FX.Voice</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-voice-stereo_bitcrusher/">Tresses.FX.Voice.Stereo_Bitcrusher</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-voice-stereo_filter/">Tresses.FX.Voice.Stereo_Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-voice-stereo_overdrive/">Tresses.FX.Voice.Stereo_Overdrive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-fx-voice-stereo_reverb/">Tresses.FX.Voice.Stereo_Reverb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-interfaces/">Tresses.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-lfo/">Tresses.LFO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-macro/">Tresses.Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-phase_distortion_oscillator/">Tresses.Phase_Distortion_Oscillator</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-random/">Tresses.Random</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-resources/">Tresses.Resources</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples/">Tresses.Samples</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_505_close/">Tresses.Samples.Sample_505_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_505_close_half_rate/">Tresses.Samples.Sample_505_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_505_open/">Tresses.Samples.Sample_505_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_505_open_half_rate/">Tresses.Samples.Sample_505_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_707hh_close/">Tresses.Samples.Sample_707hh_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_707hh_close_half_rate/">Tresses.Samples.Sample_707hh_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_707hh_open/">Tresses.Samples.Sample_707hh_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_707hh_open_half_rate/">Tresses.Samples.Sample_707hh_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_808_close/">Tresses.Samples.Sample_808_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_808_close_half_rate/">Tresses.Samples.Sample_808_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_808_open/">Tresses.Samples.Sample_808_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_808_open_half_rate/">Tresses.Samples.Sample_808_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_909hh_close/">Tresses.Samples.Sample_909hh_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_909hh_close_half_rate/">Tresses.Samples.Sample_909hh_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_909hh_open/">Tresses.Samples.Sample_909hh_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_909hh_open_half_rate/">Tresses.Samples.Sample_909hh_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_acoustic_close/">Tresses.Samples.Sample_acoustic_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_acoustic_close_half_rate/">Tresses.Samples.Sample_acoustic_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_acoustic_open/">Tresses.Samples.Sample_acoustic_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_acoustic_open_half_rate/">Tresses.Samples.Sample_acoustic_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_cr78_close/">Tresses.Samples.Sample_cr78_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_cr78_close_half_rate/">Tresses.Samples.Sample_cr78_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_cr78_open/">Tresses.Samples.Sample_cr78_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_cr78_open_half_rate/">Tresses.Samples.Sample_cr78_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_lm2_close/">Tresses.Samples.Sample_lm2_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_lm2_close_half_rate/">Tresses.Samples.Sample_lm2_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_lm2_open/">Tresses.Samples.Sample_lm2_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_lm2_open_half_rate/">Tresses.Samples.Sample_lm2_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_mrk2_close/">Tresses.Samples.Sample_mrk2_close</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_mrk2_close_half_rate/">Tresses.Samples.Sample_mrk2_close_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_mrk2_open/">Tresses.Samples.Sample_mrk2_open</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-samples-sample_mrk2_open_half_rate/">Tresses.Samples.Sample_mrk2_open_half_rate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices/">Tresses.Voices</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-acid/">Tresses.Voices.Acid</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-analog_macro/">Tresses.Voices.Analog_Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-bass_808/">Tresses.Voices.Bass_808</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-chip_echo/">Tresses.Voices.Chip_Echo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-chip_phaser/">Tresses.Voices.Chip_Phaser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-chip_portamento/">Tresses.Voices.Chip_Portamento</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-fm_op2/">Tresses.Voices.FM_OP2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-house_bass/">Tresses.Voices.House_Bass</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-macro/">Tresses.Voices.Macro</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-phase_distortion/">Tresses.Voices.Phase_Distortion</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-phase_distortion_instantiations/">Tresses.Voices.Phase_Distortion_Instantiations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-pluck/">Tresses.Voices.Pluck</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-pluck_bass/">Tresses.Voices.Pluck_Bass</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-plucked/">Tresses.Voices.Plucked</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-reese/">Tresses.Voices.Reese</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-sand/">Tresses.Voices.Sand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-saw_swarm/">Tresses.Voices.Saw_Swarm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-screech/">Tresses.Voices.Screech</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-wave_echo/">Tresses.Voices.Wave_Echo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-wave_phaser/">Tresses.Voices.Wave_Phaser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-wave_pluck/">Tresses.Voices.Wave_Pluck</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses-voices-wave_portamento/">Tresses.Voices.Wave_Portamento</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/tresses/4.0.0/tresses_config/">Tresses_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+<script>
+(function () {
+  var select  = document.getElementById('version-select');
+  var crate   = "tresses";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  select.addEventListener('change', function () {
+    var version = select.value;
+    var url = baseUrl + '/crate-data/' + crate + '/' + version + '/index.json';
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (m) { applyManifest(m, version); })
+      .catch(function (e) { console.error('Could not load version ' + version, e); });
+  });
+
+  function applyManifest(m, version) {
+    // Units
+    var uSection = document.getElementById('units-section');
+    if (uSection) {
+      var units = m.units || [];
+      if (units.length === 0) {
+        uSection.innerHTML = '<h2>API Units</h2><p>No API units indexed for this version.</p>';
+      } else {
+        var items = units.map(function (u) {
+          var stem = u.file.replace(/\.json$/, '');
+          var href = esc(baseUrl + '/c/' + crate + '/' + version + '/' + stem + '/');
+          return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
+        }).join('');
+        uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
+      }
+    }
+
+    // Dependencies
+    var dSection = document.getElementById('deps-section');
+    if (dSection) {
+      var deps = m.dependencies || [];
+      if (deps.length === 0) {
+        dSection.innerHTML = '';
+      } else {
+        var ditems = deps.map(function (d) {
+          return '<li><a href="' + esc(baseUrl + '/c/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+               + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
+        }).join('');
+        dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';
+      }
+    }
+
+    // Repository / website link
+    var repoEl = document.getElementById('meta-repo');
+    if (repoEl) {
+      var url = m.repository ? m.repository.url : (m.website || '');
+      var labelEl = document.getElementById('meta-repo-label') || repoEl.previousElementSibling;
+      if (url) {
+        repoEl.innerHTML = '<a href="' + esc(url) + '">' + esc(url) + '</a>';
+        repoEl.style.display = '';
+        if (labelEl) labelEl.style.display = '';
+      } else {
+        repoEl.innerHTML = '';
+        repoEl.style.display = 'none';
+        if (labelEl) labelEl.style.display = 'none';
+      }
+    }
+
+    // Page title
+    document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+
+<script>
+// Version comparison functionality
+(function () {
+  var modal = document.getElementById('compare-modal');
+  var compareBtn = document.getElementById('compare-btn');
+  var closeBtn = document.getElementById('close-modal');
+  var runCompareBtn = document.getElementById('run-compare');
+  var compareFrom = document.getElementById('compare-from');
+  var compareTo = document.getElementById('compare-to');
+  var resultsDiv = document.getElementById('compare-results');
+  var crate = "tresses";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  if (!modal || !compareBtn) return;
+
+  // Open modal
+  compareBtn.addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Run comparison
+  runCompareBtn.addEventListener('click', function () {
+    var fromVersion = compareFrom.value;
+    var toVersion = compareTo.value;
+
+    if (fromVersion === toVersion) {
+      resultsDiv.innerHTML = '<p class="error">Please select different versions to compare.</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = '<p class="loading">Loading and comparing versions...</p>';
+
+    Promise.all([
+      fetch(baseUrl + '/crate-data/' + crate + '/' + fromVersion + '/index.json').then(r => r.json()),
+      fetch(baseUrl + '/crate-data/' + crate + '/' + toVersion + '/index.json').then(r => r.json())
+    ]).then(function (results) {
+      var oldManifest = results[0];
+      var newManifest = results[1];
+      var diff = computeDiff(oldManifest, newManifest);
+      displayDiff(diff, fromVersion, toVersion);
+    }).catch(function (err) {
+      resultsDiv.innerHTML = '<p class="error">Failed to load version data: ' + err.message + '</p>';
+    });
+  });
+
+  function computeDiff(oldManifest, newManifest) {
+    var oldUnits = oldManifest.units || [];
+    var newUnits = newManifest.units || [];
+    var oldDeps = oldManifest.dependencies || [];
+    var newDeps = newManifest.dependencies || [];
+
+    // Create maps for quick lookup
+    var oldUnitMap = {};
+    oldUnits.forEach(function (u) { oldUnitMap[u.name] = u; });
+    var newUnitMap = {};
+    newUnits.forEach(function (u) { newUnitMap[u.name] = u; });
+
+    var oldDepMap = {};
+    oldDeps.forEach(function (d) { oldDepMap[d.crate] = d; });
+    var newDepMap = {};
+    newDeps.forEach(function (d) { newDepMap[d.crate] = d; });
+
+    // Compare units
+    var addedUnits = [];
+    var removedUnits = [];
+    var unchangedUnits = [];
+
+    newUnits.forEach(function (u) {
+      if (!oldUnitMap[u.name]) {
+        addedUnits.push(u.name);
+      } else {
+        unchangedUnits.push(u.name);
+      }
+    });
+
+    oldUnits.forEach(function (u) {
+      if (!newUnitMap[u.name]) {
+        removedUnits.push(u.name);
+      }
+    });
+
+    // Compare dependencies
+    var addedDeps = [];
+    var removedDeps = [];
+    var modifiedDeps = [];
+
+    newDeps.forEach(function (d) {
+      if (!oldDepMap[d.crate]) {
+        addedDeps.push(d);
+      } else if (oldDepMap[d.crate].version !== d.version) {
+        modifiedDeps.push({ crate: d.crate, old: oldDepMap[d.crate].version, new: d.version });
+      }
+    });
+
+    oldDeps.forEach(function (d) {
+      if (!newDepMap[d.crate]) {
+        removedDeps.push(d);
+      }
+    });
+
+    return {
+      units: { added: addedUnits, removed: removedUnits, unchanged: unchangedUnits },
+      dependencies: { added: addedDeps, removed: removedDeps, modified: modifiedDeps }
+    };
+  }
+
+  function esc(text) {
+    return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function displayDiff(diff, fromVersion, toVersion) {
+    var html = '<div class="diff-summary">';
+    html += '<h3>Changes from ' + esc(fromVersion) + ' to ' + esc(toVersion) + '</h3>';
+
+    var totalChanges = diff.units.added.length + diff.units.removed.length +
+                       diff.dependencies.added.length + diff.dependencies.removed.length +
+                       diff.dependencies.modified.length;
+
+    if (totalChanges === 0) {
+      html += '<p class="no-changes">No API changes detected between these versions.</p>';
+    } else {
+      // Units changes
+      if (diff.units.added.length > 0 || diff.units.removed.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>API Units (' + (diff.units.added.length + diff.units.removed.length) + ' changes)</h4>';
+
+        if (diff.units.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.units.added.length + '):</strong>';
+          html += '<ul>';
+          diff.units.added.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.units.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.units.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.units.removed.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+
+      // Dependencies changes
+      if (diff.dependencies.added.length > 0 || diff.dependencies.removed.length > 0 || diff.dependencies.modified.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>Dependencies (' + (diff.dependencies.added.length + diff.dependencies.removed.length + diff.dependencies.modified.length) + ' changes)</h4>';
+
+        if (diff.dependencies.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.dependencies.added.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.added.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code> ' + esc(d.version) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.modified.length > 0) {
+          html += '<div class="diff-group modified">';
+          html += '<strong>~ Modified (' + diff.dependencies.modified.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.modified.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code>: ' + esc(d.old) + ' → ' + esc(d.new) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.dependencies.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.removed.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    resultsDiv.innerHTML = html;
+  }
+}());
+</script>
+</body>
+</html>

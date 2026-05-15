@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>intl — Ada/SPARK Documentation</title>
+  <meta name="description" content="NLS thin Ada binding">
+  <meta name="keywords" content="Ada, SPARK, Alire, intl, i18n, nls, bindings, Intl">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "intl",
+"version": "1.0.1",  "description": "NLS thin Ada binding",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/intl/",
+  "codeRepository": "https://gitlab.com/stcarrez/ada-intl"
+  ,"author": [{"@type": "Person", "name": "Stephane.Carrez@gmail.com"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">intl</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>intl</h1>
+    <span class="version-tag">1.0.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.1">1.0.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.1" selected>1.0.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">NLS thin Ada binding</p>
+
+  <div class="long-description"><p>This is a small Ada library that provides NLS support by using<br />
+<a href="https://linux.die.net/man/3/gettext">gettext (3)</a>,<br />
+<a href="https://linux.die.net/man/3/textdomain">textdomain (3)</a> and<br />
+<a href="https://linux.die.net/man/3/bindtextdomain">bindtextdomain (3)</a>.</p>
+<p>When NLS is not supported or disabled, the Ada library implements the<br />
+NLS operations by using empty suitable stubs that skip the NLS transformation<br />
+and emit the English default message.</p>
+<h2>Using the library</h2>
+<p>The first step in using the NLS library is to call the <code>Initialize</code> procedure<br />
+that handles the setup of <code>textdomain</code> and <code>bindtextdomain</code> to configure the<br />
+language according to the user&rsquo;s locale.  The program localized messages are<br />
+stored in a catalog file that is created by <code>msginit (1)</code> and <code>msgfmt (1)</code> tools.<br />
+In most cases catalog file are identified by a unique name that must be given<br />
+to the <code>Initialize</code> procedure (below, it will be <code>mytool</code>).</p>
+<pre><code>with Intl;
+...
+   PROG_NAME : constant String := &quot;mytool&quot;;
+ ...
+   Intl.Initialize (PROG_NAME, &quot;/usr/share/locale&quot;);
+</code></pre>
+<p>To localize a message, the <code>"-"</code> function is provided to encapsulate the call<br />
+to the <a href="https://linux.die.net/man/3/gettext">gettext (3)</a> method.  If the message<br />
+is translated and the catalog contains it in the user&rsquo;s language, it will be<br />
+converted by <code>gettext</code> and the <code>"-"</code> function returns the localized message.</p>
+<pre><code>with GNAT.IO;
+   ...
+   function &quot;-&quot; (Message : in String) return String is (Intl.&quot;-&quot; (Message));
+   ...
+   GNAT.IO.Put_Line (-(&quot;Hello world!&quot;));
+</code></pre>
+<p>To build the message translation file (<code>PO files</code>), a tool can be used to extract<br />
+from the source code the default messages.  This process is<br />
+explained in the <a href="https://www.gnu.org/software/gettext/manual/">GNU gettext</a> documentation.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Stephane.Carrez@gmail.com</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/stcarrez/ada-intl">https://gitlab.com/stcarrez/ada-intl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">i18n</span><span class="tag">nls</span><span class="tag">bindings</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/intl/1.0.1/intl/">Intl</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

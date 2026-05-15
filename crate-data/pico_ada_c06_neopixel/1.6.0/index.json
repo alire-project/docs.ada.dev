@@ -1,0 +1,59 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c06_neopixel",
+  "version": "1.6.0",
+  "documented_at": "2026-05-05T03:02:25Z",
+  "description": "Chapter 6: Controlling 8 NeoPixel RGB LED",
+  "long_description": "Learn how to drive WS2812 (NeoPixel) LEDs on the Raspberry Pi Pico using the RP2040\nPIO in Ada. Includes a square-wave diagnostic, fixes for the official ws2812_demo, and two complete animation sketches.\n\nFrom understanding the WS2812 protocol to writing our own PIO code and creating colourful animations - everything you\nneed to make NeoPixels dance with Ada on the Pico.\n\nContained in Chapter 06 are:\n\n1. square_wave-main.adb\t\t - Simple Square Wave test using PIO (for timing reference)\n1. ws2812_demo.adb\t\t - Jeremy Grosser's WS2812 demo adapted for the RP2040 and Ada 2022\n2. sketch_06_1_led_pixel.adb\t - Chapter 6.1 NeoPixel LED Pixel\n3. sketch_06_2_rainbow_light.adb - Chapter 6.2 NeoPixel Rainbow Light\n\nRead the full tutorial at [Chapter 6: Controlling an NeoPixel LED with\nPWM](https://pi-ada-tutorial.sourceforge.io/pico_ada_c06_neopixel), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c06_neopixel/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c06_neopixel/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c06_neopixel",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_rp2040",
+      "version": "^15.3"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.5"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C06_Neopixel_Config",
+      "id": "59efbeec205b4b73",
+      "file": "pico_ada_c06_neopixel_config.json"
+    },
+    {
+      "name": "Square_Wave",
+      "id": "be3bb9723524d285",
+      "file": "square_wave.json"
+    }
+  ]
+}

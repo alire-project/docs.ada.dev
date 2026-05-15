@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>espidf_gnat_runtime — Ada/SPARK Documentation</title>
+  <meta name="description" content="A0B: GNAT Runtime for ESP-IDF">
+  <meta name="keywords" content="Ada, SPARK, Alire, espidf_gnat_runtime, embedded, esp32, espidf, runtime">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "espidf_gnat_runtime",
+"version": "0.1.0",  "description": "A0B: GNAT Runtime for ESP-IDF",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/espidf_gnat_runtime/",
+  "codeRepository": "https://github.com/godunko/espidf_gnat_runtime"
+  ,"author": [{"@type": "Person", "name": "Vadim Godunko"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">espidf_gnat_runtime</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>espidf_gnat_runtime</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">A0B: GNAT Runtime for ESP-IDF</p>
+
+  <div class="long-description"><p>The <code>espidf_gnat_runtime</code> provides the runtime support libraries required to develop Ada and SPARK applications for Espressif SoCs.<br />
+It serves as the foundational layer that enables the GNAT compiler to target Espressif&rsquo;s hardware, providing the essential infrastructure to bridge Ada language features with the underlying system.</p>
+<p>By using this runtime, developers can leverage the safety, strong typing, and formal verification capabilities of Ada and SPARK on popular, low-cost microcontrollers.</p>
+<h3><strong>Supported Architectures</strong></h3>
+<ul>
+<li><strong>Xtensa:</strong> Full support for the <strong>ESP32-S3</strong> series.</li>
+<li><strong>RISC-V:</strong> Full support for the <strong>ESP32-C3</strong> series.</li>
+</ul>
+<h3><strong>Key Features</strong></h3>
+<ul>
+<li><strong>Ada Language Support:</strong> Implements essential Ada features, including exception handling, controlled types, and secondary stacks.</li>
+<li><strong>Real-Time Concurrency:</strong> Provides support for the <strong>Jorvik profile</strong>, enabling the use of Ada tasks and protected objects for safe, concurrent programming.</li>
+<li><strong>Hardware Interoperability:</strong> Designed to support applications running alongside the ESP-IDF environment, allowing Ada code to coexist with Espressif&rsquo;s system services.</li>
+<li><strong>Verified Quality:</strong> Validated using the <strong>ACATS</strong> (Ada Conformity Assessment Test Suite) to ensure language compliance and runtime stability on both Xtensa and RISC-V targets.</li>
+</ul>
+<h3><strong>Target Audience</strong></h3>
+<p>This crate is intended for embedded developers using GNAT cross-compilers who wish to build high-integrity applications on the ESP32-S3 or ESP32-C3.<br />
+It is a vital component for any project aiming to bring Ada&rsquo;s rigorous safety standards to the Espressif ecosystem.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Vadim Godunko</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/godunko/espidf_gnat_runtime">https://github.com/godunko/espidf_gnat_runtime</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">esp32</span><span class="tag">espidf</span><span class="tag">runtime</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <p>No API units indexed for this version.</p>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

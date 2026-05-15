@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "simple_regex",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:58:04Z",
+  "description": "Port of Rob Pike's simple regex from the Practice of Programming.",
+  "long_description": "Provides a simple regular expression match function for Latin-1 strings, and\nsupports *, ., ^ and $.\n",
+  "authors": [
+    "Paul Jarrett"
+  ],
+  "licenses": [],
+  "tags": [
+    "regex",
+    "text"
+  ],
+  "website": "https://github.com/pyjarrett/simple_regex",
+  "repository": {
+    "url": "https://github.com/pyjarrett/simple_regex",
+    "host": "github",
+    "commit": "8396573be8d22ffe358fd18e952556baf671287e"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Simple_Regex",
+      "id": "e04000a9126d8ecc",
+      "file": "simple_regex.json"
+    },
+    {
+      "name": "Simple_Regex_Config",
+      "id": "11d0e79b39f145e3",
+      "file": "simple_regex_config.json"
+    }
+  ]
+}

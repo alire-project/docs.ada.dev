@@ -1,0 +1,60 @@
+{
+  "schema_version": "1",
+  "crate": "tlsada",
+  "version": "2.5.2",
+  "documented_at": "2026-03-06T03:00:30Z",
+  "description": "Bindings for libtls",
+  "authors": [
+    "nytpu"
+  ],
+  "licenses": [
+    "MPL-2.0"
+  ],
+  "tags": [
+    "tls",
+    "ssl"
+  ],
+  "website": "https://git.sr.ht/~nytpu/tlsada",
+  "repository": {
+    "url": "https://git.sr.ht/~nytpu/tlsada/archive/v2.5.2.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [
+    {
+      "crate": "libtls",
+      "version": "^3.5"
+    }
+  ],
+  "units": [
+    {
+      "name": "libTLS_Bindings",
+      "id": "e8df8fdf395c3af4",
+      "file": "libtls_bindings.json"
+    },
+    {
+      "name": "TLS",
+      "id": "b7e651cbb43ba0ca",
+      "file": "tls.json"
+    },
+    {
+      "name": "TLS.Configure",
+      "id": "990a4cc3f3a11968",
+      "file": "tls-configure.json"
+    },
+    {
+      "name": "TLS.Contexts",
+      "id": "e925cde680ec51c4",
+      "file": "tls-contexts.json"
+    },
+    {
+      "name": "TLS.Contexts.Client",
+      "id": "0fb1b8c35448ce09",
+      "file": "tls-contexts-client.json"
+    },
+    {
+      "name": "TLS.Contexts.Server",
+      "id": "a633a1d63212d16e",
+      "file": "tls-contexts-server.json"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>file_formats_java_class — Ada/SPARK Documentation</title>
+  <meta name="description" content="File format reader for the Java programming language CLASS file format">
+  <meta name="keywords" content="Ada, SPARK, Alire, file_formats_java_class, file, formats, java, class, File_Formats_Java_Class, File_Formats_Java_Class_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "file_formats_java_class",
+"version": "7.0.0",  "description": "File format reader for the Java programming language CLASS file format",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/file_formats_java_class/",
+  "codeRepository": "https://github.com/Bread-Experts-Group/file_formats_java_class"
+  ,"author": [{"@type": "Person", "name": "Miko Elbrecht"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">file_formats_java_class</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>file_formats_java_class</h1>
+    <span class="version-tag">7.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="7.0.0">7.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="7.0.0" selected>7.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">File format reader for the Java programming language CLASS file format</p>
+
+  <div class="long-description"><p><code>file_formats_java_class</code> provides the facilities for reading CLASS files defined<br />
+in the <a href="https://docs.oracle.com/javase/specs/">Java Virtual Machine Specification</a>,<br />
+<a href="https://docs.oracle.com/javase/specs/jvms/se7/html/index.html">Java SE 7, CLASS major file version 51</a>,<br />
+<a href="https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html">chapter 4</a>.</p>
+<h2>Supported Elements (Java SE 7)</h2>
+<ul>
+<li>Class Access Flags (Table 4.1)</li>
+<li><code>ACC_PUBLIC</code></li>
+<li><code>ACC_FINAL</code></li>
+<li><code>ACC_SUPER</code></li>
+<li><code>ACC_INTERFACE</code></li>
+<li><code>ACC_ABSTRACT</code></li>
+<li><code>ACC_SYNTHETIC</code></li>
+<li><code>ACC_ANNOTATION</code></li>
+<li><code>ACC_ENUM</code></li>
+<li>Constant Pool (Table 4.3)</li>
+<li><code>CONSTANT_Class_info</code></li>
+<li><code>CONSTANT_Fieldref_info</code></li>
+<li><code>CONSTANT_Methodref_info</code></li>
+<li><code>CONSTANT_InterfaceMethodref_info</code></li>
+<li><code>CONSTANT_String_info</code></li>
+<li><code>CONSTANT_Integer_info</code></li>
+<li><code>CONSTANT_Float_info</code></li>
+<li><code>CONSTANT_Long_info</code></li>
+<li><code>CONSTANT_Double_info</code></li>
+<li><code>CONSTANT_NameAndType_info</code></li>
+<li><code>CONSTANT_Utf8_info</code></li>
+<li><code>CONSTANT_MethodHandle_info</code></li>
+<li><code>CONSTANT_MethodType_info</code></li>
+<li><code>CONSTANT_InvokeDynamic_info</code></li>
+<li>Field Access Flags (Table 4.4)</li>
+<li><code>ACC_PUBLIC</code></li>
+<li><code>ACC_PRIVATE</code></li>
+<li><code>ACC_PROTECTED</code></li>
+<li><code>ACC_STATIC</code></li>
+<li><code>ACC_FINAL</code></li>
+<li><code>ACC_VOLATILE</code></li>
+<li><code>ACC_TRANSIENT</code></li>
+<li><code>ACC_SYNTHETIC</code></li>
+<li><code>ACC_ENUM</code></li>
+<li>Method Access Flags (Table 4.5)</li>
+<li><code>ACC_PUBLIC</code></li>
+<li><code>ACC_PRIVATE</code></li>
+<li><code>ACC_PROTECTED</code></li>
+<li><code>ACC_STATIC</code></li>
+<li><code>ACC_FINAL</code></li>
+<li><code>ACC_SYNCHRONIZED</code></li>
+<li><code>ACC_BRIDGE</code></li>
+<li><code>ACC_VARARGS</code></li>
+<li><code>ACC_NATIVE</code></li>
+<li><code>ACC_ABSTRACT</code></li>
+<li><code>ACC_STRICT</code></li>
+<li><code>ACC_SYNTHETIC</code></li>
+<li>Attributes (Table 4.6)</li>
+<li><code>ConstantValue</code></li>
+<li><code>Code</code></li>
+<li><code>StackMapTable</code></li>
+<li><code>Exceptions</code></li>
+<li><code>InnerClasses</code></li>
+<li><code>EnclosingMethod</code></li>
+<li><code>Synthetic</code></li>
+<li><code>Signature</code></li>
+<li><code>SourceFile</code></li>
+<li><code>SourceDebugExtension</code></li>
+<li><code>LineNumberTable</code></li>
+<li><code>LocalVariableTable</code></li>
+<li><code>LocalVariableTypeTable</code></li>
+<li><code>Deprecated</code></li>
+<li><code>RuntimeVisibleAnnotations</code></li>
+<li><code>RuntimeInvisibleAnnotations</code></li>
+<li><code>RuntimeVisibleParameterAnnotations</code></li>
+<li><code>RuntimeInvisibleParameterAnnotations</code></li>
+<li><code>AnnotationDefault</code></li>
+<li><code>BootstrapMethods</code></li>
+<li><code>Other</code> - Used for unrecognized/private attributes</li>
+<li><strong>NOTE:</strong> All restrictions put in place of each attribute for determining the validity of a CLASS file may not be fully implemented at the current time.</li>
+</ul>
+<h2>Example Use</h2>
+<p>All pertinent types and subprograms are available within the package <br />
+<code>File_Formats_Java_Class</code>. Reading <code>Class_File</code> is done primarily through the <code>Input</code> aspect,<br />
+as shown below.</p>
+<pre><code class="language-ada">with Ada.Text_IO;
+
+with File_Formats_Java_Class;
+use  File_Formats_Java_Class;
+
+procedure Read_Class_File is
+    F : File_Type;
+    S : Stream_Access;
+begin
+    Open (F, In_File, &quot;Example.class&quot;);
+    S := Stream (F);
+    Ada.Text_IO.Put_Line (Class_File'Input (S));
+    Close (F);
+end Read_Class_File;
+</code></pre>
+<h2>Development Status</h2>
+<p>This crate does not yet define operations for writing to CLASS files, but this is a priority.<br />
+After writing is complete, this crate will be updated to support CLASS files of Java SE 8+.<br />
+You are free to report issues and contribute at the crate&rsquo;s <a href="https://github.com/Bread-Experts-Group/file_formats_java_class">GitHub repository</a>.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Miko Elbrecht</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Bread-Experts-Group/file_formats_java_class">https://github.com/Bread-Experts-Group/file_formats_java_class</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">file</span><span class="tag">formats</span><span class="tag">java</span><span class="tag">class</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/byteflippers/">byteflippers</a>
+        <span class="dep-version">^1.0.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/file_formats_java_class/7.0.0/file_formats_java_class/">File_Formats_Java_Class</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/file_formats_java_class/7.0.0/file_formats_java_class_config/">File_Formats_Java_Class_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

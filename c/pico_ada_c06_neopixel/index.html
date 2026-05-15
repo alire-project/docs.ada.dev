@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pico_ada_c06_neopixel — Ada/SPARK Documentation</title>
+  <meta name="description" content="Chapter 6: Controlling 8 NeoPixel RGB LED">
+  <meta name="keywords" content="Ada, SPARK, Alire, pico_ada_c06_neopixel, raspberry, pi, pico, rp2040, tasking, light-tasking, ada2022, embedded, Pico_Ada_C06_Neopixel_Config, Square_Wave">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "pico_ada_c06_neopixel",
+"version": "1.6.0",  "description": "Chapter 6: Controlling 8 NeoPixel RGB LED",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/pico_ada_c06_neopixel/",
+  "codeRepository": "https://sourceforge.net/projects/pi-ada-tutorial"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">pico_ada_c06_neopixel</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>pico_ada_c06_neopixel</h1>
+    <span class="version-tag">1.6.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.6.0">1.6.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.6.0" selected>1.6.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Chapter 6: Controlling 8 NeoPixel RGB LED</p>
+
+  <div class="long-description"><p>Learn how to drive WS2812 (NeoPixel) LEDs on the Raspberry Pi Pico using the RP2040<br />
+PIO in Ada. Includes a square-wave diagnostic, fixes for the official ws2812_demo, and two complete animation sketches.</p>
+<p>From understanding the WS2812 protocol to writing our own PIO code and creating colourful animations - everything you<br />
+need to make NeoPixels dance with Ada on the Pico.</p>
+<p>Contained in Chapter 06 are:</p>
+<ol>
+<li>square_wave-main.adb      - Simple Square Wave test using PIO (for timing reference)</li>
+<li>ws2812_demo.adb       - Jeremy Grosser&rsquo;s WS2812 demo adapted for the RP2040 and Ada 2022</li>
+<li>sketch_06_1_led_pixel.adb     - Chapter 6.1 NeoPixel LED Pixel</li>
+<li>sketch_06_2_rainbow_light.adb - Chapter 6.2 NeoPixel Rainbow Light</li>
+</ol>
+<p>Read the full tutorial at <a href="https://pi-ada-tutorial.sourceforge.io/pico_ada_c06_neopixel">Chapter 6: Controlling an NeoPixel LED with<br />
+PWM</a>, <a href="https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c06_neopixel/">GNATdoc<br />
+documentation</a>, <a href="https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c06_neopixel/">SourceForge<br />
+repository</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/pi-ada-tutorial">https://sourceforge.net/projects/pi-ada-tutorial</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">raspberry</span><span class="tag">pi</span><span class="tag">pico</span><span class="tag">rp2040</span><span class="tag">tasking</span><span class="tag">light-tasking</span><span class="tag">ada2022</span><span class="tag">embedded</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/embedded_rp2040/">embedded_rp2040</a>
+        <span class="dep-version">^15.3</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_bsp/">pico_bsp</a>
+        <span class="dep-version">^2.2</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_xbsp/">pico_xbsp</a>
+        <span class="dep-version">^1.5</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rp2040_hal/">rp2040_hal</a>
+        <span class="dep-version">^2.7.1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_ada_c06_neopixel/1.6.0/pico_ada_c06_neopixel_config/">Pico_Ada_C06_Neopixel_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_ada_c06_neopixel/1.6.0/square_wave/">Square_Wave</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

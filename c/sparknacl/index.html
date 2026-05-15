@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>sparknacl — Ada/SPARK Documentation</title>
+  <meta name="description" content="Verified SPARK 2014 re-implementation of TweetNaCl cryptographic library">
+  <meta name="keywords" content="Ada, SPARK, Alire, sparknacl, spark, cryptography, security, nacl, curve25519, ed25519, tweetnacl, SPARKNaCl">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "sparknacl",
+"version": "4.0.1",  "description": "Verified SPARK 2014 re-implementation of TweetNaCl cryptographic library",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/sparknacl/",
+  "codeRepository": "https://github.com/rod-chapman/sparknacl"
+  ,"author": [{"@type": "Person", "name": "Rod Chapman"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">sparknacl</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>sparknacl</h1>
+    <span class="version-tag">4.0.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="4.0.1">4.0.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="4.0.1" selected>4.0.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Verified SPARK 2014 re-implementation of TweetNaCl cryptographic library</p>
+
+  <div class="long-description"><p>SPARK 2014 re-implementation of TweetNaCl cryptographic library, with fully automated proofs of type safety and some correctness properties</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Rod Chapman</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/rod-chapman/sparknacl">https://github.com/rod-chapman/sparknacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">spark</span><span class="tag">cryptography</span><span class="tag">security</span><span class="tag">nacl</span><span class="tag">curve25519</span><span class="tag">ed25519</span><span class="tag">tweetnacl</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl/">SPARKNaCl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-aes/">SPARKNaCl.AES</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-core/">SPARKNaCl.Core</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-cryptobox/">SPARKNaCl.Cryptobox</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-debug/">SPARKNaCl.Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hashing/">SPARKNaCl.Hashing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hashing-rfsb509/">SPARKNaCl.Hashing.RFSB509</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hashing-sha256/">SPARKNaCl.Hashing.SHA256</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hashing-sha2_common/">SPARKNaCl.Hashing.SHA2_Common</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hashing-sha384/">SPARKNaCl.Hashing.SHA384</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hashing-sha512/">SPARKNaCl.Hashing.SHA512</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-hkdf/">SPARKNaCl.HKDF</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-mac/">SPARKNaCl.MAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-scalar/">SPARKNaCl.Scalar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-secretbox/">SPARKNaCl.Secretbox</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-sign/">SPARKNaCl.Sign</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-sign-utils/">SPARKNaCl.Sign.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparknacl/4.0.1/sparknacl-stream/">SPARKNaCl.Stream</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

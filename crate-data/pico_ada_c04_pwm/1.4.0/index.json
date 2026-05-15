@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c04_pwm",
+  "version": "1.4.0",
+  "documented_at": "2026-04-15T03:03:43Z",
+  "description": "Chapter 4: Analog & PWM",
+  "long_description": "Contained in Chapter 04 reloaded are:\n\n1. Pwm                         - Original PWM sample from Jeremy Grosser \n2. sketch_04_1_breathing_light - Chapter 4.1 Blink internal LED\n3. sketch_04_2_flowing_light_2 - Chapter 4,1 \n\nGNATdoc documentation:\nhttps://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c04_pwm/\n\nSourceForge repository:\nhttps://sourceforge.net/projects/pi-ada-tutorial/\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c04_pwm",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "^15.2"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.0"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C04_Pwm_Config",
+      "id": "9de6edead704b57e",
+      "file": "pico_ada_c04_pwm_config.json"
+    }
+  ]
+}

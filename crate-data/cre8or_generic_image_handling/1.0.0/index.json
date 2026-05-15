@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "cre8or_generic_image_handling",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:55:51Z",
+  "description": "Generic image file and data handling using stb_images",
+  "authors": [
+    "Cre8or"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "cre8or",
+    "images",
+    "pictures",
+    "binding",
+    "stb",
+    "stb-images",
+    "gamedev",
+    "graphics"
+  ],
+  "website": "https://github.com/Cre8or/Generic-Image-Handling-Ada",
+  "repository": {
+    "url": "https://github.com/Cre8or/Generic-Image-Handling-Ada",
+    "host": "github",
+    "commit": "c01495f03fc8332fd8581e64ac96d3b5233f1dea"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Cre8or_Generic_Image_Handling",
+      "id": "d7051517b0faa72e",
+      "file": "cre8or_generic_image_handling.json"
+    },
+    {
+      "name": "Cre8or_stb",
+      "id": "6d6c0c097eee45bc",
+      "file": "cre8or_stb.json"
+    },
+    {
+      "name": "Cre8or_stb.Images",
+      "id": "6078a3262e5864e2",
+      "file": "cre8or_stb-images.json"
+    }
+  ]
+}

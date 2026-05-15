@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>agpl — Ada/SPARK Documentation</title>
+  <meta name="description" content="Ada General Purpose Library with a robotics flavor">
+  <meta name="keywords" content="Ada, SPARK, Alire, agpl, Agpl, Asl, DOM, Input_Sources, Permutations, Sax, Unicode">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "agpl",
+"version": "1.0.0",  "description": "Ada General Purpose Library with a robotics flavor",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/agpl/",
+  "codeRepository": "https://github.com/mosteo/agpl"
+  ,"author": [{"@type": "Person", "name": "alejandro@mosteo.com"}]
+  ,"license": "LGPL-3.0-only"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">agpl</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>agpl</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Ada General Purpose Library with a robotics flavor</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>alejandro@mosteo.com</dd>
+
+    <dt>License</dt>
+    <dd>LGPL-3.0-only</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/mosteo/agpl">https://github.com/mosteo/agpl</a></dd>
+
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libgsl/">libgsl</a>
+        <span class="dep-version">any</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl/">Agpl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-aux/">Agpl.Aux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-average_queue/">Agpl.Average_queue</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-average_queue-timed/">Agpl.Average_queue.Timed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-bandwidth_throttle/">Agpl.Bandwidth_Throttle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-bmp/">Agpl.Bmp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-bmp-draw/">Agpl.Bmp.Draw</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-calendar/">Agpl.Calendar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-calendar-format/">Agpl.Calendar.Format</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-calendar-serializable_time/">Agpl.Calendar.Serializable_Time</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-chronos/">Agpl.Chronos</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-colors/">Agpl.Colors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-command_line/">Agpl.Command_line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers/">Agpl.Containers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-algorithms/">Agpl.Containers.Algorithms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-algorithms-basic/">Agpl.Containers.Algorithms.Basic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-algorithms-basic-conversions/">Agpl.Containers.Algorithms.Basic.Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-algorithms-basic-fields/">Agpl.Containers.Algorithms.Basic.Fields</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-bags/">Agpl.Containers.Bags</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-bulk/">Agpl.Containers.Bulk</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-bulk-utils/">Agpl.Containers.Bulk.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-graphs/">Agpl.Containers.Graphs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-graphs-adjacency/">Agpl.Containers.Graphs.Adjacency</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-graphs-algorithms/">Agpl.Containers.Graphs.Algorithms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-indefinite_matrix2d/">Agpl.Containers.Indefinite_Matrix2d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-indefinite_multiordered_maps/">Agpl.Containers.Indefinite_Multiordered_Maps</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-naked_vectors/">Agpl.Containers.Naked_Vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-ntrees/">Agpl.Containers.Ntrees</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-ordered_multidimensional_maps/">Agpl.Containers.Ordered_Multidimensional_Maps</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-protected_indefinite_doubly_linked_lists/">Agpl.Containers.Protected_Indefinite_Doubly_Linked_Lists</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-unbounded_trees/">Agpl.Containers.Unbounded_Trees</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-containers-utils/">Agpl.Containers.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-context_controllers/">Agpl.Context_controllers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-conversions/">Agpl.Conversions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-counter/">Agpl.Counter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-counter-multi/">Agpl.Counter.Multi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-cv/">Agpl.Cv</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-db/">Agpl.Db</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-debug/">Agpl.Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-debug-timer/">Agpl.Debug.Timer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-delayer/">Agpl.Delayer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing/">Agpl.Drawing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing-buffer/">Agpl.Drawing.Buffer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing-figures/">Agpl.Drawing.Figures</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing-multisource/">Agpl.Drawing.Multisource</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing-predrawer/">Agpl.Drawing.Predrawer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing-predrawer-stock/">Agpl.Drawing.Predrawer.Stock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-drawing-transformations/">Agpl.Drawing.Transformations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-endian/">Agpl.Endian</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-event_queues/">Agpl.Event_queues</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-event_queues-calendar/">Agpl.Event_queues.Calendar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-exceptions/">Agpl.Exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-filesystem/">Agpl.Filesystem</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_dense_matrix/">Agpl.Generic_Dense_Matrix</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_file_store/">Agpl.Generic_File_Store</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_file_store-cache/">Agpl.Generic_File_Store.Cache</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_handle/">Agpl.Generic_Handle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_indefinite_file_store/">Agpl.Generic_Indefinite_File_Store</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_limited_file_store/">Agpl.Generic_Limited_File_Store</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_limited_file_store-cache/">Agpl.Generic_Limited_File_Store.Cache</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-generic_messenger/">Agpl.Generic_Messenger</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-geoip/">Agpl.Geoip</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-graph/">Agpl.Graph</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-graph-timed/">Agpl.Graph.Timed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-graphs/">Agpl.Graphs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-graphs-base/">Agpl.Graphs.Base</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-graphs-bellman_ford/">Agpl.Graphs.Bellman_Ford</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-gtk/">Agpl.Gtk</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-gtk-tree_utils/">Agpl.Gtk.Tree_Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-gui/">Agpl.Gui</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-indefinite_protected_value/">Agpl.Indefinite_Protected_Value</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-interfaces/">Agpl.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-interfaces-c/">Agpl.Interfaces.C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-interfaces-c-arrays/">Agpl.Interfaces.C.Arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-interfaces-c-types/">Agpl.Interfaces.C.Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-ip/">Agpl.Ip</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-monitor/">Agpl.Monitor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-numbers/">Agpl.Numbers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-optimization/">Agpl.Optimization</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-optimization-annealing/">Agpl.Optimization.Annealing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-optimization-annealing-manual_cooling/">Agpl.Optimization.Annealing.Manual_Cooling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-optimization-annealing-solution/">Agpl.Optimization.Annealing.Solution</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-optimization-annealing-solver/">Agpl.Optimization.Annealing.Solver</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-os_utils/">Agpl.Os_Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-protected_datastore/">Agpl.Protected_Datastore</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-protected_datastore-integers/">Agpl.Protected_Datastore.Integers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-protected_sorted_index/">Agpl.Protected_sorted_index</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-protected_value/">Agpl.Protected_Value</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-protected_values/">Agpl.Protected_Values</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-protected_values-integers/">Agpl.Protected_Values.Integers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-random/">Agpl.Random</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-reflection/">Agpl.Reflection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-reflection-base/">Agpl.Reflection.Base</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-safe_file/">Agpl.Safe_file</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-scaling1d/">Agpl.Scaling1d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-scaling2d/">Agpl.Scaling2d</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-search/">Agpl.Search</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-search-a_star/">Agpl.Search.A_Star</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-segmented_thing/">Agpl.Segmented_Thing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-sequence/">Agpl.Sequence</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-simple_dictionary/">Agpl.Simple_Dictionary</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-smart_access/">Agpl.Smart_Access</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-smart_access_limited/">Agpl.Smart_access_Limited</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-smart_access_limited_debug/">Agpl.Smart_Access_Limited_Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-socket_utils/">Agpl.Socket_Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-statistics/">Agpl.Statistics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-statistics-series/">Agpl.Statistics.Series</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics/">Agpl.Stochastics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp/">Agpl.Stochastics.Mdp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-action/">Agpl.Stochastics.Mdp.Action</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-bellman/">Agpl.Stochastics.Mdp.Bellman</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-containers/">Agpl.Stochastics.Mdp.Containers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-outcome/">Agpl.Stochastics.Mdp.Outcome</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-problem/">Agpl.Stochastics.Mdp.Problem</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-solver/">Agpl.Stochastics.Mdp.Solver</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-solver-backwards/">Agpl.Stochastics.Mdp.Solver.Backwards</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-solver-common/">Agpl.Stochastics.Mdp.Solver.Common</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-solver-naive/">Agpl.Stochastics.Mdp.Solver.Naive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-solver-naive2/">Agpl.Stochastics.Mdp.Solver.Naive2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-solver-naive3/">Agpl.Stochastics.Mdp.Solver.Naive3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-state/">Agpl.Stochastics.Mdp.State</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-stochastics-mdp-value_function/">Agpl.Stochastics.Mdp.Value_Function</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams/">Agpl.Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-circular/">Agpl.Streams.Circular</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-circular_unbounded/">Agpl.Streams.Circular_Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-controlled/">Agpl.Streams.Controlled</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-file/">Agpl.Streams.File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-filter/">Agpl.Streams.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-filter-bandwidth_throttle/">Agpl.Streams.Filter.Bandwidth_Throttle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-filter-buffered_unbounded/">Agpl.Streams.Filter.Buffered_Unbounded</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-memory_arrays/">Agpl.Streams.Memory_arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-memory_arrays_constrained/">Agpl.Streams.Memory_arrays_constrained</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-observable/">Agpl.Streams.Observable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-streams-observable_filter/">Agpl.Streams.Observable_Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-strings/">Agpl.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-strings-enum_padding/">Agpl.Strings.Enum_Padding</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-strings-fields/">Agpl.Strings.Fields</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-strings-pointers/">Agpl.Strings.Pointers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-strings-utf8/">Agpl.Strings.Utf8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-task_termination/">Agpl.Task_Termination</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-tasking/">Agpl.Tasking</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-tasking-code/">Agpl.Tasking.Code</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-tasking-generic_workers/">Agpl.Tasking.Generic_Workers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-tasking-period/">Agpl.Tasking.Period</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-tasking-throttle/">Agpl.Tasking.Throttle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-timed_log/">Agpl.Timed_Log</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-timed_transformer/">Agpl.Timed_Transformer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace/">Agpl.Trace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace-buffer/">Agpl.Trace.Buffer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace-console/">Agpl.Trace.Console</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace-file/">Agpl.Trace.File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace-root/">Agpl.Trace.Root</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace-utils/">Agpl.Trace.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-trace_is/">Agpl.Trace_Is</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-transf2d/">Agpl.Transf2D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-types/">Agpl.Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-types-constants/">Agpl.Types.Constants</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-types-ustrings/">Agpl.Types.Ustrings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-unique_id/">Agpl.Unique_Id</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-url/">Agpl.URL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-xml/">Agpl.Xml</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/agpl-xml-utils/">Agpl.Xml.Utils</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/asl/">Asl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/asl-semaphore/">Asl.Semaphore</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/asl-semaphore-counting/">Asl.Semaphore.Counting</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom/">DOM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core/">DOM.Core</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-attrs/">DOM.Core.Attrs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-cdata_sections/">DOM.Core.Cdata_Sections</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-character_datas/">DOM.Core.Character_Datas</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-comments/">DOM.Core.Comments</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-document_fragments/">DOM.Core.Document_Fragments</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-document_types/">DOM.Core.Document_Types</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-documents/">DOM.Core.Documents</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-elements/">DOM.Core.Elements</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-entity_references/">DOM.Core.Entity_References</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-nodes/">DOM.Core.Nodes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-nodes-output/">Dom.Core.Nodes.Output</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-notations/">DOM.Core.Notations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-processing_instructions/">DOM.Core.Processing_Instructions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-core-texts/">DOM.Core.Texts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/dom-readers/">DOM.Readers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/input_sources/">Input_Sources</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/input_sources-file/">Input_Sources.File</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/input_sources-strings/">Input_Sources.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/permutations/">Permutations</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax/">Sax</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-attributes/">Sax.Attributes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-encodings/">Sax.Encodings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-exceptions/">Sax.Exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-htable/">Sax.HTable</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-locators/">Sax.Locators</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-models/">Sax.Models</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/sax-readers/">Sax.Readers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode/">Unicode</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ccs/">Unicode.CCS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ccs-iso_8859_1/">Unicode.CCS.Iso_8859_1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ccs-iso_8859_2/">Unicode.CCS.Iso_8859_2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ccs-iso_8859_3/">Unicode.CCS.Iso_8859_3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ccs-iso_8859_4/">Unicode.CCS.Iso_8859_4</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ces/">Unicode.CES</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ces-basic_8bit/">Unicode.CES.Basic_8bit</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ces-utf16/">Unicode.CES.Utf16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ces-utf32/">Unicode.CES.Utf32</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-ces-utf8/">Unicode.CES.Utf8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names/">Unicode.Names</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-alpha_presentation_forms/">Unicode.Names.Alpha_Presentation_Forms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-arabic/">Unicode.Names.Arabic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-arabic_present_formsa/">Unicode.Names.Arabic_Present_FormsA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-arabic_present_formsb/">Unicode.Names.Arabic_Present_FormsB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-armenian/">Unicode.Names.Armenian</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-arrows/">Unicode.Names.Arrows</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-basic_latin/">Unicode.Names.Basic_Latin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-bengali/">Unicode.Names.Bengali</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-block_elements/">Unicode.Names.Block_Elements</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-bopomofo/">Unicode.Names.Bopomofo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-bopomofo_extended/">Unicode.Names.Bopomofo_Extended</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-box_drawing/">Unicode.Names.Box_Drawing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-braille_patterns/">Unicode.Names.Braille_Patterns</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-canadian_aboriginal/">Unicode.Names.Canadian_Aboriginal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cherokee/">Unicode.Names.Cherokee</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_compat_ideographs/">Unicode.Names.Cjk_Compat_Ideographs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_compatibility/">Unicode.Names.Cjk_Compatibility</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_compatibility_forms/">Unicode.Names.Cjk_Compatibility_Forms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_letters_months/">Unicode.Names.Cjk_Letters_Months</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_radicals_supplement/">Unicode.Names.Cjk_Radicals_Supplement</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_symbols_and_punct/">Unicode.Names.Cjk_Symbols_And_Punct</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cjk_unified_ideographs/">Unicode.Names.Cjk_Unified_Ideographs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-combining_diacritical/">Unicode.Names.Combining_Diacritical</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-combining_half_marks/">Unicode.Names.Combining_Half_Marks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-combining_marks_symbols/">Unicode.Names.Combining_Marks_Symbols</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-control_pictures/">Unicode.Names.Control_Pictures</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-currency_symbols/">Unicode.Names.Currency_Symbols</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-cyrillic/">Unicode.Names.Cyrillic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-devanagari/">Unicode.Names.Devanagari</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-dingbats/">Unicode.Names.Dingbats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-enclosed_alphanumerics/">Unicode.Names.Enclosed_Alphanumerics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-ethiopic/">Unicode.Names.Ethiopic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-general_punctuation/">Unicode.Names.General_Punctuation</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-geometric_shapes/">Unicode.Names.Geometric_Shapes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-georgian/">Unicode.Names.Georgian</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-greek/">Unicode.Names.Greek</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-greek_extended/">Unicode.Names.Greek_Extended</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-gujarati/">Unicode.Names.Gujarati</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-gurmukhi/">Unicode.Names.Gurmukhi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-half_full_withdt_forms/">Unicode.Names.Half_Full_Withdt_Forms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-hangul_compatibility_jamo/">Unicode.Names.Hangul_Compatibility_Jamo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-hangul_jamo/">Unicode.Names.Hangul_Jamo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-hangul_syllables/">Unicode.Names.Hangul_Syllables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-hebrew/">Unicode.Names.Hebrew</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-high_private_surrogates/">Unicode.Names.High_Private_Surrogates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-high_surrogates/">Unicode.Names.High_Surrogates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-hiragana/">Unicode.Names.Hiragana</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-ideograph_descr_chars/">Unicode.Names.Ideograph_Descr_Chars</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-ipa_extensions/">Unicode.Names.Ipa_Extensions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-kanbun/">Unicode.Names.Kanbun</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-kangxi_radicals/">Unicode.Names.Kangxi_Radicals</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-kannada/">Unicode.Names.Kannada</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-katakana/">Unicode.Names.Katakana</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-khmer/">Unicode.Names.Khmer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-lao/">Unicode.Names.Lao</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-latin_1_supplement/">Unicode.Names.Latin_1_Supplement</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-latin_extended_a/">Unicode.Names.Latin_Extended_A</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-latin_extended_additional/">Unicode.Names.Latin_Extended_Additional</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-latin_extended_b/">Unicode.Names.Latin_Extended_B</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-letterlike_symbols/">Unicode.Names.Letterlike_Symbols</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-low_surrogates/">Unicode.Names.Low_Surrogates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-malayalam/">Unicode.Names.Malayalam</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-mathematical_operators/">Unicode.Names.Mathematical_Operators</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-miscellaneous_symbols/">Unicode.Names.Miscellaneous_Symbols</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-miscellaneous_technical/">Unicode.Names.Miscellaneous_Technical</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-mongolian/">Unicode.Names.Mongolian</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-myanmar/">Unicode.Names.Myanmar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-number_forms/">Unicode.Names.Number_Forms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-ogham/">Unicode.Names.Ogham</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-optical_chars_recognition/">Unicode.Names.Optical_Chars_Recognition</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-oriya/">Unicode.Names.Oriya</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-private_use/">Unicode.Names.Private_Use</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-runic/">Unicode.Names.Runic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-sinhala/">Unicode.Names.Sinhala</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-small_form_variants/">Unicode.Names.Small_Form_Variants</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-spacing_modifier_letters/">Unicode.Names.Spacing_Modifier_Letters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-specials/">Unicode.Names.Specials</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-super_and_sub_scripts/">Unicode.Names.Super_And_Sub_Scripts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-syriac/">Unicode.Names.Syriac</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-tamil/">Unicode.Names.Tamil</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-telugu/">Unicode.Names.Telugu</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-thaana/">Unicode.Names.Thaana</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-thai/">Unicode.Names.Thai</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-tibetan/">Unicode.Names.Tibetan</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-yi_radicals/">Unicode.Names.Yi_Radicals</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/agpl/1.0.0/unicode-names-yi_syllables/">Unicode.Names.Yi_Syllables</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

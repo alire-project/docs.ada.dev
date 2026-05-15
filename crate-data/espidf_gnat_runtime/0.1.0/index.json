@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_gnat_runtime",
+  "version": "0.1.0",
+  "documented_at": "2026-05-14T03:02:19Z",
+  "description": "A0B: GNAT Runtime for ESP-IDF",
+  "long_description": "The `espidf_gnat_runtime` provides the runtime support libraries required to develop Ada and SPARK applications for Espressif SoCs.\nIt serves as the foundational layer that enables the GNAT compiler to target Espressif's hardware, providing the essential infrastructure to bridge Ada language features with the underlying system.\n\nBy using this runtime, developers can leverage the safety, strong typing, and formal verification capabilities of Ada and SPARK on popular, low-cost microcontrollers.\n\n### **Supported Architectures**\n* **Xtensa:** Full support for the **ESP32-S3** series.\n* **RISC-V:** Full support for the **ESP32-C3** series.\n\n### **Key Features**\n* **Ada Language Support:** Implements essential Ada features, including exception handling, controlled types, and secondary stacks.\n* **Real-Time Concurrency:** Provides support for the **Jorvik profile**, enabling the use of Ada tasks and protected objects for safe, concurrent programming.\n* **Hardware Interoperability:** Designed to support applications running alongside the ESP-IDF environment, allowing Ada code to coexist with Espressif's system services.\n* **Verified Quality:** Validated using the **ACATS** (Ada Conformity Assessment Test Suite) to ensure language compliance and runtime stability on both Xtensa and RISC-V targets.\n\n### **Target Audience**\nThis crate is intended for embedded developers using GNAT cross-compilers who wish to build high-integrity applications on the ESP32-S3 or ESP32-C3.\nIt is a vital component for any project aiming to bring Ada's rigorous safety standards to the Espressif ecosystem.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "embedded",
+    "esp32",
+    "espidf",
+    "runtime"
+  ],
+  "website": "https://github.com/godunko/espidf_gnat_runtime",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_gnat_runtime",
+    "host": "github",
+    "commit": "6d5539260aad3c985c275d4a753b6e20c3084f27"
+  },
+  "dependencies": [],
+  "units": []
+}

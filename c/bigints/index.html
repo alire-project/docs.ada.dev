@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bigints — Ada/SPARK Documentation</title>
+  <meta name="description" content="Experimental SPARK Constant Time Big Integer library">
+  <meta name="keywords" content="Ada, SPARK, Alire, bigints, bigint, cryptography, constant-time, spark, ada2022, Bigints, Bigints_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "bigints",
+"version": "0.2.0",  "description": "Experimental SPARK Constant Time Big Integer library",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/bigints/",
+  "codeRepository": "https://github.com/AldanTanneo/bigints"
+  ,"author": [{"@type": "Person", "name": "C\u00e9sar SAGAERT"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">bigints</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>bigints</h1>
+    <div class="version-controls">
+      <div class="version-selector">
+        <select id="version-select" aria-label="Select version">
+          <option value="0.2.0" selected>0.2.0 (latest)</option>
+          <option value="0.1.0">0.1.0</option>
+        </select>
+      </div>
+      <button id="compare-btn" class="compare-btn" title="Compare versions">
+        Compare versions
+      </button>
+    </div>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.2.0">0.2.0</option>
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.2.0" selected>0.2.0</option>
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Experimental SPARK Constant Time Big Integer library</p>
+
+  <div class="long-description"><h1>SPARK Constant Time Big Integer library</h1>
+<p>Implementation of a constant time big integer library, inspired by <a href="https://github.com/RustCrypto/crypto-bigint">crypto-bigint</a>.</p>
+<p>All functions are implemented in constant time, except those with an explicit <code>_Vartime</code> suffix. Overloaded operators are also constant time.</p>
+<blockquote>
+<p>⚠️ The constant time choice primitives like <code>Ct_Eq</code>, <code>Ct_Gt</code>, <code>Cond_Select</code> and <code>CSwap</code> rely on best-effort optimisation barriers.</p>
+</blockquote>
+<h2>Usage</h2>
+<p>The implementations are generic over the size of the integer:</p>
+<pre><code class="language-ada">package U256 is new Bigints.Uint (256);
+package U1024 is new Bigints.Uint (1024);
+</code></pre>
+<p>There is also a generic package to deal with modular integers (over a prime field):</p>
+<pre><code class="language-ada">P : U256.Uint := ... --  a big prime, like 2**255 - 19
+package GF_P is new Bigints.Modular (U256, P);
+</code></pre>
+<p>It is up to the user of the library to ensure the chosen modulus is effectively prime. Otherwise, operations like field inversion become invalid (as it relies on Fermat&rsquo;s little theorem).</p>
+<h2>Formal proof</h2>
+<p>The preinstantations in the library (packages <code>U256s</code> and <code>F25519</code>), as well as the constant time primitives and basic limb primitives, are formally checked using GNATprove.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>César SAGAERT</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/AldanTanneo/bigints">https://github.com/AldanTanneo/bigints</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">bigint</span><span class="tag">cryptography</span><span class="tag">constant-time</span><span class="tag">spark</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints/">Bigints</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-const_choice/">Bigints.Const_Choice</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-machine_ints/">Bigints.Machine_Ints</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-machine_ints-builtins/">Bigints.Machine_Ints.Builtins</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-modular/">Bigints.Modular</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-primitives/">Bigints.Primitives</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-uints/">Bigints.Uints</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints-uints-modulo_ops/">Bigints.Uints.Modulo_Ops</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bigints/0.2.0/bigints_config/">Bigints_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+<script>
+(function () {
+  var select  = document.getElementById('version-select');
+  var crate   = "bigints";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  select.addEventListener('change', function () {
+    var version = select.value;
+    var url = baseUrl + '/crate-data/' + crate + '/' + version + '/index.json';
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (m) { applyManifest(m, version); })
+      .catch(function (e) { console.error('Could not load version ' + version, e); });
+  });
+
+  function applyManifest(m, version) {
+    // Units
+    var uSection = document.getElementById('units-section');
+    if (uSection) {
+      var units = m.units || [];
+      if (units.length === 0) {
+        uSection.innerHTML = '<h2>API Units</h2><p>No API units indexed for this version.</p>';
+      } else {
+        var items = units.map(function (u) {
+          var stem = u.file.replace(/\.json$/, '');
+          var href = esc(baseUrl + '/c/' + crate + '/' + version + '/' + stem + '/');
+          return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
+        }).join('');
+        uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
+      }
+    }
+
+    // Dependencies
+    var dSection = document.getElementById('deps-section');
+    if (dSection) {
+      var deps = m.dependencies || [];
+      if (deps.length === 0) {
+        dSection.innerHTML = '';
+      } else {
+        var ditems = deps.map(function (d) {
+          return '<li><a href="' + esc(baseUrl + '/c/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+               + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
+        }).join('');
+        dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';
+      }
+    }
+
+    // Repository / website link
+    var repoEl = document.getElementById('meta-repo');
+    if (repoEl) {
+      var url = m.repository ? m.repository.url : (m.website || '');
+      var labelEl = document.getElementById('meta-repo-label') || repoEl.previousElementSibling;
+      if (url) {
+        repoEl.innerHTML = '<a href="' + esc(url) + '">' + esc(url) + '</a>';
+        repoEl.style.display = '';
+        if (labelEl) labelEl.style.display = '';
+      } else {
+        repoEl.innerHTML = '';
+        repoEl.style.display = 'none';
+        if (labelEl) labelEl.style.display = 'none';
+      }
+    }
+
+    // Page title
+    document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+
+<script>
+// Version comparison functionality
+(function () {
+  var modal = document.getElementById('compare-modal');
+  var compareBtn = document.getElementById('compare-btn');
+  var closeBtn = document.getElementById('close-modal');
+  var runCompareBtn = document.getElementById('run-compare');
+  var compareFrom = document.getElementById('compare-from');
+  var compareTo = document.getElementById('compare-to');
+  var resultsDiv = document.getElementById('compare-results');
+  var crate = "bigints";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  if (!modal || !compareBtn) return;
+
+  // Open modal
+  compareBtn.addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Run comparison
+  runCompareBtn.addEventListener('click', function () {
+    var fromVersion = compareFrom.value;
+    var toVersion = compareTo.value;
+
+    if (fromVersion === toVersion) {
+      resultsDiv.innerHTML = '<p class="error">Please select different versions to compare.</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = '<p class="loading">Loading and comparing versions...</p>';
+
+    Promise.all([
+      fetch(baseUrl + '/crate-data/' + crate + '/' + fromVersion + '/index.json').then(r => r.json()),
+      fetch(baseUrl + '/crate-data/' + crate + '/' + toVersion + '/index.json').then(r => r.json())
+    ]).then(function (results) {
+      var oldManifest = results[0];
+      var newManifest = results[1];
+      var diff = computeDiff(oldManifest, newManifest);
+      displayDiff(diff, fromVersion, toVersion);
+    }).catch(function (err) {
+      resultsDiv.innerHTML = '<p class="error">Failed to load version data: ' + err.message + '</p>';
+    });
+  });
+
+  function computeDiff(oldManifest, newManifest) {
+    var oldUnits = oldManifest.units || [];
+    var newUnits = newManifest.units || [];
+    var oldDeps = oldManifest.dependencies || [];
+    var newDeps = newManifest.dependencies || [];
+
+    // Create maps for quick lookup
+    var oldUnitMap = {};
+    oldUnits.forEach(function (u) { oldUnitMap[u.name] = u; });
+    var newUnitMap = {};
+    newUnits.forEach(function (u) { newUnitMap[u.name] = u; });
+
+    var oldDepMap = {};
+    oldDeps.forEach(function (d) { oldDepMap[d.crate] = d; });
+    var newDepMap = {};
+    newDeps.forEach(function (d) { newDepMap[d.crate] = d; });
+
+    // Compare units
+    var addedUnits = [];
+    var removedUnits = [];
+    var unchangedUnits = [];
+
+    newUnits.forEach(function (u) {
+      if (!oldUnitMap[u.name]) {
+        addedUnits.push(u.name);
+      } else {
+        unchangedUnits.push(u.name);
+      }
+    });
+
+    oldUnits.forEach(function (u) {
+      if (!newUnitMap[u.name]) {
+        removedUnits.push(u.name);
+      }
+    });
+
+    // Compare dependencies
+    var addedDeps = [];
+    var removedDeps = [];
+    var modifiedDeps = [];
+
+    newDeps.forEach(function (d) {
+      if (!oldDepMap[d.crate]) {
+        addedDeps.push(d);
+      } else if (oldDepMap[d.crate].version !== d.version) {
+        modifiedDeps.push({ crate: d.crate, old: oldDepMap[d.crate].version, new: d.version });
+      }
+    });
+
+    oldDeps.forEach(function (d) {
+      if (!newDepMap[d.crate]) {
+        removedDeps.push(d);
+      }
+    });
+
+    return {
+      units: { added: addedUnits, removed: removedUnits, unchanged: unchangedUnits },
+      dependencies: { added: addedDeps, removed: removedDeps, modified: modifiedDeps }
+    };
+  }
+
+  function esc(text) {
+    return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function displayDiff(diff, fromVersion, toVersion) {
+    var html = '<div class="diff-summary">';
+    html += '<h3>Changes from ' + esc(fromVersion) + ' to ' + esc(toVersion) + '</h3>';
+
+    var totalChanges = diff.units.added.length + diff.units.removed.length +
+                       diff.dependencies.added.length + diff.dependencies.removed.length +
+                       diff.dependencies.modified.length;
+
+    if (totalChanges === 0) {
+      html += '<p class="no-changes">No API changes detected between these versions.</p>';
+    } else {
+      // Units changes
+      if (diff.units.added.length > 0 || diff.units.removed.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>API Units (' + (diff.units.added.length + diff.units.removed.length) + ' changes)</h4>';
+
+        if (diff.units.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.units.added.length + '):</strong>';
+          html += '<ul>';
+          diff.units.added.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.units.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.units.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.units.removed.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+
+      // Dependencies changes
+      if (diff.dependencies.added.length > 0 || diff.dependencies.removed.length > 0 || diff.dependencies.modified.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>Dependencies (' + (diff.dependencies.added.length + diff.dependencies.removed.length + diff.dependencies.modified.length) + ' changes)</h4>';
+
+        if (diff.dependencies.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.dependencies.added.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.added.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code> ' + esc(d.version) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.modified.length > 0) {
+          html += '<div class="diff-group modified">';
+          html += '<strong>~ Modified (' + diff.dependencies.modified.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.modified.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code>: ' + esc(d.old) + ' → ' + esc(d.new) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.dependencies.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.removed.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    resultsDiv.innerHTML = html;
+  }
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rand — Ada/SPARK Documentation</title>
+  <meta name="description" content="Random number generation toolkit">
+  <meta name="keywords" content="Ada, SPARK, Alire, rand, random, chacha20, rng, getrandom, security, Rand, Rand_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "rand",
+"version": "0.1.0",  "description": "Random number generation toolkit",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/rand/",
+  "codeRepository": "https://github.com/AldanTanneo/rand-ada"
+  ,"author": [{"@type": "Person", "name": "C\u00e9sar SAGAERT"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">rand</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>rand</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Random number generation toolkit</p>
+
+  <div class="long-description"><h1>Random number generation toolkit for Ada</h1>
+<p>Design principles mostly inspired by the <a href="https://github.com/rust-random/rand">rand</a> Rust crate.</p>
+<p>The project is split into several subcrates. <code>rand_core</code>, <code>rand_chacha</code>, <code>rand_xoshiro256</code> and <code>rand_distributions</code> can be used on embedded; However, <code>rand_sys</code> (and its dependent <code>rand</code>, the main crate) pull entropy from system sources, using the <a href="https://alire.ada.dev/crates/system_random"><code>system_random</code></a> Alire crate.</p>
+<h2>Usage examples</h2>
+<p>Get a thread local instance of a secure Random Number Generator (RNG), seeded with system entropy:</p>
+<pre><code class="language-ada">with Rand;
+R : Rand.Rng := Rand.Thread_Rng;
+--  alternatively:
+R : Rand.Rng := Rand.Small_Rng;
+   --  a fast, unsecure RNG seeded with system entropy
+R : Rand.Rng := Rand.Sys.Get;
+   --  RNG based on system randomness sources
+   --  (OS-dependent)
+</code></pre>
+<p>Use convenience methods on the RNG to generate basic types:</p>
+<pre><code class="language-ada">V1 : Float := R.Gen;        --  a float in the range [0, 1)
+V2 : Long_Integer := R.Gen; --  a long integer over the whole range
+</code></pre>
+<p>You can also define your own random number generators by implementing the <code>Rand.Core_Rng</code> interface (alias for <code>Rand_Core.Rng</code>).</p>
+<p>Use <code>Next</code> and <code>Next_Bytes</code> to get the raw output of any RNG:</p>
+<pre><code class="language-ada">Buf : Rand.Core.Bytes (1 .. 256);
+R.Next_Bytes (Buf);
+X : Rand.Core.U64 := R.Next;
+</code></pre>
+<p>Use a predefined random distribution to get finer random value selection:</p>
+<pre><code class="language-ada">use Rand.Distributions;
+D1 : Uniform_Nat.Distribution := Uniform_Nat.Create (8, 27);
+S : Natural := D1.Sample (R);
+   --  sample in the inclusive range [8, 27]
+
+D2 : Bernoulli := Bernoulli.Create (0.25);
+S : Boolean := D2.Sample (R);
+   --  a boolean that is True 25% of the time
+</code></pre>
+<p>Or define your own distributions:</p>
+<pre><code class="language-ada">use Rand.Distributions;
+
+type Gaussian is new Long_Float_Distr.Distribution with record
+   Sigma : Long_Float;
+end record;
+
+overriding
+function Sample (D : Gaussian; R : in out Rand.Rng) return Long_Float
+is (...); --  sampling the custom distribution
+</code></pre>
+<p>Even on your own types:</p>
+<pre><code class="language-ada">with Rand_Distributions; use Rand_Distributions;
+
+type My_Rec is record
+   A : Integer;
+   B : Float;
+end record;
+
+package I is new Generic_Distribution (My_Rec);
+--  define the interface distributions over your type must implement
+
+type My_Distr is new I.Distribution with null record;
+
+overriding
+function Sample (D : My_Distr; R : in out Rand.Rng) return My_Rec
+is (A =&gt; 4, --  chosen by fair dice roll
+    B =&gt; R.Gen);
+</code></pre></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>César SAGAERT</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/AldanTanneo/rand-ada">https://github.com/AldanTanneo/rand-ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">random</span><span class="tag">chacha20</span><span class="tag">rng</span><span class="tag">getrandom</span><span class="tag">security</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand_chacha/">rand_chacha</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand_core/">rand_core</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand_distributions/">rand_distributions</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand_sys/">rand_sys</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand_xoshiro256/">rand_xoshiro256</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand/">Rand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand-distributions/">Rand.Distributions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand-distributions-interfaces/">Rand.Distributions.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand-distributions-standard_uniform/">Rand.Distributions.Standard_Uniform</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand-sequence/">Rand.Sequence</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand-thread_local/">Rand.Thread_Local</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rand/0.1.0/rand_config/">Rand_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

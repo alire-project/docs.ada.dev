@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>termicap — Ada/SPARK Documentation</title>
+  <meta name="description" content="Cross-platform terminal capability detection (color, TTY, ...)">
+  <meta name="keywords" content="Ada, SPARK, Alire, termicap, terminal, capability, detection, color, tty, is-tty, spark, cross-platform, windows, linux, macos, bsd, Termicap, Termicap_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "termicap",
+"version": "1.0.0",  "description": "Cross-platform terminal capability detection (color, TTY, ...)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/termicap/",
+  "codeRepository": "https://github.com/adarium-labs/termicap"
+  ,"author": [{"@type": "Person", "name": "Heziode"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">termicap</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>termicap</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Cross-platform terminal capability detection (color, TTY, ...)</p>
+
+  <div class="long-description"><p>Terminal capability detection for Ada/SPARK. Cross-platform, dependency-light, no rendering layer attached.</p>
+<p>Termicap exists to answer the handful of questions almost every CLI or TUI program has to ask before printing a single byte: is the stream a TTY, how many colors can the terminal handle, how wide is the window, can the locale render Unicode, <em>which</em> terminal is this (iTerm, kitty, WezTerm, Windows Terminal, ConPTY, tmux, screen, &hellip;), does it speak OSC 8 hyperlinks or Sixel graphics or the Kitty keyboard protocol, and the question that overrides all the others, did the user already pass <code>NO_COLOR</code> or <code>FORCE_COLOR</code> or <code>--color=never</code>. The answers come back as plain Ada records and enums. Termicap does not emit escape sequences, render styled text, or pretend to be a TUI framework. It is meant to sit underneath whatever rendering layer you already have.</p>
+<h2>What it detects</h2>
+<p>The base API gives you per-stream TTY booleans (stdin, stdout, stderr), the four canonical color levels (<code>None</code>, <code>Basic_16</code>, <code>Extended_256</code>, <code>True_Color</code>) via an 11-step cascade modelled on <code>supports-color</code>, <code>termenv</code>, and <code>rich</code>, terminal dimensions (<code>ioctl(TIOCGWINSZ)</code> on POSIX, <code>GetConsoleScreenBufferInfo</code> on Windows) with <code>SIGWINCH</code> resize notification via a self-pipe and protected object on POSIX, a Unicode support level (<code>None / Basic / Extended</code>) from locale, CI and terminal heuristics, terminal identity (multiplexers included) with a program name, the DA1 primary device attributes (VT level, capability flags), DECRPM mode reports through a batched single-sentinel probe, OSC 10/11 background and foreground color with a <code>COLORFGBG</code> fallback and a SPARK Gold dark/light classifier, and a passive OSC 8 hyperlink classification. Color responses are normalised to RGB; theme detection runs on luminance.</p>
+<p>The full API adds the active probes: XTVERSION terminal name and version, Kitty / XTerm-CSI / Legacy / Win32 keyboard protocol, <code>SGR_Pixels / SGR / URXVT / X10</code> mouse encoding (DECRPM-driven), Sixel and Kitty graphics flags (seeded by DA1 <code>Ps=4</code> and XTVERSION name tokens), and OSC 52 clipboard support (<code>Read / Write / Read_Write / None</code>). Hyperlinks classification is refined when XTVERSION confirms the terminal.</p>
+<p>A couple of standalone helpers come in the box: <code>wcwidth</code> / cell width with Unicode 3 / 13 / 16 tables and binary search (SPARK Gold, no FFI in the table layer); a Terminfo parser for header plus boolean / numeric / string entries (bounded, pure); and a process-wide <code>Override_Mode</code> (<code>Auto / Force_None / Force_Basic / Force_256 / Force_True_Color</code>) with a <code>Scoped_Override</code> controlled type for wiring <code>--color=auto | never | always | 256 | truecolor</code> straight into the detection engine.</p>
+<h2>Color downsampling</h2>
+<p>Detection only tells you what the terminal can show. Picking a color the terminal can actually display is a separate problem, and that&rsquo;s what the companion <code>Termicap.Downsampling</code> package handles: it maps any color you want to emit down to the level the terminal supports (TrueColor -&gt; 256-color -&gt; ANSI 16, or strip to none). One overloaded <code>Downsample</code> dispatches on <code>RGB</code> or <code>Color_Index_256</code>; the primitive conversions (<code>Downsample_True_To_256</code>, <code>Downsample_True_To_16</code>, <code>Downsample_256_To_16</code>) are also exposed for the cases where the dispatch wrapper is overkill. The whole package is pure SPARK Gold with idempotency and monotonicity postconditions, no FFI, no allocation.</p>
+<h2>Architecture notes</h2>
+<p>The detection logic is <em>written</em> against SPARK Silver (Gold for downsampling and cell width); FFI and tasking boundaries are isolated behind clearly marked <code>SPARK_Mode =&gt; Off</code> packages and C wrappers. The codebase has not yet been verified end-to-end with <code>gnatprove</code>. Running the prover and discharging the remaining VCs is on the to-do list, not a finished claim.</p>
+<p>There are two API tiers. <code>Get</code> and <code>Detect</code> give you a fast snapshot (sub-50 ms in the worst case). <code>Get_Full</code> and <code>Detect_Full</code> add the active probes; worst case is around 6 s if every probe times out, but a local PTY usually answers in well under 50 ms. <code>Get</code> is cached per stream and thread-safe; <code>Detect</code> always re-runs every sub-detector, which is the version you want after <code>SIGWINCH</code>, after the override changes, or anywhere a long-running process can&rsquo;t trust a stale snapshot.</p>
+<p>Linux, macOS, BSD, and Windows are all supported. Platform-specific bodies are dispatched via GPR <code>Source_Dirs</code>. The Windows layer classifies the console (<code>Legacy_Conhost</code>, <code>ConPTY_VT_Enabled</code>, <code>Not_A_Console</code>) and gates active probes accordingly; Cygwin / MSYS2 PTY handles are detected by inspecting the underlying named-pipe name through <code>NtQueryObject</code>.</p>
+<p>No exceptions are raised by library code. Errors come back as <code>Result</code> variants or safe defaults. Dependencies stay minimal: <code>sparklib</code> for the SPARK formal containers, plus <code>win32ada</code> on Windows only.</p>
+<h2>Quick start</h2>
+<pre><code class="language-ada">with Ada.Text_IO;
+with Termicap.Capabilities;
+with Termicap.Color;
+
+procedure Hello is
+   Caps : constant Termicap.Capabilities.Terminal_Capabilities :=
+     Termicap.Capabilities.Get;
+begin
+   if Caps.TTY_Stdout
+     and then Caps.Color &gt;= Termicap.Color.Extended_256
+   then
+      Ada.Text_IO.Put_Line
+        (ASCII.ESC &amp; &quot;[38;5;208mHello, 256-color world&quot;
+         &amp; ASCII.ESC &amp; &quot;[0m&quot;);
+   else
+      Ada.Text_IO.Put_Line (&quot;Hello, monochrome world&quot;);
+   end if;
+end Hello;
+</code></pre>
+<p>The repository ships with a couple of dozen runnable demos in <code>examples/</code>, arc42-lite architecture docs in <code>docs/architecture/</code>, a Diátaxis-style user guide in <code>docs/guide/</code>, MADR-format ADRs in <code>docs/adr/</code>, StrictDoc-format requirements in <code>docs/requirements/</code>, and a cross-language conformance harness in <code>tools/conformance/</code> that cross-checks Termicap against reference shims in C, Go, Rust, Python, Node.js, Java, Haskell, Ruby, C#, and Swift.</p>
+<p>Licensed Apache-2.0 WITH LLVM-exception, which keeps it safe for static linking into closed-source binaries without forcing license propagation.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Heziode</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/adarium-labs/termicap">https://github.com/adarium-labs/termicap</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">terminal</span><span class="tag">capability</span><span class="tag">detection</span><span class="tag">color</span><span class="tag">tty</span><span class="tag">is-tty</span><span class="tag">spark</span><span class="tag">cross-platform</span><span class="tag">windows</span><span class="tag">linux</span><span class="tag">macos</span><span class="tag">bsd</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/case(os)/">case(os)</a>
+        <span class="dep-version">{&#39;windows&#39;: {&#39;win32ada&#39;: &#39;^26.0.0&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparklib/">sparklib</a>
+        <span class="dep-version">^15.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap/">Termicap</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-capabilities/">Termicap.Capabilities</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-cell_width/">Termicap.Cell_Width</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-cell_width-tables/">Termicap.Cell_Width.Tables</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-clipboard/">Termicap.Clipboard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-clipboard-io/">Termicap.Clipboard.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-color/">Termicap.Color</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-color-bg_query/">Termicap.Color.BG_Query</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-color-bg_query-io/">Termicap.Color.BG_Query.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-color-dark_light/">Termicap.Color.Dark_Light</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-color-dark_light-detect/">Termicap.Color.Dark_Light.Detect</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-color-detection/">Termicap.Color.Detection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-da1/">Termicap.DA1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-da1-io/">Termicap.DA1.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-decrpm/">Termicap.DECRPM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-decrpm-io/">Termicap.DECRPM.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-dimensions/">Termicap.Dimensions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-downsampling/">Termicap.Downsampling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-environment/">Termicap.Environment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-environment-capture/">Termicap.Environment.Capture</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-graphics/">Termicap.Graphics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-graphics-io/">Termicap.Graphics.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-hyperlinks/">Termicap.Hyperlinks</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-keyboard/">Termicap.Keyboard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-keyboard-io/">Termicap.Keyboard.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-mouse/">Termicap.Mouse</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-mouse-io/">Termicap.Mouse.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-osc/">Termicap.OSC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-osc-parsing/">Termicap.OSC.Parsing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-override/">Termicap.Override</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-sigwinch/">Termicap.Sigwinch</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-terminal_id/">Termicap.Terminal_Id</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-terminfo/">Termicap.Terminfo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-terminfo-io/">Termicap.Terminfo.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-tty/">Termicap.TTY</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-unicode/">Termicap.Unicode</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-version/">Termicap.Version</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-wcwidth/">Termicap.Wcwidth</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-xtversion/">Termicap.XTVERSION</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap-xtversion-io/">Termicap.XTVERSION.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/termicap/1.0.0/termicap_config/">Termicap_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

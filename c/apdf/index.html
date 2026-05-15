@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>apdf — Ada/SPARK Documentation</title>
+  <meta name="description" content="Portable package for producing dynamically PDF documents">
+  <meta name="keywords" content="Ada, SPARK, Alire, apdf, pdf, adobe, acrobat, Bar_code, Fancy_Page, PDF_Out, QR_code">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "apdf",
+"version": "9.0.0",  "description": "Portable package for producing dynamically PDF documents",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/apdf/",
+  "codeRepository": "https://sourceforge.net/projects/apdf"
+  ,"author": [{"@type": "Person", "name": "Gautier de Montmollin"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">apdf</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>apdf</h1>
+    <span class="version-tag">9.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="9.0.0">9.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="9.0.0" selected>9.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Portable package for producing dynamically PDF documents</p>
+
+  <div class="long-description"><p><strong>PDF_Out</strong> is an Ada package for producing easily and automatically PDF files, from an Ada program, with text, vector graphics and raster graphics.</p>
+<p><img alt="Ada PDF Screenshot" src="https://apdf.sourceforge.io/pw_ari_delivery_m.png" title="Screenshot of a page produced by PDF_Out" /><br />
+<img alt="Ada PDF Screenshot" src="https://apdf.sourceforge.io/pw_sowebio_m.jpg" title="Screenshot of a report produced by PDF_Out" /></p>
+<ul>
+<li>Ideal for the dynamic production of reports, invoices, tickets, labels, delivery notes, charts, maps etc.</li>
+<li>Vector graphics</li>
+<li>Inclusion of JPEG images</li>
+<li>Object oriented</li>
+<li>Task safe</li>
+<li>Endian-neutral</li>
+<li>Multi-platform, but native code build</li>
+<li>Unconditionally portable code: OS-, CPU-, compiler- independent code</li>
+<li>Pure Ada 2012: this package can be used in projects in Ada 2012 and later language versions</li>
+<li><em>Free</em>, open-source </li>
+</ul>
+<p>The creation of a PDF file is as simple as this small procedure:</p>
+<pre><code class="language-ada">with PDF_Out;
+
+procedure Small_Demo is
+  pdf : PDF_Out.PDF_Out_File;
+begin
+  pdf.Create (&quot;small.pdf&quot;);
+  pdf.Put_Line (&quot;This is a very small demo for PDF_Out...&quot;);
+  pdf.Close;
+end Small_Demo;
+</code></pre></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Gautier de Montmollin</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/apdf">https://sourceforge.net/projects/apdf</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">pdf</span><span class="tag">adobe</span><span class="tag">acrobat</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gid/">gid</a>
+        <span class="dep-version">&gt;=13.0.1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/apdf/9.0.0/bar_code/">Bar_code</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/apdf/9.0.0/fancy_page/">Fancy_Page</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/apdf/9.0.0/pdf_out/">PDF_Out</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/apdf/9.0.0/qr_code/">QR_code</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>spark_unbound — Ada/SPARK Documentation</title>
+  <meta name="description" content="Unbound data structures in Ada-Spark">
+  <meta name="keywords" content="Ada, SPARK, Alire, spark_unbound, spark, unbound, Spark_Unbound">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "spark_unbound",
+"version": "0.2.1",  "description": "Unbound data structures in Ada-Spark",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/spark_unbound/",
+  "codeRepository": "https://github.com/mhatzl/spark_unbound"
+  ,"author": [{"@type": "Person", "name": "Manuel Hatzl"}]
+  ,"license": "MIT"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">spark_unbound</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>spark_unbound</h1>
+    <span class="version-tag">0.2.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.2.1">0.2.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.2.1" selected>0.2.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Unbound data structures in Ada-Spark</p>
+
+  <div class="long-description"><p>Spark_Unbound is a take on providing generic unbound data structures in Spark.</p>
+<p>In addition to proving general absence of runtime errors, the heap allocation is done in a non-Spark function to catch a possible <code>Storage_Error</code>.<br />
+This further increases the security and confident use of this library.</p>
+<p><strong>The following packages are currently available:</strong></p>
+<ul>
+<li><code>Spark_Unbound.Safe_Alloc</code>: Providing formally proven safe heap allocation functionality</li>
+<li><code>Spark_Unbound.Arrays</code>: Providing a formally proven alternative to <code>Ada.Containers.Vector</code></li>
+</ul>
+<p><strong>Note:</strong> If you use this library, starring the repository on GitHub helps me a lot to see if it is even useful for someone else.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Manuel Hatzl</dd>
+
+    <dt>License</dt>
+    <dd>MIT</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/mhatzl/spark_unbound">https://github.com/mhatzl/spark_unbound</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">spark</span><span class="tag">unbound</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_unbound/0.2.1/spark_unbound/">Spark_Unbound</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_unbound/0.2.1/spark_unbound-arrays/">Spark_Unbound.Arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_unbound/0.2.1/spark_unbound-safe_alloc/">Spark_Unbound.Safe_Alloc</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_unbound/0.2.1/spark_unbound-safe_alloc-arrays/">Spark_Unbound.Safe_Alloc.Arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/spark_unbound/0.2.1/spark_unbound-safe_alloc-definite/">Spark_Unbound.Safe_Alloc.Definite</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

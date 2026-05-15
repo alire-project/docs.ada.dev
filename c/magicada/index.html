@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>magicada — Ada/SPARK Documentation</title>
+  <meta name="description" content="Magic Number Recognition Library Ada binding">
+  <meta name="keywords" content="Ada, SPARK, Alire, magicada, magic, file, bindings, Magic">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "magicada",
+"version": "1.0.1",  "description": "Magic Number Recognition Library Ada binding",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/magicada/",
+  "codeRepository": "https://gitlab.com/stcarrez/ada-libmagic"
+  ,"author": [{"@type": "Person", "name": "Stephane.Carrez@gmail.com"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">magicada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>magicada</h1>
+    <span class="version-tag">1.0.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.1">1.0.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.1" selected>1.0.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Magic Number Recognition Library Ada binding</p>
+
+  <div class="long-description"><p>Small Ada binding library to the <a href="https://linux.die.net/man/3/libmagic">libmagic (3)</a><br />
+library which is used by the implementation of the<br />
+<a href="https://linux.die.net/man/1/file">file (1)</a> command.</p>
+<p>To simplify and help in the use of the magic Ada library, the<br />
+<code>Magic.Manager</code> package encapsulates the management of the libmagic library<br />
+and provides high level simple operations to hide the details of interacting<br />
+with the C library.  The package defines the <code>Magic_Manager</code> tagged record<br />
+that takes care of the C library interaction and cleaning of the libmagic<br />
+library once the manager is no longer required.  To use it, declare the<br />
+instance and initialize it with the <code>Initialize</code> procedure:</p>
+<pre><code class="language-Ada"> with Magic.Manager;
+ ...
+    Mgr : Magic.Manager.Magic_Manager;
+    ...
+       Mgr.Initialize (Magic.MAGIC_MIME, Magic.DEFAULT_PATH);
+</code></pre>
+<p>The first parameter defines a set of flags represented by the <code>Magic.Flags</code><br />
+type to control various options of the libmagic library.   The second<br />
+parameter indicates the default path to the magic file<br />
+(see <a href="https://linux.die.net/man/5/magic">magic (5)</a>).<br />
+Once configured, the <code>Identify</code> functions can be used to identify a content.<br />
+For the first form, a path of the file is given:</p>
+<pre><code class="language-Ada"> Mime : constant String := Mgr.Identify (&quot;file.ads&quot;);
+</code></pre>
+<p>With the second form, a <code>Stream_Element_Array</code> with the content to identify<br />
+is given to the function.</p>
+<h2>Example</h2>
+<ul>
+<li><a href="https://gitlab.com/stcarrez/ada-libmagic/-/blob/main/examples/src/examples.adb?ref_type=heads">examples.adb</a></li>
+</ul></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Stephane.Carrez@gmail.com</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/stcarrez/ada-libmagic">https://gitlab.com/stcarrez/ada-libmagic</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">magic</span><span class="tag">file</span><span class="tag">bindings</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libmagic/">libmagic</a>
+        <span class="dep-version">*</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/magicada/1.0.1/magic/">Magic</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/magicada/1.0.1/magic-manager/">Magic.Manager</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

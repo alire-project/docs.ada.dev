@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ccsds_ada — Ada/SPARK Documentation</title>
+  <meta name="description" content="CCSDS protocol suite with SPARK formal verification">
+  <meta name="keywords" content="Ada, SPARK, Alire, ccsds_ada, ccsds, space, telemetry, telecommand, spark, embedded, satellite, verified, cfdp, aos, CCSDS">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ccsds_ada",
+"version": "0.1.0",  "description": "CCSDS protocol suite with SPARK formal verification",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ccsds_ada/",
+  "codeRepository": "https://github.com/b-erdem/ccsds_ada"
+  ,"author": [{"@type": "Person", "name": "Baris Erdem"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">ccsds_ada</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ccsds_ada</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">CCSDS protocol suite with SPARK formal verification</p>
+
+  <div class="long-description"><p>SPARK-proved CCSDS protocol suite for Ada 2022. Implements Space Packet<br />
+Protocol (133.0-B-1), Time Code Formats (301.0-B-4 CUC/CDS), AOS Transfer<br />
+Frame (732.0-B-4) with FECF, Encapsulation Packet (133.1-B-3), CFDP PDU<br />
+(727.0-B-5) with optional CRC, SLE identifiers (132.0-B-3), and the<br />
+CRC-16-CCITT-FALSE primitive used by AOS and CFDP. 100% formally verified<br />
+at SPARK Level 2 (440 proof obligations, 0 unproved). No heap allocation,<br />
+pragma Pure, suitable for embedded flight software and safety-critical<br />
+ground systems.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Baris Erdem</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/b-erdem/ccsds_ada">https://github.com/b-erdem/ccsds_ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">ccsds</span><span class="tag">space</span><span class="tag">telemetry</span><span class="tag">telecommand</span><span class="tag">spark</span><span class="tag">embedded</span><span class="tag">satellite</span><span class="tag">verified</span><span class="tag">cfdp</span><span class="tag">aos</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds/">CCSDS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-aos_frames/">CCSDS.AOS_Frames</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-cfdp/">CCSDS.CFDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-crc16/">CCSDS.CRC16</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-encap_packets/">CCSDS.Encap_Packets</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-sle/">CCSDS.SLE</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-space_packets/">CCSDS.Space_Packets</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ccsds_ada/0.1.0/ccsds-time_codes/">CCSDS.Time_Codes</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

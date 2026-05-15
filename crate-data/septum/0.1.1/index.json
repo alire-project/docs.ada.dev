@@ -1,0 +1,124 @@
+{
+  "schema_version": "1",
+  "crate": "septum",
+  "version": "0.1.1",
+  "documented_at": "2026-05-05T03:02:05Z",
+  "description": "An interactive context-based text search tool for large codebases.",
+  "authors": [
+    "Paul Jarrett"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "search",
+    "code",
+    "text"
+  ],
+  "website": "https://github.com/pyjarrett/septum",
+  "repository": {
+    "url": "https://github.com/pyjarrett/septum",
+    "host": "github",
+    "commit": "6d2cb146250ba68753b61bf93afaae398596b385"
+  },
+  "dependencies": [
+    {
+      "crate": "dir_iterators",
+      "version": "~0.0.5"
+    },
+    {
+      "crate": "progress_indicators",
+      "version": "~0.0.1"
+    },
+    {
+      "crate": "trendy_terminal",
+      "version": "~0.0.5"
+    },
+    {
+      "crate": "atomic",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Septum_Config",
+      "id": "33c1b2e8ec4d5fb4",
+      "file": "septum_config.json"
+    },
+    {
+      "name": "SP",
+      "id": "be18b85f77fc024d",
+      "file": "sp.json"
+    },
+    {
+      "name": "SP.Cache",
+      "id": "b89fcf0f464c4422",
+      "file": "sp-cache.json"
+    },
+    {
+      "name": "SP.Commands",
+      "id": "a3b5af68a0a935a3",
+      "file": "sp-commands.json"
+    },
+    {
+      "name": "SP.Config",
+      "id": "522ffd56551e73d9",
+      "file": "sp-config.json"
+    },
+    {
+      "name": "SP.Contexts",
+      "id": "188f8680927bcd88",
+      "file": "sp-contexts.json"
+    },
+    {
+      "name": "SP.Debug",
+      "id": "61088d0a51d6e00a",
+      "file": "sp-debug.json"
+    },
+    {
+      "name": "SP.File_System",
+      "id": "89b805795cfd263f",
+      "file": "sp-file_system.json"
+    },
+    {
+      "name": "SP.Filters",
+      "id": "e8b12e222d84d7df",
+      "file": "sp-filters.json"
+    },
+    {
+      "name": "SP.Interactive",
+      "id": "38c01b1ed15703b6",
+      "file": "sp-interactive.json"
+    },
+    {
+      "name": "SP.Memory",
+      "id": "c2aef88848ac82a8",
+      "file": "sp-memory.json"
+    },
+    {
+      "name": "SP.Platform",
+      "id": "dc5c55cf38b744df",
+      "file": "sp-platform.json"
+    },
+    {
+      "name": "SP.Progress",
+      "id": "b69970e356dd6d1f",
+      "file": "sp-progress.json"
+    },
+    {
+      "name": "SP.Searches",
+      "id": "0d562c19271c1c12",
+      "file": "sp-searches.json"
+    },
+    {
+      "name": "SP.Strings",
+      "id": "177fb9492258a8dc",
+      "file": "sp-strings.json"
+    },
+    {
+      "name": "SP.Terminal",
+      "id": "12e91f286cd40f97",
+      "file": "sp-terminal.json"
+    }
+  ]
+}

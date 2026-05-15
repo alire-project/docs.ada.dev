@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "crate": "distance",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:56:44Z",
+  "description": "A formally verified library for calculating numeric, text distances",
+  "long_description": "# Distance\n\nA formally verified Ada/SPARK library for computing distance and similarity metrics.\n\n## Features\n\n- **Numeric Distances**: Euclidean, Manhattan, Minkowski, Chebyshev, Canberra\n- **Statistical Measures**: Cosine Similarity\n- **Text Distances**: Levenshtein, Damerau-Levenshtein, Hamming, Jaro-Winkler, Sørensen-Dice\n\n## Highlights\n\n- Pure Ada 2012 with SPARK annotations\n- Generic implementations for flexible type support\n- No external dependencies (test suite uses AUnit)\n- Comprehensive preconditions and postconditions\n\n## Usage\n\n```ada\nwith Ada.Numerics.Elementary_Functions;\nwith Distance.Numeric.Signatures;\nwith Distance.Numeric.Euclidean_Generic;\n\nprocedure Example is\n   type Float_Vector is array (Positive range <>) of Float;\n\n   package Float_Math is new Ada.Numerics.Elementary_Functions (Float);\n   package Float_Sig is new Distance.Numeric.Signatures\n     (Element_Type => Float,\n      Zero         => 0.0,\n      One          => 1.0,\n      Sqrt         => Float_Math.Sqrt,\n      \"**\"         => Float_Math.\"**\",\n      Max_Element  => Float'Last);\n\n   function Euclidean is new Distance.Numeric.Euclidean_Generic\n     (Numeric_Ops => Float_Sig, Index_Type => Positive, Vector => Float_Vector);\n\n   D : Float := Euclidean ((0.0, 0.0), (3.0, 4.0));  --  D = 5.0\nbegin\n   null;\nend Example;\n```\n\nFor fixed-point and integer types, you can use [Spark_Math](https://github.com/adarium-labs/spark_math) to provide the required operations.\n",
+  "authors": [
+    "Heziode"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "ada",
+    "spark",
+    "distance",
+    "metrics",
+    "algorithms",
+    "mathematics",
+    "string",
+    "similarity",
+    "levenshtein",
+    "geospatial",
+    "high-integrity",
+    "alire",
+    "data-science"
+  ],
+  "repository": {
+    "url": "https://github.com/adarium-labs/distance",
+    "host": "github",
+    "commit": "e265e32656db1284ef750cbd473db95424e5b215"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Distance",
+      "id": "63e6ce93e1bcb512",
+      "file": "distance.json"
+    },
+    {
+      "name": "Distance.Numeric",
+      "id": "5fa2874ff809fe20",
+      "file": "distance-numeric.json"
+    },
+    {
+      "name": "Distance.Numeric.Signatures",
+      "id": "d60dd52b993dbfb8",
+      "file": "distance-numeric-signatures.json"
+    },
+    {
+      "name": "Distance.Statistical",
+      "id": "a2e2bdc9c6464ec0",
+      "file": "distance-statistical.json"
+    },
+    {
+      "name": "Distance.Textual",
+      "id": "6731f2a7b6f93e5b",
+      "file": "distance-textual.json"
+    },
+    {
+      "name": "Distance_Config",
+      "id": "dc51911631b8cb75",
+      "file": "distance_config.json"
+    }
+  ]
+}

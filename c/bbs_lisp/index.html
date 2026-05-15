@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bbs_lisp — Ada/SPARK Documentation</title>
+  <meta name="description" content="Embedable tiny lisp interpreter">
+  <meta name="keywords" content="Ada, SPARK, Alire, bbs_lisp, lisp, embedded">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "bbs_lisp",
+"version": "0.2.2",  "description": "Embedable tiny lisp interpreter",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/bbs_lisp/",
+  "codeRepository": "https://github.com/BrentSeidel/Ada-Lisp"
+  ,"author": [{"@type": "Person", "name": "Brent Seidel"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">bbs_lisp</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>bbs_lisp</h1>
+    <span class="version-tag">0.2.2</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.2.2">0.2.2</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.2.2" selected>0.2.2</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Embedable tiny lisp interpreter</p>
+
+  <div class="long-description"><p>This is the core of a simple tiny lisp that is intended to be embedded in<br />
+other applications.  It can be extended with new commands specific to<br />
+the application.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Brent Seidel</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/BrentSeidel/Ada-Lisp">https://github.com/BrentSeidel/Ada-Lisp</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">lisp</span><span class="tag">embedded</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs/">bbs</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp/">BBS.lisp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-conses/">BBS.lisp.conses</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-debug/">BBS.lisp.debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate/">BBS.lisp.evaluate</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-bool/">BBS.lisp.evaluate.bool</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-char/">BBS.lisp.evaluate.char</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-cond/">BBS.lisp.evaluate.cond</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-func/">BBS.lisp.evaluate.func</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-io/">BBS.lisp.evaluate.io</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-list/">BBS.lisp.evaluate.list</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-loops/">BBS.lisp.evaluate.loops</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-math/">BBS.lisp.evaluate.math</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-mem/">BBS.lisp.evaluate.mem</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-misc/">BBS.lisp.evaluate.misc</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-pred/">BBS.lisp.evaluate.pred</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-str/">BBS.lisp.evaluate.str</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-symb/">BBS.lisp.evaluate.symb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-evaluate-vars/">BBS.lisp.evaluate.vars</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-global/">BBS.lisp.global</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-info/">BBS.lisp.info</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-memory/">BBS.lisp.memory</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-parser/">BBS.lisp.parser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-parser-file/">bbs.lisp.parser.file</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-parser-stdio/">bbs.lisp.parser.stdio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-parser-string/">BBS.lisp.parser.string</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-stack/">BBS.lisp.stack</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-strings/">BBS.lisp.strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/bbs_lisp/0.2.2/bbs-lisp-symbols/">BBS.lisp.symbols</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

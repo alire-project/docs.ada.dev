@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_python3",
+  "version": "23.0.0",
+  "failed_at": "2026-03-04T12:52:17Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

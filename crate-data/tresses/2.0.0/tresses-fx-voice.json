@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"tresses","version":"2.0.0","id":"30f70340d27196c7","name":"Tresses.FX.Voice","qualified_name":"Tresses.FX.Voice","kind":"ada_package","location":{"file":"src/tresses-fx-voice.ads","line":1,"column":9},"code":"package Tresses.FX.Voice"}

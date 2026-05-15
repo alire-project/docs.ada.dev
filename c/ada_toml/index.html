@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ada_toml — Ada/SPARK Documentation</title>
+  <meta name="description" content="TOML parser for Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, ada_toml, TOML">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ada_toml",
+"version": "0.5.0",  "description": "TOML parser for Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ada_toml/",
+  "codeRepository": "https://github.com/pmderodat/ada-toml"
+  ,"author": [{"@type": "Person", "name": "AdaCore"},{"@type": "Person", "name": "Pierre-Marie de Rodat \u003cpmderodat@kawie.fr\u003e"}]
+  ,"license": "BSD-3-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">ada_toml</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ada_toml</h1>
+    <span class="version-tag">0.5.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.5.0">0.5.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.5.0" selected>0.5.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">TOML parser for Ada</p>
+
+  <div class="long-description"><h1>ada-toml: TOML parser for Ada</h1>
+<p><code>ada-toml</code> is a pure Ada library for parsing and creating<br />
+<a href="https://github.com/toml-lang/toml#toml">TOML</a> documents. It conforms to the<br />
+<a href="https://toml.io/en/v1.0.0">version 1.0.0</a> of the format standard.</p>
+<h2>Quick tutorial</h2>
+<p>All basic types and subprograms are in the <code>TOML</code> package. All &ldquo;nodes&rdquo; in a<br />
+TOML documents are materialized using the <code>TOML.TOML_Value</code> type. Since TOML<br />
+values make up a tree, this type has reference semantics. This means that<br />
+modifying a TOML node does not modify the corresponding <code>TOML_Value</code> value<br />
+itself, but rather the TOML value that is referenced.</p>
+<p>Parsing a TOML file is as easy as using the <code>TOML.File_IO.Load_File</code> function:</p>
+<pre><code class="language-ada">declare
+   Result : constant TOML.Read_Result :=
+      TOML.File_IO.Load_File (&quot;config.toml&quot;);
+begin
+   if Result.Success then
+      Ada.Text_IO.Put_Line (&quot;config.toml loaded with success!&quot;);
+   else
+      Ada.Text_IO.Put_Line (&quot;error while loading config.toml:&quot;);
+      Ada.Text_IO.Put_Line
+         (Ada.Strings.Unbounded.To_String (Result.Message));
+   end if;
+end;
+</code></pre>
+<p>Each TOML value has kind, defining which data it contains (a boolean, an<br />
+integer, a string, a table, &hellip;). To each kind, one or several primitives are<br />
+associated to let one process the underlying data:</p>
+<pre><code class="language-ada">case Result.Kind is
+   when TOML.TOML_Boolean =&gt;
+      Ada.Text_IO.Put_Line (&quot;Boolean: &quot; &amp; Result.As_Boolean'Image);
+
+   when TOML.TOML_Integer =&gt;
+      Ada.Text_IO.Put_Line (&quot;Boolean: &quot; &amp; Result.As_Integer'Image);
+
+   when TOML.TOML_String =&gt;
+      Ada.Text_IO.Put_Line (&quot;Boolean: &quot; &amp; Result.As_String);
+
+   when TOML.TOML_Array =&gt;
+      Ada.Text_IO.Put_Line (&quot;Array of &quot; &amp; Result.Length &amp; &quot; elements&quot;);
+
+   when others =&gt;
+      null;
+end case;
+</code></pre>
+<p>There are also primitives to build TOML values:</p>
+<pre><code class="language-ada">declare
+   Bool : constant TOML.TOML_Value := TOML.Create_Boolean (False);
+   Int  : constant TOML.TOML_Value := TOML.Create_Integer (10);
+   Str  : constant TOML.TOML_Value := TOML.Create_String (&quot;Hello, world&quot;);
+
+   Table : constant TOML.TOML_Value := TOML.Create_Table;
+begin
+   Table.Set (&quot;bool_field&quot;, Bool);
+   Table.Set (&quot;int_field&quot;, Int);
+   Table.Set (&quot;str_field&quot;, Str);
+end;
+</code></pre>
+<p>And finally one can turn a tree of TOML nodes back in text form:</p>
+<pre><code class="language-ada">Ada.Text_IO.Put_Line (&quot;TOML document:&quot;);
+Ada.Text_IO.Put_Line (Table.Dump_As_String);
+</code></pre>
+<h2>Contributing</h2>
+<p>The development of <code>ada-toml</code> happens on<br />
+<a href="https://github.com/pmderodat/ada-toml">GitHub</a>.  Everyone is welcome to<br />
+contribute to this project: please read our <a href="https://github.com/pmderodat/ada-toml/tree/master/CONTRIBUTING.rst">contribution<br />
+rules</a> if<br />
+you consider doing so.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>AdaCore, Pierre-Marie de Rodat &lt;pmderodat@kawie.fr&gt;</dd>
+
+    <dt>License</dt>
+    <dd>BSD-3-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/pmderodat/ada-toml">https://github.com/pmderodat/ada-toml</a></dd>
+
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ada_toml/0.5.0/toml/">TOML</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ada_toml/0.5.0/toml-file_io/">TOML.File_IO</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

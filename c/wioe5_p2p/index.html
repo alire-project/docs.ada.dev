@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wioe5_p2p — Ada/SPARK Documentation</title>
+  <meta name="description" content="Wio-E5 LoRa Transceiver Module P2P Mode Device Driver">
+  <meta name="keywords" content="Ada, SPARK, Alire, wioe5_p2p, embedded, linux, wioe5, lora, radio, wireless, Wio_E5, Wioe5_P2p_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "wioe5_p2p",
+"version": "1.23340.1",  "description": "Wio-E5 LoRa Transceiver Module P2P Mode Device Driver",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/wioe5_p2p/",
+  "codeRepository": "https://raw.githubusercontent.com/pmunts/alire-crates/c62b574972e65c5a487e20408ca53d685c20a640/wioe5_p2p/wioe5_p2p-1.23340.1.tbz2"
+  ,"author": [{"@type": "Person", "name": "Philip Munts"}]
+  ,"license": "BSD-1-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">wioe5_p2p</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>wioe5_p2p</h1>
+    <span class="version-tag">1.23340.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.23340.1">1.23340.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.23340.1" selected>1.23340.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Wio-E5 LoRa Transceiver Module P2P Mode Device Driver</p>
+
+  <div class="long-description"><h1>Introduction</h1>
+<p>This crate provides the device driver package <strong>Wio_E5.P2P</strong> for the<br />
+Seeed Studio <a href="https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module">Wio-E5 LoRa Transceiver<br />
+Module</a><br />
+operating in test <em>aka</em> P2P (so-called Peer to Peer or Point to Point)<br />
+broadcast mode.</p>
+<p>See<br />
+<a href="https://repo.munts.com/libsimpleio/doc/WioE5LoRaP2P.pdf">WioE5LoRaP2P.pdf</a><br />
+for more information about the <a href="https://www.semtech.com/lora/what-is-lora">LoRa wireless<br />
+system</a> and operating the<br />
+Wio-E5 module in P2P mode.</p>
+<p>See the related crates<br />
+<a href="https://alire.ada.dev/crates/wioe5_ham1.html">wioe5_ham1</a> and<br />
+<a href="https://alire.ada.dev/crates/wioe5_ham1.htm2">wioe5_ham2</a>.</p>
+<p><em>The code for this crate has been extracted from the <a href="https://github.com/pmunts/libsimpleio">Linux Simple I/O<br />
+Library project</a>.</em></p>
+<h1>API</h1>
+<p>The API for this device driver is documented in the<br />
+<a href="https://github.com/pmunts/libsimpleio/blob/master/ada/devices/wioe5/wio_e5-p2p.ads">Wio-E5.P2P</a><br />
+package specification.</p>
+<p><strong>Wio-E5.P2P</strong> is a generic package that must be instantiated with two<br />
+<strong>Positive</strong> value parameters, for maximum payload size (1 to 253 bytes)<br />
+and FIFO queue depth. The default values for the generic formal<br />
+parameters will prove satisfactory for most purposes. Depending on what<br />
+kind of data you are going to be sending, you might want reduce the<br />
+maximum payload size to match some other protocol, such as 64 bytes for<br />
+the <a href="https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf">Remote I/O<br />
+Protocol</a>.</p>
+<h1>Minimal Test Program</h1>
+<pre><code>WITH Wio_E5.P2P;
+
+PROCEDURE HelloWorld IS
+
+  PACKAGE LoRa IS NEW Wio_E5.P2P;
+
+  dev : LoRa.Device;
+
+BEGIN
+  dev := LoRa.Create("/dev/ttyUSB0", 115200, 915.0);
+  dev.Send("Hello, World!");
+  dev.Shutdown;
+END HelloWorld;
+</code></pre>
+<p>More example programs are available at:<br />
+<a href="https://github.com/pmunts/libsimpleio/tree/master/ada/programs/wioe5/p2p">https://github.com/pmunts/libsimpleio/tree/master/ada/programs/wioe5/p2p</a>.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Philip Munts</dd>
+
+    <dt>License</dt>
+    <dd>BSD-1-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://raw.githubusercontent.com/pmunts/alire-crates/c62b574972e65c5a487e20408ca53d685c20a640/wioe5_p2p/wioe5_p2p-1.23340.1.tbz2">https://raw.githubusercontent.com/pmunts/alire-crates/c62b574972e65c5a487e20408ca53d685c20a640/wioe5_p2p/wioe5_p2p-1.23340.1.tbz2</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">linux</span><span class="tag">wioe5</span><span class="tag">lora</span><span class="tag">radio</span><span class="tag">wireless</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/wioe5_p2p/1.23340.1/wio_e5/">Wio_E5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/wioe5_p2p/1.23340.1/wio_e5-p2p/">Wio_E5.P2P</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/wioe5_p2p/1.23340.1/wioe5_p2p_config/">Wioe5_P2p_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>

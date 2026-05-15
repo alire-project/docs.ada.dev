@@ -1,0 +1,504 @@
+{
+  "schema_version": "1",
+  "crate": "aion",
+  "version": "1.0.0",
+  "documented_at": "2026-05-12T03:02:03Z",
+  "description": "Structured Asynchronous Runtime for Ada",
+  "long_description": "Aion is a structured asynchronous runtime for Ada, built for reliable\nnetworking, deterministic concurrency, cancellation-safe tasks, futures,\ntimers, channels, supervision, observability, and production-grade systems\nsoftware.\n",
+  "authors": [
+    "Mahesh Chandra Teja Garnepudi",
+    "Kairais Tech Solutions Pvt. Ltd."
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "async",
+    "runtime",
+    "concurrency",
+    "networking",
+    "ada",
+    "futures",
+    "reactor",
+    "observability"
+  ],
+  "website": "https://www.kairais.com",
+  "repository": {
+    "url": "https://github.com/MaheshChandraTeja/Aion",
+    "host": "github",
+    "commit": "9a6f2dd913294de6df8ed23292375320e7df0e98"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Aion",
+      "id": "5f424cc747471b9d",
+      "file": "aion.json"
+    },
+    {
+      "name": "Aion.Actor",
+      "id": "5ef7aa566c1c34ed",
+      "file": "aion-actor.json"
+    },
+    {
+      "name": "Aion.Actor.Generic_Actor",
+      "id": "0b2c6d9bc0038aea",
+      "file": "aion-actor-generic_actor.json"
+    },
+    {
+      "name": "Aion.Awaitable",
+      "id": "1f9794239d96cffe",
+      "file": "aion-awaitable.json"
+    },
+    {
+      "name": "Aion.Awaitable.Generic_Awaitable",
+      "id": "22fb603a35b58173",
+      "file": "aion-awaitable-generic_awaitable.json"
+    },
+    {
+      "name": "Aion.Benchmark_Support",
+      "id": "f30c9212055cdb03",
+      "file": "aion-benchmark_support.json"
+    },
+    {
+      "name": "Aion.Block_On",
+      "id": "e2e815b7852c9378",
+      "file": "aion-block_on.json"
+    },
+    {
+      "name": "Aion.Block_On.Generic_Block_On",
+      "id": "ac9198e55bf46ea6",
+      "file": "aion-block_on-generic_block_on.json"
+    },
+    {
+      "name": "Aion.Cancel",
+      "id": "04f65e732865e1d2",
+      "file": "aion-cancel.json"
+    },
+    {
+      "name": "Aion.Cancel_Source",
+      "id": "67fd28626377397a",
+      "file": "aion-cancel_source.json"
+    },
+    {
+      "name": "Aion.Cancel_Token",
+      "id": "1ae4655cd629ba34",
+      "file": "aion-cancel_token.json"
+    },
+    {
+      "name": "Aion.Channel",
+      "id": "ace3d4f3815e4f1a",
+      "file": "aion-channel.json"
+    },
+    {
+      "name": "Aion.Channel.Bounded",
+      "id": "b8b03c54a89390ec",
+      "file": "aion-channel-bounded.json"
+    },
+    {
+      "name": "Aion.Channel.Bounded.Generic_Bounded_Channel",
+      "id": "845f9fd90d75b0c6",
+      "file": "aion-channel-bounded-generic_bounded_channel.json"
+    },
+    {
+      "name": "Aion.Channel.Broadcast",
+      "id": "c4daf291c69a71a4",
+      "file": "aion-channel-broadcast.json"
+    },
+    {
+      "name": "Aion.Channel.Broadcast.Generic_Broadcast_Channel",
+      "id": "033adbaa8420f4db",
+      "file": "aion-channel-broadcast-generic_broadcast_channel.json"
+    },
+    {
+      "name": "Aion.Channel.Oneshot",
+      "id": "97b29e089bf74bdc",
+      "file": "aion-channel-oneshot.json"
+    },
+    {
+      "name": "Aion.Channel.Oneshot.Generic_Oneshot_Channel",
+      "id": "b417d229d2423c93",
+      "file": "aion-channel-oneshot-generic_oneshot_channel.json"
+    },
+    {
+      "name": "Aion.Channel.Unbounded",
+      "id": "30dabe923f8df168",
+      "file": "aion-channel-unbounded.json"
+    },
+    {
+      "name": "Aion.Channel.Unbounded.Generic_Unbounded_Channel",
+      "id": "325aca4bdfec7c7a",
+      "file": "aion-channel-unbounded-generic_unbounded_channel.json"
+    },
+    {
+      "name": "Aion.Channel.Watch",
+      "id": "204700bd27a6ce8d",
+      "file": "aion-channel-watch.json"
+    },
+    {
+      "name": "Aion.Channel.Watch.Generic_Watch_Channel",
+      "id": "e6328adf79594c4c",
+      "file": "aion-channel-watch-generic_watch_channel.json"
+    },
+    {
+      "name": "Aion.Clock",
+      "id": "e50f236812d3c524",
+      "file": "aion-clock.json"
+    },
+    {
+      "name": "Aion.Clock_Fake",
+      "id": "957b3bac73556244",
+      "file": "aion-clock_fake.json"
+    },
+    {
+      "name": "Aion.Completion",
+      "id": "b24392e97ff154ed",
+      "file": "aion-completion.json"
+    },
+    {
+      "name": "Aion.Config",
+      "id": "a43da31bd53b8f12",
+      "file": "aion-config.json"
+    },
+    {
+      "name": "Aion.Deadline",
+      "id": "3e8715fc449dbffd",
+      "file": "aion-deadline.json"
+    },
+    {
+      "name": "Aion.Diagnostics",
+      "id": "96303be4e752c120",
+      "file": "aion-diagnostics.json"
+    },
+    {
+      "name": "Aion.Errors",
+      "id": "96e21aea2dc136a8",
+      "file": "aion-errors.json"
+    },
+    {
+      "name": "Aion.Future",
+      "id": "06fb3db1d2da564c",
+      "file": "aion-future.json"
+    },
+    {
+      "name": "Aion.Future.Generic_Future",
+      "id": "ea169ff659a0584d",
+      "file": "aion-future-generic_future.json"
+    },
+    {
+      "name": "Aion.Internal",
+      "id": "c0d1c5765f5791ae",
+      "file": "aion-internal.json"
+    },
+    {
+      "name": "Aion.Interval",
+      "id": "0e02906df8a7e62c",
+      "file": "aion-interval.json"
+    },
+    {
+      "name": "Aion.IO_Resource",
+      "id": "04f133b540661e36",
+      "file": "aion-io_resource.json"
+    },
+    {
+      "name": "Aion.IO_Token",
+      "id": "6831fff945a1d98b",
+      "file": "aion-io_token.json"
+    },
+    {
+      "name": "Aion.Join_Set",
+      "id": "af2a195f0d0c2600",
+      "file": "aion-join_set.json"
+    },
+    {
+      "name": "Aion.Metrics",
+      "id": "82a1d34b95c638c8",
+      "file": "aion-metrics.json"
+    },
+    {
+      "name": "Aion.Net",
+      "id": "91aa6963fd7e4237",
+      "file": "aion-net.json"
+    },
+    {
+      "name": "Aion.Net.Address",
+      "id": "db82209a95bdf2f0",
+      "file": "aion-net-address.json"
+    },
+    {
+      "name": "Aion.Net.Socket_Options",
+      "id": "36162feba25609ac",
+      "file": "aion-net-socket_options.json"
+    },
+    {
+      "name": "Aion.Net.TCP",
+      "id": "78f53f077d4f2fa6",
+      "file": "aion-net-tcp.json"
+    },
+    {
+      "name": "Aion.Net.TCP_Listener",
+      "id": "6630bb1e526656e3",
+      "file": "aion-net-tcp_listener.json"
+    },
+    {
+      "name": "Aion.Net.TCP_Stream",
+      "id": "670cab3b7dd838ff",
+      "file": "aion-net-tcp_stream.json"
+    },
+    {
+      "name": "Aion.Net.UDP",
+      "id": "0ec86c030051b4c8",
+      "file": "aion-net-udp.json"
+    },
+    {
+      "name": "Aion.Platform",
+      "id": "a1accbf249e234e5",
+      "file": "aion-platform.json"
+    },
+    {
+      "name": "Aion.Platform.Darwin",
+      "id": "cba7dd88e758fa26",
+      "file": "aion-platform-darwin.json"
+    },
+    {
+      "name": "Aion.Platform.Linux",
+      "id": "135de5cf782043ec",
+      "file": "aion-platform-linux.json"
+    },
+    {
+      "name": "Aion.Platform.Windows",
+      "id": "6c9cd2c38711b8d2",
+      "file": "aion-platform-windows.json"
+    },
+    {
+      "name": "Aion.Poll",
+      "id": "1a22cc556591ccbc",
+      "file": "aion-poll.json"
+    },
+    {
+      "name": "Aion.Poll.Generic_Poll",
+      "id": "2cab15523c78e615",
+      "file": "aion-poll-generic_poll.json"
+    },
+    {
+      "name": "Aion.Promise",
+      "id": "5dfdea548da76947",
+      "file": "aion-promise.json"
+    },
+    {
+      "name": "Aion.Promise.Generic_Promise",
+      "id": "64df7e8eacd93817",
+      "file": "aion-promise-generic_promise.json"
+    },
+    {
+      "name": "Aion.Reactor",
+      "id": "50cd70b261488c1f",
+      "file": "aion-reactor.json"
+    },
+    {
+      "name": "Aion.Reactor_Backend",
+      "id": "a0fde218b442ea5a",
+      "file": "aion-reactor_backend.json"
+    },
+    {
+      "name": "Aion.Readiness",
+      "id": "2ab5beae89ea89c4",
+      "file": "aion-readiness.json"
+    },
+    {
+      "name": "Aion.Result",
+      "id": "c607b7ce099f25d0",
+      "file": "aion-result.json"
+    },
+    {
+      "name": "Aion.Result.Generic_Result",
+      "id": "178b076183217c0c",
+      "file": "aion-result-generic_result.json"
+    },
+    {
+      "name": "Aion.Retry",
+      "id": "e10f5c1fe0e129a6",
+      "file": "aion-retry.json"
+    },
+    {
+      "name": "Aion.Retry.Generic_Retry",
+      "id": "b90ef562e5b69efb",
+      "file": "aion-retry-generic_retry.json"
+    },
+    {
+      "name": "Aion.Runtime",
+      "id": "27abc9f5a2cdf4c1",
+      "file": "aion-runtime.json"
+    },
+    {
+      "name": "Aion.Runtime.Builder",
+      "id": "993c8860c53e6320",
+      "file": "aion-runtime-builder.json"
+    },
+    {
+      "name": "Aion.Scheduler",
+      "id": "e46a1b90068ff7a4",
+      "file": "aion-scheduler.json"
+    },
+    {
+      "name": "Aion.Scope",
+      "id": "c10c5869fe4f6ec9",
+      "file": "aion-scope.json"
+    },
+    {
+      "name": "Aion.Selection",
+      "id": "d1ac7679b9c27aa2",
+      "file": "aion-selection.json"
+    },
+    {
+      "name": "Aion.Selection.Generic_Select",
+      "id": "903354a53b41dcbd",
+      "file": "aion-selection-generic_select.json"
+    },
+    {
+      "name": "Aion.Selector",
+      "id": "991be37721ca0737",
+      "file": "aion-selector.json"
+    },
+    {
+      "name": "Aion.Selector.Generic_Select",
+      "id": "bd1599c1a82e6349",
+      "file": "aion-selector-generic_select.json"
+    },
+    {
+      "name": "Aion.Shutdown",
+      "id": "8895b7e017f70273",
+      "file": "aion-shutdown.json"
+    },
+    {
+      "name": "Aion.Sleep",
+      "id": "d7f30317100187e6",
+      "file": "aion-sleep.json"
+    },
+    {
+      "name": "Aion.Stream",
+      "id": "520cfa3d0af9ae2f",
+      "file": "aion-stream.json"
+    },
+    {
+      "name": "Aion.Stream.Generic_Stream",
+      "id": "46d2278d29281592",
+      "file": "aion-stream-generic_stream.json"
+    },
+    {
+      "name": "Aion.Supervisor",
+      "id": "18553adb7c4073a3",
+      "file": "aion-supervisor.json"
+    },
+    {
+      "name": "Aion.Sync",
+      "id": "b89c4640704ff0dc",
+      "file": "aion-sync.json"
+    },
+    {
+      "name": "Aion.Sync.Barrier",
+      "id": "f2daef667afa9ed8",
+      "file": "aion-sync-barrier.json"
+    },
+    {
+      "name": "Aion.Sync.Condvar",
+      "id": "ff57d085373b99cd",
+      "file": "aion-sync-condvar.json"
+    },
+    {
+      "name": "Aion.Sync.Event",
+      "id": "a3cc4f8f845508ee",
+      "file": "aion-sync-event.json"
+    },
+    {
+      "name": "Aion.Sync.Mutex",
+      "id": "4ce7e54608a20e2a",
+      "file": "aion-sync-mutex.json"
+    },
+    {
+      "name": "Aion.Sync.Once",
+      "id": "2368f18c2dc05cb0",
+      "file": "aion-sync-once.json"
+    },
+    {
+      "name": "Aion.Sync.Once.Generic_Once",
+      "id": "44ffa8d526d9307e",
+      "file": "aion-sync-once-generic_once.json"
+    },
+    {
+      "name": "Aion.Sync.RWLock",
+      "id": "0d393119be7b3193",
+      "file": "aion-sync-rwlock.json"
+    },
+    {
+      "name": "Aion.Sync.Semaphore",
+      "id": "478fea8348a0e31b",
+      "file": "aion-sync-semaphore.json"
+    },
+    {
+      "name": "Aion.Task_Group",
+      "id": "90c3b5e4dfdd8cf5",
+      "file": "aion-task_group.json"
+    },
+    {
+      "name": "Aion.Task_Handle",
+      "id": "b4657fe9eac60ff1",
+      "file": "aion-task_handle.json"
+    },
+    {
+      "name": "Aion.Task_Id",
+      "id": "e1cac26aaba828bd",
+      "file": "aion-task_id.json"
+    },
+    {
+      "name": "Aion.Test_Support",
+      "id": "45319c8809aeebfe",
+      "file": "aion-test_support.json"
+    },
+    {
+      "name": "Aion.Time",
+      "id": "119ec0dfbe86194c",
+      "file": "aion-time.json"
+    },
+    {
+      "name": "Aion.Timeout",
+      "id": "016f2fbdd3b54861",
+      "file": "aion-timeout.json"
+    },
+    {
+      "name": "Aion.Timeout.Generic_Timeout",
+      "id": "bec50b7c735c0989",
+      "file": "aion-timeout-generic_timeout.json"
+    },
+    {
+      "name": "Aion.Timer_Queue",
+      "id": "dec2698ab2ccb75c",
+      "file": "aion-timer_queue.json"
+    },
+    {
+      "name": "Aion.Tracing",
+      "id": "0d30d1095ee2a937",
+      "file": "aion-tracing.json"
+    },
+    {
+      "name": "Aion.Types",
+      "id": "96954b2bc3731383",
+      "file": "aion-types.json"
+    },
+    {
+      "name": "Aion.Version",
+      "id": "19e5847ffa227244",
+      "file": "aion-version.json"
+    },
+    {
+      "name": "Aion.Waker",
+      "id": "677bb1594b6de1f7",
+      "file": "aion-waker.json"
+    },
+    {
+      "name": "Aion.Yield",
+      "id": "927f06cc0bb5df5b",
+      "file": "aion-yield.json"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1",
+  "crate": "nstd",
+  "version": "0.3.0",
+  "documented_at": "2026-03-05T02:58:48Z",
+  "description": "Non-Standard Libraries",
+  "authors": [
+    "Nicolas Roche"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "strings",
+    "utf-8",
+    "unicode"
+  ],
+  "website": "https://nikokrock.github.io/nstd/",
+  "repository": {
+    "url": "https://github.com/Nikokrock/nstd",
+    "host": "github",
+    "commit": "43e6dff301b91caac9ab610c37bfee2d43ba253e",
+    "subdir": "nstd/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "NStd",
+      "id": "dbf52d5bf2a06a23",
+      "file": "nstd.json"
+    },
+    {
+      "name": "NStd.ASCII",
+      "id": "1273044b838498b7",
+      "file": "nstd-ascii.json"
+    },
+    {
+      "name": "NStd.Atomics",
+      "id": "87efd859db796d61",
+      "file": "nstd-atomics.json"
+    },
+    {
+      "name": "NStd.ByteOps",
+      "id": "24fd0c6b880c8bb4",
+      "file": "nstd-byteops.json"
+    },
+    {
+      "name": "NStd.Lifecycle",
+      "id": "abc90a87ac4d7542",
+      "file": "nstd-lifecycle.json"
+    },
+    {
+      "name": "NStd.Mem",
+      "id": "468c34e7663ea5a0",
+      "file": "nstd-mem.json"
+    },
+    {
+      "name": "NStd.Memory",
+      "id": "7f2644cc45a8df1d",
+      "file": "nstd-memory.json"
+    },
+    {
+      "name": "NStd.MutableByteOps",
+      "id": "d71ce1da3ee85c77",
+      "file": "nstd-mutablebyteops.json"
+    },
+    {
+      "name": "NStd.StrOps",
+      "id": "66c301b18efe6841",
+      "file": "nstd-strops.json"
+    },
+    {
+      "name": "NStd.Unsafe",
+      "id": "238a38ec928ec528",
+      "file": "nstd-unsafe.json"
+    }
+  ]
+}

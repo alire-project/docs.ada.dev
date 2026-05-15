@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>libsap — Ada/SPARK Documentation</title>
+  <meta name="description" content="Asynchronous message passing for protocol stacks">
+  <meta name="keywords" content="Ada, SPARK, Alire, libsap, protocol, protocols, nostd, spark, LibSAP, Libsap_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "libsap",
+"version": "0.1.0",  "description": "Asynchronous message passing for protocol stacks",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/libsap/",
+  "codeRepository": "https://github.com/damaki/libsap"
+  ,"author": [{"@type": "Person", "name": "Daniel King"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">libsap</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>libsap</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Asynchronous message passing for protocol stacks</p>
+
+  <div class="long-description"><p>Provides utilities to create <em>Service Access Points</em> (SAP) for asynchronous,<br />
+zero-copy message passing between tasks based on <em>Service Primitive</em> messages<br />
+(request, confirm, indication, and response primitives).</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Daniel King</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/damaki/libsap">https://github.com/damaki/libsap</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">protocol</span><span class="tag">protocols</span><span class="tag">nostd</span><span class="tag">spark</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/atomic/">atomic</a>
+        <span class="dep-version">^1.1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsap/0.1.0/libsap/">LibSAP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsap/0.1.0/libsap-light_provider_service_access_point/">LibSAP.Light_Provider_Service_Access_Point</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsap/0.1.0/libsap-light_user_service_access_point/">LibSAP.Light_User_Service_Access_Point</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsap/0.1.0/libsap-synchronous_provider_service_access_point/">LibSAP.Synchronous_Provider_Service_Access_Point</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsap/0.1.0/libsap-synchronous_user_service_access_point/">LibSAP.Synchronous_User_Service_Access_Point</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/libsap/0.1.0/libsap_config/">Libsap_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-05-15.
+    </p>
+  </footer>
+
+</body>
+</html>
