@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"54a2f35a8046ebff","name":"Agpl","qualified_name":"Agpl","kind":"ada_package","location":{"file":"src/agpl.ads","line":1,"column":9},"code":"package Agpl"}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"a0b_base","version":"0.5.0","id":"535a0f5baf6bac14","name":"A0B","qualified_name":"A0B","kind":"ada_package","location":{"file":"../source/a0b.ads","line":7,"column":9},"code":"package A0B","documentation":{"description":"\nCopyright (C) 2024-2025, Vadim Godunko\n\nSPDX-License-Identifier: Apache-2.0 WITH LLVM-exception"}}

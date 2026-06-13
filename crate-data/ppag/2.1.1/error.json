@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "ppag",
+  "version": "2.1.1",
+  "failed_at": "2026-03-05T03:01:58Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

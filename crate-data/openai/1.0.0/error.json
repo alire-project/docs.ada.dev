@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "openai",
+  "version": "1.0.0",
+  "failed_at": "2026-03-05T02:59:04Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

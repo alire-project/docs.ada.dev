@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"a0b_base","version":"0.5.0","id":"508fdf01c0096fbb","name":"A0B.Peripherals","qualified_name":"A0B.Peripherals","kind":"ada_package","location":{"file":"../source/a0b-peripherals.ads","line":9,"column":9},"code":"package A0B.Peripherals","documentation":{"description":"Root package for MCU specific peripherals' definitions."}}

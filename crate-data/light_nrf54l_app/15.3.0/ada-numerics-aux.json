@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"light_nrf54l_app","version":"15.3.0","id":"f2ce69da2b1fcc36","name":"Ada.Numerics.Aux","qualified_name":"Ada.Numerics.Aux","kind":"ada_package","location":{"file":"gnat/a-numaux.ads","line":35,"column":9},"code":"package Ada.Numerics.Aux","documentation":{"description":"This is the Ada Cert Math specific version of a-numaux.ads"}}

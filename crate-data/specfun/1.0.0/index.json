@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "specfun",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:59:13Z",
+  "description": "Native Ada library of special functions (e.g., beta, gamma)",
+  "long_description": "This is a small native Ada library that provides few special functions like Beta, Gamma and Beta Incomplete. I wrote this because I needed those functions, therefore at the moment only the functions that I needed are present. This is a pure native Ada library and there is no dependence on external FORTRAN libraries.",
+  "authors": [
+    "Riccardo Bernardini"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "special-fun",
+    "numerics",
+    "beta-function",
+    "gamma-function",
+    "beta-incomplete"
+  ],
+  "website": "https://gitlab.com/my-ada-library/specfun",
+  "repository": {
+    "url": "https://gitlab.com/my-ada-library/specfun",
+    "host": "gitlab",
+    "commit": "b702d270ca6e1ffb272aa2faa3fc8626ee4739a0"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Specfun",
+      "id": "6931b7f0656fe6e6",
+      "file": "specfun.json"
+    },
+    {
+      "name": "Specfun.Generic_Special_Functions",
+      "id": "d892b19b775db0ab",
+      "file": "specfun-generic_special_functions.json"
+    }
+  ]
+}

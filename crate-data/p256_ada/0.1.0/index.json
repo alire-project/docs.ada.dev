@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "crate": "p256_ada",
+  "version": "0.1.0",
+  "documented_at": "2026-05-05T03:01:27Z",
+  "description": "NIST P-256 / ECDSA (ES256) library for Ada with SPARK flow analysis",
+  "long_description": "NIST P-256 (secp256r1) / ECDSA (ES256) for Ada 2022 with SPARK flow\nanalysis. Constant-time field, scalar, and point arithmetic; Jacobian\ncoordinates with a 4-bit fixed-window scalar multiply; deterministic\nnonces per RFC 6979; low-S signature normalisation. Stack-resident\nsecrets are wiped at function exit. Suitable for embedded and\nsafety-critical systems. Tests and SPARK proofs live in the nested\n`prove/` crate; from the repo root:\n  cd prove && alr exec -- gnatprove -P ../p256_ada.gpr -j0 --mode=flow\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "p256",
+    "ecdsa",
+    "es256",
+    "cryptography",
+    "spark",
+    "nist",
+    "secp256r1"
+  ],
+  "website": "https://github.com/b-erdem/p256_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/p256_ada",
+    "host": "github",
+    "commit": "5f6553821fcf314cc8897df3b5b2ef3553c1695d"
+  },
+  "dependencies": [
+    {
+      "crate": "hmac_ada",
+      "version": "~0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "P256",
+      "id": "7985ebd3da40d518",
+      "file": "p256.json"
+    },
+    {
+      "name": "P256.ECDSA",
+      "id": "ffde58137b389def",
+      "file": "p256-ecdsa.json"
+    },
+    {
+      "name": "P256.Field",
+      "id": "612a632e2e0a1810",
+      "file": "p256-field.json"
+    },
+    {
+      "name": "P256.Point",
+      "id": "62dac91ba6102a2a",
+      "file": "p256-point.json"
+    },
+    {
+      "name": "P256.RFC6979",
+      "id": "46f51eafe3de6f4b",
+      "file": "p256-rfc6979.json"
+    },
+    {
+      "name": "P256.Scalar",
+      "id": "b2a1c697103ab1d0",
+      "file": "p256-scalar.json"
+    }
+  ]
+}

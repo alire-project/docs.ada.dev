@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "crate": "df_vulkan",
+  "version": "0.1.0",
+  "documented_at": "2026-06-09T03:03:05Z",
+  "description": "Generated Ada binding to Vulkan, with a SPARK-verified safety layer",
+  "authors": [
+    "The Dark Factory Ltd"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "vulkan",
+    "graphics",
+    "gpu",
+    "binding",
+    "spark"
+  ],
+  "website": "https://github.com/the-dark-factory/vulkan-ada",
+  "repository": {
+    "url": "https://github.com/the-dark-factory/vulkan-ada",
+    "host": "github",
+    "commit": "d3fac5d7df41b91c5a989edf1f55b6a1162b90ad"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Vk",
+      "id": "8630c6c9af0730c3",
+      "file": "vk.json"
+    },
+    {
+      "name": "Vk_Safe",
+      "id": "92fbe5abfbaa86cb",
+      "file": "vk_safe.json"
+    },
+    {
+      "name": "Vk_Safe_Gen",
+      "id": "03d3d19d5e7b9cb3",
+      "file": "vk_safe_gen.json"
+    },
+    {
+      "name": "Vulkan",
+      "id": "3891ebe5728c7d69",
+      "file": "vulkan.json"
+    }
+  ]
+}

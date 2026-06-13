@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "light_fk723m1_zgt6",
+  "version": "0.2.0",
+  "documented_at": "2026-03-04T16:54:32Z",
+  "description": "FK723M1-ZGT6 BSP for `light` GNAT Runtime",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "bsp",
+    "light",
+    "stm32",
+    "stm32h7",
+    "stm32h723",
+    "fk723m1"
+  ],
+  "website": "https://github.com/godunko/light-startup",
+  "repository": {
+    "url": "https://github.com/godunko/light-startup",
+    "host": "github",
+    "commit": "8493bb980f8efe69fa7a08233373d2c1a651d804",
+    "subdir": "fk723m1_zgt6/"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_stm32h723",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

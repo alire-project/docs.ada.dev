@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "crate": "stephes_ada_library",
+  "version": "3.7.3",
+  "documented_at": "2026-03-06T02:59:28Z",
+  "description": "Stephe's Ada library; miscellaneous useful stuff.",
+  "authors": [
+    "Stephen Leake"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "containers",
+    "trees"
+  ],
+  "website": "https://stephe-leake.org/ada/sal.html",
+  "repository": {
+    "url": "https://git.savannah.nongnu.org/git/ada-mode",
+    "host": "git",
+    "commit": "08b4830747b4a4c049d36da2b39a6dce29f37407"
+  },
+  "dependencies": [],
+  "units": []
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "sha2",
+  "version": "2.0.0",
+  "documented_at": "2026-03-06T02:57:47Z",
+  "description": "Secure Hash Algorithm 2 implemented in Ada",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "cryptography",
+    "security",
+    "sha2"
+  ],
+  "website": "https://github.com/AntonMeep/sha2",
+  "repository": {
+    "url": "https://github.com/AntonMeep/sha2",
+    "host": "github",
+    "commit": "73c2cd73e440b1e36d1b5c8b741fcb0e3fc4046c"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SHA2_Generic",
+      "id": "889418563f0dd941",
+      "file": "sha2_generic.json"
+    },
+    {
+      "name": "SHA2_Generic_32",
+      "id": "1751c982a58f7dd9",
+      "file": "sha2_generic_32.json"
+    },
+    {
+      "name": "SHA2_Generic_64",
+      "id": "abe93882d877edaa",
+      "file": "sha2_generic_64.json"
+    }
+  ]
+}

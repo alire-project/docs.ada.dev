@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"bigints","version":"0.1.0","id":"e0f591e9a6df67dd","name":"Bigints","qualified_name":"Bigints","kind":"ada_package","location":{"file":"src/bigints.ads","line":1,"column":9},"code":"package Bigints"}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1",
+  "crate": "astro",
+  "version": "1.4.1",
+  "documented_at": "2026-03-03T17:51:22Z",
+  "description": "Library for astronomical calculations",
+  "authors": [
+    "Juan A. de la Puente"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "astronomy",
+    "sun",
+    "moon",
+    "planets"
+  ],
+  "website": "https://github.com/jpuente/almanac/tree/master/astro",
+  "repository": {
+    "url": "https://github.com/jpuente/almanac",
+    "host": "github",
+    "commit": "1e325c980699230765379fbdf0a57db1c14ddc44",
+    "subdir": "astro/"
+  },
+  "dependencies": [
+    {
+      "crate": "ephemeris",
+      "version": "~1.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Astro",
+      "id": "23661ebec0d785b2",
+      "file": "astro.json"
+    },
+    {
+      "name": "Astro.Constants",
+      "id": "50e5f48b4df72a44",
+      "file": "astro-constants.json"
+    },
+    {
+      "name": "Astro.Generic_Coordinates",
+      "id": "b6daddbdd562c413",
+      "file": "astro-generic_coordinates.json"
+    },
+    {
+      "name": "Astro.Generic_Coordinates.Equatorial",
+      "id": "40f3aaefec0022ad",
+      "file": "astro-generic_coordinates-equatorial.json"
+    },
+    {
+      "name": "Astro.Generic_Coordinates.Geographic",
+      "id": "36d299104ff99a3a",
+      "file": "astro-generic_coordinates-geographic.json"
+    },
+    {
+      "name": "Astro.Generic_Coordinates.Horizontal",
+      "id": "851d334fe9d85c67",
+      "file": "astro-generic_coordinates-horizontal.json"
+    },
+    {
+      "name": "Astro.Generic_Coordinates.Spherical",
+      "id": "7a60b39129c6e11c",
+      "file": "astro-generic_coordinates-spherical.json"
+    },
+    {
+      "name": "Astro.Generic_Dynamical_Time",
+      "id": "8988d0568249aaf7",
+      "file": "astro-generic_dynamical_time.json"
+    },
+    {
+      "name": "Astro.Generic_Frame_Transformations",
+      "id": "c95a3708d6c676b2",
+      "file": "astro-generic_frame_transformations.json"
+    },
+    {
+      "name": "Astro.Generic_Julian_Time",
+      "id": "cb3e92e29ba5aa90",
+      "file": "astro-generic_julian_time.json"
+    },
+    {
+      "name": "Astro.Generic_Sidereal_Time",
+      "id": "627286bd8f61f8b0",
+      "file": "astro-generic_sidereal_time.json"
+    },
+    {
+      "name": "Astro.Generic_Solar_System",
+      "id": "fc16d3e02aafc1b9",
+      "file": "astro-generic_solar_system.json"
+    },
+    {
+      "name": "Astro.Generic_Terrestrial_Time",
+      "id": "043cd861b1da1117",
+      "file": "astro-generic_terrestrial_time.json"
+    },
+    {
+      "name": "Astro_Config",
+      "id": "a5966583f8e0b08c",
+      "file": "astro_config.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_atsam3x8e_gpio",
+  "version": "0.1.0",
+  "failed_at": "2026-03-03T15:39:35Z",
+  "stage": "build",
+  "message": "alr build exited with code 1"
+}

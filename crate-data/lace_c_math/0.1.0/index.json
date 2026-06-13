@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "crate": "lace_c_math",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:52:28Z",
+  "description": "A binding to the C math code used by box2d & bullet bindings.",
+  "authors": [
+    "Rod Kay"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/charlie5/lace-alire",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "lace_math",
+      "version": "~0.1"
+    },
+    {
+      "crate": "lace_swig",
+      "version": "~0.1"
+    }
+  ],
+  "units": []
+}

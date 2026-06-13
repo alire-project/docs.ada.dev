@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "light_tasking_stm32g0xx",
+  "version": "15.4.0",
+  "failed_at": "2026-05-12T03:04:32Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

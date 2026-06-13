@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"swan","version":"0.2.0","id":"dc8df225e46240af","name":"Swan.Math_Util","qualified_name":"Swan.Math_Util","kind":"ada_package","location":{"file":"src/swan-math_util.ads","line":1,"column":9},"code":"package Swan.Math_Util"}

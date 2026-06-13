@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pico_ada_c07_buzzer — Ada/SPARK Documentation</title>
+  <meta name="description" content="Chapter 7: Controlling active and passive Buzzer">
+  <meta name="keywords" content="Ada, SPARK, Alire, pico_ada_c07_buzzer, raspberry, pi, pico, rp2040, tasking, light-tasking, ada2022, embedded, Buzz_And_Blink, Pico_Ada_C07_Buzzer_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "pico_ada_c07_buzzer",
+"version": "1.7.1",  "description": "Chapter 7: Controlling active and passive Buzzer",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/pico_ada_c07_buzzer/",
+  "codeRepository": "https://sourceforge.net/projects/pi-ada-tutorial"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">pico_ada_c07_buzzer</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>pico_ada_c07_buzzer</h1>
+    <span class="version-tag">1.7.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.7.1">1.7.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.7.1" selected>1.7.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Chapter 7: Controlling active and passive Buzzer</p>
+
+  <div class="long-description"><p>Learn how to drive active and passive buzzers with the Raspberry Pi Pico using Ada.<br />
+From simple doorbell switches to PWM-generated sweeping alert tones - including hardware tips with flyback diodes and<br />
+oscilloscope measurements.</p>
+<p>In this chapter we connect both active and passive buzzers to the Pico. We start with a simple button-controlled<br />
+doorbell, improve the passive buzzer with bit-banging, and finally create a clean sweeping alert tone using the Pico&rsquo;s<br />
+PWM hardware. We also look at inductive-load protection and why a diode is essential.</p>
+<p>Contained in Chapter 07 are:</p>
+<ol>
+<li>sketch_07_1_doorbell.adb - Chapter 7.1 Doorbell with active buzzer</li>
+<li>sketch_07_2_alert.adb    - Chapter 7.2 Alert with passive buzzer</li>
+<li>pwm_alert.adb        - Use PWM to drive an passive buzzer</li>
+<li>buzz_and_blink-main.adb  - Use tasks to drive both a buzzer and an LED</li>
+</ol>
+<p>Read the full tutorial at <a href="https://pi-ada-tutorial.sourceforge.io/pico_ada_c07_buzzer">Chapter 7: Controlling a Buzzer</a>, <a href="https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_doc/">GNATdoc<br />
+documentation</a>, <a href="https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c07_buzzer/">SourceForge<br />
+repository</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/pi-ada-tutorial">https://sourceforge.net/projects/pi-ada-tutorial</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">raspberry</span><span class="tag">pi</span><span class="tag">pico</span><span class="tag">rp2040</span><span class="tag">tasking</span><span class="tag">light-tasking</span><span class="tag">ada2022</span><span class="tag">embedded</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/embedded_rp2040/">embedded_rp2040</a>
+        <span class="dep-version">^15.4</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_bsp/">pico_bsp</a>
+        <span class="dep-version">^2.2</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_xbsp/">pico_xbsp</a>
+        <span class="dep-version">^1.7</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rp2040_hal/">rp2040_hal</a>
+        <span class="dep-version">^2.7.1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_ada_c07_buzzer/1.7.1/buzz_and_blink/">Buzz_And_Blink</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_ada_c07_buzzer/1.7.1/pico_ada_c07_buzzer_config/">Pico_Ada_C07_Buzzer_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-06-13.
+    </p>
+  </footer>
+
+</body>
+</html>

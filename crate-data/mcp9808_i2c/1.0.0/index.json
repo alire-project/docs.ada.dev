@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "mcp9808_i2c",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T02:57:04Z",
+  "description": "MCP9808 I2C library",
+  "authors": [
+    "Holger Rodriguez"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "mcp9808",
+    "sensor",
+    "temperature",
+    "i2c"
+  ],
+  "website": "https://github.com/hgrodriguez/mcp9808_i2c",
+  "repository": {
+    "url": "https://github.com/hgrodriguez/mcp9808_i2c",
+    "host": "github",
+    "commit": "0e2aa58eff3f26b364601bdc4dbfbefc321cfb39"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "MCP9808_I2C",
+      "id": "f0f9d0e194cbdd1c",
+      "file": "mcp9808_i2c.json"
+    },
+    {
+      "name": "MCP9808_I2C.Fahrenheit",
+      "id": "bc6e70e3a36bd807",
+      "file": "mcp9808_i2c-fahrenheit.json"
+    },
+    {
+      "name": "Mcp9808_I2c_Config",
+      "id": "5eaa5da1667c4431",
+      "file": "mcp9808_i2c_config.json"
+    }
+  ]
+}
