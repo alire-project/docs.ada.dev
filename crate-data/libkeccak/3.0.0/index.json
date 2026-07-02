@@ -1,0 +1,388 @@
+{
+  "schema_version": "1",
+  "crate": "libkeccak",
+  "version": "3.0.0",
+  "documented_at": "2026-03-04T16:53:56Z",
+  "description": "SHA-3 and related algorithms",
+  "authors": [
+    "Daniel King"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "spark",
+    "cryptography",
+    "security",
+    "hash",
+    "sha3",
+    "keccak",
+    "gimli",
+    "ascon",
+    "shake",
+    "cshake",
+    "kmac",
+    "tuplehash",
+    "parallelhash",
+    "kangarootwelve"
+  ],
+  "website": "https://github.com/damaki/libkeccak",
+  "repository": {
+    "url": "https://github.com/damaki/libkeccak",
+    "host": "github",
+    "commit": "f33be1c8120196d90f600b14d669b11d16149bf9"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Ascon",
+      "id": "64bd78068a018afa",
+      "file": "ascon.json"
+    },
+    {
+      "name": "Ascon.Permutations",
+      "id": "11d4392f2a80e172",
+      "file": "ascon-permutations.json"
+    },
+    {
+      "name": "CSHAKE",
+      "id": "c1352d4aab00a484",
+      "file": "cshake.json"
+    },
+    {
+      "name": "CSHAKE.Implementation",
+      "id": "5a2a39ca2f1d126a",
+      "file": "cshake-implementation.json"
+    },
+    {
+      "name": "Gimli",
+      "id": "dfda7d5397605b70",
+      "file": "gimli.json"
+    },
+    {
+      "name": "KangarooTwelve",
+      "id": "331d1eb9d76a71f3",
+      "file": "kangarootwelve.json"
+    },
+    {
+      "name": "Keccak",
+      "id": "486d622ee03ad381",
+      "file": "keccak.json"
+    },
+    {
+      "name": "Keccak.Arch",
+      "id": "62afbeedce85d28d",
+      "file": "keccak-arch.json"
+    },
+    {
+      "name": "Keccak.Generic_CSHAKE",
+      "id": "600f8c042dfa93f0",
+      "file": "keccak-generic_cshake.json"
+    },
+    {
+      "name": "Keccak.Generic_Duplex",
+      "id": "18c696c76cb31e53",
+      "file": "keccak-generic_duplex.json"
+    },
+    {
+      "name": "Keccak.Generic_Hash",
+      "id": "73c809a02d00a1aa",
+      "file": "keccak-generic_hash.json"
+    },
+    {
+      "name": "Keccak.Generic_KangarooTwelve",
+      "id": "382ab87b6969c1e1",
+      "file": "keccak-generic_kangarootwelve.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF",
+      "id": "6e1e99099dfa95d1",
+      "file": "keccak-generic_keccakf.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF.Bit_Lanes",
+      "id": "2db98771d2ba5651",
+      "file": "keccak-generic_keccakf-bit_lanes.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF.Byte_Lanes",
+      "id": "a7dae45876477e07",
+      "file": "keccak-generic_keccakf-byte_lanes.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF.Byte_Lanes.Twisted",
+      "id": "b886e600399c1c6c",
+      "file": "keccak-generic_keccakf-byte_lanes-twisted.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF.Lane_Complementing_Permutation",
+      "id": "b44de847da1fe1b3",
+      "file": "keccak-generic_keccakf-lane_complementing_permutation.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF.Optimized_Permutation",
+      "id": "cea2b3a1070cc36b",
+      "file": "keccak-generic_keccakf-optimized_permutation.json"
+    },
+    {
+      "name": "Keccak.Generic_KeccakF.Reference_Permutation",
+      "id": "d6aa777cae705b7f",
+      "file": "keccak-generic_keccakf-reference_permutation.json"
+    },
+    {
+      "name": "Keccak.Generic_KMAC",
+      "id": "2dd90d01d0d08451",
+      "file": "keccak-generic_kmac.json"
+    },
+    {
+      "name": "Keccak.Generic_MonkeyDuplex",
+      "id": "6a07e640b50e829b",
+      "file": "keccak-generic_monkeyduplex.json"
+    },
+    {
+      "name": "Keccak.Generic_MonkeyWrap",
+      "id": "ca80e044b2c61d36",
+      "file": "keccak-generic_monkeywrap.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_CSHAKE",
+      "id": "cfe68e762a301697",
+      "file": "keccak-generic_parallel_cshake.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_Hash",
+      "id": "3910b84632e4be5e",
+      "file": "keccak-generic_parallel_hash.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_KeccakF",
+      "id": "b6ca8a5aebc990cf",
+      "file": "keccak-generic_parallel_keccakf.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_Permutation_Parallel_Fallback",
+      "id": "37b9ee309ead3aa6",
+      "file": "keccak-generic_parallel_permutation_parallel_fallback.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_Permutation_Serial_Fallback",
+      "id": "b9dda4f645dcef88",
+      "file": "keccak-generic_parallel_permutation_serial_fallback.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_Sponge",
+      "id": "0f6dee66d9197c46",
+      "file": "keccak-generic_parallel_sponge.json"
+    },
+    {
+      "name": "Keccak.Generic_Parallel_XOF",
+      "id": "2e8e0d7686c7e5b5",
+      "file": "keccak-generic_parallel_xof.json"
+    },
+    {
+      "name": "Keccak.Generic_Sponge",
+      "id": "3e16f15733c76c8f",
+      "file": "keccak-generic_sponge.json"
+    },
+    {
+      "name": "Keccak.Generic_Tuple_Hash",
+      "id": "29936aaccb1bfcd3",
+      "file": "keccak-generic_tuple_hash.json"
+    },
+    {
+      "name": "Keccak.Generic_XOF",
+      "id": "0bafe22bac88c309",
+      "file": "keccak-generic_xof.json"
+    },
+    {
+      "name": "Keccak.Keccak_100",
+      "id": "899b4e28be1d91eb",
+      "file": "keccak-keccak_100.json"
+    },
+    {
+      "name": "Keccak.Keccak_100.Rounds_12",
+      "id": "ec0084f1c3188bd2",
+      "file": "keccak-keccak_100-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_100.Rounds_16",
+      "id": "2a289ad5b1c4247a",
+      "file": "keccak-keccak_100-rounds_16.json"
+    },
+    {
+      "name": "Keccak.Keccak_1600",
+      "id": "350950fdfa0d88ab",
+      "file": "keccak-keccak_1600.json"
+    },
+    {
+      "name": "Keccak.Keccak_1600.Rounds_12",
+      "id": "c1fb0f027b8968f0",
+      "file": "keccak-keccak_1600-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_1600.Rounds_14",
+      "id": "5ddfead715ab2d81",
+      "file": "keccak-keccak_1600-rounds_14.json"
+    },
+    {
+      "name": "Keccak.Keccak_1600.Rounds_24",
+      "id": "966af58d0e7ff9b7",
+      "file": "keccak-keccak_1600-rounds_24.json"
+    },
+    {
+      "name": "Keccak.Keccak_200",
+      "id": "22f3c519480101d1",
+      "file": "keccak-keccak_200.json"
+    },
+    {
+      "name": "Keccak.Keccak_200.Rounds_12",
+      "id": "021d241e140a7274",
+      "file": "keccak-keccak_200-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_200.Rounds_18",
+      "id": "6a94a5fd1581dbe8",
+      "file": "keccak-keccak_200-rounds_18.json"
+    },
+    {
+      "name": "Keccak.Keccak_25",
+      "id": "6ee513e7ab330cc1",
+      "file": "keccak-keccak_25.json"
+    },
+    {
+      "name": "Keccak.Keccak_25.Rounds_12",
+      "id": "07db145860082a9d",
+      "file": "keccak-keccak_25-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_400",
+      "id": "0d05a06fb2b57aa9",
+      "file": "keccak-keccak_400.json"
+    },
+    {
+      "name": "Keccak.Keccak_400.Rounds_12",
+      "id": "71d277edc1511efd",
+      "file": "keccak-keccak_400-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_400.Rounds_20",
+      "id": "fbeca9f7e59a5a4f",
+      "file": "keccak-keccak_400-rounds_20.json"
+    },
+    {
+      "name": "Keccak.Keccak_50",
+      "id": "1738eef6257de3c1",
+      "file": "keccak-keccak_50.json"
+    },
+    {
+      "name": "Keccak.Keccak_50.Rounds_12",
+      "id": "ec62b64ee25eb8c9",
+      "file": "keccak-keccak_50-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_50.Rounds_14",
+      "id": "5cb9df7a7458ebce",
+      "file": "keccak-keccak_50-rounds_14.json"
+    },
+    {
+      "name": "Keccak.Keccak_800",
+      "id": "cddbdb4c12dd5a20",
+      "file": "keccak-keccak_800.json"
+    },
+    {
+      "name": "Keccak.Keccak_800.Rounds_12",
+      "id": "c5be1a2efda3873c",
+      "file": "keccak-keccak_800-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Keccak_800.Rounds_22",
+      "id": "483aac3fe877b3c8",
+      "file": "keccak-keccak_800-rounds_22.json"
+    },
+    {
+      "name": "Keccak.Padding",
+      "id": "346a80e5a53b2427",
+      "file": "keccak-padding.json"
+    },
+    {
+      "name": "Keccak.Parallel_Keccak_1600",
+      "id": "1cbff6230098ef00",
+      "file": "keccak-parallel_keccak_1600.json"
+    },
+    {
+      "name": "Keccak.Parallel_Keccak_1600.Rounds_12",
+      "id": "c9a5fa3155d99c6a",
+      "file": "keccak-parallel_keccak_1600-rounds_12.json"
+    },
+    {
+      "name": "Keccak.Parallel_Keccak_1600.Rounds_14",
+      "id": "384e8c1a28ea735c",
+      "file": "keccak-parallel_keccak_1600-rounds_14.json"
+    },
+    {
+      "name": "Keccak.Parallel_Keccak_1600.Rounds_24",
+      "id": "4fe802187c5410aa",
+      "file": "keccak-parallel_keccak_1600-rounds_24.json"
+    },
+    {
+      "name": "Keccak.Types",
+      "id": "24e97db7bdfc829d",
+      "file": "keccak-types.json"
+    },
+    {
+      "name": "Keccak.Util",
+      "id": "bf58945294d39341",
+      "file": "keccak-util.json"
+    },
+    {
+      "name": "Ketje",
+      "id": "aef2d2bf12b46a34",
+      "file": "ketje.json"
+    },
+    {
+      "name": "Ketje.Implementation",
+      "id": "37d578117b322c5b",
+      "file": "ketje-implementation.json"
+    },
+    {
+      "name": "KMAC",
+      "id": "d44b92025bed1892",
+      "file": "kmac.json"
+    },
+    {
+      "name": "MarsupilamiFourteen",
+      "id": "820a043bc1930877",
+      "file": "marsupilamifourteen.json"
+    },
+    {
+      "name": "Parallel_Hash",
+      "id": "3c39c8b32fb71961",
+      "file": "parallel_hash.json"
+    },
+    {
+      "name": "Parallel_Hash.Implementation",
+      "id": "a37c2be3e8211dc9",
+      "file": "parallel_hash-implementation.json"
+    },
+    {
+      "name": "RawSHAKE",
+      "id": "b27d70d3e1bd02a0",
+      "file": "rawshake.json"
+    },
+    {
+      "name": "SHA3",
+      "id": "4ff5a360d294c0a1",
+      "file": "sha3.json"
+    },
+    {
+      "name": "SHAKE",
+      "id": "50d22da6c0d4799b",
+      "file": "shake.json"
+    },
+    {
+      "name": "Tuple_Hash",
+      "id": "1a10988bdc5b029a",
+      "file": "tuple_hash.json"
+    }
+  ]
+}

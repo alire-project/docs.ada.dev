@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "levenshtein_distance",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:53:18Z",
+  "description": "Implementation of levenshtein distance.",
+  "authors": [
+    "2K-d"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "levenshtein",
+    "distance",
+    "algorithm"
+  ],
+  "website": "vrcode.dev",
+  "repository": {
+    "url": "https://github.com/2K-d/levenshtein_distance",
+    "host": "github",
+    "commit": "6882f3d127d3fc29fa23325e168d27c113b9c4e3"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Levenshtein_Distance",
+      "id": "ff3897580096ab9e",
+      "file": "levenshtein_distance.json"
+    },
+    {
+      "name": "Levenshtein_Distance_Config",
+      "id": "6576f233297de4ff",
+      "file": "levenshtein_distance_config.json"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1",
+  "crate": "bigints",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:53:30Z",
+  "description": "Experimental SPARK Constant Time Big Integer library",
+  "authors": [
+    "Cesar SAGAERT"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "spark",
+    "cryptography",
+    "prime-field",
+    "integers"
+  ],
+  "website": "https://github.com/AldanTanneo/bigints",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/bigints",
+    "host": "github",
+    "commit": "f5a14868e8a0e2cf8e273c592c11b8de02e81164"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Bigints",
+      "id": "e0f591e9a6df67dd",
+      "file": "bigints.json"
+    },
+    {
+      "name": "Bigints.Const_Choice",
+      "id": "c4dd2a7164408a4c",
+      "file": "bigints-const_choice.json"
+    },
+    {
+      "name": "Bigints.Machine_Ints",
+      "id": "d21dc2cd2aae0156",
+      "file": "bigints-machine_ints.json"
+    },
+    {
+      "name": "Bigints.Machine_Ints.Builtins",
+      "id": "eafd5ceb3a8e9a0e",
+      "file": "bigints-machine_ints-builtins.json"
+    },
+    {
+      "name": "Bigints.Modular",
+      "id": "0698690c5ca5beae",
+      "file": "bigints-modular.json"
+    },
+    {
+      "name": "Bigints.Primitives",
+      "id": "b195cb837a0c6d0e",
+      "file": "bigints-primitives.json"
+    },
+    {
+      "name": "Bigints.Uints",
+      "id": "1e1569b49f1ff514",
+      "file": "bigints-uints.json"
+    },
+    {
+      "name": "Bigints.Uints.Modulo_Ops",
+      "id": "4f93e2b952bd76cf",
+      "file": "bigints-uints-modulo_ops.json"
+    },
+    {
+      "name": "Bigints_Config",
+      "id": "7d45150f5ca255c4",
+      "file": "bigints_config.json"
+    }
+  ]
+}

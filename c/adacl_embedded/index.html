@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adacl_embedded — Ada/SPARK Documentation</title>
+  <meta name="description" content="Ada Embedded Library">
+  <meta name="keywords" content="Ada, SPARK, Alire, adacl_embedded, library, embedded, trace, logging, raspberry-pi, ada2022, AdaCL, Adacl_Embedded_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "adacl_embedded",
+"version": "7.1.2",  "description": "Ada Embedded Library",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/adacl_embedded/",
+  "codeRepository": "https://sourceforge.net/projects/adacl"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">adacl_embedded</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>adacl_embedded</h1>
+    <span class="version-tag">7.1.2</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="7.1.2">7.1.2</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="7.1.2" selected>7.1.2</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Ada Embedded Library</p>
+
+  <div class="long-description"><h2>AdaCL Embedded - Lightweight Embedded Ada Library</h2>
+<p>AdaCL-Embedded focuses on embedded and real-time programming on the Raspberry Pi and similar platforms.</p>
+<p>It favours predictability, minimal runtime overhead, and static data structures. Object-oriented programming, unbounded<br />
+strings, and wide strings are avoided or kept to an absolute minimum.</p>
+<h3>Current Features</h3>
+<ul>
+<li><strong>AdaCL.Embedded.Trace</strong> - Interrupt-safe, lightweight tracing facility using a ring buffer.</li>
+<li><strong>AdaCL.Embedded.Text_IO</strong> - Extended Ada.Text_IO.</li>
+</ul>
+<h3>Configuration Options</h3>
+<ul>
+<li><code>Variant</code></li>
+<li><code>no_tasking</code>  - for the lightest runtimes (no protected objects). Also works well with interrupt-driven runtimes.</li>
+<li><code>tasking</code>     - for runtimes with tasking support.</li>
+<li><code>Event_Log_Buffer_Length</code> - maximum length of each trace line (default: 200, min: 1, max: 1024)</li>
+<li><code>Event_Log_Buffer_Size</code>   - number of entries in the ring buffer (default: 0, max: 1024, min: 0 (buffer disabled))</li>
+</ul>
+<p>A text length of 200 is the standart minimum used in the Ada Standart (i.E. <code>Ada.Text_IO.Get_Line</code>, exception messages,<br />
+etc.pp).</p>
+<p>Memory needed is approximately <code>(Event_Log_Buffer_Length + 4) * Event_Log_Buffer_Size</code> bytes, plus some overhead for the<br />
+buffer management. For example: 1024 buffer size with 200 line lenght is about the maximum size that can be used with<br />
+the static memory of Raspberry Pi Pico. The buffer size can be set to 0 to disable the trace buffer and the related code<br />
+completely.</p>
+<p>Source: <a href="https://sourceforge.net/p/adacl/git/ci/master/tree/adacl-embedded/src/">SourceForge</a><br />
+Documentation: <a href="https://adacl-embedded.sourceforge.net/gnatdoc/adael/index.html">GNATdoc</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/adacl">https://sourceforge.net/projects/adacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">library</span><span class="tag">embedded</span><span class="tag">trace</span><span class="tag">logging</span><span class="tag">raspberry-pi</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_embedded/7.1.2/adacl/">AdaCL</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_embedded/7.1.2/adacl-text_io/">AdaCL.Text_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_embedded/7.1.2/adacl-trace/">AdaCL.Trace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_embedded/7.1.2/adacl_embedded_config/">Adacl_Embedded_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-07-02.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "enet",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:59:39Z",
+  "description": "Ada Embedded Network Stack",
+  "authors": [
+    "Stephane Carrez"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "network",
+    "ip",
+    "ipv4",
+    "icmp",
+    "udp",
+    "arp",
+    "dns",
+    "dhcp",
+    "ntp"
+  ],
+  "website": "https://github.com/stcarrez/ada-enet",
+  "repository": {
+    "url": "https://github.com/stcarrez/ada-enet",
+    "host": "github",
+    "commit": "54410889ed52e79ce7309d87c10b875e67437e51"
+  },
+  "dependencies": [],
+  "units": []
+}

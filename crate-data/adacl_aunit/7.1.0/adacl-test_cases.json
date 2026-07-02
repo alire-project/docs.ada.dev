@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"adacl_aunit","version":"7.1.0","id":"bcb58e02a439dce6","name":"AdaCL.Test_Cases","qualified_name":"AdaCL.Test_Cases","kind":"ada_package","location":{"file":"src/adacl-test_cases.ads","line":22,"column":9},"code":"package AdaCL.Test_Cases"}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "ajunitgen",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:50:12Z",
+  "description": "Generator of JUnit-compatible XML reports",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "junit",
+    "xml"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/ajunitgen",
+    "host": "github",
+    "commit": "080ca96388e12dd7b5863463acbad3dc862e06ee"
+  },
+  "dependencies": [
+    {
+      "crate": "xml_ez_out",
+      "version": "^1.6"
+    }
+  ],
+  "units": [
+    {
+      "name": "AJUnitGen",
+      "id": "8b2b6056f577a254",
+      "file": "ajunitgen.json"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "adare_dilithium5",
+  "version": "0.2.3",
+  "documented_at": "2026-03-03T17:49:37Z",
+  "description": "Post Quantum Computer Resistant Cryptograph Sign, Dilithium5 Ada bind.",
+  "long_description": "Dilithium is a digital signature scheme that is strongly secure under\n      chosen message attacks based on the hardness of lattice problems\n      over module lattices. The security notion means that an adversary\n      having access to a signing oracle cannot produce a signature of a\n      message whose signature he hasn't yet seen, nor produce a different\n      signature of a message that he already saw signed. Dilithium is one\n      of the candidate algorithms submitted to the\n      NIST post-quantum cryptography project.\n\n      Adare_Dilithium5 is a Ada 2012 bind to Dilithium5 C.\n\n      (C version at https://github.com/PQClean/PQClean)\n\n      How a Bonus all Ada packages in this lib is \"Ada Pure\"! :-)\n\n                   ",
+  "authors": [
+    "Daniel Norte de Moraes"
+  ],
+  "licenses": [
+    "Unlicense"
+  ],
+  "tags": [
+    "signature",
+    "pqc"
+  ],
+  "repository": {
+    "url": "https://github.com/danieagle/adare_dilithium5",
+    "host": "github",
+    "commit": "48a77cb59ddc827ce785553e4a5307b31389ffa4"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "adare_dilithium5",
+      "id": "56946adc45a8ea7f",
+      "file": "adare_dilithium5.json"
+    },
+    {
+      "name": "adare_dilithium5.dilithium",
+      "id": "4275a9ece369deb2",
+      "file": "adare_dilithium5-dilithium.json"
+    },
+    {
+      "name": "adare_dilithium5.inners",
+      "id": "011198f3acf16580",
+      "file": "adare_dilithium5-inners.json"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>akt — Ada/SPARK Documentation</title>
+  <meta name="description" content="Ada Keystore Tool">
+  <meta name="keywords" content="Ada, SPARK, Alire, akt, security, storage, nosql, AKT">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "akt",
+"version": "1.4.3",  "description": "Ada Keystore Tool",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/akt/",
+  "codeRepository": "https://gitlab.com/stcarrez/ada-keystore"
+  ,"author": [{"@type": "Person", "name": "Stephane.Carrez@gmail.com"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">akt</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>akt</h1>
+    <span class="version-tag">1.4.3</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.4.3">1.4.3</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.4.3" selected>1.4.3</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Ada Keystore Tool</p>
+
+  <div class="long-description"><p><a href="https://porion.vacs.fr/porion/projects/view/ada-keystore/summary"><img alt="Build Status" src="https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/build.json" /></a><br />
+<a href="https://porion.vacs.fr/porion/projects/view/ada-keystore/xunits"><img alt="Test Status" src="https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/tests.json" /></a><br />
+<a href="https://porion.vacs.fr/porion/projects/view/ada-keystore/summary"><img alt="Coverage" src="https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/coverage.json" /></a></p>
+<h1>Overview</h1>
+<p>AKT is a tool to store and protect your sensitive information and documents by<br />
+encrypting them in secure keystore (AES-256, HMAC-256).</p>
+<p>Create the keystore and protect it with a gpg public key:</p>
+<pre><code>   akt create secure.akt --gpg &lt;keyid&gt; ...
+</code></pre>
+<p>Store a small content:</p>
+<pre><code>   akt set secure.akt bank.password 012345
+</code></pre>
+<p>Store files, directory or a tar file:</p>
+<pre><code>   akt store secure.akt notes.txt
+   akt store secure.akt contract.doc
+   akt store secure.akt directory
+   tar czf - . | akt store secure.akt -- backup
+</code></pre>
+<p>Edit a content with your $EDITOR:</p>
+<pre><code>   akt edit secure.akt bank.password
+   akt edit secure.akt notes.txt
+</code></pre>
+<p>Get a content:</p>
+<pre><code>   akt get secure.akt bank.password
+   akt extract secure.akt contract.doc
+   akt extract secure.akt -- backup | tar xzf -
+</code></pre>
+<h2>Documents</h2>
+<ul>
+<li><a href="https://ada-keystore.readthedocs.io/en/latest/">Ada Keystore Guide</a> <a href="https://github.com/stcarrez/ada-keystore/blob/master/docs/keystore-book.pdf">PDF</a></li>
+</ul></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Stephane.Carrez@gmail.com</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://gitlab.com/stcarrez/ada-keystore">https://gitlab.com/stcarrez/ada-keystore</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">security</span><span class="tag">storage</span><span class="tag">nosql</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/case(os)/">case(os)</a>
+        <span class="dep-version">{&#39;linux&#39;: {&#39;ada_fuse&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/intl/">intl</a>
+        <span class="dep-version">^1.0.1</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/keystoreada/">keystoreada</a>
+        <span class="dep-version">^1.4.3</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/resources/">resources</a>
+        <span class="dep-version">~0.1.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/utilada/">utilada</a>
+        <span class="dep-version">^2.9.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/akt/1.4.3/akt/">AKT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/akt/1.4.3/akt-commands/">AKT.Commands</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/akt/1.4.3/akt-filesystem/">AKT.Filesystem</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/akt/1.4.3/keystore-verifier/">Keystore.Verifier</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-07-02.
+    </p>
+  </footer>
+
+</body>
+</html>

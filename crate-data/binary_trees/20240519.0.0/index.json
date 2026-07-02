@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "binary_trees",
+  "version": "20240519.0.0",
+  "documented_at": "2026-03-03T17:53:21Z",
+  "description": " Ordered binary trees implemented without access types",
+  "long_description": "# Binary_Trees\nOrdered binary trees implemented without access types\n\nDemonstration of a technique to be presented at the Ada Developers Workshop of the 2024 Ada-Europe conference\n",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "binarytrees",
+    "trees",
+    "noaccess"
+  ],
+  "website": "https://github.com/bracke/Binary_Trees",
+  "repository": {
+    "url": "https://github.com/bracke/Binary_Trees",
+    "host": "github",
+    "commit": "42ea72288130b796b51177046123685f2ddb6567"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Binary_Trees",
+      "id": "8560171d1d19801e",
+      "file": "binary_trees.json"
+    },
+    {
+      "name": "Binary_Trees_Config",
+      "id": "27287576a14789a7",
+      "file": "binary_trees_config.json"
+    }
+  ]
+}

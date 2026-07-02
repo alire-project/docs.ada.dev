@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "cobs",
+  "version": "1.1.0",
+  "documented_at": "2026-03-04T02:55:17Z",
+  "description": "Consistent Overhead Byte Stuffing (COBS) encoder/decoder",
+  "authors": [
+    "Daniel King"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "cobs",
+    "spark",
+    "embedded",
+    "nostd"
+  ],
+  "website": "https://github.com/damaki/cobs",
+  "repository": {
+    "url": "https://github.com/damaki/cobs",
+    "host": "github",
+    "commit": "8c35e29aee6387f158a086f6bbf4ca3612b2b2dd"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Cobs_Config",
+      "id": "c4914ca122e961bc",
+      "file": "cobs_config.json"
+    },
+    {
+      "name": "Generic_COBS",
+      "id": "4948aee3f5b3b871",
+      "file": "generic_cobs.json"
+    }
+  ]
+}

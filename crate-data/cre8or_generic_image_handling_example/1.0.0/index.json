@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "cre8or_generic_image_handling_example",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:55:53Z",
+  "description": "Generic image handling example project",
+  "authors": [
+    "Cre8or"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "cre8or",
+    "images",
+    "pictures",
+    "binding",
+    "example",
+    "stb",
+    "stb-images",
+    "gamedev",
+    "graphics"
+  ],
+  "website": "https://github.com/Cre8or/Generic-Image-Handling-Ada",
+  "repository": {
+    "url": "https://github.com/Cre8or/Generic-Image-Handling-Ada",
+    "host": "github",
+    "commit": "c01495f03fc8332fd8581e64ac96d3b5233f1dea",
+    "subdir": "example_project/"
+  },
+  "dependencies": [
+    {
+      "crate": "cre8or_generic_image_handling",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

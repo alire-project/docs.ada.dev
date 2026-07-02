@@ -1,0 +1,98 @@
+{
+  "schema_version": "1",
+  "crate": "audio_wavefiles",
+  "version": "2.0.0",
+  "documented_at": "2026-03-03T17:51:44Z",
+  "description": "Ada Wavefile Library",
+  "long_description": "# Ada Wavefile Library\nThis crate contains Ada packages for wavefile I/O.\n",
+  "authors": [
+    "Gustavo A. Hoffmann"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "audio",
+    "riff",
+    "wavefiles"
+  ],
+  "website": "https://github.com/Ada-Audio/audio_wavefiles",
+  "repository": {
+    "url": "https://github.com/Ada-Audio/audio_wavefiles",
+    "host": "github",
+    "commit": "8e1162c5b9dc604a835f60be6a78e8f9d3c85052"
+  },
+  "dependencies": [
+    {
+      "crate": "audio_base",
+      "version": "^1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Audio.RIFF.Wav",
+      "id": "a33a7f68568431df",
+      "file": "audio-riff-wav.json"
+    },
+    {
+      "name": "Audio.RIFF.Wav.Formats",
+      "id": "212acbfc1e15c285",
+      "file": "audio-riff-wav-formats.json"
+    },
+    {
+      "name": "Audio.RIFF.Wav.Formats.Report",
+      "id": "1e212e3ea82ccfb7",
+      "file": "audio-riff-wav-formats-report.json"
+    },
+    {
+      "name": "Audio.RIFF.Wav.Formats.Standard_Channel_Configurations",
+      "id": "9a4a536954823c7d",
+      "file": "audio-riff-wav-formats-standard_channel_configurations.json"
+    },
+    {
+      "name": "Audio.RIFF.Wav.GUIDs",
+      "id": "fa6ff9d16d477c5d",
+      "file": "audio-riff-wav-guids.json"
+    },
+    {
+      "name": "Audio.Wavefiles",
+      "id": "6104e1223c389a48",
+      "file": "audio-wavefiles.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Data_Types",
+      "id": "1959e7ee6cc36667",
+      "file": "audio-wavefiles-data_types.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Data_Types.Text_IO",
+      "id": "62fb7d6f41539777",
+      "file": "audio-wavefiles-data_types-text_io.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Generic_Direct_Fixed_Wav_IO",
+      "id": "83f754d44fb22a4a",
+      "file": "audio-wavefiles-generic_direct_fixed_wav_io.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Generic_Direct_Float_Wav_IO",
+      "id": "1d9d9592a41103e9",
+      "file": "audio-wavefiles-generic_direct_float_wav_io.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Generic_Fixed_PCM_IO",
+      "id": "483b0b90014be111",
+      "file": "audio-wavefiles-generic_fixed_pcm_io.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Generic_Float_PCM_IO",
+      "id": "69d5352d4aa44acf",
+      "file": "audio-wavefiles-generic_float_pcm_io.json"
+    },
+    {
+      "name": "Audio.Wavefiles.Report",
+      "id": "97a9c603fd76b3a4",
+      "file": "audio-wavefiles-report.json"
+    }
+  ]
+}

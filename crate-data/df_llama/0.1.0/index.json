@@ -1,0 +1,204 @@
+{
+  "schema_version": "1",
+  "crate": "df_llama",
+  "version": "0.1.0",
+  "documented_at": "2026-06-23T03:02:16Z",
+  "description": "Ada bindings to llama.cpp - run a local LLM on-device from Ada",
+  "authors": [
+    "The Dark Factory Ltd"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "binding",
+    "llm",
+    "ai",
+    "llama",
+    "ggml"
+  ],
+  "website": "https://github.com/the-dark-factory/llama-ada",
+  "repository": {
+    "url": "https://github.com/the-dark-factory/llama-ada",
+    "host": "github",
+    "commit": "f44da7bd5e883a686812a5f8d58e15f40fcc1889"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "arm_types_h",
+      "id": "e235702f35839bc1",
+      "file": "arm_types_h.json"
+    },
+    {
+      "name": "arm_utypes_h",
+      "id": "0ba04246031f5c63",
+      "file": "arm_utypes_h.json"
+    },
+    {
+      "name": "ggml_alloc_h",
+      "id": "2ca08740c2ce9989",
+      "file": "ggml_alloc_h.json"
+    },
+    {
+      "name": "ggml_backend_h",
+      "id": "28b838525f7074aa",
+      "file": "ggml_backend_h.json"
+    },
+    {
+      "name": "ggml_cpu_h",
+      "id": "5e8409c701111c69",
+      "file": "ggml_cpu_h.json"
+    },
+    {
+      "name": "ggml_h",
+      "id": "bb63acc443fc1004",
+      "file": "ggml_h.json"
+    },
+    {
+      "name": "ggml_opt_h",
+      "id": "d1fa94e94c6bc036",
+      "file": "ggml_opt_h.json"
+    },
+    {
+      "name": "gguf_h",
+      "id": "61fe17659b5728bf",
+      "file": "gguf_h.json"
+    },
+    {
+      "name": "Llama",
+      "id": "fc5a1047f5919892",
+      "file": "llama.json"
+    },
+    {
+      "name": "llama_h",
+      "id": "ff2d35e57eb8db16",
+      "file": "llama_h.json"
+    },
+    {
+      "name": "stdarg_h",
+      "id": "1fb09814ac675b12",
+      "file": "stdarg_h.json"
+    },
+    {
+      "name": "stddef_h",
+      "id": "fc5b048e490c20ad",
+      "file": "stddef_h.json"
+    },
+    {
+      "name": "stdint_h",
+      "id": "746b413f8fbd62dc",
+      "file": "stdint_h.json"
+    },
+    {
+      "name": "stdio_h",
+      "id": "f9396bc5fe083cca",
+      "file": "stdio_h.json"
+    },
+    {
+      "name": "sys_upthread_upthread_types_h",
+      "id": "d4b3c22e2ae96765",
+      "file": "sys_upthread_upthread_types_h.json"
+    },
+    {
+      "name": "sys_utypes_h",
+      "id": "cb196968c705db3c",
+      "file": "sys_utypes_h.json"
+    },
+    {
+      "name": "sys_utypes_uint16_t_h",
+      "id": "c2df05b542b94c40",
+      "file": "sys_utypes_uint16_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uint32_t_h",
+      "id": "04ae1eeabcfbb470",
+      "file": "sys_utypes_uint32_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uint64_t_h",
+      "id": "6eea5aef44f6b47a",
+      "file": "sys_utypes_uint64_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uint8_t_h",
+      "id": "06c90483926fc349",
+      "file": "sys_utypes_uint8_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uintptr_t_h",
+      "id": "b409bf5773ef9144",
+      "file": "sys_utypes_uintptr_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uoff_t_h",
+      "id": "8dbb1fadca1c7c54",
+      "file": "sys_utypes_uoff_t_h.json"
+    },
+    {
+      "name": "sys_utypes_ussize_t_h",
+      "id": "322560d22d86e7d0",
+      "file": "sys_utypes_ussize_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uu_int16_t_h",
+      "id": "eea1f832d01ada8f",
+      "file": "sys_utypes_uu_int16_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uu_int32_t_h",
+      "id": "e6c1c339dc407c07",
+      "file": "sys_utypes_uu_int32_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uu_int64_t_h",
+      "id": "509237f6fd209c5d",
+      "file": "sys_utypes_uu_int64_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uu_int8_t_h",
+      "id": "40a6875e2f545c2f",
+      "file": "sys_utypes_uu_int8_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uuintptr_t_h",
+      "id": "9abba1021c1ee0be",
+      "file": "sys_utypes_uuintptr_t_h.json"
+    },
+    {
+      "name": "uctermid_h",
+      "id": "a0c136beab38b51c",
+      "file": "uctermid_h.json"
+    },
+    {
+      "name": "utypes_uintmax_t_h",
+      "id": "1724c3e00d8757d8",
+      "file": "utypes_uintmax_t_h.json"
+    },
+    {
+      "name": "utypes_uuint16_t_h",
+      "id": "a4fd1e42e69db47c",
+      "file": "utypes_uuint16_t_h.json"
+    },
+    {
+      "name": "utypes_uuint32_t_h",
+      "id": "3b534e21241605d1",
+      "file": "utypes_uuint32_t_h.json"
+    },
+    {
+      "name": "utypes_uuint64_t_h",
+      "id": "63143b11b2defdae",
+      "file": "utypes_uuint64_t_h.json"
+    },
+    {
+      "name": "utypes_uuint8_t_h",
+      "id": "1331e5dbeaba386e",
+      "file": "utypes_uuint8_t_h.json"
+    },
+    {
+      "name": "utypes_uuintmax_t_h",
+      "id": "8d6cb990e5a2ef90",
+      "file": "utypes_uuintmax_t_h.json"
+    }
+  ]
+}
