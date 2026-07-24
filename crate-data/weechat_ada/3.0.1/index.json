@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "weechat_ada",
+  "version": "3.0.1",
+  "documented_at": "2026-03-07T02:50:45Z",
+  "description": "Ada 2012 library for WeeChat plug-ins",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "chat",
+    "irc",
+    "weechat"
+  ],
+  "website": "https://github.com/onox/weechat-ada",
+  "repository": {
+    "url": "https://github.com/onox/weechat-ada",
+    "host": "github",
+    "commit": "9faebf9b79e79670d64044c9279a2e9c95404161"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "WeeChat",
+      "id": "f18591fd6d333119",
+      "file": "weechat.json"
+    }
+  ]
+}

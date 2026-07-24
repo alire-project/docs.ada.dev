@@ -1,0 +1,149 @@
+{
+  "schema_version": "1",
+  "crate": "tinyaml",
+  "version": "0.2.0",
+  "documented_at": "2026-03-06T03:00:21Z",
+  "description": "A strict YAML subset parser for Ada, inspired by StrictYAML",
+  "authors": [
+    "Jochen Lillich"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "yaml",
+    "parser",
+    "validation",
+    "configuration",
+    "strictyaml"
+  ],
+  "website": "https://github.com/geewiz/tinyaml",
+  "repository": {
+    "url": "https://github.com/geewiz/tinyaml_ada",
+    "host": "github",
+    "commit": "be50c2ab58613763b6664e100d9ede10c5ef1ec0"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Tinyaml",
+      "id": "4b70584d48d1238f",
+      "file": "tinyaml.json"
+    },
+    {
+      "name": "Tinyaml.Documents",
+      "id": "51f2656800cd4a1f",
+      "file": "tinyaml-documents.json"
+    },
+    {
+      "name": "Tinyaml.Lexer",
+      "id": "8d964d9319e375b7",
+      "file": "tinyaml-lexer.json"
+    },
+    {
+      "name": "Tinyaml.Nodes",
+      "id": "efb02e2aa3530771",
+      "file": "tinyaml-nodes.json"
+    },
+    {
+      "name": "Tinyaml.Nodes.Map",
+      "id": "20a5e953eb383fc0",
+      "file": "tinyaml-nodes-map.json"
+    },
+    {
+      "name": "Tinyaml.Nodes.Navigation",
+      "id": "d3ae66a9cdc34c7c",
+      "file": "tinyaml-nodes-navigation.json"
+    },
+    {
+      "name": "Tinyaml.Nodes.Prelude",
+      "id": "ac3ea83a696b719d",
+      "file": "tinyaml-nodes-prelude.json"
+    },
+    {
+      "name": "Tinyaml.Nodes.Scalar",
+      "id": "6b2d017856187402",
+      "file": "tinyaml-nodes-scalar.json"
+    },
+    {
+      "name": "Tinyaml.Nodes.Sequence",
+      "id": "2da51cd64d78b843",
+      "file": "tinyaml-nodes-sequence.json"
+    },
+    {
+      "name": "Tinyaml.Parser",
+      "id": "5e5ef406d659c0a9",
+      "file": "tinyaml-parser.json"
+    },
+    {
+      "name": "Tinyaml.Schemas",
+      "id": "f785faafe1bbd6da",
+      "file": "tinyaml-schemas.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Any",
+      "id": "8bcd9c56fd996e1d",
+      "file": "tinyaml-schemas-any.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Bool",
+      "id": "87b57a1ad138f565",
+      "file": "tinyaml-schemas-bool.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Constraints",
+      "id": "bedfe22d4c420fb3",
+      "file": "tinyaml-schemas-constraints.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Constraints.Range_Constraint",
+      "id": "b865539aa8f1b67e",
+      "file": "tinyaml-schemas-constraints-range_constraint.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Enum",
+      "id": "7531cd4607fbc5f6",
+      "file": "tinyaml-schemas-enum.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Flt",
+      "id": "9770305f6fc4c2c9",
+      "file": "tinyaml-schemas-flt.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Int",
+      "id": "cb8c81c7e3658405",
+      "file": "tinyaml-schemas-int.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Map",
+      "id": "f564a9643f9c8879",
+      "file": "tinyaml-schemas-map.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Prelude",
+      "id": "d5ea42ab1bbd0db9",
+      "file": "tinyaml-schemas-prelude.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Seq",
+      "id": "011289f606f8b1e3",
+      "file": "tinyaml-schemas-seq.json"
+    },
+    {
+      "name": "Tinyaml.Schemas.Str",
+      "id": "6e2c19e1fadc2be6",
+      "file": "tinyaml-schemas-str.json"
+    },
+    {
+      "name": "Tinyaml.Validation",
+      "id": "d59a69c082c32772",
+      "file": "tinyaml-validation.json"
+    },
+    {
+      "name": "Tinyaml_Config",
+      "id": "99f15fc543572f66",
+      "file": "tinyaml_config.json"
+    }
+  ]
+}

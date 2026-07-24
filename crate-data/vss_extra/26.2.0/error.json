@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "vss_extra",
+  "version": "26.2.0",
+  "failed_at": "2026-07-23T03:16:51Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

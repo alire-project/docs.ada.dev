@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "list_image",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:55:48Z",
+  "description": "helper to dump iterable containers with customizable style",
+  "authors": [
+    "Lionel Draghi"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "list",
+    "iterator",
+    "container",
+    "markdown",
+    "html"
+  ],
+  "website": "https://github.com/LionelDraghi/List_Image",
+  "repository": {
+    "url": "https://github.com/LionelDraghi/List_Image",
+    "host": "github",
+    "commit": "329dd78b6d2097e22c5917a0d8ad56d9399b18b8"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "List_Image",
+      "id": "1e7734a247d2f8c4",
+      "file": "list_image.json"
+    },
+    {
+      "name": "List_Image.Cursors_Signature",
+      "id": "699f43fa8e0c0f17",
+      "file": "list_image-cursors_signature.json"
+    },
+    {
+      "name": "List_Image.Image_Style",
+      "id": "111045e87304def1",
+      "file": "list_image-image_style.json"
+    },
+    {
+      "name": "List_Image.Unix_Predefined_Styles",
+      "id": "a69a2d912108d133",
+      "file": "list_image-unix_predefined_styles.json"
+    },
+    {
+      "name": "List_Image.Windows_Predefined_Styles",
+      "id": "fae2ed2f3f367409",
+      "file": "list_image-windows_predefined_styles.json"
+    }
+  ]
+}

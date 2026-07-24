@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"dummyserver","version":"1.0.0","id":"1e6b48f05b13b43f","name":"Black.Streams","qualified_name":"Black.Streams","kind":"ada_package","location":{"file":"src/black/black-streams.ads","line":1,"column":9},"code":"package Black.Streams"}

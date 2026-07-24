@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ssh_protocol — Ada/SPARK Documentation</title>
+  <meta name="description" content="SSH protocol (RFC4251) core library">
+  <meta name="keywords" content="Ada, SPARK, Alire, ssh_protocol, ssh, SSH_Protocol">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ssh_protocol",
+"version": "0.0.2",  "description": "SSH protocol (RFC4251) core library",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ssh_protocol/",
+  "codeRepository": "https://codeberg.org/vimacs/ssh_protocol-ada"
+  ,"author": [{"@type": "Person", "name": "Iru Cai"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">ssh_protocol</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ssh_protocol</h1>
+    <span class="version-tag">0.0.2</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.0.2">0.0.2</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.0.2" selected>0.0.2</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">SSH protocol (RFC4251) core library</p>
+
+  <div class="long-description"><p>The ssh_protocol library is an implementation of the SSH protocol version 2. It is designed as a protocol engine, without I/O, cryptography, or RNG in the core library.</p>
+<p>The library implements the SSH transport layer (RFC 4253), user authentication (RFC 4252), and connection layer (RFC 4254), following the overall architecture defined in RFC 4251. It supports a modern, security-hardened algorithm set, which is supported by the cryptography backends such as libsodium and OpenSSL libcrypto.</p>
+<p>The core library only uses static allocation, and does not use exceptions.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Iru Cai</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://codeberg.org/vimacs/ssh_protocol-ada">https://codeberg.org/vimacs/ssh_protocol-ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">ssh</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol/">SSH_Protocol</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-algorithm_set/">SSH_Protocol.Algorithm_Set</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-authentication/">SSH_Protocol.Authentication</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-client_sessions/">SSH_Protocol.Client_Sessions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-connection/">SSH_Protocol.Connection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-connection-gen_sessions/">SSH_Protocol.Connection.Gen_Sessions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-crypto_provider/">SSH_Protocol.Crypto_Provider</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-disconnect/">SSH_Protocol.Disconnect</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-kex_crypto/">SSH_Protocol.Kex_Crypto</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-message_format/">SSH_Protocol.Message_Format</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-protocol_dispatch/">SSH_Protocol.Protocol_Dispatch</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-secure_memory/">SSH_Protocol.Secure_Memory</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-server_sessions/">SSH_Protocol.Server_Sessions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-transport/">SSH_Protocol.Transport</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-transport-encryption/">SSH_Protocol.Transport.Encryption</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-transport-kex/">SSH_Protocol.Transport.Kex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-transport-kex_curve25519/">SSH_Protocol.Transport.Kex_Curve25519</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-transport-kex_hybrid/">SSH_Protocol.Transport.Kex_Hybrid</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ssh_protocol/0.0.2/ssh_protocol-transport-mac/">SSH_Protocol.Transport.MAC</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-07-24.
+    </p>
+  </footer>
+
+</body>
+</html>

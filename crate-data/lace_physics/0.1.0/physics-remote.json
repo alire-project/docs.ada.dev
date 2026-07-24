@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lace_physics","version":"0.1.0","id":"c10bb9a4cea65944","name":"physics.Remote","qualified_name":"physics.Remote","kind":"ada_package","location":{"file":"../source/physics-remote.ads","line":1,"column":9},"code":"package physics.Remote"}

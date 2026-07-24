@@ -1,0 +1,1467 @@
+{
+  "schema_version": "1",
+  "crate": "libsimpleio",
+  "version": "2.23808.1",
+  "documented_at": "2026-03-04T16:54:02Z",
+  "description": "Linux Simple I/O Library",
+  "long_description": "Introduction\n============\n\nThis crate provides an Ada binding to the [Linux Simple I/O\nLibrary](https://github.com/pmunts/libsimpleio), *aka* **libsimpleio**.\n\nLinux Simple I/O Library\n========================\n\n**libsimpleio** is an attempt to encapsulate (as much as possible) the\nugliness of Linux I/O device access. It provides services for the\nfollowing types of I/O devices:\n\n-   [Industrial I/O\n    Subsystem](https://wiki.analog.com/software/linux/docs/iio/iio) A/D\n    (Analog to Digital) Converter Devices\n-   [Industrial I/O\n    Subsystem](https://wiki.analog.com/software/linux/docs/iio/iio) D/A\n    (Digital to Analog) Converter Devices\n-   GPIO (General Purpose Input/Output) Pins\n-   Raw HID (Human Interface Device) Devices\n-   I2C (Inter-Integrated Circuit) Bus Devices\n-   PWM (Pulse Width Modulated) Output Devices\n-   [Remote I/O\n    Protocol](https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf)\n    Devices\n-   Serial Ports\n-   SPI (Serial Peripheral Interface) Bus Devices\n-   [Stream Framing\n    Protocol](https://repo.munts.com/libsimpleio/doc/StreamFramingProtocol.pdf)\n    Devices\n-   TCP and UDP over IPv4 Network Devices\n-   Watchdog Timer Devices\n\n**libsimpleio** exports a small number of C wrapper or shim functions.\nThese shim functions present a more coherent API (Application\nProgramming Interface) than Linux kernel **`ioctl()`** services and the\nmyriad other different Linux device I/O API's. The **libsimpleio** shim\nfunctions are designed to be easily called from Ada, C++, C#, Java,\nFree Pascal and other programming languages.\n\nThe **`man`** pages specifying the **libsimpleio** API (Application\nProgramming Interface) are available for viewing at\n<https://repo.munts.com/libsimpleio/doc/libsimpleio.html>.\n\nAda Binding for the Linux Simple I/O Library\n============================================\n\nThe Ada binding consists of several software component layers.\n\nThe bottom software component layer consists of the **C shim functions**\ndiscussed in the previous section.\n\nThe next software component layer consists of **binding packages** that\ndeclare the C shim functions as Ada procedures. Each of the binding\npackages corresponds to a single C source file (*e.g.* package\n**`libadc`** corresponds to **`libadc.c`**). Each of the C shim\nfunctions are declared as external Ada procedures using\n**`pragma Import`**. The Ada procedure names do not necessarily match\nthe C function names (*e.g.* the C function **`ADC_Open()`** is declared\nas Ada procedure **`libadc.Open`**). Many of the binding packages also\ndeclare constants as well (*e.g.* **`DIRECTION_INPUT`** in\n**`libgpio.ads`**).\n\nWith very few exceptions, you will never need to directly call any of\nthe procedures nor reference any of the constants declared in the\n**`libxxx`** binding packages.\n\nThe next software component layer consists of **object packages** that\ndeclare OOP (Object Oriented Programming) object types and methods for\neach of the I/O subsystems. This layer uses Ada interface types,\naccess-to-interface types, and private tagged records extensively.\n\nFor example, the package **`GPIO`** defines an interface type\n**`PinInterface`**, an access to **`PinInterface`** type named\n**`Pin`**, and primitive operation subprograms **`Get`** and **`Put`**.\n\nThe child package **`GPIO.libsimpleio`** declares a private tagged\nrecord type **`PinSubclass`** that *implements* **`GPIO.PinInterface`**,\nsubprograms **`Get`** and **`Put`** that are required to implement\n**`GPIO.PinInterface`**, and a constructor function **`Create`** that\nreturns an **`GPIO.Pin`** access value.\n\nEvery package that implements **`GPIO.PinInterface`** will also declare\na constructor function **`Create`** that returns **`GPIO.Pin`**.\n\nThis architecture allows code similar to the following fragment:\n\n    MyPins : array (1 .. 3) of GPIO.pin;\n\n    GPIO(1) := GPIO.libsimpleio.Create(...);\n    GPIO(2) := GPIO.UserLED.Create(...);\n    GPIO(3) := GPIO.PWM.Create(...);\n\nThe three GPIO pins can be stored in the same array and manipulated in\nexactly the same manner even though the hardware implementation for each\npin is radically different.\n\nThe topmost software component layer consists of **device packages**\nthat implement support for particular I/O devices and are built upon the\nlower layers. Most of the device packages correspond to integrated\ncircuits, such as the [PCA9534 I2C GPIO\nExpander](https://www.nxp.com/products/interfaces/ic-spi-serial-interface-devices/ic-general-purpose-i-o/8-bit-ic-bus-and-smbus-low-power-i-o-port-with-interrupt:PCA9534).\nA few implement support for boards or modules, such the [Grove\nTemperature\nSensor](https://www.seeedstudio.com/Grove-Temperature-Sensor.html)\nmodule.\n",
+  "authors": [
+    "Philip Munts"
+  ],
+  "licenses": [
+    "BSD-1-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "linux",
+    "libsimpleio",
+    "remoteio",
+    "beaglebone",
+    "pocketbeagle",
+    "raspberrypi",
+    "raspberry",
+    "pi",
+    "adc",
+    "dac",
+    "gpio",
+    "hid",
+    "i2c",
+    "motor",
+    "pwm",
+    "sensor",
+    "serial",
+    "servo",
+    "spi",
+    "stepper",
+    "watchdog",
+    "wioe5"
+  ],
+  "website": "https://github.com/pmunts/libsimpleio",
+  "repository": {
+    "url": "https://raw.githubusercontent.com/pmunts/alire-crates/5f23c0a442f42374ce226a05923e7bc0f828a1aa/libsimpleio/libsimpleio-2.23808.1.tbz2",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "A4988",
+      "id": "b2825dd5b33effeb",
+      "file": "a4988.json"
+    },
+    {
+      "name": "Accelerometer",
+      "id": "4344d8dbe5087a44",
+      "file": "accelerometer.json"
+    },
+    {
+      "name": "ADC",
+      "id": "576d1184c541e9f9",
+      "file": "adc.json"
+    },
+    {
+      "name": "ADC.libsimpleio",
+      "id": "7262b9c4d0f9e904",
+      "file": "adc-libsimpleio.json"
+    },
+    {
+      "name": "ADC.RemoteIO",
+      "id": "3dfdbc9c951aff61",
+      "file": "adc-remoteio.json"
+    },
+    {
+      "name": "ADC121C021",
+      "id": "e796a55b6117aea9",
+      "file": "adc121c021.json"
+    },
+    {
+      "name": "ADS1015",
+      "id": "8a8730ce8eaf77e8",
+      "file": "ads1015.json"
+    },
+    {
+      "name": "Analog",
+      "id": "895f7dcdf72d7dd4",
+      "file": "analog.json"
+    },
+    {
+      "name": "Angle",
+      "id": "49387897bee2bee3",
+      "file": "angle.json"
+    },
+    {
+      "name": "Arduino",
+      "id": "775e9f944188a7bc",
+      "file": "arduino.json"
+    },
+    {
+      "name": "BeagleBone",
+      "id": "f9b971b34bd307a5",
+      "file": "beaglebone.json"
+    },
+    {
+      "name": "BeaglePlay",
+      "id": "174bf86e02d3f14e",
+      "file": "beagleplay.json"
+    },
+    {
+      "name": "BMP280",
+      "id": "91fe747f42dcc925",
+      "file": "bmp280.json"
+    },
+    {
+      "name": "BuildHAT",
+      "id": "650e76a90b3e55e5",
+      "file": "buildhat.json"
+    },
+    {
+      "name": "BuildHAT.Firmware",
+      "id": "4c6e790439477ecc",
+      "file": "buildhat-firmware.json"
+    },
+    {
+      "name": "BuildHAT.PassiveMotor",
+      "id": "e21830cc0482b74b",
+      "file": "buildhat-passivemotor.json"
+    },
+    {
+      "name": "ClickBoard",
+      "id": "c57e331d0e9ac76f",
+      "file": "clickboard.json"
+    },
+    {
+      "name": "ClickBoard.ADC",
+      "id": "30feddf644a268cd",
+      "file": "clickboard-adc.json"
+    },
+    {
+      "name": "ClickBoard.ADC.RemoteIO",
+      "id": "f4809389db5a4b73",
+      "file": "clickboard-adc-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.ADC.SimpleIO",
+      "id": "552956fbde3098d9",
+      "file": "clickboard-adc-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Altitude",
+      "id": "b621aa93582686e6",
+      "file": "clickboard-altitude.json"
+    },
+    {
+      "name": "ClickBoard.Altitude.RemoteIO",
+      "id": "b30902877d0a504e",
+      "file": "clickboard-altitude-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Altitude.SimpleIO",
+      "id": "cc3c701ca0b9aed4",
+      "file": "clickboard-altitude-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Expand",
+      "id": "6d5c9e07e46af15a",
+      "file": "clickboard-expand.json"
+    },
+    {
+      "name": "ClickBoard.Expand.RemoteIO",
+      "id": "78b30268b0559616",
+      "file": "clickboard-expand-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Expand.SimpleIO",
+      "id": "7992d16be7f2ccd8",
+      "file": "clickboard-expand-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Expand2",
+      "id": "4126e02cba56fda7",
+      "file": "clickboard-expand2.json"
+    },
+    {
+      "name": "ClickBoard.Expand2.RemoteIO",
+      "id": "46d2dafa0bfb8c0e",
+      "file": "clickboard-expand2-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Expand2.SimpleIO",
+      "id": "30b0e0876b2cc36c",
+      "file": "clickboard-expand2-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.HTU21D",
+      "id": "4be9bf629d93e72f",
+      "file": "clickboard-htu21d.json"
+    },
+    {
+      "name": "ClickBoard.HTU21D.RemoteIO",
+      "id": "910397a57035ea81",
+      "file": "clickboard-htu21d-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.HTU21D.SimpleIO",
+      "id": "53cb82620de893b2",
+      "file": "clickboard-htu21d-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.LEDs_8x8",
+      "id": "6e826140d26554f9",
+      "file": "clickboard-leds_8x8.json"
+    },
+    {
+      "name": "ClickBoard.LEDs_8x8.RemoteIO",
+      "id": "bf593da2269489fa",
+      "file": "clickboard-leds_8x8-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.LEDs_8x8.SimpleIO",
+      "id": "d1574aa08097d46d",
+      "file": "clickboard-leds_8x8-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.PWM_Click",
+      "id": "1d1084bd726d5b54",
+      "file": "clickboard-pwm_click.json"
+    },
+    {
+      "name": "ClickBoard.PWM_Click.RemoteIO",
+      "id": "1405973cfa770169",
+      "file": "clickboard-pwm_click-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.PWM_Click.SimpleIO",
+      "id": "0607aed685973d01",
+      "file": "clickboard-pwm_click-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Relay",
+      "id": "d40629707742d28c",
+      "file": "clickboard-relay.json"
+    },
+    {
+      "name": "ClickBoard.Relay.RemoteIO",
+      "id": "25906704f655cca4",
+      "file": "clickboard-relay-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Relay.SimpleIO",
+      "id": "37d10da03b346505",
+      "file": "clickboard-relay-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.RemoteIO",
+      "id": "dba8799312055afd",
+      "file": "clickboard-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Servers",
+      "id": "5551eff1b1873223",
+      "file": "clickboard-servers.json"
+    },
+    {
+      "name": "ClickBoard.SevenSegment",
+      "id": "e41ba14a6bcb4229",
+      "file": "clickboard-sevensegment.json"
+    },
+    {
+      "name": "ClickBoard.SevenSegment.RemoteIO",
+      "id": "3ba236a991812a5a",
+      "file": "clickboard-sevensegment-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.SevenSegment.SimpleIO",
+      "id": "f1703b30fd0c2aa0",
+      "file": "clickboard-sevensegment-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Shields",
+      "id": "48567f260cb65270",
+      "file": "clickboard-shields.json"
+    },
+    {
+      "name": "ClickBoard.SimpleIO",
+      "id": "a565053bf0c7e3c5",
+      "file": "clickboard-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Template",
+      "id": "8ab1cf6ac512e034",
+      "file": "clickboard-template.json"
+    },
+    {
+      "name": "ClickBoard.Thermo",
+      "id": "04c6d08ebb2ecdbc",
+      "file": "clickboard-thermo.json"
+    },
+    {
+      "name": "ClickBoard.Thermo.RemoteIO",
+      "id": "e995ca16a63e76c4",
+      "file": "clickboard-thermo-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Thermo.SimpleIO",
+      "id": "a6053a8af5446acc",
+      "file": "clickboard-thermo-simpleio.json"
+    },
+    {
+      "name": "ClickBoard.Thermo3",
+      "id": "629a0e9fe58e5f38",
+      "file": "clickboard-thermo3.json"
+    },
+    {
+      "name": "ClickBoard.Thermo3.RemoteIO",
+      "id": "25fa53fa9c2b6f04",
+      "file": "clickboard-thermo3-remoteio.json"
+    },
+    {
+      "name": "ClickBoard.Thermo3.SimpleIO",
+      "id": "fded0d53bfe651eb",
+      "file": "clickboard-thermo3-simpleio.json"
+    },
+    {
+      "name": "CPUInfo",
+      "id": "7defb3fe0d33e84c",
+      "file": "cpuinfo.json"
+    },
+    {
+      "name": "Cytron_MD13S",
+      "id": "950b22f980463c65",
+      "file": "cytron_md13s.json"
+    },
+    {
+      "name": "DAC",
+      "id": "718f66104aad311b",
+      "file": "dac.json"
+    },
+    {
+      "name": "DAC.libsimpleio",
+      "id": "eb71a6eb927dacde",
+      "file": "dac-libsimpleio.json"
+    },
+    {
+      "name": "DAC.RemoteIO",
+      "id": "86de2c83c44edcbd",
+      "file": "dac-remoteio.json"
+    },
+    {
+      "name": "Debug",
+      "id": "0b8e9e995d8d77f1",
+      "file": "debug.json"
+    },
+    {
+      "name": "Debug.syslog",
+      "id": "c3b3630dae9ccaaa",
+      "file": "debug-syslog.json"
+    },
+    {
+      "name": "Device",
+      "id": "263a4dbe41488fb8",
+      "file": "device.json"
+    },
+    {
+      "name": "Email_Mail",
+      "id": "12875eef7543930b",
+      "file": "email_mail.json"
+    },
+    {
+      "name": "Email_Sendmail",
+      "id": "2bae56f011b82cc4",
+      "file": "email_sendmail.json"
+    },
+    {
+      "name": "errno",
+      "id": "3c0b378b6fa50759",
+      "file": "errno.json"
+    },
+    {
+      "name": "External_Command",
+      "id": "75bb0e14a85c3608",
+      "file": "external_command.json"
+    },
+    {
+      "name": "External_Command.Pipeline",
+      "id": "236854b7acf4d13d",
+      "file": "external_command-pipeline.json"
+    },
+    {
+      "name": "FTDI",
+      "id": "10f9a66a64da879e",
+      "file": "ftdi.json"
+    },
+    {
+      "name": "FTDI.MPSSE",
+      "id": "61c169ef2894f344",
+      "file": "ftdi-mpsse.json"
+    },
+    {
+      "name": "FTDI.MPSSE.GPIO",
+      "id": "ee12d3fd00b2f235",
+      "file": "ftdi-mpsse-gpio.json"
+    },
+    {
+      "name": "GPIB",
+      "id": "3740536d75eb92bb",
+      "file": "gpib.json"
+    },
+    {
+      "name": "GPIB.Slave",
+      "id": "6e4ce1f77ad913cc",
+      "file": "gpib-slave.json"
+    },
+    {
+      "name": "GPIO",
+      "id": "722a08a99490cd9e",
+      "file": "gpio.json"
+    },
+    {
+      "name": "GPIO.libgpiod",
+      "id": "3124e398f5f495e2",
+      "file": "gpio-libgpiod.json"
+    },
+    {
+      "name": "GPIO.libsimpleio",
+      "id": "90f122bdaed281c7",
+      "file": "gpio-libsimpleio.json"
+    },
+    {
+      "name": "GPIO.PWM",
+      "id": "8f8e29b2402311de",
+      "file": "gpio-pwm.json"
+    },
+    {
+      "name": "GPIO.PWM.libsimpleio",
+      "id": "2b81a81690d6ac5f",
+      "file": "gpio-pwm-libsimpleio.json"
+    },
+    {
+      "name": "GPIO.RemoteIO",
+      "id": "85fac6cd5807385d",
+      "file": "gpio-remoteio.json"
+    },
+    {
+      "name": "GPIO.UserLED",
+      "id": "d61e949733b8dc80",
+      "file": "gpio-userled.json"
+    },
+    {
+      "name": "Grove_ADC",
+      "id": "117a21925cc30cc6",
+      "file": "grove_adc.json"
+    },
+    {
+      "name": "Grove_Keypad",
+      "id": "5567b398cbdbce93",
+      "file": "grove_keypad.json"
+    },
+    {
+      "name": "Grove_TB6612",
+      "id": "3df8b79c34a005dd",
+      "file": "grove_tb6612.json"
+    },
+    {
+      "name": "Grove_TB6612.Motor",
+      "id": "326208a13d97adc1",
+      "file": "grove_tb6612-motor.json"
+    },
+    {
+      "name": "Grove_TB6612.Stepper",
+      "id": "d7b87fb273207ded",
+      "file": "grove_tb6612-stepper.json"
+    },
+    {
+      "name": "Grove_Temperature",
+      "id": "0cbf6481dca12cde",
+      "file": "grove_temperature.json"
+    },
+    {
+      "name": "Grove_Temperature_Humidity",
+      "id": "72766094ec8ba44f",
+      "file": "grove_temperature_humidity.json"
+    },
+    {
+      "name": "Gyroscope",
+      "id": "76d5b4bad06220c2",
+      "file": "gyroscope.json"
+    },
+    {
+      "name": "HDC1080",
+      "id": "00d402891acbee60",
+      "file": "hdc1080.json"
+    },
+    {
+      "name": "HID",
+      "id": "87102ab9bf41d9bc",
+      "file": "hid.json"
+    },
+    {
+      "name": "HID.hidapi",
+      "id": "0d35f79cbe15fb29",
+      "file": "hid-hidapi.json"
+    },
+    {
+      "name": "HID.libsimpleio",
+      "id": "729cf5b4ff505abf",
+      "file": "hid-libsimpleio.json"
+    },
+    {
+      "name": "HID.libusb",
+      "id": "dc429abaef640133",
+      "file": "hid-libusb.json"
+    },
+    {
+      "name": "HID.Munts",
+      "id": "3a071121ad3231d9",
+      "file": "hid-munts.json"
+    },
+    {
+      "name": "HID.Posix",
+      "id": "a9e635d826bd1c90",
+      "file": "hid-posix.json"
+    },
+    {
+      "name": "HP9872A",
+      "id": "1a1601b62b60f62d",
+      "file": "hp9872a.json"
+    },
+    {
+      "name": "HTS221",
+      "id": "ae478c1b78975488",
+      "file": "hts221.json"
+    },
+    {
+      "name": "HTU21D",
+      "id": "c251125482fef7fb",
+      "file": "htu21d.json"
+    },
+    {
+      "name": "Humidity",
+      "id": "ba3fb020c49e3489",
+      "file": "humidity.json"
+    },
+    {
+      "name": "I2C",
+      "id": "85ac83cb04df5961",
+      "file": "i2c.json"
+    },
+    {
+      "name": "I2C.libsimpleio",
+      "id": "65449e3cd3aebff1",
+      "file": "i2c-libsimpleio.json"
+    },
+    {
+      "name": "I2C.RemoteIO",
+      "id": "c93ae6f1fbae9dc6",
+      "file": "i2c-remoteio.json"
+    },
+    {
+      "name": "IO_Interfaces",
+      "id": "40b0a8bb27a559ce",
+      "file": "io_interfaces.json"
+    },
+    {
+      "name": "Joystick",
+      "id": "39a39d1bfab5e142",
+      "file": "joystick.json"
+    },
+    {
+      "name": "Keithley192",
+      "id": "60c45a21fb68d33a",
+      "file": "keithley192.json"
+    },
+    {
+      "name": "Keyboard",
+      "id": "91f060a9ad4b39eb",
+      "file": "keyboard.json"
+    },
+    {
+      "name": "LCD16397",
+      "id": "9efd58f7c2404bb6",
+      "file": "lcd16397.json"
+    },
+    {
+      "name": "LEGORC",
+      "id": "2feb785799d5152e",
+      "file": "legorc.json"
+    },
+    {
+      "name": "libADC",
+      "id": "f9cf7435c1e166b7",
+      "file": "libadc.json"
+    },
+    {
+      "name": "libDAC",
+      "id": "c8a9d31bef179dfd",
+      "file": "libdac.json"
+    },
+    {
+      "name": "libEvent",
+      "id": "35b7192134ead031",
+      "file": "libevent.json"
+    },
+    {
+      "name": "libGPIO",
+      "id": "4d895654289190e3",
+      "file": "libgpio.json"
+    },
+    {
+      "name": "libgpiod",
+      "id": "1d23b4c693c5d19f",
+      "file": "libgpiod.json"
+    },
+    {
+      "name": "libHIDRaw",
+      "id": "142172c992df14d9",
+      "file": "libhidraw.json"
+    },
+    {
+      "name": "libI2C",
+      "id": "089c5825f53156c2",
+      "file": "libi2c.json"
+    },
+    {
+      "name": "libIIO",
+      "id": "051ae99a21c6a7bb",
+      "file": "libiio.json"
+    },
+    {
+      "name": "libIPV4",
+      "id": "046ad7f22a3df584",
+      "file": "libipv4.json"
+    },
+    {
+      "name": "libLinux",
+      "id": "9f5a8f709c9100db",
+      "file": "liblinux.json"
+    },
+    {
+      "name": "libModbus",
+      "id": "c20916ec0534c5c4",
+      "file": "libmodbus.json"
+    },
+    {
+      "name": "libmysqlclient",
+      "id": "2efc5b4282d3f1ae",
+      "file": "libmysqlclient.json"
+    },
+    {
+      "name": "libPRESSURE",
+      "id": "5b42f6a3c104d0b5",
+      "file": "libpressure.json"
+    },
+    {
+      "name": "libPWM",
+      "id": "64308b8f6643e0f0",
+      "file": "libpwm.json"
+    },
+    {
+      "name": "libSerial",
+      "id": "55c6217ddf993e26",
+      "file": "libserial.json"
+    },
+    {
+      "name": "Libsimpleio_Config",
+      "id": "406bde05d0828123",
+      "file": "libsimpleio_config.json"
+    },
+    {
+      "name": "libSPI",
+      "id": "b39429bb5a6a5337",
+      "file": "libspi.json"
+    },
+    {
+      "name": "libStream",
+      "id": "0cf8853e785f08d6",
+      "file": "libstream.json"
+    },
+    {
+      "name": "libWatchdog",
+      "id": "4c37e8b5776f10ce",
+      "file": "libwatchdog.json"
+    },
+    {
+      "name": "libzmq",
+      "id": "be5eecc1e0015e22",
+      "file": "libzmq.json"
+    },
+    {
+      "name": "Logging",
+      "id": "0a149844a7c9f4cf",
+      "file": "logging.json"
+    },
+    {
+      "name": "Logging.libsimpleio",
+      "id": "94ce465ed2dfe5b5",
+      "file": "logging-libsimpleio.json"
+    },
+    {
+      "name": "LPS25H",
+      "id": "81db153cadbcf4db",
+      "file": "lps25h.json"
+    },
+    {
+      "name": "LSM9DS1",
+      "id": "87839287ef586539",
+      "file": "lsm9ds1.json"
+    },
+    {
+      "name": "Magnetometer",
+      "id": "11180e90bb86a135",
+      "file": "magnetometer.json"
+    },
+    {
+      "name": "MAX31855",
+      "id": "2cd85179b8f759b7",
+      "file": "max31855.json"
+    },
+    {
+      "name": "MAX7219",
+      "id": "244f100b36c9f13f",
+      "file": "max7219.json"
+    },
+    {
+      "name": "MCP2221",
+      "id": "6141787af794c686",
+      "file": "mcp2221.json"
+    },
+    {
+      "name": "MCP2221.ADC",
+      "id": "f8670a3a755b1468",
+      "file": "mcp2221-adc.json"
+    },
+    {
+      "name": "MCP2221.GPIO",
+      "id": "1613ec1f0b60a0ec",
+      "file": "mcp2221-gpio.json"
+    },
+    {
+      "name": "MCP2221.hidapi",
+      "id": "ac9467fdd7ad26a7",
+      "file": "mcp2221-hidapi.json"
+    },
+    {
+      "name": "MCP2221.I2C",
+      "id": "217a75e3731f247e",
+      "file": "mcp2221-i2c.json"
+    },
+    {
+      "name": "MCP2221.libsimpleio",
+      "id": "c758c360ece61c7f",
+      "file": "mcp2221-libsimpleio.json"
+    },
+    {
+      "name": "MCP2221.libusb",
+      "id": "9c4343f01cda59c1",
+      "file": "mcp2221-libusb.json"
+    },
+    {
+      "name": "MCP23x17",
+      "id": "5ad7c101eb661ff2",
+      "file": "mcp23x17.json"
+    },
+    {
+      "name": "MCP23x17.Byte",
+      "id": "8e544c4129852356",
+      "file": "mcp23x17-byte.json"
+    },
+    {
+      "name": "MCP23x17.GPIO",
+      "id": "9dff4d609da7b804",
+      "file": "mcp23x17-gpio.json"
+    },
+    {
+      "name": "MCP23x17.Word",
+      "id": "815a4f50e7f2f22d",
+      "file": "mcp23x17-word.json"
+    },
+    {
+      "name": "MCP3202",
+      "id": "0f2d1d1d0135ed16",
+      "file": "mcp3202.json"
+    },
+    {
+      "name": "MCP3204",
+      "id": "2f552a78f83a166a",
+      "file": "mcp3204.json"
+    },
+    {
+      "name": "MCP3208",
+      "id": "74defe02ccff1d55",
+      "file": "mcp3208.json"
+    },
+    {
+      "name": "MCP4822",
+      "id": "28318029510bca84",
+      "file": "mcp4822.json"
+    },
+    {
+      "name": "Messaging",
+      "id": "e2dcc34d45138381",
+      "file": "messaging.json"
+    },
+    {
+      "name": "Messaging.Fixed",
+      "id": "995dadf88b565f05",
+      "file": "messaging-fixed.json"
+    },
+    {
+      "name": "Messaging.Fixed.Ada_Streams",
+      "id": "eb62189676b1677d",
+      "file": "messaging-fixed-ada_streams.json"
+    },
+    {
+      "name": "Messaging.Fixed.GNAT_UDP",
+      "id": "ca7778db0a6dcd1d",
+      "file": "messaging-fixed-gnat_udp.json"
+    },
+    {
+      "name": "Messaging.Fixed.libsimpleio_datagram",
+      "id": "d0947692be7cb030",
+      "file": "messaging-fixed-libsimpleio_datagram.json"
+    },
+    {
+      "name": "Messaging.Fixed.libsimpleio_stream",
+      "id": "d7baa108cb6f13f2",
+      "file": "messaging-fixed-libsimpleio_stream.json"
+    },
+    {
+      "name": "Messaging.Fixed.WioE5_Ham1",
+      "id": "19c8802269fa8d3d",
+      "file": "messaging-fixed-wioe5_ham1.json"
+    },
+    {
+      "name": "Messaging.Fixed.ZeroMQ",
+      "id": "9cd7c05f47a36ad0",
+      "file": "messaging-fixed-zeromq.json"
+    },
+    {
+      "name": "Messaging.Text",
+      "id": "84c079cd3f192ca9",
+      "file": "messaging-text.json"
+    },
+    {
+      "name": "Modbus",
+      "id": "f07ca10904fa3309",
+      "file": "modbus.json"
+    },
+    {
+      "name": "Modbus.Coils",
+      "id": "83d5d67531cce58f",
+      "file": "modbus-coils.json"
+    },
+    {
+      "name": "Modbus.DiscreteInputs",
+      "id": "dd8055fafeaaf1f4",
+      "file": "modbus-discreteinputs.json"
+    },
+    {
+      "name": "Modbus.HoldingRegisters",
+      "id": "211402b7c9b225d0",
+      "file": "modbus-holdingregisters.json"
+    },
+    {
+      "name": "Modbus.InputRegisters",
+      "id": "8e165fbd68435fc8",
+      "file": "modbus-inputregisters.json"
+    },
+    {
+      "name": "Modbus.InputShortFloat",
+      "id": "6fe0a7f3ee0e65e3",
+      "file": "modbus-inputshortfloat.json"
+    },
+    {
+      "name": "Modbus.OutputShortFloat",
+      "id": "3091e7e821780a83",
+      "file": "modbus-outputshortfloat.json"
+    },
+    {
+      "name": "Motor",
+      "id": "02983856320b180c",
+      "file": "motor.json"
+    },
+    {
+      "name": "Motor.LEGORC",
+      "id": "ee21fb57df680627",
+      "file": "motor-legorc.json"
+    },
+    {
+      "name": "Motor.PWM",
+      "id": "e4e8b4d05fbc76bb",
+      "file": "motor-pwm.json"
+    },
+    {
+      "name": "Motor.Servo",
+      "id": "b591a6e109a29736",
+      "file": "motor-servo.json"
+    },
+    {
+      "name": "MPL3115A2",
+      "id": "31568a04620e2d47",
+      "file": "mpl3115a2.json"
+    },
+    {
+      "name": "MUNTS_0018",
+      "id": "1d6e74893e1b919e",
+      "file": "munts_0018.json"
+    },
+    {
+      "name": "MUNTS_0018.Analog",
+      "id": "dd86efd811ee4ec5",
+      "file": "munts_0018-analog.json"
+    },
+    {
+      "name": "MUNTS_0018.Button_Template",
+      "id": "f2fc27e107346446",
+      "file": "munts_0018-button_template.json"
+    },
+    {
+      "name": "MUNTS_0018.I2C",
+      "id": "23b0a3c3f2312547",
+      "file": "munts_0018-i2c.json"
+    },
+    {
+      "name": "MUNTS_0018.LED",
+      "id": "f788612373ece2aa",
+      "file": "munts_0018-led.json"
+    },
+    {
+      "name": "MUNTS_0018.PWM",
+      "id": "0dbd4ca3cf8fdd24",
+      "file": "munts_0018-pwm.json"
+    },
+    {
+      "name": "MySQL",
+      "id": "430005175c4c7810",
+      "file": "mysql.json"
+    },
+    {
+      "name": "MySQL.libmysqlclient",
+      "id": "7764826b84667fcd",
+      "file": "mysql-libmysqlclient.json"
+    },
+    {
+      "name": "ncurses",
+      "id": "377a48f0e42f6f8b",
+      "file": "ncurses.json"
+    },
+    {
+      "name": "ncurses.Keys",
+      "id": "0d3c57a7c13c716b",
+      "file": "ncurses-keys.json"
+    },
+    {
+      "name": "NNG",
+      "id": "ca21136dbd8d004f",
+      "file": "nng.json"
+    },
+    {
+      "name": "NNG.Pub",
+      "id": "50428f745a08d0b8",
+      "file": "nng-pub.json"
+    },
+    {
+      "name": "NNG.Sub",
+      "id": "98c33d202d909929",
+      "file": "nng-sub.json"
+    },
+    {
+      "name": "OrangePiZero2W",
+      "id": "21b9a945fbb81e8e",
+      "file": "orangepizero2w.json"
+    },
+    {
+      "name": "PCA8574",
+      "id": "84d8c12ef6989a4a",
+      "file": "pca8574.json"
+    },
+    {
+      "name": "PCA8574.GPIO",
+      "id": "d0895e20c58077b1",
+      "file": "pca8574-gpio.json"
+    },
+    {
+      "name": "PCA9534",
+      "id": "6f09a54c962d8149",
+      "file": "pca9534.json"
+    },
+    {
+      "name": "PCA9534.GPIO",
+      "id": "9fe8733e6109158c",
+      "file": "pca9534-gpio.json"
+    },
+    {
+      "name": "PCA9685",
+      "id": "f7e7eb31ac170789",
+      "file": "pca9685.json"
+    },
+    {
+      "name": "PCA9685.GPIO",
+      "id": "69f4cba381782102",
+      "file": "pca9685-gpio.json"
+    },
+    {
+      "name": "PCA9685.PWM",
+      "id": "2d6857329102bdc5",
+      "file": "pca9685-pwm.json"
+    },
+    {
+      "name": "PocketBeagle",
+      "id": "697a7fbbba5c8e0f",
+      "file": "pocketbeagle.json"
+    },
+    {
+      "name": "Posix",
+      "id": "270dfabe9df986d6",
+      "file": "posix.json"
+    },
+    {
+      "name": "Pressure",
+      "id": "b667446e6eb2552f",
+      "file": "pressure.json"
+    },
+    {
+      "name": "Prologix_GPIB_USB",
+      "id": "24405b0c7b00fd00",
+      "file": "prologix_gpib_usb.json"
+    },
+    {
+      "name": "Prologix_GPIB_USB_GNAT",
+      "id": "b6457fd9a4e5bd18",
+      "file": "prologix_gpib_usb_gnat.json"
+    },
+    {
+      "name": "PWM",
+      "id": "3c017f717b39247c",
+      "file": "pwm.json"
+    },
+    {
+      "name": "PWM.CLI",
+      "id": "3e65c21de2d303b2",
+      "file": "pwm-cli.json"
+    },
+    {
+      "name": "PWM.libsimpleio",
+      "id": "15cfb5fba53ae143",
+      "file": "pwm-libsimpleio.json"
+    },
+    {
+      "name": "PWM.RemoteIO",
+      "id": "f8867c8662d88a1c",
+      "file": "pwm-remoteio.json"
+    },
+    {
+      "name": "RaspberryPi",
+      "id": "94d9ba988fa2aea8",
+      "file": "raspberrypi.json"
+    },
+    {
+      "name": "RaspberryPi4",
+      "id": "aa7b7e9bcf072360",
+      "file": "raspberrypi4.json"
+    },
+    {
+      "name": "RaspberryPi5",
+      "id": "0d36caf2c49077da",
+      "file": "raspberrypi5.json"
+    },
+    {
+      "name": "Reference_Counted_Table",
+      "id": "b8c8242b01c1cec1",
+      "file": "reference_counted_table.json"
+    },
+    {
+      "name": "RemoteIO",
+      "id": "ff6e0d49aa689c3b",
+      "file": "remoteio.json"
+    },
+    {
+      "name": "RemoteIO.Abstract_Device",
+      "id": "1dabfef5fb342429",
+      "file": "remoteio-abstract_device.json"
+    },
+    {
+      "name": "RemoteIO.ADC",
+      "id": "4b172da429d6be99",
+      "file": "remoteio-adc.json"
+    },
+    {
+      "name": "RemoteIO.ADC_DAC_Pi_Zero",
+      "id": "97f7e71c1b1d10b9",
+      "file": "remoteio-adc_dac_pi_zero.json"
+    },
+    {
+      "name": "RemoteIO.Arduino",
+      "id": "26ea2d79f3ed9139",
+      "file": "remoteio-arduino.json"
+    },
+    {
+      "name": "RemoteIO.Automation_pHAT",
+      "id": "06b4728b79aab1f6",
+      "file": "remoteio-automation_phat.json"
+    },
+    {
+      "name": "RemoteIO.BeagleBone",
+      "id": "d7819bcb95b6789c",
+      "file": "remoteio-beaglebone.json"
+    },
+    {
+      "name": "RemoteIO.BeaglePlay",
+      "id": "977ce9e8c9b20a04",
+      "file": "remoteio-beagleplay.json"
+    },
+    {
+      "name": "RemoteIO.Client",
+      "id": "85ffc1f9952136f0",
+      "file": "remoteio-client.json"
+    },
+    {
+      "name": "RemoteIO.Client.hidapi",
+      "id": "173dcb344021e5e8",
+      "file": "remoteio-client-hidapi.json"
+    },
+    {
+      "name": "RemoteIO.Client.libsimpleio",
+      "id": "a50dafe746113616",
+      "file": "remoteio-client-libsimpleio.json"
+    },
+    {
+      "name": "RemoteIO.Client.libusb",
+      "id": "9ccd552c89f542ba",
+      "file": "remoteio-client-libusb.json"
+    },
+    {
+      "name": "RemoteIO.Client.Posix",
+      "id": "09ee6d6af83279af",
+      "file": "remoteio-client-posix.json"
+    },
+    {
+      "name": "RemoteIO.Client.Serial",
+      "id": "47237332363c2b58",
+      "file": "remoteio-client-serial.json"
+    },
+    {
+      "name": "RemoteIO.Client.Stream",
+      "id": "fc0fb12036eb4781",
+      "file": "remoteio-client-stream.json"
+    },
+    {
+      "name": "RemoteIO.Client.UDP",
+      "id": "1c517421fbe2f4f3",
+      "file": "remoteio-client-udp.json"
+    },
+    {
+      "name": "RemoteIO.Client.WioE5_Ham1",
+      "id": "87d448b68c92c554",
+      "file": "remoteio-client-wioe5_ham1.json"
+    },
+    {
+      "name": "RemoteIO.Client.ZeroMQ",
+      "id": "aae13d179a17bde4",
+      "file": "remoteio-client-zeromq.json"
+    },
+    {
+      "name": "RemoteIO.Common",
+      "id": "0677756deb00f41e",
+      "file": "remoteio-common.json"
+    },
+    {
+      "name": "RemoteIO.DAC",
+      "id": "7ee05af7db1558d1",
+      "file": "remoteio-dac.json"
+    },
+    {
+      "name": "RemoteIO.Dispatch",
+      "id": "5e1d48bdcba53984",
+      "file": "remoteio-dispatch.json"
+    },
+    {
+      "name": "RemoteIO.Enviro_pHAT",
+      "id": "bf7c85052b259a82",
+      "file": "remoteio-enviro_phat.json"
+    },
+    {
+      "name": "RemoteIO.Executive",
+      "id": "461808688119d923",
+      "file": "remoteio-executive.json"
+    },
+    {
+      "name": "RemoteIO.GPIO",
+      "id": "14e03bba53241761",
+      "file": "remoteio-gpio.json"
+    },
+    {
+      "name": "RemoteIO.Grove_Base_Hat_Zero",
+      "id": "68a59ffe1ce35f2e",
+      "file": "remoteio-grove_base_hat_zero.json"
+    },
+    {
+      "name": "RemoteIO.I2C",
+      "id": "fc8740c951a3efbd",
+      "file": "remoteio-i2c.json"
+    },
+    {
+      "name": "RemoteIO.LPC1114",
+      "id": "8f7ce4b70b3a8bb9",
+      "file": "remoteio-lpc1114.json"
+    },
+    {
+      "name": "RemoteIO.LPC1114.ADC",
+      "id": "711ac7dc771def85",
+      "file": "remoteio-lpc1114-adc.json"
+    },
+    {
+      "name": "RemoteIO.LPC1114.GPIO",
+      "id": "e9dac2870721be9c",
+      "file": "remoteio-lpc1114-gpio.json"
+    },
+    {
+      "name": "RemoteIO.LPC1114.LEGORC",
+      "id": "868cdcf7068587f7",
+      "file": "remoteio-lpc1114-legorc.json"
+    },
+    {
+      "name": "RemoteIO.LPC1114.PWM",
+      "id": "573cc35b1df7f989",
+      "file": "remoteio-lpc1114-pwm.json"
+    },
+    {
+      "name": "RemoteIO.LPC1114.Timers",
+      "id": "8010e0e564f5e9c4",
+      "file": "remoteio-lpc1114-timers.json"
+    },
+    {
+      "name": "RemoteIO.MUNTS_0008",
+      "id": "bba4616109dde690",
+      "file": "remoteio-munts_0008.json"
+    },
+    {
+      "name": "RemoteIO.MUNTS_0009",
+      "id": "3ebe7d743b352000",
+      "file": "remoteio-munts_0009.json"
+    },
+    {
+      "name": "RemoteIO.MUNTS_0015",
+      "id": "7042308f1f700ad8",
+      "file": "remoteio-munts_0015.json"
+    },
+    {
+      "name": "RemoteIO.MUNTS_0016",
+      "id": "4ea1838b19b0246d",
+      "file": "remoteio-munts_0016.json"
+    },
+    {
+      "name": "RemoteIO.MUNTS_0018",
+      "id": "e922dd903b2a0b6d",
+      "file": "remoteio-munts_0018.json"
+    },
+    {
+      "name": "RemoteIO.PocketBeagle",
+      "id": "794c4dbb8988701a",
+      "file": "remoteio-pocketbeagle.json"
+    },
+    {
+      "name": "RemoteIO.PWM",
+      "id": "11fd9f4621031f9b",
+      "file": "remoteio-pwm.json"
+    },
+    {
+      "name": "RemoteIO.Qwiic_HAT",
+      "id": "f42771eb3e337c78",
+      "file": "remoteio-qwiic_hat.json"
+    },
+    {
+      "name": "RemoteIO.RaspberryPi",
+      "id": "45e6feeb9154d819",
+      "file": "remoteio-raspberrypi.json"
+    },
+    {
+      "name": "RemoteIO.Server",
+      "id": "171c158b3ee67b90",
+      "file": "remoteio-server.json"
+    },
+    {
+      "name": "RemoteIO.Server.Dev",
+      "id": "a3cda8203b46bdf5",
+      "file": "remoteio-server-dev.json"
+    },
+    {
+      "name": "RemoteIO.Server.Foundation",
+      "id": "48bdc4a2783f36dd",
+      "file": "remoteio-server-foundation.json"
+    },
+    {
+      "name": "RemoteIO.Server.Message64",
+      "id": "e43ab3e2b2090f45",
+      "file": "remoteio-server-message64.json"
+    },
+    {
+      "name": "RemoteIO.Server.Serial",
+      "id": "80cfbc9e354c331f",
+      "file": "remoteio-server-serial.json"
+    },
+    {
+      "name": "RemoteIO.Server.UDP",
+      "id": "7e3310761bba7fa4",
+      "file": "remoteio-server-udp.json"
+    },
+    {
+      "name": "RemoteIO.Server.WioE5_Ham1",
+      "id": "bccd12a224248594",
+      "file": "remoteio-server-wioe5_ham1.json"
+    },
+    {
+      "name": "RemoteIO.Server.ZeroMQ",
+      "id": "d61953ed43b04f28",
+      "file": "remoteio-server-zeromq.json"
+    },
+    {
+      "name": "RemoteIO.SPI",
+      "id": "fc550f76e6267461",
+      "file": "remoteio-spi.json"
+    },
+    {
+      "name": "Resistance",
+      "id": "be970d090a9b0a23",
+      "file": "resistance.json"
+    },
+    {
+      "name": "Servo",
+      "id": "0069df340f9aff7c",
+      "file": "servo.json"
+    },
+    {
+      "name": "Servo.PWM_Template",
+      "id": "52fad8819494ef7f",
+      "file": "servo-pwm_template.json"
+    },
+    {
+      "name": "SPI",
+      "id": "8f3c56908f47fbc9",
+      "file": "spi.json"
+    },
+    {
+      "name": "SPI.libsimpleio",
+      "id": "cee68f7f005fc801",
+      "file": "spi-libsimpleio.json"
+    },
+    {
+      "name": "SPI.RemoteIO",
+      "id": "eadf0c19b39207ba",
+      "file": "spi-remoteio.json"
+    },
+    {
+      "name": "Stepper",
+      "id": "3ea764f126993db3",
+      "file": "stepper.json"
+    },
+    {
+      "name": "Stream_Framing_Protocol",
+      "id": "6f3a2cd96f4107e1",
+      "file": "stream_framing_protocol.json"
+    },
+    {
+      "name": "TCS3472",
+      "id": "667195f5685cda2b",
+      "file": "tcs3472.json"
+    },
+    {
+      "name": "Temperature",
+      "id": "b314ae60cb741e69",
+      "file": "temperature.json"
+    },
+    {
+      "name": "Temperature.libsimpleio",
+      "id": "d01b60b0c03ce978",
+      "file": "temperature-libsimpleio.json"
+    },
+    {
+      "name": "Temperature.libsimpleio.HWMon",
+      "id": "fca86c8c642f124f",
+      "file": "temperature-libsimpleio-hwmon.json"
+    },
+    {
+      "name": "Temperature.libsimpleio.IIO",
+      "id": "9d4e748a728d788e",
+      "file": "temperature-libsimpleio-iio.json"
+    },
+    {
+      "name": "TH02",
+      "id": "eb4c2f2015c9a4c1",
+      "file": "th02.json"
+    },
+    {
+      "name": "Thermistor",
+      "id": "4b9747fbf15de062",
+      "file": "thermistor.json"
+    },
+    {
+      "name": "Thermistor.NTC_B_Parms",
+      "id": "4c1d8ebb7aea23e7",
+      "file": "thermistor-ntc_b_parms.json"
+    },
+    {
+      "name": "TLC1543",
+      "id": "97c461d316fb673c",
+      "file": "tlc1543.json"
+    },
+    {
+      "name": "TMP102",
+      "id": "84afa767c796581e",
+      "file": "tmp102.json"
+    },
+    {
+      "name": "TrueColor",
+      "id": "4a5e83365abe1ee0",
+      "file": "truecolor.json"
+    },
+    {
+      "name": "Voltage",
+      "id": "01112e706d9eaf72",
+      "file": "voltage.json"
+    },
+    {
+      "name": "Watchdog",
+      "id": "422718fe17b063bc",
+      "file": "watchdog.json"
+    },
+    {
+      "name": "Watchdog.libsimpleio",
+      "id": "2c72f0b79a99f82d",
+      "file": "watchdog-libsimpleio.json"
+    },
+    {
+      "name": "Wio_E5",
+      "id": "c529285857bcacef",
+      "file": "wio_e5.json"
+    },
+    {
+      "name": "Wio_E5.Ham1",
+      "id": "b1b28152c7f08df4",
+      "file": "wio_e5-ham1.json"
+    },
+    {
+      "name": "Wio_E5.Ham2",
+      "id": "03e854fcb8cc4ce7",
+      "file": "wio_e5-ham2.json"
+    },
+    {
+      "name": "Wio_E5.P2P",
+      "id": "4bed9162d3b47bb8",
+      "file": "wio_e5-p2p.json"
+    },
+    {
+      "name": "ZeroMQ",
+      "id": "554b6469811a0b85",
+      "file": "zeromq.json"
+    },
+    {
+      "name": "ZeroMQ.Context",
+      "id": "48c662e7f0ed4e3d",
+      "file": "zeromq-context.json"
+    },
+    {
+      "name": "ZeroMQ.Sockets",
+      "id": "cb89411969875301",
+      "file": "zeromq-sockets.json"
+    }
+  ]
+}

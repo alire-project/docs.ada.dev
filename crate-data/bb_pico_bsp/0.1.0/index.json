@@ -1,0 +1,86 @@
+{
+  "schema_version": "1",
+  "crate": "bb_pico_bsp",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T18:01:36Z",
+  "description": "Ada BSP for the Keyboard Featherwing + RPI PICO",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "embedded",
+    "pico",
+    "handheld",
+    "featherwing"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/bb_pico_bsp",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/bb_pico_bsp",
+    "host": "github",
+    "commit": "76f9999eba98bf8b1088fc18b6e23325fd8adc75"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_components",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "lvgl_ada",
+      "version": "~0.2.0"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BB_Pico_Bsp",
+      "id": "71f2d5b78e791867",
+      "file": "bb_pico_bsp.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.I2C",
+      "id": "fbc583de7f2e5b0b",
+      "file": "bb_pico_bsp-i2c.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.Keyboard",
+      "id": "eb9fcd628f68e900",
+      "file": "bb_pico_bsp-keyboard.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.LCD",
+      "id": "6c725d5b04a93484",
+      "file": "bb_pico_bsp-lcd.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.LVGL_Backend",
+      "id": "5f3aa74d9ef42834",
+      "file": "bb_pico_bsp-lvgl_backend.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.SPI",
+      "id": "67ac94ecd74ba38d",
+      "file": "bb_pico_bsp-spi.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.STMPE811",
+      "id": "e5431ad0842df140",
+      "file": "bb_pico_bsp-stmpe811.json"
+    },
+    {
+      "name": "BB_Pico_Bsp.Touch",
+      "id": "8ba87d57571708c9",
+      "file": "bb_pico_bsp-touch.json"
+    },
+    {
+      "name": "ILI9341.Hack",
+      "id": "ae6e26f8b023ff1d",
+      "file": "ili9341-hack.json"
+    }
+  ]
+}

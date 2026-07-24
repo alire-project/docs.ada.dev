@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "wayland_ada_info",
+  "version": "1.0.0",
+  "documented_at": "2026-03-07T02:50:17Z",
+  "description": "A tool to display information about supported Wayland interfaces",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "wayland"
+  ],
+  "website": "https://github.com/onox/wayland-ada",
+  "repository": {
+    "url": "https://github.com/onox/wayland-ada",
+    "host": "github",
+    "commit": "f8a9fe05aa29e5e17d23951bc0d21ce4b84148a4",
+    "subdir": "wayland_ada_info/"
+  },
+  "dependencies": [
+    {
+      "crate": "wayland_protocols_ada",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Wayland_Ada_Info_Events",
+      "id": "0544b99aaa6154ba",
+      "file": "wayland_ada_info_events.json"
+    }
+  ]
+}

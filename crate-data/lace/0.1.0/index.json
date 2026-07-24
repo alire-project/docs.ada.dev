@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "crate": "lace",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:52:10Z",
+  "description": "Contains a set of low level re-usable Ada components.",
+  "long_description": "\nContains:\n\n   - lace.Events    : Provides a 'subject/oberver' 'event/response' facility.\n   - lace.Any       : Provides an interface to allow heterogenous containers.\n   - lace.fast_Pool : Provides a generic which allows fast allocation/deallocation.\n   - lace.Text      : Provides a DSA friendly set of text operations.\n\n",
+  "authors": [
+    "Rod Kay"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/charlie5/lace-alire",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "lace_shared",
+      "version": "~0.1"
+    }
+  ],
+  "units": []
+}

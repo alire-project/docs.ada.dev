@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"portable_minimal_ada_rts","version":"1.0.0","id":"6d0ed7a7e79fbdcd","name":"GNAT","qualified_name":"GNAT","kind":"ada_package","location":{"file":"src/gnat.ads","line":34,"column":9},"code":"package GNAT","documentation":{"description":"This is the parent package for a library of useful units provided with GNAT"}}

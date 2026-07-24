@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "dirty_booleans",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:56:41Z",
+  "description": "Comparisons with 0/1, T/F, Y/N, Yes/No, etc.",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "boolean",
+    "dirty",
+    "comparison"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/dirty_booleans",
+    "host": "github",
+    "commit": "d92d5dc578cb4a446f47984a2c81b008a6c4ead6"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Dirty_Booleans",
+      "id": "0cdbbfd3a1563621",
+      "file": "dirty_booleans.json"
+    },
+    {
+      "name": "Dirty_Booleans_Config",
+      "id": "7846af8c44290b27",
+      "file": "dirty_booleans_config.json"
+    }
+  ]
+}

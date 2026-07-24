@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "adabots",
+  "version": "2.1.0",
+  "failed_at": "2026-03-03T17:48:53Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

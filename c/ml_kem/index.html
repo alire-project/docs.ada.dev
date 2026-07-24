@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ml_kem — Ada/SPARK Documentation</title>
+  <meta name="description" content="SPARK-proved ML-KEM (FIPS 203) lattice-based key encapsulation">
+  <meta name="keywords" content="Ada, SPARK, Alire, ml_kem, ml-kem, post-quantum, cryptography, spark, embedded, security, verified, ML_KEM, Ml_Kem_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ml_kem",
+"version": "1.0.0",  "description": "SPARK-proved ML-KEM (FIPS 203) lattice-based key encapsulation",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ml_kem/",
+  "codeRepository": "https://github.com/b-erdem/ml_kem_ada"
+  ,"author": [{"@type": "Person", "name": "Baris Erdem"}]
+  ,"license": "GPL-3.0-only"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">ml_kem</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ml_kem</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">SPARK-proved ML-KEM (FIPS 203) lattice-based key encapsulation</p>
+
+  <div class="long-description"><p>SPARK-proved ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism)<br />
+implementing NIST FIPS 203. Formally verified at SPARK level 2 with zero<br />
+pragma Assume, zero unproved VCs. The 7-layer Cooley-Tukey NTT, BaseMul,<br />
+IndCPA, and FO transform are all proved end-to-end with no escape hatches.</p>
+<p>All three FIPS 203 parameter sets &ndash; ML-KEM-512, ML-KEM-768, ML-KEM-1024<br />
+&ndash; are supported and selected at build time via the <code>parameter_set</code><br />
+crate configuration variable; default is ML-KEM-768 (NIST Category III).</p>
+<p>Proof techniques are documented in PROOF_NOTES.md and reusable for similar<br />
+lattice / ARX cryptography.</p>
+<p>Built on sha3_ada for SHA-3/SHAKE. No heap allocation, pragma Pure, suitable<br />
+for embedded and safety-critical systems. Constant-time execution<br />
+empirically verified via cachegrind (LLd byte-identical). FIPS 140-3<br />
+validation is out of scope. See SECURITY.md for the full threat model.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Baris Erdem</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-only</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/b-erdem/ml_kem_ada">https://github.com/b-erdem/ml_kem_ada</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">ml-kem</span><span class="tag">post-quantum</span><span class="tag">cryptography</span><span class="tag">spark</span><span class="tag">embedded</span><span class="tag">security</span><span class="tag">verified</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sha3/">sha3</a>
+        <span class="dep-version">~1.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem/">ML_KEM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-cbd/">ML_KEM.CBD</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-indcpa/">ML_KEM.IndCPA</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-kem/">ML_KEM.KEM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-ntt/">ML_KEM.NTT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-ntt_zetas/">ML_KEM.NTT_Zetas</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-poly/">ML_KEM.Poly</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-polyvec/">ML_KEM.PolyVec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-reduce/">ML_KEM.Reduce</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-sampling/">ML_KEM.Sampling</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-serialize/">ML_KEM.Serialize</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-serialize-properties/">ML_KEM.Serialize.Properties</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-symmetric/">ML_KEM.Symmetric</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-verify/">ML_KEM.Verify</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem-wipe/">ML_KEM.Wipe</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ml_kem/1.0.0/ml_kem_config/">Ml_Kem_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-07-24.
+    </p>
+  </footer>
+
+</body>
+</html>

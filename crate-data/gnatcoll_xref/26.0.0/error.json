@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_xref",
+  "version": "26.0.0",
+  "failed_at": "2026-03-04T13:07:34Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

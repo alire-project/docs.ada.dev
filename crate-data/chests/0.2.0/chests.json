@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"chests","version":"0.2.0","id":"a06027d10f55834d","name":"Chests","qualified_name":"Chests","kind":"ada_package","location":{"file":"src/chests.ads","line":6,"column":9},"code":"package Chests","documentation":{"description":"\nCopyright (C) 2022 Jeremy Grosser <jeremy@synack.me>\n\nSPDX-License-Identifier: BSD-3-Clause"}}
