@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "task_coroutines",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:59:57Z",
+  "description": "Coroutines and generators using only standard tasking features",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "coroutine",
+    "generator"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/task_coroutines",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/task_coroutines",
+    "host": "github",
+    "commit": "700f643c1872763f1a527b2d6dc3e93a1b7526d8"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Task_Coroutines",
+      "id": "7448e06fec69af55",
+      "file": "task_coroutines.json"
+    },
+    {
+      "name": "Task_Coroutines.Coroutine",
+      "id": "f136f08fe57feae1",
+      "file": "task_coroutines-coroutine.json"
+    },
+    {
+      "name": "Task_Coroutines.Generator",
+      "id": "d7bc52ec520120cb",
+      "file": "task_coroutines-generator.json"
+    },
+    {
+      "name": "Task_Coroutines_Config",
+      "id": "68eb8f8bbf00fc1d",
+      "file": "task_coroutines_config.json"
+    }
+  ]
+}

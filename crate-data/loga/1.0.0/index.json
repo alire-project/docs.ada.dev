@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "crate": "loga",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:56:04Z",
+  "description": "Simple library for simple logging. Like npm package \"debug\", but for Ada",
+  "authors": [
+    "Cyrill Korshnyak ł"
+  ],
+  "licenses": [
+    "Unlicense"
+  ],
+  "tags": [
+    "logging"
+  ],
+  "website": "https://github.com/mangl-auf/loga/",
+  "repository": {
+    "url": "https://github.com/mangl-auf/loga",
+    "host": "github",
+    "commit": "e810ee037029e00fc3cacdde598fe981db51efd5"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Loga",
+      "id": "d873fab95ebea00a",
+      "file": "loga.json"
+    }
+  ]
+}

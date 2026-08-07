@@ -1,0 +1,64 @@
+{
+  "schema_version": "1",
+  "crate": "libsap",
+  "version": "0.1.0",
+  "documented_at": "2026-04-21T03:01:21Z",
+  "description": "Asynchronous message passing for protocol stacks",
+  "long_description": "Provides utilities to create _Service Access Points_ (SAP) for asynchronous,\nzero-copy message passing between tasks based on _Service Primitive_ messages\n(request, confirm, indication, and response primitives).\n",
+  "authors": [
+    "Daniel King"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "protocol",
+    "protocols",
+    "nostd",
+    "spark"
+  ],
+  "website": "https://github.com/damaki/libsap",
+  "repository": {
+    "url": "https://github.com/damaki/libsap",
+    "host": "github",
+    "commit": "fb0eba34ec8d8eb1f2bc0d7985d46a8c8c759c46"
+  },
+  "dependencies": [
+    {
+      "crate": "atomic",
+      "version": "^1.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "LibSAP",
+      "id": "6b37ab37594707ae",
+      "file": "libsap.json"
+    },
+    {
+      "name": "LibSAP.Light_Provider_Service_Access_Point",
+      "id": "a48edce5e39ce568",
+      "file": "libsap-light_provider_service_access_point.json"
+    },
+    {
+      "name": "LibSAP.Light_User_Service_Access_Point",
+      "id": "1a85640086c0816c",
+      "file": "libsap-light_user_service_access_point.json"
+    },
+    {
+      "name": "LibSAP.Synchronous_Provider_Service_Access_Point",
+      "id": "fe38cd317109506d",
+      "file": "libsap-synchronous_provider_service_access_point.json"
+    },
+    {
+      "name": "LibSAP.Synchronous_User_Service_Access_Point",
+      "id": "fc93d2f5f0854970",
+      "file": "libsap-synchronous_user_service_access_point.json"
+    },
+    {
+      "name": "Libsap_Config",
+      "id": "f052b50cd3782988",
+      "file": "libsap_config.json"
+    }
+  ]
+}

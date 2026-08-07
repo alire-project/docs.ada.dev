@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "crate": "alr2appimage",
+  "version": "1.0.0",
+  "documented_at": "2026-03-03T17:50:25Z",
+  "description": "Tool to create an AppImage executable from an Alire crate",
+  "long_description": "There are two prerequisites for your project to work with this tool:\n- It has to be an Alire crate with an `executables` field. Its first value\n  has to be the main application program. Otherwise, the executable program\n  can be specified on the command line.\n- It must be installable using Alire, including all the needed resources.\n\n`alr2appimage` will use the following command for installing it (this requires Alire 2.0):\n```shell\nalr install\n```\nOr it will run `gprinstall` inside `alr exec`, if the former fails (Alire 1.x).\n\nIf you simply run the tool inside an Alire crate, it will read the\nmetadata from your `alire.toml` file and create a default AppImage\nfrom it.\n\nNOTE: `alr2appimage` is an independent project; it is not\naffiliated to, nor supported by, the Alire or AppImage projects.\n\n",
+  "authors": [
+    "Manuel Gomez"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "utility",
+    "appimage",
+    "alire",
+    "linux",
+    "packaging"
+  ],
+  "website": "https://github.com/mgrojo/alr2appimage",
+  "repository": {
+    "url": "https://github.com/mgrojo/alr2appimage",
+    "host": "github",
+    "commit": "19b5459f5b5553d6b861746eacd19e434fb0e146"
+  },
+  "dependencies": [
+    {
+      "crate": "ada_toml",
+      "version": "^0.3.0"
+    },
+    {
+      "crate": "spoon",
+      "version": "^1.0.1"
+    },
+    {
+      "crate": "parse_args",
+      "version": "~0.9.0"
+    },
+    {
+      "crate": "resources",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Alire_TOML",
+      "id": "297acb96d8ef6919",
+      "file": "alire_toml.json"
+    },
+    {
+      "name": "Alr2appimage_Config",
+      "id": "0d6d5d5d03f2759d",
+      "file": "alr2appimage_config.json"
+    },
+    {
+      "name": "Desktop_File",
+      "id": "e35227186861d567",
+      "file": "desktop_file.json"
+    },
+    {
+      "name": "File_Manager",
+      "id": "569c130fe6f406a7",
+      "file": "file_manager.json"
+    },
+    {
+      "name": "Runner",
+      "id": "527aa9f431539da8",
+      "file": "runner.json"
+    },
+    {
+      "name": "String_Vectors",
+      "id": "0703dfb91d2fe0c3",
+      "file": "string_vectors.json"
+    }
+  ]
+}

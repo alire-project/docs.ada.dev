@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "mage",
+  "version": "0.6.1",
+  "failed_at": "2026-03-04T16:57:20Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

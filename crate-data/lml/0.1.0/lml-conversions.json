@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lml","version":"0.1.0","id":"88ac7812b1ed3572","name":"LML.Conversions","qualified_name":"LML.Conversions","kind":"ada_package","location":{"file":"src/lml-conversions.ads","line":3,"column":9},"code":"package LML.Conversions"}

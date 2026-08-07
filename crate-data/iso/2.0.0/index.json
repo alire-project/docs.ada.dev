@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "iso",
+  "version": "2.0.0",
+  "documented_at": "2026-03-04T16:51:12Z",
+  "description": "ISO Standard references for Ada such as 1366 & 4217 (Country & Currency)",
+  "authors": [
+    "AJ Ianozi"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "countries",
+    "currencies",
+    "iso-1366",
+    "iso-4217"
+  ],
+  "website": "https://github.com/ada-iso/ada_iso/",
+  "repository": {
+    "url": "https://github.com/ada-iso/ada_iso",
+    "host": "github",
+    "commit": "abd8a59c80ac32f42afc2e912a4b2c5d5654e253"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "ISO",
+      "id": "e0e4548df88a35d5",
+      "file": "iso.json"
+    },
+    {
+      "name": "ISO.Countries",
+      "id": "d40285befe9ca4c7",
+      "file": "iso-countries.json"
+    },
+    {
+      "name": "ISO.Currencies",
+      "id": "d50920da56b94cbe",
+      "file": "iso-currencies.json"
+    },
+    {
+      "name": "Iso_Config",
+      "id": "5bf9e31cdca6c2be",
+      "file": "iso_config.json"
+    }
+  ]
+}

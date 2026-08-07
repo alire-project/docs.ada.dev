@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "hmac_ada",
+  "version": "0.1.0",
+  "documented_at": "2026-04-26T03:01:27Z",
+  "description": "SPARK-proved HMAC (RFC 2104) implementation for Ada/SPARK",
+  "long_description": "SPARK-proved HMAC (RFC 2104) with standalone SHA-256 (FIPS 180-4) for Ada 2022.\n174 proof obligations fully discharged at Level 2 with zero pragma Assume.\nConstant-time digest comparison, secure wipe of key material, no heap\nallocation, pragma Pure. Suitable for embedded and safety-critical systems.\nIncludes streaming and one-shot APIs, plus a generic HMAC package for other\nhash functions.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "hmac",
+    "rfc2104",
+    "cryptography",
+    "spark",
+    "embedded",
+    "security"
+  ],
+  "website": "https://github.com/b-erdem/hmac_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/hmac_ada",
+    "host": "github",
+    "commit": "fa03673fd91b3e8a155ae321d03ca1f0bc839540"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "HMAC",
+      "id": "f9ccd92bb6af4cb4",
+      "file": "hmac.json"
+    },
+    {
+      "name": "HMAC_SHA256",
+      "id": "62eff2e10a849f82",
+      "file": "hmac_sha256.json"
+    },
+    {
+      "name": "SHA256",
+      "id": "5d5b09f6dcb2d53a",
+      "file": "sha256.json"
+    }
+  ]
+}

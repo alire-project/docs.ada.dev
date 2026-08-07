@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "crate": "semantic_versioning",
+  "version": "2.1.0",
+  "documented_at": "2026-03-06T02:57:04Z",
+  "description": "Semantic Versioning in Ada",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "semver",
+    "semantic",
+    "versioning"
+  ],
+  "website": "https://github.com/alire-project/semantic_versioning",
+  "repository": {
+    "url": "https://github.com/alire-project/semantic_versioning",
+    "host": "github",
+    "commit": "cc69201134c0a8d695b767a1fd1bf4fd8f6f3880"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Semantic_Versioning",
+      "id": "98caa6cc5a63c106",
+      "file": "semantic_versioning.json"
+    },
+    {
+      "name": "Semantic_Versioning.Basic",
+      "id": "7df46dfb19fb2769",
+      "file": "semantic_versioning-basic.json"
+    },
+    {
+      "name": "Semantic_Versioning.Expressions",
+      "id": "35f213d8312c6e1e",
+      "file": "semantic_versioning-expressions.json"
+    },
+    {
+      "name": "Semantic_Versioning.Expressions.Against",
+      "id": "21deeb7d60507401",
+      "file": "semantic_versioning-expressions-against.json"
+    },
+    {
+      "name": "Semantic_Versioning.Extended",
+      "id": "8d1e4842de0e8865",
+      "file": "semantic_versioning-extended.json"
+    }
+  ]
+}

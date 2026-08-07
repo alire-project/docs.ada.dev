@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "crate": "cgk",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:54:23Z",
+  "description": "Computational Geometry Kernel",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "computational",
+    "geometry"
+  ],
+  "website": "https://github.com/godunko/cgk",
+  "repository": {
+    "url": "https://github.com/godunko/cgk",
+    "host": "github",
+    "commit": "0b19efcd983adfdc704a9ed870f36f2efb5f40d3"
+  },
+  "dependencies": [],
+  "units": []
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c02_button_and_led",
+  "version": "1.6.0",
+  "documented_at": "2026-05-05T03:01:55Z",
+  "description": "Chapter 2 - Button controled LEDs",
+  "long_description": "Controlling an LED with a button on the Raspberry Pi Pico using Ada - two simple\nbut useful interaction examples.\n\nIn this chapter I combine a push button with an LED. We start with basic on/off control, then move to a toggle-style\ntable lamp with software debounce.\n\nContained in Chapter 02 are:\n\n1. sketch_02_1_button_and_led - Chapter 2.1 Switch LED with Button\n2. sketch_02_2_table_lamp     - Chapter 2.2 Simple table lamp\n\nRead the full tutorial at [Chapter 2 - Button &\nLED](https://pi-ada-tutorial.sourceforge.io/pico_ada_c02_button_and_led), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c02_button_and_led/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c02_button_and_led/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c02_button_and_led",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "^15.3"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C02_Button_And_Led_Config",
+      "id": "59acbd28336e6a2f",
+      "file": "pico_ada_c02_button_and_led_config.json"
+    }
+  ]
+}

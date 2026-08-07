@@ -1,0 +1,186 @@
+{
+  "schema_version": "1",
+  "crate": "hac",
+  "version": "0.42.0",
+  "documented_at": "2026-03-04T13:38:03Z",
+  "description": "HAC Ada Compiler: a small, quick Ada compiler covering a subset of Ada",
+  "long_description": "&nbsp;<img src=\"https://hacadacompiler.sourceforge.io/hac_anim.gif\" alt=\"hac logo\" width=\"464\" height=\"auto\">\n\nHAC (HAC Ada Compiler) is a small, quickly compiling, open-source Ada compiler, covering a subset of the Ada language.\nHAC is perhaps the first open-source (albeit partial) Ada compiler fully programmed in Ada itself.\n\nFeatures:\n\n* **Quick**: short programming-compilation-run-test cycles.\n* Perfect for scripting jobs.\n* Compiles Ada sources from any stream - file, internet, editor data, Zip archive, ...\n* Compilation leaves zero compilation temp file - all is done in memory!\n* Portable, fully programmed in Ada.\n* Can be embedded into another software - see the [**LEA**](https://l-e-a.sourceforge.io/) editor - and even exchange data with it - see the `demo/data_exchange/exchange_native_side.adb` demo.\n* **Free**, open-source.\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "hac",
+    "compiler",
+    "virtual-machine",
+    "native",
+    "semantic",
+    "parser",
+    "advent-of-code"
+  ],
+  "website": "https://github.com/zertovitch/hac",
+  "repository": {
+    "url": "https://sourceforge.net/projects/hacadacompiler",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "HAC_Pkg",
+      "id": "4c1613c80a3b967a",
+      "file": "hac_pkg.json"
+    },
+    {
+      "name": "HAC_Pkg.Path_Management",
+      "id": "0bdef8dd7b0d1d56",
+      "file": "hac_pkg-path_management.json"
+    },
+    {
+      "name": "HAC_Sys",
+      "id": "b1a9f17b8ce9ad1f",
+      "file": "hac_sys.json"
+    },
+    {
+      "name": "HAC_Sys.Builder",
+      "id": "f0dd12f74e0768bd",
+      "file": "hac_sys-builder.json"
+    },
+    {
+      "name": "HAC_Sys.Co_Defs",
+      "id": "9dcaa38960ac02e5",
+      "file": "hac_sys-co_defs.json"
+    },
+    {
+      "name": "HAC_Sys.Compiler",
+      "id": "6fa69c0313959639",
+      "file": "hac_sys-compiler.json"
+    },
+    {
+      "name": "HAC_Sys.Compiler.PCode_Emit",
+      "id": "ad847e58c1d0bdcf",
+      "file": "hac_sys-compiler-pcode_emit.json"
+    },
+    {
+      "name": "HAC_Sys.Defs",
+      "id": "41452e387ff304c9",
+      "file": "hac_sys-defs.json"
+    },
+    {
+      "name": "HAC_Sys.Errors",
+      "id": "7eb4b73b162dbbd2",
+      "file": "hac_sys-errors.json"
+    },
+    {
+      "name": "HAC_Sys.Files",
+      "id": "6af7f19053e1898f",
+      "file": "hac_sys-files.json"
+    },
+    {
+      "name": "HAC_Sys.Files.Default",
+      "id": "a624de84b33ace36",
+      "file": "hac_sys-files-default.json"
+    },
+    {
+      "name": "HAC_Sys.Interfacing",
+      "id": "ca724785d9520969",
+      "file": "hac_sys-interfacing.json"
+    },
+    {
+      "name": "HAC_Sys.Librarian",
+      "id": "a7c492e333e605ae",
+      "file": "hac_sys-librarian.json"
+    },
+    {
+      "name": "HAC_Sys.Multi_Precision_Integers",
+      "id": "8478582ddea5a4ab",
+      "file": "hac_sys-multi_precision_integers.json"
+    },
+    {
+      "name": "HAC_Sys.Parser",
+      "id": "e0efa28d14a6ed05",
+      "file": "hac_sys-parser.json"
+    },
+    {
+      "name": "HAC_Sys.Parser.Enter_Def",
+      "id": "c1756fa2cb284541",
+      "file": "hac_sys-parser-enter_def.json"
+    },
+    {
+      "name": "HAC_Sys.Parser.Helpers",
+      "id": "2695360ebcce1886",
+      "file": "hac_sys-parser-helpers.json"
+    },
+    {
+      "name": "HAC_Sys.Parser.Modularity",
+      "id": "a0e8767c4858dd18",
+      "file": "hac_sys-parser-modularity.json"
+    },
+    {
+      "name": "HAC_Sys.Parser.Packages",
+      "id": "82ccd3f4b31a9f74",
+      "file": "hac_sys-parser-packages.json"
+    },
+    {
+      "name": "HAC_Sys.PCode",
+      "id": "7ea06187a88ff0db",
+      "file": "hac_sys-pcode.json"
+    },
+    {
+      "name": "HAC_Sys.PCode.Interpreter",
+      "id": "5de1d15423d86806",
+      "file": "hac_sys-pcode-interpreter.json"
+    },
+    {
+      "name": "HAC_Sys.PCode.Interpreter.Console_Traits",
+      "id": "a26cb1a1bd01824e",
+      "file": "hac_sys-pcode-interpreter-console_traits.json"
+    },
+    {
+      "name": "HAC_Sys.PCode.Interpreter.Exceptions",
+      "id": "7ea0942f075f5f01",
+      "file": "hac_sys-pcode-interpreter-exceptions.json"
+    },
+    {
+      "name": "HAC_Sys.PCode.Interpreter.In_Defs",
+      "id": "823681844c7c19b4",
+      "file": "hac_sys-pcode-interpreter-in_defs.json"
+    },
+    {
+      "name": "HAC_Sys.PCode.Interpreter.System_Calls_Traits",
+      "id": "7d7a7b507d9e1bfc",
+      "file": "hac_sys-pcode-interpreter-system_calls_traits.json"
+    },
+    {
+      "name": "HAC_Sys.Scanner",
+      "id": "eb6b1d9e8e29d794",
+      "file": "hac_sys-scanner.json"
+    },
+    {
+      "name": "HAC_Sys.Targets",
+      "id": "0c5fa44f893bb299",
+      "file": "hac_sys-targets.json"
+    },
+    {
+      "name": "HAC_Sys.Targets.AMD64_Windows_Console_FASM",
+      "id": "4a97fccc76088ef2",
+      "file": "hac_sys-targets-amd64_windows_console_fasm.json"
+    },
+    {
+      "name": "HAC_Sys.Targets.HAC_Virtual_Machine",
+      "id": "967b4bb7923876e5",
+      "file": "hac_sys-targets-hac_virtual_machine.json"
+    },
+    {
+      "name": "HAC_Sys.Targets.Semantics",
+      "id": "0f6f8ff469cd563a",
+      "file": "hac_sys-targets-semantics.json"
+    },
+    {
+      "name": "HAT",
+      "id": "18e1dd392168f601",
+      "file": "hat.json"
+    }
+  ]
+}

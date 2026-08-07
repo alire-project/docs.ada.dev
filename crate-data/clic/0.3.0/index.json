@@ -1,0 +1,102 @@
+{
+  "schema_version": "1",
+  "crate": "clic",
+  "version": "0.3.0",
+  "documented_at": "2026-03-04T02:54:51Z",
+  "description": "Command Line Interface Components",
+  "long_description": "Command Line Interface Components:\n - \"git like\" subcommand handling\n - TTY color and formatting\n - User input queries\n - User configuration\n",
+  "authors": [
+    "Alejandro R. Mosteo",
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT AND GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "cli",
+    "command-line",
+    "user-input",
+    "tty"
+  ],
+  "website": "https://github.com/alire-project/clic",
+  "repository": {
+    "url": "https://github.com/alire-project/clic",
+    "host": "github",
+    "commit": "56bbdc008e16996b6f76e443fd0165a240de1b13"
+  },
+  "dependencies": [
+    {
+      "crate": "aaa",
+      "version": "~0.2.4"
+    },
+    {
+      "crate": "ada_toml",
+      "version": "~0.2|~0.3"
+    },
+    {
+      "crate": "ansiada",
+      "version": "^1.0"
+    },
+    {
+      "crate": "simple_logging",
+      "version": "^1.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "CLIC",
+      "id": "5ab7da6d3cbdac6c",
+      "file": "clic.json"
+    },
+    {
+      "name": "CLIC.Command_Line",
+      "id": "cfc7dd0590c19e4d",
+      "file": "clic-command_line.json"
+    },
+    {
+      "name": "CLIC.Config",
+      "id": "37cde84308f354eb",
+      "file": "clic-config.json"
+    },
+    {
+      "name": "CLIC.Config.Edit",
+      "id": "5d27efd9b84e30ea",
+      "file": "clic-config-edit.json"
+    },
+    {
+      "name": "CLIC.Config.Info",
+      "id": "7357c4253c80440d",
+      "file": "clic-config-info.json"
+    },
+    {
+      "name": "CLIC.Config.Load",
+      "id": "7462b6c9ea1890b9",
+      "file": "clic-config-load.json"
+    },
+    {
+      "name": "CLIC.Subcommand",
+      "id": "5cb3df2d4b4f84c9",
+      "file": "clic-subcommand.json"
+    },
+    {
+      "name": "CLIC.Subcommand.Instance",
+      "id": "6fe84516a709df28",
+      "file": "clic-subcommand-instance.json"
+    },
+    {
+      "name": "CLIC.TTY",
+      "id": "444b88eb30b5ba07",
+      "file": "clic-tty.json"
+    },
+    {
+      "name": "CLIC.User_Input",
+      "id": "4a65c625ff8bd765",
+      "file": "clic-user_input.json"
+    },
+    {
+      "name": "Clic_Config",
+      "id": "5c274110537d35c4",
+      "file": "clic_config.json"
+    }
+  ]
+}

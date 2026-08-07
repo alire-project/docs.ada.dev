@@ -1,0 +1,76 @@
+{
+  "schema_version": "1",
+  "crate": "edc_client",
+  "version": "1.5.2",
+  "documented_at": "2026-03-04T02:57:06Z",
+  "description": "Client library for: github.com/hgrodriguez/embedded-dashboard-console",
+  "authors": [
+    "Holger Rodriguez"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "rp2040"
+  ],
+  "website": "https://github.com/hgrodriguez/edc_client",
+  "repository": {
+    "url": "https://github.com/hgrodriguez/edc_client",
+    "host": "github",
+    "commit": "04967d941362fc9aa6a923f08738e607c21ba063"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Edc_Client",
+      "id": "28d9251009111a05",
+      "file": "edc_client.json"
+    },
+    {
+      "name": "Edc_Client.Alpha",
+      "id": "5e433998c4444fec",
+      "file": "edc_client-alpha.json"
+    },
+    {
+      "name": "Edc_Client.Alpha.Block1",
+      "id": "ca5168e4b58b980a",
+      "file": "edc_client-alpha-block1.json"
+    },
+    {
+      "name": "Edc_Client.Alpha.Block2",
+      "id": "9e0469750cbfda58",
+      "file": "edc_client-alpha-block2.json"
+    },
+    {
+      "name": "Edc_Client.LED",
+      "id": "8ba0ff7a8a120e77",
+      "file": "edc_client-led.json"
+    },
+    {
+      "name": "Edc_Client.Matrix",
+      "id": "8245d2873e62256d",
+      "file": "edc_client-matrix.json"
+    },
+    {
+      "name": "Edc_Client.Matrix.Double_Word",
+      "id": "54a4b32edf0a7b79",
+      "file": "edc_client-matrix-double_word.json"
+    },
+    {
+      "name": "Edc_Client.Matrix.Types",
+      "id": "7939b639bb3cd9ba",
+      "file": "edc_client-matrix-types.json"
+    },
+    {
+      "name": "Edc_Client.Matrix.Word",
+      "id": "726ccff0b9549d20",
+      "file": "edc_client-matrix-word.json"
+    }
+  ]
+}

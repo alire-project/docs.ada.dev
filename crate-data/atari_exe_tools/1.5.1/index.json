@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "crate": "atari_exe_tools",
+  "version": "1.5.1",
+  "documented_at": "2026-03-03T17:51:33Z",
+  "description": "Cross-platform tool for analysing and inspecting Atari 8-bit EXE files",
+  "long_description": "Atari EXE Tools is a robust, cross-platform utility written in Ada 2022 for analysing Atari 8-bit executable (EXE) files, used in Atari 400/800 and XL/XE systems or emulators like Altirra and Atari800. Unlike most existing tools, which are typically Windows-only, this tool operates seamlessly on macOS, Linux, and Windows, making it an essential asset for retro computing enthusiasts and developers working across diverse platforms.\n\nKey features include:\n\n**Header Analysis**: Extract and display detailed metadata from EXE files,\nincluding memory start/end addresses, segment lengths, and init/run vectors.\n\n```sh\n  > exe_tools-main --print-header ./test/share/atari_check_exe_test/HELLO_C.EXE\n  File: ./test/share/atari_check_exe_test/HELLO_C.EXE\n  Magic: $FFFF; Start: $2E00; End: $2EF5; Length: 246\n  Magic: $0000; Start: $02E2; End: $02E3; Length: 2; Init: $2E47\n  Magic: $0000; Start: $2400; End: $28DE; Length: 1247\n  Magic: $0000; Start: $02E0; End: $02E1; Length: 2; Run: $2401\n```\n\nData Dumping: Output hexadecimal data from EXE files for inspection, with ATASCII portions omitted to ensure compatibility with non-UTF-8 environments.\n\n\n```sh\n> exe_tools-main --print-data ./test/share/atari_check_exe_test/HELLO_A.EXE\nFile: ./test/share/atari_check_exe_test/HELLO_A.EXE\n2400: 60 60 A2 00 A9 0B 9D 42 03 A9 3F 9D 44 03 A9 24\n2410: 9D 45 03 A9 2E 9D 48 03 A9 00 9D 49 03 20 56 E4\n2420: A2 00 A9 07 9D 42 03 A9 6D 9D 44 03 A9 24 9D 45\n2430: 03 A9 01 9D 48 03 A9 00 9D 49 03 20 56 E4 60 48\n2440: 65 6C 6C 6F 20 57 6F 72 6C 64 21 9B 28 75 73 69\n2450: 6E 67 20 61 20 65 78 65 63 75 74 61 62 6C 65 20\n2460: 69 6E 20 61 73 73 65 6D 62 6C 65 72 29 9B 00\n02E0: 02 24\nRun: $2402\n```\n\nThe tool includes a comprehensive AUnit test suite to ensure reliability across\nplatforms and Atari 8-bit configurations. Source code and tests are available\non SourceForge. Detailed GNATdoc documentation can be found at 6502\nTutorial.\n",
+  "authors": [
+    "Martin Krischik"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "atari",
+    "tools",
+    "retrocomputing",
+    "ada-2022"
+  ],
+  "website": "https://sourceforge.net/projects/tutorial-6502",
+  "repository": {
+    "url": "https://sourceforge.net/projects/tutorial-6502",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^6.3.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Atari_Exe_Tools_Config",
+      "id": "75563bba525dea42",
+      "file": "atari_exe_tools_config.json"
+    },
+    {
+      "name": "EXE_Tools",
+      "id": "32b5267b0c7708ed",
+      "file": "exe_tools.json"
+    },
+    {
+      "name": "EXE_Tools.CommandLine",
+      "id": "29fb87a7f3486ebe",
+      "file": "exe_tools-commandline.json"
+    },
+    {
+      "name": "EXE_Tools.Segment_Body",
+      "id": "c3e4dd957b018c5c",
+      "file": "exe_tools-segment_body.json"
+    },
+    {
+      "name": "EXE_Tools.Segment_Header",
+      "id": "afd476689ea1aed8",
+      "file": "exe_tools-segment_header.json"
+    }
+  ]
+}

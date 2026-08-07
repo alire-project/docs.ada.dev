@@ -1,0 +1,97 @@
+{
+  "schema_version": "1",
+  "crate": "uhppoted_lib",
+  "version": "0.2.0",
+  "documented_at": "2026-06-23T03:03:38Z",
+  "description": "Library for the UHPPOTE access controllers",
+  "authors": [
+    "uhppoted"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "access-control",
+    "uhppote"
+  ],
+  "website": "https://github.com/uhppoted/uhppoted-lib-ada",
+  "repository": {
+    "url": "https://github.com/uhppoted/uhppoted-lib-ada",
+    "host": "github",
+    "commit": "455e6401096d408cb268fb4e06177b6a3bc53892",
+    "subdir": "lib/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Uhppoted",
+      "id": "7bba6743c0ddb674",
+      "file": "uhppoted.json"
+    },
+    {
+      "name": "Uhppoted.Lib",
+      "id": "2843902e76d1506d",
+      "file": "uhppoted-lib.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Codec",
+      "id": "de0876641082499e",
+      "file": "uhppoted-lib-codec.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Decode",
+      "id": "c61a81670d986001",
+      "file": "uhppoted-lib-decode.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Encode",
+      "id": "dd87282705752021",
+      "file": "uhppoted-lib-encode.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Replies",
+      "id": "399489963b2fdf31",
+      "file": "uhppoted-lib-replies.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Requests",
+      "id": "d0f50f3381b5f8a1",
+      "file": "uhppoted-lib-requests.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Responses",
+      "id": "685c2db0c5f671dc",
+      "file": "uhppoted-lib-responses.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Transport",
+      "id": "d03f8d4d434c578b",
+      "file": "uhppoted-lib-transport.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Transport.TCP",
+      "id": "1ace06e6f3956708",
+      "file": "uhppoted-lib-transport-tcp.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Transport.UDP",
+      "id": "d8197235dd84b5eb",
+      "file": "uhppoted-lib-transport-udp.json"
+    },
+    {
+      "name": "Uhppoted.Lib.Types",
+      "id": "6a96d73b035008b4",
+      "file": "uhppoted-lib-types.json"
+    },
+    {
+      "name": "Uhppoted.Types",
+      "id": "67819c6ffa2c9493",
+      "file": "uhppoted-types.json"
+    },
+    {
+      "name": "Uhppoted_Lib_Config",
+      "id": "6914a7026dff2d50",
+      "file": "uhppoted_lib_config.json"
+    }
+  ]
+}

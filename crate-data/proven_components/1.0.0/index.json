@@ -1,0 +1,133 @@
+{
+  "schema_version": "1",
+  "crate": "proven_components",
+  "version": "1.0.0",
+  "documented_at": "2026-06-29T03:02:24Z",
+  "description": "Reusable components formally proven to the highest possible levels.",
+  "authors": [
+    "Pat Rogers"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "reuse",
+    "components",
+    "spark",
+    "proof"
+  ],
+  "website": "https://github.com/pat-rogers/proven_components",
+  "repository": {
+    "url": "https://github.com/pat-rogers/proven_components",
+    "host": "github",
+    "commit": "584876de8f40951d61501e7370995cac6c8f1863"
+  },
+  "dependencies": [
+    {
+      "crate": "sparklib",
+      "version": "^15.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Boolean_Array_Extent",
+      "id": "780fe5f46c30b59f",
+      "file": "boolean_array_extent.json"
+    },
+    {
+      "name": "Boolean_Array_Iteration",
+      "id": "60f8ce9beb1c9503",
+      "file": "boolean_array_iteration.json"
+    },
+    {
+      "name": "Bounded_Dynamic_Sequences",
+      "id": "7bc849d765dc6855",
+      "file": "bounded_dynamic_sequences.json"
+    },
+    {
+      "name": "Fixed_Point_Images",
+      "id": "b6fcfb7287fae0ac",
+      "file": "fixed_point_images.json"
+    },
+    {
+      "name": "Floating_Point_Images",
+      "id": "89c8b55b6309705d",
+      "file": "floating_point_images.json"
+    },
+    {
+      "name": "Math_Utilities",
+      "id": "d2da594c0dd7e8cf",
+      "file": "math_utilities.json"
+    },
+    {
+      "name": "Permutation_Utils",
+      "id": "a257dceb6aa7c012",
+      "file": "permutation_utils.json"
+    },
+    {
+      "name": "PI_Control",
+      "id": "045c37e20fe19bae",
+      "file": "pi_control.json"
+    },
+    {
+      "name": "PID_Control",
+      "id": "546b1dd4d4385035",
+      "file": "pid_control.json"
+    },
+    {
+      "name": "Random_Number_Generators",
+      "id": "f398dcd4154a3d55",
+      "file": "random_number_generators.json"
+    },
+    {
+      "name": "Recursive_Moving_Average_Filters",
+      "id": "7185cf8ffa7a12f7",
+      "file": "recursive_moving_average_filters.json"
+    },
+    {
+      "name": "Search_Routines",
+      "id": "1c4e03e383928850",
+      "file": "search_routines.json"
+    },
+    {
+      "name": "Sequential_Bounded_Buffers",
+      "id": "2653c738eaa5361b",
+      "file": "sequential_bounded_buffers.json"
+    },
+    {
+      "name": "Sequential_Bounded_Queues",
+      "id": "8670673e8faaf30e",
+      "file": "sequential_bounded_queues.json"
+    },
+    {
+      "name": "Sequential_Bounded_Stacks",
+      "id": "ea47b19267ea1a0a",
+      "file": "sequential_bounded_stacks.json"
+    },
+    {
+      "name": "Sequential_Discrete_Sets",
+      "id": "81204152dd51f6da",
+      "file": "sequential_discrete_sets.json"
+    },
+    {
+      "name": "Simple_Moving_Average_Filters",
+      "id": "74fc18d494cf78ea",
+      "file": "simple_moving_average_filters.json"
+    },
+    {
+      "name": "Sort_Routines",
+      "id": "20bf883434dc2fec",
+      "file": "sort_routines.json"
+    },
+    {
+      "name": "Sorting_Proof_Utils",
+      "id": "cebf028821cb21dd",
+      "file": "sorting_proof_utils.json"
+    },
+    {
+      "name": "Time_Stamps",
+      "id": "870aebff1410a17c",
+      "file": "time_stamps.json"
+    }
+  ]
+}

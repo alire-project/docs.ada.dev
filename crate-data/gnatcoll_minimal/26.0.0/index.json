@@ -1,0 +1,168 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_minimal",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T12:52:22Z",
+  "description": "GNAT Components Collection - Minimal",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "gnatcoll",
+    "asserts",
+    "encoders",
+    "stream",
+    "storage"
+  ],
+  "website": "https://github.com/adacore/gnatcoll-core",
+  "repository": {
+    "url": "https://github.com/AdaCore/gnatcoll-core",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "GNATCOLL",
+      "id": "7b4efc9f492ae197",
+      "file": "gnatcoll.json"
+    },
+    {
+      "name": "GNATCOLL.Any_Types",
+      "id": "49b4d9c2828e9584",
+      "file": "gnatcoll-any_types.json"
+    },
+    {
+      "name": "GNATCOLL.Asserts",
+      "id": "89882d66b3b1946d",
+      "file": "gnatcoll-asserts.json"
+    },
+    {
+      "name": "GNATCOLL.Asserts.Asserts",
+      "id": "da8261ca0b6b2175",
+      "file": "gnatcoll-asserts-asserts.json"
+    },
+    {
+      "name": "GNATCOLL.Asserts.Asserts.Compare",
+      "id": "3d7027c2fdb0d978",
+      "file": "gnatcoll-asserts-asserts-compare.json"
+    },
+    {
+      "name": "GNATCOLL.Asserts.Asserts.Equals",
+      "id": "4fa8bb398f08acff",
+      "file": "gnatcoll-asserts-asserts-equals.json"
+    },
+    {
+      "name": "GNATCOLL.Atomic",
+      "id": "c0a17e8f09c64d8d",
+      "file": "gnatcoll-atomic.json"
+    },
+    {
+      "name": "GNATCOLL.Boyer_Moore",
+      "id": "cbe9a0ec4adc41ef",
+      "file": "gnatcoll-boyer_moore.json"
+    },
+    {
+      "name": "GNATCOLL.Coders",
+      "id": "c77e990817880a3f",
+      "file": "gnatcoll-coders.json"
+    },
+    {
+      "name": "GNATCOLL.Coders.Base64",
+      "id": "265cdab7bed6bba7",
+      "file": "gnatcoll-coders-base64.json"
+    },
+    {
+      "name": "GNATCOLL.Coders.Streams",
+      "id": "ab9cb158f0921918",
+      "file": "gnatcoll-coders-streams.json"
+    },
+    {
+      "name": "GNATCOLL.Locks",
+      "id": "ff2b59801bea3b99",
+      "file": "gnatcoll-locks.json"
+    },
+    {
+      "name": "GNATCOLL.Memory",
+      "id": "7fa8da1f3d493e66",
+      "file": "gnatcoll-memory.json"
+    },
+    {
+      "name": "GNATCOLL.Promises",
+      "id": "9ea39bbf73222f92",
+      "file": "gnatcoll-promises.json"
+    },
+    {
+      "name": "GNATCOLL.Promises.Chains",
+      "id": "6a01e24d57595314",
+      "file": "gnatcoll-promises-chains.json"
+    },
+    {
+      "name": "GNATCOLL.Promises.Impl",
+      "id": "c35ef49a9449f89e",
+      "file": "gnatcoll-promises-impl.json"
+    },
+    {
+      "name": "GNATCOLL.Promises.Promises",
+      "id": "9bdb0e81ef9f5f42",
+      "file": "gnatcoll-promises-promises.json"
+    },
+    {
+      "name": "GNATCOLL.Refcount",
+      "id": "e3f02f75a78b41ff",
+      "file": "gnatcoll-refcount.json"
+    },
+    {
+      "name": "GNATCOLL.Refcount.Shared_Pointers",
+      "id": "60c2fc1ce62d507f",
+      "file": "gnatcoll-refcount-shared_pointers.json"
+    },
+    {
+      "name": "GNATCOLL.Refcount.Smart_Pointers",
+      "id": "6786adf7c4ed24dc",
+      "file": "gnatcoll-refcount-smart_pointers.json"
+    },
+    {
+      "name": "GNATCOLL.Refcount.Weakref",
+      "id": "accb33c76a912f67",
+      "file": "gnatcoll-refcount-weakref.json"
+    },
+    {
+      "name": "GNATCOLL.Refcount.Weakref.Weakref_Pointers",
+      "id": "d205f675184b353c",
+      "file": "gnatcoll-refcount-weakref-weakref_pointers.json"
+    },
+    {
+      "name": "GNATCOLL.Storage_Pools",
+      "id": "4a1d94e0b8029196",
+      "file": "gnatcoll-storage_pools.json"
+    },
+    {
+      "name": "GNATCOLL.Storage_Pools.Alignment",
+      "id": "d0c5f484aa46f1b5",
+      "file": "gnatcoll-storage_pools-alignment.json"
+    },
+    {
+      "name": "GNATCOLL.Storage_Pools.Headers",
+      "id": "c5f9bfbe96769e43",
+      "file": "gnatcoll-storage_pools-headers.json"
+    },
+    {
+      "name": "GNATCOLL.Storage_Pools.Headers.Header_Pools",
+      "id": "934c8a04c613cb5c",
+      "file": "gnatcoll-storage_pools-headers-header_pools.json"
+    },
+    {
+      "name": "GNATCOLL.Storage_Pools.Headers.Header_Pools.Typed",
+      "id": "31ecbb62d026d890",
+      "file": "gnatcoll-storage_pools-headers-header_pools-typed.json"
+    },
+    {
+      "name": "GNATCOLL.Tribooleans",
+      "id": "67dbf387233ab574",
+      "file": "gnatcoll-tribooleans.json"
+    }
+  ]
+}

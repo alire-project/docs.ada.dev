@@ -1,0 +1,122 @@
+{
+  "schema_version": "1",
+  "crate": "utilada_unit",
+  "version": "2.8.2",
+  "documented_at": "2026-03-07T02:49:42Z",
+  "description": "Utility Library testing framework with Ahven",
+  "long_description": "\n[![Build Status](https://img.shields.io/jenkins/s/https/jenkins.vacs.fr/Ada-Util.svg)](https://jenkins.vacs.fr/job/Ada-Util/)\n[![Test Status](https://img.shields.io/jenkins/t/https/jenkins.vacs.fr/Ada-Util.svg)](https://jenkins.vacs.fr/job/Ada-Util/)\n[![codecov](https://codecov.io/gh/stcarrez/ada-util/branch/master/graph/badge.svg)](https://codecov.io/gh/stcarrez/ada-util)\n\nThis library provides a testing framework on top of Ahven.\nIt provides various testing helper operations to help in\nwriting unit tests.\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "testing"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-util",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-util",
+    "host": "gitlab",
+    "commit": "30b22a5998340109f8322292e74b33b29d3494fe",
+    "subdir": "unit/"
+  },
+  "dependencies": [
+    {
+      "crate": "utilada",
+      "version": "^2.8.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ahven",
+      "id": "e11a96acce261bcd",
+      "file": "ahven.json"
+    },
+    {
+      "name": "Ahven.Framework",
+      "id": "9219e86a10b8a2b8",
+      "file": "ahven-framework.json"
+    },
+    {
+      "name": "Ahven.Listeners",
+      "id": "17a7628147508968",
+      "file": "ahven-listeners.json"
+    },
+    {
+      "name": "Ahven.Listeners.Basic",
+      "id": "5e022a5a8fde7ad1",
+      "file": "ahven-listeners-basic.json"
+    },
+    {
+      "name": "Ahven.Parameters",
+      "id": "e73303e0f424c321",
+      "file": "ahven-parameters.json"
+    },
+    {
+      "name": "Ahven.Results",
+      "id": "697fa19ce5fde3c1",
+      "file": "ahven-results.json"
+    },
+    {
+      "name": "Ahven.Runner",
+      "id": "5ca8e47756d46acd",
+      "file": "ahven-runner.json"
+    },
+    {
+      "name": "Ahven.SList",
+      "id": "5feb08d59a0f396e",
+      "file": "ahven-slist.json"
+    },
+    {
+      "name": "Ahven.Tap_Runner",
+      "id": "62bb2bf05704e246",
+      "file": "ahven-tap_runner.json"
+    },
+    {
+      "name": "Ahven.Temporary_Output",
+      "id": "2c744fc37b7a9470",
+      "file": "ahven-temporary_output.json"
+    },
+    {
+      "name": "Ahven.Text_Runner",
+      "id": "683b377b64085508",
+      "file": "ahven-text_runner.json"
+    },
+    {
+      "name": "Ahven.XML_Runner",
+      "id": "da7a7bfd8d43f919",
+      "file": "ahven-xml_runner.json"
+    },
+    {
+      "name": "Ahven_Compat",
+      "id": "637a75becb73a801",
+      "file": "ahven_compat.json"
+    },
+    {
+      "name": "Util.Assertions",
+      "id": "1bead4eb6aa2ce07",
+      "file": "util-assertions.json"
+    },
+    {
+      "name": "Util.Test_Caller",
+      "id": "b83046ff2f2220fc",
+      "file": "util-test_caller.json"
+    },
+    {
+      "name": "Util.Tests",
+      "id": "bf2e9cb2bf6b9e5b",
+      "file": "util-tests.json"
+    },
+    {
+      "name": "Util.Tests.Servers",
+      "id": "3d511f7892370727",
+      "file": "util-tests-servers.json"
+    },
+    {
+      "name": "Util.XUnit",
+      "id": "b526e4de7b36b3a2",
+      "file": "util-xunit.json"
+    }
+  ]
+}

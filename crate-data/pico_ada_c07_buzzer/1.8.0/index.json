@@ -1,0 +1,59 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c07_buzzer",
+  "version": "1.8.0",
+  "documented_at": "2026-06-23T03:03:30Z",
+  "description": "Chapter 7: Controlling active and passive Buzzer",
+  "long_description": "Learn how to drive active and passive buzzers with the Raspberry Pi Pico using Ada.\nFrom simple doorbell switches to PWM-generated sweeping alert tones - including hardware tips with flyback diodes and\noscilloscope measurements.\n\nIn this chapter we connect both active and passive buzzers to the Pico. We start with a simple button-controlled\ndoorbell, improve the passive buzzer with bit-banging, and finally create a clean sweeping alert tone using the Pico's\nPWM hardware. We also look at inductive-load protection and why a diode is essential.\n\nContained in Chapter 07 are:\n\n1. sketch_07_1_doorbell.adb\t- Chapter 7.1 Doorbell with active buzzer\n2. sketch_07_2_alert.adb\t- Chapter 7.2 Alert with passive buzzer\n3. pwm_alert.adb\t\t- Use PWM to drive an passive buzzer\n4. buzz_and_blink-main.adb\t- Use tasks to drive both a buzzer and an LED\n\nRead the full tutorial at [Chapter 7: Controlling a Buzzer](https://pi-ada-tutorial.sourceforge.io/pico_ada_c07_buzzer), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_doc/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c07_buzzer/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c07_buzzer",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_rp2040",
+      "version": "^15.4"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.8"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Buzz_And_Blink",
+      "id": "dd98ccb4dc8f8ec8",
+      "file": "buzz_and_blink.json"
+    },
+    {
+      "name": "Pico_Ada_C07_Buzzer_Config",
+      "id": "558c1c4d2917fcae",
+      "file": "pico_ada_c07_buzzer_config.json"
+    }
+  ]
+}
