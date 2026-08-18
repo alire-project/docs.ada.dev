@@ -1,0 +1,236 @@
+{
+  "schema_version": "1",
+  "crate": "covex",
+  "version": "1.9.0",
+  "documented_at": "2026-08-18T02:41:04Z",
+  "description": "Ada/SPARK coverage, proof, DO-178C compliance tool",
+  "long_description": "Zero-dependency Ada/SPARK CLI tool for coverage analysis, proof verification,\ntest-result parsing, DO-178C DAL compliance assessment, and interactive dashboards.\n\n- Source scanning: walks .ads files, extracts subprogram declarations, docstring\n  annotations (@param, @return, @field, @formal), and HLR traceability tags\n- Proof analysis: parses GNATprove gnatprove.out summaries; assesses SPARK\n  assurance levels (Stone through Platinum)\n- Test parsing: reads markdown test results for pass/fail counts (native Ada or\n  AUnit format)\n- DAL compliance: assesses DO-178C DAL A-E criteria (HLR coverage, orphan tags,\n  test status, minimum SPARK proof level)\n- Multiple outputs: ANSI terminal report, SVG badges, Markdown reports,\n  HTML dashboard, and JSON API via built-in HTTP/1.1 server\n- Scalable: package/subprogram collections use Ada.Containers.Vectors\n  (heap-allocated, no compile-time limits)\n- Zero library dependencies: uses only the GNAT runtime library. gnatprove is\n  NOT a declared dependency -- the prove subcommand resolves it at run time\n  (per-project manifest, PATH, cached toolchain, or download), so the covex\n  crate installs and builds with no toolchain beyond the GNAT compiler\n- Self-assessment: 100% docstring coverage, Platinum SPARK (343/343 VCs proved),\n  DAL-C Achieved, 368/368 native tests passing\n",
+  "authors": [
+    "bladeacer"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "ada",
+    "spark",
+    "formal-verify",
+    "cli",
+    "gnatprove",
+    "sbom",
+    "tests",
+    "code-coverage",
+    "do-178c",
+    "compliance",
+    "developer-tools"
+  ],
+  "website": "https://github.com/bladeacer/adacovex",
+  "repository": {
+    "url": "https://github.com/bladeacer/adacovex",
+    "host": "github",
+    "commit": "d974ce905fdfe73275c638ba85b792dd03644659"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Adacovex",
+      "id": "40938e619627bfc5",
+      "file": "adacovex.json"
+    },
+    {
+      "name": "Adacovex.Cache",
+      "id": "fbdb2d7b00bd0e08",
+      "file": "adacovex-cache.json"
+    },
+    {
+      "name": "Adacovex.Cache.Serialization",
+      "id": "a68ba32f513b68ac",
+      "file": "adacovex-cache-serialization.json"
+    },
+    {
+      "name": "Adacovex.Compliance",
+      "id": "e51c3c0b743aba04",
+      "file": "adacovex-compliance.json"
+    },
+    {
+      "name": "Adacovex.Compliance.DAL",
+      "id": "2af34ca9cbb59426",
+      "file": "adacovex-compliance-dal.json"
+    },
+    {
+      "name": "Adacovex.Config",
+      "id": "e487469cca9cc66e",
+      "file": "adacovex-config.json"
+    },
+    {
+      "name": "Adacovex.Core",
+      "id": "9512004d70439220",
+      "file": "adacovex-core.json"
+    },
+    {
+      "name": "Adacovex.CPUs",
+      "id": "8abca50d35b5b472",
+      "file": "adacovex-cpus.json"
+    },
+    {
+      "name": "Adacovex.Diff",
+      "id": "2686cd64df4a08f2",
+      "file": "adacovex-diff.json"
+    },
+    {
+      "name": "Adacovex.IR_Bounds",
+      "id": "3bc9316c4f30f115",
+      "file": "adacovex-ir_bounds.json"
+    },
+    {
+      "name": "Adacovex.IR_Synthesiser",
+      "id": "8d1b16f5306530bf",
+      "file": "adacovex-ir_synthesiser.json"
+    },
+    {
+      "name": "Adacovex.Parsers",
+      "id": "9817a922d9bdf753",
+      "file": "adacovex-parsers.json"
+    },
+    {
+      "name": "Adacovex.Parsers.DO178C",
+      "id": "4a352e7876c632b9",
+      "file": "adacovex-parsers-do178c.json"
+    },
+    {
+      "name": "Adacovex.Parsers.GNATprove",
+      "id": "43d02eefc639a1b3",
+      "file": "adacovex-parsers-gnatprove.json"
+    },
+    {
+      "name": "Adacovex.Parsers.Manifest",
+      "id": "225ea7a1b2d27245",
+      "file": "adacovex-parsers-manifest.json"
+    },
+    {
+      "name": "Adacovex.Parsers.Source",
+      "id": "7e4543b2edd6209c",
+      "file": "adacovex-parsers-source.json"
+    },
+    {
+      "name": "Adacovex.Parsers.Tests",
+      "id": "aee30b76952f295c",
+      "file": "adacovex-parsers-tests.json"
+    },
+    {
+      "name": "Adacovex.Prove",
+      "id": "e32bceea940e0bd3",
+      "file": "adacovex-prove.json"
+    },
+    {
+      "name": "Adacovex.Renderers",
+      "id": "93aa5e79074798e3",
+      "file": "adacovex-renderers.json"
+    },
+    {
+      "name": "Adacovex.Renderers.ANSI",
+      "id": "0be0bba94e3ad395",
+      "file": "adacovex-renderers-ansi.json"
+    },
+    {
+      "name": "Adacovex.Renderers.HTML",
+      "id": "f827d46500fb9566",
+      "file": "adacovex-renderers-html.json"
+    },
+    {
+      "name": "Adacovex.Renderers.Markdown",
+      "id": "d56cf5eb185136aa",
+      "file": "adacovex-renderers-markdown.json"
+    },
+    {
+      "name": "Adacovex.Renderers.SBOM",
+      "id": "3306ee5cdaa2c50d",
+      "file": "adacovex-renderers-sbom.json"
+    },
+    {
+      "name": "Adacovex.Renderers.SVG",
+      "id": "c4084f524fd405a7",
+      "file": "adacovex-renderers-svg.json"
+    },
+    {
+      "name": "Adacovex.Server",
+      "id": "0438d8ed82e4c21f",
+      "file": "adacovex-server.json"
+    },
+    {
+      "name": "Adacovex.Server.HTTP",
+      "id": "d09e9540ea205759",
+      "file": "adacovex-server-http.json"
+    },
+    {
+      "name": "Adacovex.Server.Router",
+      "id": "b17de2c42fa011b4",
+      "file": "adacovex-server-router.json"
+    },
+    {
+      "name": "Adacovex.Target_Profiles",
+      "id": "9bc9fcc04763656e",
+      "file": "adacovex-target_profiles.json"
+    },
+    {
+      "name": "Adacovex.Test_Support",
+      "id": "96dcfa841cf1e1e9",
+      "file": "adacovex-test_support.json"
+    },
+    {
+      "name": "Adacovex.Types",
+      "id": "790a535fb0503402",
+      "file": "adacovex-types.json"
+    },
+    {
+      "name": "Adacovex.Types.Implementation",
+      "id": "74aebe83ed80371c",
+      "file": "adacovex-types-implementation.json"
+    },
+    {
+      "name": "Adacovex_Config_Tests",
+      "id": "33cc2aa197ec7d91",
+      "file": "adacovex_config_tests.json"
+    },
+    {
+      "name": "Adacovex_DAL_Tests",
+      "id": "b47a750e26bb96e2",
+      "file": "adacovex_dal_tests.json"
+    },
+    {
+      "name": "Adacovex_IR_Tests",
+      "id": "1f1a67b284836988",
+      "file": "adacovex_ir_tests.json"
+    },
+    {
+      "name": "Adacovex_Prove_Tests",
+      "id": "353c89ef723a7889",
+      "file": "adacovex_prove_tests.json"
+    },
+    {
+      "name": "Adacovex_Renderer_SVG_Tests",
+      "id": "ba91a31446c8a28f",
+      "file": "adacovex_renderer_svg_tests.json"
+    },
+    {
+      "name": "Adacovex_SBOM_Tests",
+      "id": "251dd8565d83f63d",
+      "file": "adacovex_sbom_tests.json"
+    },
+    {
+      "name": "Adacovex_Scanner_Tests",
+      "id": "24da2956e019ca6c",
+      "file": "adacovex_scanner_tests.json"
+    },
+    {
+      "name": "Adacovex_TestParser_Tests",
+      "id": "83ee59fdd1d08a47",
+      "file": "adacovex_testparser_tests.json"
+    },
+    {
+      "name": "Adacovex_Types_Tests",
+      "id": "24b4b6469b8b7492",
+      "file": "adacovex_types_tests.json"
+    }
+  ]
+}
