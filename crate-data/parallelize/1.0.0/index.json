@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "parallelize",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T03:00:36Z",
+  "description": "Execute multiple commands in parallel",
+  "authors": [
+    "Simon Wright"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "parallel",
+    "execution"
+  ],
+  "repository": {
+    "url": "https://github.com/simonjwright/parallelize",
+    "host": "github",
+    "commit": "b5ceb7596673c4ffe96cfc54f67cc1e40c89d19c"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Commands",
+      "id": "10f5f77eef9a6b43",
+      "file": "commands.json"
+    },
+    {
+      "name": "Parallelize_Config",
+      "id": "04b2d78e77e80635",
+      "file": "parallelize_config.json"
+    }
+  ]
+}

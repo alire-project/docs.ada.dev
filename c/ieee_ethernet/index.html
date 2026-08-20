@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ieee_ethernet — Ada/SPARK Documentation</title>
+  <meta name="description" content="IEEE 802.3 Ethernet declarations, with the SMI and PHY interfaces">
+  <meta name="keywords" content="Ada, SPARK, Alire, ieee_ethernet, ethernet, networking, embedded, ieee802-3, phy, IEEE_Ethernet">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ieee_ethernet",
+"version": "1.0.0",  "description": "IEEE 802.3 Ethernet declarations, with the SMI and PHY interfaces",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/ieee_ethernet/",
+  "codeRepository": "https://github.com/pat-rogers/ieee_ethernet"
+  ,"author": [{"@type": "Person", "name": "Pat Rogers"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">ieee_ethernet</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>ieee_ethernet</h1>
+    <span class="version-tag">1.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.0.0">1.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.0.0" selected>1.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">IEEE 802.3 Ethernet declarations, with the SMI and PHY interfaces</p>
+
+  <div class="long-description"><p>Declarations from the IEEE 802.3 standard: frame and MTU lengths, Ethernet and IPv4 addresses, subnet masks, and the MII and RMII signal names.</p>
+<p>Also provided are two abstractions defined by clause 22 of the standard, and therefore not vendor-specific:</p>
+<p>The Serial Management Interface (SMI, also known as MDIO), including the Basic Register Set indexes and record representations of the Basic Control and Basic Status registers</p>
+<p>An abstract PHY transceiver, whose auto-negotiation, loopback, power, reset, and link-state operations are concrete because the standard specifies them</p>
+<p>A target supplies the concrete SMI I/O driver, and a vendor supplies the concrete PHY. Nothing here is architecture-specific: the project file sets neither Target nor Runtime, taking both from the client project.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Pat Rogers</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/pat-rogers/ieee_ethernet">https://github.com/pat-rogers/ieee_ethernet</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">ethernet</span><span class="tag">networking</span><span class="tag">embedded</span><span class="tag">ieee802-3</span><span class="tag">phy</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ieee_ethernet/1.0.0/ieee_ethernet/">IEEE_Ethernet</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ieee_ethernet/1.0.0/ieee_ethernet-media/">IEEE_Ethernet.Media</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ieee_ethernet/1.0.0/ieee_ethernet-phy/">IEEE_Ethernet.PHY</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ieee_ethernet/1.0.0/ieee_ethernet-smi/">IEEE_Ethernet.SMI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/ieee_ethernet/1.0.0/ieee_ethernet-smi-io/">IEEE_Ethernet.SMI.IO</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-08-20.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+{
+  "schema_version": "1",
+  "crate": "strategy",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:59:34Z",
+  "description": "Property-based testing framework",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "test",
+    "property",
+    "testing"
+  ],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/strategy",
+    "host": "github",
+    "commit": "d30506c53e2247309e6cc2843ebc7917555f5a00"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Strategy",
+      "id": "73dff70e25ad51ca",
+      "file": "strategy.json"
+    },
+    {
+      "name": "Strategy.Arrays",
+      "id": "a3d6023de72eab5e",
+      "file": "strategy-arrays.json"
+    },
+    {
+      "name": "Strategy.Arrays.Definite_Array_Strat",
+      "id": "e37dabd456347466",
+      "file": "strategy-arrays-definite_array_strat.json"
+    },
+    {
+      "name": "Strategy.Arrays.Definite_Array_Strat.Impl",
+      "id": "5a6b9eb307c379b6",
+      "file": "strategy-arrays-definite_array_strat-impl.json"
+    },
+    {
+      "name": "Strategy.Arrays.Indefinite_Array_Strat",
+      "id": "c6d651b08268cd87",
+      "file": "strategy-arrays-indefinite_array_strat.json"
+    },
+    {
+      "name": "Strategy.Arrays.Indefinite_Array_Strat.Impl",
+      "id": "863c4f29f9740022",
+      "file": "strategy-arrays-indefinite_array_strat-impl.json"
+    },
+    {
+      "name": "Strategy.Conversions",
+      "id": "5cbd7ed7b610655c",
+      "file": "strategy-conversions.json"
+    },
+    {
+      "name": "Strategy.Conversions.Def_Convert",
+      "id": "4b8a9c60bb978a26",
+      "file": "strategy-conversions-def_convert.json"
+    },
+    {
+      "name": "Strategy.Conversions.Def_Convert.Impl",
+      "id": "1813e8a92e26348f",
+      "file": "strategy-conversions-def_convert-impl.json"
+    },
+    {
+      "name": "Strategy.Conversions.Def_Indef_Convert",
+      "id": "146c2e9e3a1024f3",
+      "file": "strategy-conversions-def_indef_convert.json"
+    },
+    {
+      "name": "Strategy.Conversions.Def_Indef_Convert.Impl",
+      "id": "f3aa44c76cd0f96d",
+      "file": "strategy-conversions-def_indef_convert-impl.json"
+    },
+    {
+      "name": "Strategy.Conversions.Indef_Convert",
+      "id": "f61d6ae25ff1ab81",
+      "file": "strategy-conversions-indef_convert.json"
+    },
+    {
+      "name": "Strategy.Conversions.Indef_Convert.Impl",
+      "id": "01f52533a61b4bcf",
+      "file": "strategy-conversions-indef_convert-impl.json"
+    },
+    {
+      "name": "Strategy.Conversions.Indef_Def_Convert",
+      "id": "eefe84231aee44b7",
+      "file": "strategy-conversions-indef_def_convert.json"
+    },
+    {
+      "name": "Strategy.Conversions.Indef_Def_Convert.Impl",
+      "id": "b4b6266fa6a9d50c",
+      "file": "strategy-conversions-indef_def_convert-impl.json"
+    },
+    {
+      "name": "Strategy.Definite_Strategy",
+      "id": "055ffc70a3113902",
+      "file": "strategy-definite_strategy.json"
+    },
+    {
+      "name": "Strategy.Definite_Value_Tree",
+      "id": "f61ecc50cc682d69",
+      "file": "strategy-definite_value_tree.json"
+    },
+    {
+      "name": "Strategy.Enums",
+      "id": "e32e3185e8b948ca",
+      "file": "strategy-enums.json"
+    },
+    {
+      "name": "Strategy.Enums.Enum_Strat",
+      "id": "55e793c1a1a864f0",
+      "file": "strategy-enums-enum_strat.json"
+    },
+    {
+      "name": "Strategy.Enums.Enum_Strat.Impl",
+      "id": "c08bb87e04103174",
+      "file": "strategy-enums-enum_strat-impl.json"
+    },
+    {
+      "name": "Strategy.Indefinite_Strategy",
+      "id": "b1a4981fca302e24",
+      "file": "strategy-indefinite_strategy.json"
+    },
+    {
+      "name": "Strategy.Indefinite_Value_Tree",
+      "id": "ca7459c5d87c4163",
+      "file": "strategy-indefinite_value_tree.json"
+    },
+    {
+      "name": "Strategy.Modular",
+      "id": "84220901d74fe542",
+      "file": "strategy-modular.json"
+    },
+    {
+      "name": "Strategy.Modular.Modular_Strat",
+      "id": "795f65ec0d4dc1cb",
+      "file": "strategy-modular-modular_strat.json"
+    },
+    {
+      "name": "Strategy.Modular.Modular_Strat.Impl",
+      "id": "2b26ca4652ee82f9",
+      "file": "strategy-modular-modular_strat-impl.json"
+    },
+    {
+      "name": "Strategy.Runners",
+      "id": "230b604ffe1bb39b",
+      "file": "strategy-runners.json"
+    },
+    {
+      "name": "Strategy.Runners.Definite_Runner",
+      "id": "f630f37571b9fa13",
+      "file": "strategy-runners-definite_runner.json"
+    },
+    {
+      "name": "Strategy.Runners.Indefinite_Runner",
+      "id": "fb2100147b3ab8fe",
+      "file": "strategy-runners-indefinite_runner.json"
+    },
+    {
+      "name": "Strategy.Standard",
+      "id": "f160f6554930efe9",
+      "file": "strategy-standard.json"
+    },
+    {
+      "name": "Strategy.Standard.Boolean_Strat",
+      "id": "260918e6bea932bf",
+      "file": "strategy-standard-boolean_strat.json"
+    },
+    {
+      "name": "Strategy.Standard.Boolean_Strat.Impl",
+      "id": "3c0f191fa28fd0b4",
+      "file": "strategy-standard-boolean_strat-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples",
+      "id": "2216e07c183449bf",
+      "file": "strategy-tuples.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_10",
+      "id": "bf690c12effb56f9",
+      "file": "strategy-tuples-tuple_10.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_10.Impl",
+      "id": "f3b4a9dd7f4055dd",
+      "file": "strategy-tuples-tuple_10-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_2",
+      "id": "64be81bb514483d2",
+      "file": "strategy-tuples-tuple_2.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_2.Impl",
+      "id": "c9e5adaa4fd3d5c3",
+      "file": "strategy-tuples-tuple_2-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_3",
+      "id": "9bb11647547ffa9b",
+      "file": "strategy-tuples-tuple_3.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_3.Impl",
+      "id": "5013a4a9f75fa2d9",
+      "file": "strategy-tuples-tuple_3-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_4",
+      "id": "f540cf4fb2ec3c24",
+      "file": "strategy-tuples-tuple_4.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_4.Impl",
+      "id": "fdded3fd0b99653d",
+      "file": "strategy-tuples-tuple_4-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_5",
+      "id": "4618d92f12be8337",
+      "file": "strategy-tuples-tuple_5.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_5.Impl",
+      "id": "a5af6cb54c14e90b",
+      "file": "strategy-tuples-tuple_5-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_6",
+      "id": "76bf750ec19f9671",
+      "file": "strategy-tuples-tuple_6.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_6.Impl",
+      "id": "c97663ce39083936",
+      "file": "strategy-tuples-tuple_6-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_7",
+      "id": "86980e95b2a09dd7",
+      "file": "strategy-tuples-tuple_7.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_7.Impl",
+      "id": "980d0a5ccd3011a5",
+      "file": "strategy-tuples-tuple_7-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_8",
+      "id": "f738d86e992524fe",
+      "file": "strategy-tuples-tuple_8.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_8.Impl",
+      "id": "9dac5673a8582204",
+      "file": "strategy-tuples-tuple_8-impl.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_9",
+      "id": "68659f1614ca8cc7",
+      "file": "strategy-tuples-tuple_9.json"
+    },
+    {
+      "name": "Strategy.Tuples.Tuple_9.Impl",
+      "id": "e1d52311eed8c0d0",
+      "file": "strategy-tuples-tuple_9-impl.json"
+    },
+    {
+      "name": "Strategy.Vectors",
+      "id": "28f9334110aa889b",
+      "file": "strategy-vectors.json"
+    },
+    {
+      "name": "Strategy.Vectors.Definite_Vector_Strat",
+      "id": "d7f0d19863ed3eac",
+      "file": "strategy-vectors-definite_vector_strat.json"
+    },
+    {
+      "name": "Strategy.Vectors.Definite_Vector_Strat.Impl",
+      "id": "ffdbcae77ed653e3",
+      "file": "strategy-vectors-definite_vector_strat-impl.json"
+    },
+    {
+      "name": "Strategy_Config",
+      "id": "2d82f39e3778a84e",
+      "file": "strategy_config.json"
+    }
+  ]
+}

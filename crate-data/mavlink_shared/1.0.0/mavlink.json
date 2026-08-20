@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"mavlink_shared","version":"1.0.0","id":"0d5c919e783b8807","name":"MAVLink","qualified_name":"MAVLink","kind":"ada_package","location":{"file":"../src/mavlink.ads","line":6,"column":9},"code":"package MAVLink","documentation":{"description":"MAVLink\nCopyright Fil Andrii root.fi36@gmail.com 2022-2025"}}

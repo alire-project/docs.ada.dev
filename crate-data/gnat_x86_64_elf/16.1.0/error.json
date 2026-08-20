@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gnat_x86_64_elf",
+  "version": "16.1.0",
+  "failed_at": "2026-08-18T02:42:02Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

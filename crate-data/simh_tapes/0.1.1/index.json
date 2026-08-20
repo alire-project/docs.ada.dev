@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "simh_tapes",
+  "version": "0.1.1",
+  "documented_at": "2026-03-06T02:58:03Z",
+  "description": "Library to handle SimH Standard magnetic tape image files",
+  "authors": [
+    "Stephen Merrony"
+  ],
+  "licenses": [
+    "AGPL-3.0-or-later"
+  ],
+  "tags": [
+    "legacy",
+    "magtape",
+    "magnetic",
+    "tape",
+    "emulation",
+    "simulation"
+  ],
+  "website": "https://github.com/SMerrony/simh_tapes",
+  "repository": {
+    "url": "https://github.com/SMerrony/simh_tapes",
+    "host": "github",
+    "commit": "a126825a15e7bd3b5d698f3a85902c746031f606"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Simh_Tapes",
+      "id": "a2418ec0298090ab",
+      "file": "simh_tapes.json"
+    },
+    {
+      "name": "Simh_Tapes_Config",
+      "id": "4b4ce3829b7cdbae",
+      "file": "simh_tapes_config.json"
+    }
+  ]
+}

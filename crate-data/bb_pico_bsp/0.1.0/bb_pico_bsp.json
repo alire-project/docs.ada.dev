@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"bb_pico_bsp","version":"0.1.0","id":"71f2d5b78e791867","name":"BB_Pico_Bsp","qualified_name":"BB_Pico_Bsp","kind":"ada_package","location":{"file":"src/bb_pico_bsp.ads","line":3,"column":9},"code":"package BB_Pico_Bsp"}

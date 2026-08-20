@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "ada_gui",
+  "version": "20240224.0.1",
+  "failed_at": "2026-03-03T17:48:09Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

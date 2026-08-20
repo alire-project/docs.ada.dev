@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "audio_base",
+  "version": "1.0.0",
+  "documented_at": "2026-03-03T17:51:39Z",
+  "description": "Basic Ada packages for audio applications",
+  "long_description": "# Audio Base\nThis crate contains basic Ada packages for audio applications.\n",
+  "authors": [
+    "Gustavo A. Hoffmann"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "audio",
+    "riff"
+  ],
+  "website": "https://github.com/Ada-Audio/audio_base",
+  "repository": {
+    "url": "https://github.com/Ada-Audio/audio_base",
+    "host": "github",
+    "commit": "8646d0adc2be09c57dd16952a329c4342e5ddb3b"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Audio",
+      "id": "6ed8919ce20490a5",
+      "file": "audio.json"
+    },
+    {
+      "name": "Audio.RIFF",
+      "id": "074a0ad67e521ea8",
+      "file": "audio-riff.json"
+    }
+  ]
+}

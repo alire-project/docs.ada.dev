@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"mold","version":"1.1.0","id":"5ab7da6d3cbdac6c","name":"CLIC","qualified_name":"CLIC","kind":"ada_package","location":{"file":"../../../home/runner/.local/share/alire/builds/clic_0.3.0_56bbdc00/999105376a33c1da6df82bf23715d18a8c81ec1b7c97d521e34e338ee687fd74/src/clic.ads","line":3,"column":9},"code":"package CLIC"}

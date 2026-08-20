@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "vanilla",
+  "version": "0.9.8",
+  "documented_at": "2026-03-07T02:49:50Z",
+  "description": "Simple replace in character stream",
+  "long_description": "Library of simple substitution of tags into strings\nin character streams and strings.\n\nTags could be $A, $B, $3 etcetera.\n",
+  "authors": [
+    "Jesper Quorning"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "simple",
+    "substitute",
+    "replace",
+    "vanilla"
+  ],
+  "website": "https://github.com/jquorning/vanilla",
+  "repository": {
+    "url": "https://github.com/jquorning/replace_v1",
+    "host": "github",
+    "commit": "efa1a07926fda41f33bda22f2976d9dd527cb6b2"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Vanilla_Substitute",
+      "id": "e28c2d5e642564bd",
+      "file": "vanilla_substitute.json"
+    },
+    {
+      "name": "Vanilla_Substitute.Items_V1",
+      "id": "e208693913bbb364",
+      "file": "vanilla_substitute-items_v1.json"
+    },
+    {
+      "name": "Vanilla_Substitute.Strings_V1",
+      "id": "2852bcf52e7678bd",
+      "file": "vanilla_substitute-strings_v1.json"
+    }
+  ]
+}

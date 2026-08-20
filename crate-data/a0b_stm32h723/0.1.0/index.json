@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_stm32h723",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:47:47Z",
+  "description": "STM32H723 base and SVD package",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "svd",
+    "stm32",
+    "stm32h7",
+    "stm32h723"
+  ],
+  "website": "https://github.com/godunko/a0b-stm32h723",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-stm32h723",
+    "host": "github",
+    "commit": "fa53524f934264edaed2ec5482ccb0bc8c8e83ab"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_armv7m",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

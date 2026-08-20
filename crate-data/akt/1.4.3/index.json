@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "crate": "akt",
+  "version": "1.4.3",
+  "documented_at": "2026-06-25T03:02:09Z",
+  "description": "Ada Keystore Tool",
+  "long_description": "[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-keystore/summary)\n[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-keystore/xunits)\n[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-keystore/summary)\n\n# Overview\n\nAKT is a tool to store and protect your sensitive information and documents by\nencrypting them in secure keystore (AES-256, HMAC-256).\n\nCreate the keystore and protect it with a gpg public key:\n```\n   akt create secure.akt --gpg <keyid> ...\n```\n\nStore a small content:\n```\n   akt set secure.akt bank.password 012345\n```\n\nStore files, directory or a tar file:\n```\n   akt store secure.akt notes.txt\n   akt store secure.akt contract.doc\n   akt store secure.akt directory\n   tar czf - . | akt store secure.akt -- backup\n```\n\nEdit a content with your $EDITOR:\n```\n   akt edit secure.akt bank.password\n   akt edit secure.akt notes.txt\n```\n\nGet a content:\n```\n   akt get secure.akt bank.password\n   akt extract secure.akt contract.doc\n   akt extract secure.akt -- backup | tar xzf -\n```\n\n## Documents\n\n* [Ada Keystore Guide](https://ada-keystore.readthedocs.io/en/latest/) [PDF](https://github.com/stcarrez/ada-keystore/blob/master/docs/keystore-book.pdf)\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "security",
+    "storage",
+    "nosql"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-keystore",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-keystore",
+    "host": "gitlab",
+    "commit": "4ffbf105fd3ce2d382a4147f1f2f26b27243ef90",
+    "subdir": "akt/"
+  },
+  "dependencies": [
+    {
+      "crate": "case(os)",
+      "version": "{'linux': {'ada_fuse': '*'}}"
+    },
+    {
+      "crate": "intl",
+      "version": "^1.0.1"
+    },
+    {
+      "crate": "keystoreada",
+      "version": "^1.4.3"
+    },
+    {
+      "crate": "resources",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "utilada",
+      "version": "^2.9.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AKT",
+      "id": "cb5856daf3922c12",
+      "file": "akt.json"
+    },
+    {
+      "name": "AKT.Commands",
+      "id": "60ec558b3c2a7438",
+      "file": "akt-commands.json"
+    },
+    {
+      "name": "AKT.Filesystem",
+      "id": "059bd31ad0b9f494",
+      "file": "akt-filesystem.json"
+    },
+    {
+      "name": "Keystore.Verifier",
+      "id": "04d8f80dc09ad5f2",
+      "file": "keystore-verifier.json"
+    }
+  ]
+}

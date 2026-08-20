@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "wayland_protocols_ada",
+  "version": "1.0.0",
+  "documented_at": "2026-03-07T02:50:49Z",
+  "description": "Ada 2012 bindings for various Wayland protocols",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "wayland",
+    "protocols"
+  ],
+  "website": "https://github.com/onox/wayland-ada",
+  "repository": {
+    "url": "https://github.com/onox/wayland-ada",
+    "host": "github",
+    "commit": "f8a9fe05aa29e5e17d23951bc0d21ce4b84148a4",
+    "subdir": "wayland_protocols_ada/"
+  },
+  "dependencies": [
+    {
+      "crate": "wayland_ada_scanner",
+      "version": "~1.0.0"
+    },
+    {
+      "crate": "wayland_client_ada",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": []
+}

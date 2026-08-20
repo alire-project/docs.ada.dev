@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "lea",
+  "version": "0.94.0",
+  "failed_at": "2026-05-25T03:02:56Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

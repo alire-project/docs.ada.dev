@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"2466a899231c90c0","name":"Agpl.Calendar","qualified_name":"Agpl.Calendar","kind":"ada_package","location":{"file":"src/agpl-calendar.ads","line":3,"column":9},"code":"package Agpl.Calendar"}

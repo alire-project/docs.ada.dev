@@ -1,0 +1,89 @@
+{
+  "schema_version": "1",
+  "crate": "df_box2d",
+  "version": "0.1.0",
+  "documented_at": "2026-06-20T03:01:33Z",
+  "description": "Ada bindings to Box2D v3, Erin Catto's 2D physics engine (pure C)",
+  "authors": [
+    "The Dark Factory Ltd"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "binding",
+    "physics",
+    "box2d",
+    "game",
+    "simulation"
+  ],
+  "website": "https://github.com/the-dark-factory/box2d-ada",
+  "repository": {
+    "url": "https://github.com/the-dark-factory/box2d-ada",
+    "host": "github",
+    "commit": "fbe979353fe4428bbe22a03a43c591c8f70efa11"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "box2d_base_h",
+      "id": "860eea56185638f4",
+      "file": "box2d_base_h.json"
+    },
+    {
+      "name": "box2d_box2d_h",
+      "id": "4dbee9178c6298c6",
+      "file": "box2d_box2d_h.json"
+    },
+    {
+      "name": "box2d_collision_h",
+      "id": "2d6bf9c9db622745",
+      "file": "box2d_collision_h.json"
+    },
+    {
+      "name": "box2d_id_h",
+      "id": "ee1bdf01dfeefbe5",
+      "file": "box2d_id_h.json"
+    },
+    {
+      "name": "box2d_math_functions_h",
+      "id": "0f94fb16a21c1989",
+      "file": "box2d_math_functions_h.json"
+    },
+    {
+      "name": "box2d_types_h",
+      "id": "d3343d37a37821e6",
+      "file": "box2d_types_h.json"
+    },
+    {
+      "name": "sys_utypes_uint16_t_h",
+      "id": "c2df05b542b94c40",
+      "file": "sys_utypes_uint16_t_h.json"
+    },
+    {
+      "name": "sys_utypes_uint32_t_h",
+      "id": "04ae1eeabcfbb470",
+      "file": "sys_utypes_uint32_t_h.json"
+    },
+    {
+      "name": "utypes_uuint16_t_h",
+      "id": "a4fd1e42e69db47c",
+      "file": "utypes_uuint16_t_h.json"
+    },
+    {
+      "name": "utypes_uuint32_t_h",
+      "id": "3b534e21241605d1",
+      "file": "utypes_uuint32_t_h.json"
+    },
+    {
+      "name": "utypes_uuint64_t_h",
+      "id": "63143b11b2defdae",
+      "file": "utypes_uuint64_t_h.json"
+    },
+    {
+      "name": "utypes_uuint8_t_h",
+      "id": "1331e5dbeaba386e",
+      "file": "utypes_uuint8_t_h.json"
+    }
+  ]
+}

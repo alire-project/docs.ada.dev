@@ -1,0 +1,292 @@
+{
+  "schema_version": "1",
+  "crate": "coap_spark",
+  "version": "0.10.0",
+  "documented_at": "2026-03-04T02:57:57Z",
+  "description": "CoAP implementation formally verified with SPARK/Ada",
+  "long_description": "CoAP-SPARK is a library implementing the Constrained Application Protocol (CoAP)\nas defined in\n[RFC 7252](https://www.rfc-editor.org/rfc/rfc7252), developed in the SPARK \nlanguage, the formally verified subset of the Ada programming language.\n\nThis version implements client and server sides of the protocol with some limitations:\n- It does not support block-wise transfers.\n- It does not support retransmission of messages.\n- It only supports NoSec and PreSharedKey security modes.\n\nSee LICENSING for licensing information.\n",
+  "authors": [
+    "Manuel Gomez"
+  ],
+  "licenses": [
+    "Apache-2.0 OR GPL-2.0-or-later"
+  ],
+  "tags": [
+    "spark",
+    "coap",
+    "iot",
+    "protocol"
+  ],
+  "website": "https://github.com/mgrojo/coap_spark",
+  "repository": {
+    "url": "https://github.com/mgrojo/coap_spark",
+    "host": "github",
+    "commit": "31eb05decafd9dc328b8242f8e4bd9364a20fe39"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatprove",
+      "version": "^14.1.1"
+    },
+    {
+      "crate": "wolfssl",
+      "version": "^5.8.0"
+    },
+    {
+      "crate": "gnat_native",
+      "version": "^14.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "CoAP_SPARK",
+      "id": "a027123241d8cd63",
+      "file": "coap_spark.json"
+    },
+    {
+      "name": "CoAP_SPARK.Channel",
+      "id": "420acfc183917685",
+      "file": "coap_spark-channel.json"
+    },
+    {
+      "name": "CoAP_SPARK.Client_Session",
+      "id": "c9071229fdc47d18",
+      "file": "coap_spark-client_session.json"
+    },
+    {
+      "name": "CoAP_SPARK.Content_Formats",
+      "id": "0be892457d9fb82b",
+      "file": "coap_spark-content_formats.json"
+    },
+    {
+      "name": "CoAP_SPARK.Content_Formats.application",
+      "id": "09bcd26872322efd",
+      "file": "coap_spark-content_formats-application.json"
+    },
+    {
+      "name": "CoAP_SPARK.Content_Formats.image",
+      "id": "fd48a0196af243af",
+      "file": "coap_spark-content_formats-image.json"
+    },
+    {
+      "name": "CoAP_SPARK.Content_Formats.text",
+      "id": "9a330e1f0e0a747b",
+      "file": "coap_spark-content_formats-text.json"
+    },
+    {
+      "name": "CoAP_SPARK.Log",
+      "id": "ffc06cb70a1670a6",
+      "file": "coap_spark-log.json"
+    },
+    {
+      "name": "CoAP_SPARK.Messages",
+      "id": "de2aad7d418fcf77",
+      "file": "coap_spark-messages.json"
+    },
+    {
+      "name": "CoAP_SPARK.Messages.Encoding",
+      "id": "996a7b092a767d47",
+      "file": "coap_spark-messages-encoding.json"
+    },
+    {
+      "name": "CoAP_SPARK.Options",
+      "id": "c831825aa9c4257e",
+      "file": "coap_spark-options.json"
+    },
+    {
+      "name": "CoAP_SPARK.Options.List_Sorting",
+      "id": "454bb293f6757fb1",
+      "file": "coap_spark-options-list_sorting.json"
+    },
+    {
+      "name": "CoAP_SPARK.Options.Text_IO",
+      "id": "272c52ab698596a5",
+      "file": "coap_spark-options-text_io.json"
+    },
+    {
+      "name": "CoAP_SPARK.Options.URI",
+      "id": "36ad7d7a13ee9f92",
+      "file": "coap_spark-options-uri.json"
+    },
+    {
+      "name": "CoAP_SPARK.Random",
+      "id": "a2571e6013427294",
+      "file": "coap_spark-random.json"
+    },
+    {
+      "name": "CoAP_SPARK.Resources",
+      "id": "6a29656e79865b26",
+      "file": "coap_spark-resources.json"
+    },
+    {
+      "name": "CoAP_SPARK.Server_Session",
+      "id": "046adcf031ae0e60",
+      "file": "coap_spark-server_session.json"
+    },
+    {
+      "name": "CoAP_SPARK.URI",
+      "id": "2b041e01a446dde5",
+      "file": "coap_spark-uri.json"
+    },
+    {
+      "name": "CoAP_SPARK.Utils",
+      "id": "a433fcf9fce9a747",
+      "file": "coap_spark-utils.json"
+    },
+    {
+      "name": "CoAP_SPARK.Utils.Valid_Values",
+      "id": "d3b1315ebccad0cd",
+      "file": "coap_spark-utils-valid_values.json"
+    },
+    {
+      "name": "Coap_Spark_Config",
+      "id": "4e8d2240df95ef34",
+      "file": "coap_spark_config.json"
+    },
+    {
+      "name": "RFLX",
+      "id": "dad0208d1ab1742a",
+      "file": "rflx.json"
+    },
+    {
+      "name": "RFLX.CoAP",
+      "id": "2d3d5420edba199c",
+      "file": "rflx-coap.json"
+    },
+    {
+      "name": "RFLX.CoAP.CoAP_Message",
+      "id": "9e808c2ae3a10475",
+      "file": "rflx-coap-coap_message.json"
+    },
+    {
+      "name": "RFLX.CoAP.Option_Type",
+      "id": "b7f1ae0d2aec4bbd",
+      "file": "rflx-coap-option_type.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client",
+      "id": "8b33e3dc061c6a17",
+      "file": "rflx-coap_client.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client.Options_And_Payload_Data",
+      "id": "e89ecfa0d2a477fc",
+      "file": "rflx-coap_client-options_and_payload_data.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client.Session",
+      "id": "f9c7e4f00713126e",
+      "file": "rflx-coap_client-session.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client.Session.FSM",
+      "id": "2679141ba846783c",
+      "file": "rflx-coap_client-session-fsm.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client.Session.FSM_Allocator",
+      "id": "aab4956e44561ad0",
+      "file": "rflx-coap_client-session-fsm_allocator.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client.Session_Environment",
+      "id": "5a7ee5829b7098ed",
+      "file": "rflx-coap_client-session_environment.json"
+    },
+    {
+      "name": "RFLX.CoAP_Client.Token_Data",
+      "id": "265ac043d5d6d0f4",
+      "file": "rflx-coap_client-token_data.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server",
+      "id": "dbaeb557493c8a38",
+      "file": "rflx-coap_server.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Application_Response",
+      "id": "41045fef19a8bd99",
+      "file": "rflx-coap_server-application_response.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Contains",
+      "id": "1224ca23adb03066",
+      "file": "rflx-coap_server-contains.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Definite_Message",
+      "id": "171962df9bfffdb2",
+      "file": "rflx-coap_server-definite_message.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Main_Loop",
+      "id": "0d998a66cbf7c615",
+      "file": "rflx-coap_server-main_loop.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Main_Loop.FSM",
+      "id": "acb437a705097bb0",
+      "file": "rflx-coap_server-main_loop-fsm.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Main_Loop.FSM_Allocator",
+      "id": "161220d6e1b2651f",
+      "file": "rflx-coap_server-main_loop-fsm_allocator.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Main_Loop_Environment",
+      "id": "ab9f70c508e08a11",
+      "file": "rflx-coap_server-main_loop_environment.json"
+    },
+    {
+      "name": "RFLX.CoAP_Server.Options_And_Payload_Data",
+      "id": "83e6c61ca8e9d754",
+      "file": "rflx-coap_server-options_and_payload_data.json"
+    },
+    {
+      "name": "RFLX.RFLX_Arithmetic",
+      "id": "0bb4501a578393ef",
+      "file": "rflx-rflx_arithmetic.json"
+    },
+    {
+      "name": "RFLX.RFLX_Builtin_Types",
+      "id": "2cfba601f4b41403",
+      "file": "rflx-rflx_builtin_types.json"
+    },
+    {
+      "name": "RFLX.RFLX_Builtin_Types.Conversions",
+      "id": "c6b898f38b1f7c38",
+      "file": "rflx-rflx_builtin_types-conversions.json"
+    },
+    {
+      "name": "RFLX.RFLX_Generic_Types",
+      "id": "a3b456127f7ba576",
+      "file": "rflx-rflx_generic_types.json"
+    },
+    {
+      "name": "RFLX.RFLX_Generic_Types.Generic_Operations",
+      "id": "d0466baa8190f39e",
+      "file": "rflx-rflx_generic_types-generic_operations.json"
+    },
+    {
+      "name": "RFLX.RFLX_Generic_Types.Generic_Operators",
+      "id": "60e208c7b7745f25",
+      "file": "rflx-rflx_generic_types-generic_operators.json"
+    },
+    {
+      "name": "RFLX.RFLX_Message_Sequence",
+      "id": "9de531b4dec3c430",
+      "file": "rflx-rflx_message_sequence.json"
+    },
+    {
+      "name": "RFLX.RFLX_Scalar_Sequence",
+      "id": "951d8c5b269e3d9d",
+      "file": "rflx-rflx_scalar_sequence.json"
+    },
+    {
+      "name": "Workarounds",
+      "id": "2e425f80613b4126",
+      "file": "workarounds.json"
+    }
+  ]
+}
