@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "crate": "base64",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:52:36Z",
+  "description": "Base64 encoding/decoding routines",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "base64"
+  ],
+  "website": "https://github.com/AntonMeep/base64",
+  "repository": {
+    "url": "https://github.com/AntonMeep/base64",
+    "host": "github",
+    "commit": "41f0c5dfb95d999e0140b9a575ca3c2ae8c26fe1"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Base64",
+      "id": "371a286d5872a373",
+      "file": "base64.json"
+    },
+    {
+      "name": "Base64.Routines",
+      "id": "6a8685609435a2d3",
+      "file": "base64-routines.json"
+    },
+    {
+      "name": "Base64.Routines.Streams",
+      "id": "53f6188babc8748e",
+      "file": "base64-routines-streams.json"
+    },
+    {
+      "name": "Base64_Generic",
+      "id": "5f1011b501a5c536",
+      "file": "base64_generic.json"
+    }
+  ]
+}

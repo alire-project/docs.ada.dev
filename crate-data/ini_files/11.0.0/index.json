@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "ini_files",
+  "version": "11.0.0",
+  "documented_at": "2026-03-04T16:50:51Z",
+  "description": "A standalone, portable Ada package for configuration files",
+  "long_description": "Config is an Ada package for parsing configuration files (.ini, .inf, .cfg, ...) and retrieving keys of various types. New values for single keys, or entire sections, can be set.\n\n* Standalone and unconditionally portable code.\n* Pure Ada 2005: nothing compiler- / system- specific.\n* Can be used in projects in Ada 2005, Ada 2012 and later versions of the Ada language.\n* Object oriented.\n* Tests and demos included.\n",
+  "authors": [
+    "Rolf Ebert",
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "ini",
+    "ini-file",
+    "cfg",
+    "cfg-file",
+    "config",
+    "configuration"
+  ],
+  "website": "https://sourceforge.net/p/ini-files/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/ini-files",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Config",
+      "id": "b79606fb3afea5bd",
+      "file": "config.json"
+    }
+  ]
+}

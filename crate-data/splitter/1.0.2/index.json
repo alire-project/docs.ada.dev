@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "splitter",
+  "version": "1.0.2",
+  "documented_at": "2026-03-06T02:59:08Z",
+  "description": "A function to emulate \"split\" as implemented in Ruby",
+  "authors": [
+    "Riccardo Bernardini"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "strings",
+    "split",
+    "token",
+    "tokenizer",
+    "parsing"
+  ],
+  "repository": {
+    "url": "https://github.com/riccardo-bernardini/ada-tokenizer",
+    "host": "github",
+    "commit": "92ab7669da094583ebb1861bcb015b766cc83a3d"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Splitter_Config",
+      "id": "c5e457690971b3e2",
+      "file": "splitter_config.json"
+    },
+    {
+      "name": "Tokenize",
+      "id": "92c0befbb9143742",
+      "file": "tokenize.json"
+    }
+  ]
+}

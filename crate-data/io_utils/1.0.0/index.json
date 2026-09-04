@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "io_utils",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:51:18Z",
+  "description": "A terminal IO library",
+  "authors": [
+    "Dylan E."
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "user-input",
+    "tty"
+  ],
+  "repository": {
+    "url": "https://github.com/KvanQuilst/IO_Utils",
+    "host": "github",
+    "commit": "d57eb6f7fe0114e827817f1f4cdaad5a42cdc30d"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "IO_Utils",
+      "id": "4b7e09386c4470f7",
+      "file": "io_utils.json"
+    },
+    {
+      "name": "IO_Utils.Ansi",
+      "id": "b32feba23429f511",
+      "file": "io_utils-ansi.json"
+    },
+    {
+      "name": "IO_Utils.Strings",
+      "id": "59aa8f0b25b9d20d",
+      "file": "io_utils-strings.json"
+    },
+    {
+      "name": "IO_Utils.User_IO",
+      "id": "9cecc0a6ef4ecbcb",
+      "file": "io_utils-user_io.json"
+    },
+    {
+      "name": "Io_Utils_Config",
+      "id": "a60d65b5557906f0",
+      "file": "io_utils_config.json"
+    }
+  ]
+}

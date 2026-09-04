@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "crate": "cachelines",
+  "version": "0.1.0",
+  "documented_at": "2026-08-18T02:41:15Z",
+  "description": "Cache-line-aligned storage and L1 cache information for Ada",
+  "authors": [
+    "Yurii Rashkovskii"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "cache",
+    "concurrency",
+    "performance",
+    "systems"
+  ],
+  "website": "https://github.com/yrashk/ada-cachelines",
+  "repository": {
+    "url": "https://github.com/yrashk/ada-cachelines",
+    "host": "github",
+    "commit": "5c975744fccb618712e256fd230dce7081ceade2"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Cachelines",
+      "id": "27c8407ae39891db",
+      "file": "cachelines.json"
+    },
+    {
+      "name": "Cachelines.Fitted_Groups",
+      "id": "6cd6d617f55a2c36",
+      "file": "cachelines-fitted_groups.json"
+    },
+    {
+      "name": "Cachelines.Padded",
+      "id": "b29873721011d308",
+      "file": "cachelines-padded.json"
+    },
+    {
+      "name": "Cachelines.Padded_Groups",
+      "id": "24c3fdc8c2a5c876",
+      "file": "cachelines-padded_groups.json"
+    },
+    {
+      "name": "Cachelines_Config",
+      "id": "80a8459b9448c6d2",
+      "file": "cachelines_config.json"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1",
+  "crate": "lithophane",
+  "version": "0.1.1",
+  "documented_at": "2026-08-28T04:52:32Z",
+  "description": "Create lithophane with Ada",
+  "long_description": "Create [lithophane](https://en.wikipedia.org/wiki/Lithophane) of your favourite picture with Ada.\n\n\n\n**Usage**\n```\nlithophane [options] <input_file>\n```\n\n`<input_file>` is the picture to convert (any format supported by\n[GID](https://gen-img-dec.sourceforge.io): PNG, JPEG, BMP, GIF, TGA, ...).\n\n**Options**\n```\n-h --help\n-v --version\n-b --save-binary          (default)\n-a --save-ascii\n-p --save-pgm\n-o<name> --output-name=<name>\n-H<height> --height=<height>\n-f<filter> --filter=<filter>\n-c<file> --config=<file>\n```\n\n| Option | Description |\n| --- | --- |\n| `-h`, `--help` | print usage and exit |\n| `-v`, `--version` | print the program version and exit |\n| `-b`, `--save-binary` | write the lithophane as a binary STL file: `<output-name>.bin.stl` (this is the default output if no `-a`/`-b`/`-p` flag is given) |\n| `-a`, `--save-ascii` | write the lithophane as an ASCII STL file: `<output-name>.ascii.stl` |\n| `-p`, `--save-pgm` | also dump the grayscale-converted image as a PGM file: `<output-name>.pgm` |\n| `-o<name>`, `--output-name=<name>` | base name used for every output file above (default: `test`) |\n| `-H<height>`, `--height=<height>` | target height of the lithophane |\n| `-f<filter>`, `--filter=<filter>` | image filter to apply before conversion |\n| `-c<file>`, `--config=<file>` | read options from a config file instead of (or in addition to) the command line; when given, it overrides any previous option |\n\nYou can combine `-a`, `-b` and `-p`: each one adds its own output file, they are\nnot mutually exclusive.\n\n**Config file**\n\n`-c`/`--config` points to a TOML file such as [config.toml](config.toml):\n```toml\ninput-name = \"foo.png\"\noutput-name = \"test\"\nfilter = \"threshold\"\nsave-ascii = false\nsave-binary = true\nsave-pgm = true\nheight = 10\n```\n\n> [!NOTE]\n> `-f`/`--filter`, `-H`/`--height` and `-c`/`--config` are already accepted on\n> the command line but are not wired up yet: filters, height scaling and the\n> config file are parsed but have no effect on the generated STL for now\n> (see TODO below). The only filter currently applied is a fixed threshold at\n> mid-grey, done automatically when saving to binary STL.\n",
+  "authors": [
+    "Simon Beàn"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "3dprint",
+    "lithophane",
+    "lithography"
+  ],
+  "website": "https://github.com/smionean/lithophane_ada",
+  "repository": {
+    "url": "https://github.com/smionean/lithophane_ada",
+    "host": "github",
+    "commit": "c130d911bf25618d8def97581d34a20692f9e932"
+  },
+  "dependencies": [
+    {
+      "crate": "gid",
+      "version": "^14.0.0"
+    },
+    {
+      "crate": "getopt",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Lithophane",
+      "id": "4371f85215fbe9d3",
+      "file": "lithophane.json"
+    },
+    {
+      "name": "Lithophane.Filters",
+      "id": "5241c759e444be3d",
+      "file": "lithophane-filters.json"
+    },
+    {
+      "name": "Lithophane.Sizer",
+      "id": "37c4ae21126f66b0",
+      "file": "lithophane-sizer.json"
+    },
+    {
+      "name": "Lithophane.STL",
+      "id": "c7b94f86a1f19e8e",
+      "file": "lithophane-stl.json"
+    },
+    {
+      "name": "Lithophane_Config",
+      "id": "23dfb2d37283f70b",
+      "file": "lithophane_config.json"
+    }
+  ]
+}

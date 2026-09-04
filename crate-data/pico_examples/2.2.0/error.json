@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "pico_examples",
+  "version": "2.2.0",
+  "failed_at": "2026-03-05T03:01:19Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

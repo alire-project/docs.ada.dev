@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "metaphone",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T02:57:00Z",
+  "description": "The Double Metaphone algorithm based off the Python version",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later"
+  ],
+  "tags": [
+    "metaphone",
+    "phonetic",
+    "english"
+  ],
+  "website": "https://github.com/michael-hardeman/metaphone",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/metaphone",
+    "host": "github",
+    "commit": "d003bcf98f686ceaca482597224de0d75660c851"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Metaphone",
+      "id": "87ed80f1c4243368",
+      "file": "metaphone.json"
+    },
+    {
+      "name": "Metaphone_Config",
+      "id": "d7d474f1a55ae3be",
+      "file": "metaphone_config.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "db_maker",
+  "version": "20240119.0.0",
+  "failed_at": "2026-03-04T02:56:33Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

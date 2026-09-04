@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "crate": "gfx_rasteriser",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T03:01:04Z",
+  "description": "Modular Portable Graphics Library, Primitive's Rasteriser",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "graphics"
+  ],
+  "repository": {
+    "url": "https://github.com/godunko/gfx-rasteriser",
+    "host": "github",
+    "commit": "a611c7af65477b38206f029ca5e930558aa74c45"
+  },
+  "dependencies": [
+    {
+      "crate": "gfx_core",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": []
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"libsap","version":"0.1.0","id":"6b37ab37594707ae","name":"LibSAP","qualified_name":"LibSAP","kind":"ada_package","location":{"file":"src/libsap.ads","line":7,"column":9},"code":"package LibSAP","documentation":{"description":"\nCopyright 2026 (C) Daniel King\n\nSPDX-License-Identifier: Apache-2.0 WITH LLVM-exception"}}

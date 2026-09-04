@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c01_blink",
+  "version": "1.5.1",
+  "documented_at": "2026-04-21T03:01:41Z",
+  "description": "Chapter 1: Blinking LEDs - Getting Started on the Raspberry Pi Pico",
+  "long_description": "My first steps into Ada programming on the Pico: from Jeremy Grosser's classic\nblink example through explicit pin control to using an external LED, plus thoughts on the elegant (but still\nexperimental) Ravenscar profile.\n\nStarting simple with LED blinking in Ada - internal LED, external LED with proper renaming, and a look at why Ravenscar\nlooks so clean (even if it's not quite ready for everyday use yet).\n\nContained in Chapter 01 are:\n\n1. blink             - Jeremy Grosser Ada sample\n2. sketch_01_1_blink - Chapter 1.1 Blink internal LED\n3. sketch_01_2_blink - Chapter 1.2 Blink external LED\n\nRead the full tutorial at [Chapter 1: Blinking LEDs - Getting Started with Ada on the Raspberry Pi\nPico](https://pi-ada-tutorial.sourceforge.io/pico_ada_c01_blink), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c01_blink/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c01_blink/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c01_blink",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C01_Blink_Config",
+      "id": "adcecc1efb843ccc",
+      "file": "pico_ada_c01_blink_config.json"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "crate": "qmc5883",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:55:09Z",
+  "description": "Driver for QMC5883L magnetic sensor",
+  "authors": [
+    "Max Reznik"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "sensor",
+    "magnetometer",
+    "driver"
+  ],
+  "website": "https://github.com/reznikmm/qmc5883",
+  "repository": {
+    "url": "https://github.com/reznikmm/qmc5883",
+    "host": "github",
+    "commit": "1cf05eb4f5f83a1ef81c322ce89a4a4c8f18cde6"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "~0.3.0"
+    }
+  ],
+  "units": []
+}

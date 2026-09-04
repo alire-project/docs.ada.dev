@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"832848c7cbb26844","name":"PragmARC.Cards","qualified_name":"PragmARC.Cards","kind":"ada_package","location":{"file":"src/pragmarc-cards.ads","line":12,"column":9},"code":"package PragmARC.Cards","documentation":{"description":"Empty"}}

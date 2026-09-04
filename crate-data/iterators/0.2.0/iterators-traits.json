@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"iterators","version":"0.2.0","id":"850de115b1bf37ce","name":"Iterators.Traits","qualified_name":"Iterators.Traits","kind":"ada_package","location":{"file":"src/iterators-traits.ads","line":1,"column":9},"code":"package Iterators.Traits"}

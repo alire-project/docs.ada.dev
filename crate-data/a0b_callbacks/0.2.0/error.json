@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_callbacks",
+  "version": "0.2.0",
+  "failed_at": "2026-03-03T15:39:05Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

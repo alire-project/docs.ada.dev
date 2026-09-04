@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "octet_memory_stream",
+  "version": "1.1.0",
+  "documented_at": "2026-03-05T02:58:48Z",
+  "description": "Provides a Root_Stream_Type wrapper over an array of octets in memory.",
+  "long_description": "`octet_memory_stream` provides a standalone `Ada.Streams.Root_Stream_Type`\nwrapper around an `Octet_Array` (array of 8-bit bytes,) primarily for the\npurpose of protecting an over-arching stream from misalignment while reading\nfrom, or writing to, e.g., a file format.\n\nIf the `Memory_Stream` detects an out-of-bounds error as the result of a read\nor write operation, an `Out_Of_Bounds_Error` exception will be raised.\n\nExample Use\n-----------\nAll pertinent types and subprograms are available within the package \n`Octet_Memory_Stream`. Wrapping an `Octet_Array` is done through the\n`To_Stream` function.\n```ada\npragma Ada_2022;\n\nwith Ada.Text_IO;\nwith Ada.Streams.Stream_IO;\nuse  Ada.Streams.Stream_IO;\nwith Octet_Memory_Stream;\n\nprocedure TestDemo is\n   F                : File_Type;\n   Protected_Stream : Stream_Access;\n   Memory_Stream    : Octet_Memory_Stream.Stream_Access;\nbegin\n   Open (F, In_File, \"example\");\n   Protected_Stream := Stream (F);\n   declare\n      Data : Octet_Memory_Stream.Octet_Array (1 .. 50);\n   begin\n      Octet_Memory_Stream.Octet_Array'Read (Protected_Stream, Data);\n      Memory_Stream := Octet_Memory_Stream.To_Stream (Data);\n   end;\n   declare\n      OK_Data  : Octet_Memory_Stream.Octet_Array (1 .. 25);\n      OOB_Data : Octet_Memory_Stream.Octet_Array (1 .. 26);\n   begin\n      Octet_Memory_Stream.Octet_Array'Read (Memory_Stream, OK_Data);\n      Ada.Text_IO.Put_Line (OK_Data'Image);\n\n      Octet_Memory_Stream.Octet_Array'Read (Memory_Stream, OOB_Data);\n      --  exception raised above\n      Ada.Text_IO.Put_Line (OOB_Data'Image);\n   end;\n   Close (F);\nend TestDemo;\n```\n",
+  "authors": [
+    "Miko Elbrecht"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "octet",
+    "byte",
+    "buffer",
+    "stream",
+    "ada",
+    "streams",
+    "memory"
+  ],
+  "website": "https://github.com/Bread-Experts-Group/octet_memory_stream",
+  "repository": {
+    "url": "https://github.com/Bread-Experts-Group/octet_memory_stream",
+    "host": "github",
+    "commit": "54ecee472e8f78ab6d09df59f48bcca548364ee3"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Octet_Memory_Stream",
+      "id": "27273f0c06325b9f",
+      "file": "octet_memory_stream.json"
+    },
+    {
+      "name": "Octet_Memory_Stream_Config",
+      "id": "9539e530a53d049f",
+      "file": "octet_memory_stream_config.json"
+    }
+  ]
+}

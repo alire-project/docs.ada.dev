@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c03_led_bar",
+  "version": "1.5.1",
+  "documented_at": "2026-04-21T03:02:02Z",
+  "description": "Chapter 3 - Cylon LED Bar: flowing light upgraded to a menacing scanner",
+  "long_description": "Building a smooth flowing LED bar on the Raspberry Pi Pico with Ada - from a simple\nchasing light to a proper menacing Cylon scanner effect using real-time delays.\n\nIn this chapter we turn ten LEDs into a flowing light bar. We start with the basic Freenove example using an array of\nRP.GPIO.GPIO_Point (aliased limited tagged types). We then improve it with a pre-calculated sine-harmonic timing table\nto create a realistic Cylon scanner - all done with Ada.Real_Time and zero floating-point at runtime for perfect\njitter-free movement.\n\nContained in Chapter 03 are:\n\n1. Sketch_03_1_Flowing_Light  - straight port of the classic flowing light\n2. Cylon_Light                - the final dramatic Cylon scanner with organic easing\n3. Cylon_Light_Float          - Floating point version of Cylon_Light\n\nRead the full tutorial at [Chapter 3 - Cylon LED Bar: flowing light upgraded to a menacing\nscanner](https://pi-ada-tutorial.sourceforge.io/pico_ada_c03_led_bar), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c03_led_bar/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c03_led_bar/)\n\n(The Cylons did nothing wrong. Humans created the perfect companion species and then completely messed it up.)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c03_led_bar",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "^15.2"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C03_Led_Bar_Config",
+      "id": "16cddf8eb1d5afaf",
+      "file": "pico_ada_c03_led_bar_config.json"
+    }
+  ]
+}

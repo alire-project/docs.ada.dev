@@ -1,0 +1,76 @@
+{
+  "schema_version": "1",
+  "crate": "midi",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T02:57:29Z",
+  "description": "Library to encode and decode MIDI messages",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "midi",
+    "embedded",
+    "nostd"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/MIDI",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/midi",
+    "host": "github",
+    "commit": "34d3ed890214c19d0e4354f7fc3bad67c383f924"
+  },
+  "dependencies": [
+    {
+      "crate": "bbqueue",
+      "version": "^1.0.0"
+    },
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "MIDI",
+      "id": "c5c1764a8b1824b5",
+      "file": "midi.json"
+    },
+    {
+      "name": "MIDI.Decoder",
+      "id": "628a1615f384c7bf",
+      "file": "midi-decoder.json"
+    },
+    {
+      "name": "MIDI.Decoder.Queue",
+      "id": "e7e8fbf108c59a82",
+      "file": "midi-decoder-queue.json"
+    },
+    {
+      "name": "MIDI.Encoder",
+      "id": "1cc8d481e8027197",
+      "file": "midi-encoder.json"
+    },
+    {
+      "name": "MIDI.Encoder.Queue",
+      "id": "6ec74351ad8fcac9",
+      "file": "midi-encoder-queue.json"
+    },
+    {
+      "name": "MIDI.Time",
+      "id": "d2db2d9d16961448",
+      "file": "midi-time.json"
+    },
+    {
+      "name": "MIDI.Time.Generic_Clock",
+      "id": "61d937a334769567",
+      "file": "midi-time-generic_clock.json"
+    },
+    {
+      "name": "Midi_Config",
+      "id": "63d66b1b36099f1d",
+      "file": "midi_config.json"
+    }
+  ]
+}

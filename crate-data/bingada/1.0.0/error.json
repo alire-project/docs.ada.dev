@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "bingada",
+  "version": "1.0.0",
+  "failed_at": "2026-03-03T17:53:48Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

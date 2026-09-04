@@ -1,0 +1,118 @@
+{
+  "schema_version": "1",
+  "crate": "usb_embedded",
+  "version": "1.0.1",
+  "documented_at": "2026-03-07T02:49:12Z",
+  "description": "An Ada USB stack for embedded devices",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "usb",
+    "hid",
+    "midi",
+    "nostd"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/usb_embedded",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/usb_embedded",
+    "host": "github",
+    "commit": "dc00efac0269cfc8970abde37b58f0167de6cbe4"
+  },
+  "dependencies": [
+    {
+      "crate": "bbqueue",
+      "version": "^1.0.0"
+    },
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "USB",
+      "id": "04b961957b4302de",
+      "file": "usb.json"
+    },
+    {
+      "name": "USB.Device",
+      "id": "198a086321a4d3ca",
+      "file": "usb-device.json"
+    },
+    {
+      "name": "USB.Device.HID",
+      "id": "140ded07a505c0bc",
+      "file": "usb-device-hid.json"
+    },
+    {
+      "name": "USB.Device.HID.Gamepad",
+      "id": "ceaefc019f170ac2",
+      "file": "usb-device-hid-gamepad.json"
+    },
+    {
+      "name": "USB.Device.HID.Joystick",
+      "id": "19d1ae098f517eb8",
+      "file": "usb-device-hid-joystick.json"
+    },
+    {
+      "name": "USB.Device.HID.Keyboard",
+      "id": "78d458627bd4a049",
+      "file": "usb-device-hid-keyboard.json"
+    },
+    {
+      "name": "USB.Device.HID.Mouse",
+      "id": "5539b8e2dcdf2318",
+      "file": "usb-device-hid-mouse.json"
+    },
+    {
+      "name": "USB.Device.MIDI",
+      "id": "06f7bf6c5f377806",
+      "file": "usb-device-midi.json"
+    },
+    {
+      "name": "USB.Device.Serial",
+      "id": "19b5af48fd3dbd35",
+      "file": "usb-device-serial.json"
+    },
+    {
+      "name": "USB.HAL",
+      "id": "5d0bd24640cab52b",
+      "file": "usb-hal.json"
+    },
+    {
+      "name": "USB.HAL.Device",
+      "id": "28d2bf8a9f525c80",
+      "file": "usb-hal-device.json"
+    },
+    {
+      "name": "USB.Lang",
+      "id": "1f62855046a0ea04",
+      "file": "usb-lang.json"
+    },
+    {
+      "name": "USB.Logging",
+      "id": "7a91cb3e9762a1f9",
+      "file": "usb-logging.json"
+    },
+    {
+      "name": "USB.Logging.Device",
+      "id": "57c566cd2621ca86",
+      "file": "usb-logging-device.json"
+    },
+    {
+      "name": "USB.Utils",
+      "id": "e6599d32c9b5483e",
+      "file": "usb-utils.json"
+    },
+    {
+      "name": "Usb_Embedded_Config",
+      "id": "7228d6f982c7a5a3",
+      "file": "usb_embedded_config.json"
+    }
+  ]
+}

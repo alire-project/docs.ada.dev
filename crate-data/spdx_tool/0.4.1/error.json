@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "spdx_tool",
+  "version": "0.4.1",
+  "failed_at": "2026-03-06T02:59:24Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

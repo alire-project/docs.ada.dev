@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "lispcli",
+  "version": "0.1.1",
+  "documented_at": "2026-03-04T16:55:59Z",
+  "description": "Simple program for exploring tiny lisp",
+  "long_description": "This is a simple example of embedding Lisp to provide a REPL where you\ncan try various Lisp functions.  It can also be modified to test out\nLisp extensions.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "lisp"
+  ],
+  "website": "https://github.com/BrentSeidel/Ada-Lisp",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/Ada-Lisp",
+    "host": "github",
+    "commit": "9f5f0c378868994a2de3ab757681c2a880b9ed8d",
+    "subdir": "cli/"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "bbs_lisp",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "new_line",
+      "id": "78f9d39920b164ee",
+      "file": "new_line.json"
+    }
+  ]
+}

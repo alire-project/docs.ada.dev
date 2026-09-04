@@ -1,0 +1,120 @@
+{
+  "schema_version": "1",
+  "crate": "portable_minimal_ada_rts",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T03:01:18Z",
+  "description": "Portable Minimal Ada Runtime Library",
+  "authors": [
+    "J. German Rivera"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "rts"
+  ],
+  "website": "https://github.com/jgrivera67/portable_minimal_ada_rts",
+  "repository": {
+    "url": "https://github.com/jgrivera67/portable_minimal_ada_rts",
+    "host": "github",
+    "commit": "77d16d76fec0ce8c791644fb88044317124679f9"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Ada",
+      "id": "fdee430d40bd57de",
+      "file": "ada.json"
+    },
+    {
+      "name": "Ada.Assertions",
+      "id": "f14ff5e258903851",
+      "file": "ada-assertions.json"
+    },
+    {
+      "name": "Ada.Exceptions",
+      "id": "810723b594d2ace2",
+      "file": "ada-exceptions.json"
+    },
+    {
+      "name": "GNAT",
+      "id": "6d0ed7a7e79fbdcd",
+      "file": "gnat.json"
+    },
+    {
+      "name": "GNAT.Source_Info",
+      "id": "49141f88d566bbec",
+      "file": "gnat-source_info.json"
+    },
+    {
+      "name": "Interfaces",
+      "id": "0274021b904cdec6",
+      "file": "interfaces.json"
+    },
+    {
+      "name": "Interfaces.C",
+      "id": "a1821cabe66a1908",
+      "file": "interfaces-c.json"
+    },
+    {
+      "name": "Portable_Minimal_Ada_Rts",
+      "id": "066e7af53404edae",
+      "file": "portable_minimal_ada_rts.json"
+    },
+    {
+      "name": "Portable_Minimal_Ada_Rts_Config",
+      "id": "eb9b5e5c002f10d0",
+      "file": "portable_minimal_ada_rts_config.json"
+    },
+    {
+      "name": "System",
+      "id": "bbc5e661e106c6dc",
+      "file": "system.json"
+    },
+    {
+      "name": "System.Address_To_Access_Conversions",
+      "id": "79e7cc751053218d",
+      "file": "system-address_to_access_conversions.json"
+    },
+    {
+      "name": "System.Assertions",
+      "id": "fa3c29f20750844b",
+      "file": "system-assertions.json"
+    },
+    {
+      "name": "System.Fat_Flt",
+      "id": "e9ab43c4a6a7e027",
+      "file": "system-fat_flt.json"
+    },
+    {
+      "name": "System.Fat_Gen",
+      "id": "63fe50cfbe3597f6",
+      "file": "system-fat_gen.json"
+    },
+    {
+      "name": "System.Fat_LFlt",
+      "id": "fd727197da7551e1",
+      "file": "system-fat_lflt.json"
+    },
+    {
+      "name": "System.Fat_LLF",
+      "id": "294bdb6fa768ecd4",
+      "file": "system-fat_llf.json"
+    },
+    {
+      "name": "System.Machine_Code",
+      "id": "ee8511a7b043b74a",
+      "file": "system-machine_code.json"
+    },
+    {
+      "name": "System.Storage_Elements",
+      "id": "a89cf829e01dbec1",
+      "file": "system-storage_elements.json"
+    },
+    {
+      "name": "System.Unsigned_Types",
+      "id": "ce7adb8ba0c3c6f4",
+      "file": "system-unsigned_types.json"
+    }
+  ]
+}

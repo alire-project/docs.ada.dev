@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "zbtest",
+  "version": "2.0.1",
+  "failed_at": "2026-08-24T02:44:07Z",
+  "stage": "locate",
+  "message": "Could not find crate root for zbtest=2.0.1 in /tmp/gnatdoc_arqch3_u"
+}

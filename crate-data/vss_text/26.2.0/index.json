@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "crate": "vss_text",
+  "version": "26.2.0",
+  "documented_at": "2026-07-23T03:16:54Z",
+  "description": "A high level Unicode text processing library",
+  "long_description": "This crate is based on [`VSS`](https://github.com/AdaCore/VSS) (Virtual\nString System). VSS has been split into two crates:\n\n* [`vss_text`](https://alire.ada.dev/crates/vss_text) (this crate): a library\n  for Unicode text processing.\n* [`vss_extra`](https://alire.ada.dev/crates/vss_extra): libraries for handling\n  JSON, Regexp, XML and other features based on `vss_text`.\n\nSignificant changes are planned in `vss_text` with the goal to make it a\nhigh-quality, high-performance library suitable for a wide range of\napplications.\n\nThe changes include the following (non-exhaustive list):\n\n* API Changes\n  * Introduce an immutable string type.\n  * Repurpose the mutable `Virtual_String` type to a string builder type.\n  * Possibly rename the root package `VSS` to a new more appropriate name. Alire crate,\n    GPR project and repository names might change accordingly.\n* (done) Drop the support of multiple internal encodings in favor of a single internal\n  encoding (likely UTF-8) for improved performance.\n",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "unicode",
+    "string",
+    "text"
+  ],
+  "website": "https://github.com/AdaCore/vss-text",
+  "repository": {
+    "url": "https://github.com/AdaCore/vss-text",
+    "host": "github",
+    "commit": "c021ca339067e4a9c263a85559e6b2b2dd783199"
+  },
+  "dependencies": [],
+  "units": []
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adacl_serial — Ada/SPARK Documentation</title>
+  <meta name="description" content="SPARK-friendly character and string I/O helpers for GNAT serial ports">
+  <meta name="keywords" content="Ada, SPARK, Alire, adacl_serial, library, serial, io, streams, communication, spark, ada2022, Adacl_Serial_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "adacl_serial",
+"version": "7.2.1",  "description": "SPARK-friendly character and string I/O helpers for GNAT serial ports",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/adacl_serial/",
+  "codeRepository": "https://sourceforge.net/projects/adacl"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">adacl_serial</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>adacl_serial</h1>
+    <span class="version-tag">7.2.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="7.2.1">7.2.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="7.2.1" selected>7.2.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">SPARK-friendly character and string I/O helpers for GNAT serial ports</p>
+
+  <div class="long-description"><p>Thin, SPARK-friendly helpers for character and string I/O on a<br />
+GNAT.Serial_Communications port.</p>
+<p>The package is deliberately compact - it contains only AdaCL.Serial_IO.</p>
+<p>It extends GNAT.Serial_Communications.Serial_Port (itself a descendant of Ada.Streams.Root_Stream_Type) with a<br />
+null-record derivation, turning the type into a true class.  Consequently all operations can be written with the<br />
+convenient Class.Method syntax (Port.Get, Port.Put_Line, Port.Expect, &hellip;).</p>
+<p>Provided facilities:<br />
+* Conversion helpers between Stream_Element / Stream_Element_Array and Character / String<br />
+* Classic Get / Put / Get_Line / Put_Line operations<br />
+* High-level Expect procedures (discard or capture skipped text until a given sequence arrives)<br />
+* Full SPARK contracts; the package is proven to SPARK bronze level</p>
+<p>Intended for console-style protocols used by classic and modern retro calculators (SwissMicros DM-series, HP-IL<br />
+emulators, etc.).</p>
+<p>Licensed under the GNU Library General Public License version 3 (or later).<br />
+Integrates with the Ada Class Library (AdaCL).</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/adacl">https://sourceforge.net/projects/adacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">library</span><span class="tag">serial</span><span class="tag">io</span><span class="tag">streams</span><span class="tag">communication</span><span class="tag">spark</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^7.2</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_serial/7.2.1/adacl-serial_io/">AdaCL.Serial_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_serial/7.2.1/adacl_serial_config/">Adacl_Serial_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-09-04.
+    </p>
+  </footer>
+
+</body>
+</html>
