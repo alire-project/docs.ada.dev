@@ -1,0 +1,82 @@
+{
+  "schema_version": "1",
+  "crate": "swiss_micros_tools",
+  "version": "1.8.11",
+  "documented_at": "2026-09-22T02:22:50Z",
+  "description": "Cross-platform tools to supercharge your Swiss Micros experience",
+  "long_description": "## Swiss Micros Tools\n\nStep into the golden era of handheld computing with **swiss_micros_tools**, a versatile suite that turbocharges your\nSwissMicros calculator adventures!  Unlike workflows shackled to a serial terminal, this toolkit puts the three most\nimportant USB-serial chores on the command line - no eyeballing a watch and no precision Enter-key gymnastics.\n\nCurrently implemented is **dm_set_time**: it sets the calculator clock second-precise from the host. Planned companions\nare **dm_receive** and **dm_send**, completing the trio so you can move programs and data without opening a terminal at\nall.\n\nUnlike many tools shackled to Windows, this toolkit runs flawlessly on **macOS**, **Linux**, and **Windows**. Built with\nthe precision of **Ada 2022** for unshakeable reliability, the tools talk to the calculator over the USB serial link\nwith the same care SwissMicros put into the hardware.\n\n### Getting started\n\nPut the calculator into **SERIAL CONSOLE** mode before starting any of the tools. All three commands accept the same two\noptions so you can find your feet immediately:\n\n```\n    -d Device   --device=Device       device file (unix) or name (windows)\n                                      of the USB serial device.\n                DM_SERIAL_DEVICE=     set via environment variable\n\n    -?          --help                this help\n```\n\n### Key Features\n\n* **dm_set_time** *(available now)*: Set the calculator clock to the host time, second-precise - no watching a second\n  hand and stabbing Enter.\n* **dm_receive** *(planned)*: Pull programs and data from the calculator without a terminal session.\n* **dm_send** *(planned)*: Push programs and data to the calculator without a terminal session.\n* **Cross-Platform Power**: Runs natively on macOS, Linux, and Windows - like a portable Ada generic, no OS exceptions.\n* **Open Source**: Hosted on [SourceForge](https://calculator-scripts.sourceforge.io/hp41cx-tools/), ready for you to\n  hack, extend, and share with the retro computing community.\n\n### Why You'll Love It\n\nSwissMicros calculators already feel like the best of the 1980s, rebuilt for today. **swiss_micros_tools** removes the\nlast awkward step: talking to them through a raw serial console when all you wanted was the time set, a dump saved, or a\nprogram loaded. Join the retro computing revolution - on any desktop OS, and without a terminal in sight.\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "calculator",
+    "tools",
+    "retrocomputing",
+    "ada-2022",
+    "dm16l",
+    "cross-platform"
+  ],
+  "website": "https://calculator-scripts.sourceforge.io/hp41cx-tools/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/calculator-scripts",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^8.0"
+    },
+    {
+      "crate": "adacl_desktop",
+      "version": "^8.0"
+    },
+    {
+      "crate": "adacl_regexp",
+      "version": "^8.0"
+    },
+    {
+      "crate": "adacl_serial",
+      "version": "^8.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "DM_Receive",
+      "id": "b9de71b2dad8c2f0",
+      "file": "dm_receive.json"
+    },
+    {
+      "name": "DM_Set_Time",
+      "id": "1fe60df5b609adbb",
+      "file": "dm_set_time.json"
+    },
+    {
+      "name": "DM_Set_Time.Command_Line",
+      "id": "2d789d98d0d7d54c",
+      "file": "dm_set_time-command_line.json"
+    },
+    {
+      "name": "Swiss_Micros",
+      "id": "e97a095a11b50059",
+      "file": "swiss_micros.json"
+    },
+    {
+      "name": "Swiss_Micros.Command_Line",
+      "id": "134f5ca882dfedda",
+      "file": "swiss_micros-command_line.json"
+    },
+    {
+      "name": "Swiss_Micros.Console_IO",
+      "id": "efccbb87d92fcda9",
+      "file": "swiss_micros-console_io.json"
+    },
+    {
+      "name": "Swiss_Micros_Tools_Config",
+      "id": "c719f420554d87c7",
+      "file": "swiss_micros_tools_config.json"
+    }
+  ]
+}
