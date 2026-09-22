@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c08_serial_communication",
+  "version": "1.9.0",
+  "documented_at": "2026-09-22T02:22:43Z",
+  "description": "Chapter 8: Serial Communication (UART, USB, SWD)",
+  "long_description": "Learn three different ways to perform serial communication with the\nRaspberry Pi Pico using Ada - SWD semihosting, UART and USB CDC-ACM.\n\nThree practical serial output methods together with complete example programs for sending and receiving data.\n\nContained in Chapter 08 are:\n\n1. sketch_08_1_serial_print.adb\t- Chapter 8.1 Print on all three destinations\n2. sketch_08_2_serial_rw.adb\t- Chapter 8.2 Read data from all three destinations\n\nRead the full tutorial at [Chapter 8: Serial Communication (UART, USB,\nSWD)](https://pi-ada-tutorial.sourceforge.io/pico_ada_c08_serial_communication), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_doc/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c08_serial_communication/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c08_serial_communication",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_rp2040",
+      "version": "^15.4"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.9"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C08_Serial_Communication_Config",
+      "id": "f2d12749df3ae22a",
+      "file": "pico_ada_c08_serial_communication_config.json"
+    }
+  ]
+}
