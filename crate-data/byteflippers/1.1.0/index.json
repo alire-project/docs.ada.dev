@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "byteflippers",
+  "version": "1.1.0",
+  "documented_at": "2026-03-04T02:53:49Z",
+  "description": "Signed/modular types for system, big and little endian reading/writing.",
+  "long_description": "Modular and signed types to convert between big and little endian, such as 50 (0x00000032) to 838860800 (0x32000000). Currently supported are 16/24/[32/64/128]-bit sized signed/modular/fp numeric types for big/little endian respectively, as well as system-endian dependent base types for 8/16/24/[32/64/128]-bit signed/modular/fp numeric types (for both categories: numbers in square brackets indicate the supported sizes of floating-points (fp.)))\n\nAll types are compatible with `Interfaces` operators, such as `Shift_Left`, `Shift_Right`, `Rotate_Left`, `Rotate_Right`, as well as (where applicable) `xor`, `and`, `or`.\n\n**NOTE:** This library depends on the GNAT compiler, as it depends on the `Provide_Shift_Operators` pragma. If you need support for another compiler, please let me know, and I'll try to support it.\n\n## Example Use\n\n```ada\nwith Byteflippers;\n\nwith Ada.Text_IO;\nwith Ada.Streams.Stream_IO;\nuse  Ada.Streams.Stream_IO;\n\nprocedure Scratch is\n    package Endians_u32 renames Byteflippers.Endians_Unsigned_32;\n\n    F : File_Type;\n    S : Stream_Access;\nbegin\n   Create (F, Name => \"test.bin\");\n   S := Stream (F);\n   Byteflippers.Signed_32'Write (S, 1234);\n   Endians_u32.Little_Endian'Write (S, 5678);\n   Endians_u32.Little_Endian'Write (S, 9101);\n   Endians_u32.Big_Endian'Write (S, 1213);\n   Endians_u32.Big_Endian'Write (S, 1415);\n\n   Close (F);   \n   Open (F, In_File, \"test.bin\");\n   S := Stream (F);\n\n   Ada.Text_IO.Put_Line (\"# System Endian Test\");\n   Ada.Text_IO.Put_Line (Byteflippers.Signed_32'Input (S)'Image);\n   Ada.Text_IO.Put_Line (\"# Little Endian Test (System / Little)\");\n   Ada.Text_IO.Put_Line (Byteflippers.Signed_32'Input (S)'Image);\n   Ada.Text_IO.Put_Line (Endians_u32.Little_Endian'Input (S)'Image);\n   Ada.Text_IO.Put_Line (\"# Big Endian Test (System / Big)\");\n   Ada.Text_IO.Put_Line (Byteflippers.Signed_32'Input (S)'Image);\n   Ada.Text_IO.Put_Line (Endians_u32.Big_Endian'Input (S)'Image);\nend Scratch;\n```\n",
+  "authors": [
+    "Miko Elbrecht"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "byte",
+    "endian",
+    "flip",
+    "swap",
+    "msb",
+    "lsb",
+    "big-endian",
+    "little-endian"
+  ],
+  "website": "https://github.com/Bread-Experts-Group/byteflippers",
+  "repository": {
+    "url": "https://github.com/Bread-Experts-Group/byteflippers",
+    "host": "github",
+    "commit": "6a0c43ead736c3cece4c176f69fcebe0ca1d4b64"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Byteflippers",
+      "id": "8ee9a87a5ae47c42",
+      "file": "byteflippers.json"
+    },
+    {
+      "name": "Byteflippers_Config",
+      "id": "98ba1a7e6bd857c1",
+      "file": "byteflippers_config.json"
+    }
+  ]
+}

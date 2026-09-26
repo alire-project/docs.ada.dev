@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"6fec48bc2e57f8ee","name":"Agpl.Interfaces.C","qualified_name":"Agpl.Interfaces.C","kind":"ada_package","location":{"file":"src/agpl-interfaces-c.ads","line":1,"column":9},"code":"package Agpl.Interfaces.C","documentation":{"description":"Types for interfacing with C/C++ commonly used across AGPL"}}

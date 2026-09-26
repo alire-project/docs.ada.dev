@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pico_ada_c08_serial_communication — Ada/SPARK Documentation</title>
+  <meta name="description" content="Chapter 8: Serial Communication (UART, USB, SWD)">
+  <meta name="keywords" content="Ada, SPARK, Alire, pico_ada_c08_serial_communication, raspberry, pi, pico, rp2040, tasking, light-tasking, ada2022, embedded, Pico_Ada_C08_Serial_Communication_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "pico_ada_c08_serial_communication",
+"version": "1.9.0",  "description": "Chapter 8: Serial Communication (UART, USB, SWD)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/pico_ada_c08_serial_communication/",
+  "codeRepository": "https://sourceforge.net/projects/pi-ada-tutorial"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">pico_ada_c08_serial_communication</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>pico_ada_c08_serial_communication</h1>
+    <span class="version-tag">1.9.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.9.0">1.9.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.9.0" selected>1.9.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Chapter 8: Serial Communication (UART, USB, SWD)</p>
+
+  <div class="long-description"><p>Learn three different ways to perform serial communication with the<br />
+Raspberry Pi Pico using Ada - SWD semihosting, UART and USB CDC-ACM.</p>
+<p>Three practical serial output methods together with complete example programs for sending and receiving data.</p>
+<p>Contained in Chapter 08 are:</p>
+<ol>
+<li>sketch_08_1_serial_print.adb - Chapter 8.1 Print on all three destinations</li>
+<li>sketch_08_2_serial_rw.adb    - Chapter 8.2 Read data from all three destinations</li>
+</ol>
+<p>Read the full tutorial at <a href="https://pi-ada-tutorial.sourceforge.io/pico_ada_c08_serial_communication">Chapter 8: Serial Communication (UART, USB,<br />
+SWD)</a>, <a href="https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_doc/">GNATdoc<br />
+documentation</a>, <a href="https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c08_serial_communication/">SourceForge<br />
+repository</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/pi-ada-tutorial">https://sourceforge.net/projects/pi-ada-tutorial</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">raspberry</span><span class="tag">pi</span><span class="tag">pico</span><span class="tag">rp2040</span><span class="tag">tasking</span><span class="tag">light-tasking</span><span class="tag">ada2022</span><span class="tag">embedded</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/embedded_rp2040/">embedded_rp2040</a>
+        <span class="dep-version">^15.4</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_bsp/">pico_bsp</a>
+        <span class="dep-version">^2.2</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_xbsp/">pico_xbsp</a>
+        <span class="dep-version">^1.9</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rp2040_hal/">rp2040_hal</a>
+        <span class="dep-version">^2.7.1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_ada_c08_serial_communication/1.9.0/pico_ada_c08_serial_communication_config/">Pico_Ada_C08_Serial_Communication_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-09-26.
+    </p>
+  </footer>
+
+</body>
+</html>

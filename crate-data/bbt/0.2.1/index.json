@@ -1,0 +1,80 @@
+{
+  "schema_version": "1",
+  "crate": "bbt",
+  "version": "0.2.1",
+  "documented_at": "2026-03-13T02:55:06Z",
+  "description": "Black box test runner",
+  "authors": [
+    "Lionel Draghi"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "test",
+    "testing",
+    "gherkin",
+    "markdown",
+    "tdd",
+    "bdd"
+  ],
+  "website": "https://github.com/LionelDraghi/bbt",
+  "repository": {
+    "url": "https://github.com/LionelDraghi/bbt",
+    "host": "github",
+    "commit": "826f44b35eda9140ffb78b406e6f19a5129b346e"
+  },
+  "dependencies": [
+    {
+      "crate": "ansiada",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBT",
+      "id": "f37f59c097509edb",
+      "file": "bbt.json"
+    },
+    {
+      "name": "BBT.Created_File_List",
+      "id": "9b6174e00f5ecab2",
+      "file": "bbt-created_file_list.json"
+    },
+    {
+      "name": "Bbt_Config",
+      "id": "05c7c9b1f9354ce0",
+      "file": "bbt_config.json"
+    },
+    {
+      "name": "File_Utilities",
+      "id": "c4377efc3d8350e0",
+      "file": "file_utilities.json"
+    },
+    {
+      "name": "List_Image",
+      "id": "1e7734a247d2f8c4",
+      "file": "list_image.json"
+    },
+    {
+      "name": "List_Image.Cursors_Signature",
+      "id": "699f43fa8e0c0f17",
+      "file": "list_image-cursors_signature.json"
+    },
+    {
+      "name": "List_Image.Image_Style",
+      "id": "111045e87304def1",
+      "file": "list_image-image_style.json"
+    },
+    {
+      "name": "List_Image.Unix_Predefined_Styles",
+      "id": "a69a2d912108d133",
+      "file": "list_image-unix_predefined_styles.json"
+    },
+    {
+      "name": "Text_Utilities",
+      "id": "18c776c13f4f0a64",
+      "file": "text_utilities.json"
+    }
+  ]
+}

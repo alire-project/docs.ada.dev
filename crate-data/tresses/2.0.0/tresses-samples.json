@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"tresses","version":"2.0.0","id":"951fe5ecc10b44b3","name":"Tresses.Samples","qualified_name":"Tresses.Samples","kind":"ada_package","location":{"file":"src/tresses-samples.ads","line":1,"column":9},"code":"package Tresses.Samples"}

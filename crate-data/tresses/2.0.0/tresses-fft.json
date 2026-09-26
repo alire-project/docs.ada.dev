@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"tresses","version":"2.0.0","id":"bba6cf0a0e8d067e","name":"Tresses.FFT","qualified_name":"Tresses.FFT","kind":"ada_package","location":{"file":"src/tresses-fft.ads","line":1,"column":9},"code":"package Tresses.FFT"}

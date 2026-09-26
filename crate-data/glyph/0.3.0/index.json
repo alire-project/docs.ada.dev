@@ -1,0 +1,114 @@
+{
+  "schema_version": "1",
+  "crate": "glyph",
+  "version": "0.3.0",
+  "documented_at": "2026-08-18T02:41:14Z",
+  "description": "Portable graphics framework for embedded Ada systems",
+  "authors": [
+    "Lokesh Panditi <lokesh.panditi.29@gmail.com>"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "graphics",
+    "embedded",
+    "oled",
+    "ssd1306",
+    "rp2040"
+  ],
+  "website": "https://github.com/thirstymelon/glyph",
+  "repository": {
+    "url": "https://github.com/thirstymelon/glyph",
+    "host": "github",
+    "commit": "78db1887e73a49325864bbbeaf4f0bd5540f2f7a"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Glyph",
+      "id": "fd1890afaf4b6544",
+      "file": "glyph.json"
+    },
+    {
+      "name": "Glyph.Algorithms",
+      "id": "f723e21c32df13a0",
+      "file": "glyph-algorithms.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Bresenham",
+      "id": "a02e4292dc8ca299",
+      "file": "glyph-algorithms-bresenham.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Liang_Barsky",
+      "id": "8bae02a341f42c53",
+      "file": "glyph-algorithms-liang_barsky.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Rectangle",
+      "id": "8079cf157eb2fec4",
+      "file": "glyph-algorithms-rectangle.json"
+    },
+    {
+      "name": "Glyph.Canvas",
+      "id": "ed707c2c334077de",
+      "file": "glyph-canvas.json"
+    },
+    {
+      "name": "Glyph.Controllers",
+      "id": "b4e99bffbd9649b4",
+      "file": "glyph-controllers.json"
+    },
+    {
+      "name": "Glyph.Controllers.SSD1306",
+      "id": "1989b224996268e1",
+      "file": "glyph-controllers-ssd1306.json"
+    },
+    {
+      "name": "Glyph.Controllers.SSD1306.Driver",
+      "id": "56515567dba75569",
+      "file": "glyph-controllers-ssd1306-driver.json"
+    },
+    {
+      "name": "Glyph.Displays",
+      "id": "81841a5072754e95",
+      "file": "glyph-displays.json"
+    },
+    {
+      "name": "Glyph.Displays.SSD1306_128x64_I2C",
+      "id": "cf93cdc4b3b42182",
+      "file": "glyph-displays-ssd1306_128x64_i2c.json"
+    },
+    {
+      "name": "Glyph.Framebuffer",
+      "id": "3d6d37b468b192d8",
+      "file": "glyph-framebuffer.json"
+    },
+    {
+      "name": "Glyph.Layouts",
+      "id": "bee583bc22e7bf49",
+      "file": "glyph-layouts.json"
+    },
+    {
+      "name": "Glyph.Layouts.SSD1306_Page",
+      "id": "08bd26edcb468c67",
+      "file": "glyph-layouts-ssd1306_page.json"
+    },
+    {
+      "name": "Glyph.Pixel_Formats",
+      "id": "c2c2ee05af70cbce",
+      "file": "glyph-pixel_formats.json"
+    },
+    {
+      "name": "Glyph.Transports",
+      "id": "9bca0ffe5b6bd225",
+      "file": "glyph-transports.json"
+    },
+    {
+      "name": "Glyph.Types",
+      "id": "1a47445ccbf4d280",
+      "file": "glyph-types.json"
+    }
+  ]
+}

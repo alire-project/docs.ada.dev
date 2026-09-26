@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "tiny_text",
+  "version": "1.5.1",
+  "documented_at": "2026-03-06T03:00:22Z",
+  "description": "Low resolution bitmap font with a small memory footprint",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "font",
+    "hal",
+    "bitmap",
+    "text"
+  ],
+  "website": "https://github.com/JeremyGrosser/tiny_text",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/tiny_text",
+    "host": "github",
+    "commit": "afa181ba9c0e463d093af40f0817153cdbf80344"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Generic_Tiny_Text",
+      "id": "042e14ee54683df6",
+      "file": "generic_tiny_text.json"
+    },
+    {
+      "name": "Tiny_Text",
+      "id": "94bb393d6fd1463f",
+      "file": "tiny_text.json"
+    },
+    {
+      "name": "Tiny_Text_Config",
+      "id": "b8848403f30b9efd",
+      "file": "tiny_text_config.json"
+    }
+  ]
+}

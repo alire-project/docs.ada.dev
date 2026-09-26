@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adacl_desktop — Ada/SPARK Documentation</title>
+  <meta name="description" content="AdaCL desktop: Getopt, strings, calendar, tracing, queues, pointers">
+  <meta name="keywords" content="Ada, SPARK, Alire, adacl_desktop, library, command-line, trace, logging, string, container, smart-pointer, ada2022, Adacl_Desktop_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "adacl_desktop",
+"version": "8.0.0",  "description": "AdaCL desktop: Getopt, strings, calendar, tracing, queues, pointers",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/adacl_desktop/",
+  "codeRepository": "https://sourceforge.net/projects/adacl"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">adacl_desktop</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>adacl_desktop</h1>
+    <span class="version-tag">8.0.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="8.0.0">8.0.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="8.0.0" selected>8.0.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">AdaCL desktop: Getopt, strings, calendar, tracing, queues, pointers</p>
+
+  <div class="long-description"><p>Ada Class Library desktop crate for Ada 2022.</p>
+<p>This crate holds the former <code>adacl</code> desktop API. Use it for hosted<br />
+applications that need command-line handling, wide-character text,<br />
+diagnostics, queues, or smart pointers. It depends on the SPARK-proven<br />
+<code>adacl</code> core.</p>
+<p>Features:</p>
+<ul>
+<li>Getopt: command-line argument parser with wide character support</li>
+<li>Strings: utilities for String, Wide_String, and Wide_Wide_String</li>
+<li>Calendar: time and date utilities with wide character support</li>
+<li>Tracing: diagnostic trace utility with wide character support</li>
+<li>Protected Queue: finish, wait, and abort operations</li>
+<li>Smart Pointers:</li>
+<li>Reference-counted pointers</li>
+<li>Unique pointers (C++-style)</li>
+<li>Shared pointers (C++-style)</li>
+</ul>
+<p>Source: <a href="https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_desktop/src/">SourceForge</a><br />
+Documentation: <a href="https://adacl.sourceforge.net/gnatdoc/adacl_desktop/index.html">GNATdoc</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/adacl">https://sourceforge.net/projects/adacl</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">library</span><span class="tag">command-line</span><span class="tag">trace</span><span class="tag">logging</span><span class="tag">string</span><span class="tag">container</span><span class="tag">smart-pointer</span><span class="tag">ada2022</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-base/">AdaCL.Base</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-calendar/">AdaCL.Calendar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-command_line/">AdaCL.Command_Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-command_line-getopt/">AdaCL.Command_Line.GetOpt</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-limited_base/">AdaCL.Limited_Base</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-os/">AdaCL.OS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-os-low_level/">AdaCL.OS.Low_Level</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer/">AdaCL.Pointer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer-element/">AdaCL.Pointer.Element</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer-holder/">AdaCL.Pointer.Holder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer-shared/">AdaCL.Pointer.Shared</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer-shared_with_delete/">AdaCL.Pointer.Shared_With_Delete</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer-unique/">AdaCL.Pointer.Unique</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-pointer-unique_with_delete/">AdaCL.Pointer.Unique_With_Delete</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-queue/">AdaCL.Queue</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-queue-interfaces/">AdaCL.Queue.Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-queue-protect/">AdaCL.Queue.Protect</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-strings/">AdaCL.Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-strings-bin/">AdaCL.Strings.Bin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-strings-dec/">AdaCL.Strings.Dec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-strings-hex/">AdaCL.Strings.Hex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-strings-io/">AdaCL.Strings.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-trace/">AdaCL.Trace</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_strings/">AdaCL.Wide_Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_strings-bin/">AdaCL.Wide_Strings.Bin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_strings-dec/">AdaCL.Wide_Strings.Dec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_strings-hex/">AdaCL.Wide_Strings.Hex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_strings-io/">AdaCL.Wide_Strings.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_wide_strings/">AdaCL.Wide_Wide_Strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_wide_strings-bin/">AdaCL.Wide_Wide_Strings.Bin</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_wide_strings-dec/">AdaCL.Wide_Wide_Strings.Dec</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_wide_strings-hex/">AdaCL.Wide_Wide_Strings.Hex</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl-wide_wide_strings-io/">AdaCL.Wide_Wide_Strings.IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/8.0.0/adacl_desktop_config/">Adacl_Desktop_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-09-26.
+    </p>
+  </footer>
+
+</body>
+</html>

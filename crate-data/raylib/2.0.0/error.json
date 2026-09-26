@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "raylib",
+  "version": "2.0.0",
+  "failed_at": "2026-05-12T03:04:04Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

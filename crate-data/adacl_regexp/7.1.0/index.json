@@ -1,0 +1,101 @@
+{
+  "schema_version": "1",
+  "crate": "adacl_regexp",
+  "version": "7.1.0",
+  "documented_at": "2026-03-03T17:49:17Z",
+  "description": "AdaCL: Regex and SPITBOL Patterns with Wide Character Support",
+  "long_description": "Regular expression and SPITBOL pattern matching for Ada 2022, with wide character support.\n\nFeatures:\n- Regular Expressions:\n  - Generic implementation for any discrete element array\n  - Instantiations for String, Wide_String, and Wide_Wide_String\n- SPITBOL Patterns:\n  - Pattern construction and matching, inspired by Macro-SPITBOL (Robert Dewar)\n  - Supports String, Wide_String, and Wide_Wide_String\n- Forked from GNAT.Regexp and GNAT.Spitbol with enhanced wide and wide-wide character support\n\nLicensed under GPL-3.0-or-later. Integrates with the Ada Class Library (AdaCL).\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_regexp/src/)\nDocumentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl_regexp/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "strings",
+    "wide-strings",
+    "search",
+    "regexp",
+    "unicode",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^7.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AdaCL.Generic_Strings",
+      "id": "f3edee744be2e2b2",
+      "file": "adacl-generic_strings.json"
+    },
+    {
+      "name": "AdaCL.Generic_Strings.Hash",
+      "id": "d579ffaa33e9aa8d",
+      "file": "adacl-generic_strings-hash.json"
+    },
+    {
+      "name": "AdaCL.Generic_Strings.Regexp",
+      "id": "90e06aa645267240",
+      "file": "adacl-generic_strings-regexp.json"
+    },
+    {
+      "name": "AdaCL.Strings.Spitbol",
+      "id": "4c08027e6f65bbbe",
+      "file": "adacl-strings-spitbol.json"
+    },
+    {
+      "name": "AdaCL.Strings.Spitbol.Patterns",
+      "id": "ab6e20e9cc91ad4a",
+      "file": "adacl-strings-spitbol-patterns.json"
+    },
+    {
+      "name": "AdaCL.Strings.Spitbol.Table",
+      "id": "b805c095f28ade32",
+      "file": "adacl-strings-spitbol-table.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings.Spitbol",
+      "id": "abc94c1395c37578",
+      "file": "adacl-wide_strings-spitbol.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings.Spitbol.Patterns",
+      "id": "839168efae8d19fb",
+      "file": "adacl-wide_strings-spitbol-patterns.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings.Spitbol.Table",
+      "id": "9644904589e8849d",
+      "file": "adacl-wide_strings-spitbol-table.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings.Spitbol",
+      "id": "7afbfddbf4a1ef7e",
+      "file": "adacl-wide_wide_strings-spitbol.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings.Spitbol.Patterns",
+      "id": "e3c5eb1e8eecef16",
+      "file": "adacl-wide_wide_strings-spitbol-patterns.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings.Spitbol.Table",
+      "id": "80fc1e2eafd0ddd0",
+      "file": "adacl-wide_wide_strings-spitbol-table.json"
+    },
+    {
+      "name": "Adacl_Regexp_Config",
+      "id": "fad4956eceb2820a",
+      "file": "adacl_regexp_config.json"
+    }
+  ]
+}

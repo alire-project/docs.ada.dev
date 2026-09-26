@@ -1,0 +1,120 @@
+{
+  "schema_version": "1",
+  "crate": "ssh_protocol",
+  "version": "0.0.2",
+  "documented_at": "2026-07-16T03:01:01Z",
+  "description": "SSH protocol (RFC4251) core library",
+  "long_description": "The ssh_protocol library is an implementation of the SSH protocol version 2. It is designed as a protocol engine, without I/O, cryptography, or RNG in the core library.\n\nThe library implements the SSH transport layer (RFC 4253), user authentication (RFC 4252), and connection layer (RFC 4254), following the overall architecture defined in RFC 4251. It supports a modern, security-hardened algorithm set, which is supported by the cryptography backends such as libsodium and OpenSSL libcrypto.\n\nThe core library only uses static allocation, and does not use exceptions.\n",
+  "authors": [
+    "Iru Cai"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "ssh"
+  ],
+  "website": "https://codeberg.org/vimacs/ssh_protocol-ada",
+  "repository": {
+    "url": "https://codeberg.org/vimacs/ssh_protocol-ada",
+    "host": "codeberg"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SSH_Protocol",
+      "id": "912b19ad34ee6698",
+      "file": "ssh_protocol.json"
+    },
+    {
+      "name": "SSH_Protocol.Algorithm_Set",
+      "id": "cc46fe2fa8d5d3cb",
+      "file": "ssh_protocol-algorithm_set.json"
+    },
+    {
+      "name": "SSH_Protocol.Authentication",
+      "id": "257b20fee8d87a70",
+      "file": "ssh_protocol-authentication.json"
+    },
+    {
+      "name": "SSH_Protocol.Client_Sessions",
+      "id": "d0b607db62e02780",
+      "file": "ssh_protocol-client_sessions.json"
+    },
+    {
+      "name": "SSH_Protocol.Connection",
+      "id": "b39ace3156228958",
+      "file": "ssh_protocol-connection.json"
+    },
+    {
+      "name": "SSH_Protocol.Connection.Gen_Sessions",
+      "id": "bb27560620708582",
+      "file": "ssh_protocol-connection-gen_sessions.json"
+    },
+    {
+      "name": "SSH_Protocol.Crypto_Provider",
+      "id": "2fac1a6efa538ba2",
+      "file": "ssh_protocol-crypto_provider.json"
+    },
+    {
+      "name": "SSH_Protocol.Disconnect",
+      "id": "8bd91a32982c03d7",
+      "file": "ssh_protocol-disconnect.json"
+    },
+    {
+      "name": "SSH_Protocol.Kex_Crypto",
+      "id": "6aeb5486313f6c74",
+      "file": "ssh_protocol-kex_crypto.json"
+    },
+    {
+      "name": "SSH_Protocol.Message_Format",
+      "id": "f6be39566c80ec14",
+      "file": "ssh_protocol-message_format.json"
+    },
+    {
+      "name": "SSH_Protocol.Protocol_Dispatch",
+      "id": "8a8febe1f1805e09",
+      "file": "ssh_protocol-protocol_dispatch.json"
+    },
+    {
+      "name": "SSH_Protocol.Secure_Memory",
+      "id": "73bbc9f7d247e872",
+      "file": "ssh_protocol-secure_memory.json"
+    },
+    {
+      "name": "SSH_Protocol.Server_Sessions",
+      "id": "58e52f57b36deaa3",
+      "file": "ssh_protocol-server_sessions.json"
+    },
+    {
+      "name": "SSH_Protocol.Transport",
+      "id": "69b9b6a20de093b0",
+      "file": "ssh_protocol-transport.json"
+    },
+    {
+      "name": "SSH_Protocol.Transport.Encryption",
+      "id": "2a2249dce2328ef7",
+      "file": "ssh_protocol-transport-encryption.json"
+    },
+    {
+      "name": "SSH_Protocol.Transport.Kex",
+      "id": "9186a7c60e3ea3ff",
+      "file": "ssh_protocol-transport-kex.json"
+    },
+    {
+      "name": "SSH_Protocol.Transport.Kex_Curve25519",
+      "id": "b04c543b02b8ff3b",
+      "file": "ssh_protocol-transport-kex_curve25519.json"
+    },
+    {
+      "name": "SSH_Protocol.Transport.Kex_Hybrid",
+      "id": "f1a9b425d524dd20",
+      "file": "ssh_protocol-transport-kex_hybrid.json"
+    },
+    {
+      "name": "SSH_Protocol.Transport.MAC",
+      "id": "11660d07fa9ab1ef",
+      "file": "ssh_protocol-transport-mac.json"
+    }
+  ]
+}

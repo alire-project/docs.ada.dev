@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "crate": "xdg_base_dir",
+  "version": "1.0.0",
+  "documented_at": "2026-03-07T02:51:38Z",
+  "description": "XDG Base Directory Specification",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "xdg"
+  ],
+  "website": "https://github.com/onox/xdg-base-dir",
+  "repository": {
+    "url": "https://github.com/onox/xdg-base-dir",
+    "host": "github",
+    "commit": "e0e3de18138fbdb14b6fbe55d6c7983105ea593c"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "XDG_Base_Dir",
+      "id": "e1446ba418677355",
+      "file": "xdg_base_dir.json"
+    }
+  ]
+}

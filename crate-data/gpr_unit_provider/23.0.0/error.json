@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gpr_unit_provider",
+  "version": "23.0.0",
+  "failed_at": "2026-03-04T13:38:14Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

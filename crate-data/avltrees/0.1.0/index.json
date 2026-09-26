@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "avltrees",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:51:36Z",
+  "description": "Threaded AVL trees library for Ada",
+  "authors": [
+    "Lev Kujawski"
+  ],
+  "licenses": [
+    "LGPL-3.0-or-later"
+  ],
+  "tags": [
+    "ada1987",
+    "data-structures"
+  ],
+  "website": "https://github.com/lkujaw/avltrees",
+  "repository": {
+    "url": "https://github.com/lkujaw/avltrees",
+    "host": "github",
+    "commit": "81b318c6c9ba2ee500d0acc92a122bb8fe58f5ff"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AVL_Array_Key_Trees",
+      "id": "333f6055dee18475",
+      "file": "avl_array_key_trees.json"
+    },
+    {
+      "name": "AVL_Tree_Heights",
+      "id": "0833ebdb6a88bcf8",
+      "file": "avl_tree_heights.json"
+    },
+    {
+      "name": "AVL_Trees",
+      "id": "5c44d9404b16ba8c",
+      "file": "avl_trees.json"
+    }
+  ]
+}

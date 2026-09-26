@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "embedded_rp2040",
+  "version": "15.3.0",
+  "failed_at": "2026-04-15T03:01:17Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

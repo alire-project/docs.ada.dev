@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "anteforth",
+  "version": "0.1.1",
+  "documented_at": "2026-03-03T17:51:00Z",
+  "description": "A Forth virtual machine",
+  "authors": [
+    "Paul Jarrett"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "forth",
+    "vm",
+    "spark"
+  ],
+  "repository": {
+    "url": "https://github.com/pyjarrett/anteforth",
+    "host": "github",
+    "commit": "6f6d3d289edb88d1ab361e0c4f5d2094491bb9e6"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatprove",
+      "version": "^15.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Anteforth_Config",
+      "id": "83a16abd3d74b485",
+      "file": "anteforth_config.json"
+    },
+    {
+      "name": "Terminal_Input_Buffers",
+      "id": "583e20e8b2081718",
+      "file": "terminal_input_buffers.json"
+    },
+    {
+      "name": "VMS",
+      "id": "b06aa343196dfa23",
+      "file": "vms.json"
+    },
+    {
+      "name": "VMS.Builtins",
+      "id": "11558602fc56a022",
+      "file": "vms-builtins.json"
+    }
+  ]
+}

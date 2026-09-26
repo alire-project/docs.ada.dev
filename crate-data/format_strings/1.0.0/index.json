@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "format_strings",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T03:00:28Z",
+  "description": "Build formatted strings",
+  "authors": [
+    "Colton Lewis"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "format",
+    "formatting",
+    "strings",
+    "templates"
+  ],
+  "website": "https://github.com/cowile/format_strings",
+  "repository": {
+    "url": "https://github.com/cowile/format_strings",
+    "host": "github",
+    "commit": "1d5bc16f657a7f671635ca88f45a4cd9531593e7"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Format_Strings",
+      "id": "1c44c8d3223605bd",
+      "file": "format_strings.json"
+    },
+    {
+      "name": "Format_Strings.Common",
+      "id": "c6ac30d09186368a",
+      "file": "format_strings-common.json"
+    },
+    {
+      "name": "Format_Strings.Formatters",
+      "id": "150d996fa7924dc3",
+      "file": "format_strings-formatters.json"
+    },
+    {
+      "name": "Format_Strings_Config",
+      "id": "93b2c43c7672ebaa",
+      "file": "format_strings_config.json"
+    }
+  ]
+}

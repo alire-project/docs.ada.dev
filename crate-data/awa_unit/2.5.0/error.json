@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "awa_unit",
+  "version": "2.5.0",
+  "failed_at": "2026-03-03T17:52:53Z",
+  "stage": "locate",
+  "message": "Could not find crate root for awa_unit=2.5.0 in /tmp/gnatdoc_99u1strd"
+}

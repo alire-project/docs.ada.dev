@@ -1,0 +1,75 @@
+{
+  "schema_version": "1",
+  "crate": "scatcdsk_lib",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:56:49Z",
+  "description": "Reusable software components extracted from the SCATC DSK",
+  "authors": [
+    "Richard Conn"
+  ],
+  "licenses": [
+    "custom-CC-PDM-1.0"
+  ],
+  "tags": [
+    "tools",
+    "reuse"
+  ],
+  "website": "https://chiselapp.com/user/dbane/repository/scatcdsk_lib",
+  "repository": {
+    "url": "https://chiselapp.com/user/dbane/repository/scatcdsk_lib/tarball/4d49721a1a/scatcdsk_lib-4d49721a1a.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Activity_Log_Handler",
+      "id": "cb6642b1f34da806",
+      "file": "activity_log_handler.json"
+    },
+    {
+      "name": "Command_Line_Interface",
+      "id": "3439769a424e848a",
+      "file": "command_line_interface.json"
+    },
+    {
+      "name": "Command_Line_Processor",
+      "id": "32745f428396089f",
+      "file": "command_line_processor.json"
+    },
+    {
+      "name": "Console",
+      "id": "93d8874c8c86f0fc",
+      "file": "console.json"
+    },
+    {
+      "name": "Information_Collector",
+      "id": "ec43e6505a7da259",
+      "file": "information_collector.json"
+    },
+    {
+      "name": "Input_Text_File_Handler",
+      "id": "00196e6ef2509f30",
+      "file": "input_text_file_handler.json"
+    },
+    {
+      "name": "Output_Text_File_Handler",
+      "id": "33337a6cddee0121",
+      "file": "output_text_file_handler.json"
+    },
+    {
+      "name": "Report_Generator",
+      "id": "15bf4cd41d08215a",
+      "file": "report_generator.json"
+    },
+    {
+      "name": "Scatcdsk_Lib_Config",
+      "id": "1d96236c7d38255d",
+      "file": "scatcdsk_lib_config.json"
+    },
+    {
+      "name": "Time_Keeper",
+      "id": "63cc7886909a8d8d",
+      "file": "time_keeper.json"
+    }
+  ]
+}

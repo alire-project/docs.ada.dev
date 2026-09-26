@@ -1,0 +1,60 @@
+{
+  "schema_version": "1",
+  "crate": "lithophane",
+  "version": "0.1.0",
+  "documented_at": "2026-08-25T02:41:53Z",
+  "description": "Lithophane generator with Ada",
+  "authors": [
+    "Simon Bean"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "3dprint",
+    "lithophane",
+    "lithography"
+  ],
+  "repository": {
+    "url": "https://github.com/smionean/lithophane_ada",
+    "host": "github",
+    "commit": "f81a38295f0b866211babad4b71da5f473e60639"
+  },
+  "dependencies": [
+    {
+      "crate": "gid",
+      "version": "^14.0.0"
+    },
+    {
+      "crate": "getopt",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Lithophane",
+      "id": "4371f85215fbe9d3",
+      "file": "lithophane.json"
+    },
+    {
+      "name": "Lithophane.Filters",
+      "id": "5241c759e444be3d",
+      "file": "lithophane-filters.json"
+    },
+    {
+      "name": "Lithophane.Sizer",
+      "id": "37c4ae21126f66b0",
+      "file": "lithophane-sizer.json"
+    },
+    {
+      "name": "Lithophane.STL",
+      "id": "c7b94f86a1f19e8e",
+      "file": "lithophane-stl.json"
+    },
+    {
+      "name": "Lithophane_Config",
+      "id": "23dfb2d37283f70b",
+      "file": "lithophane_config.json"
+    }
+  ]
+}

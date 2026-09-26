@@ -1,0 +1,197 @@
+{
+  "schema_version": "1",
+  "crate": "flux",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T03:00:20Z",
+  "description": "Experimental data stream library for Ada",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/flux",
+    "host": "github",
+    "commit": "688d2c90e075aff1d225958682141d6476f03ea7"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Flux",
+      "id": "a2e10207c7be30e1",
+      "file": "flux.json"
+    },
+    {
+      "name": "Flux.Interfaces",
+      "id": "9725a55cf0b2332d",
+      "file": "flux-interfaces.json"
+    },
+    {
+      "name": "Flux.Interfaces.As_Traits",
+      "id": "189672cfbf61a309",
+      "file": "flux-interfaces-as_traits.json"
+    },
+    {
+      "name": "Flux.Interfaces.As_Traits.Duplex",
+      "id": "882cff8e6459f33a",
+      "file": "flux-interfaces-as_traits-duplex.json"
+    },
+    {
+      "name": "Flux.Interfaces.As_Traits.Sink",
+      "id": "13a3ddd8f7a17773",
+      "file": "flux-interfaces-as_traits-sink.json"
+    },
+    {
+      "name": "Flux.Interfaces.As_Traits.Source",
+      "id": "f7209f3218f433ae",
+      "file": "flux-interfaces-as_traits-source.json"
+    },
+    {
+      "name": "Flux.Interfaces.Bounded_Array",
+      "id": "6ce9b3c42c1805a9",
+      "file": "flux-interfaces-bounded_array.json"
+    },
+    {
+      "name": "Flux.Interfaces.Bounded_Array.Duplex",
+      "id": "d33f4506b44f5cb9",
+      "file": "flux-interfaces-bounded_array-duplex.json"
+    },
+    {
+      "name": "Flux.Interfaces.Bounded_Array.Sink",
+      "id": "9c95045b67ab1176",
+      "file": "flux-interfaces-bounded_array-sink.json"
+    },
+    {
+      "name": "Flux.Interfaces.Bounded_Array.Source",
+      "id": "fea7fdfee7210aeb",
+      "file": "flux-interfaces-bounded_array-source.json"
+    },
+    {
+      "name": "Flux.Interfaces.File_IO",
+      "id": "9d071e77b92b9276",
+      "file": "flux-interfaces-file_io.json"
+    },
+    {
+      "name": "Flux.Interfaces.File_IO.Sink",
+      "id": "347c7876b4221f0f",
+      "file": "flux-interfaces-file_io-sink.json"
+    },
+    {
+      "name": "Flux.Interfaces.File_IO.Source",
+      "id": "db2641b72ac4e283",
+      "file": "flux-interfaces-file_io-source.json"
+    },
+    {
+      "name": "Flux.Interfaces.Hexdump",
+      "id": "6d20ebc9602c6b98",
+      "file": "flux-interfaces-hexdump.json"
+    },
+    {
+      "name": "Flux.Interfaces.LEB128",
+      "id": "7ca1c4f1251fd1ba",
+      "file": "flux-interfaces-leb128.json"
+    },
+    {
+      "name": "Flux.Interfaces.Seekable_Source",
+      "id": "dd8bc10702b151b4",
+      "file": "flux-interfaces-seekable_source.json"
+    },
+    {
+      "name": "Flux.Interfaces.Sink",
+      "id": "7dde6e1842100ce5",
+      "file": "flux-interfaces-sink.json"
+    },
+    {
+      "name": "Flux.Interfaces.Source",
+      "id": "3fb69f183605b56e",
+      "file": "flux-interfaces-source.json"
+    },
+    {
+      "name": "Flux.Slice",
+      "id": "9db91c7211572057",
+      "file": "flux-slice.json"
+    },
+    {
+      "name": "Flux.Traits",
+      "id": "874d049683583b8a",
+      "file": "flux-traits.json"
+    },
+    {
+      "name": "Flux.Traits.Bounded_Array_Duplex",
+      "id": "294892438733b1e5",
+      "file": "flux-traits-bounded_array_duplex.json"
+    },
+    {
+      "name": "Flux.Traits.Bounded_Array_Sink",
+      "id": "dff08ad0e012028f",
+      "file": "flux-traits-bounded_array_sink.json"
+    },
+    {
+      "name": "Flux.Traits.Bounded_Array_Source",
+      "id": "7c0edc531706f9a1",
+      "file": "flux-traits-bounded_array_source.json"
+    },
+    {
+      "name": "Flux.Traits.Duplex",
+      "id": "a49ddc60fd609d7e",
+      "file": "flux-traits-duplex.json"
+    },
+    {
+      "name": "Flux.Traits.File_IO",
+      "id": "7618a340b299efec",
+      "file": "flux-traits-file_io.json"
+    },
+    {
+      "name": "Flux.Traits.File_IO.Sink",
+      "id": "57a3515aee1572f0",
+      "file": "flux-traits-file_io-sink.json"
+    },
+    {
+      "name": "Flux.Traits.Hexdump",
+      "id": "2149247461a71fd7",
+      "file": "flux-traits-hexdump.json"
+    },
+    {
+      "name": "Flux.Traits.LEB128",
+      "id": "0d381b91a0e91cc6",
+      "file": "flux-traits-leb128.json"
+    },
+    {
+      "name": "Flux.Traits.Memory_Duplex",
+      "id": "f486faf5c70b5fa7",
+      "file": "flux-traits-memory_duplex.json"
+    },
+    {
+      "name": "Flux.Traits.Memory_Sink",
+      "id": "4281543fa1e8d8ff",
+      "file": "flux-traits-memory_sink.json"
+    },
+    {
+      "name": "Flux.Traits.Memory_Source",
+      "id": "30f9ce52e4e604e4",
+      "file": "flux-traits-memory_source.json"
+    },
+    {
+      "name": "Flux.Traits.Seekable_Source",
+      "id": "f6b7b7849ad4c309",
+      "file": "flux-traits-seekable_source.json"
+    },
+    {
+      "name": "Flux.Traits.Sink",
+      "id": "1af1a7eae08a93af",
+      "file": "flux-traits-sink.json"
+    },
+    {
+      "name": "Flux.Traits.Source",
+      "id": "0ca56bb38e83900a",
+      "file": "flux-traits-source.json"
+    },
+    {
+      "name": "Flux_Config",
+      "id": "4afe83e92823d547",
+      "file": "flux_config.json"
+    }
+  ]
+}

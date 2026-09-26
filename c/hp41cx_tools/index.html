@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hp41cx_tools — Ada/SPARK Documentation</title>
+  <meta name="description" content="Cross-platform tools to supercharge your HP-41CX emulator experience">
+  <meta name="keywords" content="Ada, SPARK, Alire, hp41cx_tools, calculator, tools, retrocomputing, ada-2022, hp-41cx, dm41x, px41cx, cross-platform, HP41CX_Tools, Hp41cx_Tools_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "hp41cx_tools",
+"version": "1.8.11",  "description": "Cross-platform tools to supercharge your HP-41CX emulator experience",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/hp41cx_tools/",
+  "codeRepository": "https://sourceforge.net/projects/calculator-scripts"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">hp41cx_tools</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>hp41cx_tools</h1>
+    <div class="version-controls">
+      <div class="version-selector">
+        <select id="version-select" aria-label="Select version">
+          <option value="1.8.11" selected>1.8.11 (latest)</option>
+          <option value="1.8.10">1.8.10</option>
+        </select>
+      </div>
+      <button id="compare-btn" class="compare-btn" title="Compare versions">
+        Compare versions
+      </button>
+    </div>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.8.11">1.8.11</option>
+              <option value="1.8.10">1.8.10</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.8.11" selected>1.8.11</option>
+              <option value="1.8.10">1.8.10</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Cross-platform tools to supercharge your HP-41CX emulator experience</p>
+
+  <div class="long-description"><h2>HP-41CX Emulator Tools</h2>
+<p>Step into the golden era of retro computing with <strong>hp41cx_tools</strong>, a versatile<br />
+suite that turbocharges your HP-41CX emulator adventures! Unlike many tools<br />
+shackled to Windows, this toolkit runs flawlessly on <strong>macOS</strong>, <strong>Linux</strong>, and<br />
+<strong>Windows</strong>, making it the ultimate companion for enthusiasts using the iconic<br />
+<a href="https://paxer.net/PX-41CX/">PX-41CX</a> from Paxer or the sleek<br />
+<a href="https://www.swissmicros.com/product/dm41x">DM41X</a> from SwissMicros. Channel<br />
+your inner 1980s programming wizard and master memory dumps, FOCAL source code,<br />
+<em>and now encoding</em> with ease - compiling any FOCAL straight into upload-ready<br />
+dump files for the PX-41CY emulator.</p>
+<p>Built with the precision of <strong>Ada 2022</strong> for unshakeable reliability, these<br />
+tools decode, convert, and encode data with the finesse of the HP-41CX&rsquo;s<br />
+legendary keystrokes. Paired with intuitive <strong>ZShell scripts</strong> for macOS and<br />
+Linux, the suite streamlines complex workflows, whether you&rsquo;re on a modern<br />
+MacBook, a Linux workstation, or a Windows PC. This cross-platform prowess<br />
+ensures every retro computing fan can join the fun, no matter their<br />
+setup - grateful shoutout to Pierre Houbert&rsquo;s pioneering<br />
+<a href="https://paxer.net/PX-41CX_Interface.zip">PX41CX_Interface.xls</a> and its<br />
+VisualBasic wizardry, which lit the fuse for this focused PX-41CX/DM41X<br />
+journey.</p>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Memory Dump Decoder</strong>: Transform raw HP-41CX emulator memory dumps into<br />
+  readable FOCAL source code with pinpoint accuracy.</li>
+<li><strong>Source Code Converter</strong>: Seamlessly convert between PX-41CX and DM41X FOCAL<br />
+  code styles, bridging emulator ecosystems.</li>
+<li><strong>FOCAL Encoder</strong>: Compile modern UTF-8 encoded FOCAL programs into precise<br />
+  dump files, ready for PX-41CY emulator upload - vintage vibes meet UTF-8<br />
+  pipelines.</li>
+<li><strong>Unicode Support</strong>: Convert Unicode-encoded FOCAL programs to PX-41CX or<br />
+  DM41X formats, blending vintage charm with modern workflows.</li>
+<li><strong>Cross-Platform Power</strong>: Runs natively on macOS, Linux, and Windows - like a<br />
+  portable Ada generic, no OS exceptions.</li>
+<li><strong>Open Source</strong>: Hosted on<br />
+<a href="https://sourceforge.net/p/calculator-scripts/code/ci/master/tree/Tools/hp41cx_tools/src/">SourceForge</a>,<br />
+  ready for you to hack, extend, and share with the retro computing community.</li>
+<li><strong>Comprehensive Docs</strong>: Explore detailed guides via<br />
+<a href="https://calculator-scripts.sourceforge.io/gnatdoc/hp41cx-tools">GNATdoc</a>.</li>
+</ul>
+<h3>Why You&rsquo;ll Love It</h3>
+<p>Relive the thrill of programming the HP-41CX, the calculator that defined a<br />
+generation of scientific and hobbyist triumphs. Whether you&rsquo;re decoding vintage<br />
+memory dumps, converting code styles, or encoding fresh FOCAL scripts,<br />
+<strong>hp41cx_tools</strong> brings the past to life with unmatched versatility. Join the<br />
+retro computing revolution and make your emulator sing - on any desktop OS!</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/calculator-scripts">https://sourceforge.net/projects/calculator-scripts</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">calculator</span><span class="tag">tools</span><span class="tag">retrocomputing</span><span class="tag">ada-2022</span><span class="tag">hp-41cx</span><span class="tag">dm41x</span><span class="tag">px41cx</span><span class="tag">cross-platform</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_regexp/">adacl_regexp</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_sar/">adacl_sar</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools/">HP41CX_Tools</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-alarm/">HP41CX_Tools.Alarm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-commandline/">HP41CX_Tools.CommandLine</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-converter/">HP41CX_Tools.Converter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-decoder/">HP41CX_Tools.Decoder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-encoder/">HP41CX_Tools.Encoder</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-filter/">HP41CX_Tools.Filter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-programs/">HP41CX_Tools.Programs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-registers/">HP41CX_Tools.Registers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-registers-addresses/">HP41CX_Tools.Registers.Addresses</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-registers-floats/">HP41CX_Tools.Registers.Floats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-registers-keys/">HP41CX_Tools.Registers.Keys</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools-registers-lines/">HP41CX_Tools.Registers.Lines</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/hp41cx_tools/1.8.11/hp41cx_tools_config/">Hp41cx_Tools_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-09-26.
+    </p>
+  </footer>
+<script>
+(function () {
+  var select  = document.getElementById('version-select');
+  var crate   = "hp41cx_tools";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  select.addEventListener('change', function () {
+    var version = select.value;
+    var url = baseUrl + '/crate-data/' + crate + '/' + version + '/index.json';
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (m) { applyManifest(m, version); })
+      .catch(function (e) { console.error('Could not load version ' + version, e); });
+  });
+
+  function applyManifest(m, version) {
+    // Units
+    var uSection = document.getElementById('units-section');
+    if (uSection) {
+      var units = m.units || [];
+      if (units.length === 0) {
+        uSection.innerHTML = '<h2>API Units</h2><p>No API units indexed for this version.</p>';
+      } else {
+        var items = units.map(function (u) {
+          var stem = u.file.replace(/\.json$/, '');
+          var href = esc(baseUrl + '/c/' + crate + '/' + version + '/' + stem + '/');
+          return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
+        }).join('');
+        uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
+      }
+    }
+
+    // Dependencies
+    var dSection = document.getElementById('deps-section');
+    if (dSection) {
+      var deps = m.dependencies || [];
+      if (deps.length === 0) {
+        dSection.innerHTML = '';
+      } else {
+        var ditems = deps.map(function (d) {
+          return '<li><a href="' + esc(baseUrl + '/c/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+               + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
+        }).join('');
+        dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';
+      }
+    }
+
+    // Repository / website link
+    var repoEl = document.getElementById('meta-repo');
+    if (repoEl) {
+      var url = m.repository ? m.repository.url : (m.website || '');
+      var labelEl = document.getElementById('meta-repo-label') || repoEl.previousElementSibling;
+      if (url) {
+        repoEl.innerHTML = '<a href="' + esc(url) + '">' + esc(url) + '</a>';
+        repoEl.style.display = '';
+        if (labelEl) labelEl.style.display = '';
+      } else {
+        repoEl.innerHTML = '';
+        repoEl.style.display = 'none';
+        if (labelEl) labelEl.style.display = 'none';
+      }
+    }
+
+    // Page title
+    document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+
+<script>
+// Version comparison functionality
+(function () {
+  var modal = document.getElementById('compare-modal');
+  var compareBtn = document.getElementById('compare-btn');
+  var closeBtn = document.getElementById('close-modal');
+  var runCompareBtn = document.getElementById('run-compare');
+  var compareFrom = document.getElementById('compare-from');
+  var compareTo = document.getElementById('compare-to');
+  var resultsDiv = document.getElementById('compare-results');
+  var crate = "hp41cx_tools";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  if (!modal || !compareBtn) return;
+
+  // Open modal
+  compareBtn.addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Run comparison
+  runCompareBtn.addEventListener('click', function () {
+    var fromVersion = compareFrom.value;
+    var toVersion = compareTo.value;
+
+    if (fromVersion === toVersion) {
+      resultsDiv.innerHTML = '<p class="error">Please select different versions to compare.</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = '<p class="loading">Loading and comparing versions...</p>';
+
+    Promise.all([
+      fetch(baseUrl + '/crate-data/' + crate + '/' + fromVersion + '/index.json').then(r => r.json()),
+      fetch(baseUrl + '/crate-data/' + crate + '/' + toVersion + '/index.json').then(r => r.json())
+    ]).then(function (results) {
+      var oldManifest = results[0];
+      var newManifest = results[1];
+      var diff = computeDiff(oldManifest, newManifest);
+      displayDiff(diff, fromVersion, toVersion);
+    }).catch(function (err) {
+      resultsDiv.innerHTML = '<p class="error">Failed to load version data: ' + err.message + '</p>';
+    });
+  });
+
+  function computeDiff(oldManifest, newManifest) {
+    var oldUnits = oldManifest.units || [];
+    var newUnits = newManifest.units || [];
+    var oldDeps = oldManifest.dependencies || [];
+    var newDeps = newManifest.dependencies || [];
+
+    // Create maps for quick lookup
+    var oldUnitMap = {};
+    oldUnits.forEach(function (u) { oldUnitMap[u.name] = u; });
+    var newUnitMap = {};
+    newUnits.forEach(function (u) { newUnitMap[u.name] = u; });
+
+    var oldDepMap = {};
+    oldDeps.forEach(function (d) { oldDepMap[d.crate] = d; });
+    var newDepMap = {};
+    newDeps.forEach(function (d) { newDepMap[d.crate] = d; });
+
+    // Compare units
+    var addedUnits = [];
+    var removedUnits = [];
+    var unchangedUnits = [];
+
+    newUnits.forEach(function (u) {
+      if (!oldUnitMap[u.name]) {
+        addedUnits.push(u.name);
+      } else {
+        unchangedUnits.push(u.name);
+      }
+    });
+
+    oldUnits.forEach(function (u) {
+      if (!newUnitMap[u.name]) {
+        removedUnits.push(u.name);
+      }
+    });
+
+    // Compare dependencies
+    var addedDeps = [];
+    var removedDeps = [];
+    var modifiedDeps = [];
+
+    newDeps.forEach(function (d) {
+      if (!oldDepMap[d.crate]) {
+        addedDeps.push(d);
+      } else if (oldDepMap[d.crate].version !== d.version) {
+        modifiedDeps.push({ crate: d.crate, old: oldDepMap[d.crate].version, new: d.version });
+      }
+    });
+
+    oldDeps.forEach(function (d) {
+      if (!newDepMap[d.crate]) {
+        removedDeps.push(d);
+      }
+    });
+
+    return {
+      units: { added: addedUnits, removed: removedUnits, unchanged: unchangedUnits },
+      dependencies: { added: addedDeps, removed: removedDeps, modified: modifiedDeps }
+    };
+  }
+
+  function esc(text) {
+    return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function displayDiff(diff, fromVersion, toVersion) {
+    var html = '<div class="diff-summary">';
+    html += '<h3>Changes from ' + esc(fromVersion) + ' to ' + esc(toVersion) + '</h3>';
+
+    var totalChanges = diff.units.added.length + diff.units.removed.length +
+                       diff.dependencies.added.length + diff.dependencies.removed.length +
+                       diff.dependencies.modified.length;
+
+    if (totalChanges === 0) {
+      html += '<p class="no-changes">No API changes detected between these versions.</p>';
+    } else {
+      // Units changes
+      if (diff.units.added.length > 0 || diff.units.removed.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>API Units (' + (diff.units.added.length + diff.units.removed.length) + ' changes)</h4>';
+
+        if (diff.units.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.units.added.length + '):</strong>';
+          html += '<ul>';
+          diff.units.added.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.units.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.units.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.units.removed.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+
+      // Dependencies changes
+      if (diff.dependencies.added.length > 0 || diff.dependencies.removed.length > 0 || diff.dependencies.modified.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>Dependencies (' + (diff.dependencies.added.length + diff.dependencies.removed.length + diff.dependencies.modified.length) + ' changes)</h4>';
+
+        if (diff.dependencies.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.dependencies.added.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.added.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code> ' + esc(d.version) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.modified.length > 0) {
+          html += '<div class="diff-group modified">';
+          html += '<strong>~ Modified (' + diff.dependencies.modified.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.modified.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code>: ' + esc(d.old) + ' → ' + esc(d.new) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.dependencies.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.removed.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    resultsDiv.innerHTML = html;
+  }
+}());
+</script>
+</body>
+</html>

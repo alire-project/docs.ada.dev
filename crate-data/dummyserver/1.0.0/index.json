@@ -1,0 +1,125 @@
+{
+  "schema_version": "1",
+  "crate": "dummyserver",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:56:49Z",
+  "description": "DummyServer is a terminal program that serves dummy content",
+  "long_description": "DummyServer is a terminal program that serves dummy content (resources). These resources are defined in a single JSON configuration and configuration is thus very simple and fast. The prime purpose of DummyServer is to serve content to test client applications.",
+  "authors": [
+    "Bent Bracke"
+  ],
+  "licenses": [
+    "CC0-1.0"
+  ],
+  "tags": [
+    "http",
+    "server",
+    "test",
+    "terminal",
+    "console"
+  ],
+  "website": "https://github.com/bracke/dummyserver",
+  "repository": {
+    "url": "https://github.com/bracke/dummyserver",
+    "host": "github",
+    "commit": "9a6e8708b748fc1f16b8fdd69c3944ae4e7ebcb3"
+  },
+  "dependencies": [
+    {
+      "crate": "json",
+      "version": "^5.0.3"
+    }
+  ],
+  "units": [
+    {
+      "name": "Black",
+      "id": "c006c7e3ab14d686",
+      "file": "black.json"
+    },
+    {
+      "name": "Black.HTTP",
+      "id": "8e903be7b8d98d59",
+      "file": "black-http.json"
+    },
+    {
+      "name": "Black.MIME_Types",
+      "id": "fdaf3945138ef984",
+      "file": "black-mime_types.json"
+    },
+    {
+      "name": "Black.MIME_Types.Application",
+      "id": "438d51015645ab74",
+      "file": "black-mime_types-application.json"
+    },
+    {
+      "name": "Black.MIME_Types.Text",
+      "id": "74d0328319fbb890",
+      "file": "black-mime_types-text.json"
+    },
+    {
+      "name": "Black.Parameter",
+      "id": "74bd73ae6f743fdc",
+      "file": "black-parameter.json"
+    },
+    {
+      "name": "Black.Request",
+      "id": "6d31c95396b9c7ac",
+      "file": "black-request.json"
+    },
+    {
+      "name": "Black.Response",
+      "id": "e5f4453d48435564",
+      "file": "black-response.json"
+    },
+    {
+      "name": "Black.Response.Access_Control",
+      "id": "2523594bff1fb662",
+      "file": "black-response-access_control.json"
+    },
+    {
+      "name": "Black.Streams",
+      "id": "1e6b48f05b13b43f",
+      "file": "black-streams.json"
+    },
+    {
+      "name": "Black.Streams.Memory",
+      "id": "ab135d895dd5c468",
+      "file": "black-streams-memory.json"
+    },
+    {
+      "name": "Configuration",
+      "id": "b7d64a9221007dfd",
+      "file": "configuration.json"
+    },
+    {
+      "name": "Dummyserver_Config",
+      "id": "0a4f190b9faec7eb",
+      "file": "dummyserver_config.json"
+    },
+    {
+      "name": "GNAT.Sockets.Compatibility",
+      "id": "461ea918feb6d395",
+      "file": "gnat-sockets-compatibility.json"
+    },
+    {
+      "name": "GNAT.Sockets.Convenience",
+      "id": "1730c623c47b594f",
+      "file": "gnat-sockets-convenience.json"
+    },
+    {
+      "name": "Hex_Utilities",
+      "id": "f4b7635ae8190bb2",
+      "file": "hex_utilities.json"
+    },
+    {
+      "name": "Server",
+      "id": "b3eacd33433b31b5",
+      "file": "server.json"
+    },
+    {
+      "name": "URL_Utilities",
+      "id": "cabb64c14b99b5ab",
+      "file": "url_utilities.json"
+    }
+  ]
+}

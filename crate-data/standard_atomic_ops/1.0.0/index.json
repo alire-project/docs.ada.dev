@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "crate": "standard_atomic_ops",
+  "version": "1.0.0",
+  "documented_at": "2026-08-07T03:12:01Z",
+  "description": "Language-defined atomic operation packages for GNAT runtimes.",
+  "long_description": "This crate supplies the GNAT source files for the Ada 2022 language-defined units for atomic operations:\n\n- System.Atomic_Operations\n- System.Atomic_Operations.Exchange\n- System.Atomic_Operations.Modular_Arithmetic\n- System.Atomic_Operations.Integer_Arithmetic\n\nThey are provided for use with those bare-board GNAT runtimes that do not (yet) include them, for example Arm-elf (the only target tested to date). \nThe sources here are verbatim copies taken from a native runtime. As such, the implementations are GNAT-specific so their use with other compilers will not work.\nOnce the shipped GNAT runtimes include them you can simply remove any references to this crate.\nNote that the license includes the GCC Runtime Library Exception.\n",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "atomic",
+    "standard",
+    "runtime"
+  ],
+  "website": "https://github.com/pat-rogers/standard_atomic_ops",
+  "repository": {
+    "url": "https://github.com/pat-rogers/standard_atomic_ops",
+    "host": "github",
+    "commit": "07460f94302b7094a3220e1618a45ec156f2131b"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "System.Atomic_Operations",
+      "id": "6233cf06877b0688",
+      "file": "system-atomic_operations.json"
+    },
+    {
+      "name": "System.Atomic_Operations.Exchange",
+      "id": "73962685af6cd22f",
+      "file": "system-atomic_operations-exchange.json"
+    },
+    {
+      "name": "System.Atomic_Operations.Integer_Arithmetic",
+      "id": "d8e4679390b8a974",
+      "file": "system-atomic_operations-integer_arithmetic.json"
+    },
+    {
+      "name": "System.Atomic_Operations.Modular_Arithmetic",
+      "id": "a2ba308427397854",
+      "file": "system-atomic_operations-modular_arithmetic.json"
+    },
+    {
+      "name": "System.Atomic_Operations.Test_And_Set",
+      "id": "7aeb96afa20342f7",
+      "file": "system-atomic_operations-test_and_set.json"
+    }
+  ]
+}

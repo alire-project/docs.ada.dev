@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"e8eb18bab2fe6a52","name":"PragmARC.Matching","qualified_name":"PragmARC.Matching","kind":"ada_package","location":{"file":"src/pragmarc-matching.ads","line":12,"column":9},"code":"package PragmARC.Matching","documentation":{"description":"Empty"}}

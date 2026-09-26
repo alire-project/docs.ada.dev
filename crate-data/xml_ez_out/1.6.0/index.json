@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "xml_ez_out",
+  "version": "1.6.0",
+  "documented_at": "2026-03-07T02:52:12Z",
+  "description": "Creation of XML-formatted output from Ada programs",
+  "authors": [
+    "Marc A. Criley"
+  ],
+  "licenses": [],
+  "tags": [],
+  "website": "http://www.mckae.com/xmlEz.html",
+  "repository": {
+    "url": "https://github.com/alire-project/xmlezout",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "McKae",
+      "id": "9b850783e5ade066",
+      "file": "mckae.json"
+    },
+    {
+      "name": "McKae.XML",
+      "id": "b70485ecfe06292b",
+      "file": "mckae-xml.json"
+    },
+    {
+      "name": "McKae.XML.EZ_Out",
+      "id": "02a94fca45494f69",
+      "file": "mckae-xml-ez_out.json"
+    },
+    {
+      "name": "McKae.XML.EZ_Out.Generic_Medium",
+      "id": "5512303e4ea8c78c",
+      "file": "mckae-xml-ez_out-generic_medium.json"
+    },
+    {
+      "name": "Mckae.XML.EZ_Out.String_Stream",
+      "id": "f6e141a5a7670171",
+      "file": "mckae-xml-ez_out-string_stream.json"
+    },
+    {
+      "name": "Mckae.XML.EZ_Out.String_Stream.String_Buffering",
+      "id": "7be2b347dc46c253",
+      "file": "mckae-xml-ez_out-string_stream-string_buffering.json"
+    }
+  ]
+}

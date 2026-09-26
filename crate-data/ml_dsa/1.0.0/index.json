@@ -1,0 +1,103 @@
+{
+  "schema_version": "1",
+  "crate": "ml_dsa",
+  "version": "1.0.0",
+  "documented_at": "2026-07-16T03:00:28Z",
+  "description": "SPARK-proved ML-DSA (FIPS 204) lattice-based digital signatures",
+  "long_description": "SPARK-proved ML-DSA (Module-Lattice-Based Digital Signature Algorithm)\nimplementing NIST FIPS 204. Verifies signing and verification under\nthe Module Learning With Errors (M-LWE) assumption.\n\nAll three FIPS 204 parameter sets -- ML-DSA-44, ML-DSA-65, ML-DSA-87\n-- are supported and selected at build time via the `parameter_set`\ncrate configuration variable; default is ML-DSA-65 (NIST Category III).\n\nThe 8-layer Cooley-Tukey NTT, Montgomery reduction, Power2Round /\nDecompose / MakeHint / UseHint rounding primitives, and bounded\nrejection-sampling loops for signing are all SPARK-checked. The\nsigning rejection loop is bounded (Max_Retries = 1000) for proof\ntermination; rejection probability per attempt is empirically ~2-4%,\nso the bound is reached only with negligible probability.\n\nBuilt on sha3_ada for SHA-3/SHAKE. No heap allocation, pragma Pure,\nsuitable for embedded and safety-critical systems. FIPS 140-3\nvalidation is out of scope.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "ml-dsa",
+    "dilithium",
+    "post-quantum",
+    "cryptography",
+    "spark",
+    "embedded",
+    "security",
+    "verified"
+  ],
+  "website": "https://github.com/b-erdem/ml_dsa_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/ml_dsa_ada",
+    "host": "github",
+    "commit": "259116004ff3cff337950d5cf87e905eda3695f7"
+  },
+  "dependencies": [
+    {
+      "crate": "sha3",
+      "version": "~1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ML_DSA",
+      "id": "3dd7da52ddbd8abb",
+      "file": "ml_dsa.json"
+    },
+    {
+      "name": "ML_DSA.NTT",
+      "id": "8c4f9688828c17cf",
+      "file": "ml_dsa-ntt.json"
+    },
+    {
+      "name": "ML_DSA.NTT_Zetas",
+      "id": "e9ecc554cd43422a",
+      "file": "ml_dsa-ntt_zetas.json"
+    },
+    {
+      "name": "ML_DSA.Packing",
+      "id": "818771273cf4e303",
+      "file": "ml_dsa-packing.json"
+    },
+    {
+      "name": "ML_DSA.Poly",
+      "id": "f1f4640ca1d63540",
+      "file": "ml_dsa-poly.json"
+    },
+    {
+      "name": "ML_DSA.PolyVec",
+      "id": "e5e952148ffa9a82",
+      "file": "ml_dsa-polyvec.json"
+    },
+    {
+      "name": "ML_DSA.Reduce",
+      "id": "d1504c8668811dc6",
+      "file": "ml_dsa-reduce.json"
+    },
+    {
+      "name": "ML_DSA.Rounding",
+      "id": "da1e4f49b3c9b140",
+      "file": "ml_dsa-rounding.json"
+    },
+    {
+      "name": "ML_DSA.Sampling",
+      "id": "31f0958ec634519c",
+      "file": "ml_dsa-sampling.json"
+    },
+    {
+      "name": "ML_DSA.Sign",
+      "id": "adbad5b2b7cd79fe",
+      "file": "ml_dsa-sign.json"
+    },
+    {
+      "name": "ML_DSA.Symmetric",
+      "id": "7befaa25beb3a62a",
+      "file": "ml_dsa-symmetric.json"
+    },
+    {
+      "name": "ML_DSA.Wipe",
+      "id": "7003c3a4b9c22cb1",
+      "file": "ml_dsa-wipe.json"
+    },
+    {
+      "name": "Ml_Dsa_Config",
+      "id": "2165701c868ccf2c",
+      "file": "ml_dsa_config.json"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1",
+  "crate": "ipfs",
+  "version": "0.1.0",
+  "documented_at": "2026-09-23T02:19:28Z",
+  "description": "IPFS client library for Ada: CID, CAR, UnixFS, gateway client",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "ipfs",
+    "cid",
+    "multihash",
+    "car",
+    "unixfs",
+    "gateway",
+    "distributed"
+  ],
+  "website": "https://github.com/kokhlo/ipfs",
+  "repository": {
+    "url": "https://github.com/kokhlo/ipfs",
+    "host": "github",
+    "commit": "39b9a1bcee676de4e3c175a1140e3fe697723620"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "IPFS",
+      "id": "b63927b164266bef",
+      "file": "ipfs.json"
+    },
+    {
+      "name": "IPFS.CAR",
+      "id": "1381700a8123ecb6",
+      "file": "ipfs-car.json"
+    },
+    {
+      "name": "IPFS.CID",
+      "id": "52dc46b9a32cfe21",
+      "file": "ipfs-cid.json"
+    },
+    {
+      "name": "IPFS.DagPB",
+      "id": "58cef67ad7dd059c",
+      "file": "ipfs-dagpb.json"
+    },
+    {
+      "name": "IPFS.Gateway",
+      "id": "c892491253e0cf46",
+      "file": "ipfs-gateway.json"
+    },
+    {
+      "name": "IPFS.Multibase",
+      "id": "df717b8dcf72ec93",
+      "file": "ipfs-multibase.json"
+    },
+    {
+      "name": "IPFS.Multihash",
+      "id": "0f3d4411af261c87",
+      "file": "ipfs-multihash.json"
+    },
+    {
+      "name": "IPFS.SHA256",
+      "id": "8ebf59ecca0a2119",
+      "file": "ipfs-sha256.json"
+    },
+    {
+      "name": "IPFS.UnixFS",
+      "id": "4df2ecfd461f76e2",
+      "file": "ipfs-unixfs.json"
+    },
+    {
+      "name": "IPFS.Varint",
+      "id": "32f7b69ec1050e96",
+      "file": "ipfs-varint.json"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "1",
+  "crate": "adl_middleware",
+  "version": "0.4.0",
+  "documented_at": "2026-03-03T17:49:36Z",
+  "description": "Middleware layer of the Ada Drivers Library project",
+  "long_description": "# adl_middleware\n\nMiddleware layer of the Ada Drivers Library project.\n\nThis crate is a snapshot of the `middleware` of [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/middleware).\n\nAny bug report, issue, contribution must be adressed to the [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/) repo.\n\n",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "fat",
+    "bitmap"
+  ],
+  "website": "https://github.com/AdaCore/Ada_Drivers_Library/",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/adl-middleware",
+    "host": "github",
+    "commit": "aadd86ce7adff45862a329ee8252ad13ba6e0856"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ADL_Config",
+      "id": "41082fed03e3a59f",
+      "file": "adl_config.json"
+    },
+    {
+      "name": "Adl_Middleware_Config",
+      "id": "6790f3a0e90d57de",
+      "file": "adl_middleware_config.json"
+    },
+    {
+      "name": "Bitmap_Color_Conversion",
+      "id": "17cd65c2e645620d",
+      "file": "bitmap_color_conversion.json"
+    },
+    {
+      "name": "Bitmap_File_Output",
+      "id": "c7efa8db3095abb9",
+      "file": "bitmap_file_output.json"
+    },
+    {
+      "name": "Bluetooth_Low_Energy",
+      "id": "decabc080992132b",
+      "file": "bluetooth_low_energy.json"
+    },
+    {
+      "name": "Bluetooth_Low_Energy.Beacon",
+      "id": "017c3700125a580b",
+      "file": "bluetooth_low_energy-beacon.json"
+    },
+    {
+      "name": "Bluetooth_Low_Energy.Packets",
+      "id": "7dc3e2d513e088e2",
+      "file": "bluetooth_low_energy-packets.json"
+    },
+    {
+      "name": "Command_Line",
+      "id": "8d4d7be98f9bf230",
+      "file": "command_line.json"
+    },
+    {
+      "name": "Command_Line.Filesystem",
+      "id": "5ebbc00cc616db2f",
+      "file": "command_line-filesystem.json"
+    },
+    {
+      "name": "Command_Line.Filesystem.Cat",
+      "id": "32aa63f72fe2117f",
+      "file": "command_line-filesystem-cat.json"
+    },
+    {
+      "name": "Command_Line.Filesystem.List_Directory",
+      "id": "4b058d0871412e90",
+      "file": "command_line-filesystem-list_directory.json"
+    },
+    {
+      "name": "Command_Line.Filesystem.Remove_Directory",
+      "id": "c815865851893f5a",
+      "file": "command_line-filesystem-remove_directory.json"
+    },
+    {
+      "name": "Command_Line.Filesystem.Touch",
+      "id": "aee1ef6454b4cf14",
+      "file": "command_line-filesystem-touch.json"
+    },
+    {
+      "name": "File_Block_Drivers",
+      "id": "7aa8759459e9610c",
+      "file": "file_block_drivers.json"
+    },
+    {
+      "name": "File_IO",
+      "id": "3630d055e2bcebcf",
+      "file": "file_io.json"
+    },
+    {
+      "name": "Filesystem",
+      "id": "cbf61858f3260072",
+      "file": "filesystem.json"
+    },
+    {
+      "name": "Filesystem.FAT",
+      "id": "e2acc4b1598d806b",
+      "file": "filesystem-fat.json"
+    },
+    {
+      "name": "Filesystem.MBR",
+      "id": "c81e0fa51f13e39f",
+      "file": "filesystem-mbr.json"
+    },
+    {
+      "name": "Hex_Dump",
+      "id": "5d36668229c47e7d",
+      "file": "hex_dump.json"
+    },
+    {
+      "name": "Logging",
+      "id": "0a149844a7c9f4cf",
+      "file": "logging.json"
+    },
+    {
+      "name": "Logging_With_Categories",
+      "id": "996899bbcc1821d3",
+      "file": "logging_with_categories.json"
+    },
+    {
+      "name": "Logging_With_Priority",
+      "id": "220938a0595fcd50",
+      "file": "logging_with_priority.json"
+    },
+    {
+      "name": "Memory_Mapped_Bitmap",
+      "id": "061345d4030ee104",
+      "file": "memory_mapped_bitmap.json"
+    },
+    {
+      "name": "Monitor",
+      "id": "7de97367c9cdc3c6",
+      "file": "monitor.json"
+    },
+    {
+      "name": "Monitor.Block_Drivers",
+      "id": "e464802d122872b4",
+      "file": "monitor-block_drivers.json"
+    },
+    {
+      "name": "NeoPixel",
+      "id": "25e8bb1847612738",
+      "file": "neopixel.json"
+    },
+    {
+      "name": "Partitions",
+      "id": "55f04705aafe36dd",
+      "file": "partitions.json"
+    },
+    {
+      "name": "Pathname_Manipulation",
+      "id": "c050ebbbd78600ad",
+      "file": "pathname_manipulation.json"
+    },
+    {
+      "name": "SDMMC_Init",
+      "id": "6dee4b899a5187e0",
+      "file": "sdmmc_init.json"
+    },
+    {
+      "name": "Simple_Synthesizer",
+      "id": "ec60d10f95f9c3b9",
+      "file": "simple_synthesizer.json"
+    },
+    {
+      "name": "Soft_Drawing_Bitmap",
+      "id": "c57b9c9d221863d4",
+      "file": "soft_drawing_bitmap.json"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>swiss_micros_tools — Ada/SPARK Documentation</title>
+  <meta name="description" content="Cross-platform tools to supercharge your Swiss Micros experience">
+  <meta name="keywords" content="Ada, SPARK, Alire, swiss_micros_tools, calculator, tools, retrocomputing, ada-2022, dm16l, cross-platform, DM_Receive, DM_Set_Time, Swiss_Micros, Swiss_Micros_Tools_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "swiss_micros_tools",
+"version": "1.8.11",  "description": "Cross-platform tools to supercharge your Swiss Micros experience",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/swiss_micros_tools/",
+  "codeRepository": "https://sourceforge.net/projects/calculator-scripts"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">swiss_micros_tools</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>swiss_micros_tools</h1>
+    <span class="version-tag">1.8.11</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.8.11">1.8.11</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.8.11" selected>1.8.11</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Cross-platform tools to supercharge your Swiss Micros experience</p>
+
+  <div class="long-description"><h2>Swiss Micros Tools</h2>
+<p>Step into the golden era of handheld computing with <strong>swiss_micros_tools</strong>, a versatile suite that turbocharges your<br />
+SwissMicros calculator adventures!  Unlike workflows shackled to a serial terminal, this toolkit puts the three most<br />
+important USB-serial chores on the command line - no eyeballing a watch and no precision Enter-key gymnastics.</p>
+<p>Currently implemented is <strong>dm_set_time</strong>: it sets the calculator clock second-precise from the host. Planned companions<br />
+are <strong>dm_receive</strong> and <strong>dm_send</strong>, completing the trio so you can move programs and data without opening a terminal at<br />
+all.</p>
+<p>Unlike many tools shackled to Windows, this toolkit runs flawlessly on <strong>macOS</strong>, <strong>Linux</strong>, and <strong>Windows</strong>. Built with<br />
+the precision of <strong>Ada 2022</strong> for unshakeable reliability, the tools talk to the calculator over the USB serial link<br />
+with the same care SwissMicros put into the hardware.</p>
+<h3>Getting started</h3>
+<p>Put the calculator into <strong>SERIAL CONSOLE</strong> mode before starting any of the tools. All three commands accept the same two<br />
+options so you can find your feet immediately:</p>
+<pre><code>    -d Device   --device=Device       device file (unix) or name (windows)
+                                      of the USB serial device.
+                DM_SERIAL_DEVICE=     set via environment variable
+
+    -?          --help                this help
+</code></pre>
+<h3>Key Features</h3>
+<ul>
+<li><strong>dm_set_time</strong> <em>(available now)</em>: Set the calculator clock to the host time, second-precise - no watching a second<br />
+  hand and stabbing Enter.</li>
+<li><strong>dm_receive</strong> <em>(planned)</em>: Pull programs and data from the calculator without a terminal session.</li>
+<li><strong>dm_send</strong> <em>(planned)</em>: Push programs and data to the calculator without a terminal session.</li>
+<li><strong>Cross-Platform Power</strong>: Runs natively on macOS, Linux, and Windows - like a portable Ada generic, no OS exceptions.</li>
+<li><strong>Open Source</strong>: Hosted on <a href="https://calculator-scripts.sourceforge.io/hp41cx-tools/">SourceForge</a>, ready for you to<br />
+  hack, extend, and share with the retro computing community.</li>
+</ul>
+<h3>Why You&rsquo;ll Love It</h3>
+<p>SwissMicros calculators already feel like the best of the 1980s, rebuilt for today. <strong>swiss_micros_tools</strong> removes the<br />
+last awkward step: talking to them through a raw serial console when all you wanted was the time set, a dump saved, or a<br />
+program loaded. Join the retro computing revolution - on any desktop OS, and without a terminal in sight.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/calculator-scripts">https://sourceforge.net/projects/calculator-scripts</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">calculator</span><span class="tag">tools</span><span class="tag">retrocomputing</span><span class="tag">ada-2022</span><span class="tag">dm16l</span><span class="tag">cross-platform</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl/">adacl</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_desktop/">adacl_desktop</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_regexp/">adacl_regexp</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/adacl_serial/">adacl_serial</a>
+        <span class="dep-version">^8.0</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/dm_receive/">DM_Receive</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/dm_set_time/">DM_Set_Time</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/dm_set_time-command_line/">DM_Set_Time.Command_Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/swiss_micros/">Swiss_Micros</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/swiss_micros-command_line/">Swiss_Micros.Command_Line</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/swiss_micros-console_io/">Swiss_Micros.Console_IO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/swiss_micros_tools/1.8.11/swiss_micros_tools_config/">Swiss_Micros_Tools_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-09-26.
+    </p>
+  </footer>
+
+</body>
+</html>

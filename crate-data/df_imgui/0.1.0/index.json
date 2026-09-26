@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "crate": "df_imgui",
+  "version": "0.1.0",
+  "documented_at": "2026-06-20T03:01:39Z",
+  "description": "Ada bindings to Dear ImGui via cimgui",
+  "authors": [
+    "The Dark Factory Ltd"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "binding",
+    "gui",
+    "imgui",
+    "cimgui"
+  ],
+  "website": "https://github.com/the-dark-factory/imgui-ada",
+  "repository": {
+    "url": "https://github.com/the-dark-factory/imgui-ada",
+    "host": "github",
+    "commit": "3dec19e9896a15f1194c8c98dc7848324c0faaac"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Imgui",
+      "id": "395f9d71cc5fb76c",
+      "file": "imgui.json"
+    },
+    {
+      "name": "Imgui.C",
+      "id": "ec77a762810c4e1e",
+      "file": "imgui-c.json"
+    },
+    {
+      "name": "Imgui.Style",
+      "id": "52f0a2288cd677ac",
+      "file": "imgui-style.json"
+    },
+    {
+      "name": "Imgui.Types",
+      "id": "b9f811ca82a05404",
+      "file": "imgui-types.json"
+    },
+    {
+      "name": "Imgui.Widgets",
+      "id": "e70e376b4df83837",
+      "file": "imgui-widgets.json"
+    },
+    {
+      "name": "Imgui.Windows",
+      "id": "a2e39f36ace7c43a",
+      "file": "imgui-windows.json"
+    }
+  ]
+}

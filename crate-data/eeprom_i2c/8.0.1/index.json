@@ -1,0 +1,94 @@
+{
+  "schema_version": "1",
+  "crate": "eeprom_i2c",
+  "version": "8.0.1",
+  "documented_at": "2026-03-04T02:57:08Z",
+  "description": "EEPROM I2C drivers library for embedded platforms",
+  "authors": [
+    "Holger Rodriguez"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "eeprom",
+    "rp2040",
+    "i2c"
+  ],
+  "website": "https://github.com/hgrodriguez/eeprom_i2c",
+  "repository": {
+    "url": "https://github.com/hgrodriguez/eeprom_i2c",
+    "host": "github",
+    "commit": "555a0529352e6c18c468b5c7bd78f77751596544"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "EEPROM_I2C",
+      "id": "68c164cd0d58cbb1",
+      "file": "eeprom_i2c.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX01",
+      "id": "1ce127bed4224e08",
+      "file": "eeprom_i2c-mc24xx01.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX02",
+      "id": "d88e768eed1d8958",
+      "file": "eeprom_i2c-mc24xx02.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX04",
+      "id": "4b1e55bb1ac211a0",
+      "file": "eeprom_i2c-mc24xx04.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX08",
+      "id": "c0b959c365d722db",
+      "file": "eeprom_i2c-mc24xx08.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX1024",
+      "id": "232720eeb07439c0",
+      "file": "eeprom_i2c-mc24xx1024.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX128",
+      "id": "db410d2773aa3c0e",
+      "file": "eeprom_i2c-mc24xx128.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX16",
+      "id": "83302898821aae6f",
+      "file": "eeprom_i2c-mc24xx16.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX256",
+      "id": "eca720bcdcb229d6",
+      "file": "eeprom_i2c-mc24xx256.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX32",
+      "id": "5cbdace97f6f7f35",
+      "file": "eeprom_i2c-mc24xx32.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX512",
+      "id": "9dbe0d8d51de3ea0",
+      "file": "eeprom_i2c-mc24xx512.json"
+    },
+    {
+      "name": "EEPROM_I2C.MC24XX64",
+      "id": "8a21e77bc7787cc4",
+      "file": "eeprom_i2c-mc24xx64.json"
+    }
+  ]
+}

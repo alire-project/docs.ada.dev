@@ -1,0 +1,62 @@
+{
+  "schema_version": "1",
+  "crate": "blake3",
+  "version": "1.0.0",
+  "documented_at": "2026-07-11T03:01:05Z",
+  "description": "SPARK-proved BLAKE3 hash function (C2SP specification)",
+  "long_description": "SPARK-proved BLAKE3 hash function for Ada 2022. Implements the C2SP BLAKE3\nspecification with hash, keyed_hash, and derive_key modes. Compression\nfunction, G function, byte conversions, chunk processing, and CV-stack\nMerkle assembly are formally verified at SPARK level 2: 482/482 proof\nobligations discharged, zero unproved VCs, zero pragma Assume. The\nBLAKE3 algorithm-level invariant relating CV-stack depth to the chunk\ncounter (popcount bound) is a machine-checked theorem, and the\n2**64-byte input cap is an enforced precondition (see SECURITY.md).\n\nNo heap allocation, pragma Pure, suitable for embedded and safety-critical\nsystems. Extensible output, incremental API (Init/Update/Final), comprehensive\nofficial C2SP test vectors.\n\nConstant-time execution is out of scope for this release. See SECURITY.md\nfor the full threat model.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "blake3",
+    "hash",
+    "cryptography",
+    "spark",
+    "embedded",
+    "security",
+    "verified"
+  ],
+  "website": "https://github.com/b-erdem/blake3_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/blake3_ada",
+    "host": "github",
+    "commit": "06634237deb9ccb14eb33c0d1987fc2342b9856b"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "BLAKE3",
+      "id": "d74c5438778664f9",
+      "file": "blake3.json"
+    },
+    {
+      "name": "BLAKE3.Chunk",
+      "id": "fec4635e611479bb",
+      "file": "blake3-chunk.json"
+    },
+    {
+      "name": "BLAKE3.Compress",
+      "id": "85622aef49f0c86e",
+      "file": "blake3-compress.json"
+    },
+    {
+      "name": "BLAKE3.Convert",
+      "id": "a1a229c9c3d74e9d",
+      "file": "blake3-convert.json"
+    },
+    {
+      "name": "BLAKE3.G",
+      "id": "3eac5dcf46bdaedd",
+      "file": "blake3-g.json"
+    },
+    {
+      "name": "BLAKE3.Tree",
+      "id": "839a9d339a07d8d8",
+      "file": "blake3-tree.json"
+    }
+  ]
+}

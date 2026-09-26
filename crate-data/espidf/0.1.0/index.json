@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "espidf",
+  "version": "0.1.0",
+  "documented_at": "2026-04-21T03:01:13Z",
+  "description": "Ada/ESP-IDF",
+  "long_description": "This is the base crate for Ada bindings to the ESP-IDF (Espressif IoT Development Framework).\nIt provides the foundational type definitions and root package hierarchy required to build Ada applications for Espressif SoC platforms.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "embedded",
+    "espidf"
+  ],
+  "website": "https://github.com/godunko/espidf",
+  "repository": {
+    "url": "https://github.com/godunko/espidf",
+    "host": "github",
+    "commit": "e0a4e19a68386d62046d3a44e2a7dbf86fc16faa"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF",
+      "id": "59b6020c741b4814",
+      "file": "espidf.json"
+    },
+    {
+      "name": "ESPIDF.Driver",
+      "id": "41e9ba672eaaf48c",
+      "file": "espidf-driver.json"
+    }
+  ]
+}

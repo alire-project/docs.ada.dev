@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_omp",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T12:52:21Z",
+  "description": "GNAT Components Collection - OpenMP binding",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "gnatcoll",
+    "bindings",
+    "openmp",
+    "libgomp"
+  ],
+  "website": "https://github.com/adacore/gnatcoll-bindings",
+  "repository": {
+    "url": "https://github.com/AdaCore/gnatcoll-bindings",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatcoll_minimal",
+      "version": "~26.0.0"
+    },
+    {
+      "crate": "libgomp",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ada.Containers.Vectors.Generic_Parallel_Sorting",
+      "id": "ef59473b2d11403b",
+      "file": "ada-containers-vectors-generic_parallel_sorting.json"
+    },
+    {
+      "name": "GNATCOLL.OMP",
+      "id": "5cdd2dd8fbd83c33",
+      "file": "gnatcoll-omp.json"
+    }
+  ]
+}

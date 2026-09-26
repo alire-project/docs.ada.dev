@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "asfml",
+  "version": "2.6.1",
+  "failed_at": "2026-03-03T17:50:58Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

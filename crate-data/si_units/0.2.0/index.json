@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "crate": "si_units",
+  "version": "0.2.0",
+  "documented_at": "2026-03-06T02:58:00Z",
+  "description": "Pretty print physical values in properly scaled metric (SI) units.",
+  "long_description": "Provides generic conversion (`Image`) functions that convert values into human\nreadable strings with appropriate SI prefixes. This is especially convenient\nwhen you have to deal with printing values from a potentially large interval,\nand you need to represent such values as something an average human will\neasily be able to read. Then you can use `SI_Units` to take care of the\nconversion into an appropriate string representation for you.\n\nConverting values into a string is supported with all SI prefixes which are a\npower of 1000 (yocto .. Yotta), additionally there is a generic that can deal\nwith binary prefixes (i.e. prefixes that denote powers of 1024).\n\nScaling (i.e. conversion between different prefixes, like from kilo(meter) to\ncenti(meter)) between all defined SI prefixes is also supported, similar for\nbinary prefixes.\n\nSee the project's [website](https://github.heisenbug.eu/si_units) for more\ndetails.\n\nVersion 0.2.0 is source code identical to the previous 0.1.3 release, but adds\nfull support for Alire integration. In the process, the provided `gnat` project\nfiles have been streamlined, so if you upgrade to this version from a previous\nrelease, you will need to adjust your own project files accordingly.\n",
+  "authors": [
+    "Vinzent \"Jellix\" Saranen"
+  ],
+  "licenses": [
+    "WTFPL"
+  ],
+  "tags": [
+    "utilities",
+    "formatting"
+  ],
+  "website": "https://github.heisenbug.eu/si_units",
+  "repository": {
+    "url": "https://github.com/HeisenbugLtd/si_units",
+    "host": "github",
+    "commit": "13606e4922ac7c1dc9e456db9967a057ced1e9ea"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SI_Units",
+      "id": "b41caf2532f852da",
+      "file": "si_units.json"
+    },
+    {
+      "name": "SI_Units.Binary",
+      "id": "2a228c88c5bcb532",
+      "file": "si_units-binary.json"
+    },
+    {
+      "name": "SI_Units.Binary.Scaling",
+      "id": "ebee1d1864faf137",
+      "file": "si_units-binary-scaling.json"
+    },
+    {
+      "name": "SI_Units.Metric",
+      "id": "2d0e515fc7ee8580",
+      "file": "si_units-metric.json"
+    },
+    {
+      "name": "SI_Units.Metric.Scaling",
+      "id": "6ccc7d0ecefca6db",
+      "file": "si_units-metric-scaling.json"
+    },
+    {
+      "name": "SI_Units.Names",
+      "id": "c8c1a3f104f471dc",
+      "file": "si_units-names.json"
+    }
+  ]
+}

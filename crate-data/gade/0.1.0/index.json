@@ -1,0 +1,63 @@
+{
+  "schema_version": "1",
+  "crate": "gade",
+  "version": "0.1.0",
+  "documented_at": "2026-03-13T02:54:41Z",
+  "description": "A Game Boy emulation library in Ada",
+  "authors": [
+    "ellamosi"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "ada",
+    "gameboy",
+    "emulator",
+    "library"
+  ],
+  "website": "https://github.com/ellamosi/gade",
+  "repository": {
+    "url": "https://github.com/ellamosi/gade",
+    "host": "github",
+    "commit": "f36487678c4e3fa36214c177dc5381ef4ccf58fc"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Gade",
+      "id": "3a7d979975613ddf",
+      "file": "gade.json"
+    },
+    {
+      "name": "Gade.Audio_Buffer",
+      "id": "bb19d4fea5a3c931",
+      "file": "gade-audio_buffer.json"
+    },
+    {
+      "name": "Gade.Cartridge_Info",
+      "id": "03b10cdcea927e22",
+      "file": "gade-cartridge_info.json"
+    },
+    {
+      "name": "Gade.Input",
+      "id": "5eab250a1281e7e7",
+      "file": "gade-input.json"
+    },
+    {
+      "name": "Gade.Interfaces",
+      "id": "fce862cf528feecf",
+      "file": "gade-interfaces.json"
+    },
+    {
+      "name": "Gade.Logging",
+      "id": "b0679c5bda0c259b",
+      "file": "gade-logging.json"
+    },
+    {
+      "name": "Gade.Video_Buffer",
+      "id": "c6d9e2c04082e55a",
+      "file": "gade-video_buffer.json"
+    }
+  ]
+}

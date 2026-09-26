@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"wl_lib","version":"0.1.4","id":"9d709a05ea3ef8e4","name":"WL","qualified_name":"WL","kind":"ada_package","location":{"file":"src/wl.ads","line":1,"column":9},"code":"package WL"}

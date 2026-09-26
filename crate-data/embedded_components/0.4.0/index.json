@@ -1,0 +1,326 @@
+{
+  "schema_version": "1",
+  "crate": "embedded_components",
+  "version": "0.4.0",
+  "documented_at": "2026-03-04T02:58:16Z",
+  "description": "Platform agnostic drivers to interface external components",
+  "long_description": "# embedded-components\n\nPlatform agnostic drivers to interface external components.\n\nThis crate is a snapshot of the `components` of [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/components).\n\nAny bug report, issue, contribution must be adressed to the [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/) repo.\n\n",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd"
+  ],
+  "website": "https://github.com/AdaCore/Ada_Drivers_Library/",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/embedded-components",
+    "host": "github",
+    "commit": "f25a8cc920fa0510409c878d4133db1d7c227eda"
+  },
+  "dependencies": [
+    {
+      "crate": "adl_middleware",
+      "version": "~0.4.0"
+    },
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AdaFruit",
+      "id": "322f0e37e54656bb",
+      "file": "adafruit.json"
+    },
+    {
+      "name": "AdaFruit.CharlieWing",
+      "id": "c199ef68620b9ee3",
+      "file": "adafruit-charliewing.json"
+    },
+    {
+      "name": "AdaFruit.Thermal_Printer",
+      "id": "dc0ac21710b2fa95",
+      "file": "adafruit-thermal_printer.json"
+    },
+    {
+      "name": "AdaFruit.Trellis",
+      "id": "52f822cfdac8f3ee",
+      "file": "adafruit-trellis.json"
+    },
+    {
+      "name": "AK8963",
+      "id": "d1d4ecf1973c12f3",
+      "file": "ak8963.json"
+    },
+    {
+      "name": "BBQ10KBD",
+      "id": "97c7548c048d8b36",
+      "file": "bbq10kbd.json"
+    },
+    {
+      "name": "Bit_Fields",
+      "id": "dea61e0915f34b94",
+      "file": "bit_fields.json"
+    },
+    {
+      "name": "BNO055_I2C_IO",
+      "id": "13d5912797c4d458",
+      "file": "bno055_i2c_io.json"
+    },
+    {
+      "name": "Bosch_BNO055",
+      "id": "d7ede2e34efce2d8",
+      "file": "bosch_bno055.json"
+    },
+    {
+      "name": "CS43L22",
+      "id": "bccfec4adc19a2bf",
+      "file": "cs43l22.json"
+    },
+    {
+      "name": "Embedded_Components_Config",
+      "id": "c5e9d6d83846a4cf",
+      "file": "embedded_components_config.json"
+    },
+    {
+      "name": "FT5336",
+      "id": "b6b514b787a7fea7",
+      "file": "ft5336.json"
+    },
+    {
+      "name": "FT6x06",
+      "id": "63a83c6ba46cee33",
+      "file": "ft6x06.json"
+    },
+    {
+      "name": "HM11",
+      "id": "4a8dba1e7a933cce",
+      "file": "hm11.json"
+    },
+    {
+      "name": "HT16K33",
+      "id": "f092bdde69220a85",
+      "file": "ht16k33.json"
+    },
+    {
+      "name": "ILI9341",
+      "id": "dc5e83d4621477ed",
+      "file": "ili9341.json"
+    },
+    {
+      "name": "ILI9341.B16_Connector",
+      "id": "769110ede9bb1b1c",
+      "file": "ili9341-b16_connector.json"
+    },
+    {
+      "name": "ILI9341.Device",
+      "id": "d6273248d67fd4ee",
+      "file": "ili9341-device.json"
+    },
+    {
+      "name": "ILI9341.Device.Bitmap",
+      "id": "7d08388933744218",
+      "file": "ili9341-device-bitmap.json"
+    },
+    {
+      "name": "ILI9341.Regs",
+      "id": "7f71c80765cc79f8",
+      "file": "ili9341-regs.json"
+    },
+    {
+      "name": "ILI9341.SPI_Connector",
+      "id": "03651d6923d8692f",
+      "file": "ili9341-spi_connector.json"
+    },
+    {
+      "name": "IS31FL3731",
+      "id": "d3637905bb9c1d8f",
+      "file": "is31fl3731.json"
+    },
+    {
+      "name": "L3GD20",
+      "id": "28285fa359bf93f3",
+      "file": "l3gd20.json"
+    },
+    {
+      "name": "LCD_HD44780",
+      "id": "789a53622989be55",
+      "file": "lcd_hd44780.json"
+    },
+    {
+      "name": "LCD_HD44780.Commands",
+      "id": "0043d6770d4c835f",
+      "file": "lcd_hd44780-commands.json"
+    },
+    {
+      "name": "LCD_HD44780.Custom_Characters",
+      "id": "676f7cb6ca9cc9c5",
+      "file": "lcd_hd44780-custom_characters.json"
+    },
+    {
+      "name": "LCD_HD44780.PCF8574",
+      "id": "d06877496df15c17",
+      "file": "lcd_hd44780-pcf8574.json"
+    },
+    {
+      "name": "LIS3DSH",
+      "id": "ad5d2ffcced6891b",
+      "file": "lis3dsh.json"
+    },
+    {
+      "name": "LIS3DSH.SPI",
+      "id": "84f502e8de4addba",
+      "file": "lis3dsh-spi.json"
+    },
+    {
+      "name": "LPS25H",
+      "id": "81db153cadbcf4db",
+      "file": "lps25h.json"
+    },
+    {
+      "name": "LPS25H.I2C",
+      "id": "1e191d8f0df85fe9",
+      "file": "lps25h-i2c.json"
+    },
+    {
+      "name": "LPS25H.SPI",
+      "id": "08a03be4af201ba7",
+      "file": "lps25h-spi.json"
+    },
+    {
+      "name": "LSM303AGR",
+      "id": "54f3c179c81c2975",
+      "file": "lsm303agr.json"
+    },
+    {
+      "name": "MCP23x08",
+      "id": "97e89feac3a08213",
+      "file": "mcp23x08.json"
+    },
+    {
+      "name": "MCP23x08.I2C",
+      "id": "dfd1dadb8c18b2c4",
+      "file": "mcp23x08-i2c.json"
+    },
+    {
+      "name": "MCP23x17",
+      "id": "5ad7c101eb661ff2",
+      "file": "mcp23x17.json"
+    },
+    {
+      "name": "MCP23x17.I2C",
+      "id": "bfbd68a4ea3ac662",
+      "file": "mcp23x17-i2c.json"
+    },
+    {
+      "name": "MMA8653",
+      "id": "3152842cac31e452",
+      "file": "mma8653.json"
+    },
+    {
+      "name": "MPU9250",
+      "id": "7bfb50ee8872a8e7",
+      "file": "mpu9250.json"
+    },
+    {
+      "name": "OTM8009A",
+      "id": "db1a49265d7ba878",
+      "file": "otm8009a.json"
+    },
+    {
+      "name": "OV2640",
+      "id": "233134ccaf2d610c",
+      "file": "ov2640.json"
+    },
+    {
+      "name": "OV7725",
+      "id": "1c6c7587ac4efcac",
+      "file": "ov7725.json"
+    },
+    {
+      "name": "PCD8544",
+      "id": "06d8a9f492e6351f",
+      "file": "pcd8544.json"
+    },
+    {
+      "name": "PCD8544_Reg",
+      "id": "af682ed31e707f51",
+      "file": "pcd8544_reg.json"
+    },
+    {
+      "name": "PCF8574",
+      "id": "0f173249adb175bb",
+      "file": "pcf8574.json"
+    },
+    {
+      "name": "PMW3901",
+      "id": "160469663ba37e3c",
+      "file": "pmw3901.json"
+    },
+    {
+      "name": "SGTL5000",
+      "id": "3bb2958102173567",
+      "file": "sgtl5000.json"
+    },
+    {
+      "name": "SSD1306",
+      "id": "014054e5f707d206",
+      "file": "ssd1306.json"
+    },
+    {
+      "name": "SSD1306.Standard_Resolutions",
+      "id": "38f9264255eb1e8d",
+      "file": "ssd1306-standard_resolutions.json"
+    },
+    {
+      "name": "ST7735R",
+      "id": "b86a8ee00233803a",
+      "file": "st7735r.json"
+    },
+    {
+      "name": "ST7735R.RAM_Framebuffer",
+      "id": "14b226e114b36bdf",
+      "file": "st7735r-ram_framebuffer.json"
+    },
+    {
+      "name": "STMPE1600",
+      "id": "1bdafd8fd841c98e",
+      "file": "stmpe1600.json"
+    },
+    {
+      "name": "STMPE811",
+      "id": "d2a4808490225a26",
+      "file": "stmpe811.json"
+    },
+    {
+      "name": "VL53L0X",
+      "id": "0e9ea5f5dfcbd8a9",
+      "file": "vl53l0x.json"
+    },
+    {
+      "name": "VL53L1X",
+      "id": "82c7a45c09286577",
+      "file": "vl53l1x.json"
+    },
+    {
+      "name": "W25Q16",
+      "id": "5968a7e31e961741",
+      "file": "w25q16.json"
+    },
+    {
+      "name": "WM8994",
+      "id": "9b45d596ed7ea4b0",
+      "file": "wm8994.json"
+    },
+    {
+      "name": "XPT2046",
+      "id": "63fa2306c59056f7",
+      "file": "xpt2046.json"
+    }
+  ]
+}

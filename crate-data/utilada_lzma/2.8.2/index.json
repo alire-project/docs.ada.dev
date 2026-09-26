@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "utilada_lzma",
+  "version": "2.8.2",
+  "documented_at": "2026-03-07T02:49:47Z",
+  "description": "Utility Library streams with LZMA support",
+  "long_description": "[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-util/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-util/summary)\n[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-util/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-util/xunits)\n[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-util/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-util/summary)\n[![Documentation Status](https://readthedocs.org/projects/ada-util/badge/?version=latest)](https://ada-util.readthedocs.io/en/latest/?badge=latest)\n\nThis small library provides LZMA streams.\n\n# Documentation\n\n* [Ada Utility Library Programmer's Guide](https://ada-util.readthedocs.io/en/latest/) [PDF](https://github.com/stcarrez/ada-util/blob/master/docs/utilada-book.pdf)\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "lzma",
+    "streams"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-util",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-util",
+    "host": "gitlab",
+    "commit": "30b22a5998340109f8322292e74b33b29d3494fe",
+    "subdir": "lzma/"
+  },
+  "dependencies": [
+    {
+      "crate": "lzmada",
+      "version": "^1.1.2"
+    },
+    {
+      "crate": "utilada",
+      "version": "^2.8.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Util.Encoders.Lzma",
+      "id": "91400621be95da59",
+      "file": "util-encoders-lzma.json"
+    },
+    {
+      "name": "Util.Streams.Buffered.Lzma",
+      "id": "1d3d791177cc3c03",
+      "file": "util-streams-buffered-lzma.json"
+    }
+  ]
+}

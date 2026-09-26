@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pico_ada_c09_ad_converter — Ada/SPARK Documentation</title>
+  <meta name="description" content="Chapter 9: read the Pico ADC as counts, microvolts and fixed-point volts">
+  <meta name="keywords" content="Ada, SPARK, Alire, pico_ada_c09_ad_converter, raspberry, pi, pico, rp2040, tasking, light-tasking, ada2022, embedded, Pico_Ada_C09_Ad_Converter_Config">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "pico_ada_c09_ad_converter",
+"version": "1.9.0",  "description": "Chapter 9: read the Pico ADC as counts, microvolts and fixed-point volts",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/pico_ada_c09_ad_converter/",
+  "codeRepository": "https://sourceforge.net/projects/pi-ada-tutorial"
+  ,"author": [{"@type": "Person", "name": "Martin Krischik \u003ckrischik@users.sourceforge.net\u003e"}]
+  ,"license": "GPL-3.0-or-later"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">pico_ada_c09_ad_converter</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>pico_ada_c09_ad_converter</h1>
+    <span class="version-tag">1.9.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="1.9.0">1.9.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="1.9.0" selected>1.9.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Chapter 9: read the Pico ADC as counts, microvolts and fixed-point volts</p>
+
+  <div class="long-description"><p>Chapter 9 - AD Converter</p>
+<p>Ada rewrite of the Freenove &ldquo;AD Converter&rdquo; lesson for the Raspberry Pi Pico.</p>
+<p>The sketch on GP26 (ADC0) prints three representations of the same<br />
+potentiometer on one UART line:</p>
+<ul>
+<li><code>RP.ADC.Analog_Value</code> - the 12-bit code (<code>0 .. 4095</code>)</li>
+<li><code>RP.ADC.Microvolts</code> - that code scaled by the HAL with a <code>Float</code></li>
+<li><code>Pico.Analog.Input.Volts</code> - a 32-bit ordinary fixed-point subtype<br />
+  (<code>delta 0.1 mV</code>, <code>'Small =&gt; 2**(-16)</code>), converted from the count<br />
+  by multiply-first / divide-second</li>
+</ul>
+<p>The chapter is the notes I needed before that line made sense:</p>
+<ul>
+<li><strong>AGND</strong> and <strong>ADC_VREF</strong> are a filtered analogue pair, not a second<br />
+  isolated supply. ADC3 (VSYS/3) and ADC4 (the on-chip temperature<br />
+  sensor) are not available as general inputs.</li>
+<li>The RP2040 ADC has dead zones at both rails. On my board the floor<br />
+  sits around 19 counts (~15 mV) and the ceiling around 4081. Software<br />
+  clamps those to <code>Volts'First</code> and <code>Volts'Last</code>.</li>
+<li><code>Free_Running</code> plus a 2 Hz <code>Put_Line</code> leaves stale samples in the<br />
+  FIFO. The sketch uses <code>One_Shot</code>.</li>
+<li>The three columns are three conversions, not three formats of one<br />
+  sample. They may differ by a count or two.</li>
+<li><code>Sketch_09_1_ADC</code> is <code>No_Return</code> under the Jorvik profile. The<br />
+  handler logs on <code>Ada.Text_IO</code> and re-raises; the embedded runtime<br />
+  then halts. Fine for a sample you reset with BOOTSEL. SPARK would<br />
+  want an outer loop instead.</li>
+</ul>
+<p>Built against <code>rp2040_hal</code> / the Pico BSP. Watch the UART with<br />
+CoolTerm (or any 115200 8N1 terminal).</p>
+<p>Read the full tutorial at <a href="https://pi-ada-tutorial.sourceforge.io/pico_ada_c09_ad_converter">Chapter 9 - AD Converter: three ways to read a<br />
+voltage</a>, <a href="https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_doc/">GNATdoc<br />
+documentation</a>, <a href="https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c09_ad_converter/">SourceForge<br />
+repository</a></p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Martin Krischik &lt;krischik@users.sourceforge.net&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-3.0-or-later</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://sourceforge.net/projects/pi-ada-tutorial">https://sourceforge.net/projects/pi-ada-tutorial</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">raspberry</span><span class="tag">pi</span><span class="tag">pico</span><span class="tag">rp2040</span><span class="tag">tasking</span><span class="tag">light-tasking</span><span class="tag">ada2022</span><span class="tag">embedded</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/embedded_rp2040/">embedded_rp2040</a>
+        <span class="dep-version">^15.4</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_bsp/">pico_bsp</a>
+        <span class="dep-version">^2.2</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_xbsp/">pico_xbsp</a>
+        <span class="dep-version">^1.9</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/rp2040_hal/">rp2040_hal</a>
+        <span class="dep-version">^2.7.1</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/pico_ada_c09_ad_converter/1.9.0/pico_ada_c09_ad_converter_config/">Pico_Ada_C09_Ad_Converter_Config</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-09-26.
+    </p>
+  </footer>
+
+</body>
+</html>

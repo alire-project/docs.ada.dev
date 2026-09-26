@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"432aeab8f4c94007","name":"PragmARC.Encryption","qualified_name":"PragmARC.Encryption","kind":"ada_package","location":{"file":"src/pragmarc-encryption.ads","line":11,"column":9},"code":"package PragmARC.Encryption","documentation":{"description":"Empty"}}

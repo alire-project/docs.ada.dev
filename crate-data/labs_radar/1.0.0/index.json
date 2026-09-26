@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "labs_radar",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:52:00Z",
+  "description": "Introductory Ada exercises based around a fake radar codebase",
+  "authors": [
+    "Léo Germond"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "training",
+    "labs"
+  ],
+  "website": "https://github.com/adacore/training_labs_radar",
+  "repository": {
+    "url": "https://github.com/adacore/training_labs_radar",
+    "host": "github",
+    "commit": "e5cb19b4b5d9f337f68e7e0ea90b7bae576f3512"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Labs_Radar_Config",
+      "id": "37031275e3e01b42",
+      "file": "labs_radar_config.json"
+    },
+    {
+      "name": "Radar_Internals",
+      "id": "acd9545369541202",
+      "file": "radar_internals.json"
+    }
+  ]
+}

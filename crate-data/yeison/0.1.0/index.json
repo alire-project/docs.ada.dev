@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "crate": "yeison",
+  "version": "0.1.0",
+  "documented_at": "2026-03-07T02:52:04Z",
+  "description": "A JSON-like data structure using Ada 2022 features",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "json",
+    "yaml",
+    "toml",
+    "containers"
+  ],
+  "website": "https://github.com/mosteo/yeison",
+  "repository": {
+    "url": "https://github.com/mosteo/yeison",
+    "host": "github",
+    "commit": "054232ad738902e42740936b7e9f2867d0411b09"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Yeison_Classwide",
+      "id": "559edf7fed3ae082",
+      "file": "yeison_classwide.json"
+    },
+    {
+      "name": "Yeison_Classwide.Operators",
+      "id": "ebd9357dff6f4147",
+      "file": "yeison_classwide-operators.json"
+    },
+    {
+      "name": "Yeison_Multi",
+      "id": "4c7d21934040ed05",
+      "file": "yeison_multi.json"
+    },
+    {
+      "name": "Yeison_Single",
+      "id": "d15f1b6fcdb784b5",
+      "file": "yeison_single.json"
+    },
+    {
+      "name": "Yeison_Single.Operators",
+      "id": "e5ead1f76d2a07ea",
+      "file": "yeison_single-operators.json"
+    }
+  ]
+}

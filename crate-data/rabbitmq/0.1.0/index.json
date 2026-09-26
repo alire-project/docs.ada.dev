@@ -1,0 +1,98 @@
+{
+  "schema_version": "1",
+  "crate": "rabbitmq",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:55:48Z",
+  "description": "Ada bindings for the librabbitmq C client library",
+  "authors": [
+    "Jochen Lillich"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "rabbitmq",
+    "amqp",
+    "message",
+    "queue"
+  ],
+  "website": "https://github.com/geewiz/rabbitmq_ada",
+  "repository": {
+    "url": "https://github.com/geewiz/rabbitmq_ada",
+    "host": "github",
+    "commit": "cf05eeb7b9c85a6a23fff7f57e4910bd3d38fd88"
+  },
+  "dependencies": [
+    {
+      "crate": "librabbitmq",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "RabbitMQ",
+      "id": "7b173343f539cdc4",
+      "file": "rabbitmq.json"
+    },
+    {
+      "name": "RabbitMQ.C_Binding",
+      "id": "04499083f807da6a",
+      "file": "rabbitmq-c_binding.json"
+    },
+    {
+      "name": "RabbitMQ.Channels",
+      "id": "ec957dff0fb7334d",
+      "file": "rabbitmq-channels.json"
+    },
+    {
+      "name": "RabbitMQ.Client",
+      "id": "c1bdca63999fc1c8",
+      "file": "rabbitmq-client.json"
+    },
+    {
+      "name": "RabbitMQ.Client.URLs",
+      "id": "314ebbdf1ce8ac5f",
+      "file": "rabbitmq-client-urls.json"
+    },
+    {
+      "name": "RabbitMQ.Connections",
+      "id": "2173266b9d3e288a",
+      "file": "rabbitmq-connections.json"
+    },
+    {
+      "name": "RabbitMQ.Consuming",
+      "id": "141bbd6825a14ec8",
+      "file": "rabbitmq-consuming.json"
+    },
+    {
+      "name": "RabbitMQ.Exceptions",
+      "id": "bf8220511628e554",
+      "file": "rabbitmq-exceptions.json"
+    },
+    {
+      "name": "RabbitMQ.Exchanges",
+      "id": "96df9c6aa5194e63",
+      "file": "rabbitmq-exchanges.json"
+    },
+    {
+      "name": "RabbitMQ.Messages",
+      "id": "9c25b401657af2ea",
+      "file": "rabbitmq-messages.json"
+    },
+    {
+      "name": "RabbitMQ.Publishing",
+      "id": "9048ca959d5df0b7",
+      "file": "rabbitmq-publishing.json"
+    },
+    {
+      "name": "RabbitMQ.Queues",
+      "id": "8af350ec430aa1ec",
+      "file": "rabbitmq-queues.json"
+    },
+    {
+      "name": "Rabbitmq_Config",
+      "id": "1afd81f72af2ac34",
+      "file": "rabbitmq_config.json"
+    }
+  ]
+}

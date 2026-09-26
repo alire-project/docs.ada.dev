@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_armv7m",
+  "version": "0.4.0",
+  "failed_at": "2026-03-03T15:39:23Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

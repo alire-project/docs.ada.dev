@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "crate": "softdev",
+  "version": "1.2.0",
+  "documented_at": "2026-03-06T02:58:32Z",
+  "description": "Serial protocols implemented in software",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "i2c"
+  ],
+  "website": "https://github.com/JeremyGrosser/softdev",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/softdev",
+    "host": "github",
+    "commit": "1cb2175ca72d25166bda17f3614a787f6193d26a"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Softdev",
+      "id": "633708250c7d4ebf",
+      "file": "softdev.json"
+    },
+    {
+      "name": "Softdev.I2C_Master",
+      "id": "0e9b3216917f95ec",
+      "file": "softdev-i2c_master.json"
+    },
+    {
+      "name": "Softdev.MMC",
+      "id": "937269c79459da05",
+      "file": "softdev-mmc.json"
+    },
+    {
+      "name": "Softdev.SPI_Master",
+      "id": "427781b3fa6d3fbc",
+      "file": "softdev-spi_master.json"
+    },
+    {
+      "name": "Softdev.UART",
+      "id": "9748203a978bd771",
+      "file": "softdev-uart.json"
+    },
+    {
+      "name": "Softdev_Config",
+      "id": "2cba17f5b136a965",
+      "file": "softdev_config.json"
+    }
+  ]
+}

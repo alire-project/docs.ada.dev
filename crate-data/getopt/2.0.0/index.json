@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "getopt",
+  "version": "2.0.0",
+  "documented_at": "2026-03-04T03:00:51Z",
+  "description": "POSIX getopt(3) for Ada",
+  "authors": [
+    "nytpu"
+  ],
+  "licenses": [
+    "MPL-2.0"
+  ],
+  "tags": [
+    "arguments",
+    "options",
+    "flags",
+    "getopt"
+  ],
+  "website": "https://git.sr.ht/~nytpu/getopt-ada",
+  "repository": {
+    "url": "https://git.sr.ht/~nytpu/getopt-ada/archive/v2.0.0.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Getopts",
+      "id": "2b5a7b41fd69674f",
+      "file": "getopts.json"
+    }
+  ]
+}

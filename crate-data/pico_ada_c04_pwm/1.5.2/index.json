@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c04_pwm",
+  "version": "1.5.2",
+  "documented_at": "2026-04-26T03:01:44Z",
+  "description": "Chapter 4: Analog LED with PWM",
+  "long_description": "Building smooth breathing LEDs and flowing light bars with hardware PWM on the\nRaspberry Pi Pico using Ada. From jittery duty cycles to perfect linear dimming - guided by the Voltcraft MSO-5102B\noscilloscope and a deep dive into PWM slice mapping on both Pico 1 and Pico 2.\n\nIn this chapter we create a reusable Pico.Analog package for PWM-based analogue output. We start with a classic\nbreathing light, then move on to a flowing light bar. Along the way the MSO-5102B reveals the real behaviour of our\ncode, and we discover (and fix) a subtle bug in the experimental RP2350 HAL.\n\nContained in Chapter 04 are:\n\n1. Pwm                         - Original PWM sample from Jeremy Grosser\n2. sketch_04_1_breathing_light - Chapter 4.1 Blink internal LED\n3. sketch_04_2_flowing_light_2 - Chapter 4.1 Project Meteor Flowing Light\n\nRead the full tutorial at [Chapter 4: Analog & PWM](https://pi-ada-tutorial.sourceforge.io/pico_ada_c04_pwm), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c04_pwm/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c04_pwm/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c04_pwm",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "^15.3"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.5"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C04_Pwm_Config",
+      "id": "9de6edead704b57e",
+      "file": "pico_ada_c04_pwm_config.json"
+    }
+  ]
+}

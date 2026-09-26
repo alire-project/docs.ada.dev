@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"esp_idf","version":"5.0.2-1","id":"259cda47933f84e2","name":"ESP.Drivers","qualified_name":"ESP.Drivers","kind":"ada_package","location":{"file":"src/esp-drivers.ads","line":1,"column":9},"code":"package ESP.Drivers"}

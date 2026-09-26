@@ -1,0 +1,405 @@
+{
+  "schema_version": "1",
+  "crate": "rp2040_hal",
+  "version": "2.7.1",
+  "documented_at": "2026-03-31T03:01:16Z",
+  "description": "Drivers and HAL for the RP2040 micro-controller family",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "rp2040",
+    "raspberrypi",
+    "drivers"
+  ],
+  "website": "https://pico-doc.synack.me/",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/rp2040_hal",
+    "host": "github",
+    "commit": "d65f4ed41b6acf8d4f502782db924a1499f139ad"
+  },
+  "dependencies": [
+    {
+      "crate": "atomic",
+      "version": "^1"
+    },
+    {
+      "crate": "cortex_m",
+      "version": "^1"
+    },
+    {
+      "crate": "gnat_arm_elf",
+      "version": ">=14 & /=15.1.2"
+    },
+    {
+      "crate": "hal",
+      "version": "^1"
+    },
+    {
+      "crate": "usb_embedded",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "RP",
+      "id": "796e80c7e5bf8a48",
+      "file": "rp.json"
+    },
+    {
+      "name": "RP.ADC",
+      "id": "13c041227b4c1643",
+      "file": "rp-adc.json"
+    },
+    {
+      "name": "RP.Clock",
+      "id": "5b1f625b687c9a48",
+      "file": "rp-clock.json"
+    },
+    {
+      "name": "RP.Device",
+      "id": "ff32b3e0dd04882c",
+      "file": "rp-device.json"
+    },
+    {
+      "name": "RP.DMA",
+      "id": "9431c22b514d6c36",
+      "file": "rp-dma.json"
+    },
+    {
+      "name": "RP.Flash",
+      "id": "009254e6651eac54",
+      "file": "rp-flash.json"
+    },
+    {
+      "name": "RP.Flash.Cache",
+      "id": "515fdbd37c4121b1",
+      "file": "rp-flash-cache.json"
+    },
+    {
+      "name": "RP.GPIO",
+      "id": "8001cac74374aaac",
+      "file": "rp-gpio.json"
+    },
+    {
+      "name": "RP.GPIO.Interrupts",
+      "id": "859e15b947987337",
+      "file": "rp-gpio-interrupts.json"
+    },
+    {
+      "name": "RP.I2C",
+      "id": "d9081ae2b7ba13fd",
+      "file": "rp-i2c.json"
+    },
+    {
+      "name": "RP.I2C_Master",
+      "id": "a63c15bbba11f1c8",
+      "file": "rp-i2c_master.json"
+    },
+    {
+      "name": "RP.Interpolator",
+      "id": "eb6547dd364a9dff",
+      "file": "rp-interpolator.json"
+    },
+    {
+      "name": "RP.Multicore",
+      "id": "954d62b641e9d48f",
+      "file": "rp-multicore.json"
+    },
+    {
+      "name": "RP.Multicore.FIFO",
+      "id": "2930db3c9ed69bae",
+      "file": "rp-multicore-fifo.json"
+    },
+    {
+      "name": "RP.Multicore.Spinlocks",
+      "id": "8e70fbc65a0ef10c",
+      "file": "rp-multicore-spinlocks.json"
+    },
+    {
+      "name": "RP.PIO",
+      "id": "80a3c5a6a052f60b",
+      "file": "rp-pio.json"
+    },
+    {
+      "name": "RP.PIO.Audio_I2S",
+      "id": "4e250374c96aa695",
+      "file": "rp-pio-audio_i2s.json"
+    },
+    {
+      "name": "RP.PIO.Audio_I2S_PIO",
+      "id": "9dda0574f746a94d",
+      "file": "rp-pio-audio_i2s_pio.json"
+    },
+    {
+      "name": "RP.PIO.Encoding",
+      "id": "d8a639d41ef98424",
+      "file": "rp-pio-encoding.json"
+    },
+    {
+      "name": "RP.PIO.Touch_Sense",
+      "id": "2c1229cb36ec7e84",
+      "file": "rp-pio-touch_sense.json"
+    },
+    {
+      "name": "RP.PIO.Touch_Sense_Charge_PIO",
+      "id": "d009fc4d43425218",
+      "file": "rp-pio-touch_sense_charge_pio.json"
+    },
+    {
+      "name": "RP.PIO.Touch_Sense_Discharge_PIO",
+      "id": "b9462ca9c4a561f1",
+      "file": "rp-pio-touch_sense_discharge_pio.json"
+    },
+    {
+      "name": "RP.PIO.WS2812",
+      "id": "201ac5da5b3acc44",
+      "file": "rp-pio-ws2812.json"
+    },
+    {
+      "name": "RP.PIO.WS2812_PIO",
+      "id": "a9316c116ffc8749",
+      "file": "rp-pio-ws2812_pio.json"
+    },
+    {
+      "name": "RP.PWM",
+      "id": "7ed72006a7601117",
+      "file": "rp-pwm.json"
+    },
+    {
+      "name": "RP.PWM.Interrupts",
+      "id": "affb827955c77dce",
+      "file": "rp-pwm-interrupts.json"
+    },
+    {
+      "name": "RP.Reset",
+      "id": "557f5be5fca8b563",
+      "file": "rp-reset.json"
+    },
+    {
+      "name": "RP.ROM",
+      "id": "9637b0ee119935eb",
+      "file": "rp-rom.json"
+    },
+    {
+      "name": "RP.ROM.Floating_Point",
+      "id": "40a2227c2ae030dd",
+      "file": "rp-rom-floating_point.json"
+    },
+    {
+      "name": "RP.RTC",
+      "id": "e9d67f289e6daecc",
+      "file": "rp-rtc.json"
+    },
+    {
+      "name": "RP.SPI",
+      "id": "3fc1a902889108ac",
+      "file": "rp-spi.json"
+    },
+    {
+      "name": "RP.Timer",
+      "id": "d4346cd068b818d9",
+      "file": "rp-timer.json"
+    },
+    {
+      "name": "RP.Timer.Interrupts",
+      "id": "c0f7392df750e213",
+      "file": "rp-timer-interrupts.json"
+    },
+    {
+      "name": "RP.UART",
+      "id": "45eeb19848b1744b",
+      "file": "rp-uart.json"
+    },
+    {
+      "name": "RP.USB_Device",
+      "id": "64ab2266abf9dc71",
+      "file": "rp-usb_device.json"
+    },
+    {
+      "name": "RP.Watchdog",
+      "id": "d30e5a4212c5dcf2",
+      "file": "rp-watchdog.json"
+    },
+    {
+      "name": "Rp2040_Hal_Config",
+      "id": "f5a9699fe1ea3fa7",
+      "file": "rp2040_hal_config.json"
+    },
+    {
+      "name": "RP2040_SVD",
+      "id": "9769d6f38d0a4779",
+      "file": "rp2040_svd.json"
+    },
+    {
+      "name": "RP2040_SVD.ADC",
+      "id": "1de87b1c65b3e236",
+      "file": "rp2040_svd-adc.json"
+    },
+    {
+      "name": "RP2040_SVD.BUSCTRL",
+      "id": "d45e3ed7c3fe0fd9",
+      "file": "rp2040_svd-busctrl.json"
+    },
+    {
+      "name": "RP2040_SVD.CLOCKS",
+      "id": "7c326f92a0ab105a",
+      "file": "rp2040_svd-clocks.json"
+    },
+    {
+      "name": "RP2040_SVD.DMA",
+      "id": "5df7ed1430471e63",
+      "file": "rp2040_svd-dma.json"
+    },
+    {
+      "name": "RP2040_SVD.I2C",
+      "id": "1282f8a2b5bfc3d8",
+      "file": "rp2040_svd-i2c.json"
+    },
+    {
+      "name": "RP2040_SVD.Interrupts",
+      "id": "53e9e19cb7e0f588",
+      "file": "rp2040_svd-interrupts.json"
+    },
+    {
+      "name": "RP2040_SVD.IO_BANK0",
+      "id": "e2ee516142b292a8",
+      "file": "rp2040_svd-io_bank0.json"
+    },
+    {
+      "name": "RP2040_SVD.IO_QSPI",
+      "id": "339c05ff73690187",
+      "file": "rp2040_svd-io_qspi.json"
+    },
+    {
+      "name": "RP2040_SVD.PADS_BANK0",
+      "id": "db14e5711d09e0dd",
+      "file": "rp2040_svd-pads_bank0.json"
+    },
+    {
+      "name": "RP2040_SVD.PADS_QSPI",
+      "id": "4fb2cbccc027eb6c",
+      "file": "rp2040_svd-pads_qspi.json"
+    },
+    {
+      "name": "RP2040_SVD.PIO",
+      "id": "487b8982d7dca049",
+      "file": "rp2040_svd-pio.json"
+    },
+    {
+      "name": "RP2040_SVD.PLL",
+      "id": "6630f18e4ffbd9ce",
+      "file": "rp2040_svd-pll.json"
+    },
+    {
+      "name": "RP2040_SVD.PPB",
+      "id": "46589badbd8816bb",
+      "file": "rp2040_svd-ppb.json"
+    },
+    {
+      "name": "RP2040_SVD.PSM",
+      "id": "ac87817cf45f7203",
+      "file": "rp2040_svd-psm.json"
+    },
+    {
+      "name": "RP2040_SVD.PWM",
+      "id": "26c46270c1054e6b",
+      "file": "rp2040_svd-pwm.json"
+    },
+    {
+      "name": "RP2040_SVD.RESETS",
+      "id": "f93d5541f7cb40a1",
+      "file": "rp2040_svd-resets.json"
+    },
+    {
+      "name": "RP2040_SVD.ROSC",
+      "id": "e1384462e7ec9c43",
+      "file": "rp2040_svd-rosc.json"
+    },
+    {
+      "name": "RP2040_SVD.RTC",
+      "id": "ece9dba89fad2d5e",
+      "file": "rp2040_svd-rtc.json"
+    },
+    {
+      "name": "RP2040_SVD.SIO",
+      "id": "b254405836be44de",
+      "file": "rp2040_svd-sio.json"
+    },
+    {
+      "name": "RP2040_SVD.SPI",
+      "id": "3d3bbb6e4e6685cb",
+      "file": "rp2040_svd-spi.json"
+    },
+    {
+      "name": "RP2040_SVD.SYSCFG",
+      "id": "2bac5b88fd893f63",
+      "file": "rp2040_svd-syscfg.json"
+    },
+    {
+      "name": "RP2040_SVD.SYSINFO",
+      "id": "92478f24b4cc845a",
+      "file": "rp2040_svd-sysinfo.json"
+    },
+    {
+      "name": "RP2040_SVD.TBMAN",
+      "id": "234abd3a1199e3d8",
+      "file": "rp2040_svd-tbman.json"
+    },
+    {
+      "name": "RP2040_SVD.TIMER",
+      "id": "4757c9f10ccb44d7",
+      "file": "rp2040_svd-timer.json"
+    },
+    {
+      "name": "RP2040_SVD.UART",
+      "id": "df7ab0d450d7245c",
+      "file": "rp2040_svd-uart.json"
+    },
+    {
+      "name": "RP2040_SVD.USBCTRL_DPRAM",
+      "id": "06fa6deb4c90a50d",
+      "file": "rp2040_svd-usbctrl_dpram.json"
+    },
+    {
+      "name": "RP2040_SVD.USBCTRL_REGS",
+      "id": "057256869fa25bc3",
+      "file": "rp2040_svd-usbctrl_regs.json"
+    },
+    {
+      "name": "RP2040_SVD.VREG_AND_CHIP_RESET",
+      "id": "0f088d46d15156a6",
+      "file": "rp2040_svd-vreg_and_chip_reset.json"
+    },
+    {
+      "name": "RP2040_SVD.WATCHDOG",
+      "id": "0afbf62a21be7914",
+      "file": "rp2040_svd-watchdog.json"
+    },
+    {
+      "name": "RP2040_SVD.XIP_CTRL",
+      "id": "7a15dfae23fd2883",
+      "file": "rp2040_svd-xip_ctrl.json"
+    },
+    {
+      "name": "RP2040_SVD.XIP_SSI",
+      "id": "ed2313ab3512e0d7",
+      "file": "rp2040_svd-xip_ssi.json"
+    },
+    {
+      "name": "RP2040_SVD.XOSC",
+      "id": "cee9d10b6c81169d",
+      "file": "rp2040_svd-xosc.json"
+    },
+    {
+      "name": "RP_Interrupts",
+      "id": "4a31bb8efeab8fc3",
+      "file": "rp_interrupts.json"
+    }
+  ]
+}

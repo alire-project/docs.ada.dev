@@ -1,0 +1,102 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_sql",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T12:52:26Z",
+  "description": "GNAT Components Collection - sql",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "gnatcoll",
+    "gnatcoll-db",
+    "sql",
+    "database"
+  ],
+  "website": "https://github.com/adacore/gnatcoll-db",
+  "repository": {
+    "url": "https://github.com/AdaCore/gnatcoll-db",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatcoll",
+      "version": "~26.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "GNATCOLL.SQL",
+      "id": "2da6dee8b2fd2324",
+      "file": "gnatcoll-sql.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Exec",
+      "id": "a77b9f29b1132eda",
+      "file": "gnatcoll-sql-exec.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Exec.Tasking",
+      "id": "7dadbd293dd4c740",
+      "file": "gnatcoll-sql-exec-tasking.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Inspect",
+      "id": "c71ce85ace7c44fb",
+      "file": "gnatcoll-sql-inspect.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Inspect.Simple_Field_Mappings",
+      "id": "a1cde372d1d93514",
+      "file": "gnatcoll-sql-inspect-simple_field_mappings.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Orm",
+      "id": "0a8fd94eaa778379",
+      "file": "gnatcoll-sql-orm.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Orm.Impl",
+      "id": "01655d4b4a8bbcc4",
+      "file": "gnatcoll-sql-orm-impl.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Orm.Impl.Generic_Managers",
+      "id": "7c5c94ddbe6c7543",
+      "file": "gnatcoll-sql-orm-impl-generic_managers.json"
+    },
+    {
+      "name": "GNATCOLL.SQL.Sessions",
+      "id": "86e9470c398190e0",
+      "file": "gnatcoll-sql-sessions.json"
+    },
+    {
+      "name": "GNATCOLL.SQL_Fields",
+      "id": "6567d63241e3e2d5",
+      "file": "gnatcoll-sql_fields.json"
+    },
+    {
+      "name": "GNATCOLL.SQL_Impl",
+      "id": "9dd6569afde11ed8",
+      "file": "gnatcoll-sql_impl.json"
+    },
+    {
+      "name": "GNATCOLL.SQL_Impl.Data_Fields",
+      "id": "e46decbbee4d41c5",
+      "file": "gnatcoll-sql_impl-data_fields.json"
+    },
+    {
+      "name": "GNATCOLL.SQL_Impl.Field_Types",
+      "id": "34c547e62c7c6bd8",
+      "file": "gnatcoll-sql_impl-field_types.json"
+    },
+    {
+      "name": "GNATCOLL.SQL_Impl.Scalar_Parameters",
+      "id": "be815f47277945e1",
+      "file": "gnatcoll-sql_impl-scalar_parameters.json"
+    }
+  ]
+}

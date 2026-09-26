@@ -1,0 +1,126 @@
+{
+  "schema_version": "1",
+  "crate": "crdt",
+  "version": "1.1.0",
+  "documented_at": "2026-06-04T03:03:34Z",
+  "description": "CRDT library for Ada/SPARK",
+  "authors": [
+    "bladeacer"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "crdt",
+    "spark",
+    "ada"
+  ],
+  "website": "https://github.com/bladeacer/ada_crdt",
+  "repository": {
+    "url": "https://codeberg.org/bladeacer/Ada_CRDT",
+    "host": "codeberg"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CRDT",
+      "id": "30d0f2a63d9d58ca",
+      "file": "crdt.json"
+    },
+    {
+      "name": "CRDT.Bounded",
+      "id": "4efb1d12ceea5b23",
+      "file": "crdt-bounded.json"
+    },
+    {
+      "name": "CRDT.Bounded.Bounded_LWW_Set",
+      "id": "5fae1244a24345ae",
+      "file": "crdt-bounded-bounded_lww_set.json"
+    },
+    {
+      "name": "CRDT.Bounded.Bounded_RGA",
+      "id": "0704980b644087f9",
+      "file": "crdt-bounded-bounded_rga.json"
+    },
+    {
+      "name": "CRDT.Core",
+      "id": "33ac7a0adf66913c",
+      "file": "crdt-core.json"
+    },
+    {
+      "name": "CRDT.HLC",
+      "id": "c6bb733e5cd109e6",
+      "file": "crdt-hlc.json"
+    },
+    {
+      "name": "CRDT.Lww_Element_Sets",
+      "id": "c1df906450a454fa",
+      "file": "crdt-lww_element_sets.json"
+    },
+    {
+      "name": "CRDT.Pn_Counters",
+      "id": "080f921d1a1a3831",
+      "file": "crdt-pn_counters.json"
+    },
+    {
+      "name": "CRDT.Protected",
+      "id": "2e9aef7ef17501b3",
+      "file": "crdt-protected.json"
+    },
+    {
+      "name": "CRDT.Protected.Shared_LWW",
+      "id": "485f635e0b7ac937",
+      "file": "crdt-protected-shared_lww.json"
+    },
+    {
+      "name": "CRDT.Protected.Shared_RGA",
+      "id": "631c6e8a09d6e4e8",
+      "file": "crdt-protected-shared_rga.json"
+    },
+    {
+      "name": "CRDT.Rga",
+      "id": "f21c49632bb8b2ee",
+      "file": "crdt-rga.json"
+    },
+    {
+      "name": "CRDT.Rgas",
+      "id": "ed6ba84991b1201b",
+      "file": "crdt-rgas.json"
+    },
+    {
+      "name": "CRDT.Sequences",
+      "id": "865236bc642ca6b8",
+      "file": "crdt-sequences.json"
+    },
+    {
+      "name": "CRDT.Sequences.Fugue",
+      "id": "5e4bebb6a1fb53a2",
+      "file": "crdt-sequences-fugue.json"
+    },
+    {
+      "name": "CRDT.Sequences.Naive",
+      "id": "245ab9832860fae5",
+      "file": "crdt-sequences-naive.json"
+    },
+    {
+      "name": "CRDT.Sequences.Yjs",
+      "id": "9cccacaf8464585c",
+      "file": "crdt-sequences-yjs.json"
+    },
+    {
+      "name": "CRDT.Sync",
+      "id": "4dbd3f4db92d1f56",
+      "file": "crdt-sync.json"
+    },
+    {
+      "name": "CRDT.Sync.Op_Based",
+      "id": "9f7ec9920dfc49c1",
+      "file": "crdt-sync-op_based.json"
+    },
+    {
+      "name": "CRDT.Sync.State_Based",
+      "id": "466103f4567f2d16",
+      "file": "crdt-sync-state_based.json"
+    }
+  ]
+}

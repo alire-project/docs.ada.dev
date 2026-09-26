@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "program_proofs_in_spark",
+  "version": "0.1.1",
+  "failed_at": "2026-03-06T02:55:18Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"iterators","version":"0.2.0","id":"ec1143b433a53722","name":"Iterators.Linkers","qualified_name":"Iterators.Linkers","kind":"ada_package","location":{"file":"src/iterators-linkers.ads","line":1,"column":9},"code":"package Iterators.Linkers","documentation":{"description":"Root for linker exposers."}}

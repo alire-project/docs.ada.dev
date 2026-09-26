@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "ncursesada",
+  "version": "6.5.0",
+  "documented_at": "2026-03-05T02:58:39Z",
+  "description": "Ada binding to the ncurses text user interface library",
+  "authors": [
+    "Thomas E. Dickey",
+    "Juergen Pfeifer",
+    "Eric S Raymond",
+    "Alexander V Lukyanov",
+    "Philippe Blain",
+    "Sven Verdoolaege",
+    "Nicolas Boulenguez"
+  ],
+  "licenses": [
+    "X11 OR MIT"
+  ],
+  "tags": [
+    "ncurses",
+    "binding"
+  ],
+  "website": "https://github.com/Blady-Com/ncurses",
+  "repository": {
+    "url": "https://github.com/Blady-Com/ncurses-snapshots",
+    "host": "github",
+    "commit": "1ea33215ed820c6b2fef21c526cf20a3b2c124c5"
+  },
+  "dependencies": [
+    {
+      "crate": "m4_tool",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

@@ -1,0 +1,174 @@
+{
+  "schema_version": "1",
+  "crate": "proven_components",
+  "version": "1.1.0",
+  "documented_at": "2026-07-24T03:16:12Z",
+  "description": "Reusable components in SPARK/Ada developed since 1980.",
+  "long_description": "These are components developed over the past 45+ years of Ada work, updated as Ada evolved, and formally proven when within the SPARK subset.\nMost are proven to the Gold or Platinum level, but when necessary they are proven to the Silver level, i.e., absence of run-time errors.\nThey have been used in both host and embedded projects, many professional and a few for fun.\n\nSample contents:\n  Sequential Bounded Buffers\n  Sequential Bounded Stacks (i.e., not thread-safe)\n  ...\n  Protected types providing synchronization protocols\n  PI and PID Controls\n  Image functions for floating- and fixed-point types, in standard (i.e., not scientific) notation\n  Gaussian, Categorical, and Scaled Uniform Random Number Generators\n  Recursive Moving Average (RMA) filters for signal processing\n  Sorting and Searching routines\n  ...",
+  "authors": [
+    "Pat Rogers"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "reuse",
+    "components",
+    "spark",
+    "proof"
+  ],
+  "website": "https://github.com/pat-rogers/proven_components",
+  "repository": {
+    "url": "https://github.com/pat-rogers/proven_components",
+    "host": "github",
+    "commit": "f3ef93b680b944142c9599f1ec0cab1e91dcca61"
+  },
+  "dependencies": [
+    {
+      "crate": "sparklib",
+      "version": "^15.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Boolean_Array_Extent",
+      "id": "780fe5f46c30b59f",
+      "file": "boolean_array_extent.json"
+    },
+    {
+      "name": "Boolean_Array_Iteration",
+      "id": "60f8ce9beb1c9503",
+      "file": "boolean_array_iteration.json"
+    },
+    {
+      "name": "Bounded_Dynamic_Sequences",
+      "id": "7bc849d765dc6855",
+      "file": "bounded_dynamic_sequences.json"
+    },
+    {
+      "name": "Byte_Swapping",
+      "id": "6a909eb536f5acf6",
+      "file": "byte_swapping.json"
+    },
+    {
+      "name": "Categorical_Distribution",
+      "id": "a957f052c439ad89",
+      "file": "categorical_distribution.json"
+    },
+    {
+      "name": "Event_Management",
+      "id": "b89acd1a557fcd2f",
+      "file": "event_management.json"
+    },
+    {
+      "name": "Fixed_Point_Images",
+      "id": "b6fcfb7287fae0ac",
+      "file": "fixed_point_images.json"
+    },
+    {
+      "name": "Floating_Point_Images",
+      "id": "89c8b55b6309705d",
+      "file": "floating_point_images.json"
+    },
+    {
+      "name": "Machine_Unsigned_Types",
+      "id": "cf787230382e9e4e",
+      "file": "machine_unsigned_types.json"
+    },
+    {
+      "name": "Math_Utilities",
+      "id": "d2da594c0dd7e8cf",
+      "file": "math_utilities.json"
+    },
+    {
+      "name": "Network_Conversions",
+      "id": "636c5e88cf147a4e",
+      "file": "network_conversions.json"
+    },
+    {
+      "name": "Normal_Distribution",
+      "id": "7e2bc846d1410450",
+      "file": "normal_distribution.json"
+    },
+    {
+      "name": "Permutation_Utils",
+      "id": "a257dceb6aa7c012",
+      "file": "permutation_utils.json"
+    },
+    {
+      "name": "PI_Control",
+      "id": "045c37e20fe19bae",
+      "file": "pi_control.json"
+    },
+    {
+      "name": "PID_Control",
+      "id": "546b1dd4d4385035",
+      "file": "pid_control.json"
+    },
+    {
+      "name": "Recursive_Moving_Average_Filters",
+      "id": "7185cf8ffa7a12f7",
+      "file": "recursive_moving_average_filters.json"
+    },
+    {
+      "name": "Search_Routines",
+      "id": "1c4e03e383928850",
+      "file": "search_routines.json"
+    },
+    {
+      "name": "Sequential_Bounded_Buffers",
+      "id": "2653c738eaa5361b",
+      "file": "sequential_bounded_buffers.json"
+    },
+    {
+      "name": "Sequential_Bounded_Queues",
+      "id": "8670673e8faaf30e",
+      "file": "sequential_bounded_queues.json"
+    },
+    {
+      "name": "Sequential_Bounded_Stacks",
+      "id": "ea47b19267ea1a0a",
+      "file": "sequential_bounded_stacks.json"
+    },
+    {
+      "name": "Sequential_Discrete_Sets",
+      "id": "81204152dd51f6da",
+      "file": "sequential_discrete_sets.json"
+    },
+    {
+      "name": "Simple_Moving_Average_Filters",
+      "id": "74fc18d494cf78ea",
+      "file": "simple_moving_average_filters.json"
+    },
+    {
+      "name": "Sort_Routines",
+      "id": "20bf883434dc2fec",
+      "file": "sort_routines.json"
+    },
+    {
+      "name": "Sorting_Proof_Utils",
+      "id": "cebf028821cb21dd",
+      "file": "sorting_proof_utils.json"
+    },
+    {
+      "name": "Synchronization_Mechanisms",
+      "id": "7e8315026a8312f7",
+      "file": "synchronization_mechanisms.json"
+    },
+    {
+      "name": "Time_Stamps",
+      "id": "870aebff1410a17c",
+      "file": "time_stamps.json"
+    },
+    {
+      "name": "Timed_Conditions",
+      "id": "3eb0c0eee8424717",
+      "file": "timed_conditions.json"
+    },
+    {
+      "name": "Uniform_Distribution",
+      "id": "180b8ec81555db12",
+      "file": "uniform_distribution.json"
+    }
+  ]
+}

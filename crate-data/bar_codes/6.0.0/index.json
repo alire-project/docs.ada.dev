@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "bar_codes",
+  "version": "6.0.0",
+  "documented_at": "2026-03-03T17:52:23Z",
+  "description": "Generate various types of bar codes (1D or 2D) on various media",
+  "long_description": "&nbsp;<a target=\"_blank\" href=\"https://a.fsdn.com/con/app/proj/ada-bar-codes/screenshots/qr_code-d286323e.png\"      ><img src=\"https://a.fsdn.com/con/app/proj/ada-bar-codes/screenshots/qr_code-d286323e.png\"       alt=\"QR\"          width=\"171\" height=\"129\"></a>\n&nbsp;<a target=\"_blank\" href=\"https://a.fsdn.com/con/app/proj/ada-bar-codes/screenshots/abc_logo_rect-d71ba4ac.png\"><img src=\"https://a.fsdn.com/con/app/proj/ada-bar-codes/screenshots/abc_logo_rect-d71ba4ac.png\" alt=\"Code 128\"    width=\"178\" height=\"129\"></a>\n&nbsp;<a target=\"_blank\" href=\"https://a.fsdn.com/con/app/proj/ada-bar-codes/screenshots/dm_code_y129-8619c0ec.png\" ><img src=\"https://a.fsdn.com/con/app/proj/ada-bar-codes/screenshots/dm_code_y129-8619c0ec.png\"  alt=\"Data Matrix\" width=\"181\" height=\"129\"></a>\n\nSome features:\n\n* 1D bar codes supported: Code 128, EAN-13, MSI, UPC-A\n* 2D bar codes supported: Data Matrix, QR Codes\n* Task safe\n* Endian-neutral\n* Multi-platform, but native code build\n* Standalone (no dependency on other libraires, bindings, etc.; no extra component needed for running)\n* Unconditionally portable code: OS-, CPU-, compiler- independent code.\n* Pure Ada 2012: this package can be used in projects in Ada 2012 and later versions of the Ada language\n* Tests and demos included\n* *Free*, open-source \n\nThe creation of a bar code is as simple as this small procedure:\n\n```ada\nwith Ada.Text_IO, Bar_Codes, Bar_Codes_Media;\n\nprocedure Small_Demo is\n  use Ada.Text_IO;\n  svg : File_Type;\nbegin\n  Create (svg, Out_File, \"qr_code.svg\");\n  Put_Line\n    (svg,\n     Bar_Codes_Media.SVG_Bar_Code\n       (Bar_Codes.Code_QR_Low, (5.0, 5.0, 100.0, 100.0), \"mm\", \"Hello\"));\n  Close (svg);\nend Small_Demo;\n```\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "bar",
+    "code",
+    "barcode",
+    "bar-code",
+    "datamatrix",
+    "data-matrix",
+    "qr",
+    "qrcode",
+    "qr-code",
+    "code128",
+    "msi",
+    "ean13",
+    "upca",
+    "pbm",
+    "pdf",
+    "png",
+    "svg"
+  ],
+  "website": "https://ada-bar-codes.sourceforge.io/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/ada-bar-codes",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Bar_Codes",
+      "id": "dc7c8fe7c398d936",
+      "file": "bar_codes.json"
+    },
+    {
+      "name": "Bar_Codes_Media",
+      "id": "e35f9f7b5b7805ae",
+      "file": "bar_codes_media.json"
+    }
+  ]
+}

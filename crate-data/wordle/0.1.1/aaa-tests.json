@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"wordle","version":"0.1.1","id":"0cb6f07d1544f13d","name":"AAA.Tests","qualified_name":"AAA.Tests","kind":"ada_package","location":{"file":"../../../home/runner/.local/share/alire/builds/aaa_0.2.6_dfd6339b/a5e34316c51f27821c1d6af4892d72891048caf6ee04f2dfcd8976a5f8d8e351/src/aaa-tests.ads","line":1,"column":9},"code":"package AAA.Tests"}

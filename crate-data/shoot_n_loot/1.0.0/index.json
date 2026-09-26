@@ -1,0 +1,467 @@
+{
+  "schema_version": "1",
+  "crate": "shoot_n_loot",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:58:36Z",
+  "description": "Platform game for the AdaFruit PyGamer console",
+  "authors": [],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "pygamer",
+    "game",
+    "simulator"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/shoot-n-loot",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/shoot-n-loot",
+    "host": "github",
+    "commit": "227d9dad4c4db451968734a783afbf12132309e1"
+  },
+  "dependencies": [
+    {
+      "crate": "geste",
+      "version": "^1.1.0"
+    },
+    {
+      "crate": "pygamer_bsp",
+      "version": "~1.0.0"
+    },
+    {
+      "crate": "pygamer_simulator",
+      "version": "~1.0.0"
+    },
+    {
+      "crate": "virtapu",
+      "version": "~0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Chests",
+      "id": "a06027d10f55834d",
+      "file": "chests.json"
+    },
+    {
+      "name": "Game",
+      "id": "6ca5cab77e702c78",
+      "file": "game.json"
+    },
+    {
+      "name": "Game_Assets",
+      "id": "b89322678a83ad58",
+      "file": "game_assets.json"
+    },
+    {
+      "name": "Game_Assets.level_0",
+      "id": "0e0b9d9b8969a582",
+      "file": "game_assets-level_0.json"
+    },
+    {
+      "name": "Game_Assets.level_0.Back",
+      "id": "c9be034122ed6990",
+      "file": "game_assets-level_0-back.json"
+    },
+    {
+      "name": "Game_Assets.level_0.Backcolor",
+      "id": "7ac237853a1d2cb1",
+      "file": "game_assets-level_0-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_0.Chests",
+      "id": "ee1cef013d5b6441",
+      "file": "game_assets-level_0-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_0.Front",
+      "id": "ab39cf46aa0fefb9",
+      "file": "game_assets-level_0-front.json"
+    },
+    {
+      "name": "Game_Assets.level_0.Markers",
+      "id": "37f364c4db92ffe0",
+      "file": "game_assets-level_0-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_1",
+      "id": "81bfed8eb4648eb4",
+      "file": "game_assets-level_1.json"
+    },
+    {
+      "name": "Game_Assets.level_1.Back",
+      "id": "be1a9c12b37d084b",
+      "file": "game_assets-level_1-back.json"
+    },
+    {
+      "name": "Game_Assets.level_1.Backcolor",
+      "id": "39f32ba383cb528f",
+      "file": "game_assets-level_1-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_1.Chests",
+      "id": "99b2f5c31e248630",
+      "file": "game_assets-level_1-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_1.Front",
+      "id": "9ef6dd9ac4ed79fa",
+      "file": "game_assets-level_1-front.json"
+    },
+    {
+      "name": "Game_Assets.level_1.Markers",
+      "id": "58ec2bec6d64ad59",
+      "file": "game_assets-level_1-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_2",
+      "id": "a45f992c1f563d3e",
+      "file": "game_assets-level_2.json"
+    },
+    {
+      "name": "Game_Assets.level_2.Back",
+      "id": "79976392d12e08f0",
+      "file": "game_assets-level_2-back.json"
+    },
+    {
+      "name": "Game_Assets.level_2.Backcolor",
+      "id": "8335934393f63a96",
+      "file": "game_assets-level_2-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_2.Chests",
+      "id": "6d111bf876820cc5",
+      "file": "game_assets-level_2-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_2.Front",
+      "id": "be96c20c3097460c",
+      "file": "game_assets-level_2-front.json"
+    },
+    {
+      "name": "Game_Assets.level_2.Markers",
+      "id": "98effb5924e549d3",
+      "file": "game_assets-level_2-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_3",
+      "id": "76e27cd7b650174d",
+      "file": "game_assets-level_3.json"
+    },
+    {
+      "name": "Game_Assets.level_3.Back",
+      "id": "b4bec929efda4e90",
+      "file": "game_assets-level_3-back.json"
+    },
+    {
+      "name": "Game_Assets.level_3.Backcolor",
+      "id": "aadf0169511d2ad9",
+      "file": "game_assets-level_3-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_3.Chests",
+      "id": "069135de628b91b9",
+      "file": "game_assets-level_3-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_3.Front",
+      "id": "21b1fac970d5701b",
+      "file": "game_assets-level_3-front.json"
+    },
+    {
+      "name": "Game_Assets.level_3.Markers",
+      "id": "b370b8713b6755cf",
+      "file": "game_assets-level_3-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_3.Monsters",
+      "id": "24abb887f38f2116",
+      "file": "game_assets-level_3-monsters.json"
+    },
+    {
+      "name": "Game_Assets.level_4",
+      "id": "96246669e354ff71",
+      "file": "game_assets-level_4.json"
+    },
+    {
+      "name": "Game_Assets.level_4.Back",
+      "id": "c981a726baf82c98",
+      "file": "game_assets-level_4-back.json"
+    },
+    {
+      "name": "Game_Assets.level_4.Backcolor",
+      "id": "f78c89aa662db05f",
+      "file": "game_assets-level_4-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_4.Chests",
+      "id": "146d64a86eb2cb03",
+      "file": "game_assets-level_4-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_4.Front",
+      "id": "750e39c33ab0f31e",
+      "file": "game_assets-level_4-front.json"
+    },
+    {
+      "name": "Game_Assets.level_4.Markers",
+      "id": "639bebcb5e1473fd",
+      "file": "game_assets-level_4-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_4.Monsters",
+      "id": "f1c367b883956bd7",
+      "file": "game_assets-level_4-monsters.json"
+    },
+    {
+      "name": "Game_Assets.level_5",
+      "id": "b4e58bb972e35628",
+      "file": "game_assets-level_5.json"
+    },
+    {
+      "name": "Game_Assets.level_5.Back",
+      "id": "68ad98677ac7da7e",
+      "file": "game_assets-level_5-back.json"
+    },
+    {
+      "name": "Game_Assets.level_5.Backcolor",
+      "id": "d791410400259bd8",
+      "file": "game_assets-level_5-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_5.Chests",
+      "id": "142c577ecce37bb9",
+      "file": "game_assets-level_5-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_5.Front",
+      "id": "102e235790205426",
+      "file": "game_assets-level_5-front.json"
+    },
+    {
+      "name": "Game_Assets.level_5.Markers",
+      "id": "d7880e447aaeca32",
+      "file": "game_assets-level_5-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_5.Monsters",
+      "id": "65da5331a97bb0fc",
+      "file": "game_assets-level_5-monsters.json"
+    },
+    {
+      "name": "Game_Assets.level_6",
+      "id": "cf15ef42434347fc",
+      "file": "game_assets-level_6.json"
+    },
+    {
+      "name": "Game_Assets.level_6.Back",
+      "id": "5b4b4816f497ab3a",
+      "file": "game_assets-level_6-back.json"
+    },
+    {
+      "name": "Game_Assets.level_6.Backcolor",
+      "id": "10df3607b20caefd",
+      "file": "game_assets-level_6-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_6.Chests",
+      "id": "2c7734290f832a2b",
+      "file": "game_assets-level_6-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_6.Front",
+      "id": "086901c5122961ad",
+      "file": "game_assets-level_6-front.json"
+    },
+    {
+      "name": "Game_Assets.level_6.Markers",
+      "id": "09fe168fb01e30e2",
+      "file": "game_assets-level_6-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_6.Monsters",
+      "id": "0e0f317d8eaf9c94",
+      "file": "game_assets-level_6-monsters.json"
+    },
+    {
+      "name": "Game_Assets.level_7",
+      "id": "15a963eb8cc35463",
+      "file": "game_assets-level_7.json"
+    },
+    {
+      "name": "Game_Assets.level_7.Back",
+      "id": "503dab35d603b899",
+      "file": "game_assets-level_7-back.json"
+    },
+    {
+      "name": "Game_Assets.level_7.Backcolor",
+      "id": "c9b406dc6db1e5bf",
+      "file": "game_assets-level_7-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_7.Chests",
+      "id": "79cd7c1fb72f2a23",
+      "file": "game_assets-level_7-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_7.Front",
+      "id": "44fee1e2fceb2313",
+      "file": "game_assets-level_7-front.json"
+    },
+    {
+      "name": "Game_Assets.level_7.Markers",
+      "id": "28561a0ce8983c96",
+      "file": "game_assets-level_7-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_7.Monsters",
+      "id": "ffe1dc544053e95b",
+      "file": "game_assets-level_7-monsters.json"
+    },
+    {
+      "name": "Game_Assets.level_8",
+      "id": "c813f6335c25dfcd",
+      "file": "game_assets-level_8.json"
+    },
+    {
+      "name": "Game_Assets.level_8.Back",
+      "id": "40350aeb516d23d8",
+      "file": "game_assets-level_8-back.json"
+    },
+    {
+      "name": "Game_Assets.level_8.Backcolor",
+      "id": "da30644f12e0a8f0",
+      "file": "game_assets-level_8-backcolor.json"
+    },
+    {
+      "name": "Game_Assets.level_8.Chests",
+      "id": "70c3a64f6e3bf892",
+      "file": "game_assets-level_8-chests.json"
+    },
+    {
+      "name": "Game_Assets.level_8.Front",
+      "id": "77102e8b7ea873bd",
+      "file": "game_assets-level_8-front.json"
+    },
+    {
+      "name": "Game_Assets.level_8.Markers",
+      "id": "5f13c01bf260b7b7",
+      "file": "game_assets-level_8-markers.json"
+    },
+    {
+      "name": "Game_Assets.level_8.Monsters",
+      "id": "8f2136a08f6fd064",
+      "file": "game_assets-level_8-monsters.json"
+    },
+    {
+      "name": "Game_Assets.Misc_Objects",
+      "id": "b0997da424a1010b",
+      "file": "game_assets-misc_objects.json"
+    },
+    {
+      "name": "Game_Assets.Misc_Objects.Item",
+      "id": "79965a8de53cd0ef",
+      "file": "game_assets-misc_objects-item.json"
+    },
+    {
+      "name": "Game_Assets.Misc_Objects.Tile_Layer_1",
+      "id": "e35b1ced586e326b",
+      "file": "game_assets-misc_objects-tile_layer_1.json"
+    },
+    {
+      "name": "Game_Assets.Tileset",
+      "id": "cea3f32736c201cf",
+      "file": "game_assets-tileset.json"
+    },
+    {
+      "name": "Game_Assets.Tileset_Collisions",
+      "id": "c936dc88f79527e7",
+      "file": "game_assets-tileset_collisions.json"
+    },
+    {
+      "name": "Game_Assets.title_screen",
+      "id": "f17901a3c4d424ee",
+      "file": "game_assets-title_screen.json"
+    },
+    {
+      "name": "Game_Assets.title_screen.Back",
+      "id": "be960ad1e11ab80b",
+      "file": "game_assets-title_screen-back.json"
+    },
+    {
+      "name": "Game_Assets.title_screen.Credits",
+      "id": "65d62e39b3d1ffe5",
+      "file": "game_assets-title_screen-credits.json"
+    },
+    {
+      "name": "Game_Assets.title_screen.Gameover",
+      "id": "7fbaf11a1fcce3b5",
+      "file": "game_assets-title_screen-gameover.json"
+    },
+    {
+      "name": "Game_Assets.title_screen.Help",
+      "id": "288e4c34c8185526",
+      "file": "game_assets-title_screen-help.json"
+    },
+    {
+      "name": "Game_Assets.title_screen.Menu",
+      "id": "434bff4377576f64",
+      "file": "game_assets-title_screen-menu.json"
+    },
+    {
+      "name": "Game_Assets.title_screen.Victory",
+      "id": "a9fa40a7333d94ae",
+      "file": "game_assets-title_screen-victory.json"
+    },
+    {
+      "name": "GESTE_Config",
+      "id": "32e4f2aea15aca65",
+      "file": "geste_config.json"
+    },
+    {
+      "name": "Levels",
+      "id": "7d50f20853334a30",
+      "file": "levels.json"
+    },
+    {
+      "name": "Menus",
+      "id": "9045d6f05ca3e89a",
+      "file": "menus.json"
+    },
+    {
+      "name": "Monsters",
+      "id": "7dcfa8078e2c5e3d",
+      "file": "monsters.json"
+    },
+    {
+      "name": "Music_2",
+      "id": "42a5944002e31d89",
+      "file": "music_2.json"
+    },
+    {
+      "name": "Player",
+      "id": "cdb59355f3ba2939",
+      "file": "player.json"
+    },
+    {
+      "name": "Projectile",
+      "id": "ffd44008712fcdab",
+      "file": "projectile.json"
+    },
+    {
+      "name": "Render",
+      "id": "887270d0cbc560af",
+      "file": "render.json"
+    },
+    {
+      "name": "Score_Display",
+      "id": "dfdda5c96a12dc8d",
+      "file": "score_display.json"
+    },
+    {
+      "name": "Sound",
+      "id": "dd29442deca69f52",
+      "file": "sound.json"
+    }
+  ]
+}

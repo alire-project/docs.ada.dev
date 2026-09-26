@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "spoon",
+  "version": "1.0.1",
+  "documented_at": "2026-03-06T02:59:02Z",
+  "description": "Use posix_spawn() to spawn processes without forking",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "posix",
+    "spawn",
+    "process"
+  ],
+  "website": "https://github.com/onox/spoon",
+  "repository": {
+    "url": "https://github.com/onox/spoon",
+    "host": "github",
+    "commit": "c07167a55d5fa2ebbfa7ff4689959e08128e8a69"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Spoon",
+      "id": "7f480e744a79953e",
+      "file": "spoon.json"
+    },
+    {
+      "name": "Spoon.Output",
+      "id": "bae3acf01fb65455",
+      "file": "spoon-output.json"
+    }
+  ]
+}

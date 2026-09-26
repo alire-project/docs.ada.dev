@@ -1,0 +1,112 @@
+{
+  "schema_version": "1",
+  "crate": "swan",
+  "version": "0.2.0",
+  "documented_at": "2026-03-06T02:59:46Z",
+  "description": "Stuff We All Need - utilities collection for ada",
+  "authors": [
+    "Matheus Xavier"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "utilities",
+    "buffers",
+    "collections"
+  ],
+  "website": "https://github.com/xadaemon/swan_ada",
+  "repository": {
+    "url": "https://github.com/xadaemon/swan_ada",
+    "host": "github",
+    "commit": "ac56e19874c4cfa4890d727fa8c55d05f6c039dc"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Swan",
+      "id": "6856daebb0115b3b",
+      "file": "swan.json"
+    },
+    {
+      "name": "Swan.Arg_Parser",
+      "id": "af94f227447dabe7",
+      "file": "swan-arg_parser.json"
+    },
+    {
+      "name": "Swan.Collections",
+      "id": "28808a00a002153b",
+      "file": "swan-collections.json"
+    },
+    {
+      "name": "Swan.Collections.Circular_Buffers",
+      "id": "181481d53a5bfa41",
+      "file": "swan-collections-circular_buffers.json"
+    },
+    {
+      "name": "Swan.Control",
+      "id": "1754f46db43d9498",
+      "file": "swan-control.json"
+    },
+    {
+      "name": "Swan.Control.C_Interface",
+      "id": "a4ca9b4471e51bc8",
+      "file": "swan-control-c_interface.json"
+    },
+    {
+      "name": "Swan.Control.PID",
+      "id": "fe53c8ff1215d184",
+      "file": "swan-control-pid.json"
+    },
+    {
+      "name": "Swan.Loop_Control",
+      "id": "a27673ed3f318bb3",
+      "file": "swan-loop_control.json"
+    },
+    {
+      "name": "Swan.Math_Util",
+      "id": "dc8df225e46240af",
+      "file": "swan-math_util.json"
+    },
+    {
+      "name": "Swan.Math_Util.Generic_Calculus",
+      "id": "7e6b7b25ed6a333c",
+      "file": "swan-math_util-generic_calculus.json"
+    },
+    {
+      "name": "Swan.Math_Util.Generic_Nav",
+      "id": "0ab754344f0905be",
+      "file": "swan-math_util-generic_nav.json"
+    },
+    {
+      "name": "Swan.Math_Util.Generic_Trig",
+      "id": "7de866aef1a76d9f",
+      "file": "swan-math_util-generic_trig.json"
+    },
+    {
+      "name": "Swan.SI_Units",
+      "id": "9fe927b1e6979cb4",
+      "file": "swan-si_units.json"
+    },
+    {
+      "name": "Swan.String_Tools",
+      "id": "b402e2208d8fa34d",
+      "file": "swan-string_tools.json"
+    },
+    {
+      "name": "Swan.String_Tools.Exceptions",
+      "id": "2d4c8dd3e8e9ad83",
+      "file": "swan-string_tools-exceptions.json"
+    },
+    {
+      "name": "Swan.Types",
+      "id": "b811052d86b431f8",
+      "file": "swan-types.json"
+    },
+    {
+      "name": "Swan_Config",
+      "id": "3a46fe7befccc78c",
+      "file": "swan_config.json"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "crate": "clara",
+  "version": "1.0.1",
+  "documented_at": "2026-06-11T03:03:08Z",
+  "description": "Type-safe CLI argument parsing with functional monads",
+  "authors": [
+    "A Bit of Help, Inc. - Michael Gardner"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "cli",
+    "command-line",
+    "arguments",
+    "parser",
+    "ada2022",
+    "spark",
+    "functional",
+    "type-safe"
+  ],
+  "website": "https://github.com/abitofhelp/clara",
+  "repository": {
+    "url": "https://github.com/abitofhelp/clara",
+    "host": "github",
+    "commit": "1dafa0e89978ca214aab806d137b2641668b2458"
+  },
+  "dependencies": [
+    {
+      "crate": "functional",
+      "version": "^4.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Clara",
+      "id": "7814459b3f23f455",
+      "file": "clara.json"
+    },
+    {
+      "name": "Clara.CLI",
+      "id": "e70310267d91979d",
+      "file": "clara-cli.json"
+    },
+    {
+      "name": "Clara.Errors",
+      "id": "c5a37969f4da6875",
+      "file": "clara-errors.json"
+    },
+    {
+      "name": "Clara.Types",
+      "id": "776bbefe25d2c4d3",
+      "file": "clara-types.json"
+    },
+    {
+      "name": "Clara.Version",
+      "id": "66e021adccde050b",
+      "file": "clara-version.json"
+    },
+    {
+      "name": "Clara_Config",
+      "id": "ea05ae9499a266a3",
+      "file": "clara_config.json"
+    }
+  ]
+}

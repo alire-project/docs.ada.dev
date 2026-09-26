@@ -1,0 +1,203 @@
+{
+  "schema_version": "1",
+  "crate": "adamodbus",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:49:20Z",
+  "description": "SPARK-verified Ada 2022 Modbus library with SunSpec support and C API",
+  "authors": [
+    "Florian Fischer <florian.j.a.fischer@icloud.com>"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "modbus",
+    "embedded",
+    "protocol",
+    "serial",
+    "tcp",
+    "spark",
+    "industrial",
+    "sunspec",
+    "energy",
+    "solar"
+  ],
+  "website": "https://github.com/flottokarotto/AdaModbus",
+  "repository": {
+    "url": "https://github.com/flottokarotto/AdaModbus",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "aunit",
+      "version": "^26.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ada_Modbus",
+      "id": "1af7dc7e0a42dea5",
+      "file": "ada_modbus.json"
+    },
+    {
+      "name": "Ada_Modbus.C_API",
+      "id": "ce8b5a20913094eb",
+      "file": "ada_modbus-c_api.json"
+    },
+    {
+      "name": "Ada_Modbus.C_API.Serial",
+      "id": "29a2cc577915b74a",
+      "file": "ada_modbus-c_api-serial.json"
+    },
+    {
+      "name": "Ada_Modbus.C_API.SunSpec",
+      "id": "7265fadc50b4fe2b",
+      "file": "ada_modbus-c_api-sunspec.json"
+    },
+    {
+      "name": "Ada_Modbus.CRC16",
+      "id": "14f0278cac37a347",
+      "file": "ada_modbus-crc16.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy",
+      "id": "41515f966fe3e2d4",
+      "file": "ada_modbus-energy.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.Go_E",
+      "id": "59e05ca7e27ada48",
+      "file": "ada_modbus-energy-go_e.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.Grid_Control",
+      "id": "e38205013b601f5c",
+      "file": "ada_modbus-energy-grid_control.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SG_Ready",
+      "id": "eeeb8fee72568cd1",
+      "file": "ada_modbus-energy-sg_ready.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec",
+      "id": "e5afaeb93d9fa566",
+      "file": "ada_modbus-energy-sunspec.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Battery",
+      "id": "ac2caf38e92a55c3",
+      "file": "ada_modbus-energy-sunspec-battery.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Common",
+      "id": "752ef8b2b3b969ea",
+      "file": "ada_modbus-energy-sunspec-common.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.DER",
+      "id": "fbabce5da89e2ae0",
+      "file": "ada_modbus-energy-sunspec-der.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Inverter",
+      "id": "86738e58243511d4",
+      "file": "ada_modbus-energy-sunspec-inverter.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Meter",
+      "id": "4630c58ca9b0f30d",
+      "file": "ada_modbus-energy-sunspec-meter.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Nameplate",
+      "id": "5d1328dcadcca34c",
+      "file": "ada_modbus-energy-sunspec-nameplate.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Settings",
+      "id": "089615f92673cf64",
+      "file": "ada_modbus-energy-sunspec-settings.json"
+    },
+    {
+      "name": "Ada_Modbus.Energy.SunSpec.Storage",
+      "id": "187539bab398afd4",
+      "file": "ada_modbus-energy-sunspec-storage.json"
+    },
+    {
+      "name": "Ada_Modbus.LRC",
+      "id": "cffaa79ebbcaa35a",
+      "file": "ada_modbus-lrc.json"
+    },
+    {
+      "name": "Ada_Modbus.Master",
+      "id": "acb9be243afcb48d",
+      "file": "ada_modbus-master.json"
+    },
+    {
+      "name": "Ada_Modbus.Master.Async",
+      "id": "3c3af3875037d501",
+      "file": "ada_modbus-master-async.json"
+    },
+    {
+      "name": "Ada_Modbus.Protocol",
+      "id": "68dae8ac6065f4a7",
+      "file": "ada_modbus-protocol.json"
+    },
+    {
+      "name": "Ada_Modbus.Protocol.ASCII",
+      "id": "fd4c45e0c0f2ae5e",
+      "file": "ada_modbus-protocol-ascii.json"
+    },
+    {
+      "name": "Ada_Modbus.Protocol.RTU",
+      "id": "a1a2bcf02a31d191",
+      "file": "ada_modbus-protocol-rtu.json"
+    },
+    {
+      "name": "Ada_Modbus.Protocol.TCP",
+      "id": "05ee3da3cb440156",
+      "file": "ada_modbus-protocol-tcp.json"
+    },
+    {
+      "name": "Ada_Modbus.Slave",
+      "id": "b2f142584a0140e8",
+      "file": "ada_modbus-slave.json"
+    },
+    {
+      "name": "Ada_Modbus.Slave_Generic",
+      "id": "e371a2ccefac6c09",
+      "file": "ada_modbus-slave_generic.json"
+    },
+    {
+      "name": "Ada_Modbus.Slave_Stubs",
+      "id": "2731779b187ad2ad",
+      "file": "ada_modbus-slave_stubs.json"
+    },
+    {
+      "name": "Ada_Modbus.Transport",
+      "id": "77e6244bcaa20cc9",
+      "file": "ada_modbus-transport.json"
+    },
+    {
+      "name": "Ada_Modbus.Transport.LwIP",
+      "id": "ee99045d4c7c5da4",
+      "file": "ada_modbus-transport-lwip.json"
+    },
+    {
+      "name": "Ada_Modbus.Transport.Serial",
+      "id": "6724dc6055158f60",
+      "file": "ada_modbus-transport-serial.json"
+    },
+    {
+      "name": "Ada_Modbus.Transport.TCP",
+      "id": "5f3f4f6d51b8780d",
+      "file": "ada_modbus-transport-tcp.json"
+    },
+    {
+      "name": "Ada_Modbus.Utilities",
+      "id": "44f5c25aed68aac7",
+      "file": "ada_modbus-utilities.json"
+    }
+  ]
+}

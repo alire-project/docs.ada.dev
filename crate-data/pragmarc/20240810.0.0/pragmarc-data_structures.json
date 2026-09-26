@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"73ec157450da4688","name":"PragmARC.Data_Structures","qualified_name":"PragmARC.Data_Structures","kind":"ada_package","location":{"file":"src/pragmarc-data_structures.ads","line":12,"column":9},"code":"package PragmARC.Data_Structures","documentation":{"description":"Empty"}}

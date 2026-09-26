@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "crate": "gnatdist_garlic",
+  "version": "6.0.1",
+  "documented_at": "2026-03-04T13:06:17Z",
+  "description": "The configuration tool gnatdist for GARLIC",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later"
+  ],
+  "tags": [
+    "dsa",
+    "distributed",
+    "annex",
+    "network",
+    "glade"
+  ],
+  "website": "https://github.com/reznikmm/garlic/wiki",
+  "repository": {
+    "url": "https://github.com/reznikmm/garlic",
+    "host": "github",
+    "commit": "90ef4b6f01c95df7e04c8f3e4c41c275f23acea9",
+    "subdir": "Dist/"
+  },
+  "dependencies": [],
+  "units": []
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "stopwatch",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:59:30Z",
+  "description": "Keep track of elapsed time",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "timer",
+    "stopwatch",
+    "chronometer"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/stopwatch",
+    "host": "github",
+    "commit": "624a7c877a01fa0f9c38fa01af8cafe9a220e76b"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Stopwatch",
+      "id": "cec3c7224bbe73a6",
+      "file": "stopwatch.json"
+    },
+    {
+      "name": "Stopwatch_Config",
+      "id": "15e299d9ad58e53e",
+      "file": "stopwatch_config.json"
+    }
+  ]
+}

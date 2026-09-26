@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_gmp",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T12:27:12Z",
+  "description": "GNAT Components Collection - GNU Multiple Precision Arithmetic binding",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "gnatcoll",
+    "bindings",
+    "gmp",
+    "arbitrary",
+    "precision",
+    "arithmetic"
+  ],
+  "website": "https://github.com/adacore/gnatcoll-bindings",
+  "repository": {
+    "url": "https://github.com/AdaCore/gnatcoll-bindings",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatcoll_minimal",
+      "version": "~26.0.0"
+    },
+    {
+      "crate": "libgmp",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "GNATCOLL.GMP",
+      "id": "4cd6120cafb37121",
+      "file": "gnatcoll-gmp.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Integers",
+      "id": "95fd2b442d6c69a1",
+      "file": "gnatcoll-gmp-integers.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Integers.IO",
+      "id": "0059675e928a5f82",
+      "file": "gnatcoll-gmp-integers-io.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Integers.Misc",
+      "id": "1522231bd2ebfcaf",
+      "file": "gnatcoll-gmp-integers-misc.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Integers.Number_Theoretic",
+      "id": "2775ab3f09b6a9ff",
+      "file": "gnatcoll-gmp-integers-number_theoretic.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Integers.Random",
+      "id": "ac20c506f9f197b3",
+      "file": "gnatcoll-gmp-integers-random.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Integers.Root_Extraction",
+      "id": "f879c70493da134a",
+      "file": "gnatcoll-gmp-integers-root_extraction.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Lib",
+      "id": "54885cd254b2f5f8",
+      "file": "gnatcoll-gmp-lib.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Random_State",
+      "id": "e6cf144a62b2f538",
+      "file": "gnatcoll-gmp-random_state.json"
+    },
+    {
+      "name": "GNATCOLL.GMP.Rational_Numbers",
+      "id": "1e212f18fc899bdb",
+      "file": "gnatcoll-gmp-rational_numbers.json"
+    }
+  ]
+}

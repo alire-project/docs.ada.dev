@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "button_led_weact_stm32g474",
+  "version": "0.1.0",
+  "failed_at": "2026-03-04T02:54:00Z",
+  "stage": "locate",
+  "message": "Could not find crate root for button_led_weact_stm32g474=0.1.0 in /tmp/gnatdoc_11mkdokh"
+}

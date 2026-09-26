@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"honki_tonks_zivilisationen","version":"0.5.5305","id":"dc2f85417193e88e","name":"KartenArrays","qualified_name":"KartenArrays","kind":"ada_package","location":{"file":"src/Globales/GlobaleArrays/KartenArrays.ads","line":1,"column":9},"code":"package KartenArrays"}

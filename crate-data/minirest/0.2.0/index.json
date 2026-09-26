@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "minirest",
+  "version": "0.2.0",
+  "documented_at": "2026-03-05T02:57:34Z",
+  "description": "Minimalist Ada REST client library",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "rest"
+  ],
+  "website": "https://github.com/mosteo/minirest",
+  "repository": {
+    "url": "https://github.com/mosteo/minirest",
+    "host": "github",
+    "commit": "a50d0f7cc1c546b9dd61bc3dd3004e4b953fb9f2"
+  },
+  "dependencies": [
+    {
+      "crate": "aaa",
+      "version": "~0.2.1|~0.3"
+    },
+    {
+      "crate": "curl",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "Minirest",
+      "id": "ea1ae3e4d6f3651b",
+      "file": "minirest.json"
+    },
+    {
+      "name": "Minirest_Config",
+      "id": "37c2f3566fd28310",
+      "file": "minirest_config.json"
+    }
+  ]
+}

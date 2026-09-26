@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"rxada","version":"0.1.1","id":"f37db23dcbac4683","name":"Rx.Op","qualified_name":"Rx.Op","kind":"ada_package","location":{"file":"src/priv/rx-op.ads","line":1,"column":9},"code":"package Rx.Op"}

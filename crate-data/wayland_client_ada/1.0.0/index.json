@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "wayland_client_ada",
+  "version": "1.0.0",
+  "documented_at": "2026-03-07T02:50:29Z",
+  "description": "Ada 2012 bindings for libwayland-client and the Wayland protocol",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "wayland",
+    "client"
+  ],
+  "website": "https://github.com/onox/wayland-ada",
+  "repository": {
+    "url": "https://github.com/onox/wayland-ada",
+    "host": "github",
+    "commit": "f8a9fe05aa29e5e17d23951bc0d21ce4b84148a4",
+    "subdir": "wayland_client_ada/"
+  },
+  "dependencies": [
+    {
+      "crate": "libwayland",
+      "version": "^1.18"
+    },
+    {
+      "crate": "wayland_ada_scanner",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Wayland",
+      "id": "7532f928270a9d9c",
+      "file": "wayland.json"
+    },
+    {
+      "name": "Wayland.Enums",
+      "id": "2256b9b2f34b7fb3",
+      "file": "wayland-enums.json"
+    },
+    {
+      "name": "Wayland.Protocols",
+      "id": "dc5def87b9629c6a",
+      "file": "wayland-protocols.json"
+    }
+  ]
+}

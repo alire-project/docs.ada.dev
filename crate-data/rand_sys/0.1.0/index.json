@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "rand_sys",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:55:51Z",
+  "description": "Random number generator from system entropy",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [],
+  "website": "https://github.com/AldanTanneo/rand-ada",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/rand-ada",
+    "host": "github",
+    "commit": "6d1af921227f1e7e0d61bf3cee431af701b99508",
+    "subdir": "rand_sys/"
+  },
+  "dependencies": [
+    {
+      "crate": "rand_core",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "system_random",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Rand_Sys",
+      "id": "93198cf697f1408f",
+      "file": "rand_sys.json"
+    },
+    {
+      "name": "Rand_Sys_Config",
+      "id": "19b313a43fce3539",
+      "file": "rand_sys_config.json"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"sparknacl","version":"4.0.1","id":"d4022af6257d0d70","name":"SPARKNaCl.Hashing","qualified_name":"SPARKNaCl.Hashing","kind":"ada_package","location":{"file":"src/sparknacl-hashing.ads","line":1,"column":9},"code":"package SPARKNaCl.Hashing"}

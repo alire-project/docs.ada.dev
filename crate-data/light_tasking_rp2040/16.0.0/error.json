@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "light_tasking_rp2040",
+  "version": "16.0.0",
+  "failed_at": "2026-09-02T02:34:11Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

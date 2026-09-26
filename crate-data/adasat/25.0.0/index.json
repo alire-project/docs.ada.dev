@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "crate": "adasat",
+  "version": "25.0.0",
+  "documented_at": "2026-03-04T16:10:14Z",
+  "description": "Implementation of a DPLL-based SAT solver in Ada.",
+  "long_description": "Main features:\n\n - [X] Conflict analysis and backjumping\n - [X] Two-watched literals scheme\n - [X] Built-in support for At-Most-One constraints\n - [X] Custom theories\n",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "sat",
+    "solver",
+    "theories"
+  ],
+  "website": "https://github.com/AdaCore/adasat",
+  "repository": {
+    "url": "https://github.com/adacore/AdaSAT",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AdaSAT",
+      "id": "dbd09099ed57e344",
+      "file": "adasat.json"
+    },
+    {
+      "name": "AdaSAT.Builders",
+      "id": "e33f81a8b093079f",
+      "file": "adasat-builders.json"
+    },
+    {
+      "name": "AdaSAT.Decisions",
+      "id": "a6300afb1dbaa7c0",
+      "file": "adasat-decisions.json"
+    },
+    {
+      "name": "AdaSAT.DPLL",
+      "id": "978d8184c6cd6610",
+      "file": "adasat-dpll.json"
+    },
+    {
+      "name": "AdaSAT.Formulas",
+      "id": "cf3c60ed90e5dfb9",
+      "file": "adasat-formulas.json"
+    },
+    {
+      "name": "AdaSAT.Helpers",
+      "id": "ced348293bc407ca",
+      "file": "adasat-helpers.json"
+    },
+    {
+      "name": "AdaSAT.Theory",
+      "id": "9d724f73e8cffd84",
+      "file": "adasat-theory.json"
+    },
+    {
+      "name": "AdaSAT.Vectors",
+      "id": "8c8292c74b7e9df6",
+      "file": "adasat-vectors.json"
+    }
+  ]
+}

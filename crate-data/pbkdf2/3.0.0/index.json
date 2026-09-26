@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "pbkdf2",
+  "version": "3.0.0",
+  "documented_at": "2026-03-05T03:00:50Z",
+  "description": "PBKDF2 implemented in Ada",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "cryptography",
+    "security",
+    "pbkdf2"
+  ],
+  "website": "https://github.com/AntonMeep/pbkdf2",
+  "repository": {
+    "url": "https://github.com/AntonMeep/pbkdf2",
+    "host": "github",
+    "commit": "67518be3704968c2f9cb61794f341355d3397d7d"
+  },
+  "dependencies": [
+    {
+      "crate": "hmac",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "sha1",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "sha2",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "PBKDF2",
+      "id": "c6130b85b90d7d1c",
+      "file": "pbkdf2.json"
+    },
+    {
+      "name": "PBKDF2_Generic",
+      "id": "68d217d38a22a5ee",
+      "file": "pbkdf2_generic.json"
+    }
+  ]
+}

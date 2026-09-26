@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "minisamd51_example",
+  "version": "0.1.1",
+  "documented_at": "2026-03-05T02:57:56Z",
+  "description": "Example project for the MiniSAM D51",
+  "authors": [
+    "Fabien Chouteau <chouteau@adacore.com>"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "samd51",
+    "minisam"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/minisamd51_example",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/minisamd51_example",
+    "host": "github",
+    "commit": "098d9273990a4447b5a2574c3b4b6c060b8005bf"
+  },
+  "dependencies": [
+    {
+      "crate": "minisamd51_bsp",
+      "version": "^0.1.0"
+    }
+  ],
+  "units": []
+}
