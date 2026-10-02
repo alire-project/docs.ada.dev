@@ -1,0 +1,241 @@
+{
+  "schema_version": "1",
+  "crate": "stm32f0x2_hal",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:59:36Z",
+  "description": "Drivers and HAL for stm32f0x2 mcu family",
+  "authors": [
+    "AdaCore",
+    "Marc Poulhiès"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later AND BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "stm32f0",
+    "nostd",
+    "drivers"
+  ],
+  "website": "https://github.com/dkm/stm32f0x2_hal-ada",
+  "repository": {
+    "url": "https://github.com/dkm/stm32f0x2_hal-ada",
+    "host": "github",
+    "commit": "85eaea484c5010ac2fdb6b8849b20af4ae77a101"
+  },
+  "dependencies": [
+    {
+      "crate": "cortex_m",
+      "version": "~0.5"
+    },
+    {
+      "crate": "gnat_arm_elf",
+      "version": "^12"
+    },
+    {
+      "crate": "hal",
+      "version": "~0.3"
+    },
+    {
+      "crate": "usb_embedded",
+      "version": "~0.3"
+    }
+  ],
+  "units": [
+    {
+      "name": "STM32",
+      "id": "d4237f983a65c2d2",
+      "file": "stm32.json"
+    },
+    {
+      "name": "STM32.Device",
+      "id": "db61512cbec6e8d2",
+      "file": "stm32-device.json"
+    },
+    {
+      "name": "STM32.EXTI",
+      "id": "01bd483c4af40fd3",
+      "file": "stm32-exti.json"
+    },
+    {
+      "name": "STM32.GPIO",
+      "id": "32295122ca8d26ad",
+      "file": "stm32-gpio.json"
+    },
+    {
+      "name": "STM32.RCC",
+      "id": "3fc9ea0cb07d37f2",
+      "file": "stm32-rcc.json"
+    },
+    {
+      "name": "STM32.SPI",
+      "id": "41bd87c4f3a84e8b",
+      "file": "stm32-spi.json"
+    },
+    {
+      "name": "STM32.SYSCFG",
+      "id": "86a82f2a5b284c1c",
+      "file": "stm32-syscfg.json"
+    },
+    {
+      "name": "STM32.Timers",
+      "id": "3fff045ca1db8d95",
+      "file": "stm32-timers.json"
+    },
+    {
+      "name": "STM32.USARTs",
+      "id": "efbeb40d1ace3105",
+      "file": "stm32-usarts.json"
+    },
+    {
+      "name": "STM32.USB_Btable",
+      "id": "82ad9793b379a994",
+      "file": "stm32-usb_btable.json"
+    },
+    {
+      "name": "STM32.USB_Device",
+      "id": "3b07307962b61877",
+      "file": "stm32-usb_device.json"
+    },
+    {
+      "name": "STM32.USB_Serialtrace",
+      "id": "bfdbcded20a8cb39",
+      "file": "stm32-usb_serialtrace.json"
+    },
+    {
+      "name": "STM32_SVD",
+      "id": "0fe2b99a69a47a63",
+      "file": "stm32_svd.json"
+    },
+    {
+      "name": "STM32_SVD.ADC",
+      "id": "5b79565ac03b12d1",
+      "file": "stm32_svd-adc.json"
+    },
+    {
+      "name": "STM32_SVD.CAN",
+      "id": "739ae54117b27bff",
+      "file": "stm32_svd-can.json"
+    },
+    {
+      "name": "STM32_SVD.CEC",
+      "id": "40b45deaf7dadf11",
+      "file": "stm32_svd-cec.json"
+    },
+    {
+      "name": "STM32_SVD.CRC",
+      "id": "9423f44d73d8eab4",
+      "file": "stm32_svd-crc.json"
+    },
+    {
+      "name": "STM32_SVD.CRS",
+      "id": "97604519647c0b55",
+      "file": "stm32_svd-crs.json"
+    },
+    {
+      "name": "STM32_SVD.DAC",
+      "id": "bbb46b5adff93f94",
+      "file": "stm32_svd-dac.json"
+    },
+    {
+      "name": "STM32_SVD.DBGMCU",
+      "id": "17dc5ec0091b62b5",
+      "file": "stm32_svd-dbgmcu.json"
+    },
+    {
+      "name": "STM32_SVD.DMA",
+      "id": "2f6ad64ddbb4c5ae",
+      "file": "stm32_svd-dma.json"
+    },
+    {
+      "name": "STM32_SVD.EXTI",
+      "id": "f0730fda15a365a9",
+      "file": "stm32_svd-exti.json"
+    },
+    {
+      "name": "STM32_SVD.Flash",
+      "id": "afbc07da473c1ff9",
+      "file": "stm32_svd-flash.json"
+    },
+    {
+      "name": "STM32_SVD.GPIO",
+      "id": "97d70c01b0fef25f",
+      "file": "stm32_svd-gpio.json"
+    },
+    {
+      "name": "STM32_SVD.I2C",
+      "id": "ccdf874ef8870b13",
+      "file": "stm32_svd-i2c.json"
+    },
+    {
+      "name": "STM32_SVD.IWDG",
+      "id": "377d83dd5102cc70",
+      "file": "stm32_svd-iwdg.json"
+    },
+    {
+      "name": "STM32_SVD.NVIC",
+      "id": "2747d51cb540a168",
+      "file": "stm32_svd-nvic.json"
+    },
+    {
+      "name": "STM32_SVD.PWR",
+      "id": "ee48c6b258877021",
+      "file": "stm32_svd-pwr.json"
+    },
+    {
+      "name": "STM32_SVD.RCC",
+      "id": "902517463f6423fa",
+      "file": "stm32_svd-rcc.json"
+    },
+    {
+      "name": "STM32_SVD.RTC",
+      "id": "9c70c444b295f197",
+      "file": "stm32_svd-rtc.json"
+    },
+    {
+      "name": "STM32_SVD.SCB",
+      "id": "c6fbc0d20a1d1f64",
+      "file": "stm32_svd-scb.json"
+    },
+    {
+      "name": "STM32_SVD.SPI",
+      "id": "e8ba2b503470f02b",
+      "file": "stm32_svd-spi.json"
+    },
+    {
+      "name": "STM32_SVD.STK",
+      "id": "9054df3d8ce6f864",
+      "file": "stm32_svd-stk.json"
+    },
+    {
+      "name": "STM32_SVD.SYSCFG",
+      "id": "e2b7aaebcf4ddce5",
+      "file": "stm32_svd-syscfg.json"
+    },
+    {
+      "name": "STM32_SVD.TIM",
+      "id": "449d4224723445ff",
+      "file": "stm32_svd-tim.json"
+    },
+    {
+      "name": "STM32_SVD.TSC",
+      "id": "ace092b19544a299",
+      "file": "stm32_svd-tsc.json"
+    },
+    {
+      "name": "STM32_SVD.USART",
+      "id": "a593b12c11cdfa36",
+      "file": "stm32_svd-usart.json"
+    },
+    {
+      "name": "STM32_SVD.USB",
+      "id": "8fe5b74075180153",
+      "file": "stm32_svd-usb.json"
+    },
+    {
+      "name": "STM32_SVD.WWDG",
+      "id": "6fac56f1c6ae5ddd",
+      "file": "stm32_svd-wwdg.json"
+    }
+  ]
+}

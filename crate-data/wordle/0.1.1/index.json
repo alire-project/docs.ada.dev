@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "crate": "wordle",
+  "version": "0.1.1",
+  "documented_at": "2026-03-07T02:51:34Z",
+  "description": "Wordle for the terminal",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "wordle",
+    "console",
+    "terminal",
+    "game"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/wordle_ada",
+    "host": "github",
+    "commit": "e2a960d82bce0914d3ed7ac5e4b0a6cd13d41b21"
+  },
+  "dependencies": [
+    {
+      "crate": "aaa",
+      "version": "~0.2.6"
+    },
+    {
+      "crate": "ansiada",
+      "version": "^1.0.0"
+    },
+    {
+      "crate": "wordlelib",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "wordlist",
+      "version": "~0.1.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Wordle_Config",
+      "id": "3bcf16c479b859a5",
+      "file": "wordle_config.json"
+    }
+  ]
+}

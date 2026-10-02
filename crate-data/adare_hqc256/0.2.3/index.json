@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "adare_hqc256",
+  "version": "0.2.3",
+  "documented_at": "2026-03-03T17:49:28Z",
+  "description": "Post Quantum Computer Resistant Cryptograph KEM, HQC 256 Ada bind.",
+  "long_description": "HQC (Hamming Quasi-Cyclic) is a code-based public key encryption scheme\n      designed to provide security against attacks by\n      both classical and quantum computers. HQC has been submitted\n      to the NIST's Post-Quantum Cryptography Standardization Project.\n\n      Adare_HQC256 is a Ada 2012 bind to HQC-256 C.\n\n      Adare_HQC256 has a 512 bits Shared Secret size.\n\n      (C version at https://github.com/PQClean/PQClean)\n\n      How a Bonus all Ada packages in this lib is \"Ada Pure\"! :-)\n\n                   ",
+  "authors": [
+    "Daniel Norte de Moraes"
+  ],
+  "licenses": [
+    "Unlicense"
+  ],
+  "tags": [
+    "kem",
+    "pqc",
+    "ss512bits"
+  ],
+  "repository": {
+    "url": "https://github.com/danieagle/adare_hqc256",
+    "host": "github",
+    "commit": "bbba67491702dff110606508f1832140f049381f"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Adare_Hqc256",
+      "id": "a82f462df6be0a28",
+      "file": "adare_hqc256.json"
+    },
+    {
+      "name": "Adare_Hqc256.hqc",
+      "id": "5e1368b798987527",
+      "file": "adare_hqc256-hqc.json"
+    },
+    {
+      "name": "Adare_Hqc256.inners",
+      "id": "5188f52b53377e77",
+      "file": "adare_hqc256-inners.json"
+    }
+  ]
+}

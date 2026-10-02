@@ -1,0 +1,89 @@
+{
+  "schema_version": "1",
+  "crate": "linux_hal",
+  "version": "1.2.0",
+  "documented_at": "2026-03-04T16:55:58Z",
+  "description": "HAL drivers for Linux userspace",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "hal",
+    "linux",
+    "i2c",
+    "smbus",
+    "gpio",
+    "spi",
+    "audio"
+  ],
+  "website": "https://github.com/JeremyGrosser/linux_hal",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/linux_hal",
+    "host": "github",
+    "commit": "6a1ecae45982d62284b99d19a4f47678ded49c15"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1"
+    },
+    {
+      "crate": "libgpiod",
+      "version": "^1"
+    },
+    {
+      "crate": "libi2c",
+      "version": "^4"
+    },
+    {
+      "crate": "libpulse",
+      "version": "^16"
+    }
+  ],
+  "units": [
+    {
+      "name": "Linux",
+      "id": "caf90169eefa5f80",
+      "file": "linux.json"
+    },
+    {
+      "name": "Linux.Audio",
+      "id": "71e3762fcf394a66",
+      "file": "linux-audio.json"
+    },
+    {
+      "name": "Linux.GPIO",
+      "id": "28d6cfc7f5fc633a",
+      "file": "linux-gpio.json"
+    },
+    {
+      "name": "Linux.I2C",
+      "id": "0f10cc38b256027c",
+      "file": "linux-i2c.json"
+    },
+    {
+      "name": "Linux.SMBus",
+      "id": "b532f36a46cfda13",
+      "file": "linux-smbus.json"
+    },
+    {
+      "name": "Linux.SPI",
+      "id": "8674ed276574cfd6",
+      "file": "linux-spi.json"
+    },
+    {
+      "name": "Linux.Time",
+      "id": "990d0c9433e877ad",
+      "file": "linux-time.json"
+    },
+    {
+      "name": "Linux_Hal_Config",
+      "id": "f8d98d72e35d8b02",
+      "file": "linux_hal_config.json"
+    }
+  ]
+}

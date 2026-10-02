@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "rand_bigints",
+  "version": "0.2.0",
+  "documented_at": "2026-03-07T02:49:17Z",
+  "description": "Random big integer generation",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "random",
+    "bigint",
+    "ada2022"
+  ],
+  "website": "https://github.com/AldanTanneo/bigints",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/bigints",
+    "host": "github",
+    "commit": "414589c10e5dec87aebf9cfe8fda675a047d45b1",
+    "subdir": "rand_bigints/"
+  },
+  "dependencies": [
+    {
+      "crate": "bigints",
+      "version": "0.2.0"
+    },
+    {
+      "crate": "rand_core",
+      "version": "0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Rand_Bigints",
+      "id": "b747c4045bb79b5f",
+      "file": "rand_bigints.json"
+    },
+    {
+      "name": "Rand_Bigints_Config",
+      "id": "49d44db414269015",
+      "file": "rand_bigints_config.json"
+    }
+  ]
+}

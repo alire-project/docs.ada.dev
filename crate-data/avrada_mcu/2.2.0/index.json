@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "avrada_mcu",
+  "version": "2.2.0",
+  "documented_at": "2026-03-03T17:51:57Z",
+  "description": "Device (MCU) specific definitions for AVR microcontrollers",
+  "authors": [
+    "Rolf Ebert"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "avr",
+    "embedded",
+    "rts"
+  ],
+  "website": "https://sourceforge.net/projects/avr-ada/",
+  "repository": {
+    "url": "https://github.com/RREE/AVRAda_MCU",
+    "host": "github",
+    "commit": "b6f5cf0d6b9e4981ce79c6ed7f3dd28600c08dbf"
+  },
+  "dependencies": [
+    {
+      "crate": "avrada_rts",
+      "version": "^2.0.1"
+    },
+    {
+      "crate": "gnat_avr_elf",
+      "version": "^11 | ^12.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "AVR",
+      "id": "a744216a5801ac15",
+      "file": "avr.json"
+    },
+    {
+      "name": "AVR.ATmega328P",
+      "id": "aa0f0bc029ca9527",
+      "file": "avr-atmega328p.json"
+    },
+    {
+      "name": "AVR.ATmega328P.Bootloader",
+      "id": "7d9205d0743a4d77",
+      "file": "avr-atmega328p-bootloader.json"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "crate": "umwi",
+  "version": "0.1.0",
+  "documented_at": "2026-03-07T02:49:11Z",
+  "description": "Unicode Monospace Width Information",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-or-later"
+  ],
+  "tags": [
+    "unicode",
+    "emoji",
+    "emoticon",
+    "monospace",
+    "east",
+    "asian",
+    "width",
+    "grapheme",
+    "cluster",
+    "combining"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/umwi",
+    "host": "github",
+    "commit": "34abe38402431ced3e2f2018acecc6dfa1ab860e"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Umwi",
+      "id": "29c9f1d07611e363",
+      "file": "umwi.json"
+    },
+    {
+      "name": "Umwi.Defaults",
+      "id": "7236c46f231c0191",
+      "file": "umwi-defaults.json"
+    },
+    {
+      "name": "Umwi.Generated",
+      "id": "595c128b1ed3e2ea",
+      "file": "umwi-generated.json"
+    },
+    {
+      "name": "Umwi.Properties",
+      "id": "8d63984b470a0332",
+      "file": "umwi-properties.json"
+    },
+    {
+      "name": "Umwi_Config",
+      "id": "aa2695922248f925",
+      "file": "umwi_config.json"
+    }
+  ]
+}

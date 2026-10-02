@@ -1,0 +1,122 @@
+{
+  "schema_version": "1",
+  "crate": "bbs_embed_common",
+  "version": "0.2.0",
+  "documented_at": "2026-03-03T17:53:05Z",
+  "description": "Abstract hardware drivers and drivers for some i2c bus devices.",
+  "long_description": "This crate contains base classes for some hardware devices such as Analog\nInputs, GPIO pins, I2C bus, and SPI bus.  It also contains drivers for\ndevices that use, for example, an I2C bus.\n\nBy itself, this crate isn't much use.  It will need to be used with the\nbbs_embed_linux crate which contains hardware drivers for the Raspberry Pi\nand BeagleBone Black.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "embedded"
+  ],
+  "website": "https://github.com/BrentSeidel/BBS-BBB-Ada",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/BBS-BBB-Ada",
+    "host": "github",
+    "commit": "37c1a69b6cb64b0b7b7ac63a7ed5a1459d22e237",
+    "subdir": "src-common/"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBS.embed",
+      "id": "ab52b9224d3fdfbb",
+      "file": "bbs-embed.json"
+    },
+    {
+      "name": "BBS.embed.AIN",
+      "id": "b30b5c717888e24b",
+      "file": "bbs-embed-ain.json"
+    },
+    {
+      "name": "BBS.embed.GPIO",
+      "id": "ecd6a1d9fa7eabe5",
+      "file": "bbs-embed-gpio.json"
+    },
+    {
+      "name": "BBS.embed.gpio.tb6612",
+      "id": "f0e54835baf1dfff",
+      "file": "bbs-embed-gpio-tb6612.json"
+    },
+    {
+      "name": "BBS.embed.i2c",
+      "id": "4dc598b6be313ecf",
+      "file": "bbs-embed-i2c.json"
+    },
+    {
+      "name": "BBS.embed.I2C.ADS1015",
+      "id": "f69844e830570de6",
+      "file": "bbs-embed-i2c-ads1015.json"
+    },
+    {
+      "name": "BBS.embed.i2c.BME280",
+      "id": "c7405fb48afe1d28",
+      "file": "bbs-embed-i2c-bme280.json"
+    },
+    {
+      "name": "BBS.embed.i2c.BMP180",
+      "id": "cbbb5c7437f6c806",
+      "file": "bbs-embed-i2c-bmp180.json"
+    },
+    {
+      "name": "BBS.embed.i2c.devices",
+      "id": "a8689b8aa5bb530b",
+      "file": "bbs-embed-i2c-devices.json"
+    },
+    {
+      "name": "BBS.embed.i2c.L3GD20H",
+      "id": "d4bb407dbd1c81e5",
+      "file": "bbs-embed-i2c-l3gd20h.json"
+    },
+    {
+      "name": "BBS.embed.i2c.LSM303DLHC",
+      "id": "78ba4f94e237fe94",
+      "file": "bbs-embed-i2c-lsm303dlhc.json"
+    },
+    {
+      "name": "BBS.embed.i2c.MCP23008",
+      "id": "edf27c6fc884403c",
+      "file": "bbs-embed-i2c-mcp23008.json"
+    },
+    {
+      "name": "BBS.embed.i2c.MCP23017",
+      "id": "1b1113748ed75678",
+      "file": "bbs-embed-i2c-mcp23017.json"
+    },
+    {
+      "name": "BBS.embed.i2c.MCP4725",
+      "id": "98033e14004fa757",
+      "file": "bbs-embed-i2c-mcp4725.json"
+    },
+    {
+      "name": "BBS.embed.i2c.PCA9685",
+      "id": "633f647fcc804151",
+      "file": "bbs-embed-i2c-pca9685.json"
+    },
+    {
+      "name": "BBS.embed.log",
+      "id": "1c6d2d0a53f34741",
+      "file": "bbs-embed-log.json"
+    },
+    {
+      "name": "BBS.embed.SPI",
+      "id": "d6867b259b16681b",
+      "file": "bbs-embed-spi.json"
+    },
+    {
+      "name": "BBS.embed.SPI.RA8875",
+      "id": "74dff9739e74e71f",
+      "file": "bbs-embed-spi-ra8875.json"
+    }
+  ]
+}

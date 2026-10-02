@@ -1,0 +1,72 @@
+{
+  "schema_version": "1",
+  "crate": "basalt",
+  "version": "0.3.0",
+  "documented_at": "2026-03-03T17:52:33Z",
+  "description": "Collection of formally verified building blocks",
+  "authors": [],
+  "licenses": [
+    "AGPL-3.0-only"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "queue",
+    "spark",
+    "stack",
+    "string",
+    "utils"
+  ],
+  "repository": {
+    "url": "https://github.com/Componolit/basalt",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Basalt",
+      "id": "8369762ae90ec0b2",
+      "file": "basalt.json"
+    },
+    {
+      "name": "Basalt.Queue",
+      "id": "012ea6220475e27a",
+      "file": "basalt-queue.json"
+    },
+    {
+      "name": "Basalt.Slicer",
+      "id": "e90b5d4c37c46cca",
+      "file": "basalt-slicer.json"
+    },
+    {
+      "name": "Basalt.Stack",
+      "id": "b9265dc88599f8a3",
+      "file": "basalt-stack.json"
+    },
+    {
+      "name": "Basalt.Strings",
+      "id": "29094d2c74683fe7",
+      "file": "basalt-strings.json"
+    },
+    {
+      "name": "Basalt.Strings_Generic",
+      "id": "245019b2dc986e7c",
+      "file": "basalt-strings_generic.json"
+    },
+    {
+      "name": "Basalt.Strings_Generic.Generic_Optional",
+      "id": "bcc0a98496f5568f",
+      "file": "basalt-strings_generic-generic_optional.json"
+    },
+    {
+      "name": "Basalt.Strings_Generic.Value_Option_Modular",
+      "id": "462f166d17bd841f",
+      "file": "basalt-strings_generic-value_option_modular.json"
+    },
+    {
+      "name": "Basalt.Strings_Generic.Value_Option_Ranged",
+      "id": "80f285c88c5cc3c9",
+      "file": "basalt-strings_generic-value_option_ranged.json"
+    }
+  ]
+}

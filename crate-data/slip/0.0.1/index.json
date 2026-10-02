@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "slip",
+  "version": "0.0.1",
+  "documented_at": "2026-03-06T02:58:11Z",
+  "description": "SLIP Protocol Implementation",
+  "authors": [
+    "Biser Milanov"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "protocols",
+    "spark"
+  ],
+  "website": "https://gitlab.com/bmilanov/slip",
+  "repository": {
+    "url": "https://gitlab.com/bmilanov/slip",
+    "host": "gitlab",
+    "commit": "b99d32df8530b4ef45a2c79c4bfb918b3a76710a"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "slip",
+      "id": "1c1480e67eee52c1",
+      "file": "slip.json"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "crate": "cashe",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:54:21Z",
+  "description": "A fixed-point decimal money library written in Ada.",
+  "authors": [
+    "AJ Ianozi"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "decimal",
+    "finance"
+  ],
+  "website": "https://github.com/AJ-Ianozi/Cashe/",
+  "repository": {
+    "url": "https://github.com/AJ-Ianozi/Cashe",
+    "host": "github",
+    "commit": "d142893b6036e384daa3e8a9172f133c204ee5a7"
+  },
+  "dependencies": [
+    {
+      "crate": "iso",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Cashe",
+      "id": "e1d517ce268679f3",
+      "file": "cashe.json"
+    },
+    {
+      "name": "Cashe.Currency_Handling",
+      "id": "e693791cf7e63dc0",
+      "file": "cashe-currency_handling.json"
+    },
+    {
+      "name": "Cashe.Exchange",
+      "id": "444851c626bde12c",
+      "file": "cashe-exchange.json"
+    },
+    {
+      "name": "Cashe.Money_Handling",
+      "id": "61472a159899386c",
+      "file": "cashe-money_handling.json"
+    },
+    {
+      "name": "Cashe_Config",
+      "id": "44e0c26d620ace7a",
+      "file": "cashe_config.json"
+    }
+  ]
+}

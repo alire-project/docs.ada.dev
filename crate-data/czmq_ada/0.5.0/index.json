@@ -1,0 +1,68 @@
+{
+  "schema_version": "1",
+  "crate": "czmq_ada",
+  "version": "0.5.0",
+  "documented_at": "2026-05-12T03:01:58Z",
+  "description": "Ada bindings for CZMQ (high-level C API for ZeroMQ)",
+  "authors": [
+    "Jochen Lillich <contact@geewiz.dev>"
+  ],
+  "licenses": [
+    "MPL-2.0"
+  ],
+  "tags": [
+    "zeromq",
+    "messaging",
+    "networking",
+    "bindings"
+  ],
+  "website": "https://github.com/geewiz/czmq_ada",
+  "repository": {
+    "url": "https://github.com/geewiz/czmq_ada",
+    "host": "github",
+    "commit": "83b0ba41f60d82617e759478333914ac3d0a82af"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CZMQ",
+      "id": "1e51169e326c03dc",
+      "file": "czmq.json"
+    },
+    {
+      "name": "CZMQ.Authentication",
+      "id": "1f7825d0122ca20a",
+      "file": "czmq-authentication.json"
+    },
+    {
+      "name": "CZMQ.Certificates",
+      "id": "94c770c76588109b",
+      "file": "czmq-certificates.json"
+    },
+    {
+      "name": "CZMQ.Low_Level",
+      "id": "2e515a702411a0b5",
+      "file": "czmq-low_level.json"
+    },
+    {
+      "name": "CZMQ.Messages",
+      "id": "69eb8f3d601d411a",
+      "file": "czmq-messages.json"
+    },
+    {
+      "name": "CZMQ.Pollers",
+      "id": "90d47d9b8852e0da",
+      "file": "czmq-pollers.json"
+    },
+    {
+      "name": "CZMQ.Signals",
+      "id": "7968181fbd79df98",
+      "file": "czmq-signals.json"
+    },
+    {
+      "name": "CZMQ.Sockets",
+      "id": "b87a9e6f0cafa7bd",
+      "file": "czmq-sockets.json"
+    }
+  ]
+}

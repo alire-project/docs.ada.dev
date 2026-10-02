@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "rpio",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:56:24Z",
+  "description": "Driver for the BCM2835's GPIO, as seen on the Raspberry Pi",
+  "authors": [
+    "Estevan Castilho"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "raspberry-pi",
+    "gpio",
+    "bcm2835"
+  ],
+  "website": "https://git.sr.ht/~tevo/rpio",
+  "repository": {
+    "url": "https://git.sr.ht/~tevo/rpio/archive/v1.0.0.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "RPIO",
+      "id": "03a1324d9069c214",
+      "file": "rpio.json"
+    }
+  ]
+}

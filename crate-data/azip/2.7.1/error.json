@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "azip",
+  "version": "2.7.1",
+  "failed_at": "2026-03-03T17:52:12Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

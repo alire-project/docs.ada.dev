@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "crate": "resources",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:56:18Z",
+  "description": "Utility library to handle project resources at run-time",
+  "authors": [
+    "Alire Team"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "utils"
+  ],
+  "website": "https://github.com/alire-project/resources",
+  "repository": {
+    "url": "https://github.com/alire-project/resources",
+    "host": "github",
+    "commit": "a418da627ec3d18f50f60edaee41a2f47f173a0e"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Resources",
+      "id": "41d311a605520fc7",
+      "file": "resources.json"
+    }
+  ]
+}

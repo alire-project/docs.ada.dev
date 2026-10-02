@@ -1,0 +1,399 @@
+{
+  "schema_version": "1",
+  "crate": "whitakers_words",
+  "version": "0.20240801.0",
+  "documented_at": "2026-03-07T02:50:52Z",
+  "description": "William Whitaker's WORDS, a Latin dictionary",
+  "authors": [
+    "William A. Whitaker",
+    "Martin Keegan"
+  ],
+  "licenses": [
+    "Custom-Public-Domain"
+  ],
+  "tags": [],
+  "website": "https://bitbucket.org/ben-crowell/whitakers-words/",
+  "repository": {
+    "url": "https://github.com/mosteo/whitakers-words",
+    "host": "github",
+    "commit": "bbf5d50cf4026c17d35f07ce85771954b95c6af9"
+  },
+  "dependencies": [
+    {
+      "crate": "make",
+      "version": "any"
+    }
+  ],
+  "units": [
+    {
+      "name": "Banner",
+      "id": "8c7ed2d9be59e21c",
+      "file": "banner.json"
+    },
+    {
+      "name": "Latin_Utils",
+      "id": "0d72f943a9ba0816",
+      "file": "latin_utils.json"
+    },
+    {
+      "name": "Latin_Utils.Config",
+      "id": "d1e0969689fed99f",
+      "file": "latin_utils-config.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package",
+      "id": "e991bc0747147b64",
+      "file": "latin_utils-dictionary_package.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Adjective_Entry_IO",
+      "id": "20dd5384ffe25a27",
+      "file": "latin_utils-dictionary_package-adjective_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Adverb_Entry_IO",
+      "id": "953787ed0d8c60b0",
+      "file": "latin_utils-dictionary_package-adverb_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Conjunction_Entry_IO",
+      "id": "2df0865dc056bf99",
+      "file": "latin_utils-dictionary_package-conjunction_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Dictionary_Entry_IO",
+      "id": "155d28fe6f5b7c86",
+      "file": "latin_utils-dictionary_package-dictionary_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Interjection_Entry_IO",
+      "id": "06a1a0ec964371e1",
+      "file": "latin_utils-dictionary_package-interjection_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Kind_Entry_IO",
+      "id": "d14e9552285d58cf",
+      "file": "latin_utils-dictionary_package-kind_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Noun_Entry_IO",
+      "id": "98cde32baf5426d9",
+      "file": "latin_utils-dictionary_package-noun_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Numeral_Entry_IO",
+      "id": "455679eb1bf7ea64",
+      "file": "latin_utils-dictionary_package-numeral_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Parse_Record_IO",
+      "id": "a3ae50f3505f6d5c",
+      "file": "latin_utils-dictionary_package-parse_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Part_Entry_IO",
+      "id": "47a4b4efec91f84d",
+      "file": "latin_utils-dictionary_package-part_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Preposition_Entry_IO",
+      "id": "7f1192fb7d7d1152",
+      "file": "latin_utils-dictionary_package-preposition_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Pronoun_Entry_IO",
+      "id": "1f4902a6e38fb6be",
+      "file": "latin_utils-dictionary_package-pronoun_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Propack_Entry_IO",
+      "id": "5b13405a77de5b64",
+      "file": "latin_utils-dictionary_package-propack_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Translation_Record_IO",
+      "id": "2a97077f2be73b5b",
+      "file": "latin_utils-dictionary_package-translation_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Dictionary_Package.Verb_Entry_IO",
+      "id": "b11dfb093a7bd54c",
+      "file": "latin_utils-dictionary_package-verb_entry_io.json"
+    },
+    {
+      "name": "Latin_Utils.General",
+      "id": "52565378d30bded5",
+      "file": "latin_utils-general.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package",
+      "id": "a8c58cabf07616e3",
+      "file": "latin_utils-inflections_package.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Adjective_Record_IO",
+      "id": "2b9111190605d4c6",
+      "file": "latin_utils-inflections_package-adjective_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Adverb_Record_IO",
+      "id": "e83c3fb2e169837c",
+      "file": "latin_utils-inflections_package-adverb_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Conjunction_Record_IO",
+      "id": "6bddaa4a7784810c",
+      "file": "latin_utils-inflections_package-conjunction_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Decn_Record_IO",
+      "id": "1ae0efbbbd46eb7f",
+      "file": "latin_utils-inflections_package-decn_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Ending_Record_IO",
+      "id": "30ae495d69ef9337",
+      "file": "latin_utils-inflections_package-ending_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Inflection_Record_IO",
+      "id": "65524699e0505b3b",
+      "file": "latin_utils-inflections_package-inflection_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Interjection_Record_IO",
+      "id": "24ea3d85f9da9584",
+      "file": "latin_utils-inflections_package-interjection_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Noun_Record_IO",
+      "id": "5f44b9fd5befab36",
+      "file": "latin_utils-inflections_package-noun_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Numeral_Record_IO",
+      "id": "afaf539dc778a763",
+      "file": "latin_utils-inflections_package-numeral_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Prefix_Record_IO",
+      "id": "6daa5f58a8ebd0bf",
+      "file": "latin_utils-inflections_package-prefix_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Preposition_Record_IO",
+      "id": "e6c0a603da670284",
+      "file": "latin_utils-inflections_package-preposition_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Pronoun_Record_IO",
+      "id": "4532a8750b4bed9a",
+      "file": "latin_utils-inflections_package-pronoun_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Propack_Record_IO",
+      "id": "add6a789ac75d68e",
+      "file": "latin_utils-inflections_package-propack_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Quality_Record_IO",
+      "id": "ba7a633401c16cb7",
+      "file": "latin_utils-inflections_package-quality_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Stem_Type_IO",
+      "id": "1e37e53fc25f059b",
+      "file": "latin_utils-inflections_package-stem_type_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Suffix_Record_IO",
+      "id": "da8aa39826292fe9",
+      "file": "latin_utils-inflections_package-suffix_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Supine_Record_IO",
+      "id": "1fb916c02a56cd26",
+      "file": "latin_utils-inflections_package-supine_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Tackon_Record_IO",
+      "id": "10177f6231af54fa",
+      "file": "latin_utils-inflections_package-tackon_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Tense_Voice_Mood_Record_IO",
+      "id": "53ed10e4c88796fe",
+      "file": "latin_utils-inflections_package-tense_voice_mood_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Verb_Record_IO",
+      "id": "0819b4908d9c9b49",
+      "file": "latin_utils-inflections_package-verb_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Inflections_Package.Vpar_Record_IO",
+      "id": "4f4b09428839cf82",
+      "file": "latin_utils-inflections_package-vpar_record_io.json"
+    },
+    {
+      "name": "Latin_Utils.Latin_File_Names",
+      "id": "174bfa764cd78438",
+      "file": "latin_utils-latin_file_names.json"
+    },
+    {
+      "name": "Latin_Utils.Preface",
+      "id": "80914a460ae16d82",
+      "file": "latin_utils-preface.json"
+    },
+    {
+      "name": "Latin_Utils.Strings_Package",
+      "id": "18668502d3625f1d",
+      "file": "latin_utils-strings_package.json"
+    },
+    {
+      "name": "Support_Utils",
+      "id": "03cd36d9823dd0ab",
+      "file": "support_utils.json"
+    },
+    {
+      "name": "Support_Utils.Addons_Package",
+      "id": "18103a30a53e5af1",
+      "file": "support_utils-addons_package.json"
+    },
+    {
+      "name": "Support_Utils.Addons_Package.Prefix_Entry_Io",
+      "id": "61704363c0d83aae",
+      "file": "support_utils-addons_package-prefix_entry_io.json"
+    },
+    {
+      "name": "Support_Utils.Addons_Package.Suffix_Entry_Io",
+      "id": "8664792359efbb7c",
+      "file": "support_utils-addons_package-suffix_entry_io.json"
+    },
+    {
+      "name": "Support_Utils.Addons_Package.Tackon_Entry_Io",
+      "id": "0c3863621258b274",
+      "file": "support_utils-addons_package-tackon_entry_io.json"
+    },
+    {
+      "name": "Support_Utils.Addons_Package.Target_Entry_Io",
+      "id": "ec4d95db1422cec3",
+      "file": "support_utils-addons_package-target_entry_io.json"
+    },
+    {
+      "name": "Support_Utils.Char_Utils",
+      "id": "24ea1996cb0b5135",
+      "file": "support_utils-char_utils.json"
+    },
+    {
+      "name": "Support_Utils.Developer_Parameters",
+      "id": "c6876c79950827cb",
+      "file": "support_utils-developer_parameters.json"
+    },
+    {
+      "name": "Support_Utils.Line_Stuff",
+      "id": "f5ac179e0fc39f5b",
+      "file": "support_utils-line_stuff.json"
+    },
+    {
+      "name": "Support_Utils.Line_Stuff.Prefix_Line_Io",
+      "id": "42e5f93f56cfc353",
+      "file": "support_utils-line_stuff-prefix_line_io.json"
+    },
+    {
+      "name": "Support_Utils.Line_Stuff.Suffix_Line_Io",
+      "id": "a2c61deb93c81c72",
+      "file": "support_utils-line_stuff-suffix_line_io.json"
+    },
+    {
+      "name": "Support_Utils.Line_Stuff.Tackon_Line_Io",
+      "id": "565190c0607de9b4",
+      "file": "support_utils-line_stuff-tackon_line_io.json"
+    },
+    {
+      "name": "Support_Utils.Line_Stuff.Unique_Entry_Io",
+      "id": "7bfd66989ccc3f1e",
+      "file": "support_utils-line_stuff-unique_entry_io.json"
+    },
+    {
+      "name": "Support_Utils.Uniques_Package",
+      "id": "f09fb16e7b99cf0a",
+      "file": "support_utils-uniques_package.json"
+    },
+    {
+      "name": "Support_Utils.Word_Parameters",
+      "id": "c8b568b5401f21f6",
+      "file": "support_utils-word_parameters.json"
+    },
+    {
+      "name": "Support_Utils.Word_Support_Package",
+      "id": "0d3ac43a52eb265d",
+      "file": "support_utils-word_support_package.json"
+    },
+    {
+      "name": "Words_Engine",
+      "id": "aef0f342f27b39ff",
+      "file": "words_engine.json"
+    },
+    {
+      "name": "Words_Engine.English_Support_Package",
+      "id": "07423e193bbde6fb",
+      "file": "words_engine-english_support_package.json"
+    },
+    {
+      "name": "Words_Engine.English_Support_Package.Ewds_Record_Io",
+      "id": "3e8265e182fd4e5e",
+      "file": "words_engine-english_support_package-ewds_record_io.json"
+    },
+    {
+      "name": "Words_Engine.Explanation_Package",
+      "id": "f6ac88130534d1ac",
+      "file": "words_engine-explanation_package.json"
+    },
+    {
+      "name": "Words_Engine.Initialization",
+      "id": "1182afbe8e7614f7",
+      "file": "words_engine-initialization.json"
+    },
+    {
+      "name": "Words_Engine.List_Package",
+      "id": "3fe6270bb70f5b9e",
+      "file": "words_engine-list_package.json"
+    },
+    {
+      "name": "Words_Engine.List_Sweep",
+      "id": "ecb3147bc0f05d6a",
+      "file": "words_engine-list_sweep.json"
+    },
+    {
+      "name": "Words_Engine.Parse",
+      "id": "b249ab945f348453",
+      "file": "words_engine-parse.json"
+    },
+    {
+      "name": "Words_Engine.Pearse_Code",
+      "id": "b60747b78274ac4b",
+      "file": "words_engine-pearse_code.json"
+    },
+    {
+      "name": "Words_Engine.Roman_Numerals_Package",
+      "id": "0c3ce03e9ac66c40",
+      "file": "words_engine-roman_numerals_package.json"
+    },
+    {
+      "name": "Words_Engine.Trick_Tables",
+      "id": "ed78a52c8a8f7989",
+      "file": "words_engine-trick_tables.json"
+    },
+    {
+      "name": "Words_Engine.Tricks",
+      "id": "beb4e93a58543f83",
+      "file": "words_engine-tricks.json"
+    },
+    {
+      "name": "Words_Engine.Word_Package",
+      "id": "befe1ded18c6cdc1",
+      "file": "words_engine-word_package.json"
+    }
+  ]
+}

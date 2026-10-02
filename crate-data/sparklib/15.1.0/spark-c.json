@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"sparklib","version":"15.1.0","id":"b2e4eafb58635bc8","name":"SPARK.C","qualified_name":"SPARK.C","kind":"ada_package","location":{"file":"src/spark-c.ads","line":7,"column":9},"code":"package SPARK.C","documentation":{"description":"\nCopyright (C) 2024-2025, AdaCore\n\nSPDX-License-Identifier: Apache-2.0 WITH LLVM-exception"}}

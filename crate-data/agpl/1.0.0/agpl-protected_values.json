@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"1dd5f8cf278769a5","name":"Agpl.Protected_Values","qualified_name":"Agpl.Protected_Values","kind":"ada_package","location":{"file":"src/agpl-protected_values.ads","line":5,"column":9},"code":"package Agpl.Protected_Values","documentation":{"description":"Protected container for values of any private type."}}

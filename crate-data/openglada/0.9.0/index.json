@@ -1,0 +1,252 @@
+{
+  "schema_version": "1",
+  "crate": "openglada",
+  "version": "0.9.0",
+  "documented_at": "2026-03-05T02:59:16Z",
+  "description": "Thick Ada binding for OpenGL",
+  "authors": [
+    "Felix Krause"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "opengl",
+    "binding",
+    "rendering",
+    "graphics"
+  ],
+  "website": "http://flyx.github.io/OpenGLAda/",
+  "repository": {
+    "url": "https://github.com/flyx/OpenGLAda",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "case(os)",
+      "version": "{'linux': {'libx11': '^1'}}"
+    }
+  ],
+  "units": [
+    {
+      "name": "GL",
+      "id": "7ee0a6aea916330f",
+      "file": "gl.json"
+    },
+    {
+      "name": "GL.Algebra",
+      "id": "a6268af57a23e831",
+      "file": "gl-algebra.json"
+    },
+    {
+      "name": "GL.Attributes",
+      "id": "248da0c072e987e9",
+      "file": "gl-attributes.json"
+    },
+    {
+      "name": "GL.Blending",
+      "id": "4984687936a3fbbf",
+      "file": "gl-blending.json"
+    },
+    {
+      "name": "GL.Buffers",
+      "id": "7daf92a39cc56af1",
+      "file": "gl-buffers.json"
+    },
+    {
+      "name": "GL.Context",
+      "id": "0496c5f36bf0ec0a",
+      "file": "gl-context.json"
+    },
+    {
+      "name": "GL.Culling",
+      "id": "3980e73064cea725",
+      "file": "gl-culling.json"
+    },
+    {
+      "name": "GL.Debug",
+      "id": "64d25273b600bcd4",
+      "file": "gl-debug.json"
+    },
+    {
+      "name": "GL.Errors",
+      "id": "3d27be0a02ead8ce",
+      "file": "gl-errors.json"
+    },
+    {
+      "name": "GL.Files",
+      "id": "892c5dff979677cd",
+      "file": "gl-files.json"
+    },
+    {
+      "name": "GL.Fixed",
+      "id": "ac536b5a640e6d3e",
+      "file": "gl-fixed.json"
+    },
+    {
+      "name": "GL.Fixed.Lighting",
+      "id": "c787802c0e59adf8",
+      "file": "gl-fixed-lighting.json"
+    },
+    {
+      "name": "GL.Fixed.Matrix",
+      "id": "48991bafe1b218c3",
+      "file": "gl-fixed-matrix.json"
+    },
+    {
+      "name": "GL.Fixed.Textures",
+      "id": "22cb0cd35cc4e6f1",
+      "file": "gl-fixed-textures.json"
+    },
+    {
+      "name": "GL.Framebuffer",
+      "id": "1722e50840f39b42",
+      "file": "gl-framebuffer.json"
+    },
+    {
+      "name": "GL.GLX",
+      "id": "91b0c27bc327e3a2",
+      "file": "gl-glx.json"
+    },
+    {
+      "name": "GL.Immediate",
+      "id": "3152904476a96d1a",
+      "file": "gl-immediate.json"
+    },
+    {
+      "name": "GL.Low_Level",
+      "id": "1257c2585805e61c",
+      "file": "gl-low_level.json"
+    },
+    {
+      "name": "GL.Low_Level.Enums",
+      "id": "d390b9aac752e402",
+      "file": "gl-low_level-enums.json"
+    },
+    {
+      "name": "GL.Matrices",
+      "id": "21ac07bb9c68ffd0",
+      "file": "gl-matrices.json"
+    },
+    {
+      "name": "GL.Objects",
+      "id": "c67904b9645f7e3d",
+      "file": "gl-objects.json"
+    },
+    {
+      "name": "GL.Objects.Buffers",
+      "id": "81da38ddc0c11bb0",
+      "file": "gl-objects-buffers.json"
+    },
+    {
+      "name": "GL.Objects.Framebuffers",
+      "id": "904eb21c740ae35c",
+      "file": "gl-objects-framebuffers.json"
+    },
+    {
+      "name": "GL.Objects.Lists",
+      "id": "24d96215abad0038",
+      "file": "gl-objects-lists.json"
+    },
+    {
+      "name": "GL.Objects.Programs",
+      "id": "239c90e86f6699e3",
+      "file": "gl-objects-programs.json"
+    },
+    {
+      "name": "GL.Objects.Queries",
+      "id": "7837f7775938eb4e",
+      "file": "gl-objects-queries.json"
+    },
+    {
+      "name": "GL.Objects.Renderbuffers",
+      "id": "ff9b75db6b64c1e3",
+      "file": "gl-objects-renderbuffers.json"
+    },
+    {
+      "name": "GL.Objects.Shaders",
+      "id": "87c47464f0cab7cf",
+      "file": "gl-objects-shaders.json"
+    },
+    {
+      "name": "GL.Objects.Textures",
+      "id": "e8d3ab458abc4392",
+      "file": "gl-objects-textures.json"
+    },
+    {
+      "name": "GL.Objects.Textures.Targets",
+      "id": "e31d9ff1de6588eb",
+      "file": "gl-objects-textures-targets.json"
+    },
+    {
+      "name": "GL.Objects.Textures.With_1D_Loader",
+      "id": "3ef4af3dbfc8803b",
+      "file": "gl-objects-textures-with_1d_loader.json"
+    },
+    {
+      "name": "GL.Objects.Textures.With_2D_Loader",
+      "id": "e23058c848571199",
+      "file": "gl-objects-textures-with_2d_loader.json"
+    },
+    {
+      "name": "GL.Objects.Textures.With_3D_Loader",
+      "id": "442f19e0c4437a6d",
+      "file": "gl-objects-textures-with_3d_loader.json"
+    },
+    {
+      "name": "GL.Objects.Vertex_Arrays",
+      "id": "b4edf94e7675411d",
+      "file": "gl-objects-vertex_arrays.json"
+    },
+    {
+      "name": "GL.Pixels",
+      "id": "6c2f0140353c3ccd",
+      "file": "gl-pixels.json"
+    },
+    {
+      "name": "GL.Raster",
+      "id": "208eae57113c1b0d",
+      "file": "gl-raster.json"
+    },
+    {
+      "name": "GL.Rasterization",
+      "id": "d95852b8db27723d",
+      "file": "gl-rasterization.json"
+    },
+    {
+      "name": "GL.Tessellation",
+      "id": "bab59aecc95e0820",
+      "file": "gl-tessellation.json"
+    },
+    {
+      "name": "GL.Toggles",
+      "id": "fbb8c228f3aec943",
+      "file": "gl-toggles.json"
+    },
+    {
+      "name": "GL.Types",
+      "id": "c86fcf0deb1ab8b5",
+      "file": "gl-types.json"
+    },
+    {
+      "name": "GL.Types.Colors",
+      "id": "1f8148e2c1a8005f",
+      "file": "gl-types-colors.json"
+    },
+    {
+      "name": "GL.Uniforms",
+      "id": "630417c6e25ab18a",
+      "file": "gl-uniforms.json"
+    },
+    {
+      "name": "GL.Vectors",
+      "id": "e55dc54308a040db",
+      "file": "gl-vectors.json"
+    },
+    {
+      "name": "GL.Window",
+      "id": "3f59108d163bf03e",
+      "file": "gl-window.json"
+    }
+  ]
+}

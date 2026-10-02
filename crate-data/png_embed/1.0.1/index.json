@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "png_embed",
+  "version": "1.0.1",
+  "documented_at": "2026-09-23T02:19:28Z",
+  "description": "convert a PNG image into an embedded Ada package",
+  "authors": [
+    "Rolf Ebert"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "image",
+    "embedded",
+    "png"
+  ],
+  "website": "https://github.com/RREE/png_embed",
+  "repository": {
+    "url": "https://github.com/RREE/png_embed",
+    "host": "github",
+    "commit": "d2231170dbdd8137c38b1614cc1b452cfaaf779b"
+  },
+  "dependencies": [
+    {
+      "crate": "gid",
+      "version": "^14.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Options",
+      "id": "a793ab8fcc2afce5",
+      "file": "options.json"
+    },
+    {
+      "name": "Png_Embed_Config",
+      "id": "446fde643c12e7b1",
+      "file": "png_embed_config.json"
+    }
+  ]
+}

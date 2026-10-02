@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "yamlstar",
+  "version": "0.1.17",
+  "documented_at": "2026-07-24T03:16:16Z",
+  "description": "YAMLStar language binding for Ada",
+  "authors": [
+    "YAMLStar Contributors"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "yaml",
+    "yamlstar",
+    "loader"
+  ],
+  "website": "https://yamlstar.org",
+  "repository": {
+    "url": "https://github.com/yaml/yamlstar",
+    "host": "github",
+    "commit": "50b09ec68d9537f4536b39c73acfb072cc146baa"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "YAMLStar",
+      "id": "04712bff3635c855",
+      "file": "yamlstar.json"
+    }
+  ]
+}

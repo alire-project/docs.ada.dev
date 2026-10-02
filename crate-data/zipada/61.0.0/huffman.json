@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"zipada","version":"61.0.0","id":"733aff8cfe8bd640","name":"Huffman","qualified_name":"Huffman","kind":"ada_package","location":{"file":"zip_lib/huffman.ads","line":1,"column":9},"code":"package Huffman","documentation":{"description":"So far this package is empty and serves as parent for child units."}}

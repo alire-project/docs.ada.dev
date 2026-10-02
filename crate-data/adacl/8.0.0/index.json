@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "adacl",
+  "version": "8.0.0",
+  "documented_at": "2026-09-22T02:19:37Z",
+  "description": "AdaCL: SPARK gold core shared by desktop, embedded and bare-metal",
+  "long_description": "Ada Class Library core crate for Ada 2022.\n\n`adacl` is the shared root of the AdaCL family. It is suitable for both\nembedded and desktop targets and is proven to SPARK gold. The former\ndesktop utilities no longer live here; they were moved to `adacl_desktop`\nin 8.0.0.\n\nSister crates:\n\n- [adacl_aunit](https://alire.ada.dev/crates/adacl_aunit) - AUnit-compatible assertions and parameterised tests\n- [adacl_desktop](https://alire.ada.dev/crates/adacl_desktop) - Getopt, strings, calendar, tracing, queues, and smart pointers\n- [adacl_eastrings](https://alire.ada.dev/crates/adacl_eastrings) - encoding-aware string utilities\n- [adacl_embedded](https://alire.ada.dev/crates/adacl_embedded) - lightweight tracing and text I/O for embedded targets\n- [adacl_regexp](https://alire.ada.dev/crates/adacl_regexp) - regular expressions and SPITBOL patterns\n- [adacl_sar](https://alire.ada.dev/crates/adacl_sar) - search and replace for String, Wide_String, and Wide_Wide_String\n- [adacl_serial](https://alire.ada.dev/crates/adacl_serial) - SPARK-friendly serial I/O helpers over GNAT.Serial_Communications\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl/src/)\nDocumentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "embedded",
+    "spark",
+    "ada2022"
+  ],
+  "website": "https://adacl.sourceforge.net/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AdaCL",
+      "id": "f869bd590f55044c",
+      "file": "adacl.json"
+    },
+    {
+      "name": "Adacl_Config",
+      "id": "652ce744b62f35d5",
+      "file": "adacl_config.json"
+    }
+  ]
+}

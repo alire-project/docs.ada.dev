@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "journada",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:51:39Z",
+  "description": "Simple and nice configurable logging",
+  "authors": [
+    "Léo Germond"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "log",
+    "logging",
+    "vt100"
+  ],
+  "website": "https://gitlab.com/leogermond/journada",
+  "repository": {
+    "url": "https://gitlab.com/leogermond/journada",
+    "host": "gitlab",
+    "commit": "e0bf321572520077b597bc70a8fe54e733e3f3ae"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Journada",
+      "id": "0fdef746d71613dd",
+      "file": "journada.json"
+    },
+    {
+      "name": "Journada_Config",
+      "id": "3ecdd3b179bbfdb7",
+      "file": "journada_config.json"
+    }
+  ]
+}

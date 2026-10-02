@@ -1,0 +1,80 @@
+{
+  "schema_version": "1",
+  "crate": "dcf",
+  "version": "2.0.3",
+  "documented_at": "2026-03-04T02:56:05Z",
+  "description": "Ada 2012 library for document container files, Zip-based archive files",
+  "authors": [
+    "onox",
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "zip",
+    "document",
+    "container",
+    "archive"
+  ],
+  "website": "https://github.com/onox/dcf-ada",
+  "repository": {
+    "url": "https://github.com/onox/dcf-ada",
+    "host": "github",
+    "commit": "e4bb4d971eaab4975010373c6908028ba9d6e5bf",
+    "subdir": "dcf/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "DCF",
+      "id": "b442e0c9808a6818",
+      "file": "dcf.json"
+    },
+    {
+      "name": "DCF.Streams",
+      "id": "6a9498dae12c9454",
+      "file": "dcf-streams.json"
+    },
+    {
+      "name": "DCF.Streams.Calendar",
+      "id": "22b45e5617a10df2",
+      "file": "dcf-streams-calendar.json"
+    },
+    {
+      "name": "DCF.Unzip",
+      "id": "6ec07032b4926a73",
+      "file": "dcf-unzip.json"
+    },
+    {
+      "name": "DCF.Unzip.Streams",
+      "id": "5a676d8c762e0bd4",
+      "file": "dcf-unzip-streams.json"
+    },
+    {
+      "name": "DCF.Zip",
+      "id": "529f724621fc45b0",
+      "file": "dcf-zip.json"
+    },
+    {
+      "name": "DCF.Zip.Compress",
+      "id": "5c799660dffa182c",
+      "file": "dcf-zip-compress.json"
+    },
+    {
+      "name": "DCF.Zip.CRC",
+      "id": "ba35015872a18bdd",
+      "file": "dcf-zip-crc.json"
+    },
+    {
+      "name": "DCF.Zip.Create",
+      "id": "cc6340afb325828d",
+      "file": "dcf-zip-create.json"
+    },
+    {
+      "name": "DCF.Zip.Headers",
+      "id": "b16b927d74ef3d06",
+      "file": "dcf-zip-headers.json"
+    }
+  ]
+}

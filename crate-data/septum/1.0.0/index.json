@@ -1,0 +1,148 @@
+{
+  "schema_version": "1",
+  "crate": "septum",
+  "version": "1.0.0",
+  "documented_at": "2026-09-29T02:24:49Z",
+  "description": "An interactive context-based text search tool for large codebases.",
+  "authors": [
+    "Paul Jarrett"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "search",
+    "code",
+    "text"
+  ],
+  "website": "https://github.com/pyjarrett/septum",
+  "repository": {
+    "url": "https://github.com/pyjarrett/septum",
+    "host": "github",
+    "commit": "5b9fb715bd3087b9dd12910560d2d265e517379e"
+  },
+  "dependencies": [
+    {
+      "crate": "ansiada",
+      "version": "^1.1.0"
+    },
+    {
+      "crate": "atomic",
+      "version": "~1.0.0"
+    },
+    {
+      "crate": "dir_iterators",
+      "version": "~0.0.5"
+    },
+    {
+      "crate": "progress_indicators",
+      "version": "~0.0.2"
+    },
+    {
+      "crate": "trendy_terminal",
+      "version": "~0.0.8"
+    }
+  ],
+  "units": [
+    {
+      "name": "Septum_Config",
+      "id": "33c1b2e8ec4d5fb4",
+      "file": "septum_config.json"
+    },
+    {
+      "name": "SP",
+      "id": "be18b85f77fc024d",
+      "file": "sp.json"
+    },
+    {
+      "name": "SP.Cache",
+      "id": "b89fcf0f464c4422",
+      "file": "sp-cache.json"
+    },
+    {
+      "name": "SP.Command_Line",
+      "id": "82a58135f93cdbcb",
+      "file": "sp-command_line.json"
+    },
+    {
+      "name": "SP.Commands",
+      "id": "a3b5af68a0a935a3",
+      "file": "sp-commands.json"
+    },
+    {
+      "name": "SP.Config",
+      "id": "522ffd56551e73d9",
+      "file": "sp-config.json"
+    },
+    {
+      "name": "SP.Contexts",
+      "id": "188f8680927bcd88",
+      "file": "sp-contexts.json"
+    },
+    {
+      "name": "SP.Debug",
+      "id": "61088d0a51d6e00a",
+      "file": "sp-debug.json"
+    },
+    {
+      "name": "SP.File_System",
+      "id": "89b805795cfd263f",
+      "file": "sp-file_system.json"
+    },
+    {
+      "name": "SP.Filters",
+      "id": "e8b12e222d84d7df",
+      "file": "sp-filters.json"
+    },
+    {
+      "name": "SP.Help",
+      "id": "d6f019193d4619a5",
+      "file": "sp-help.json"
+    },
+    {
+      "name": "SP.Help_Topics",
+      "id": "c6265fffa174e551",
+      "file": "sp-help_topics.json"
+    },
+    {
+      "name": "SP.Interactive",
+      "id": "38c01b1ed15703b6",
+      "file": "sp-interactive.json"
+    },
+    {
+      "name": "SP.Memory",
+      "id": "c2aef88848ac82a8",
+      "file": "sp-memory.json"
+    },
+    {
+      "name": "SP.Output",
+      "id": "0ed2fc27a811051b",
+      "file": "sp-output.json"
+    },
+    {
+      "name": "SP.Platform",
+      "id": "dc5c55cf38b744df",
+      "file": "sp-platform.json"
+    },
+    {
+      "name": "SP.Progress",
+      "id": "b69970e356dd6d1f",
+      "file": "sp-progress.json"
+    },
+    {
+      "name": "SP.Searches",
+      "id": "0d562c19271c1c12",
+      "file": "sp-searches.json"
+    },
+    {
+      "name": "SP.Strings",
+      "id": "177fb9492258a8dc",
+      "file": "sp-strings.json"
+    },
+    {
+      "name": "SP.Time",
+      "id": "4d02960d3c786c11",
+      "file": "sp-time.json"
+    }
+  ]
+}

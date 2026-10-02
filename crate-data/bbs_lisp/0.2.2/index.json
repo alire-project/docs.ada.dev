@@ -1,0 +1,172 @@
+{
+  "schema_version": "1",
+  "crate": "bbs_lisp",
+  "version": "0.2.2",
+  "documented_at": "2026-03-03T17:53:03Z",
+  "description": "Embedable tiny lisp interpreter",
+  "long_description": "This is the core of a simple tiny lisp that is intended to be embedded in\nother applications.  It can be extended with new commands specific to\nthe application.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "lisp",
+    "embedded"
+  ],
+  "website": "https://github.com/BrentSeidel/Ada-Lisp",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/Ada-Lisp",
+    "host": "github",
+    "commit": "ca9c70842fb4999b269233e862c4b05525f053b6"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBS.lisp",
+      "id": "f8aae20ba51a67ce",
+      "file": "bbs-lisp.json"
+    },
+    {
+      "name": "BBS.lisp.conses",
+      "id": "50d5f72ed9707500",
+      "file": "bbs-lisp-conses.json"
+    },
+    {
+      "name": "BBS.lisp.debug",
+      "id": "24f87e004d4b06a1",
+      "file": "bbs-lisp-debug.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate",
+      "id": "68ce0a26f5c6f0ac",
+      "file": "bbs-lisp-evaluate.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.bool",
+      "id": "41ddb6c53179bd29",
+      "file": "bbs-lisp-evaluate-bool.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.char",
+      "id": "87467ba8dc92e84c",
+      "file": "bbs-lisp-evaluate-char.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.cond",
+      "id": "12c5b823a0c1c1b0",
+      "file": "bbs-lisp-evaluate-cond.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.func",
+      "id": "19c10ade9990ed66",
+      "file": "bbs-lisp-evaluate-func.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.io",
+      "id": "64b93d5ffe3c7aa8",
+      "file": "bbs-lisp-evaluate-io.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.list",
+      "id": "d8212a9a6756eb8c",
+      "file": "bbs-lisp-evaluate-list.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.loops",
+      "id": "dfd1991d42b87cb7",
+      "file": "bbs-lisp-evaluate-loops.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.math",
+      "id": "097789bd76518c36",
+      "file": "bbs-lisp-evaluate-math.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.mem",
+      "id": "77a46ee7321d9766",
+      "file": "bbs-lisp-evaluate-mem.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.misc",
+      "id": "d8c6b991ddfdabc0",
+      "file": "bbs-lisp-evaluate-misc.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.pred",
+      "id": "5fa832a99c53576d",
+      "file": "bbs-lisp-evaluate-pred.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.str",
+      "id": "dd8e72442406e793",
+      "file": "bbs-lisp-evaluate-str.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.symb",
+      "id": "75737234aa8a289d",
+      "file": "bbs-lisp-evaluate-symb.json"
+    },
+    {
+      "name": "BBS.lisp.evaluate.vars",
+      "id": "2f1c0f55b18eff6d",
+      "file": "bbs-lisp-evaluate-vars.json"
+    },
+    {
+      "name": "BBS.lisp.global",
+      "id": "332d3db0a4171690",
+      "file": "bbs-lisp-global.json"
+    },
+    {
+      "name": "BBS.lisp.info",
+      "id": "9fc17ad2fdda7790",
+      "file": "bbs-lisp-info.json"
+    },
+    {
+      "name": "BBS.lisp.memory",
+      "id": "74b2651c705cbdfa",
+      "file": "bbs-lisp-memory.json"
+    },
+    {
+      "name": "BBS.lisp.parser",
+      "id": "c30823528d106336",
+      "file": "bbs-lisp-parser.json"
+    },
+    {
+      "name": "bbs.lisp.parser.file",
+      "id": "0853140c84519da1",
+      "file": "bbs-lisp-parser-file.json"
+    },
+    {
+      "name": "bbs.lisp.parser.stdio",
+      "id": "89925299f1d51995",
+      "file": "bbs-lisp-parser-stdio.json"
+    },
+    {
+      "name": "BBS.lisp.parser.string",
+      "id": "d26001a95b8a7958",
+      "file": "bbs-lisp-parser-string.json"
+    },
+    {
+      "name": "BBS.lisp.stack",
+      "id": "0c35c5562d15ebf5",
+      "file": "bbs-lisp-stack.json"
+    },
+    {
+      "name": "BBS.lisp.strings",
+      "id": "16fbd86d747fafdb",
+      "file": "bbs-lisp-strings.json"
+    },
+    {
+      "name": "BBS.lisp.symbols",
+      "id": "2dd02954fd4ef6e3",
+      "file": "bbs-lisp-symbols.json"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "bme280",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:53:49Z",
+  "description": "Driver for BME280 Humidity sensor",
+  "authors": [
+    "Max Reznik"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "sensor",
+    "humidity",
+    "temperature",
+    "pressure",
+    "driver"
+  ],
+  "website": "https://github.com/reznikmm/bme280",
+  "repository": {
+    "url": "https://github.com/reznikmm/bme280",
+    "host": "github",
+    "commit": "85a38919aa896c4c2a66825a135c87149224044c"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "~0.3.0"
+    }
+  ],
+  "units": []
+}

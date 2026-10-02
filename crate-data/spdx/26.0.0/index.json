@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "spdx",
+  "version": "26.0.0",
+  "documented_at": "2026-03-06T02:59:09Z",
+  "description": "SPDX License Expression Validator",
+  "authors": [
+    "Fabien Chouteau",
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "spdx",
+    "license"
+  ],
+  "website": "https://github.com/AdaCore/spdx_ada",
+  "repository": {
+    "url": "https://github.com/AdaCore/spdx_ada",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SPDX",
+      "id": "09506966808c1ace",
+      "file": "spdx.json"
+    },
+    {
+      "name": "SPDX.Exceptions",
+      "id": "80d174e5a05814bc",
+      "file": "spdx-exceptions.json"
+    },
+    {
+      "name": "SPDX.Licenses",
+      "id": "5ff30a69730f3397",
+      "file": "spdx-licenses.json"
+    }
+  ]
+}

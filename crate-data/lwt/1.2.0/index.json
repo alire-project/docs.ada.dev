@@ -1,0 +1,128 @@
+{
+  "schema_version": "1",
+  "crate": "lwt",
+  "version": "1.2.0",
+  "documented_at": "2026-03-04T16:56:32Z",
+  "description": "Light-weight Threading Library implementing Ada 2022 parallel features",
+  "authors": [
+    "S. Tucker Taft"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "ada2022",
+    "parallel",
+    "openmp"
+  ],
+  "website": "https://github.com/parasail-lang/parasail/tree/main/lwt",
+  "repository": {
+    "url": "https://github.com/parasail-lang/parasail",
+    "host": "github",
+    "commit": "fedb90bac6225cebfd849d45f2937f66f423649e",
+    "subdir": "lwt/"
+  },
+  "dependencies": [
+    {
+      "crate": "case(os)",
+      "version": "{'windows': {'libgomp': '*'}}"
+    }
+  ],
+  "units": [
+    {
+      "name": "LWT",
+      "id": "41502a2a4240e1eb",
+      "file": "lwt.json"
+    },
+    {
+      "name": "LWT.Aspects",
+      "id": "f3daaa19f26f6f1a",
+      "file": "lwt-aspects.json"
+    },
+    {
+      "name": "LWT.Generic_Atomic_Max_Min",
+      "id": "ef521ef0f9ae4158",
+      "file": "lwt-generic_atomic_max_min.json"
+    },
+    {
+      "name": "LWT.Generic_Parallel_Work_Lists",
+      "id": "96d18c999ff440a1",
+      "file": "lwt-generic_parallel_work_lists.json"
+    },
+    {
+      "name": "LWT.Generic_Synchronized_Deques",
+      "id": "53a33278295cd9f5",
+      "file": "lwt-generic_synchronized_deques.json"
+    },
+    {
+      "name": "LWT.Hashed_Map_Par_Iterators",
+      "id": "46a0aa08c35324c2",
+      "file": "lwt-hashed_map_par_iterators.json"
+    },
+    {
+      "name": "LWT.OpenMP",
+      "id": "2116312817c85b4a",
+      "file": "lwt-openmp.json"
+    },
+    {
+      "name": "LWT.Parallelism",
+      "id": "8f2593cdd761f86a",
+      "file": "lwt-parallelism.json"
+    },
+    {
+      "name": "LWT.Parallelism.Parallel_Iterator_Interfaces",
+      "id": "d4bcca3bae56ec3e",
+      "file": "lwt-parallelism-parallel_iterator_interfaces.json"
+    },
+    {
+      "name": "LWT.Scheduler",
+      "id": "8c52db5c35311667",
+      "file": "lwt-scheduler.json"
+    },
+    {
+      "name": "LWT.Scheduler.LWT_Groups",
+      "id": "64bb6c1e618c78c6",
+      "file": "lwt-scheduler-lwt_groups.json"
+    },
+    {
+      "name": "LWT.Scheduler.OpenMP",
+      "id": "d6ca0c6968420ff1",
+      "file": "lwt-scheduler-openmp.json"
+    },
+    {
+      "name": "LWT.Scheduler.Range_Loop",
+      "id": "2267f35ea3c04864",
+      "file": "lwt-scheduler-range_loop.json"
+    },
+    {
+      "name": "LWT.Scheduler.Work_Stealing",
+      "id": "2fcbc62d008ab769",
+      "file": "lwt-scheduler-work_stealing.json"
+    },
+    {
+      "name": "LWT.Statistics",
+      "id": "b08ddecfc995e699",
+      "file": "lwt-statistics.json"
+    },
+    {
+      "name": "LWT.Storage",
+      "id": "b91ef23513c6daa2",
+      "file": "lwt-storage.json"
+    },
+    {
+      "name": "LWT.Vector_Par_Iterators",
+      "id": "0ef2a7df342f147a",
+      "file": "lwt-vector_par_iterators.json"
+    },
+    {
+      "name": "LWT.Work_Stealing",
+      "id": "475a9f5bbcf3c397",
+      "file": "lwt-work_stealing.json"
+    },
+    {
+      "name": "Lwt_Config",
+      "id": "5bf0d4a61b60667c",
+      "file": "lwt_config.json"
+    }
+  ]
+}

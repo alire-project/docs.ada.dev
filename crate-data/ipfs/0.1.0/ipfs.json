@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"ipfs","version":"0.1.0","id":"b63927b164266bef","name":"IPFS","qualified_name":"IPFS","kind":"ada_package","location":{"file":"src/ipfs.ads","line":3,"column":9},"code":"package IPFS","documentation":{"description":"Root package for IPFS implementation"}}

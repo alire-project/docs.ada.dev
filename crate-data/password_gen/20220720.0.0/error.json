@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "password_gen",
+  "version": "20220720.0.0",
+  "failed_at": "2026-03-05T03:01:05Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

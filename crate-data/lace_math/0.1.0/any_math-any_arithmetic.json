@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lace_math","version":"0.1.0","id":"d8fa3a8c9e84ea82","name":"any_Math.any_Arithmetic","qualified_name":"any_Math.any_Arithmetic","kind":"ada_package","location":{"file":"../source/generic/pure/arithmetic/any_math-any_arithmetic.ads","line":2,"column":9},"code":"generic\npackage any_Math.any_Arithmetic"}

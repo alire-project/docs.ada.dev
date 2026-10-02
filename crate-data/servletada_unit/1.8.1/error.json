@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "servletada_unit",
+  "version": "1.8.1",
+  "failed_at": "2026-03-06T02:57:45Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

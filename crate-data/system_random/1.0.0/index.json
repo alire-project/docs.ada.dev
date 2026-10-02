@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "system_random",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:59:36Z",
+  "description": "Minimal library to retrieve random data from system sources",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "system",
+    "cryptography",
+    "random",
+    "security"
+  ],
+  "website": "https://github.com/AntonMeep/system_random",
+  "repository": {
+    "url": "https://github.com/AntonMeep/system_random",
+    "host": "github",
+    "commit": "3db7f76e04f09ade5811abd8c09686750bc733ae"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "System_Random",
+      "id": "73bb454178afbefd",
+      "file": "system_random.json"
+    }
+  ]
+}

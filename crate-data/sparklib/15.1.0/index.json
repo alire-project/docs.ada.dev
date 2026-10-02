@@ -1,0 +1,543 @@
+{
+  "schema_version": "1",
+  "crate": "sparklib",
+  "version": "15.1.0",
+  "documented_at": "2026-03-06T02:58:32Z",
+  "description": "Companion libraries for SPARK programming",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [],
+  "website": "https://github.com/AdaCore/SPARKlib",
+  "repository": {
+    "url": "https://github.com/AdaCore/SPARKlib",
+    "host": "github",
+    "commit": "dc7cd02b08ada6c022d2461092999c1f9b12d879"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SPARK",
+      "id": "92f473809e5979a7",
+      "file": "spark.json"
+    },
+    {
+      "name": "SPARK.Big_Intervals",
+      "id": "d30d2a29871e8aa9",
+      "file": "spark-big_intervals.json"
+    },
+    {
+      "name": "SPARK.C",
+      "id": "b2e4eafb58635bc8",
+      "file": "spark-c.json"
+    },
+    {
+      "name": "SPARK.C.Constant_Strings",
+      "id": "ee63ffb45e49af0d",
+      "file": "spark-c-constant_strings.json"
+    },
+    {
+      "name": "SPARK.C.Strings",
+      "id": "b83cdbddce13e371",
+      "file": "spark-c-strings.json"
+    },
+    {
+      "name": "SPARK.Containers",
+      "id": "26810a667c917a02",
+      "file": "spark-containers.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal",
+      "id": "c221af131fad0eeb",
+      "file": "spark-containers-formal.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Doubly_Linked_Lists",
+      "id": "09648786371e9d31",
+      "file": "spark-containers-formal-doubly_linked_lists.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Doubly_Linked_Lists.Formal_Model",
+      "id": "c0b44479238c80a3",
+      "file": "spark-containers-formal-doubly_linked_lists-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Doubly_Linked_Lists.Generic_Sorting",
+      "id": "dff6a4769c66513f",
+      "file": "spark-containers-formal-doubly_linked_lists-generic_sorting.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Doubly_Linked_Lists.Generic_Sorting.Formal_Model",
+      "id": "26fce5acd81c4ecb",
+      "file": "spark-containers-formal-doubly_linked_lists-generic_sorting-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Hashed_Maps",
+      "id": "fa58aab6858941f8",
+      "file": "spark-containers-formal-hashed_maps.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Hashed_Maps.Formal_Model",
+      "id": "7f4cb4c0ad60ebf6",
+      "file": "spark-containers-formal-hashed_maps-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Hashed_Sets",
+      "id": "2e8e9d671ca9e33d",
+      "file": "spark-containers-formal-hashed_sets.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Hashed_Sets.Formal_Model",
+      "id": "1e22287839033592",
+      "file": "spark-containers-formal-hashed_sets-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Hashed_Sets.Generic_Keys",
+      "id": "2de13fb471acd781",
+      "file": "spark-containers-formal-hashed_sets-generic_keys.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Hashed_Sets.Generic_Keys.Formal_Model",
+      "id": "da9bf69b12b8f078",
+      "file": "spark-containers-formal-hashed_sets-generic_keys-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Ordered_Maps",
+      "id": "9c7a10287ea7bb5b",
+      "file": "spark-containers-formal-ordered_maps.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Ordered_Maps.Formal_Model",
+      "id": "a2b5d73a7b6f4077",
+      "file": "spark-containers-formal-ordered_maps-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Ordered_Sets",
+      "id": "4bed7eb3ea1c6a0b",
+      "file": "spark-containers-formal-ordered_sets.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Ordered_Sets.Formal_Model",
+      "id": "6cf80b56294f90f8",
+      "file": "spark-containers-formal-ordered_sets-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Ordered_Sets.Generic_Keys",
+      "id": "2ce06f46303fb766",
+      "file": "spark-containers-formal-ordered_sets-generic_keys.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Ordered_Sets.Generic_Keys.Formal_Model",
+      "id": "ddabbf1bb0db7c19",
+      "file": "spark-containers-formal-ordered_sets-generic_keys-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Doubly_Linked_Lists",
+      "id": "9fa92db7565b8099",
+      "file": "spark-containers-formal-unbounded_doubly_linked_lists.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Doubly_Linked_Lists.Formal_Model",
+      "id": "f7ae9b904cde3bd4",
+      "file": "spark-containers-formal-unbounded_doubly_linked_lists-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Doubly_Linked_Lists.Generic_Sorting",
+      "id": "fead1a84c9f26ff8",
+      "file": "spark-containers-formal-unbounded_doubly_linked_lists-generic_sorting.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Doubly_Linked_Lists.Generic_Sorting.Formal_Model",
+      "id": "50483d1b33fe974c",
+      "file": "spark-containers-formal-unbounded_doubly_linked_lists-generic_sorting-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Hashed_Maps",
+      "id": "f415a48317f1c3df",
+      "file": "spark-containers-formal-unbounded_hashed_maps.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Hashed_Maps.Formal_Model",
+      "id": "d766d5e98bb5dcd6",
+      "file": "spark-containers-formal-unbounded_hashed_maps-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Hashed_Sets",
+      "id": "9668bddc32e233a4",
+      "file": "spark-containers-formal-unbounded_hashed_sets.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Hashed_Sets.Formal_Model",
+      "id": "55eaf7450221d72a",
+      "file": "spark-containers-formal-unbounded_hashed_sets-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Hashed_Sets.Generic_Keys",
+      "id": "d331ed873e3557bd",
+      "file": "spark-containers-formal-unbounded_hashed_sets-generic_keys.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Hashed_Sets.Generic_Keys.Formal_Model",
+      "id": "2351d6f39fc98473",
+      "file": "spark-containers-formal-unbounded_hashed_sets-generic_keys-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Ordered_Maps",
+      "id": "2152b4478b06a056",
+      "file": "spark-containers-formal-unbounded_ordered_maps.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Ordered_Maps.Formal_Model",
+      "id": "06c336d2510e55e8",
+      "file": "spark-containers-formal-unbounded_ordered_maps-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Ordered_Sets",
+      "id": "42d98f0ee68f06d9",
+      "file": "spark-containers-formal-unbounded_ordered_sets.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Ordered_Sets.Formal_Model",
+      "id": "b29ad69a3ea2fe00",
+      "file": "spark-containers-formal-unbounded_ordered_sets-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Ordered_Sets.Generic_Keys",
+      "id": "9a469de118b0068e",
+      "file": "spark-containers-formal-unbounded_ordered_sets-generic_keys.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Ordered_Sets.Generic_Keys.Formal_Model",
+      "id": "6f4ee472b6a3d6ce",
+      "file": "spark-containers-formal-unbounded_ordered_sets-generic_keys-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Vectors",
+      "id": "8767d0218ae6c158",
+      "file": "spark-containers-formal-unbounded_vectors.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Vectors.Formal_Model",
+      "id": "5e4ac8d6edf01080",
+      "file": "spark-containers-formal-unbounded_vectors-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Vectors.Generic_Sorting",
+      "id": "96397fd420623ba9",
+      "file": "spark-containers-formal-unbounded_vectors-generic_sorting.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Unbounded_Vectors.Generic_Sorting.Formal_Model",
+      "id": "a6895e1a0f36182f",
+      "file": "spark-containers-formal-unbounded_vectors-generic_sorting-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Vectors",
+      "id": "37f935f3fb48dee0",
+      "file": "spark-containers-formal-vectors.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Vectors.Formal_Model",
+      "id": "3ff75710e4a11c33",
+      "file": "spark-containers-formal-vectors-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Vectors.Generic_Sorting",
+      "id": "bc939d217e9fd0ce",
+      "file": "spark-containers-formal-vectors-generic_sorting.json"
+    },
+    {
+      "name": "SPARK.Containers.Formal.Vectors.Generic_Sorting.Formal_Model",
+      "id": "c5e5d4e57da8a0b1",
+      "file": "spark-containers-formal-vectors-generic_sorting-formal_model.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional",
+      "id": "98c4eea7a5b87683",
+      "file": "spark-containers-functional.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Infinite_Sequences",
+      "id": "42768d2565d5457d",
+      "file": "spark-containers-functional-infinite_sequences.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Infinite_Sequences.Higher_Order",
+      "id": "94960024ca77677c",
+      "file": "spark-containers-functional-infinite_sequences-higher_order.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Maps",
+      "id": "14cd9a4e9b07a477",
+      "file": "spark-containers-functional-maps.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Maps.Higher_Order",
+      "id": "2f8ba697f11dcdab",
+      "file": "spark-containers-functional-maps-higher_order.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Maps.Renamings",
+      "id": "cfde6c3d1637a1d8",
+      "file": "spark-containers-functional-maps-renamings.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Multisets",
+      "id": "d1daf013b58f202b",
+      "file": "spark-containers-functional-multisets.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Sets",
+      "id": "d65bf3a8cb6a1e61",
+      "file": "spark-containers-functional-sets.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Sets.Higher_Order",
+      "id": "51987ac15139243c",
+      "file": "spark-containers-functional-sets-higher_order.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Sets.Renamings",
+      "id": "4675fc9abd4e7b77",
+      "file": "spark-containers-functional-sets-renamings.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Vectors",
+      "id": "8e4cea5b12899f50",
+      "file": "spark-containers-functional-vectors.json"
+    },
+    {
+      "name": "SPARK.Containers.Functional.Vectors.Higher_Order",
+      "id": "b416b7cc83586ff7",
+      "file": "spark-containers-functional-vectors-higher_order.json"
+    },
+    {
+      "name": "SPARK.Containers.Hash",
+      "id": "45bfe27b6a468dac",
+      "file": "spark-containers-hash.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks",
+      "id": "382abdd8c54a205e",
+      "file": "spark-containers-parameter_checks.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Equivalence_Checks",
+      "id": "131e3e03969a562c",
+      "file": "spark-containers-parameter_checks-equivalence_checks.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Equivalence_Checks_Eq",
+      "id": "34475b8e292235b7",
+      "file": "spark-containers-parameter_checks-equivalence_checks_eq.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Hash_Compatibility_Checks",
+      "id": "c8888bd10f8aa04f",
+      "file": "spark-containers-parameter_checks-hash_compatibility_checks.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Hash_Equivalence_Checks",
+      "id": "16449d9d33dc7dda",
+      "file": "spark-containers-parameter_checks-hash_equivalence_checks.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Lift_Eq_Reflexive",
+      "id": "a1742951418759fb",
+      "file": "spark-containers-parameter_checks-lift_eq_reflexive.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Op_Compatibility_Checks",
+      "id": "152cfd59be70394b",
+      "file": "spark-containers-parameter_checks-op_compatibility_checks.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Strict_Weak_Order_Checks",
+      "id": "c0bf0931054be2f5",
+      "file": "spark-containers-parameter_checks-strict_weak_order_checks.json"
+    },
+    {
+      "name": "SPARK.Containers.Parameter_Checks.Strict_Weak_Order_Checks_Eq",
+      "id": "400344ff50fb67ec",
+      "file": "spark-containers-parameter_checks-strict_weak_order_checks_eq.json"
+    },
+    {
+      "name": "SPARK.Conversions",
+      "id": "967cc376b5542d1b",
+      "file": "spark-conversions.json"
+    },
+    {
+      "name": "SPARK.Cut_Operations",
+      "id": "ba4e8d806ed06b08",
+      "file": "spark-cut_operations.json"
+    },
+    {
+      "name": "SPARK.Higher_Order",
+      "id": "906fcf9547be2532",
+      "file": "spark-higher_order.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold",
+      "id": "54cb21ac5659453a",
+      "file": "spark-higher_order-fold.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Count",
+      "id": "8467d962ecb8f13d",
+      "file": "spark-higher_order-fold-count.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Count_2",
+      "id": "a98fe69c6efe9e89",
+      "file": "spark-higher_order-fold-count_2.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_2",
+      "id": "756db74aec737fe8",
+      "file": "spark-higher_order-fold-fold_2.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_2_Acc",
+      "id": "a17abd34dcb60bcd",
+      "file": "spark-higher_order-fold-fold_2_acc.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_Left",
+      "id": "e2ea6d2dcf6974af",
+      "file": "spark-higher_order-fold-fold_left.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_Left_Acc",
+      "id": "8bfb411a148070c9",
+      "file": "spark-higher_order-fold-fold_left_acc.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_Left_I",
+      "id": "0a4cdad1e616cbca",
+      "file": "spark-higher_order-fold-fold_left_i.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_Left_I_Acc",
+      "id": "abd73d2698aceac4",
+      "file": "spark-higher_order-fold-fold_left_i_acc.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_Right",
+      "id": "2cb62c4d9990fbf2",
+      "file": "spark-higher_order-fold-fold_right.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Fold_Right_Acc",
+      "id": "f76a8190b5afe823",
+      "file": "spark-higher_order-fold-fold_right_acc.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Sum",
+      "id": "2bcf4f6116dde1d1",
+      "file": "spark-higher_order-fold-sum.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Sum.Big_Integer_Sum",
+      "id": "4b79f5a4de07ccdf",
+      "file": "spark-higher_order-fold-sum-big_integer_sum.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Sum_2",
+      "id": "b8866144fcc52405",
+      "file": "spark-higher_order-fold-sum_2.json"
+    },
+    {
+      "name": "SPARK.Higher_Order.Fold.Sum_2.Big_Integer_Sum",
+      "id": "77c064ae0771598d",
+      "file": "spark-higher_order-fold-sum_2-big_integer_sum.json"
+    },
+    {
+      "name": "SPARK.Lemmas",
+      "id": "b4534687a505350c",
+      "file": "spark-lemmas.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Arithmetic",
+      "id": "5d504d967dcdd781",
+      "file": "spark-lemmas-arithmetic.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Constrained_Array",
+      "id": "2a0763399f65b9f6",
+      "file": "spark-lemmas-constrained_array.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Fixed_Point_Arithmetic",
+      "id": "c31be71ab89ec3f6",
+      "file": "spark-lemmas-fixed_point_arithmetic.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Float_Base",
+      "id": "f10a1f2097381a5a",
+      "file": "spark-lemmas-float_base.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Floating_Point_Arithmetic",
+      "id": "9d02e4417271c8a3",
+      "file": "spark-lemmas-floating_point_arithmetic.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Mod_Arithmetic",
+      "id": "f4300b8be6f512f7",
+      "file": "spark-lemmas-mod_arithmetic.json"
+    },
+    {
+      "name": "SPARK.Lemmas.Unconstrained_Array",
+      "id": "a5dc180ae7fd97ec",
+      "file": "spark-lemmas-unconstrained_array.json"
+    },
+    {
+      "name": "SPARK.Pointers",
+      "id": "d279b3e1ef3ae908",
+      "file": "spark-pointers.json"
+    },
+    {
+      "name": "SPARK.Pointers.Abstract_Maps",
+      "id": "b6760d72cc8385de",
+      "file": "spark-pointers-abstract_maps.json"
+    },
+    {
+      "name": "SPARK.Pointers.Abstract_Sets",
+      "id": "0fcc6f27a2889c62",
+      "file": "spark-pointers-abstract_sets.json"
+    },
+    {
+      "name": "SPARK.Pointers.Pointers_With_Aliasing",
+      "id": "7a08bef3d6ae62c6",
+      "file": "spark-pointers-pointers_with_aliasing.json"
+    },
+    {
+      "name": "SPARK.Pointers.Pointers_With_Aliasing.Memory_Model",
+      "id": "192c49be7ab2b690",
+      "file": "spark-pointers-pointers_with_aliasing-memory_model.json"
+    },
+    {
+      "name": "SPARK.Pointers.Pointers_With_Aliasing_Separate_Memory",
+      "id": "e6cf48d3215c67eb",
+      "file": "spark-pointers-pointers_with_aliasing_separate_memory.json"
+    },
+    {
+      "name": "SPARK.Pointers.Pointers_With_Aliasing_Separate_Memory.Memory_Model",
+      "id": "f9ae7f5235c7ba72",
+      "file": "spark-pointers-pointers_with_aliasing_separate_memory-memory_model.json"
+    },
+    {
+      "name": "SPARK.Tests",
+      "id": "140cacfa5ffcf3e2",
+      "file": "spark-tests.json"
+    },
+    {
+      "name": "SPARK.Tests.Array_Lemmas",
+      "id": "1e590dca917d144c",
+      "file": "spark-tests-array_lemmas.json"
+    }
+  ]
+}

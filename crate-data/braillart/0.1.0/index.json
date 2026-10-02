@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "braillart",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:53:39Z",
+  "description": "Use Braille patterns as a dot-matrix printer",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-or-later"
+  ],
+  "tags": [
+    "braille",
+    "art",
+    "ascii",
+    "unicode"
+  ],
+  "website": "https://github.com/mosteo/braillart",
+  "repository": {
+    "url": "https://github.com/mosteo/braillart",
+    "host": "github",
+    "commit": "8b93b1d8652062429b173cb1a6509112d1d41f5b"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Braillart",
+      "id": "4ee922e25afc1a84",
+      "file": "braillart.json"
+    },
+    {
+      "name": "Braillart_Config",
+      "id": "8769dec2933075ac",
+      "file": "braillart_config.json"
+    }
+  ]
+}

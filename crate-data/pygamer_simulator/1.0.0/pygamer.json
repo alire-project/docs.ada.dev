@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pygamer_simulator","version":"1.0.0","id":"f982bb6ad5c4cb03","name":"PyGamer","qualified_name":"PyGamer","kind":"ada_package","location":{"file":"src/pygamer.ads","line":6,"column":9},"code":"package PyGamer"}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1",
+  "crate": "lithophane",
+  "version": "1.0.0",
+  "documented_at": "2026-09-22T02:20:57Z",
+  "description": "Create lithophane with Ada",
+  "long_description": "Create [lithophane](https://en.wikipedia.org/wiki/Lithophane) of your favourite picture with Ada.\n\n**Build**\n```\nalr build\n```\n\n**Usage**\n```\nbin/lithophane [options] <input_file>\n```\n\n`<input_file>` is the picture to convert (any format supported by\n[GID](https://gen-img-dec.sourceforge.io): PNG, JPEG, BMP, GIF, TGA, ...).\n\n**Options**\n```\n-h --help\n-v --version\n-b --save-binary          (default)\n-a --save-ascii\n-m --save-3mf\n-p --save-pgm\n-o<name> --output-name=<name>\n-H<height> --height=<height>\n-B<border> --border=<border>\n--dimensions=<W>x<H>x<D>\n-f<filter> --filter <filter> [<n>]\n-c<file> --config=<file>\n```\n\n| Option | Description |\n| --- | --- |\n| `-h`, `--help` | print usage and exit |\n| `-v`, `--version` | print the program version and exit |\n| `-b`, `--save-binary` | write the lithophane as a binary STL file: `<output-name>.bin.stl` (this is the default output if no `-a`/`-b`/`-p` flag is given) |\n| `-a`, `--save-ascii` | write the lithophane as an ASCII STL file: `<output-name>.ascii.stl` |\n| `-m`, `--save-3mf` | write the lithophane as a 3MF file: `<output-name>.3mf` (a ZIP/OPC package with a welded, watertight mesh as `3D/3dmodel.model`) |\n| `-p`, `--save-pgm` | also dump the grayscale-converted image as a PGM file: `<output-name>.pgm` |\n| `-o<name>`, `--output-name=<name>` | base name used for every output file above (default: `test`) |\n| `-H<height>`, `--height=<height>` | target height of the lithophane |\n| `-B<border>`, `--border=<border>` | width, in pixels, of the border added around the image (default: `20`) |\n| `--dimensions=<W>x<H>x<D>` | target physical size **of the 3MF output**, in millimetres (3MF is unit-aware, STL is not). Each axis with a non-zero value is scaled to it exactly; an axis left empty or `0` follows the first constrained axis so the model keeps its proportions. `X`/`Y` are centred on the origin. Example: `--dimensions=100x100x1.5`, or `--dimensions=120x0x0` to set the width and let height and depth scale with it. |\n| `-f<filter>`, `--filter <filter> [<n>]` | image filter to apply before conversion; `<filter>` is one of `bartlett`, `gauss`, `square`, `sharpen`, `threshold`. The optional number `<n>` right after the filter name is the kernel size (an odd number, default `3`) for `bartlett`/`gauss`/`square`/`sharpen`, or the cut value `0..255` (default `128`) for `threshold`. |\n| `-c<file>`, `--config=<file>` | read options from a config file instead of (or in addition to) the command line; when given, it overrides any previous option |\n\nYou can combine `-a`, `-b`, `-m` and `-p`: each one adds its own output file,\nthey are not mutually exclusive.\n\nThe `<n>` argument is positional and optional, so both of these work:\n```\nbin/lithophane --filter gauss 5 doc/img/ada.logo.png\nbin/lithophane --filter threshold 200 doc/img/ada.logo.png\nbin/lithophane --filter sharpen doc/img/ada.logo.png\n```\n\n**Config file**\n\n`-c`/`--config` points to a TOML file such as [config.toml](doc/example/config.toml):\n```toml\ninput-name = \"foo.png\"\noutput-name = \"test\"\nfilter = \"threshold\"\nfilter_size = 3\nfilter_threshold = 128\nborder_size = 20\nsave-ascii = false\nsave-binary = true\nsave-3mf = false\nsave-pgm = true\nheight = 10\ndimensions = { width = 100.0, height = 100.0, depth = 1.5 }\n```\n\nEvery key is optional; a missing key keeps its default. `filter_size` must be a\npositive odd integer, `filter_threshold` must be in `0..255`, and `border_size`\nmust be a non-negative integer, otherwise the key is ignored. `dimensions` is an\ninline table (`width` / `height` / `depth`, in millimetres, applied to the 3MF\noutput); any sub-key may be omitted or set to `0` to leave that axis\nproportional. The config file is read at the point where `-c`/`--config`\nappears on the command line, so options placed *after* it still take effect.\n\n> [!NOTE]\n> `-f`/`--filter` and `-c`/`--config` are wired up: the selected filter (and its\n> size / threshold) is applied to the grayscale image before the STL is\n> generated, and the config file overrides the matching settings.\n> `-B`/`--border` is wired up too: it sets the white margin added around the\n> image before conversion. When no filter is selected, a threshold filter at mid-grey\n> (`128`) is applied by default.\n",
+  "authors": [
+    "Simon Beàn"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "3dprint",
+    "lithophane",
+    "lithography",
+    "stl",
+    "3mf"
+  ],
+  "website": "https://github.com/smionean/lithophane_ada",
+  "repository": {
+    "url": "https://github.com/smionean/lithophane_ada",
+    "host": "github",
+    "commit": "01e28ce1f09e3bbec6b73a8d76f02507e5703f9a"
+  },
+  "dependencies": [
+    {
+      "crate": "gid",
+      "version": "^14.0.0"
+    },
+    {
+      "crate": "getopt",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "ada_toml",
+      "version": "~0.5.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Lithophane",
+      "id": "4371f85215fbe9d3",
+      "file": "lithophane.json"
+    },
+    {
+      "name": "Lithophane.File3mf",
+      "id": "c05822dae44bf6f2",
+      "file": "lithophane-file3mf.json"
+    },
+    {
+      "name": "Lithophane.Filters",
+      "id": "5241c759e444be3d",
+      "file": "lithophane-filters.json"
+    },
+    {
+      "name": "Lithophane.Image_Utilities",
+      "id": "c0610c977fb38fd7",
+      "file": "lithophane-image_utilities.json"
+    },
+    {
+      "name": "Lithophane.STL",
+      "id": "c7b94f86a1f19e8e",
+      "file": "lithophane-stl.json"
+    },
+    {
+      "name": "Lithophane_Config",
+      "id": "23dfb2d37283f70b",
+      "file": "lithophane_config.json"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"bb9015f2e4d7b670","name":"PragmARC.Task_Communication","qualified_name":"PragmARC.Task_Communication","kind":"ada_package","location":{"file":"src/pragmarc-task_communication.ads","line":14,"column":9},"code":"package PragmARC.Task_Communication","documentation":{"description":"Empty"}}

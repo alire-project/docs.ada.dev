@@ -1,0 +1,71 @@
+{
+  "schema_version": "1",
+  "crate": "j2ada",
+  "version": "1.4.2",
+  "documented_at": "2026-03-04T16:51:36Z",
+  "description": "Almost Java to Ada translator",
+  "authors": [
+    "Pascal Pignard"
+  ],
+  "licenses": [
+    "CECILL-2.1"
+  ],
+  "tags": [
+    "java",
+    "translator"
+  ],
+  "website": "https://github.com/Blady-Com/j2ada",
+  "repository": {
+    "url": "https://github.com/Blady-Com/j2ada",
+    "host": "github",
+    "commit": "79a4663450089d4dc2acdbb4c656624b6f43269a"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "ArbMgr",
+      "id": "2ed6706f5a938e93",
+      "file": "arbmgr.json"
+    },
+    {
+      "name": "BasicDef",
+      "id": "6fdb6b880b7e001e",
+      "file": "basicdef.json"
+    },
+    {
+      "name": "FichSrc",
+      "id": "a872aa97409d74be",
+      "file": "fichsrc.json"
+    },
+    {
+      "name": "ImportMgr",
+      "id": "46e1f018cabc3da7",
+      "file": "importmgr.json"
+    },
+    {
+      "name": "InSrc",
+      "id": "b52cf24a69008846",
+      "file": "insrc.json"
+    },
+    {
+      "name": "javaseq",
+      "id": "b5f91d84d32506df",
+      "file": "javaseq.json"
+    },
+    {
+      "name": "ObjPar",
+      "id": "6445a2c0c493bdea",
+      "file": "objpar.json"
+    },
+    {
+      "name": "ObjSrc",
+      "id": "4bdeff2bee7b0e4c",
+      "file": "objsrc.json"
+    },
+    {
+      "name": "OutSrc",
+      "id": "21bf6de32c302058",
+      "file": "outsrc.json"
+    }
+  ]
+}

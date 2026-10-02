@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"aaa","version":"0.3.0","id":"ecd3202b5a183eda","name":"AAA.Traits","qualified_name":"AAA.Traits","kind":"ada_package","location":{"file":"src/aaa-traits.ads","line":1,"column":9},"code":"package AAA.Traits"}
