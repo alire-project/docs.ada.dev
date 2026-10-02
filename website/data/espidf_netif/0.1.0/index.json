@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_netif",
+  "version": "0.1.0",
+  "documented_at": "2026-10-02T02:26:57Z",
+  "description": "Ada/ESP-IDF: network interface and sockets bindings",
+  "long_description": "Ada bindings for the ESP-IDF network interface abstraction (`esp_netif`) and the lwIP sockets API.\n\nCovers:\n- initialization of the TCP/IP stack;\n- query of interface IP information;\n- configuration of DHCP server options (including captive portal URI);\n- BSD sockets (`socket`, `bind`, `sendto`, `recvfrom`) with typed address families,\n  socket types and protocols.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "netif"
+  ],
+  "website": "https://github.com/godunko/espidf_netif",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_netif",
+    "host": "github",
+    "commit": "29077b6be0350c407c738a9f4917302f4e86e597"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf_event",
+      "version": "^0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.NETIF",
+      "id": "0c61f87397393cfd",
+      "file": "espidf-netif.json"
+    },
+    {
+      "name": "ESPIDF.Sockets",
+      "id": "1f044612ae555632",
+      "file": "espidf-sockets.json"
+    }
+  ]
+}
