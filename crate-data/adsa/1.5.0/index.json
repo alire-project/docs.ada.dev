@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "crate": "adsa",
+  "version": "1.5.0",
+  "documented_at": "2026-08-07T03:12:00Z",
+  "description": "Ada Annex E (DSA) runtime + gnatdist replacement, backed by ZeroMQ",
+  "long_description": "aDSA is a Partition Communication Subsystem (PCS) for Ada's Distributed\nSystems Annex (Annex E), replacing the discontinued PolyORB/GLADE runtime.\n`alr build` produces two ordinary tools:\n\n  * `pcs_gnatdist` -- the gnatdist replacement: builds a distributed\n    application from its `.cfg`, auto-assembling the GARLIC runtime (a\n    `--RTS` overlay of the toolchain's own runtime) on first use and\n    re-assembling it when the toolchain changes;\n  * `pcs_supervisor` -- launches and restarts a built deployment per its\n    `.manifest`.\n\nSystem prerequisites beyond the toolchain: libzmq >= 4.x and zlib\n(`pacman -S zeromq`, `apt install libzmq3-dev`, `pkg install libzmq4`;\nWindows setup is in the README's Platforms section).\n\nStart with docs/users-guide.md; `examples/` holds runnable demos.\n",
+  "authors": [],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "distributed",
+    "dsa",
+    "annex-e",
+    "rpc",
+    "racw",
+    "gnatdist",
+    "zeromq"
+  ],
+  "website": "https://codeberg.org/charlie5/aDSA",
+  "repository": {
+    "url": "https://codeberg.org/charlie5/aDSA",
+    "host": "codeberg"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "cfg_Builder",
+      "id": "2d1669b63637f035",
+      "file": "cfg_builder.json"
+    },
+    {
+      "name": "cfg_Model",
+      "id": "68090de3c595ef95",
+      "file": "cfg_model.json"
+    },
+    {
+      "name": "cfg_Parser",
+      "id": "99a7bf2c3b59459a",
+      "file": "cfg_parser.json"
+    },
+    {
+      "name": "RCI_Check",
+      "id": "1b0e7d8f2c6f7dcf",
+      "file": "rci_check.json"
+    }
+  ]
+}

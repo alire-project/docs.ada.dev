@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"noise_nugget_sdk","version":"2.1.0","id":"532911fefad23176","name":"Noise_Nugget_SDK.Screen","qualified_name":"Noise_Nugget_SDK.Screen","kind":"ada_package","location":{"file":"src/noise_nugget_sdk-screen.ads","line":1,"column":9},"code":"package Noise_Nugget_SDK.Screen"}

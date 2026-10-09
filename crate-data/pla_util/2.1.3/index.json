@@ -1,0 +1,95 @@
+{
+  "schema_version": "1",
+  "crate": "pla_util",
+  "version": "2.1.3",
+  "documented_at": "2026-03-05T03:01:24Z",
+  "description": "A power line adapter utility",
+  "authors": [
+    "John Serock"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "powerline"
+  ],
+  "website": "https://github.com/serock/pla-util",
+  "repository": {
+    "url": "https://github.com/serock/pla-util",
+    "host": "github",
+    "commit": "f5b3a986fd37f098dbc5660b5f9846e181d982db"
+  },
+  "dependencies": [
+    {
+      "crate": "libpcap",
+      "version": "^1.8.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Commands",
+      "id": "10f5f77eef9a6b43",
+      "file": "commands.json"
+    },
+    {
+      "name": "Config",
+      "id": "b79606fb3afea5bd",
+      "file": "config.json"
+    },
+    {
+      "name": "Console",
+      "id": "93d8874c8c86f0fc",
+      "file": "console.json"
+    },
+    {
+      "name": "MAC_Addresses",
+      "id": "691910e74d0bd583",
+      "file": "mac_addresses.json"
+    },
+    {
+      "name": "Messages",
+      "id": "f5cccfb737512bed",
+      "file": "messages.json"
+    },
+    {
+      "name": "Messages.Constructors",
+      "id": "ae90ce1651adc107",
+      "file": "messages-constructors.json"
+    },
+    {
+      "name": "Octets",
+      "id": "eca54ebd28da6204",
+      "file": "octets.json"
+    },
+    {
+      "name": "Packets",
+      "id": "6e4cadce54be0b2c",
+      "file": "packets.json"
+    },
+    {
+      "name": "Packets.Network_Devices",
+      "id": "fa7c53c656d8c230",
+      "file": "packets-network_devices.json"
+    },
+    {
+      "name": "Pla_Util_Config",
+      "id": "a5dc4b46c2f179a8",
+      "file": "pla_util_config.json"
+    },
+    {
+      "name": "Power_Line_Adapters",
+      "id": "65388dca8d05745e",
+      "file": "power_line_adapters.json"
+    },
+    {
+      "name": "Power_Line_Adapters.Constructors",
+      "id": "9c7d4f65970c59f3",
+      "file": "power_line_adapters-constructors.json"
+    },
+    {
+      "name": "Power_Line_Adapters.Network",
+      "id": "bbba07c76405e70f",
+      "file": "power_line_adapters-network.json"
+    }
+  ]
+}

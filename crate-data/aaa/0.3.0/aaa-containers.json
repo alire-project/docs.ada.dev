@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"aaa","version":"0.3.0","id":"81ae73f6aebeb3ef","name":"AAA.Containers","qualified_name":"AAA.Containers","kind":"ada_package","location":{"file":"src/aaa-containers.ads","line":1,"column":9},"code":"package AAA.Containers"}

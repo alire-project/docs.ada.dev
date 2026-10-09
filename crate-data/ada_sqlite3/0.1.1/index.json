@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "crate": "ada_sqlite3",
+  "version": "0.1.1",
+  "documented_at": "2026-03-03T17:49:02Z",
+  "description": "Sqlite3 bindings for Ada with embedded SQLite engine",
+  "authors": [
+    "Garret Noble"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "sqlite",
+    "database",
+    "sql",
+    "embedded"
+  ],
+  "website": "https://github.com/gtnoble/ada-sqlite3",
+  "repository": {
+    "url": "https://github.com/gtnoble/ada-sqlite3",
+    "host": "github",
+    "commit": "2edbcebd7cd03757fb9e9c1801977283cf384500"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Ada_Sqlite3",
+      "id": "6b03d769dd9df646",
+      "file": "ada_sqlite3.json"
+    },
+    {
+      "name": "Ada_Sqlite3.Blobs",
+      "id": "7bcd8c7807113dc6",
+      "file": "ada_sqlite3-blobs.json"
+    },
+    {
+      "name": "Ada_Sqlite3.Generic_Functions",
+      "id": "44533535288af4a8",
+      "file": "ada_sqlite3-generic_functions.json"
+    },
+    {
+      "name": "Ada_Sqlite3.Low_Level",
+      "id": "43f80538e96d871b",
+      "file": "ada_sqlite3-low_level.json"
+    },
+    {
+      "name": "Ada_Sqlite3_Config",
+      "id": "644751851355cdd9",
+      "file": "ada_sqlite3_config.json"
+    }
+  ]
+}

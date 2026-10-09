@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"rxada","version":"0.1.1","id":"c5f331dd8706de66","name":"Rx.Src","qualified_name":"Rx.Src","kind":"ada_package","location":{"file":"src/priv/rx-src.ads","line":1,"column":9},"code":"package Rx.Src"}

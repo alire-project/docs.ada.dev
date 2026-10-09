@@ -1,0 +1,98 @@
+{
+  "schema_version": "1",
+  "crate": "keystoreada",
+  "version": "1.4.2",
+  "documented_at": "2026-03-04T16:52:06Z",
+  "description": "Ada Keystore",
+  "long_description": "[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-keystore/summary)\n[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-keystore/xunits)\n[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-keystore/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-keystore/summary)\n\n# Overview\n\nAda Keystore is a tool and library to store information in secure wallets\nand protect the stored information by encrypting the content.\nIt is necessary to know one of the wallet password to access its content.\nAda Keystore can be used to safely store passwords, credentials,\nbank accounts and even documents.\n\nWallets are protected by a master key using AES-256 and the wallet\nmaster key is protected by a user password.\nThe wallet defines up to 7 slots that identify\na password key that is able to unlock the master key.  To open a wallet,\nit is necessary to unlock one of these 7 slots by providing the correct\npassword.  Wallet key slots are protected by the user's password\nand the PBKDF2-HMAC-256 algorithm, a random salt, a random counter\nand they are encrypted using AES-256.\n\nValues stored in the wallet are protected by their own encryption keys\nusing AES-256.  A wallet can contain another wallet which is then\nprotected by its own encryption keys and passwords (with 7 independent slots).\nBecause the child wallet has its own master key, it is necessary to known\nthe primary password and the child password to unlock the parent wallet\nfirst and then the child wallet.\n\n## Documents\n\n* [Ada Keystore Guide](https://ada-keystore.readthedocs.io/en/latest/) [PDF](https://github.com/stcarrez/ada-keystore/blob/master/docs/keystore-book.pdf)\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "security",
+    "storage",
+    "nosql"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-keystore",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-keystore",
+    "host": "gitlab",
+    "commit": "849b47b9db6cd8e99dca9a77b846baedd81bb2d0"
+  },
+  "dependencies": [
+    {
+      "crate": "utilada",
+      "version": "^2.8.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Keystore",
+      "id": "284aaf4da604624b",
+      "file": "keystore.json"
+    },
+    {
+      "name": "Keystore.Files",
+      "id": "5eccdff53123b089",
+      "file": "keystore-files.json"
+    },
+    {
+      "name": "Keystore.GPG",
+      "id": "9ea2ae955ad2385d",
+      "file": "keystore-gpg.json"
+    },
+    {
+      "name": "Keystore.Passwords",
+      "id": "9525da9fc711dc77",
+      "file": "keystore-passwords.json"
+    },
+    {
+      "name": "Keystore.Passwords.Cmds",
+      "id": "1ee4edfbc4b95afb",
+      "file": "keystore-passwords-cmds.json"
+    },
+    {
+      "name": "Keystore.Passwords.Files",
+      "id": "a9099f3ef84f7969",
+      "file": "keystore-passwords-files.json"
+    },
+    {
+      "name": "Keystore.Passwords.GPG",
+      "id": "23f34c2a858e1825",
+      "file": "keystore-passwords-gpg.json"
+    },
+    {
+      "name": "Keystore.Passwords.Input",
+      "id": "77a101011958a4f1",
+      "file": "keystore-passwords-input.json"
+    },
+    {
+      "name": "Keystore.Passwords.Keys",
+      "id": "567264c6a4efccf8",
+      "file": "keystore-passwords-keys.json"
+    },
+    {
+      "name": "Keystore.Passwords.Unsafe",
+      "id": "3877e96588beaaf2",
+      "file": "keystore-passwords-unsafe.json"
+    },
+    {
+      "name": "Keystore.Properties",
+      "id": "038c623331fabaf1",
+      "file": "keystore-properties.json"
+    },
+    {
+      "name": "Keystore.Random",
+      "id": "958d27ff2e613b55",
+      "file": "keystore-random.json"
+    },
+    {
+      "name": "Keystore.Tools",
+      "id": "88fd5462c9cc64cd",
+      "file": "keystore-tools.json"
+    }
+  ]
+}

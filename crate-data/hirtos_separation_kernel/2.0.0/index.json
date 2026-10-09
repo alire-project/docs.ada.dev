@@ -1,0 +1,86 @@
+{
+  "schema_version": "1",
+  "crate": "hirtos_separation_kernel",
+  "version": "2.0.0",
+  "documented_at": "2026-03-04T15:17:33Z",
+  "description": "High-Integrity RTOS Separation Kernel",
+  "authors": [
+    "J. German Rivera"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "hypervisor"
+  ],
+  "website": "https://github.com/jgrivera67/HiRTOS",
+  "repository": {
+    "url": "https://github.com/jgrivera67/HiRTOS",
+    "host": "github",
+    "commit": "ebcd8cb20115356aa0d99c97124e47a175e56e8e",
+    "subdir": "hirtos_separation_kernel/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "HiRTOS.Separation_Kernel",
+      "id": "74468058911c5eeb",
+      "file": "hirtos-separation_kernel.json"
+    },
+    {
+      "name": "HiRTOS.Separation_Kernel.Interrupt_Handling",
+      "id": "4018baa95a8e3f03",
+      "file": "hirtos-separation_kernel-interrupt_handling.json"
+    },
+    {
+      "name": "HiRTOS.Separation_Kernel.Partition",
+      "id": "bd477442ac24fb4f",
+      "file": "hirtos-separation_kernel-partition.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Hypervisor",
+      "id": "96623e8b7dab0aea",
+      "file": "hirtos_cpu_arch_interface-hypervisor.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Interrupt_Controller.Hypervisor",
+      "id": "67166319209bb886",
+      "file": "hirtos_cpu_arch_interface-interrupt_controller-hypervisor.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Interrupt_Handling.Hypervisor",
+      "id": "da90ca6ba3702891",
+      "file": "hirtos_cpu_arch_interface-interrupt_handling-hypervisor.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Memory_Protection.Hypervisor",
+      "id": "021148762b95fbd7",
+      "file": "hirtos_cpu_arch_interface-memory_protection-hypervisor.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Partition_Context",
+      "id": "5da7d969330e28a8",
+      "file": "hirtos_cpu_arch_interface-partition_context.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.System_Registers.Hypervisor",
+      "id": "c10be70b722eaa62",
+      "file": "hirtos_cpu_arch_interface-system_registers-hypervisor.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Tick_Timer.Hypervisor",
+      "id": "0978c3c5fef3d6e9",
+      "file": "hirtos_cpu_arch_interface-tick_timer-hypervisor.json"
+    },
+    {
+      "name": "Hirtos_Separation_Kernel_Config",
+      "id": "483e658925f6dd8d",
+      "file": "hirtos_separation_kernel_config.json"
+    },
+    {
+      "name": "HiRTOS_Separation_Kernel_Config_Parameters",
+      "id": "48fabde0a6341d44",
+      "file": "hirtos_separation_kernel_config_parameters.json"
+    }
+  ]
+}

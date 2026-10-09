@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "spawn_glib",
+  "version": "26.0.0",
+  "failed_at": "2026-03-06T02:59:00Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

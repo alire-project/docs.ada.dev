@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"atari_atr_tools","version":"1.5.1","id":"dc22f1d7aad50927","name":"Atr_Tools","qualified_name":"Atr_Tools","kind":"ada_package","location":{"file":"src/atr_tools.ads","line":27,"column":9},"code":"package Atr_Tools","documentation":{"description":"-\n  @summary\n\n  @description\n  Tools to handle ATR files"}}

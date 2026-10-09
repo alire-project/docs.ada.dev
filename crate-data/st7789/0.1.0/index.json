@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "st7789",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:59:07Z",
+  "description": "SPI based driver for the ST7789 TFT display",
+  "authors": [],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "framebuffer",
+    "bitmap",
+    "display",
+    "driver",
+    "drivers",
+    "spi"
+  ],
+  "repository": {
+    "url": "https://github.com/jklmnn/st7789-ada",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "adl_middleware",
+      "version": "~0.2.0"
+    },
+    {
+      "crate": "hal",
+      "version": "~0.3.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "St7789",
+      "id": "f86ad64b05402857",
+      "file": "st7789.json"
+    },
+    {
+      "name": "St7789_Config",
+      "id": "94527deb99aa86e0",
+      "file": "st7789_config.json"
+    }
+  ]
+}

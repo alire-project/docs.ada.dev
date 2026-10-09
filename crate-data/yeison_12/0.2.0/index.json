@@ -1,0 +1,79 @@
+{
+  "schema_version": "1",
+  "crate": "yeison_12",
+  "version": "0.2.0",
+  "documented_at": "2026-03-07T02:52:18Z",
+  "description": "A JSON-like data structure (Ada 2012 version)",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "json",
+    "yaml",
+    "toml",
+    "containers"
+  ],
+  "website": "https://github.com/mosteo/yeison",
+  "repository": {
+    "url": "https://github.com/mosteo/yeison",
+    "host": "github",
+    "commit": "20033cf90a3eb2eff69d9ff9d0820291aed79b57",
+    "subdir": "yeison_12/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Yeison_12",
+      "id": "2b6bc8b039a3fa1b",
+      "file": "yeison_12.json"
+    },
+    {
+      "name": "Yeison_12.Operators",
+      "id": "950208e3fef29ae2",
+      "file": "yeison_12-operators.json"
+    },
+    {
+      "name": "Yeison_12_Config",
+      "id": "0bc9a15821cb18e4",
+      "file": "yeison_12_config.json"
+    },
+    {
+      "name": "Yeison_Generic",
+      "id": "1c85f803efa6aad4",
+      "file": "yeison_generic.json"
+    },
+    {
+      "name": "Yeison_Generic.Operators",
+      "id": "b6c0fa1b259d83ad",
+      "file": "yeison_generic-operators.json"
+    },
+    {
+      "name": "Yeison_Generic.Operators.Make",
+      "id": "047b1a02b1e3a6ea",
+      "file": "yeison_generic-operators-make.json"
+    },
+    {
+      "name": "Yeison_Generic.References",
+      "id": "33f9d2f2411b5c01",
+      "file": "yeison_generic-references.json"
+    },
+    {
+      "name": "Yeison_Generic.Scalars",
+      "id": "620d6d45ec99bfe2",
+      "file": "yeison_generic-scalars.json"
+    },
+    {
+      "name": "Yeison_Utils",
+      "id": "19c8e034e3d6f45c",
+      "file": "yeison_utils.json"
+    },
+    {
+      "name": "Yeison_Utils.General_Reals",
+      "id": "21173138178cba52",
+      "file": "yeison_utils-general_reals.json"
+    }
+  ]
+}

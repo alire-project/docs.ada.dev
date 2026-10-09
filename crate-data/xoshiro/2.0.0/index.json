@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "xoshiro",
+  "version": "2.0.0",
+  "documented_at": "2026-03-07T02:52:03Z",
+  "description": "xoshiro128++ and xoshiro256++ pseudo-random number generators",
+  "authors": [
+    "onox",
+    "David Blackman",
+    "Sebastiano Vigna"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "xoshiro",
+    "rng",
+    "random",
+    "spark"
+  ],
+  "website": "https://github.com/onox/xoshiro",
+  "repository": {
+    "url": "https://github.com/onox/xoshiro",
+    "host": "github",
+    "commit": "609b8d8da229ba75edd29af2fee446a4f98575f2"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Xoshiro128",
+      "id": "d1a87bb529806d5a",
+      "file": "xoshiro128.json"
+    },
+    {
+      "name": "Xoshiro256",
+      "id": "b5b56b493cc8ab1c",
+      "file": "xoshiro256.json"
+    }
+  ]
+}

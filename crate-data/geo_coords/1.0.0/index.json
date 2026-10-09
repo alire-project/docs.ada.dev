@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "geo_coords",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T03:00:37Z",
+  "description": "Geo coordinates calculation for determining Location, Distance, Bearing",
+  "authors": [
+    "Saiffullah Sabir Mohamed"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "geo",
+    "coordinates",
+    "latitude",
+    "longitude",
+    "distance",
+    "bearing",
+    "haversine"
+  ],
+  "website": "https://github.com/TechnicalVillager/geo_coords",
+  "repository": {
+    "url": "https://github.com/TechnicalVillager/geo_coords",
+    "host": "github",
+    "commit": "564bd7a2b3b9ef78047e7abdeb4cbf47c5a7d9d2"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Geo_Coords",
+      "id": "3ef54e51a67026c3",
+      "file": "geo_coords.json"
+    },
+    {
+      "name": "Geo_Coords_Config",
+      "id": "7f6e9731e1b8c201",
+      "file": "geo_coords_config.json"
+    },
+    {
+      "name": "Geo_Coords_Types",
+      "id": "599299e76a64d5fc",
+      "file": "geo_coords_types.json"
+    },
+    {
+      "name": "Geo_Coords_Utilities",
+      "id": "e5c098fb50b175d3",
+      "file": "geo_coords_utilities.json"
+    }
+  ]
+}

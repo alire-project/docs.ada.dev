@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "crate": "raiden",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:55:34Z",
+  "description": "An Ada implemenetation of a block cipher called Raiden.",
+  "authors": [
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "cryptography",
+    "security",
+    "cipher"
+  ],
+  "website": "https://github.com/reznikmm/raiden",
+  "repository": {
+    "url": "https://github.com/reznikmm/raiden",
+    "host": "github",
+    "commit": "0852925be11ecf7fa89568d3d681ea896c165e05"
+  },
+  "dependencies": [],
+  "units": []
+}

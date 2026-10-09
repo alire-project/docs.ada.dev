@@ -1,0 +1,518 @@
+{
+  "schema_version": "1",
+  "crate": "tresses",
+  "version": "4.0.0",
+  "documented_at": "2026-04-14T03:01:22Z",
+  "description": "Synth library inspired by Mutable Instruments Braids",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "embedded",
+    "audio",
+    "synthesis",
+    "nostd"
+  ],
+  "website": "https://weenoisemaker.com/",
+  "repository": {
+    "url": "https://github.com/wee-noise-maker/tresses",
+    "host": "github",
+    "commit": "42149a2496b5361abd0605b81db33a305e97f307"
+  },
+  "dependencies": [
+    {
+      "crate": "midi",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Tresses",
+      "id": "3ddc8b45e917e7fe",
+      "file": "tresses.json"
+    },
+    {
+      "name": "Tresses.Analog_Oscillator",
+      "id": "c3c33b6967e232af",
+      "file": "tresses-analog_oscillator.json"
+    },
+    {
+      "name": "Tresses.Drums",
+      "id": "1948c4e634c4eaf3",
+      "file": "tresses-drums.json"
+    },
+    {
+      "name": "Tresses.Drums.Bell",
+      "id": "70dc0a08a32ff74c",
+      "file": "tresses-drums-bell.json"
+    },
+    {
+      "name": "Tresses.Drums.Clap",
+      "id": "b01b157183862293",
+      "file": "tresses-drums-clap.json"
+    },
+    {
+      "name": "Tresses.Drums.Cymbal",
+      "id": "bc69b76f0f5bdd46",
+      "file": "tresses-drums-cymbal.json"
+    },
+    {
+      "name": "Tresses.Drums.Generic_Sample_Hats",
+      "id": "24eacbb919788d02",
+      "file": "tresses-drums-generic_sample_hats.json"
+    },
+    {
+      "name": "Tresses.Drums.Generic_Sample_Hats_Half_Rate",
+      "id": "1ccf50161742b417",
+      "file": "tresses-drums-generic_sample_hats_half_rate.json"
+    },
+    {
+      "name": "Tresses.Drums.Kick",
+      "id": "1ce9173a05fa74a0",
+      "file": "tresses-drums-kick.json"
+    },
+    {
+      "name": "Tresses.Drums.Macro",
+      "id": "faa7eecbb10109ec",
+      "file": "tresses-drums-macro.json"
+    },
+    {
+      "name": "Tresses.Drums.Percussion",
+      "id": "05c2d95e52503f59",
+      "file": "tresses-drums-percussion.json"
+    },
+    {
+      "name": "Tresses.Drums.Snare",
+      "id": "bedc4df3b51bee80",
+      "file": "tresses-drums-snare.json"
+    },
+    {
+      "name": "Tresses.Drums.Wave_Clic_Kick",
+      "id": "b966720726a2b89e",
+      "file": "tresses-drums-wave_clic_kick.json"
+    },
+    {
+      "name": "Tresses.Drums.Wave_Kick",
+      "id": "66395120cd121083",
+      "file": "tresses-drums-wave_kick.json"
+    },
+    {
+      "name": "Tresses.Drums.Wave_Snare",
+      "id": "ed484e37b627d6dd",
+      "file": "tresses-drums-wave_snare.json"
+    },
+    {
+      "name": "Tresses.DSP",
+      "id": "fc327e61490055c1",
+      "file": "tresses-dsp.json"
+    },
+    {
+      "name": "Tresses.Envelopes",
+      "id": "0c758ce59d12583e",
+      "file": "tresses-envelopes.json"
+    },
+    {
+      "name": "Tresses.Envelopes.AR",
+      "id": "a2809733165d4705",
+      "file": "tresses-envelopes-ar.json"
+    },
+    {
+      "name": "Tresses.Excitation",
+      "id": "b03c65ffbb0f969c",
+      "file": "tresses-excitation.json"
+    },
+    {
+      "name": "Tresses.FFT",
+      "id": "bba6cf0a0e8d067e",
+      "file": "tresses-fft.json"
+    },
+    {
+      "name": "Tresses.FFT.Fixed",
+      "id": "2113c4a51f5dfe16",
+      "file": "tresses-fft-fixed.json"
+    },
+    {
+      "name": "Tresses.Filters",
+      "id": "7b5c7e3daa626ccb",
+      "file": "tresses-filters.json"
+    },
+    {
+      "name": "Tresses.Filters.Ladder",
+      "id": "b9c1e68e55d642fc",
+      "file": "tresses-filters-ladder.json"
+    },
+    {
+      "name": "Tresses.Filters.SVF",
+      "id": "e4c4687cf422e89d",
+      "file": "tresses-filters-svf.json"
+    },
+    {
+      "name": "Tresses.FX",
+      "id": "c9776076a2a9c181",
+      "file": "tresses-fx.json"
+    },
+    {
+      "name": "Tresses.FX.Bitcrusher",
+      "id": "994fce56949d6087",
+      "file": "tresses-fx-bitcrusher.json"
+    },
+    {
+      "name": "Tresses.FX.Delay_Line",
+      "id": "af7fcebf0f65858d",
+      "file": "tresses-fx-delay_line.json"
+    },
+    {
+      "name": "Tresses.FX.Overdrive",
+      "id": "660dfdef73166112",
+      "file": "tresses-fx-overdrive.json"
+    },
+    {
+      "name": "Tresses.FX.Reverb",
+      "id": "fa17bc37f45e70ad",
+      "file": "tresses-fx-reverb.json"
+    },
+    {
+      "name": "Tresses.FX.Voice",
+      "id": "30f70340d27196c7",
+      "file": "tresses-fx-voice.json"
+    },
+    {
+      "name": "Tresses.FX.Voice.Stereo_Bitcrusher",
+      "id": "cec9cc8c43e27657",
+      "file": "tresses-fx-voice-stereo_bitcrusher.json"
+    },
+    {
+      "name": "Tresses.FX.Voice.Stereo_Filter",
+      "id": "37dc12cb514dd10d",
+      "file": "tresses-fx-voice-stereo_filter.json"
+    },
+    {
+      "name": "Tresses.FX.Voice.Stereo_Overdrive",
+      "id": "5d2589dbdddf4b9a",
+      "file": "tresses-fx-voice-stereo_overdrive.json"
+    },
+    {
+      "name": "Tresses.FX.Voice.Stereo_Reverb",
+      "id": "e22ccc19897291a9",
+      "file": "tresses-fx-voice-stereo_reverb.json"
+    },
+    {
+      "name": "Tresses.Interfaces",
+      "id": "5bbf72b406722161",
+      "file": "tresses-interfaces.json"
+    },
+    {
+      "name": "Tresses.LFO",
+      "id": "2596a5e0b9b47241",
+      "file": "tresses-lfo.json"
+    },
+    {
+      "name": "Tresses.Macro",
+      "id": "ccfa2863d552b29b",
+      "file": "tresses-macro.json"
+    },
+    {
+      "name": "Tresses.Phase_Distortion_Oscillator",
+      "id": "be74161221515ff9",
+      "file": "tresses-phase_distortion_oscillator.json"
+    },
+    {
+      "name": "Tresses.Random",
+      "id": "5ab49097a63dc72c",
+      "file": "tresses-random.json"
+    },
+    {
+      "name": "Tresses.Resources",
+      "id": "b913db17d6bcdd29",
+      "file": "tresses-resources.json"
+    },
+    {
+      "name": "Tresses.Samples",
+      "id": "951fe5ecc10b44b3",
+      "file": "tresses-samples.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_505_close",
+      "id": "b922b2209d50dbd7",
+      "file": "tresses-samples-sample_505_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_505_close_half_rate",
+      "id": "eef9fc1494cafc85",
+      "file": "tresses-samples-sample_505_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_505_open",
+      "id": "0efeb28a33ce9bda",
+      "file": "tresses-samples-sample_505_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_505_open_half_rate",
+      "id": "656c3ef4298dc076",
+      "file": "tresses-samples-sample_505_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_707hh_close",
+      "id": "8af0dc8407c80408",
+      "file": "tresses-samples-sample_707hh_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_707hh_close_half_rate",
+      "id": "e371ea14df4cafcd",
+      "file": "tresses-samples-sample_707hh_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_707hh_open",
+      "id": "30f50d2acb29ce32",
+      "file": "tresses-samples-sample_707hh_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_707hh_open_half_rate",
+      "id": "4d57516769b94b21",
+      "file": "tresses-samples-sample_707hh_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_808_close",
+      "id": "12bee77036633113",
+      "file": "tresses-samples-sample_808_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_808_close_half_rate",
+      "id": "864ca44bfc692cf2",
+      "file": "tresses-samples-sample_808_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_808_open",
+      "id": "aff7e3db2da4001a",
+      "file": "tresses-samples-sample_808_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_808_open_half_rate",
+      "id": "e4e3f52e7b4baf25",
+      "file": "tresses-samples-sample_808_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_909hh_close",
+      "id": "9f92710ba131ccf0",
+      "file": "tresses-samples-sample_909hh_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_909hh_close_half_rate",
+      "id": "035d77cb458f13a0",
+      "file": "tresses-samples-sample_909hh_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_909hh_open",
+      "id": "eb519d2490d12597",
+      "file": "tresses-samples-sample_909hh_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_909hh_open_half_rate",
+      "id": "0be108f9a5440772",
+      "file": "tresses-samples-sample_909hh_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_acoustic_close",
+      "id": "095a2b1d22685344",
+      "file": "tresses-samples-sample_acoustic_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_acoustic_close_half_rate",
+      "id": "897906e172aaf0b8",
+      "file": "tresses-samples-sample_acoustic_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_acoustic_open",
+      "id": "002dd916b150eb52",
+      "file": "tresses-samples-sample_acoustic_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_acoustic_open_half_rate",
+      "id": "1e7535a4027465b9",
+      "file": "tresses-samples-sample_acoustic_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_cr78_close",
+      "id": "1dea3fecd75b89af",
+      "file": "tresses-samples-sample_cr78_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_cr78_close_half_rate",
+      "id": "df88d6a6246f620d",
+      "file": "tresses-samples-sample_cr78_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_cr78_open",
+      "id": "4bed35afb02c61d6",
+      "file": "tresses-samples-sample_cr78_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_cr78_open_half_rate",
+      "id": "21e23685fe1e7381",
+      "file": "tresses-samples-sample_cr78_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_lm2_close",
+      "id": "a53efe8ead0381b5",
+      "file": "tresses-samples-sample_lm2_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_lm2_close_half_rate",
+      "id": "7d2547df91ac6ffc",
+      "file": "tresses-samples-sample_lm2_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_lm2_open",
+      "id": "3843b64b9774849a",
+      "file": "tresses-samples-sample_lm2_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_lm2_open_half_rate",
+      "id": "e66ff7f9ecb1c4a8",
+      "file": "tresses-samples-sample_lm2_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_mrk2_close",
+      "id": "9b83944e4595d084",
+      "file": "tresses-samples-sample_mrk2_close.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_mrk2_close_half_rate",
+      "id": "ac9755b02e2d7437",
+      "file": "tresses-samples-sample_mrk2_close_half_rate.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_mrk2_open",
+      "id": "671c728d4d99406f",
+      "file": "tresses-samples-sample_mrk2_open.json"
+    },
+    {
+      "name": "Tresses.Samples.Sample_mrk2_open_half_rate",
+      "id": "2de65a0b5346faa8",
+      "file": "tresses-samples-sample_mrk2_open_half_rate.json"
+    },
+    {
+      "name": "Tresses.Voices",
+      "id": "5d40242a7db52948",
+      "file": "tresses-voices.json"
+    },
+    {
+      "name": "Tresses.Voices.Acid",
+      "id": "03b1a68a17005418",
+      "file": "tresses-voices-acid.json"
+    },
+    {
+      "name": "Tresses.Voices.Analog_Macro",
+      "id": "dd23c104906a8e25",
+      "file": "tresses-voices-analog_macro.json"
+    },
+    {
+      "name": "Tresses.Voices.Bass_808",
+      "id": "7d18e124a2b04cbc",
+      "file": "tresses-voices-bass_808.json"
+    },
+    {
+      "name": "Tresses.Voices.Chip_Echo",
+      "id": "90f1111fe7aa962b",
+      "file": "tresses-voices-chip_echo.json"
+    },
+    {
+      "name": "Tresses.Voices.Chip_Phaser",
+      "id": "29ddd816f433c23a",
+      "file": "tresses-voices-chip_phaser.json"
+    },
+    {
+      "name": "Tresses.Voices.Chip_Portamento",
+      "id": "2671f259ac0044ca",
+      "file": "tresses-voices-chip_portamento.json"
+    },
+    {
+      "name": "Tresses.Voices.FM_OP2",
+      "id": "f86572ae143b0b8b",
+      "file": "tresses-voices-fm_op2.json"
+    },
+    {
+      "name": "Tresses.Voices.House_Bass",
+      "id": "a446e50b39e6b836",
+      "file": "tresses-voices-house_bass.json"
+    },
+    {
+      "name": "Tresses.Voices.Macro",
+      "id": "c945ec10d8cd096e",
+      "file": "tresses-voices-macro.json"
+    },
+    {
+      "name": "Tresses.Voices.Phase_Distortion",
+      "id": "f946a350dd202ea3",
+      "file": "tresses-voices-phase_distortion.json"
+    },
+    {
+      "name": "Tresses.Voices.Phase_Distortion_Instantiations",
+      "id": "316934e5c70d1301",
+      "file": "tresses-voices-phase_distortion_instantiations.json"
+    },
+    {
+      "name": "Tresses.Voices.Pluck",
+      "id": "7b9d8590ced4802a",
+      "file": "tresses-voices-pluck.json"
+    },
+    {
+      "name": "Tresses.Voices.Pluck_Bass",
+      "id": "1e7412794ef27452",
+      "file": "tresses-voices-pluck_bass.json"
+    },
+    {
+      "name": "Tresses.Voices.Plucked",
+      "id": "37b2a5b494e83b47",
+      "file": "tresses-voices-plucked.json"
+    },
+    {
+      "name": "Tresses.Voices.Reese",
+      "id": "7e1ea145ae536e67",
+      "file": "tresses-voices-reese.json"
+    },
+    {
+      "name": "Tresses.Voices.Sand",
+      "id": "84d82395c8a47332",
+      "file": "tresses-voices-sand.json"
+    },
+    {
+      "name": "Tresses.Voices.Saw_Swarm",
+      "id": "56ea2671198960b8",
+      "file": "tresses-voices-saw_swarm.json"
+    },
+    {
+      "name": "Tresses.Voices.Screech",
+      "id": "e58081a6c08a3b00",
+      "file": "tresses-voices-screech.json"
+    },
+    {
+      "name": "Tresses.Voices.Wave_Echo",
+      "id": "24d1717d9d1af1bd",
+      "file": "tresses-voices-wave_echo.json"
+    },
+    {
+      "name": "Tresses.Voices.Wave_Phaser",
+      "id": "f87f3deb2ab36ab4",
+      "file": "tresses-voices-wave_phaser.json"
+    },
+    {
+      "name": "Tresses.Voices.Wave_Pluck",
+      "id": "6148f15981c662d2",
+      "file": "tresses-voices-wave_pluck.json"
+    },
+    {
+      "name": "Tresses.Voices.Wave_Portamento",
+      "id": "c89c11d1c4afe234",
+      "file": "tresses-voices-wave_portamento.json"
+    },
+    {
+      "name": "Tresses_Config",
+      "id": "b87e3cdbf16e6a8e",
+      "file": "tresses_config.json"
+    }
+  ]
+}

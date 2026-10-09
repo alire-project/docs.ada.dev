@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_timer",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:47:46Z",
+  "description": "A0B Timer",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "timer"
+  ],
+  "repository": {
+    "url": "https://github.com/godunko/a0b-timer",
+    "host": "github",
+    "commit": "8fb913ab0f7a5d25ef511b7be96e3e909b5d2447"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "*"
+    },
+    {
+      "crate": "a0b_callbacks",
+      "version": "*"
+    },
+    {
+      "crate": "a0b_time",
+      "version": "*"
+    },
+    {
+      "crate": "a0b_timer_platform",
+      "version": "0.1.0"
+    }
+  ],
+  "units": []
+}

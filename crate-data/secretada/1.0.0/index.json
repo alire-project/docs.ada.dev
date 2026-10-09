@@ -1,0 +1,56 @@
+{
+  "schema_version": "1",
+  "crate": "secretada",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:57:21Z",
+  "description": "Secret service Ada binding",
+  "long_description": "The [libsecret](https://wiki.gnome.org/Projects/Libsecret) is a library for storing\nand retrieving passwords and others secrets.  The library uses the\n[Secret Service API](https://standards.freedesktop.org/secret-service/) provided\nby Gnome Keyring or KDE Wallet.  This library provides an Ada binding\nto the [Secret Service API](https://standards.freedesktop.org/secret-service/).\n\nYou can store a secret by using the following code extract:\n\n```\nwith Secret.Services;\nwith Secret.Attributes;\nwith Secret.Values;\n...\n   Service : Secret.Services.Service_Type;\n   List    : Secret.Attributes.Map;\n   Value   : Secret.Values.Secret_Type;\n...\n      Service.Initialize;\n      List.Insert (\"secret identification key\", \"secret identification value\");\n      Value := Secret.Values.Create (\"the-secret-to-store\");\n      Service.Store (List, \"The secret label (for the keyring manager)\", Value);\n```\n\nAnd you will retrieve it with:\n\n```\n   Value := Service.Lookup (List);\n   if not Value.Is_Null then\n      Ada.Text_IO.Put_Line (Value.Get_Value);\n   end if;\n```\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "secret",
+    "bindings"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-libsecret",
+  "repository": {
+    "url": "https://github.com/stcarrez/ada-libsecret",
+    "host": "github",
+    "commit": "6f859734729cb7720c0e82f45be3808a87a7ccfa"
+  },
+  "dependencies": [
+    {
+      "crate": "libglib",
+      "version": "*"
+    },
+    {
+      "crate": "libsecret",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "Secret",
+      "id": "2bb80d537b1da3e3",
+      "file": "secret.json"
+    },
+    {
+      "name": "Secret.Attributes",
+      "id": "314fdbd294719ab5",
+      "file": "secret-attributes.json"
+    },
+    {
+      "name": "Secret.Services",
+      "id": "4554447b8185907e",
+      "file": "secret-services.json"
+    },
+    {
+      "name": "Secret.Values",
+      "id": "6c124f08fdf53db0",
+      "file": "secret-values.json"
+    }
+  ]
+}

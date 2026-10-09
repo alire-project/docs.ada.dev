@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "grammaticus",
+  "version": "0.1.0",
+  "documented_at": "2026-08-18T02:42:04Z",
+  "description": "A library for expressing context-free grammars in SPARK",
+  "authors": [
+    "Daniel King"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "spark",
+    "grammar",
+    "syntax",
+    "bnf",
+    "ebnf"
+  ],
+  "repository": {
+    "url": "https://github.com/damaki/grammaticus",
+    "host": "github",
+    "commit": "562a94e72b583106fd81074e419b0c16c1abd0a0"
+  },
+  "dependencies": [
+    {
+      "crate": "sparklib",
+      "version": ">=16"
+    }
+  ],
+  "units": [
+    {
+      "name": "Grammaticus",
+      "id": "e27379030d97fbd3",
+      "file": "grammaticus.json"
+    },
+    {
+      "name": "Grammaticus.Grammar_Matchers",
+      "id": "83b7d4459616f754",
+      "file": "grammaticus-grammar_matchers.json"
+    },
+    {
+      "name": "Grammaticus_Config",
+      "id": "77e05479bf9d4b94",
+      "file": "grammaticus_config.json"
+    }
+  ]
+}

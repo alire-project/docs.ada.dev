@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_stm32g474",
+  "version": "0.2.0",
+  "documented_at": "2026-03-03T17:47:48Z",
+  "description": "A0B: STM32G474 base support and SVD files",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "stm32",
+    "stm32g4",
+    "stm32g474"
+  ],
+  "website": "https://github.com/godunko/a0b-stm32g474",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-stm32g474",
+    "host": "github",
+    "commit": "f4731f4055973c43e3edd081743137c990e3d423"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_stm32g4",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

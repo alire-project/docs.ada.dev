@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "crate": "conic_fit",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:55:21Z",
+  "description": "Least squares fitting of quadratic curves and surfaces",
+  "authors": [
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "ellipse",
+    "fitting",
+    "projection"
+  ],
+  "website": "https://github.com/reznikmm/conic_fit",
+  "repository": {
+    "url": "https://github.com/reznikmm/conic_fit",
+    "host": "github",
+    "commit": "fdbecb47e68e17279a4ace4c36ed029f46c664c3"
+  },
+  "dependencies": [],
+  "units": []
+}

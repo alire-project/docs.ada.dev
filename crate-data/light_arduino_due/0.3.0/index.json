@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "light_arduino_due",
+  "version": "0.3.0",
+  "documented_at": "2026-03-04T16:54:23Z",
+  "description": "Arduino Due Board Support Package for `light` GNAT Runtime",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "bsp",
+    "light",
+    "atsam3x8e",
+    "sam3x8e",
+    "arduino",
+    "due"
+  ],
+  "website": "https://github.com/godunko/light-startup",
+  "repository": {
+    "url": "https://github.com/godunko/light-startup",
+    "host": "github",
+    "commit": "265c3ea9f94c63fb2a38c46451ac4f0e69f48d2a",
+    "subdir": "arduino_due/"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_atsam3x8e",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

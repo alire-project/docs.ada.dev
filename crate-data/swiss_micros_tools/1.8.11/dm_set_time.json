@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"swiss_micros_tools","version":"1.8.11","id":"1fe60df5b609adbb","name":"DM_Set_Time","qualified_name":"DM_Set_Time","kind":"ada_package","location":{"file":"src/dm_set_time.ads","line":27,"column":9},"code":"package DM_Set_Time","documentation":{"description":"-\n  @summary\n\n  @description"}}

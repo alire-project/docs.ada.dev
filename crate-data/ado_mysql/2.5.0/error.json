@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "ado_mysql",
+  "version": "2.5.0",
+  "failed_at": "2026-03-03T17:50:01Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

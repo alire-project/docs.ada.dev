@@ -1,0 +1,39 @@
+{
+  "schema_version": "1",
+  "crate": "rand_xoshiro256",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:55:55Z",
+  "description": "Xoshiro256 style PRNG",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [],
+  "website": "https://github.com/AldanTanneo/rand-ada",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/rand-ada",
+    "host": "github",
+    "commit": "6d1af921227f1e7e0d61bf3cee431af701b99508",
+    "subdir": "rand_xoshiro256/"
+  },
+  "dependencies": [
+    {
+      "crate": "rand_core",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Rand_Xoshiro256",
+      "id": "c948c6588db60948",
+      "file": "rand_xoshiro256.json"
+    },
+    {
+      "name": "Rand_Xoshiro256_Config",
+      "id": "810f3a5cb172bcbe",
+      "file": "rand_xoshiro256_config.json"
+    }
+  ]
+}

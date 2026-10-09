@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"tresses","version":"2.0.0","id":"7b5c7e3daa626ccb","name":"Tresses.Filters","qualified_name":"Tresses.Filters","kind":"ada_package","location":{"file":"src/tresses-filters.ads","line":1,"column":9},"code":"package Tresses.Filters"}

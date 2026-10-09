@@ -1,0 +1,1486 @@
+{
+  "schema_version": "1",
+  "crate": "agpl",
+  "version": "1.0.0",
+  "documented_at": "2026-03-03T17:50:20Z",
+  "description": "Ada General Purpose Library with a robotics flavor",
+  "authors": [
+    "alejandro@mosteo.com"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/mosteo/agpl",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "libgsl",
+      "version": "any"
+    }
+  ],
+  "units": [
+    {
+      "name": "Agpl",
+      "id": "54a2f35a8046ebff",
+      "file": "agpl.json"
+    },
+    {
+      "name": "Agpl.Aux",
+      "id": "9dfe81cac62af21a",
+      "file": "agpl-aux.json"
+    },
+    {
+      "name": "Agpl.Average_queue",
+      "id": "491b4658354fd200",
+      "file": "agpl-average_queue.json"
+    },
+    {
+      "name": "Agpl.Average_queue.Timed",
+      "id": "f2fa755e3f58937b",
+      "file": "agpl-average_queue-timed.json"
+    },
+    {
+      "name": "Agpl.Bandwidth_Throttle",
+      "id": "3ac53b406a22cb4b",
+      "file": "agpl-bandwidth_throttle.json"
+    },
+    {
+      "name": "Agpl.Bmp",
+      "id": "448a74d88c6c41f1",
+      "file": "agpl-bmp.json"
+    },
+    {
+      "name": "Agpl.Bmp.Draw",
+      "id": "d73e277d58043aab",
+      "file": "agpl-bmp-draw.json"
+    },
+    {
+      "name": "Agpl.Calendar",
+      "id": "2466a899231c90c0",
+      "file": "agpl-calendar.json"
+    },
+    {
+      "name": "Agpl.Calendar.Format",
+      "id": "bc69936ca175fe22",
+      "file": "agpl-calendar-format.json"
+    },
+    {
+      "name": "Agpl.Calendar.Serializable_Time",
+      "id": "d9490dccd26d6e8c",
+      "file": "agpl-calendar-serializable_time.json"
+    },
+    {
+      "name": "Agpl.Chronos",
+      "id": "73fc0ee8ed220220",
+      "file": "agpl-chronos.json"
+    },
+    {
+      "name": "Agpl.Colors",
+      "id": "a060788a8b6bdac9",
+      "file": "agpl-colors.json"
+    },
+    {
+      "name": "Agpl.Command_line",
+      "id": "51dd782a20dd1b38",
+      "file": "agpl-command_line.json"
+    },
+    {
+      "name": "Agpl.Containers",
+      "id": "26cd41d2002afb49",
+      "file": "agpl-containers.json"
+    },
+    {
+      "name": "Agpl.Containers.Algorithms",
+      "id": "a468eaa97d7b03c9",
+      "file": "agpl-containers-algorithms.json"
+    },
+    {
+      "name": "Agpl.Containers.Algorithms.Basic",
+      "id": "73e5480dad9ec633",
+      "file": "agpl-containers-algorithms-basic.json"
+    },
+    {
+      "name": "Agpl.Containers.Algorithms.Basic.Conversions",
+      "id": "33e1b7cf67ac777f",
+      "file": "agpl-containers-algorithms-basic-conversions.json"
+    },
+    {
+      "name": "Agpl.Containers.Algorithms.Basic.Fields",
+      "id": "d524bb7775709cee",
+      "file": "agpl-containers-algorithms-basic-fields.json"
+    },
+    {
+      "name": "Agpl.Containers.Bags",
+      "id": "1bbd52757834a7b6",
+      "file": "agpl-containers-bags.json"
+    },
+    {
+      "name": "Agpl.Containers.Bulk",
+      "id": "7720ff418d4121bd",
+      "file": "agpl-containers-bulk.json"
+    },
+    {
+      "name": "Agpl.Containers.Bulk.Utils",
+      "id": "861f01b520a1beea",
+      "file": "agpl-containers-bulk-utils.json"
+    },
+    {
+      "name": "Agpl.Containers.Graphs",
+      "id": "c4191a08cfb8043a",
+      "file": "agpl-containers-graphs.json"
+    },
+    {
+      "name": "Agpl.Containers.Graphs.Adjacency",
+      "id": "253b042307e76737",
+      "file": "agpl-containers-graphs-adjacency.json"
+    },
+    {
+      "name": "Agpl.Containers.Graphs.Algorithms",
+      "id": "c6f25a8566794d49",
+      "file": "agpl-containers-graphs-algorithms.json"
+    },
+    {
+      "name": "Agpl.Containers.Indefinite_Matrix2d",
+      "id": "4a1164013829ca98",
+      "file": "agpl-containers-indefinite_matrix2d.json"
+    },
+    {
+      "name": "Agpl.Containers.Indefinite_Multiordered_Maps",
+      "id": "d8dd790cb225e03f",
+      "file": "agpl-containers-indefinite_multiordered_maps.json"
+    },
+    {
+      "name": "Agpl.Containers.Naked_Vectors",
+      "id": "7bb1f770015204a3",
+      "file": "agpl-containers-naked_vectors.json"
+    },
+    {
+      "name": "Agpl.Containers.Ntrees",
+      "id": "1b8e393946120d03",
+      "file": "agpl-containers-ntrees.json"
+    },
+    {
+      "name": "Agpl.Containers.Ordered_Multidimensional_Maps",
+      "id": "66d4eb69e3311578",
+      "file": "agpl-containers-ordered_multidimensional_maps.json"
+    },
+    {
+      "name": "Agpl.Containers.Protected_Indefinite_Doubly_Linked_Lists",
+      "id": "a16a3d8f78f9f25a",
+      "file": "agpl-containers-protected_indefinite_doubly_linked_lists.json"
+    },
+    {
+      "name": "Agpl.Containers.Unbounded_Trees",
+      "id": "5e3186ca9458019c",
+      "file": "agpl-containers-unbounded_trees.json"
+    },
+    {
+      "name": "Agpl.Containers.Utils",
+      "id": "76b12c32ce3bb262",
+      "file": "agpl-containers-utils.json"
+    },
+    {
+      "name": "Agpl.Context_controllers",
+      "id": "074e1a9553bc8864",
+      "file": "agpl-context_controllers.json"
+    },
+    {
+      "name": "Agpl.Conversions",
+      "id": "16d505f6f679f5e8",
+      "file": "agpl-conversions.json"
+    },
+    {
+      "name": "Agpl.Counter",
+      "id": "820cdb203a554139",
+      "file": "agpl-counter.json"
+    },
+    {
+      "name": "Agpl.Counter.Multi",
+      "id": "da72a46aac7f353e",
+      "file": "agpl-counter-multi.json"
+    },
+    {
+      "name": "Agpl.Cv",
+      "id": "04e3c87999cb1982",
+      "file": "agpl-cv.json"
+    },
+    {
+      "name": "Agpl.Db",
+      "id": "cad88b9020b454c8",
+      "file": "agpl-db.json"
+    },
+    {
+      "name": "Agpl.Debug",
+      "id": "05e0e9181215cc99",
+      "file": "agpl-debug.json"
+    },
+    {
+      "name": "Agpl.Debug.Timer",
+      "id": "13cb723e50673d9c",
+      "file": "agpl-debug-timer.json"
+    },
+    {
+      "name": "Agpl.Delayer",
+      "id": "55d5824f4b5ce366",
+      "file": "agpl-delayer.json"
+    },
+    {
+      "name": "Agpl.Drawing",
+      "id": "3e523b8e40f1dafd",
+      "file": "agpl-drawing.json"
+    },
+    {
+      "name": "Agpl.Drawing.Buffer",
+      "id": "3b5cf4aadd806899",
+      "file": "agpl-drawing-buffer.json"
+    },
+    {
+      "name": "Agpl.Drawing.Figures",
+      "id": "a81b0e72ee19bdab",
+      "file": "agpl-drawing-figures.json"
+    },
+    {
+      "name": "Agpl.Drawing.Multisource",
+      "id": "cb9172ed58b29db6",
+      "file": "agpl-drawing-multisource.json"
+    },
+    {
+      "name": "Agpl.Drawing.Predrawer",
+      "id": "f0f78d6718a56fec",
+      "file": "agpl-drawing-predrawer.json"
+    },
+    {
+      "name": "Agpl.Drawing.Predrawer.Stock",
+      "id": "2a7c425384e4f56b",
+      "file": "agpl-drawing-predrawer-stock.json"
+    },
+    {
+      "name": "Agpl.Drawing.Transformations",
+      "id": "6692d8353a594b66",
+      "file": "agpl-drawing-transformations.json"
+    },
+    {
+      "name": "Agpl.Endian",
+      "id": "5d7e4750052710e8",
+      "file": "agpl-endian.json"
+    },
+    {
+      "name": "Agpl.Event_queues",
+      "id": "1556d75bf3de7f2c",
+      "file": "agpl-event_queues.json"
+    },
+    {
+      "name": "Agpl.Event_queues.Calendar",
+      "id": "5f06176be7d76cb5",
+      "file": "agpl-event_queues-calendar.json"
+    },
+    {
+      "name": "Agpl.Exceptions",
+      "id": "5a7723d1805f98c7",
+      "file": "agpl-exceptions.json"
+    },
+    {
+      "name": "Agpl.Filesystem",
+      "id": "70e3cc4d84fb4da5",
+      "file": "agpl-filesystem.json"
+    },
+    {
+      "name": "Agpl.Generic_Dense_Matrix",
+      "id": "69d32c6ad6d475fe",
+      "file": "agpl-generic_dense_matrix.json"
+    },
+    {
+      "name": "Agpl.Generic_File_Store",
+      "id": "705e5b2666afea70",
+      "file": "agpl-generic_file_store.json"
+    },
+    {
+      "name": "Agpl.Generic_File_Store.Cache",
+      "id": "5bc67b5d4ffee9bd",
+      "file": "agpl-generic_file_store-cache.json"
+    },
+    {
+      "name": "Agpl.Generic_Handle",
+      "id": "61bf4a35ab2343c1",
+      "file": "agpl-generic_handle.json"
+    },
+    {
+      "name": "Agpl.Generic_Indefinite_File_Store",
+      "id": "c81f84ff28132347",
+      "file": "agpl-generic_indefinite_file_store.json"
+    },
+    {
+      "name": "Agpl.Generic_Limited_File_Store",
+      "id": "4c2358478640aa59",
+      "file": "agpl-generic_limited_file_store.json"
+    },
+    {
+      "name": "Agpl.Generic_Limited_File_Store.Cache",
+      "id": "a152de5c22c9e5c2",
+      "file": "agpl-generic_limited_file_store-cache.json"
+    },
+    {
+      "name": "Agpl.Generic_Messenger",
+      "id": "14eea18af6419dd0",
+      "file": "agpl-generic_messenger.json"
+    },
+    {
+      "name": "Agpl.Geoip",
+      "id": "fed740900fbf4510",
+      "file": "agpl-geoip.json"
+    },
+    {
+      "name": "Agpl.Graph",
+      "id": "ec55e9a1dd3d56e3",
+      "file": "agpl-graph.json"
+    },
+    {
+      "name": "Agpl.Graph.Timed",
+      "id": "e14c514ae4df2d42",
+      "file": "agpl-graph-timed.json"
+    },
+    {
+      "name": "Agpl.Graphs",
+      "id": "64f826fceefe3643",
+      "file": "agpl-graphs.json"
+    },
+    {
+      "name": "Agpl.Graphs.Base",
+      "id": "065a26f369b02abc",
+      "file": "agpl-graphs-base.json"
+    },
+    {
+      "name": "Agpl.Graphs.Bellman_Ford",
+      "id": "6f1231f9b45295c9",
+      "file": "agpl-graphs-bellman_ford.json"
+    },
+    {
+      "name": "Agpl.Gtk",
+      "id": "474d2539107a1771",
+      "file": "agpl-gtk.json"
+    },
+    {
+      "name": "Agpl.Gtk.Tree_Utils",
+      "id": "70a87d60cafad393",
+      "file": "agpl-gtk-tree_utils.json"
+    },
+    {
+      "name": "Agpl.Gui",
+      "id": "8fe7de781c780ae4",
+      "file": "agpl-gui.json"
+    },
+    {
+      "name": "Agpl.Indefinite_Protected_Value",
+      "id": "80684da5338cd23d",
+      "file": "agpl-indefinite_protected_value.json"
+    },
+    {
+      "name": "Agpl.Interfaces",
+      "id": "2ca6ddae0a5a9bad",
+      "file": "agpl-interfaces.json"
+    },
+    {
+      "name": "Agpl.Interfaces.C",
+      "id": "6fec48bc2e57f8ee",
+      "file": "agpl-interfaces-c.json"
+    },
+    {
+      "name": "Agpl.Interfaces.C.Arrays",
+      "id": "c47db651574d7e2c",
+      "file": "agpl-interfaces-c-arrays.json"
+    },
+    {
+      "name": "Agpl.Interfaces.C.Types",
+      "id": "fb7b0d0964afab79",
+      "file": "agpl-interfaces-c-types.json"
+    },
+    {
+      "name": "Agpl.Ip",
+      "id": "eeb7603b9bb41e33",
+      "file": "agpl-ip.json"
+    },
+    {
+      "name": "Agpl.Monitor",
+      "id": "9cc58d69ec4080ce",
+      "file": "agpl-monitor.json"
+    },
+    {
+      "name": "Agpl.Numbers",
+      "id": "af0d7aa31f8ef8f4",
+      "file": "agpl-numbers.json"
+    },
+    {
+      "name": "Agpl.Optimization",
+      "id": "741ab24628a070de",
+      "file": "agpl-optimization.json"
+    },
+    {
+      "name": "Agpl.Optimization.Annealing",
+      "id": "f1c741517500425f",
+      "file": "agpl-optimization-annealing.json"
+    },
+    {
+      "name": "Agpl.Optimization.Annealing.Manual_Cooling",
+      "id": "99e3db65744561df",
+      "file": "agpl-optimization-annealing-manual_cooling.json"
+    },
+    {
+      "name": "Agpl.Optimization.Annealing.Solution",
+      "id": "9199c4c3507fe123",
+      "file": "agpl-optimization-annealing-solution.json"
+    },
+    {
+      "name": "Agpl.Optimization.Annealing.Solver",
+      "id": "3df3e67498463075",
+      "file": "agpl-optimization-annealing-solver.json"
+    },
+    {
+      "name": "Agpl.Os_Utils",
+      "id": "b341914fe25bc7ff",
+      "file": "agpl-os_utils.json"
+    },
+    {
+      "name": "Agpl.Protected_Datastore",
+      "id": "e2c223f1950ffd3d",
+      "file": "agpl-protected_datastore.json"
+    },
+    {
+      "name": "Agpl.Protected_Datastore.Integers",
+      "id": "6ec906a72e4b2785",
+      "file": "agpl-protected_datastore-integers.json"
+    },
+    {
+      "name": "Agpl.Protected_sorted_index",
+      "id": "c18e06d61399107f",
+      "file": "agpl-protected_sorted_index.json"
+    },
+    {
+      "name": "Agpl.Protected_Value",
+      "id": "045b3e554a516f8d",
+      "file": "agpl-protected_value.json"
+    },
+    {
+      "name": "Agpl.Protected_Values",
+      "id": "1dd5f8cf278769a5",
+      "file": "agpl-protected_values.json"
+    },
+    {
+      "name": "Agpl.Protected_Values.Integers",
+      "id": "64f7f7ce96c34549",
+      "file": "agpl-protected_values-integers.json"
+    },
+    {
+      "name": "Agpl.Random",
+      "id": "3af6d9e7ae1f9986",
+      "file": "agpl-random.json"
+    },
+    {
+      "name": "Agpl.Reflection",
+      "id": "d5fc95953ef9a8e6",
+      "file": "agpl-reflection.json"
+    },
+    {
+      "name": "Agpl.Reflection.Base",
+      "id": "d1d6660b19c8db07",
+      "file": "agpl-reflection-base.json"
+    },
+    {
+      "name": "Agpl.Safe_file",
+      "id": "6804d85fab2b098a",
+      "file": "agpl-safe_file.json"
+    },
+    {
+      "name": "Agpl.Scaling1d",
+      "id": "ec008169d8b3033d",
+      "file": "agpl-scaling1d.json"
+    },
+    {
+      "name": "Agpl.Scaling2d",
+      "id": "d414a44233d002c0",
+      "file": "agpl-scaling2d.json"
+    },
+    {
+      "name": "Agpl.Search",
+      "id": "27e44e80b1f536a0",
+      "file": "agpl-search.json"
+    },
+    {
+      "name": "Agpl.Search.A_Star",
+      "id": "fb690db8ca0fbba9",
+      "file": "agpl-search-a_star.json"
+    },
+    {
+      "name": "Agpl.Segmented_Thing",
+      "id": "caf1ebd3751094ea",
+      "file": "agpl-segmented_thing.json"
+    },
+    {
+      "name": "Agpl.Sequence",
+      "id": "ec512d03cf78bd11",
+      "file": "agpl-sequence.json"
+    },
+    {
+      "name": "Agpl.Simple_Dictionary",
+      "id": "007e7faddf11479b",
+      "file": "agpl-simple_dictionary.json"
+    },
+    {
+      "name": "Agpl.Smart_Access",
+      "id": "318d1d1e35e8d0d6",
+      "file": "agpl-smart_access.json"
+    },
+    {
+      "name": "Agpl.Smart_access_Limited",
+      "id": "f0a3040dbd78d0db",
+      "file": "agpl-smart_access_limited.json"
+    },
+    {
+      "name": "Agpl.Smart_Access_Limited_Debug",
+      "id": "aa7274ac14c22851",
+      "file": "agpl-smart_access_limited_debug.json"
+    },
+    {
+      "name": "Agpl.Socket_Utils",
+      "id": "431de8e27359cc6b",
+      "file": "agpl-socket_utils.json"
+    },
+    {
+      "name": "Agpl.Statistics",
+      "id": "21314ac53da321c3",
+      "file": "agpl-statistics.json"
+    },
+    {
+      "name": "Agpl.Statistics.Series",
+      "id": "1c6990c9216ae05b",
+      "file": "agpl-statistics-series.json"
+    },
+    {
+      "name": "Agpl.Stochastics",
+      "id": "168bb27d83d84fa0",
+      "file": "agpl-stochastics.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp",
+      "id": "267802a3481be28b",
+      "file": "agpl-stochastics-mdp.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Action",
+      "id": "8a87e4ff750a4e13",
+      "file": "agpl-stochastics-mdp-action.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Bellman",
+      "id": "e3bb4b44dfd784ce",
+      "file": "agpl-stochastics-mdp-bellman.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Containers",
+      "id": "fd2956c184ee8653",
+      "file": "agpl-stochastics-mdp-containers.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Outcome",
+      "id": "8171df24d5c59c75",
+      "file": "agpl-stochastics-mdp-outcome.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Problem",
+      "id": "211b073ac8df786d",
+      "file": "agpl-stochastics-mdp-problem.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Solver",
+      "id": "9bab80c94ea6a360",
+      "file": "agpl-stochastics-mdp-solver.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Solver.Backwards",
+      "id": "4beb8f94630058c4",
+      "file": "agpl-stochastics-mdp-solver-backwards.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Solver.Common",
+      "id": "7a8c8ee7f0f3e8b3",
+      "file": "agpl-stochastics-mdp-solver-common.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Solver.Naive",
+      "id": "7a6e625127cc6f0b",
+      "file": "agpl-stochastics-mdp-solver-naive.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Solver.Naive2",
+      "id": "6ccce70e6965d86e",
+      "file": "agpl-stochastics-mdp-solver-naive2.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Solver.Naive3",
+      "id": "7f0393c78da419fd",
+      "file": "agpl-stochastics-mdp-solver-naive3.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.State",
+      "id": "9e575a09abff7d93",
+      "file": "agpl-stochastics-mdp-state.json"
+    },
+    {
+      "name": "Agpl.Stochastics.Mdp.Value_Function",
+      "id": "afa283a6e18f562d",
+      "file": "agpl-stochastics-mdp-value_function.json"
+    },
+    {
+      "name": "Agpl.Streams",
+      "id": "e27aba843ed0aa85",
+      "file": "agpl-streams.json"
+    },
+    {
+      "name": "Agpl.Streams.Circular",
+      "id": "e1961e2134443344",
+      "file": "agpl-streams-circular.json"
+    },
+    {
+      "name": "Agpl.Streams.Circular_Unbounded",
+      "id": "4d704307349cacdc",
+      "file": "agpl-streams-circular_unbounded.json"
+    },
+    {
+      "name": "Agpl.Streams.Controlled",
+      "id": "cc5efe8d55b17849",
+      "file": "agpl-streams-controlled.json"
+    },
+    {
+      "name": "Agpl.Streams.File",
+      "id": "1c9f7d0afa8aeb95",
+      "file": "agpl-streams-file.json"
+    },
+    {
+      "name": "Agpl.Streams.Filter",
+      "id": "e111d0140b658bbf",
+      "file": "agpl-streams-filter.json"
+    },
+    {
+      "name": "Agpl.Streams.Filter.Bandwidth_Throttle",
+      "id": "14245a8a88971751",
+      "file": "agpl-streams-filter-bandwidth_throttle.json"
+    },
+    {
+      "name": "Agpl.Streams.Filter.Buffered_Unbounded",
+      "id": "cdde6280939bbd5a",
+      "file": "agpl-streams-filter-buffered_unbounded.json"
+    },
+    {
+      "name": "Agpl.Streams.Memory_arrays",
+      "id": "473b4f3433c7d436",
+      "file": "agpl-streams-memory_arrays.json"
+    },
+    {
+      "name": "Agpl.Streams.Memory_arrays_constrained",
+      "id": "7b797a6d29e665fd",
+      "file": "agpl-streams-memory_arrays_constrained.json"
+    },
+    {
+      "name": "Agpl.Streams.Observable",
+      "id": "14e273a90a397abd",
+      "file": "agpl-streams-observable.json"
+    },
+    {
+      "name": "Agpl.Streams.Observable_Filter",
+      "id": "c8dddb1b93546d03",
+      "file": "agpl-streams-observable_filter.json"
+    },
+    {
+      "name": "Agpl.Strings",
+      "id": "84d8fd62072f7e6a",
+      "file": "agpl-strings.json"
+    },
+    {
+      "name": "Agpl.Strings.Enum_Padding",
+      "id": "9b693a1a97a74f80",
+      "file": "agpl-strings-enum_padding.json"
+    },
+    {
+      "name": "Agpl.Strings.Fields",
+      "id": "df50449ded645d2c",
+      "file": "agpl-strings-fields.json"
+    },
+    {
+      "name": "Agpl.Strings.Pointers",
+      "id": "afaa8193dea94f0d",
+      "file": "agpl-strings-pointers.json"
+    },
+    {
+      "name": "Agpl.Strings.Utf8",
+      "id": "05e37b409284c415",
+      "file": "agpl-strings-utf8.json"
+    },
+    {
+      "name": "Agpl.Task_Termination",
+      "id": "b24eaf064d07d255",
+      "file": "agpl-task_termination.json"
+    },
+    {
+      "name": "Agpl.Tasking",
+      "id": "4c00778ad2efc79b",
+      "file": "agpl-tasking.json"
+    },
+    {
+      "name": "Agpl.Tasking.Code",
+      "id": "baaa8aa368b4322a",
+      "file": "agpl-tasking-code.json"
+    },
+    {
+      "name": "Agpl.Tasking.Generic_Workers",
+      "id": "50113374bd20e42c",
+      "file": "agpl-tasking-generic_workers.json"
+    },
+    {
+      "name": "Agpl.Tasking.Period",
+      "id": "8b84e33b10d97638",
+      "file": "agpl-tasking-period.json"
+    },
+    {
+      "name": "Agpl.Tasking.Throttle",
+      "id": "4ffb4d6ce4ec9775",
+      "file": "agpl-tasking-throttle.json"
+    },
+    {
+      "name": "Agpl.Timed_Log",
+      "id": "fcb69f63efd43672",
+      "file": "agpl-timed_log.json"
+    },
+    {
+      "name": "Agpl.Timed_Transformer",
+      "id": "7cbb114a50c43ae7",
+      "file": "agpl-timed_transformer.json"
+    },
+    {
+      "name": "Agpl.Trace",
+      "id": "a5d2c4298aebff61",
+      "file": "agpl-trace.json"
+    },
+    {
+      "name": "Agpl.Trace.Buffer",
+      "id": "055a6f7e7e267c82",
+      "file": "agpl-trace-buffer.json"
+    },
+    {
+      "name": "Agpl.Trace.Console",
+      "id": "c1a420e78ffda7c7",
+      "file": "agpl-trace-console.json"
+    },
+    {
+      "name": "Agpl.Trace.File",
+      "id": "752d182751a23d55",
+      "file": "agpl-trace-file.json"
+    },
+    {
+      "name": "Agpl.Trace.Root",
+      "id": "ca593180589938fc",
+      "file": "agpl-trace-root.json"
+    },
+    {
+      "name": "Agpl.Trace.Utils",
+      "id": "0508b8d49c24feb3",
+      "file": "agpl-trace-utils.json"
+    },
+    {
+      "name": "Agpl.Trace_Is",
+      "id": "97f5a3febea7a993",
+      "file": "agpl-trace_is.json"
+    },
+    {
+      "name": "Agpl.Transf2D",
+      "id": "189e20a9f2353dba",
+      "file": "agpl-transf2d.json"
+    },
+    {
+      "name": "Agpl.Types",
+      "id": "af7e03861030af79",
+      "file": "agpl-types.json"
+    },
+    {
+      "name": "Agpl.Types.Constants",
+      "id": "9d6fa6d82f8599ea",
+      "file": "agpl-types-constants.json"
+    },
+    {
+      "name": "Agpl.Types.Ustrings",
+      "id": "b9e3f0fed3b2d335",
+      "file": "agpl-types-ustrings.json"
+    },
+    {
+      "name": "Agpl.Unique_Id",
+      "id": "3805ab5402d9e474",
+      "file": "agpl-unique_id.json"
+    },
+    {
+      "name": "Agpl.URL",
+      "id": "1f6763332a76bc5a",
+      "file": "agpl-url.json"
+    },
+    {
+      "name": "Agpl.Xml",
+      "id": "65005fe9ac5f4fb5",
+      "file": "agpl-xml.json"
+    },
+    {
+      "name": "Agpl.Xml.Utils",
+      "id": "494e90c0d36af555",
+      "file": "agpl-xml-utils.json"
+    },
+    {
+      "name": "Asl",
+      "id": "a12e45b23513ff84",
+      "file": "asl.json"
+    },
+    {
+      "name": "Asl.Semaphore",
+      "id": "0892f1ecd5c83372",
+      "file": "asl-semaphore.json"
+    },
+    {
+      "name": "Asl.Semaphore.Counting",
+      "id": "d78b03202f12d33c",
+      "file": "asl-semaphore-counting.json"
+    },
+    {
+      "name": "DOM",
+      "id": "7e6e9877fff0dbcc",
+      "file": "dom.json"
+    },
+    {
+      "name": "DOM.Core",
+      "id": "3e74378e7ea82b1a",
+      "file": "dom-core.json"
+    },
+    {
+      "name": "DOM.Core.Attrs",
+      "id": "1ae7dfa8fa449a49",
+      "file": "dom-core-attrs.json"
+    },
+    {
+      "name": "DOM.Core.Cdata_Sections",
+      "id": "db70725b4a0e81ba",
+      "file": "dom-core-cdata_sections.json"
+    },
+    {
+      "name": "DOM.Core.Character_Datas",
+      "id": "75419084927a424c",
+      "file": "dom-core-character_datas.json"
+    },
+    {
+      "name": "DOM.Core.Comments",
+      "id": "00c62d7693281658",
+      "file": "dom-core-comments.json"
+    },
+    {
+      "name": "DOM.Core.Document_Fragments",
+      "id": "f3856134e5117687",
+      "file": "dom-core-document_fragments.json"
+    },
+    {
+      "name": "DOM.Core.Document_Types",
+      "id": "84bf2b0735dc7190",
+      "file": "dom-core-document_types.json"
+    },
+    {
+      "name": "DOM.Core.Documents",
+      "id": "344c0b23327e09bc",
+      "file": "dom-core-documents.json"
+    },
+    {
+      "name": "DOM.Core.Elements",
+      "id": "6a410428841e5bfa",
+      "file": "dom-core-elements.json"
+    },
+    {
+      "name": "DOM.Core.Entity_References",
+      "id": "c9cd308e677756ad",
+      "file": "dom-core-entity_references.json"
+    },
+    {
+      "name": "DOM.Core.Nodes",
+      "id": "27cdc9f9837fc69a",
+      "file": "dom-core-nodes.json"
+    },
+    {
+      "name": "Dom.Core.Nodes.Output",
+      "id": "704408c60537bd43",
+      "file": "dom-core-nodes-output.json"
+    },
+    {
+      "name": "DOM.Core.Notations",
+      "id": "a943b974f6d2282a",
+      "file": "dom-core-notations.json"
+    },
+    {
+      "name": "DOM.Core.Processing_Instructions",
+      "id": "204fe44e71a67179",
+      "file": "dom-core-processing_instructions.json"
+    },
+    {
+      "name": "DOM.Core.Texts",
+      "id": "9adb44d090b82c4d",
+      "file": "dom-core-texts.json"
+    },
+    {
+      "name": "DOM.Readers",
+      "id": "9941e9eb357989a0",
+      "file": "dom-readers.json"
+    },
+    {
+      "name": "Input_Sources",
+      "id": "ca21b0d8898e9c9c",
+      "file": "input_sources.json"
+    },
+    {
+      "name": "Input_Sources.File",
+      "id": "4c54dd8803b21e78",
+      "file": "input_sources-file.json"
+    },
+    {
+      "name": "Input_Sources.Strings",
+      "id": "7e9c20ff5f764eab",
+      "file": "input_sources-strings.json"
+    },
+    {
+      "name": "Permutations",
+      "id": "0a6931de9f4eec1a",
+      "file": "permutations.json"
+    },
+    {
+      "name": "Sax",
+      "id": "3bc51e82665dffc5",
+      "file": "sax.json"
+    },
+    {
+      "name": "Sax.Attributes",
+      "id": "2aee580472b6c67e",
+      "file": "sax-attributes.json"
+    },
+    {
+      "name": "Sax.Encodings",
+      "id": "4371d5e3183938d7",
+      "file": "sax-encodings.json"
+    },
+    {
+      "name": "Sax.Exceptions",
+      "id": "af0e4e7b387a8846",
+      "file": "sax-exceptions.json"
+    },
+    {
+      "name": "Sax.HTable",
+      "id": "a140c69e00d837a2",
+      "file": "sax-htable.json"
+    },
+    {
+      "name": "Sax.Locators",
+      "id": "b5632a58c96b6d9c",
+      "file": "sax-locators.json"
+    },
+    {
+      "name": "Sax.Models",
+      "id": "6c53eb7012f39251",
+      "file": "sax-models.json"
+    },
+    {
+      "name": "Sax.Readers",
+      "id": "0267e52b46c11e4d",
+      "file": "sax-readers.json"
+    },
+    {
+      "name": "Unicode",
+      "id": "2fcf76a4c3c75b1f",
+      "file": "unicode.json"
+    },
+    {
+      "name": "Unicode.CCS",
+      "id": "af9591389ca4c08b",
+      "file": "unicode-ccs.json"
+    },
+    {
+      "name": "Unicode.CCS.Iso_8859_1",
+      "id": "442b4c6e7ad9802e",
+      "file": "unicode-ccs-iso_8859_1.json"
+    },
+    {
+      "name": "Unicode.CCS.Iso_8859_2",
+      "id": "ce7c855c88b5b4eb",
+      "file": "unicode-ccs-iso_8859_2.json"
+    },
+    {
+      "name": "Unicode.CCS.Iso_8859_3",
+      "id": "0152a96808fea319",
+      "file": "unicode-ccs-iso_8859_3.json"
+    },
+    {
+      "name": "Unicode.CCS.Iso_8859_4",
+      "id": "9e2eac76842590e7",
+      "file": "unicode-ccs-iso_8859_4.json"
+    },
+    {
+      "name": "Unicode.CES",
+      "id": "ceb13a94ea010ccc",
+      "file": "unicode-ces.json"
+    },
+    {
+      "name": "Unicode.CES.Basic_8bit",
+      "id": "81230d2fb279c8cd",
+      "file": "unicode-ces-basic_8bit.json"
+    },
+    {
+      "name": "Unicode.CES.Utf16",
+      "id": "ac4723959c61522e",
+      "file": "unicode-ces-utf16.json"
+    },
+    {
+      "name": "Unicode.CES.Utf32",
+      "id": "0ee8e119a371f7b4",
+      "file": "unicode-ces-utf32.json"
+    },
+    {
+      "name": "Unicode.CES.Utf8",
+      "id": "b89c29e6d7ff2a5f",
+      "file": "unicode-ces-utf8.json"
+    },
+    {
+      "name": "Unicode.Names",
+      "id": "c82f23866ad2862b",
+      "file": "unicode-names.json"
+    },
+    {
+      "name": "Unicode.Names.Alpha_Presentation_Forms",
+      "id": "a9d76a2c18590a0c",
+      "file": "unicode-names-alpha_presentation_forms.json"
+    },
+    {
+      "name": "Unicode.Names.Arabic",
+      "id": "c0cab875e5f16c3c",
+      "file": "unicode-names-arabic.json"
+    },
+    {
+      "name": "Unicode.Names.Arabic_Present_FormsA",
+      "id": "a20de7170c8837ad",
+      "file": "unicode-names-arabic_present_formsa.json"
+    },
+    {
+      "name": "Unicode.Names.Arabic_Present_FormsB",
+      "id": "d5776fabfecd1e4f",
+      "file": "unicode-names-arabic_present_formsb.json"
+    },
+    {
+      "name": "Unicode.Names.Armenian",
+      "id": "d4f556fb010ac630",
+      "file": "unicode-names-armenian.json"
+    },
+    {
+      "name": "Unicode.Names.Arrows",
+      "id": "3430bcf9598a0e0e",
+      "file": "unicode-names-arrows.json"
+    },
+    {
+      "name": "Unicode.Names.Basic_Latin",
+      "id": "796ff177d396c517",
+      "file": "unicode-names-basic_latin.json"
+    },
+    {
+      "name": "Unicode.Names.Bengali",
+      "id": "46e9e2c01978f611",
+      "file": "unicode-names-bengali.json"
+    },
+    {
+      "name": "Unicode.Names.Block_Elements",
+      "id": "ac56219b1fb5da0d",
+      "file": "unicode-names-block_elements.json"
+    },
+    {
+      "name": "Unicode.Names.Bopomofo",
+      "id": "e68082fdea69925a",
+      "file": "unicode-names-bopomofo.json"
+    },
+    {
+      "name": "Unicode.Names.Bopomofo_Extended",
+      "id": "c5837a46edf8eea8",
+      "file": "unicode-names-bopomofo_extended.json"
+    },
+    {
+      "name": "Unicode.Names.Box_Drawing",
+      "id": "76f3e56e23306126",
+      "file": "unicode-names-box_drawing.json"
+    },
+    {
+      "name": "Unicode.Names.Braille_Patterns",
+      "id": "6f6adafc88b97b9c",
+      "file": "unicode-names-braille_patterns.json"
+    },
+    {
+      "name": "Unicode.Names.Canadian_Aboriginal",
+      "id": "41985ac12f48c468",
+      "file": "unicode-names-canadian_aboriginal.json"
+    },
+    {
+      "name": "Unicode.Names.Cherokee",
+      "id": "ad4a27981b28ee90",
+      "file": "unicode-names-cherokee.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Compat_Ideographs",
+      "id": "c46f60d05f406a53",
+      "file": "unicode-names-cjk_compat_ideographs.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Compatibility",
+      "id": "0fe1cb91ddad61eb",
+      "file": "unicode-names-cjk_compatibility.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Compatibility_Forms",
+      "id": "53db2f4cf32fb7ec",
+      "file": "unicode-names-cjk_compatibility_forms.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Letters_Months",
+      "id": "a3c1b2abe74ee80f",
+      "file": "unicode-names-cjk_letters_months.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Radicals_Supplement",
+      "id": "42f06837c23309a1",
+      "file": "unicode-names-cjk_radicals_supplement.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Symbols_And_Punct",
+      "id": "922efc762f05c414",
+      "file": "unicode-names-cjk_symbols_and_punct.json"
+    },
+    {
+      "name": "Unicode.Names.Cjk_Unified_Ideographs",
+      "id": "338946ac52195263",
+      "file": "unicode-names-cjk_unified_ideographs.json"
+    },
+    {
+      "name": "Unicode.Names.Combining_Diacritical",
+      "id": "2a5f44774ca6dd2b",
+      "file": "unicode-names-combining_diacritical.json"
+    },
+    {
+      "name": "Unicode.Names.Combining_Half_Marks",
+      "id": "92dbaa904ba7d6f5",
+      "file": "unicode-names-combining_half_marks.json"
+    },
+    {
+      "name": "Unicode.Names.Combining_Marks_Symbols",
+      "id": "b291036b16c04406",
+      "file": "unicode-names-combining_marks_symbols.json"
+    },
+    {
+      "name": "Unicode.Names.Control_Pictures",
+      "id": "57a31bd3683dac29",
+      "file": "unicode-names-control_pictures.json"
+    },
+    {
+      "name": "Unicode.Names.Currency_Symbols",
+      "id": "11d4ad97a4c82d6b",
+      "file": "unicode-names-currency_symbols.json"
+    },
+    {
+      "name": "Unicode.Names.Cyrillic",
+      "id": "0b320baa5957c8ae",
+      "file": "unicode-names-cyrillic.json"
+    },
+    {
+      "name": "Unicode.Names.Devanagari",
+      "id": "dc64c4e8c393c646",
+      "file": "unicode-names-devanagari.json"
+    },
+    {
+      "name": "Unicode.Names.Dingbats",
+      "id": "935f383d0c0b0397",
+      "file": "unicode-names-dingbats.json"
+    },
+    {
+      "name": "Unicode.Names.Enclosed_Alphanumerics",
+      "id": "feb7f8a384350cef",
+      "file": "unicode-names-enclosed_alphanumerics.json"
+    },
+    {
+      "name": "Unicode.Names.Ethiopic",
+      "id": "01b0d4bbe356a77c",
+      "file": "unicode-names-ethiopic.json"
+    },
+    {
+      "name": "Unicode.Names.General_Punctuation",
+      "id": "6d061a8f61eb51f5",
+      "file": "unicode-names-general_punctuation.json"
+    },
+    {
+      "name": "Unicode.Names.Geometric_Shapes",
+      "id": "c5032c9c9e86b9a8",
+      "file": "unicode-names-geometric_shapes.json"
+    },
+    {
+      "name": "Unicode.Names.Georgian",
+      "id": "c639135d99236a52",
+      "file": "unicode-names-georgian.json"
+    },
+    {
+      "name": "Unicode.Names.Greek",
+      "id": "355ebed83c2341b6",
+      "file": "unicode-names-greek.json"
+    },
+    {
+      "name": "Unicode.Names.Greek_Extended",
+      "id": "24d09313d7ff7ced",
+      "file": "unicode-names-greek_extended.json"
+    },
+    {
+      "name": "Unicode.Names.Gujarati",
+      "id": "94d0b6f570fc5e66",
+      "file": "unicode-names-gujarati.json"
+    },
+    {
+      "name": "Unicode.Names.Gurmukhi",
+      "id": "52ae70aa0d1b7878",
+      "file": "unicode-names-gurmukhi.json"
+    },
+    {
+      "name": "Unicode.Names.Half_Full_Withdt_Forms",
+      "id": "2ffee19d51952272",
+      "file": "unicode-names-half_full_withdt_forms.json"
+    },
+    {
+      "name": "Unicode.Names.Hangul_Compatibility_Jamo",
+      "id": "5fd251743a911023",
+      "file": "unicode-names-hangul_compatibility_jamo.json"
+    },
+    {
+      "name": "Unicode.Names.Hangul_Jamo",
+      "id": "3df2c63128b73cb2",
+      "file": "unicode-names-hangul_jamo.json"
+    },
+    {
+      "name": "Unicode.Names.Hangul_Syllables",
+      "id": "09aba1088848d3d7",
+      "file": "unicode-names-hangul_syllables.json"
+    },
+    {
+      "name": "Unicode.Names.Hebrew",
+      "id": "732417c57cc4245f",
+      "file": "unicode-names-hebrew.json"
+    },
+    {
+      "name": "Unicode.Names.High_Private_Surrogates",
+      "id": "035178b1e32c7c6c",
+      "file": "unicode-names-high_private_surrogates.json"
+    },
+    {
+      "name": "Unicode.Names.High_Surrogates",
+      "id": "5f4fb6f03523be43",
+      "file": "unicode-names-high_surrogates.json"
+    },
+    {
+      "name": "Unicode.Names.Hiragana",
+      "id": "bec707e1bf2bbe9a",
+      "file": "unicode-names-hiragana.json"
+    },
+    {
+      "name": "Unicode.Names.Ideograph_Descr_Chars",
+      "id": "269884a83cafd939",
+      "file": "unicode-names-ideograph_descr_chars.json"
+    },
+    {
+      "name": "Unicode.Names.Ipa_Extensions",
+      "id": "ab5b19400760ecac",
+      "file": "unicode-names-ipa_extensions.json"
+    },
+    {
+      "name": "Unicode.Names.Kanbun",
+      "id": "5cb129fd84c867e9",
+      "file": "unicode-names-kanbun.json"
+    },
+    {
+      "name": "Unicode.Names.Kangxi_Radicals",
+      "id": "4a5ce41d4f3df039",
+      "file": "unicode-names-kangxi_radicals.json"
+    },
+    {
+      "name": "Unicode.Names.Kannada",
+      "id": "0473aa7334457091",
+      "file": "unicode-names-kannada.json"
+    },
+    {
+      "name": "Unicode.Names.Katakana",
+      "id": "564e8560813038a7",
+      "file": "unicode-names-katakana.json"
+    },
+    {
+      "name": "Unicode.Names.Khmer",
+      "id": "28966420ea2fd160",
+      "file": "unicode-names-khmer.json"
+    },
+    {
+      "name": "Unicode.Names.Lao",
+      "id": "25160d8487c56fa7",
+      "file": "unicode-names-lao.json"
+    },
+    {
+      "name": "Unicode.Names.Latin_1_Supplement",
+      "id": "ffee8ae0bc1edf5d",
+      "file": "unicode-names-latin_1_supplement.json"
+    },
+    {
+      "name": "Unicode.Names.Latin_Extended_A",
+      "id": "76a835031955c3bb",
+      "file": "unicode-names-latin_extended_a.json"
+    },
+    {
+      "name": "Unicode.Names.Latin_Extended_Additional",
+      "id": "3ed7308915c8aba6",
+      "file": "unicode-names-latin_extended_additional.json"
+    },
+    {
+      "name": "Unicode.Names.Latin_Extended_B",
+      "id": "fea9cc3ecfe85ade",
+      "file": "unicode-names-latin_extended_b.json"
+    },
+    {
+      "name": "Unicode.Names.Letterlike_Symbols",
+      "id": "7bbba3ad9a741fb9",
+      "file": "unicode-names-letterlike_symbols.json"
+    },
+    {
+      "name": "Unicode.Names.Low_Surrogates",
+      "id": "1d9b8efa3374f425",
+      "file": "unicode-names-low_surrogates.json"
+    },
+    {
+      "name": "Unicode.Names.Malayalam",
+      "id": "bd50dc5c30d3ee6c",
+      "file": "unicode-names-malayalam.json"
+    },
+    {
+      "name": "Unicode.Names.Mathematical_Operators",
+      "id": "98e34a93e7ddd88b",
+      "file": "unicode-names-mathematical_operators.json"
+    },
+    {
+      "name": "Unicode.Names.Miscellaneous_Symbols",
+      "id": "78632c2b07f116a2",
+      "file": "unicode-names-miscellaneous_symbols.json"
+    },
+    {
+      "name": "Unicode.Names.Miscellaneous_Technical",
+      "id": "7a628d7c274b0d90",
+      "file": "unicode-names-miscellaneous_technical.json"
+    },
+    {
+      "name": "Unicode.Names.Mongolian",
+      "id": "572e7a0b73dedd95",
+      "file": "unicode-names-mongolian.json"
+    },
+    {
+      "name": "Unicode.Names.Myanmar",
+      "id": "9c646d0564a23b1f",
+      "file": "unicode-names-myanmar.json"
+    },
+    {
+      "name": "Unicode.Names.Number_Forms",
+      "id": "b9380d0564747b2b",
+      "file": "unicode-names-number_forms.json"
+    },
+    {
+      "name": "Unicode.Names.Ogham",
+      "id": "4dad531851cdb589",
+      "file": "unicode-names-ogham.json"
+    },
+    {
+      "name": "Unicode.Names.Optical_Chars_Recognition",
+      "id": "69d545a9c8b77218",
+      "file": "unicode-names-optical_chars_recognition.json"
+    },
+    {
+      "name": "Unicode.Names.Oriya",
+      "id": "327daa70f1aaf8fd",
+      "file": "unicode-names-oriya.json"
+    },
+    {
+      "name": "Unicode.Names.Private_Use",
+      "id": "a0677f0d8dc0d3b8",
+      "file": "unicode-names-private_use.json"
+    },
+    {
+      "name": "Unicode.Names.Runic",
+      "id": "5fe41a617ea2e394",
+      "file": "unicode-names-runic.json"
+    },
+    {
+      "name": "Unicode.Names.Sinhala",
+      "id": "c3f13fa4a1dd8657",
+      "file": "unicode-names-sinhala.json"
+    },
+    {
+      "name": "Unicode.Names.Small_Form_Variants",
+      "id": "5665976e67c68ec5",
+      "file": "unicode-names-small_form_variants.json"
+    },
+    {
+      "name": "Unicode.Names.Spacing_Modifier_Letters",
+      "id": "117721a94b7c885a",
+      "file": "unicode-names-spacing_modifier_letters.json"
+    },
+    {
+      "name": "Unicode.Names.Specials",
+      "id": "2d6ae37e17aefd7b",
+      "file": "unicode-names-specials.json"
+    },
+    {
+      "name": "Unicode.Names.Super_And_Sub_Scripts",
+      "id": "b9d921d4927bb721",
+      "file": "unicode-names-super_and_sub_scripts.json"
+    },
+    {
+      "name": "Unicode.Names.Syriac",
+      "id": "67261252ca556288",
+      "file": "unicode-names-syriac.json"
+    },
+    {
+      "name": "Unicode.Names.Tamil",
+      "id": "b1d3741866a8a72f",
+      "file": "unicode-names-tamil.json"
+    },
+    {
+      "name": "Unicode.Names.Telugu",
+      "id": "4e4335c6b17fa0db",
+      "file": "unicode-names-telugu.json"
+    },
+    {
+      "name": "Unicode.Names.Thaana",
+      "id": "84b36ddbfc4ec394",
+      "file": "unicode-names-thaana.json"
+    },
+    {
+      "name": "Unicode.Names.Thai",
+      "id": "a7a514ba45b59410",
+      "file": "unicode-names-thai.json"
+    },
+    {
+      "name": "Unicode.Names.Tibetan",
+      "id": "ab6613c49255db22",
+      "file": "unicode-names-tibetan.json"
+    },
+    {
+      "name": "Unicode.Names.Yi_Radicals",
+      "id": "65ab4205c9493f37",
+      "file": "unicode-names-yi_radicals.json"
+    },
+    {
+      "name": "Unicode.Names.Yi_Syllables",
+      "id": "b299992aef532934",
+      "file": "unicode-names-yi_syllables.json"
+    }
+  ]
+}

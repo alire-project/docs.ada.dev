@@ -1,0 +1,234 @@
+{
+  "schema_version": "1",
+  "crate": "ada_fuse",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:48:00Z",
+  "description": "Ada bindings for Fuse (Filesystem in Userspace)",
+  "authors": [
+    "Alexander Herr <thissideup@riseup.net>",
+    "Nicolai Ruckel <nicolai.ruckel@uni-weimar.de>",
+    "Christopher Lübbemeier <christopher.luebbemeier@googlemail.com>"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [],
+  "website": "https://github.com/medsec/ada-fuse",
+  "repository": {
+    "url": "https://github.com/medsec/ada-fuse",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "libfuse",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Fuse",
+      "id": "125c521a95b22c84",
+      "file": "fuse.json"
+    },
+    {
+      "name": "Fuse.Aux",
+      "id": "e306d8c5c0bd2120",
+      "file": "fuse-aux.json"
+    },
+    {
+      "name": "Fuse.General",
+      "id": "33d78af2aa5cf4b1",
+      "file": "fuse-general.json"
+    },
+    {
+      "name": "Fuse.Main",
+      "id": "65f46b1975798d4a",
+      "file": "fuse-main.json"
+    },
+    {
+      "name": "Fuse.Main.Access_Ada",
+      "id": "5ce3b15c47e8a612",
+      "file": "fuse-main-access_ada.json"
+    },
+    {
+      "name": "Fuse.Main.ChMod",
+      "id": "5c93ac87a7a4c39b",
+      "file": "fuse-main-chmod.json"
+    },
+    {
+      "name": "Fuse.Main.ChOwn",
+      "id": "dbe72b26a163aa9c",
+      "file": "fuse-main-chown.json"
+    },
+    {
+      "name": "Fuse.Main.Create",
+      "id": "335c448779d4f652",
+      "file": "fuse-main-create.json"
+    },
+    {
+      "name": "Fuse.Main.Destroy",
+      "id": "874f8faee145d0f2",
+      "file": "fuse-main-destroy.json"
+    },
+    {
+      "name": "Fuse.Main.FGetAttr",
+      "id": "b5c497e9fa940a65",
+      "file": "fuse-main-fgetattr.json"
+    },
+    {
+      "name": "Fuse.Main.Flush",
+      "id": "87a3bb6528a5b5fe",
+      "file": "fuse-main-flush.json"
+    },
+    {
+      "name": "Fuse.Main.FSync",
+      "id": "ba686235c08a67b0",
+      "file": "fuse-main-fsync.json"
+    },
+    {
+      "name": "Fuse.Main.FSyncDir",
+      "id": "ab771bdd0cc8529a",
+      "file": "fuse-main-fsyncdir.json"
+    },
+    {
+      "name": "Fuse.Main.FTruncate",
+      "id": "1c8a1a072b61c3b6",
+      "file": "fuse-main-ftruncate.json"
+    },
+    {
+      "name": "Fuse.Main.GetAttr",
+      "id": "f64032b6a6d9bb8d",
+      "file": "fuse-main-getattr.json"
+    },
+    {
+      "name": "Fuse.Main.GetXAttr",
+      "id": "0e4c94866c588f8f",
+      "file": "fuse-main-getxattr.json"
+    },
+    {
+      "name": "Fuse.Main.Init",
+      "id": "a656ca216427c17f",
+      "file": "fuse-main-init.json"
+    },
+    {
+      "name": "Fuse.Main.Link",
+      "id": "965161bbd98a717a",
+      "file": "fuse-main-link.json"
+    },
+    {
+      "name": "Fuse.Main.ListXAttr",
+      "id": "53baa49d79b00bbd",
+      "file": "fuse-main-listxattr.json"
+    },
+    {
+      "name": "Fuse.Main.MkDir",
+      "id": "68da006584ee0c99",
+      "file": "fuse-main-mkdir.json"
+    },
+    {
+      "name": "Fuse.Main.MkNod",
+      "id": "5f4c665bc4e12440",
+      "file": "fuse-main-mknod.json"
+    },
+    {
+      "name": "Fuse.Main.Open",
+      "id": "ebd8c9d150a10da8",
+      "file": "fuse-main-open.json"
+    },
+    {
+      "name": "Fuse.Main.OpenDir",
+      "id": "b146e0fde088dbcc",
+      "file": "fuse-main-opendir.json"
+    },
+    {
+      "name": "Fuse.Main.Read",
+      "id": "8fbfcb79c2683cf6",
+      "file": "fuse-main-read.json"
+    },
+    {
+      "name": "Fuse.Main.ReadDir",
+      "id": "8b986fd88769f796",
+      "file": "fuse-main-readdir.json"
+    },
+    {
+      "name": "Fuse.Main.ReadLink",
+      "id": "4198a0e6f1364e37",
+      "file": "fuse-main-readlink.json"
+    },
+    {
+      "name": "Fuse.Main.Release",
+      "id": "d05ac113f96319da",
+      "file": "fuse-main-release.json"
+    },
+    {
+      "name": "Fuse.Main.ReleaseDir",
+      "id": "b0aa0018002c9f6e",
+      "file": "fuse-main-releasedir.json"
+    },
+    {
+      "name": "Fuse.Main.RemoveXAttr",
+      "id": "f56e92a7d7435be3",
+      "file": "fuse-main-removexattr.json"
+    },
+    {
+      "name": "Fuse.Main.Rename",
+      "id": "ef4b6f6b464ae2b0",
+      "file": "fuse-main-rename.json"
+    },
+    {
+      "name": "Fuse.Main.RmDir",
+      "id": "40eec94fe7f4b0d4",
+      "file": "fuse-main-rmdir.json"
+    },
+    {
+      "name": "Fuse.Main.SetXAttr",
+      "id": "528f021bb7839c17",
+      "file": "fuse-main-setxattr.json"
+    },
+    {
+      "name": "Fuse.Main.StatFS",
+      "id": "954200da47884516",
+      "file": "fuse-main-statfs.json"
+    },
+    {
+      "name": "Fuse.Main.SymLink",
+      "id": "9cd40086e3e0cace",
+      "file": "fuse-main-symlink.json"
+    },
+    {
+      "name": "Fuse.Main.Truncate",
+      "id": "7b839ed18975f431",
+      "file": "fuse-main-truncate.json"
+    },
+    {
+      "name": "Fuse.Main.Unlink",
+      "id": "1d8ab28930367d3f",
+      "file": "fuse-main-unlink.json"
+    },
+    {
+      "name": "Fuse.Main.UTime",
+      "id": "47bb8106b3f6ac23",
+      "file": "fuse-main-utime.json"
+    },
+    {
+      "name": "Fuse.Main.Write",
+      "id": "c24ecbfba58ee3da",
+      "file": "fuse-main-write.json"
+    },
+    {
+      "name": "Fuse.Operations",
+      "id": "48f5b2ae9192978b",
+      "file": "fuse-operations.json"
+    },
+    {
+      "name": "Fuse.System",
+      "id": "c7fe17c487d3c6ef",
+      "file": "fuse-system.json"
+    },
+    {
+      "name": "Fuse.System.Operations",
+      "id": "ad0174e793993a52",
+      "file": "fuse-system-operations.json"
+    }
+  ]
+}

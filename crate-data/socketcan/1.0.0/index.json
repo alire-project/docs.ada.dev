@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "socketcan",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:58:13Z",
+  "description": "An Ada language binding to SocketCAN for GNU/Linux systems",
+  "authors": [],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/glencornell/ada-socketcan",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Sockets",
+      "id": "f24383b89891240b",
+      "file": "sockets.json"
+    },
+    {
+      "name": "Sockets.Can",
+      "id": "2d5c117183737419",
+      "file": "sockets-can.json"
+    },
+    {
+      "name": "Sockets.Can.Broadcast_Manager",
+      "id": "288446bc63b985a3",
+      "file": "sockets-can-broadcast_manager.json"
+    },
+    {
+      "name": "Sockets.Can_Bcm_Thin",
+      "id": "fc1d55fd253e0ed5",
+      "file": "sockets-can_bcm_thin.json"
+    },
+    {
+      "name": "Sockets.Can_Frame",
+      "id": "2fbdd8d812c89428",
+      "file": "sockets-can_frame.json"
+    },
+    {
+      "name": "Sockets.Can_Thin",
+      "id": "8c0da09f5b16b5af",
+      "file": "sockets-can_thin.json"
+    },
+    {
+      "name": "Sockets.Os_Constants",
+      "id": "d00068bc49cb104a",
+      "file": "sockets-os_constants.json"
+    }
+  ]
+}

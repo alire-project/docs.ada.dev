@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "st7735",
+  "version": "1.0.0",
+  "documented_at": "2026-09-22T02:22:35Z",
+  "description": "ST7735 SPI LCD driver",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [],
+  "website": "https://github.com/JeremyGrosser/st7735",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/st7735",
+    "host": "github",
+    "commit": "7d527ae23ef6a67dd5da8a6dfb361cb96b08d6c1"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ST7735",
+      "id": "71cf347c6f8934ef",
+      "file": "st7735.json"
+    },
+    {
+      "name": "St7735_Config",
+      "id": "150313a386ffa59b",
+      "file": "st7735_config.json"
+    }
+  ]
+}

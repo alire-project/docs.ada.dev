@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "controlled_io",
+  "version": "20240401.0.1",
+  "documented_at": "2026-03-04T02:55:17Z",
+  "description": "Files that are open while they exist and closed when they don't ",
+  "long_description": "# Controlled_IO\nFiles that are open while they exist and closed when they don't\n\nThis is a draft response to a request for a library for [Scope-based files](https://forum.ada-lang.io/t/ada-library-wishlist/14/5). Both binary and text I/O is supported. Please comment on whether or not you find this useful.\n\nThe library is completely portable. It has been compiled and tested with GNAT and ObjectAda, on Linux and Windows.\n\nControlled_Test and Controlled_Text are test programs. Both are user-unfriendly file-copy programs. Controlled_Test performs a binary copy; the output should always be identical to the input. Controlled_Text performs a line-by-line copy of text files; the output may have different line terminators than the input.\n\nControlled_UTF is a user-unfriendly program to convert a native text file to a [Universal Text File](https://github.com/jrcarter/Universal-Text-File).\n",
+  "authors": [
+    "Jeffrey Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "io",
+    "files",
+    "controlled",
+    "scope",
+    "binary",
+    "text"
+  ],
+  "website": "https://github.com/bracke/Controlled_IO",
+  "repository": {
+    "url": "https://github.com/bracke/Controlled_IO",
+    "host": "github",
+    "commit": "0cfe3ed52318bed75926d2bfb22950cecc8599f3"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Controlled_IO",
+      "id": "29d3a7724316a165",
+      "file": "controlled_io.json"
+    },
+    {
+      "name": "Controlled_IO.Text",
+      "id": "28a1f1c1cb570830",
+      "file": "controlled_io-text.json"
+    },
+    {
+      "name": "Controlled_IO.UTF",
+      "id": "baa981bf16ea1ed2",
+      "file": "controlled_io-utf.json"
+    },
+    {
+      "name": "Controlled_Io_Config",
+      "id": "389bf0be2bdd02a9",
+      "file": "controlled_io_config.json"
+    }
+  ]
+}

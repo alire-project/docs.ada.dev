@@ -1,0 +1,127 @@
+{
+  "schema_version": "1",
+  "crate": "prolog",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:55:15Z",
+  "description": "Simple Prolog library",
+  "authors": [
+    "Professor David C. Luckham <Anna-Request@Anna.Stanford.EDU>",
+    "Dale Stanbrough <dale@cs.rmit.edu.au>"
+  ],
+  "licenses": [
+    "custom-anna"
+  ],
+  "tags": [
+    "prolog",
+    "logic"
+  ],
+  "website": "https://github.com/jquorning/Prolog",
+  "repository": {
+    "url": "https://github.com/jquorning/Prolog",
+    "host": "github",
+    "commit": "6ac52773fdb45c0100152081780b2e31b5802986"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Anna_Filename_Utilities",
+      "id": "e0cb9675cb61ff65",
+      "file": "anna_filename_utilities.json"
+    },
+    {
+      "name": "Implementation_Dependent_Routines",
+      "id": "328960cc181f1059",
+      "file": "implementation_dependent_routines.json"
+    },
+    {
+      "name": "Prolog",
+      "id": "3592c3b3facfd1a3",
+      "file": "prolog.json"
+    },
+    {
+      "name": "Prolog.Ada_Logic",
+      "id": "18b5cb96981d8270",
+      "file": "prolog-ada_logic.json"
+    },
+    {
+      "name": "Prolog.Atom_Table",
+      "id": "2eaebaa896866314",
+      "file": "prolog-atom_table.json"
+    },
+    {
+      "name": "Prolog.Database",
+      "id": "3104f98faffd94da",
+      "file": "prolog-database.json"
+    },
+    {
+      "name": "Prolog.Error_Pkg",
+      "id": "b5d64f418c865f5c",
+      "file": "prolog-error_pkg.json"
+    },
+    {
+      "name": "Prolog.Errors",
+      "id": "c788ecc4e2fd2488",
+      "file": "prolog-errors.json"
+    },
+    {
+      "name": "Prolog.Evaluable_Predicates",
+      "id": "5ec0a629065ab73d",
+      "file": "prolog-evaluable_predicates.json"
+    },
+    {
+      "name": "Prolog.Execute",
+      "id": "bc9aee4fcef6c5a5",
+      "file": "prolog-execute.json"
+    },
+    {
+      "name": "Prolog.Garbage_Collection",
+      "id": "ec24bb5c7c6d7e96",
+      "file": "prolog-garbage_collection.json"
+    },
+    {
+      "name": "Prolog.Global_Objects",
+      "id": "9152d8138d81aa2f",
+      "file": "prolog-global_objects.json"
+    },
+    {
+      "name": "Prolog.Input_Output",
+      "id": "315dcfc449170e71",
+      "file": "prolog-input_output.json"
+    },
+    {
+      "name": "Prolog.Local_Stack",
+      "id": "78ce3b27b9b391d5",
+      "file": "prolog-local_stack.json"
+    },
+    {
+      "name": "Prolog.Read_In",
+      "id": "a721015c0ad6cb38",
+      "file": "prolog-read_in.json"
+    },
+    {
+      "name": "Prolog.Term_Pkg",
+      "id": "b84d3c41136b70e2",
+      "file": "prolog-term_pkg.json"
+    },
+    {
+      "name": "Prolog.Transformations",
+      "id": "b3ea44886d1f6541",
+      "file": "prolog-transformations.json"
+    },
+    {
+      "name": "Prolog.Var_Table",
+      "id": "7e4e97c6f8154481",
+      "file": "prolog-var_table.json"
+    },
+    {
+      "name": "Prolog.Variant_Garbage_Collection",
+      "id": "7e2cc987dc850c34",
+      "file": "prolog-variant_garbage_collection.json"
+    },
+    {
+      "name": "Prolog.Write_Out",
+      "id": "4e9530eb848fd572",
+      "file": "prolog-write_out.json"
+    }
+  ]
+}

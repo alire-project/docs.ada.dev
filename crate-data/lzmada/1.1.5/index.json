@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "crate": "lzmada",
+  "version": "1.1.5",
+  "documented_at": "2026-03-04T16:56:41Z",
+  "description": "Ada LZMA Library Binding",
+  "long_description": "A very thin Ada binding for the LZMA compression library.\nRoughly speaking, import some package:\n\n    with Lzma.Base;\n    with Lzma.Container;\n    with Lzma.Check;\n\nThen declare the LZMA stream:\n\n    Stream  : aliased Lzma.Base.lzma_stream := Lzma.Base.LZMA_STREAM_INIT;\n\nInitialize the LZMA stream as decoder (or as encoder):\n\n    Result := Lzma.Container.lzma_stream_decoder (Stream'Unchecked_Access,\n                                                  Long_Long_Integer'Last,\n                                                  Lzma.Container.LZMA_CONCATENATED);\n\nSetup the stream 'next_out', 'avail_out', 'next_in' and 'avail_in' and call\nthe lzma_code operation with the action (Lzma.Base.LZMA_RUN or Lzma.Base.LZMA_FINISH):\n\n    Result := Lzma.Base.lzma_code (Stream'Unchecked_Access, Action);\n\nClose the LZMA stream:\n\n    Lzma.Base.lzma_end (Stream'Unchecked_Access);\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "compression",
+    "lzma"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-lzma",
+  "repository": {
+    "url": "https://github.com/stcarrez/ada-lzma",
+    "host": "github",
+    "commit": "979df0feca24d10448d1d9a20a4db5c9e6cb9aae"
+  },
+  "dependencies": [
+    {
+      "crate": "liblzma",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "Lzma",
+      "id": "3b5d113903aa0d10",
+      "file": "lzma.json"
+    },
+    {
+      "name": "Lzma.Base",
+      "id": "162b2965d2fc614c",
+      "file": "lzma-base.json"
+    },
+    {
+      "name": "Lzma.Block",
+      "id": "0b7a2ccd746ecd96",
+      "file": "lzma-block.json"
+    },
+    {
+      "name": "Lzma.Check",
+      "id": "1dfa9c26f158334e",
+      "file": "lzma-check.json"
+    },
+    {
+      "name": "Lzma.Container",
+      "id": "6e9ed5a5035e34aa",
+      "file": "lzma-container.json"
+    },
+    {
+      "name": "Lzma.Filter",
+      "id": "510f42fbb90698a7",
+      "file": "lzma-filter.json"
+    },
+    {
+      "name": "Lzma.StreamFlags",
+      "id": "f459c9b45ea44b74",
+      "file": "lzma-streamflags.json"
+    },
+    {
+      "name": "Lzma.Vli",
+      "id": "a1abf63e196b55a1",
+      "file": "lzma-vli.json"
+    },
+    {
+      "name": "lzma_lzma_h",
+      "id": "39ac9a3a675d4955",
+      "file": "lzma_lzma_h.json"
+    }
+  ]
+}

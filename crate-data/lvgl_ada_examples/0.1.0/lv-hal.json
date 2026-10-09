@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lvgl_ada_examples","version":"0.1.0","id":"f3dea4d2505318ef","name":"Lv.Hal","qualified_name":"Lv.Hal","kind":"ada_package","location":{"file":"../../../home/runner/.local/share/alire/builds/lvgl_ada_0.1.0_997edc53/6abe0c0011b4d4e18976afd8c2339ae2f1396ec5e66ef8eb2a3993c1abc2a6df/src/lv-hal.ads","line":1,"column":9},"code":"package Lv.Hal"}

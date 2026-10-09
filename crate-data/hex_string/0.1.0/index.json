@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "hex_string",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T15:17:13Z",
+  "description": "Get a string of almost any type as hex with underscores",
+  "authors": [
+    "Kevin Chadwick"
+  ],
+  "licenses": [
+    "0BSD"
+  ],
+  "tags": [
+    "embedded",
+    "hex",
+    "spark"
+  ],
+  "website": "https://github.com/kevlar700/hex_string",
+  "repository": {
+    "url": "https://github.com/kevlar700/hex_string",
+    "host": "github",
+    "commit": "a0df69e03595cacdca10fc531cba0d3c58119b05"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Hex_String",
+      "id": "e2cdc62ddb780f48",
+      "file": "hex_string.json"
+    },
+    {
+      "name": "Hex_String_Config",
+      "id": "37af91a6d149fdeb",
+      "file": "hex_string_config.json"
+    }
+  ]
+}

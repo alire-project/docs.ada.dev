@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"partord","version":"1.0.0","id":"fb307fd513b77ea5","name":"Partial_Order_Sorting","qualified_name":"Partial_Order_Sorting","kind":"ada_package","location":{"file":"src/partial_order_sorting.ads","line":1,"column":9},"code":"package Partial_Order_Sorting"}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "spark_math",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:58:35Z",
+  "description": "Formally verified mathematical library in SPARK",
+  "long_description": "# Spark_Math\n\n[![License](https://img.shields.io/badge/license-Apache--2.0%20WITH%20LLVM--exception-blue.svg)](LICENSE)\n[![SPARK](https://img.shields.io/badge/SPARK-Gold-gold.svg)](https://www.adacore.com/about-spark)\n\nA formally verified mathematical library written in SPARK/Ada, providing common mathematical functions for both integer and fixed-point types with compile-time proof of correctness.\n\n## Features\n\n### Integer Math (`Spark_Math.Integer`)\n\n| Function | Description | Complexity |\n|----------|-------------|------------|\n| `Sqrt` | Integer square root (floor of sqrt N) | O(log N) |\n| `Power` | Exponentiation with overflow protection | O(Exp) |\n| `GCD` | Greatest common divisor (Euclidean algorithm) | O(log min(A,B)) |\n| `Max` | Maximum of two values | O(1) |\n| `Min` | Minimum of two values | O(1) |\n\n### Fixed-Point Math (`Spark_Math.Fixed`)\n\n| Function | Description | Complexity |\n|----------|-------------|------------|\n| `Sqrt` | Square root approximation (within `'Small`) | O(log(N/Small)) |\n| `Max` | Maximum of two values | O(1) |\n| `Min` | Minimum of two values | O(1) |\n\n## Roadmap\n\nThe goal is to provide SPARK-verified equivalents of `Ada.Numerics.Generic_Elementary_Functions` for fixed-point and integer types.\n\n### Planned Functions\n\n| Category | Functions | Status |\n|----------|-----------|--------|\n| **Basic** | `Sqrt` | Implemented |\n| **Exponential** | `Log`, `Log(Base)`, `Exp`, `**` | Planned |\n| **Trigonometric** | `Sin`, `Cos`, `Tan`, `Cot` | Planned |\n| **Inverse Trig** | `Arcsin`, `Arccos`, `Arctan`, `Arccot` | Planned |\n| **Hyperbolic** | `Sinh`, `Cosh`, `Tanh`, `Coth` | Planned |\n| **Inverse Hyperbolic** | `Arcsinh`, `Arccosh`, `Arctanh`, `Arccoth` | Planned |\n\n### Implementation Notes\n\nUnlike floating-point implementations, fixed-point math requires:\n\n- **CORDIC algorithms** for trigonometric functions (no FPU dependency)\n- **Polynomial approximations** with bounded error analysis\n- **Range reduction** techniques proven correct in SPARK\n- **Cycle parameter support** for degree/radian flexibility\n\nContributions for any of these functions are welcome!\n\n## Usage\n\n### Integer Math Example\n\n```ada\nwith Spark_Math.Integer;\n\nprocedure Example is\n   --  Instantiate for your integer type\n   package My_Math is new Spark_Math.Integer (Integer);\n   \n   Result : Integer;\nbegin\n   --  Square root (floor)\n   Result := My_Math.Sqrt (17);      --  Returns 4\n   \n   --  Exponentiation\n   Result := My_Math.Power (2, 10);  --  Returns 1024\n   \n   --  Greatest common divisor\n   Result := My_Math.GCD (48, 18);   --  Returns 6\n   \n   --  Max and Min\n   Result := My_Math.Max (5, 3);     --  Returns 5\n   Result := My_Math.Min (5, 3);     --  Returns 3\nend Example;\n```\n\n### Fixed-Point Math Example\n\n```ada\nwith Spark_Math.Fixed;\n\nprocedure Example is\n   --  Define your fixed-point type\n   type Voltage is delta 0.001 range 0.0 .. 100.0;\n   \n   --  Instantiate for your type\n   package Voltage_Math is new Spark_Math.Fixed (Voltage);\n   \n   Result : Voltage;\nbegin\n   --  Square root (approximation within 'Small)\n   Result := Voltage_Math.Sqrt (4.0);   --  Returns ~= 2.0\n   Result := Voltage_Math.Sqrt (2.0);   --  Returns ~= 1.414\n   \n   --  Max and Min\n   Result := Voltage_Math.Max (3.5, 2.1);  --  Returns 3.5\n   Result := Voltage_Math.Min (3.5, 2.1);  --  Returns 2.1\nend Example;\n```\n\n## SPARK Verification\n\nThis library is designed for formal verification with SPARK. All functions include:\n\n- **Preconditions** (`Pre`): Specify valid input constraints\n- **Postconditions** (`Post`): Guarantee output properties\n- **Loop invariants**: Enable proof of loop correctness\n- **No runtime exceptions**: All potential issues are caught at proof time\n\n### Verification Status\n\nSPARK defines five proof levels:\n\n| Level | Description |\n|-------|-------------|\n| **Stone** | Valid SPARK code |\n| **Bronze** | Initialization and correct data flow |\n| **Silver** | Absence of run-time errors (AoRTE) |\n| **Gold** | Proof of key integrity properties |\n| **Platinum** | Full functional proof of requirements |\n\n| Package | Level |\n|---------|-------|\n| `Spark_Math.Numerics_Core` | Gold |\n| `Spark_Math.Integer` | Gold |\n| `Spark_Math.Fixed` | Gold |\n\n## Contributing\n\nContributions are welcome!\n\n## License\n\nThis project is licensed under the Apache-2.0 WITH LLVM-exception license. See [LICENSE](LICENSE) for details.\n\n",
+  "authors": [
+    "Heziode"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "spark",
+    "verification",
+    "math",
+    "sqrt",
+    "fixed-point"
+  ],
+  "repository": {
+    "url": "https://github.com/adarium-labs/spark_math",
+    "host": "github",
+    "commit": "8939f758a129b2dc44094de32e373f2243b9c6f7"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Spark_Math",
+      "id": "36b39fac5944ab3d",
+      "file": "spark_math.json"
+    },
+    {
+      "name": "Spark_Math.Fixed",
+      "id": "0ef54020c10e5a2c",
+      "file": "spark_math-fixed.json"
+    },
+    {
+      "name": "Spark_Math.Integer",
+      "id": "0710110608132510",
+      "file": "spark_math-integer.json"
+    },
+    {
+      "name": "Spark_Math.Numerics_Core",
+      "id": "6dae633e29acb395",
+      "file": "spark_math-numerics_core.json"
+    },
+    {
+      "name": "Spark_Math_Config",
+      "id": "39eaf8d5ba49571d",
+      "file": "spark_math_config.json"
+    }
+  ]
+}

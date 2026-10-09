@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c09_ad_converter",
+  "version": "1.9.0",
+  "documented_at": "2026-09-22T02:22:34Z",
+  "description": "Chapter 9: read the Pico ADC as counts, microvolts and fixed-point volts",
+  "long_description": "Chapter 9 - AD Converter\n\nAda rewrite of the Freenove \"AD Converter\" lesson for the Raspberry Pi Pico.\n\nThe sketch on GP26 (ADC0) prints three representations of the same\npotentiometer on one UART line:\n\n* `RP.ADC.Analog_Value` - the 12-bit code (`0 .. 4095`)\n* `RP.ADC.Microvolts` - that code scaled by the HAL with a `Float`\n* `Pico.Analog.Input.Volts` - a 32-bit ordinary fixed-point subtype\n  (`delta 0.1 mV`, `'Small => 2**(-16)`), converted from the count\n  by multiply-first / divide-second\n\nThe chapter is the notes I needed before that line made sense:\n\n* **AGND** and **ADC_VREF** are a filtered analogue pair, not a second\n  isolated supply. ADC3 (VSYS/3) and ADC4 (the on-chip temperature\n  sensor) are not available as general inputs.\n* The RP2040 ADC has dead zones at both rails. On my board the floor\n  sits around 19 counts (~15 mV) and the ceiling around 4081. Software\n  clamps those to `Volts'First` and `Volts'Last`.\n* `Free_Running` plus a 2 Hz `Put_Line` leaves stale samples in the\n  FIFO. The sketch uses `One_Shot`.\n* The three columns are three conversions, not three formats of one\n  sample. They may differ by a count or two.\n* `Sketch_09_1_ADC` is `No_Return` under the Jorvik profile. The\n  handler logs on `Ada.Text_IO` and re-raises; the embedded runtime\n  then halts. Fine for a sample you reset with BOOTSEL. SPARK would\n  want an outer loop instead.\n\nBuilt against `rp2040_hal` / the Pico BSP. Watch the UART with\nCoolTerm (or any 115200 8N1 terminal).\n\nRead the full tutorial at [Chapter 9 - AD Converter: three ways to read a\nvoltage](https://pi-ada-tutorial.sourceforge.io/pico_ada_c09_ad_converter), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_doc/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico_ada_c09_ad_converter/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c09_ad_converter",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_rp2040",
+      "version": "^15.4"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.9"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C09_Ad_Converter_Config",
+      "id": "5cfbe9118488d8c0",
+      "file": "pico_ada_c09_ad_converter_config.json"
+    }
+  ]
+}

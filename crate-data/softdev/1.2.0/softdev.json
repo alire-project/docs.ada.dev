@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"softdev","version":"1.2.0","id":"633708250c7d4ebf","name":"Softdev","qualified_name":"Softdev","kind":"ada_package","location":{"file":"src/softdev.ads","line":6,"column":9},"code":"package Softdev","documentation":{"description":"\nCopyright (C) 2025 Jeremy Grosser <jeremy@synack.me>\n\nSPDX-License-Identifier: BSD-3-Clause"}}

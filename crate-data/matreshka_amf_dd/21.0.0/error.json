@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "matreshka_amf_dd",
+  "version": "21.0.0",
+  "failed_at": "2026-03-04T16:57:35Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

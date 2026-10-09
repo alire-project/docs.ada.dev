@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "matreshka_spikedog_awsd",
+  "version": "21.0.0",
+  "failed_at": "2026-03-05T02:56:21Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

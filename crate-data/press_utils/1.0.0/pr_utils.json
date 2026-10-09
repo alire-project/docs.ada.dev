@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"press_utils","version":"1.0.0","id":"bb0a086b8be63a06","name":"Pr_Utils","qualified_name":"Pr_Utils","kind":"ada_package","location":{"file":"src/pr_utils.ads","line":1,"column":9},"code":"package Pr_Utils"}

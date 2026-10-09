@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"libkeccak","version":"3.0.0","id":"62afbeedce85d28d","name":"Keccak.Arch","qualified_name":"Keccak.Arch","kind":"ada_package","location":{"file":"src/common/keccak-arch.ads","line":30,"column":9},"code":"package Keccak.Arch","documentation":{"description":"@summary\nParent package for architectural-specific definitions (e.g. SIMD)."}}
