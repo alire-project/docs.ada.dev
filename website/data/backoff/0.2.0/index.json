@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "backoff",
+  "version": "0.2.0",
+  "documented_at": "2026-10-13T02:31:09Z",
+  "description": "Exponential backoff with jitter and retry",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "backoff",
+    "retry",
+    "jitter"
+  ],
+  "website": "https://github.com/kokhlo/backoff-ada",
+  "repository": {
+    "url": "https://github.com/kokhlo/backoff-ada",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Backoff",
+      "id": "42b6c4780790021c",
+      "file": "backoff.json"
+    },
+    {
+      "name": "Backoff.Retry",
+      "id": "2601f39f927c482f",
+      "file": "backoff-retry.json"
+    }
+  ]
+}
