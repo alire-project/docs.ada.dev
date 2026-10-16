@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "felix",
+  "version": "0.2.0",
+  "documented_at": "2026-03-04T03:00:13Z",
+  "description": "X/Open Native Language System (NLS) for Ada",
+  "authors": [
+    "Lev Kujawski"
+  ],
+  "licenses": [
+    "MIT-0"
+  ],
+  "tags": [
+    "ada1995",
+    "i18n",
+    "nls",
+    "localization",
+    "localisation",
+    "l10n"
+  ],
+  "website": "https://github.com/lkujaw/felix",
+  "repository": {
+    "url": "https://github.com/lkujaw/felix",
+    "host": "github",
+    "commit": "7409bde64df3467f6d8b6aceb96eba2aac920014"
+  },
+  "dependencies": [
+    {
+      "crate": "case(os)",
+      "version": "{'windows': {'msys2_runtime': '>=3.0'}}"
+    }
+  ],
+  "units": [
+    {
+      "name": "C_Standard_IO",
+      "id": "a501ea7d93fbc859",
+      "file": "c_standard_io.json"
+    },
+    {
+      "name": "Native_Language_System",
+      "id": "ef4f9a5e4b0f5d39",
+      "file": "native_language_system.json"
+    },
+    {
+      "name": "Standard_Text",
+      "id": "2747fd246742850b",
+      "file": "standard_text.json"
+    }
+  ]
+}

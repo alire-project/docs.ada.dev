@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_tools",
+  "version": "0.2.0",
+  "failed_at": "2026-05-14T03:02:35Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

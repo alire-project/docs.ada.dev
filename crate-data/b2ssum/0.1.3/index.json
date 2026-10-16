@@ -1,0 +1,63 @@
+{
+  "schema_version": "1",
+  "crate": "b2ssum",
+  "version": "0.1.3",
+  "documented_at": "2026-03-03T17:52:20Z",
+  "description": "BLAKE2s file hash utility",
+  "authors": [
+    "Lev Kujawski"
+  ],
+  "licenses": [
+    "MIT-0"
+  ],
+  "tags": [
+    "ada1995",
+    "hash",
+    "blake2",
+    "blake2s"
+  ],
+  "website": "https://github.com/lkujaw/blake2s",
+  "repository": {
+    "url": "https://github.com/lkujaw/blake2s",
+    "host": "github",
+    "commit": "63b5d12efb5f96afb8148dd3eb7248ac1449f68d"
+  },
+  "dependencies": [
+    {
+      "crate": "blake2s",
+      "version": "~0.1.3"
+    }
+  ],
+  "units": [
+    {
+      "name": "BLAKE2S",
+      "id": "32cdb27818b4ea1e",
+      "file": "blake2s.json"
+    },
+    {
+      "name": "Octet_Arrays",
+      "id": "f9ebac800b17eb7c",
+      "file": "octet_arrays.json"
+    },
+    {
+      "name": "Octets",
+      "id": "eca54ebd28da6204",
+      "file": "octets.json"
+    },
+    {
+      "name": "Quadlets",
+      "id": "2a373b18e7a1a429",
+      "file": "quadlets.json"
+    },
+    {
+      "name": "SPARK_IO",
+      "id": "b04a682ea8bbae9a",
+      "file": "spark_io.json"
+    },
+    {
+      "name": "SPARK_IO_Standard",
+      "id": "44c9e6b1e0e9c994",
+      "file": "spark_io_standard.json"
+    }
+  ]
+}

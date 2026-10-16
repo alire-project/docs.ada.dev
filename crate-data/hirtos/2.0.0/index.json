@@ -1,0 +1,275 @@
+{
+  "schema_version": "1",
+  "crate": "hirtos",
+  "version": "2.0.0",
+  "documented_at": "2026-03-04T15:17:15Z",
+  "description": "High-Integrity RTOS",
+  "authors": [
+    "J. German Rivera"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "rtos"
+  ],
+  "website": "https://github.com/jgrivera67/HiRTOS",
+  "repository": {
+    "url": "https://github.com/jgrivera67/HiRTOS",
+    "host": "github",
+    "commit": "66847740b093b19386959b0e7b65b0a09172a082"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Ada",
+      "id": "fdee430d40bd57de",
+      "file": "ada.json"
+    },
+    {
+      "name": "Ada.Assertions",
+      "id": "f14ff5e258903851",
+      "file": "ada-assertions.json"
+    },
+    {
+      "name": "Ada.Exceptions",
+      "id": "810723b594d2ace2",
+      "file": "ada-exceptions.json"
+    },
+    {
+      "name": "Bit_Sized_Integer_Types",
+      "id": "36fe519299568835",
+      "file": "bit_sized_integer_types.json"
+    },
+    {
+      "name": "Generic_Execution_Stack",
+      "id": "e648a67b5f9995a5",
+      "file": "generic_execution_stack.json"
+    },
+    {
+      "name": "Generic_Linked_List",
+      "id": "72b0773cef2ccb45",
+      "file": "generic_linked_list.json"
+    },
+    {
+      "name": "GNAT",
+      "id": "6d0ed7a7e79fbdcd",
+      "file": "gnat.json"
+    },
+    {
+      "name": "GNAT.Source_Info",
+      "id": "49141f88d566bbec",
+      "file": "gnat-source_info.json"
+    },
+    {
+      "name": "HiRTOS",
+      "id": "d80eb45a1b225e53",
+      "file": "hirtos.json"
+    },
+    {
+      "name": "HiRTOS.Condvar",
+      "id": "5cf1654f85c15a92",
+      "file": "hirtos-condvar.json"
+    },
+    {
+      "name": "HiRTOS.Debug",
+      "id": "0a7b8b3708a96c9b",
+      "file": "hirtos-debug.json"
+    },
+    {
+      "name": "HiRTOS.Interrupt_Handling",
+      "id": "3de665f8c3689f58",
+      "file": "hirtos-interrupt_handling.json"
+    },
+    {
+      "name": "HiRTOS.Memory_Protection",
+      "id": "f3fd1f12af06d333",
+      "file": "hirtos-memory_protection.json"
+    },
+    {
+      "name": "HiRTOS.Mutex",
+      "id": "0b9b38f77c3530ac",
+      "file": "hirtos-mutex.json"
+    },
+    {
+      "name": "HiRTOS.Thread",
+      "id": "2a9cc2b3c42ef8da",
+      "file": "hirtos-thread.json"
+    },
+    {
+      "name": "HiRTOS.Timer",
+      "id": "4fab0da724fe18e6",
+      "file": "hirtos-timer.json"
+    },
+    {
+      "name": "Hirtos_Config",
+      "id": "d359dd7553f498ad",
+      "file": "hirtos_config.json"
+    },
+    {
+      "name": "HiRTOS_Config_Parameters",
+      "id": "5492794e258f8626",
+      "file": "hirtos_config_parameters.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface",
+      "id": "240d67cf1aba8fbd",
+      "file": "hirtos_cpu_arch_interface.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Interrupt_Controller",
+      "id": "c37a3748f84fbdbe",
+      "file": "hirtos_cpu_arch_interface-interrupt_controller.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Interrupt_Handling",
+      "id": "e04aece033bfe74f",
+      "file": "hirtos_cpu_arch_interface-interrupt_handling.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Interrupt_Handling.Arch_Specific",
+      "id": "59f5f5b17949bcb9",
+      "file": "hirtos_cpu_arch_interface-interrupt_handling-arch_specific.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Interrupts",
+      "id": "6aedeb9ad297ec5b",
+      "file": "hirtos_cpu_arch_interface-interrupts.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Memory_Protection",
+      "id": "e7d82ff9e37f1fa9",
+      "file": "hirtos_cpu_arch_interface-memory_protection.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.System_Registers",
+      "id": "092e39f4f9c70e35",
+      "file": "hirtos_cpu_arch_interface-system_registers.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Thread_Context",
+      "id": "86532adfc3a5c290",
+      "file": "hirtos_cpu_arch_interface-thread_context.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Interface.Tick_Timer",
+      "id": "a4e0a284b09c26eb",
+      "file": "hirtos_cpu_arch_interface-tick_timer.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Arch_Parameters",
+      "id": "f71c5d57b6c2bb5e",
+      "file": "hirtos_cpu_arch_parameters.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Multi_Core_Interface",
+      "id": "e6346671efb64038",
+      "file": "hirtos_cpu_multi_core_interface.json"
+    },
+    {
+      "name": "HiRTOS_Cpu_Startup_Interface",
+      "id": "3b7800d3e17d9678",
+      "file": "hirtos_cpu_startup_interface.json"
+    },
+    {
+      "name": "HiRTOS_Low_Level_Debug_Interface",
+      "id": "01e7989ed6a19bd6",
+      "file": "hirtos_low_level_debug_interface.json"
+    },
+    {
+      "name": "HiRTOS_Platform_Interface",
+      "id": "4a104eb1a7aeb7fe",
+      "file": "hirtos_platform_interface.json"
+    },
+    {
+      "name": "HiRTOS_Platform_Parameters",
+      "id": "24181ce09a95b873",
+      "file": "hirtos_platform_parameters.json"
+    },
+    {
+      "name": "Interfaces",
+      "id": "0274021b904cdec6",
+      "file": "interfaces.json"
+    },
+    {
+      "name": "Interfaces.C",
+      "id": "a1821cabe66a1908",
+      "file": "interfaces-c.json"
+    },
+    {
+      "name": "Memory_Utils",
+      "id": "5d878922e4895577",
+      "file": "memory_utils.json"
+    },
+    {
+      "name": "Number_Conversion_Utils",
+      "id": "b7d1436fb2c2caa3",
+      "file": "number_conversion_utils.json"
+    },
+    {
+      "name": "System",
+      "id": "bbc5e661e106c6dc",
+      "file": "system.json"
+    },
+    {
+      "name": "System.Address_To_Access_Conversions",
+      "id": "79e7cc751053218d",
+      "file": "system-address_to_access_conversions.json"
+    },
+    {
+      "name": "System.Assertions",
+      "id": "fa3c29f20750844b",
+      "file": "system-assertions.json"
+    },
+    {
+      "name": "System.Fat_Flt",
+      "id": "e9ab43c4a6a7e027",
+      "file": "system-fat_flt.json"
+    },
+    {
+      "name": "System.Fat_Gen",
+      "id": "63fe50cfbe3597f6",
+      "file": "system-fat_gen.json"
+    },
+    {
+      "name": "System.Fat_LFlt",
+      "id": "fd727197da7551e1",
+      "file": "system-fat_lflt.json"
+    },
+    {
+      "name": "System.Fat_LLF",
+      "id": "294bdb6fa768ecd4",
+      "file": "system-fat_llf.json"
+    },
+    {
+      "name": "System.Machine_Code",
+      "id": "ee8511a7b043b74a",
+      "file": "system-machine_code.json"
+    },
+    {
+      "name": "System.Parameters",
+      "id": "d74ff6123d170e05",
+      "file": "system-parameters.json"
+    },
+    {
+      "name": "System.Secondary_Stack",
+      "id": "e1be837dd7c93ca9",
+      "file": "system-secondary_stack.json"
+    },
+    {
+      "name": "System.Storage_Elements",
+      "id": "a89cf829e01dbec1",
+      "file": "system-storage_elements.json"
+    },
+    {
+      "name": "System.Unsigned_Types",
+      "id": "ce7adb8ba0c3c6f4",
+      "file": "system-unsigned_types.json"
+    },
+    {
+      "name": "Uart_Driver",
+      "id": "d45cd754a70adee1",
+      "file": "uart_driver.json"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "1",
+  "crate": "mathpaqs",
+  "version": "20260205.0.0",
+  "documented_at": "2026-03-04T16:57:11Z",
+  "description": "A collection of mathematical, 100% portable, packages",
+  "long_description": "![Mathpaqs illustration](https://mathpaqs.sourceforge.io/mathpaqs_files/image001.jpg)\n\nVarious mathematical packages including algebra, finite elements, random variables, probability dependency models, unlimited integers.\n\nKey features of the Mathpaqs library:\n\n* Standalone\n* Pure Ada\n* Unconditionally portable (*)\n* Tests and demos included\n* **Free**, Open-Source\n\nSome demos, graphical demos and test programs are included.\n___\n\n(*) within limits of compiler's provided integer types and target architecture capacity.\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "algebra",
+    "contour",
+    "contour-plot",
+    "formula-parser",
+    "fractal",
+    "kutta",
+    "linear-algebra",
+    "mathematics",
+    "matrix",
+    "numerics",
+    "pareto",
+    "poisson",
+    "polynomial",
+    "probability",
+    "random",
+    "rational",
+    "runge",
+    "runge-kutta",
+    "statistics"
+  ],
+  "website": "https://mathpaqs.sourceforge.io/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/mathpaqs",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "apdf",
+      "version": ">=9.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Beta_function",
+      "id": "f3dd6d02d2856a1a",
+      "file": "beta_function.json"
+    },
+    {
+      "name": "Complex_Polynomial_Roots",
+      "id": "f4b665298fa7ce91",
+      "file": "complex_polynomial_roots.json"
+    },
+    {
+      "name": "ConjGrad",
+      "id": "78c595685fe2bb1d",
+      "file": "conjgrad.json"
+    },
+    {
+      "name": "Contours",
+      "id": "1ab28beae67d1151",
+      "file": "contours.json"
+    },
+    {
+      "name": "Copulas",
+      "id": "f5fa885ea57072ea",
+      "file": "copulas.json"
+    },
+    {
+      "name": "Discrete_Random_Simulation",
+      "id": "51f51f6ea3e06855",
+      "file": "discrete_random_simulation.json"
+    },
+    {
+      "name": "Dormand_Prince_8",
+      "id": "08c725c86aaa0c28",
+      "file": "dormand_prince_8.json"
+    },
+    {
+      "name": "Error_function",
+      "id": "d63bdf546ac87185",
+      "file": "error_function.json"
+    },
+    {
+      "name": "Estimators",
+      "id": "bfe5b21d53660716",
+      "file": "estimators.json"
+    },
+    {
+      "name": "Euclidean_Ring_Tools",
+      "id": "3c415c9490525583",
+      "file": "euclidean_ring_tools.json"
+    },
+    {
+      "name": "Formulas",
+      "id": "5516fbae1bdb2bec",
+      "file": "formulas.json"
+    },
+    {
+      "name": "Frac",
+      "id": "2fd26213d6e57284",
+      "file": "frac.json"
+    },
+    {
+      "name": "Frac.Order",
+      "id": "d3764640672b8948",
+      "file": "frac-order.json"
+    },
+    {
+      "name": "Frac_Euclid",
+      "id": "11c6140b5b0ca143",
+      "file": "frac_euclid.json"
+    },
+    {
+      "name": "Frac_Euclid.Order",
+      "id": "516f314cb45c8733",
+      "file": "frac_euclid-order.json"
+    },
+    {
+      "name": "G_FEK",
+      "id": "97b1e1d0b91bfd79",
+      "file": "g_fek.json"
+    },
+    {
+      "name": "G_Matrices",
+      "id": "f27aa134c17a8814",
+      "file": "g_matrices.json"
+    },
+    {
+      "name": "Gamma_function",
+      "id": "b7dcafb4c7efcf96",
+      "file": "gamma_function.json"
+    },
+    {
+      "name": "Generic_Integer_Arrays",
+      "id": "e2f1ec6b1cd711b5",
+      "file": "generic_integer_arrays.json"
+    },
+    {
+      "name": "Generic_Random_Functions",
+      "id": "f41b8aa350c3c8fd",
+      "file": "generic_random_functions.json"
+    },
+    {
+      "name": "Generic_Real_Linear_Equations",
+      "id": "c92d72a0b103fdaf",
+      "file": "generic_real_linear_equations.json"
+    },
+    {
+      "name": "Graph",
+      "id": "eef93e1d14482804",
+      "file": "graph.json"
+    },
+    {
+      "name": "Graph.Cubic_curves",
+      "id": "76f3535afbdc07f4",
+      "file": "graph-cubic_curves.json"
+    },
+    {
+      "name": "Graph.F",
+      "id": "48bd21cef879405f",
+      "file": "graph-f.json"
+    },
+    {
+      "name": "Graph.F.Bold",
+      "id": "c587fb984ceb6635",
+      "file": "graph-f-bold.json"
+    },
+    {
+      "name": "Graph.F.Complex",
+      "id": "fe74ff456e67bab9",
+      "file": "graph-f-complex.json"
+    },
+    {
+      "name": "Graph.F.EuroStyle",
+      "id": "805ca34e4f612e7b",
+      "file": "graph-f-eurostyle.json"
+    },
+    {
+      "name": "Graph.F.Gothic",
+      "id": "18e995d4bd92931c",
+      "file": "graph-f-gothic.json"
+    },
+    {
+      "name": "Graph.F.Helv",
+      "id": "6671b6374b9eaea5",
+      "file": "graph-f-helv.json"
+    },
+    {
+      "name": "Graph.F.Helv_B",
+      "id": "e20dd3703a40bd28",
+      "file": "graph-f-helv_b.json"
+    },
+    {
+      "name": "Graph.F.Helv_BI",
+      "id": "5d95ed702dc5f4ac",
+      "file": "graph-f-helv_bi.json"
+    },
+    {
+      "name": "Graph.F.Helv_I",
+      "id": "8b5100a4fe71f9eb",
+      "file": "graph-f-helv_i.json"
+    },
+    {
+      "name": "Graph.F.Noble",
+      "id": "3163d061e11e4e8c",
+      "file": "graph-f-noble.json"
+    },
+    {
+      "name": "Graph.F.SansSerif",
+      "id": "ff5042742b2f2dc0",
+      "file": "graph-f-sansserif.json"
+    },
+    {
+      "name": "Graph.F.Script",
+      "id": "9bcbe25473fb9fbd",
+      "file": "graph-f-script.json"
+    },
+    {
+      "name": "Graph.F.Simple",
+      "id": "f51ad6cf87e11cf2",
+      "file": "graph-f-simple.json"
+    },
+    {
+      "name": "Graph.F.Small",
+      "id": "ffa2186fb21e96c0",
+      "file": "graph-f-small.json"
+    },
+    {
+      "name": "Graph.F.Triplex",
+      "id": "c1b868d18761a4a5",
+      "file": "graph-f-triplex.json"
+    },
+    {
+      "name": "Graph.F.TriScript",
+      "id": "cf729a815916ca99",
+      "file": "graph-f-triscript.json"
+    },
+    {
+      "name": "Graph.PostScript_driver",
+      "id": "c1352fd63e65132d",
+      "file": "graph-postscript_driver.json"
+    },
+    {
+      "name": "Graph.Standard_fonts",
+      "id": "6e61bb82e9a15d43",
+      "file": "graph-standard_fonts.json"
+    },
+    {
+      "name": "Integer_Arrays_IO",
+      "id": "05c894883d632899",
+      "file": "integer_arrays_io.json"
+    },
+    {
+      "name": "Multi_Precision_Integers",
+      "id": "0fa6c4de4b641a5d",
+      "file": "multi_precision_integers.json"
+    },
+    {
+      "name": "Multi_Precision_Integers.Check",
+      "id": "c93f88d9d5d8c40d",
+      "file": "multi_precision_integers-check.json"
+    },
+    {
+      "name": "Multi_Precision_Integers.IO",
+      "id": "1a5d08e4ed80681f",
+      "file": "multi_precision_integers-io.json"
+    },
+    {
+      "name": "Phi_function",
+      "id": "4478adfe2b73db9b",
+      "file": "phi_function.json"
+    },
+    {
+      "name": "Polynomials",
+      "id": "566f35e71d56e8e0",
+      "file": "polynomials.json"
+    },
+    {
+      "name": "Polynomials.Output",
+      "id": "5a1c71e787693662",
+      "file": "polynomials-output.json"
+    },
+    {
+      "name": "Real_Arrays_IO",
+      "id": "e28dceae547274b4",
+      "file": "real_arrays_io.json"
+    },
+    {
+      "name": "Samples",
+      "id": "24baa7a731ce04b4",
+      "file": "samples.json"
+    },
+    {
+      "name": "Sparse",
+      "id": "d7af78c1f4c4a2de",
+      "file": "sparse.json"
+    },
+    {
+      "name": "Sparse.Vector_Ops",
+      "id": "4f777919de1be858",
+      "file": "sparse-vector_ops.json"
+    },
+    {
+      "name": "Test_Formulas_Pkg",
+      "id": "3ecf6e52dc83fa93",
+      "file": "test_formulas_pkg.json"
+    },
+    {
+      "name": "U_Rand",
+      "id": "efdf775dfeedf75c",
+      "file": "u_rand.json"
+    },
+    {
+      "name": "Universal_Matrices",
+      "id": "9e750cbac37f9bd4",
+      "file": "universal_matrices.json"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1",
+  "crate": "printer_toolkit",
+  "version": "0.3.0",
+  "documented_at": "2026-03-06T02:55:07Z",
+  "description": "Printer toolkit to write reports",
+  "long_description": "Printer toolkit provides support to write reports on console or to produce SVG files with almost\nthe same Ada code.  It can display simple bar charts as well as images on the console.\n\nThe core library is provided by `printer_toolkit` and the SVG support implemented by the `printer_toolkit_svg`.\nRun one of the following Alire commands or both:\n\n```\nalr with printer_toolkit\nalr with printer_toolkit_svg\n```\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "reports",
+    "console",
+    "charts"
+  ],
+  "website": "https://gitlab.com/stcarrez/printer-toolkit",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/printer-toolkit",
+    "host": "gitlab",
+    "commit": "0ea56e5abd8557e3b4a35f4c3a09bf66bbdc4b15"
+  },
+  "dependencies": [
+    {
+      "crate": "ansiada",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "PT",
+      "id": "e75b11da693d7bb5",
+      "file": "pt.json"
+    },
+    {
+      "name": "PT.Charts",
+      "id": "dfd77f6197b48572",
+      "file": "pt-charts.json"
+    },
+    {
+      "name": "PT.Charts.Barcharts",
+      "id": "57680f96bd28cc5f",
+      "file": "pt-charts-barcharts.json"
+    },
+    {
+      "name": "PT.Colors",
+      "id": "cab78eba70ffc343",
+      "file": "pt-colors.json"
+    },
+    {
+      "name": "PT.Drivers",
+      "id": "f3ab727ed74b60e5",
+      "file": "pt-drivers.json"
+    },
+    {
+      "name": "PT.Drivers.Images",
+      "id": "bcedbf34f8c6b3b3",
+      "file": "pt-drivers-images.json"
+    },
+    {
+      "name": "PT.Drivers.Images.Kitty",
+      "id": "8c60d2de0c787ef7",
+      "file": "pt-drivers-images-kitty.json"
+    },
+    {
+      "name": "PT.Drivers.Texts",
+      "id": "37fa90ea25d6c9fd",
+      "file": "pt-drivers-texts.json"
+    },
+    {
+      "name": "PT.Drivers.Texts.GNAT_IO",
+      "id": "33ea4be087e5b3e3",
+      "file": "pt-drivers-texts-gnat_io.json"
+    },
+    {
+      "name": "PT.Texts",
+      "id": "837bdb85685cb72f",
+      "file": "pt-texts.json"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1",
+  "crate": "opentoken",
+  "version": "6.0.3",
+  "documented_at": "2026-03-05T02:59:30Z",
+  "description": "facility for performing token analysis and parsing within Ada",
+  "authors": [
+    "Stephen Leake"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "lexer",
+    "parser"
+  ],
+  "repository": {
+    "url": "https://github.com/LionelDraghi/org.opentoken-6.0c",
+    "host": "github",
+    "commit": "b278f6ad0faff2cb999ffbdd2cf5329850734ac9"
+  },
+  "dependencies": [],
+  "units": []
+}

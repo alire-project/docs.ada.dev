@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "crate": "pico_xbsp",
+  "version": "1.7.0",
+  "documented_at": "2026-05-24T03:03:42Z",
+  "description": "Extended board support package for Raspberry Pi Pico",
+  "long_description": "Extended board support package (XBSP) for the Raspberry Pi Pico.\n\nThis crate builds upon Jeremy Grosser's official pico_bsp and adds a growing set of clean, reusable components for Ada\ndevelopers targeting the RP2040. It is developed alongside the [Pi Ada\nTutorial](https://pi-ada-tutorial.sourceforge.io/) but is equally suitable for any standalone embedded Ada project.\n\nCurrent components:\n* Pico.Analog         - Analogue GPIO using PWM\n* Pico.Analog.RGB_LED - Analogue RGB LED control using PWM\n* Pico.Tone           - Square-wave tone generation using PWM\n* Pico.UART_IO        - Simple UART text I/O for the Debug Probe (115200 8N1 on GP0/GP1)\n* Pico.Utils          - Miscellaneous utilities\n\nThe crate is available in two variants:\n* `no_tasking` (default) - small, fast, and compatible with the light runtime\n* `tasking`              - thread-safe using protected objects (requires a tasking runtime)\n\nAll packages include full GNATdoc annotations.\n\nUseful links:\n* [GNATdoc documentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/)\n* [SourceForge repository](https://sourceforge.net/projects/pi-ada-tutorial/)\n* [Tutorial homepage](https://pi-ada-tutorial.sourceforge.io/)\n\nThe library will continue to grow with each new tutorial chapter while remaining a clean, independent crate.\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico.Analog",
+      "id": "7a66685ae06ed0a7",
+      "file": "pico-analog.json"
+    },
+    {
+      "name": "Pico.Analog.RGB_LED",
+      "id": "670a608ce8f1b578",
+      "file": "pico-analog-rgb_led.json"
+    },
+    {
+      "name": "Pico.Tone",
+      "id": "d9f7b6b0b7e4467b",
+      "file": "pico-tone.json"
+    },
+    {
+      "name": "Pico.UART_IO",
+      "id": "636767575e1011fd",
+      "file": "pico-uart_io.json"
+    },
+    {
+      "name": "Pico.Utils",
+      "id": "e1b94abf5ef3b820",
+      "file": "pico-utils.json"
+    },
+    {
+      "name": "Pico_Xbsp_Config",
+      "id": "5c6c1762e97fd390",
+      "file": "pico_xbsp_config.json"
+    }
+  ]
+}

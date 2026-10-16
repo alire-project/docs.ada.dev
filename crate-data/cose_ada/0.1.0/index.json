@@ -1,0 +1,86 @@
+{
+  "schema_version": "1",
+  "crate": "cose_ada",
+  "version": "0.1.0",
+  "documented_at": "2026-05-05T03:01:27Z",
+  "description": "COSE (RFC 9052 / 9053) library for Ada 2022",
+  "long_description": "COSE (CBOR Object Signing and Encryption, RFC 9052 / 9053)\nimplementation for Ada 2022 with partial SPARK coverage. Supports the\nsix COSE message types: COSE_Mac0, COSE_Mac, COSE_Sign1, COSE_Sign,\nCOSE_Encrypt0, and COSE_Encrypt. Algorithms: HMAC-SHA-256,\nHMAC-SHA-512, EdDSA (Ed25519), and ChaCha20-Poly1305 AEAD. Uses\ncbor_ada for CBOR operations, hmac_ada for HMAC, and SPARKNaCl for\nEd25519 and ChaCha20-Poly1305. No heap allocation, suitable for\nembedded and safety-critical systems.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "cose",
+    "rfc9052",
+    "cbor",
+    "security",
+    "spark",
+    "embedded",
+    "iot",
+    "webauthn"
+  ],
+  "website": "https://github.com/b-erdem/cose_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/cose_ada",
+    "host": "github",
+    "commit": "6aa26c1628af06286954e30cbbfc81910c5c883c"
+  },
+  "dependencies": [
+    {
+      "crate": "cbor_ada",
+      "version": "~0.2.0"
+    },
+    {
+      "crate": "hmac_ada",
+      "version": "~0.2.0"
+    },
+    {
+      "crate": "sparknacl",
+      "version": "^4.0.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "COSE",
+      "id": "25c45a88b53645d3",
+      "file": "cose.json"
+    },
+    {
+      "name": "COSE.Encrypt",
+      "id": "8b643d024b00db74",
+      "file": "cose-encrypt.json"
+    },
+    {
+      "name": "COSE.Encrypt0",
+      "id": "887181d361c45cc7",
+      "file": "cose-encrypt0.json"
+    },
+    {
+      "name": "COSE.Headers",
+      "id": "a85ca1a1d6f575b5",
+      "file": "cose-headers.json"
+    },
+    {
+      "name": "COSE.Mac",
+      "id": "9bc7ca209ecb8e01",
+      "file": "cose-mac.json"
+    },
+    {
+      "name": "COSE.Mac0",
+      "id": "28347683cd0da6df",
+      "file": "cose-mac0.json"
+    },
+    {
+      "name": "COSE.Sign",
+      "id": "d1ad32a25c3757c3",
+      "file": "cose-sign.json"
+    },
+    {
+      "name": "COSE.Sign1",
+      "id": "a25ce27a211763bf",
+      "file": "cose-sign1.json"
+    }
+  ]
+}

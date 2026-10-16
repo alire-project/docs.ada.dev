@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"functional","version":"4.1.1","id":"3b637864e75ab14e","name":"Functional","qualified_name":"Functional","kind":"ada_package","location":{"file":"src/functional.ads","line":23,"column":9},"code":"package Functional","documentation":{"description":"Pure namespace anchor - all functionality in child packages"}}

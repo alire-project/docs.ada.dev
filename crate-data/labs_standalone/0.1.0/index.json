@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "labs_standalone",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:52:14Z",
+  "description": "Ada exercices for training",
+  "authors": [
+    "Léo Germond"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "training",
+    "labs",
+    "algorithmic"
+  ],
+  "website": "https://github.com/adacore/training_labs_standalone",
+  "repository": {
+    "url": "https://github.com/AdaCore/training_labs_standalone",
+    "host": "github",
+    "commit": "450e885eea55356b5a0be766d9a7e798e767ed2a"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Labs_Standalone_Config",
+      "id": "9ab53ea782a07446",
+      "file": "labs_standalone_config.json"
+    },
+    {
+      "name": "Sorts",
+      "id": "abe2c33fe1bee30d",
+      "file": "sorts.json"
+    },
+    {
+      "name": "Swaps",
+      "id": "ee0b46bea5ad75c0",
+      "file": "swaps.json"
+    }
+  ]
+}

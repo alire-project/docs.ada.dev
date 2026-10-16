@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "partord",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T03:00:55Z",
+  "description": "Small library for sorting with partial orders",
+  "long_description": "This is a generic library that exports a sorting function that can operate with partial ordering, that is, it can happen that for some A /= B neither A < B nor A > B hold.",
+  "authors": [
+    "Riccardo Bernardini"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "sorting"
+  ],
+  "website": "https://gitlab.com/my-ada-library/partord/",
+  "repository": {
+    "url": "https://gitlab.com/my-ada-library/partord",
+    "host": "gitlab",
+    "commit": "30057d94d0ebda3278b329a5e8be46cf1caedd52"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Partial_Order_Sorting",
+      "id": "fb307fd513b77ea5",
+      "file": "partial_order_sorting.json"
+    },
+    {
+      "name": "Partial_Order_Sorting.Array_Sort",
+      "id": "1d74d0be77a9a215",
+      "file": "partial_order_sorting-array_sort.json"
+    }
+  ]
+}

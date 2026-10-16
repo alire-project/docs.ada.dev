@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "cpuload",
+  "version": "0.0.1",
+  "documented_at": "2026-09-02T02:31:49Z",
+  "description": "Library to monitor processes, applications and system CPU usage",
+  "long_description": "CPU Load reports system, processes and applications (every process of it) CPU load.\nIt also provides a C interface so any language with a C FFI can use it.\n",
+  "authors": [
+    "Adel Noureddine"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "cpu",
+    "process",
+    "monitoring",
+    "linux",
+    "windows",
+    "application",
+    "usage",
+    "load"
+  ],
+  "website": "https://www.noureddine.org/research/joular",
+  "repository": {
+    "url": "https://github.com/joular/cpuload",
+    "host": "github",
+    "commit": "a7da28a1bcd3e7e39fc354a95c55fba4c0c84d4f"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CPU_Load",
+      "id": "3691a04ce7aef689",
+      "file": "cpu_load.json"
+    },
+    {
+      "name": "CPU_Load.C_API",
+      "id": "bb15767e3109d2fc",
+      "file": "cpu_load-c_api.json"
+    }
+  ]
+}

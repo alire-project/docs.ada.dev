@@ -1,0 +1,63 @@
+{
+  "schema_version": "1",
+  "crate": "atari_atr_tools",
+  "version": "1.5.1",
+  "documented_at": "2026-03-03T17:51:33Z",
+  "description": "Cross-platform tool for ATR disk images for Atari 8-bit systems",
+  "long_description": "Atari ATR Tools is a versatile, cross-platform utility written in Ada 2022 for managing ATR disk image files used by Atari 8-bit emulators (e.g., Altirra, Atari800) and hardware add-ons like SIO2PC. Unlike most existing tools, which are Windows-only, this tool runs seamlessly on macOS, Linux, and Windows, making it ideal for retro computing enthusiasts across all major platforms.\n\nKey features include:\n\n**Header Analysis**: Display detailed metadata of ATR files, including sector\nsize, disk density, track count, and boot sector presence.\n\n```sh\n  > atr_tools-main --print-header test-DD-DS-80.atr\n  File name        : test-DD-DS-80.atr\n  Magic            :      16#296#\n  Paragraphs       :        46056\n  Sector size      :          256\n  Flags            :         2#1#\n  Bad Sectors      :            0\n  Unused           :        16#0#\n  Sectors          :         2880\n  Bytes            :       736896\n  Boot Sectors     : true\n  Floppy disk double density, double sided, 80 track\n```\n\n**Floppy Image Creation**: Format and create ATR files for various disk\nconfigurations (e.g., single-sided, double-density, 80 tracks).\n\n```sh\n> atr_tools-main --verbose --format-floppy --density=DD --side=SS --track=80 test-DD-SS-80.atr\nFile created     : test-DD-SS-80.atr\nSector size      :          256\nSector per track :           18\nTracks per side  :           80\nSides per disk   :            1\n```\n\nThe tool includes a comprehensive test suite to ensure reliability across platforms and configurations. Source code and tests are available on SourceForge. Detailed GNATdoc documentation can be found at [6502 Tutorial](https://tutorial-6502.sourceforge.io/gnatdoc/atr_tools/index.html).\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "atari",
+    "tools",
+    "retrocomputing",
+    "ada-2022"
+  ],
+  "website": "https://sourceforge.net/projects/tutorial-6502",
+  "repository": {
+    "url": "https://sourceforge.net/projects/tutorial-6502",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^6.3.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Atari_Atr_Tools_Config",
+      "id": "47ca0115f6073c46",
+      "file": "atari_atr_tools_config.json"
+    },
+    {
+      "name": "Atr_Tools",
+      "id": "dc22f1d7aad50927",
+      "file": "atr_tools.json"
+    },
+    {
+      "name": "Atr_Tools.APE_File_Header",
+      "id": "06bb6cd7b4bdaefa",
+      "file": "atr_tools-ape_file_header.json"
+    },
+    {
+      "name": "Atr_Tools.CommandLine",
+      "id": "b83bd33a61f3cb48",
+      "file": "atr_tools-commandline.json"
+    },
+    {
+      "name": "Atr_Tools.File_Body",
+      "id": "dcbf71bc66d34ebd",
+      "file": "atr_tools-file_body.json"
+    },
+    {
+      "name": "Atr_Tools.File_Header",
+      "id": "04a8b2a7632d2950",
+      "file": "atr_tools-file_header.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "blink_led_arduino_due",
+  "version": "0.1.0",
+  "failed_at": "2026-03-03T17:53:49Z",
+  "stage": "locate",
+  "message": "Could not find crate root for blink_led_arduino_due=0.1.0 in /tmp/gnatdoc_sposiv11"
+}

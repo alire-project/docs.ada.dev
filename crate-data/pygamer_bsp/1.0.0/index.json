@@ -1,0 +1,87 @@
+{
+  "schema_version": "1",
+  "crate": "pygamer_bsp",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:55:11Z",
+  "description": "Board Support Package for the AdaFruit PyGamer",
+  "authors": [],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "pygamer",
+    "adafruit",
+    "game",
+    "console",
+    "bsp"
+  ],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/pygamer-bsp",
+    "host": "github",
+    "commit": "43d69885051ae88b57ba6a64b8ff7fc63eaad67d"
+  },
+  "dependencies": [
+    {
+      "crate": "cortex_m",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "samd51_hal",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Bitmap_Color_Conversion",
+      "id": "17cd65c2e645620d",
+      "file": "bitmap_color_conversion.json"
+    },
+    {
+      "name": "Memory_Mapped_Bitmap",
+      "id": "061345d4030ee104",
+      "file": "memory_mapped_bitmap.json"
+    },
+    {
+      "name": "PyGamer",
+      "id": "f982bb6ad5c4cb03",
+      "file": "pygamer.json"
+    },
+    {
+      "name": "PyGamer.Audio",
+      "id": "656ac3d55b70c852",
+      "file": "pygamer-audio.json"
+    },
+    {
+      "name": "PyGamer.Controls",
+      "id": "715ed84fbdedcc28",
+      "file": "pygamer-controls.json"
+    },
+    {
+      "name": "PyGamer.Screen",
+      "id": "705576c1c78c4521",
+      "file": "pygamer-screen.json"
+    },
+    {
+      "name": "PyGamer.Time",
+      "id": "2b886101e3eb1884",
+      "file": "pygamer-time.json"
+    },
+    {
+      "name": "Soft_Drawing_Bitmap",
+      "id": "c57b9c9d221863d4",
+      "file": "soft_drawing_bitmap.json"
+    },
+    {
+      "name": "ST7735R",
+      "id": "b86a8ee00233803a",
+      "file": "st7735r.json"
+    },
+    {
+      "name": "ST7735R.RAM_Framebuffer",
+      "id": "14b226e114b36bdf",
+      "file": "st7735r-ram_framebuffer.json"
+    }
+  ]
+}

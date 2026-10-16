@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "yamlscript",
+  "version": "0.3.2",
+  "documented_at": "2026-10-09T02:26:31Z",
+  "description": "YAMLScript language binding for Ada",
+  "authors": [
+    "YAMLScript Contributors"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "yaml",
+    "yamlscript",
+    "loader"
+  ],
+  "website": "https://yamlscript.org",
+  "repository": {
+    "url": "https://github.com/yaml/yamlscript",
+    "host": "github",
+    "commit": "4c5b954743cb07b5bd63ac4b2b406b7e13d1ea2a"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "YAMLScript",
+      "id": "ba3d1a83dcbee9d2",
+      "file": "yamlscript.json"
+    }
+  ]
+}

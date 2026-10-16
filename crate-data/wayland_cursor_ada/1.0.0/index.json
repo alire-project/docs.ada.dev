@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "wayland_cursor_ada",
+  "version": "1.0.0",
+  "documented_at": "2026-03-07T02:50:37Z",
+  "description": "Ada 2012 bindings for libwayland-cursor",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "wayland"
+  ],
+  "website": "https://github.com/onox/wayland-ada",
+  "repository": {
+    "url": "https://github.com/onox/wayland-ada",
+    "host": "github",
+    "commit": "f8a9fe05aa29e5e17d23951bc0d21ce4b84148a4",
+    "subdir": "wayland_cursor_ada/"
+  },
+  "dependencies": [
+    {
+      "crate": "libwayland",
+      "version": "^1.18"
+    },
+    {
+      "crate": "wayland_client_ada",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Wayland.Cursor",
+      "id": "90326ca09b29e35d",
+      "file": "wayland-cursor.json"
+    }
+  ]
+}

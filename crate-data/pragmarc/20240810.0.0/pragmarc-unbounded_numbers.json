@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"e5c1b557bf454d98","name":"PragmARC.Unbounded_Numbers","qualified_name":"PragmARC.Unbounded_Numbers","kind":"ada_package","location":{"file":"src/pragmarc-unbounded_numbers.ads","line":12,"column":9},"code":"package PragmARC.Unbounded_Numbers","documentation":{"description":"Empty"}}

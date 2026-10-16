@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "crate": "ephemeris",
+  "version": "1.2.0",
+  "documented_at": "2026-03-04T03:00:39Z",
+  "description": "Library for reading astronomical ephemerides from JPL DE200 files",
+  "authors": [
+    "Juan A. de la Puente"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "ephemeris",
+    "astronomy",
+    "sun",
+    "moon",
+    "planets"
+  ],
+  "website": "https://github.com/jpuente/almanac/ephemeris",
+  "repository": {
+    "url": "https://github.com/jpuente/almanac",
+    "host": "github",
+    "commit": "f7b9c6a46cdb8351f98cdf0ef62048dcaae95e2b",
+    "subdir": "ephemeris/"
+  },
+  "dependencies": [
+    {
+      "crate": "resources",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ephemeris",
+      "id": "ae346030eb8ce88b",
+      "file": "ephemeris.json"
+    },
+    {
+      "name": "Ephemeris.Generic_Data_File",
+      "id": "0420d5841c7a35c4",
+      "file": "ephemeris-generic_data_file.json"
+    },
+    {
+      "name": "Ephemeris.Generic_State_Functions",
+      "id": "b72beaaa198529f2",
+      "file": "ephemeris-generic_state_functions.json"
+    },
+    {
+      "name": "Ephemeris_Config",
+      "id": "bf9b89556a4f460b",
+      "file": "ephemeris_config.json"
+    }
+  ]
+}

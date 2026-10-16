@@ -1,0 +1,117 @@
+{
+  "schema_version": "1",
+  "crate": "ml_kem",
+  "version": "1.0.0",
+  "documented_at": "2026-07-16T03:00:30Z",
+  "description": "SPARK-proved ML-KEM (FIPS 203) lattice-based key encapsulation",
+  "long_description": "SPARK-proved ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism)\nimplementing NIST FIPS 203. Formally verified at SPARK level 2 with zero\npragma Assume, zero unproved VCs. The 7-layer Cooley-Tukey NTT, BaseMul,\nIndCPA, and FO transform are all proved end-to-end with no escape hatches.\n\nAll three FIPS 203 parameter sets -- ML-KEM-512, ML-KEM-768, ML-KEM-1024\n-- are supported and selected at build time via the `parameter_set`\ncrate configuration variable; default is ML-KEM-768 (NIST Category III).\n\nProof techniques are documented in PROOF_NOTES.md and reusable for similar\nlattice / ARX cryptography.\n\nBuilt on sha3_ada for SHA-3/SHAKE. No heap allocation, pragma Pure, suitable\nfor embedded and safety-critical systems. Constant-time execution\nempirically verified via cachegrind (LLd byte-identical). FIPS 140-3\nvalidation is out of scope. See SECURITY.md for the full threat model.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "ml-kem",
+    "post-quantum",
+    "cryptography",
+    "spark",
+    "embedded",
+    "security",
+    "verified"
+  ],
+  "website": "https://github.com/b-erdem/ml_kem_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/ml_kem_ada",
+    "host": "github",
+    "commit": "0b46ce23243d75f11746112c70a6d80799d85e58"
+  },
+  "dependencies": [
+    {
+      "crate": "sha3",
+      "version": "~1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ML_KEM",
+      "id": "78f693bd7af66b17",
+      "file": "ml_kem.json"
+    },
+    {
+      "name": "ML_KEM.CBD",
+      "id": "839d3ef9260bba11",
+      "file": "ml_kem-cbd.json"
+    },
+    {
+      "name": "ML_KEM.IndCPA",
+      "id": "5091ee2ed6be48a3",
+      "file": "ml_kem-indcpa.json"
+    },
+    {
+      "name": "ML_KEM.KEM",
+      "id": "55d71cbb52fbb8f9",
+      "file": "ml_kem-kem.json"
+    },
+    {
+      "name": "ML_KEM.NTT",
+      "id": "bf4941463e14dc71",
+      "file": "ml_kem-ntt.json"
+    },
+    {
+      "name": "ML_KEM.NTT_Zetas",
+      "id": "21db298939353308",
+      "file": "ml_kem-ntt_zetas.json"
+    },
+    {
+      "name": "ML_KEM.Poly",
+      "id": "dec8f60e387ab765",
+      "file": "ml_kem-poly.json"
+    },
+    {
+      "name": "ML_KEM.PolyVec",
+      "id": "5c88dcf0cde10843",
+      "file": "ml_kem-polyvec.json"
+    },
+    {
+      "name": "ML_KEM.Reduce",
+      "id": "efabb703c580a84d",
+      "file": "ml_kem-reduce.json"
+    },
+    {
+      "name": "ML_KEM.Sampling",
+      "id": "76be77391d079413",
+      "file": "ml_kem-sampling.json"
+    },
+    {
+      "name": "ML_KEM.Serialize",
+      "id": "68334c159e687cd2",
+      "file": "ml_kem-serialize.json"
+    },
+    {
+      "name": "ML_KEM.Serialize.Properties",
+      "id": "ffb36a3fc21127fa",
+      "file": "ml_kem-serialize-properties.json"
+    },
+    {
+      "name": "ML_KEM.Symmetric",
+      "id": "a4de83631ce7a511",
+      "file": "ml_kem-symmetric.json"
+    },
+    {
+      "name": "ML_KEM.Verify",
+      "id": "55795726dedef267",
+      "file": "ml_kem-verify.json"
+    },
+    {
+      "name": "ML_KEM.Wipe",
+      "id": "ecd785535d51e20f",
+      "file": "ml_kem-wipe.json"
+    },
+    {
+      "name": "Ml_Kem_Config",
+      "id": "acc837ac74d5c3c3",
+      "file": "ml_kem_config.json"
+    }
+  ]
+}

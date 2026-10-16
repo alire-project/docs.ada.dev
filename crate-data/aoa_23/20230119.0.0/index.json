@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "aoa_23",
+  "version": "20230119.0.0",
+  "documented_at": "2026-03-03T17:51:06Z",
+  "description": "Some Advent of Ada 2023 solutions",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "2023"
+  ],
+  "website": "https://github.com/bracke/AoA_23",
+  "repository": {
+    "url": "https://github.com/bracke/AoA_23",
+    "host": "github",
+    "commit": "38d1c7e521a9abb8c3f4269f689e00f35fe81362"
+  },
+  "dependencies": [
+    {
+      "crate": "pragmarc",
+      "version": "^20240323.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Aoa_23_Config",
+      "id": "5db979f063c8ff81",
+      "file": "aoa_23_config.json"
+    }
+  ]
+}

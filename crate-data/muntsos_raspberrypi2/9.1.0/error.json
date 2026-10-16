@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "muntsos_raspberrypi2",
+  "version": "9.1.0",
+  "failed_at": "2026-03-05T02:58:25Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}
