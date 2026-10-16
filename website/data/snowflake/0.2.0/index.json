@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "snowflake",
+  "version": "0.2.0",
+  "documented_at": "2026-10-16T02:16:42Z",
+  "description": "Twitter Snowflake distributed ID generator",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "snowflake",
+    "networking"
+  ],
+  "website": "https://github.com/kokhlo/snowflake-ada",
+  "repository": {
+    "url": "https://github.com/kokhlo/snowflake-ada",
+    "host": "github",
+    "commit": "c3b4c65fed819c40a5fd88ae56d7ce75b2074955"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Snowflake",
+      "id": "de5a1adf4fedcce1",
+      "file": "snowflake.json"
+    },
+    {
+      "name": "Snowflake.Generator",
+      "id": "e6e6f0c3626e1c79",
+      "file": "snowflake-generator.json"
+    }
+  ]
+}
