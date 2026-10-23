@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "crate": "garlic",
+  "version": "6.0.1",
+  "documented_at": "2026-03-04T03:00:38Z",
+  "description": "GNAT Library for Ada Distributed Environment (garlic)",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later WITH GCC-exception-2.0"
+  ],
+  "tags": [
+    "dsa",
+    "distributed",
+    "annex",
+    "network",
+    "glade"
+  ],
+  "website": "https://github.com/reznikmm/garlic/wiki",
+  "repository": {
+    "url": "https://github.com/reznikmm/garlic",
+    "host": "github",
+    "commit": "90ef4b6f01c95df7e04c8f3e4c41c275f23acea9"
+  },
+  "dependencies": [],
+  "units": []
+}

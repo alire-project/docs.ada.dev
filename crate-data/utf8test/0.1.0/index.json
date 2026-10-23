@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "utf8test",
+  "version": "0.1.0",
+  "documented_at": "2026-03-07T02:49:39Z",
+  "description": "Test the terminal behavior when outputting Latin-1 and UTF-8 strings",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0"
+  ],
+  "tags": [
+    "unicode",
+    "utf-8",
+    "latin-1",
+    "terminal"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/utf8test",
+    "host": "github",
+    "commit": "245c2b3bec48ff6e2b94733419a42c7d77f054bf"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Utf8test_Config",
+      "id": "89fe3fb23a8c2e26",
+      "file": "utf8test_config.json"
+    }
+  ]
+}

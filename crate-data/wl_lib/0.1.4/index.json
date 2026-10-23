@@ -1,0 +1,241 @@
+{
+  "schema_version": "1",
+  "crate": "wl_lib",
+  "version": "0.1.4",
+  "documented_at": "2026-03-07T02:51:17Z",
+  "description": "Handy library packages",
+  "authors": [
+    "Fraser Wilson"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "miscellanea",
+    "utility"
+  ],
+  "website": "https://github.com/blancolioni/wl_lib",
+  "repository": {
+    "url": "https://github.com/blancolioni/wl_lib",
+    "host": "github",
+    "commit": "6c80af58120924dad621e7c24ff23e1c45f80ddf"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "WL",
+      "id": "9d709a05ea3ef8e4",
+      "file": "wl.json"
+    },
+    {
+      "name": "WL.Binary_IO",
+      "id": "4de00e475f90eacf",
+      "file": "wl-binary_io.json"
+    },
+    {
+      "name": "WL.Bitmap_IO",
+      "id": "e1371d0bf456e469",
+      "file": "wl-bitmap_io.json"
+    },
+    {
+      "name": "WL.Brownian_Noise",
+      "id": "f9bf123a40c52400",
+      "file": "wl-brownian_noise.json"
+    },
+    {
+      "name": "WL.Command_Line",
+      "id": "8a8c8ab1aa2df92b",
+      "file": "wl-command_line.json"
+    },
+    {
+      "name": "WL.Files",
+      "id": "bbc2f2290e4e6e34",
+      "file": "wl-files.json"
+    },
+    {
+      "name": "WL.Files.ELF",
+      "id": "913b8aac84ae41fc",
+      "file": "wl-files-elf.json"
+    },
+    {
+      "name": "WL.Generic_Money",
+      "id": "35d23224e240bbb4",
+      "file": "wl-generic_money.json"
+    },
+    {
+      "name": "WL.Generic_Quantities",
+      "id": "ec2a66736c86d761",
+      "file": "wl-generic_quantities.json"
+    },
+    {
+      "name": "WL.Generic_Real_Images",
+      "id": "2d19513e77c6b0a3",
+      "file": "wl-generic_real_images.json"
+    },
+    {
+      "name": "WL.Graphs",
+      "id": "188e0e3520911ce5",
+      "file": "wl-graphs.json"
+    },
+    {
+      "name": "WL.Guids",
+      "id": "883eb40fd7b4f4c3",
+      "file": "wl-guids.json"
+    },
+    {
+      "name": "WL.Guids.Maps",
+      "id": "680a70b7eedf98e7",
+      "file": "wl-guids-maps.json"
+    },
+    {
+      "name": "WL.Guids.Tests",
+      "id": "30ec0e1b977668a5",
+      "file": "wl-guids-tests.json"
+    },
+    {
+      "name": "WL.Heaps",
+      "id": "21248ee35a8ee8bb",
+      "file": "wl-heaps.json"
+    },
+    {
+      "name": "WL.Images",
+      "id": "e0984385932f13dd",
+      "file": "wl-images.json"
+    },
+    {
+      "name": "WL.Images.Bitmaps",
+      "id": "af09a10919f15930",
+      "file": "wl-images-bitmaps.json"
+    },
+    {
+      "name": "WL.Images.DDS",
+      "id": "da0fb95bdeec4833",
+      "file": "wl-images-dds.json"
+    },
+    {
+      "name": "WL.Images.Reader",
+      "id": "4515fad1e0b002a4",
+      "file": "wl-images-reader.json"
+    },
+    {
+      "name": "WL.Images.TGA",
+      "id": "c979abb6a9dc810f",
+      "file": "wl-images-tga.json"
+    },
+    {
+      "name": "WL.Indefinite_Heaps",
+      "id": "892405563873b905",
+      "file": "wl-indefinite_heaps.json"
+    },
+    {
+      "name": "WL.Json",
+      "id": "0aafb959ff23b468",
+      "file": "wl-json.json"
+    },
+    {
+      "name": "WL.Json.Tests",
+      "id": "9867d701ebf9e0a0",
+      "file": "wl-json-tests.json"
+    },
+    {
+      "name": "WL.Noise",
+      "id": "c49ce3977a5ede6a",
+      "file": "wl-noise.json"
+    },
+    {
+      "name": "WL.Numerics",
+      "id": "a79b83a21638afe5",
+      "file": "wl-numerics.json"
+    },
+    {
+      "name": "WL.Numerics.Generic_Geometry",
+      "id": "63835a25c8ffc275",
+      "file": "wl-numerics-generic_geometry.json"
+    },
+    {
+      "name": "WL.Numerics.Generic_Trigonometry",
+      "id": "5197bda672d0adfe",
+      "file": "wl-numerics-generic_trigonometry.json"
+    },
+    {
+      "name": "WL.Numerics.Roman",
+      "id": "fc0e61ebc91366b7",
+      "file": "wl-numerics-roman.json"
+    },
+    {
+      "name": "WL.Processes",
+      "id": "96689acac72a388d",
+      "file": "wl-processes.json"
+    },
+    {
+      "name": "WL.Quad_Trees",
+      "id": "d2aab293ceec2e0d",
+      "file": "wl-quad_trees.json"
+    },
+    {
+      "name": "WL.Random",
+      "id": "3cfaf954028f5c4b",
+      "file": "wl-random.json"
+    },
+    {
+      "name": "WL.Random.Height_Maps",
+      "id": "15cbb30c67537d9a",
+      "file": "wl-random-height_maps.json"
+    },
+    {
+      "name": "WL.Random.Names",
+      "id": "02971573e0ef84a1",
+      "file": "wl-random-names.json"
+    },
+    {
+      "name": "WL.Random.Weighted_Random_Choices",
+      "id": "cb410d2fc0891bfa",
+      "file": "wl-random-weighted_random_choices.json"
+    },
+    {
+      "name": "WL.Reports",
+      "id": "6fb49bedcd14b22c",
+      "file": "wl-reports.json"
+    },
+    {
+      "name": "WL.Reports.Tables",
+      "id": "082063b720491c18",
+      "file": "wl-reports-tables.json"
+    },
+    {
+      "name": "WL.String_Maps",
+      "id": "9c3f2c488ee9fd70",
+      "file": "wl-string_maps.json"
+    },
+    {
+      "name": "WL.String_Sets",
+      "id": "29a4c847fd5f8bac",
+      "file": "wl-string_sets.json"
+    },
+    {
+      "name": "WL.Unit",
+      "id": "947b4178286f7fec",
+      "file": "wl-unit.json"
+    },
+    {
+      "name": "WL.Unit.Compare_Test",
+      "id": "c36993d2bcf23c13",
+      "file": "wl-unit-compare_test.json"
+    },
+    {
+      "name": "WL.Unit.Identity_Test",
+      "id": "1e071b3fc8f6f4e6",
+      "file": "wl-unit-identity_test.json"
+    },
+    {
+      "name": "WL.Work",
+      "id": "59b9be5308d39e2b",
+      "file": "wl-work.json"
+    },
+    {
+      "name": "Wl_Lib_Config",
+      "id": "ceb8341d2d4222e8",
+      "file": "wl_lib_config.json"
+    }
+  ]
+}

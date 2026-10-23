@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a0b_armv7m — Ada/SPARK Documentation</title>
+  <meta name="description" content="ARMv7-M support (Cortex-M3, Cortex-M4, Cortex-M7)">
+  <meta name="keywords" content="Ada, SPARK, Alire, a0b_armv7m, a0b, embedded, armv7m, cortex-m, cortex-m3, cortex-m4, cortex-m7">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "a0b_armv7m",
+"version": "0.5.0",  "description": "ARMv7-M support (Cortex-M3, Cortex-M4, Cortex-M7)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/a0b_armv7m/",
+  "codeRepository": "https://github.com/godunko/a0b-armv7m"
+  ,"author": [{"@type": "Person", "name": "Vadim Godunko"}]
+  ,"license": "Apache-2.0 WITH LLVM-exception"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">a0b_armv7m</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>a0b_armv7m</h1>
+    <span class="version-tag">0.5.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.5.0">0.5.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.5.0" selected>0.5.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">ARMv7-M support (Cortex-M3, Cortex-M4, Cortex-M7)</p>
+
+  <div class="long-description"><p>Low-level Ada support for ARMv7-M processors (Cortex-M3, Cortex-M4, and<br />
+Cortex-M7) in the A0B embedded framework.</p>
+<p>The crate provides register definitions for the NVIC, SysTick, System Control<br />
+Block, MPU, floating-point support, cache control, Debug Control Block, and<br />
+Data Watchpoint and Trace unit. It also includes wrappers for processor<br />
+instructions and access to system registers, interrupt control utilities,<br />
+cache maintenance operations, and cycle-counter profiling utilities.</p>
+<p>Startup helpers support copying code and initialized data, clearing BSS<br />
+sections, initializing ITCM and DTCM sections, and enabling the floating-point<br />
+coprocessor. These building blocks are intended for board support packages,<br />
+runtime startup code, and other low-level components. Availability of<br />
+individual hardware features depends on the target processor.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Vadim Godunko</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0 WITH LLVM-exception</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/godunko/a0b-armv7m">https://github.com/godunko/a0b-armv7m</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">a0b</span><span class="tag">embedded</span><span class="tag">armv7m</span><span class="tag">cortex-m</span><span class="tag">cortex-m3</span><span class="tag">cortex-m4</span><span class="tag">cortex-m7</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_base/">a0b_base</a>
+        <span class="dep-version">^0.5.0</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/gnat_arm_elf/">gnat_arm_elf</a>
+        <span class="dep-version">^16</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m/">A0B.ARMv7M</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-cache_utilities/">A0B.ARMv7M.Cache_Utilities</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-instructions/">A0B.ARMv7M.Instructions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-nvic_utilities/">A0B.ARMv7M.NVIC_Utilities</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-parameters/">A0B.ARMv7M.Parameters</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-profiling_utilities/">A0B.ARMv7M.Profiling_Utilities</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-scs/">A0B.ARMv7M.SCS</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-scs-cache/">A0B.ARMv7M.SCS.Cache</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-scs-dwt/">A0B.ARMv7M.SCS.DWT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-scs-nvic/">A0B.ARMv7M.SCS.NVIC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-scs-scb/">A0B.ARMv7M.SCS.SCB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-startup_utilities/">A0B.ARMv7M.Startup_Utilities</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/a0b_armv7m/0.5.0/a0b-armv7m-startup_utilities-memory_initialization/">A0B.ARMv7M.Startup_Utilities.Memory_Initialization</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-10-23.
+    </p>
+  </footer>
+
+</body>
+</html>

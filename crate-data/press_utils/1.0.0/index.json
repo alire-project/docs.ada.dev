@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "press_utils",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T03:01:47Z",
+  "description": "Some utilities and a pretty complete argparse framework",
+  "authors": [
+    "Matheus Xavier"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "utils",
+    "argparse"
+  ],
+  "website": "https://github.com/stateprisma/pr_utils",
+  "repository": {
+    "url": "https://github.com/stateprisma/press_utils",
+    "host": "github",
+    "commit": "ecc49bab249f457465d34ff08ef4defa601f6b83"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Pr_Utils",
+      "id": "bb0a086b8be63a06",
+      "file": "pr_utils.json"
+    },
+    {
+      "name": "Pr_Utils.Argparse",
+      "id": "4ec37b31df63578f",
+      "file": "pr_utils-argparse.json"
+    },
+    {
+      "name": "Pr_Utils.String_Tools",
+      "id": "70e2b57ec6db5c1a",
+      "file": "pr_utils-string_tools.json"
+    },
+    {
+      "name": "Pr_Utils.String_Tools.Exceptions",
+      "id": "3f1292100b56858a",
+      "file": "pr_utils-string_tools-exceptions.json"
+    },
+    {
+      "name": "Press_Utils_Config",
+      "id": "3549f4f133d4754c",
+      "file": "press_utils_config.json"
+    }
+  ]
+}

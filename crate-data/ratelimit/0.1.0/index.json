@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "ratelimit",
+  "version": "0.1.0",
+  "documented_at": "2026-10-23T02:24:37Z",
+  "description": "Token bucket and fixed window rate limiters for Ada",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "rate-limit",
+    "throttling",
+    "token-bucket"
+  ],
+  "website": "https://github.com/kokhlo/ratelimit-ada",
+  "repository": {
+    "url": "https://github.com/kokhlo/ratelimit-ada",
+    "host": "github",
+    "commit": "1139078eac55fc61542eba40f4f34d294df888b8"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Rate_Limit",
+      "id": "3084e89ef570f74b",
+      "file": "rate_limit.json"
+    },
+    {
+      "name": "Rate_Limit.Fixed_Window",
+      "id": "775e6a4eff77ca4e",
+      "file": "rate_limit-fixed_window.json"
+    },
+    {
+      "name": "Rate_Limit.Token_Bucket",
+      "id": "366ef7ca68bbf722",
+      "file": "rate_limit-token_bucket.json"
+    }
+  ]
+}

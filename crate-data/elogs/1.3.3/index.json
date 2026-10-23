@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "crate": "elogs",
+  "version": "1.3.3",
+  "documented_at": "2026-04-01T03:01:25Z",
+  "description": "Embedded logging, proven absent of runtime errors",
+  "authors": [
+    "Kevin Chadwick"
+  ],
+  "licenses": [
+    "0BSD"
+  ],
+  "tags": [
+    "spark",
+    "embedded",
+    "zfp",
+    "logging",
+    "log"
+  ],
+  "website": "https://github.com/kevlar700/elogs",
+  "repository": {
+    "url": "https://github.com/kevlar700/elogs",
+    "host": "github",
+    "commit": "c6df359198a56a7d7d0bff6add1f94f99d546e8b"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatprove",
+      "version": "^15.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Elogs",
+      "id": "36b20fd545867127",
+      "file": "elogs.json"
+    },
+    {
+      "name": "Elogs_Config",
+      "id": "bd9f1507de8fe728",
+      "file": "elogs_config.json"
+    },
+    {
+      "name": "Elogs_Test",
+      "id": "1d8bc7f0116d6c6f",
+      "file": "elogs_test.json"
+    }
+  ]
+}

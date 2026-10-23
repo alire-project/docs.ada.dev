@@ -1,0 +1,75 @@
+{
+  "schema_version": "1",
+  "crate": "ccsds_ada",
+  "version": "0.1.0",
+  "documented_at": "2026-04-26T03:01:17Z",
+  "description": "CCSDS protocol suite with SPARK formal verification",
+  "long_description": "SPARK-proved CCSDS protocol suite for Ada 2022. Implements Space Packet\nProtocol (133.0-B-1), Time Code Formats (301.0-B-4 CUC/CDS), AOS Transfer\nFrame (732.0-B-4) with FECF, Encapsulation Packet (133.1-B-3), CFDP PDU\n(727.0-B-5) with optional CRC, SLE identifiers (132.0-B-3), and the\nCRC-16-CCITT-FALSE primitive used by AOS and CFDP. 100% formally verified\nat SPARK Level 2 (440 proof obligations, 0 unproved). No heap allocation,\npragma Pure, suitable for embedded flight software and safety-critical\nground systems.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "ccsds",
+    "space",
+    "telemetry",
+    "telecommand",
+    "spark",
+    "embedded",
+    "satellite",
+    "verified",
+    "cfdp",
+    "aos"
+  ],
+  "website": "https://github.com/b-erdem/ccsds_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/ccsds_ada",
+    "host": "github",
+    "commit": "7632ca9aa6f83c695b5b0fa2d420bf13a2ba8297"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CCSDS",
+      "id": "8437f7ba953426c8",
+      "file": "ccsds.json"
+    },
+    {
+      "name": "CCSDS.AOS_Frames",
+      "id": "dddb6cb74e46b70e",
+      "file": "ccsds-aos_frames.json"
+    },
+    {
+      "name": "CCSDS.CFDP",
+      "id": "808ffa6456198f6b",
+      "file": "ccsds-cfdp.json"
+    },
+    {
+      "name": "CCSDS.CRC16",
+      "id": "1ffe4ade7a0beb9c",
+      "file": "ccsds-crc16.json"
+    },
+    {
+      "name": "CCSDS.Encap_Packets",
+      "id": "930b28f802cabc53",
+      "file": "ccsds-encap_packets.json"
+    },
+    {
+      "name": "CCSDS.SLE",
+      "id": "3e2230d985eadfcf",
+      "file": "ccsds-sle.json"
+    },
+    {
+      "name": "CCSDS.Space_Packets",
+      "id": "2f4d29dd5bafb1f6",
+      "file": "ccsds-space_packets.json"
+    },
+    {
+      "name": "CCSDS.Time_Codes",
+      "id": "fead371fa41b49fa",
+      "file": "ccsds-time_codes.json"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1",
+  "crate": "pico_bsp",
+  "version": "2.2.0",
+  "documented_at": "2026-03-05T03:01:20Z",
+  "description": "Board support package for Raspberry Pi Pico",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "raspberrypi",
+    "pico",
+    "rp2040",
+    "bsp"
+  ],
+  "website": "https://pico-doc.synack.me/",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/pico_bsp",
+    "host": "github",
+    "commit": "4256840550d5891728409c1b5e97d0e3f9bdb50d"
+  },
+  "dependencies": [
+    {
+      "crate": "rp2040_hal",
+      "version": "^2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico",
+      "id": "9ea2483b344bb5c5",
+      "file": "pico.json"
+    },
+    {
+      "name": "Pico.Pimoroni",
+      "id": "e15de73038052d89",
+      "file": "pico-pimoroni.json"
+    },
+    {
+      "name": "Pico.Pimoroni.Audio_Pack",
+      "id": "ca5ab1d0cc15f12c",
+      "file": "pico-pimoroni-audio_pack.json"
+    },
+    {
+      "name": "Pico.Pimoroni.RGB_Keypad",
+      "id": "b506fb36663acc55",
+      "file": "pico-pimoroni-rgb_keypad.json"
+    },
+    {
+      "name": "Pico_Bsp_Config",
+      "id": "6833f86da6ed9ab5",
+      "file": "pico_bsp_config.json"
+    }
+  ]
+}

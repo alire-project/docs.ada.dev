@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"gsl","version":"0.1.0","id":"735e00b7b731f700","name":"gsl.sf","qualified_name":"gsl.sf","kind":"ada_package","location":{"file":"src/gsl-sf.ads","line":5,"column":9},"code":"package gsl.sf"}

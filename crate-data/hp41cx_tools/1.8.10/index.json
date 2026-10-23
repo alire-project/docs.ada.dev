@@ -1,0 +1,115 @@
+{
+  "schema_version": "1",
+  "crate": "hp41cx_tools",
+  "version": "1.8.10",
+  "documented_at": "2026-03-04T16:51:11Z",
+  "description": "Cross-platform tools to supercharge your HP-41CX emulator experience",
+  "long_description": "## HP-41CX Emulator Tools\n\nStep into the golden era of retro computing with **hp41cx_tools**, a versatile\nsuite that turbocharges your HP-41CX emulator adventures! Unlike many tools\nshackled to Windows, this toolkit runs flawlessly on **macOS**, **Linux**, and\n**Windows**, making it the ultimate companion for enthusiasts using the iconic\n[PX-41CX](https://paxer.net/PX-41CX/) from Paxer or the sleek\n[DM41X](https://www.swissmicros.com/product/dm41x) from SwissMicros. Channel\nyour inner 1980s programming wizard and master memory dumps, FOCAL source code,\n*and now encoding* with ease - compiling any FOCAL straight into upload-ready\ndump files for the PX-41CY emulator.\n\nBuilt with the precision of **Ada 2022** for unshakeable reliability, these\ntools decode, convert, and encode data with the finesse of the HP-41CX's\nlegendary keystrokes. Paired with intuitive **ZShell scripts** for macOS and\nLinux, the suite streamlines complex workflows, whether you're on a modern\nMacBook, a Linux workstation, or a Windows PC. This cross-platform prowess\nensures every retro computing fan can join the fun, no matter their\nsetup - grateful shoutout to Pierre Houbert's pioneering\n[PX41CX_Interface.xls](https://paxer.net/PX-41CX_Interface.zip) and its\nVisualBasic wizardry, which lit the fuse for this focused PX-41CX/DM41X\njourney.\n\n### Key Features\n\n- **Memory Dump Decoder**: Transform raw HP-41CX emulator memory dumps into\n  readable FOCAL source code with pinpoint accuracy.\n- **Source Code Converter**: Seamlessly convert between PX-41CX and DM41X FOCAL\n  code styles, bridging emulator ecosystems.\n- **FOCAL Encoder**: Compile modern UTF-8 encoded FOCAL programs into precise\n  dump files, ready for PX-41CY emulator upload - vintage vibes meet UTF-8\n  pipelines.\n- **Unicode Support**: Convert Unicode-encoded FOCAL programs to PX-41CX or\n  DM41X formats, blending vintage charm with modern workflows.\n- **Cross-Platform Power**: Runs natively on macOS, Linux, and Windows - like a\n  portable Ada generic, no OS exceptions.\n- **Open Source**: Hosted on\n  [SourceForge](https://sourceforge.net/p/calculator-scripts/code/ci/master/tree/Tools/hp41cx_tools/src/),\n  ready for you to hack, extend, and share with the retro computing community.\n- **Comprehensive Docs**: Explore detailed guides via\n  [GNATdoc](https://calculator-scripts.sourceforge.io/gnatdoc/hp41cx-tools).\n\n### Why You'll Love It\n\nRelive the thrill of programming the HP-41CX, the calculator that defined a\ngeneration of scientific and hobbyist triumphs. Whether you're decoding vintage\nmemory dumps, converting code styles, or encoding fresh FOCAL scripts,\n**hp41cx_tools** brings the past to life with unmatched versatility. Join the\nretro computing revolution and make your emulator sing - on any desktop OS!\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "calculator",
+    "tools",
+    "retrocomputing",
+    "ada-2022",
+    "hp-41cx",
+    "dm41x",
+    "px41cx",
+    "cross-platform"
+  ],
+  "website": "https://calculator-scripts.sourceforge.io/hp41cx-tools/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/calculator-scripts",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^7.1.0"
+    },
+    {
+      "crate": "adacl_regexp",
+      "version": "^7.1.0"
+    },
+    {
+      "crate": "adacl_sar",
+      "version": "^7.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "HP41CX_Tools",
+      "id": "0b4b9ec0069886f6",
+      "file": "hp41cx_tools.json"
+    },
+    {
+      "name": "HP41CX_Tools.Alarm",
+      "id": "0a9bf3697ec04f50",
+      "file": "hp41cx_tools-alarm.json"
+    },
+    {
+      "name": "HP41CX_Tools.CommandLine",
+      "id": "f9ce9e0820923360",
+      "file": "hp41cx_tools-commandline.json"
+    },
+    {
+      "name": "HP41CX_Tools.Converter",
+      "id": "7fb722be11815fe6",
+      "file": "hp41cx_tools-converter.json"
+    },
+    {
+      "name": "HP41CX_Tools.Decoder",
+      "id": "70e76f4f2c813400",
+      "file": "hp41cx_tools-decoder.json"
+    },
+    {
+      "name": "HP41CX_Tools.Encoder",
+      "id": "3c4b967b7d899b1d",
+      "file": "hp41cx_tools-encoder.json"
+    },
+    {
+      "name": "HP41CX_Tools.Filter",
+      "id": "b22c3e7a19022a40",
+      "file": "hp41cx_tools-filter.json"
+    },
+    {
+      "name": "HP41CX_Tools.Programs",
+      "id": "0316757d79ea8486",
+      "file": "hp41cx_tools-programs.json"
+    },
+    {
+      "name": "HP41CX_Tools.Registers",
+      "id": "3c98b68b641c6686",
+      "file": "hp41cx_tools-registers.json"
+    },
+    {
+      "name": "HP41CX_Tools.Registers.Addresses",
+      "id": "2d3297558b5daf35",
+      "file": "hp41cx_tools-registers-addresses.json"
+    },
+    {
+      "name": "HP41CX_Tools.Registers.Floats",
+      "id": "08b8f6e632311c10",
+      "file": "hp41cx_tools-registers-floats.json"
+    },
+    {
+      "name": "HP41CX_Tools.Registers.Keys",
+      "id": "2ead0ba0b130878b",
+      "file": "hp41cx_tools-registers-keys.json"
+    },
+    {
+      "name": "HP41CX_Tools.Registers.Lines",
+      "id": "3a7ccec1b2f2912d",
+      "file": "hp41cx_tools-registers-lines.json"
+    },
+    {
+      "name": "Hp41cx_Tools_Config",
+      "id": "886d8dec856a0601",
+      "file": "hp41cx_tools_config.json"
+    }
+  ]
+}

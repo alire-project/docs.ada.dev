@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_wear_levelling",
+  "version": "0.1.0",
+  "documented_at": "2026-10-02T02:27:08Z",
+  "description": "Ada/ESP-IDF: Wear Levelling bindings",
+  "long_description": "Ada bindings for the ESP-IDF Wear Levelling component (`wear_levelling`).\n\nCovers mounting of the wear levelling layer on top of a flash partition (`wl_mount`).\nThe resulting handle is used by the FAT filesystem and USB mass storage bindings.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "wear-levelling"
+  ],
+  "website": "https://github.com/godunko/espidf_wear_levelling",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_wear_levelling",
+    "host": "github",
+    "commit": "630755ca44b51df3cba6e4a48d9872ae08506803"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf_partition",
+      "version": "^0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.Wear_Levelling",
+      "id": "fd55bd86eda9f0c9",
+      "file": "espidf-wear_levelling.json"
+    }
+  ]
+}

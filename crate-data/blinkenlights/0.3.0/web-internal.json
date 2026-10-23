@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"blinkenlights","version":"0.3.0","id":"9f39fb0b6f5ab68a","name":"web.internal","qualified_name":"web.internal","kind":"ada_package","location":{"file":"src/web-internal.ads","line":6,"column":9},"code":"package web.internal","documentation":{"description":"\nDisplay the hardware and software configuration"}}

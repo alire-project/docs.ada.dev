@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "sparkfun_qwiic_motor_driver",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:58:33Z",
+  "description": "Interface to the SparkFun Qwiic motor driver.",
+  "authors": [
+    "Karsten Lueth"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "hal",
+    "motor-driver",
+    "sparkfun",
+    "i2c"
+  ],
+  "website": "https://github.com/KLOC-Karsten/sparkfun-qwiic-motor-driver",
+  "repository": {
+    "url": "https://github.com/KLOC-Karsten/sparkfun-qwiic-motor-driver",
+    "host": "github",
+    "commit": "a8e00b6da3625bee2a8033cc6fb8f305ff45cf06"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Sparkfun_Qwiic_Motor_Driver",
+      "id": "b2a4052fafc428e0",
+      "file": "sparkfun_qwiic_motor_driver.json"
+    },
+    {
+      "name": "Sparkfun_Qwiic_Motor_Driver_Config",
+      "id": "365d8e0d3824904e",
+      "file": "sparkfun_qwiic_motor_driver_config.json"
+    }
+  ]
+}

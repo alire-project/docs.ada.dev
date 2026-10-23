@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"portable_minimal_ada_rts","version":"1.0.0","id":"066e7af53404edae","name":"Portable_Minimal_Ada_Rts","qualified_name":"Portable_Minimal_Ada_Rts","kind":"ada_package","location":{"file":"src/portable_minimal_ada_rts.ads","line":1,"column":9},"code":"package Portable_Minimal_Ada_Rts"}

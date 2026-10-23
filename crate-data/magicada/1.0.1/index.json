@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "magicada",
+  "version": "1.0.1",
+  "documented_at": "2026-03-04T16:56:48Z",
+  "description": "Magic Number Recognition Library Ada binding",
+  "long_description": "Small Ada binding library to the [libmagic (3)](https://linux.die.net/man/3/libmagic)\nlibrary which is used by the implementation of the\n[file (1)](https://linux.die.net/man/1/file) command.\n\nTo simplify and help in the use of the magic Ada library, the\n`Magic.Manager` package encapsulates the management of the libmagic library\nand provides high level simple operations to hide the details of interacting\nwith the C library.  The package defines the `Magic_Manager` tagged record\nthat takes care of the C library interaction and cleaning of the libmagic\nlibrary once the manager is no longer required.  To use it, declare the\ninstance and initialize it with the `Initialize` procedure:\n\n```Ada\n with Magic.Manager;\n ...\n    Mgr : Magic.Manager.Magic_Manager;\n    ...\n       Mgr.Initialize (Magic.MAGIC_MIME, Magic.DEFAULT_PATH);\n```\n\nThe first parameter defines a set of flags represented by the `Magic.Flags`\ntype to control various options of the libmagic library.   The second\nparameter indicates the default path to the magic file\n(see [magic (5)](https://linux.die.net/man/5/magic)).\nOnce configured, the `Identify` functions can be used to identify a content.\nFor the first form, a path of the file is given:\n\n```Ada\n Mime : constant String := Mgr.Identify (\"file.ads\");\n```\n\nWith the second form, a `Stream_Element_Array` with the content to identify\nis given to the function.\n\n## Example\n\n- [examples.adb](https://gitlab.com/stcarrez/ada-libmagic/-/blob/main/examples/src/examples.adb?ref_type=heads)\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "magic",
+    "file",
+    "bindings"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-libmagic",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-libmagic",
+    "host": "gitlab",
+    "commit": "32af2d9a67f8da651cf66cd2deba9d0e898aef2f"
+  },
+  "dependencies": [
+    {
+      "crate": "libmagic",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "Magic",
+      "id": "3be7a505483c0050",
+      "file": "magic.json"
+    },
+    {
+      "name": "Magic.Manager",
+      "id": "ce0135238dc227de",
+      "file": "magic-manager.json"
+    }
+  ]
+}

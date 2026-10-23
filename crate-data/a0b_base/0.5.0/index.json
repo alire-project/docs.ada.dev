@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_base",
+  "version": "0.5.0",
+  "documented_at": "2026-05-14T03:02:25Z",
+  "description": "Fundamental types, GCC built-ins, and base packages for Ada projects",
+  "long_description": "The `a0b_base` crate provides the root package hierarchy and foundational components tailored for embedded, bare-metal, and low-level Ada applications. \n\nKey features include:\n* Foundational Types: \n  - `Integer_*` and `Unsigned_*` types of various sizes (1 to 64 bits) with shift and rotate operations.\n  - `Unsigned_*_Array` types and \"Enumerable\" modular types (2 to 8 bits).\n* Low-Level Utilities: \n  - Big-endian formatted types (`A0B.Types.Big_Endian`) for low-level protocol specifications.\n  - Type declarations specifically designed for use with the SVD2Ada code generator.\n* Compiler Bindings: \n  - Direct bindings to GCC built-ins (such as `bswap`, `clz`, `ffs`) in `A0B.Types.GCC_Builtins`.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "types",
+    "builtins"
+  ],
+  "website": "https://github.com/godunko/a0b-base",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-base",
+    "host": "github",
+    "commit": "882bbc92ae5c38d43cd3012d2e37e23dfae078ab"
+  },
+  "dependencies": [],
+  "units": []
+}

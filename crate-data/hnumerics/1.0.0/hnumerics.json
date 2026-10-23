@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"hnumerics","version":"1.0.0","id":"6b533d90887af8e0","name":"Hnumerics","qualified_name":"Hnumerics","kind":"ada_package","location":{"file":"src/hnumerics.ads","line":1,"column":9},"code":"package Hnumerics"}

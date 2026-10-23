@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "crate": "ethernet",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:59:51Z",
+  "description": "Root crate for ethernet namespace and MDIO/SMI/MIIM interface",
+  "authors": [
+    "Max Reznik"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "network",
+    "mdio",
+    "smi",
+    "miim",
+    "phy",
+    "driver"
+  ],
+  "website": "https://github.com/reznikmm/ethernet",
+  "repository": {
+    "url": "https://github.com/reznikmm/ethernet",
+    "host": "github",
+    "commit": "8f4d3e0580fa2e3c13e97b05f9cc270733c92de7"
+  },
+  "dependencies": [],
+  "units": []
+}

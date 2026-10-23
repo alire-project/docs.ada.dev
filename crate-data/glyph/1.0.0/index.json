@@ -1,0 +1,125 @@
+{
+  "schema_version": "1",
+  "crate": "glyph",
+  "version": "1.0.0",
+  "documented_at": "2026-09-29T02:24:51Z",
+  "description": "Portable graphics framework for embedded Ada systems",
+  "authors": [
+    "Lokesh Panditi <lokesh.panditi.29@gmail.com>"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "graphics",
+    "embedded",
+    "oled",
+    "display",
+    "2d",
+    "rp2040"
+  ],
+  "website": "https://github.com/thirstymelon/glyph",
+  "repository": {
+    "url": "https://github.com/thirstymelon/glyph",
+    "host": "github",
+    "commit": "c09dd1a0b49563d43c39e41c693b4ea751e381f2"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Glyph",
+      "id": "fd1890afaf4b6544",
+      "file": "glyph.json"
+    },
+    {
+      "name": "Glyph.Algorithms",
+      "id": "f723e21c32df13a0",
+      "file": "glyph-algorithms.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Circle",
+      "id": "7b1b411da399268b",
+      "file": "glyph-algorithms-circle.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Clipping",
+      "id": "25567ac54e7488f3",
+      "file": "glyph-algorithms-clipping.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Lines",
+      "id": "69b47d4f5dbb3ae1",
+      "file": "glyph-algorithms-lines.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Rectangle",
+      "id": "8079cf157eb2fec4",
+      "file": "glyph-algorithms-rectangle.json"
+    },
+    {
+      "name": "Glyph.Algorithms.Triangle",
+      "id": "c9fd15a6bedf7377",
+      "file": "glyph-algorithms-triangle.json"
+    },
+    {
+      "name": "Glyph.Canvas",
+      "id": "ed707c2c334077de",
+      "file": "glyph-canvas.json"
+    },
+    {
+      "name": "Glyph.Canvas.Generic_Mono",
+      "id": "585ace70e93a194d",
+      "file": "glyph-canvas-generic_mono.json"
+    },
+    {
+      "name": "Glyph.Colors",
+      "id": "a7e9e940e9124928",
+      "file": "glyph-colors.json"
+    },
+    {
+      "name": "Glyph.Controllers",
+      "id": "b4e99bffbd9649b4",
+      "file": "glyph-controllers.json"
+    },
+    {
+      "name": "Glyph.Controllers.SSD1306",
+      "id": "1989b224996268e1",
+      "file": "glyph-controllers-ssd1306.json"
+    },
+    {
+      "name": "Glyph.Display",
+      "id": "92731ba7ab7b4c38",
+      "file": "glyph-display.json"
+    },
+    {
+      "name": "Glyph.Display.Generic_Display",
+      "id": "6e445a81f0df2db0",
+      "file": "glyph-display-generic_display.json"
+    },
+    {
+      "name": "Glyph.Transport",
+      "id": "b83e12d49199a35c",
+      "file": "glyph-transport.json"
+    },
+    {
+      "name": "Glyph.Transport.I2C",
+      "id": "afe5b5434c864125",
+      "file": "glyph-transport-i2c.json"
+    },
+    {
+      "name": "Glyph.Transport.Pico",
+      "id": "58ed770776bc549e",
+      "file": "glyph-transport-pico.json"
+    },
+    {
+      "name": "Glyph.Types",
+      "id": "1a47445ccbf4d280",
+      "file": "glyph-types.json"
+    }
+  ]
+}

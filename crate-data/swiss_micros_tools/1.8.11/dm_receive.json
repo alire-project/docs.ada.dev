@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"swiss_micros_tools","version":"1.8.11","id":"b9de71b2dad8c2f0","name":"DM_Receive","qualified_name":"DM_Receive","kind":"ada_package","location":{"file":"src/dm_receive.ads","line":27,"column":9},"code":"package DM_Receive","documentation":{"description":"-\n  @summary\n\n  @description"}}

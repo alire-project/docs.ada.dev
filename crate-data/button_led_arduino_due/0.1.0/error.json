@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "button_led_arduino_due",
+  "version": "0.1.0",
+  "failed_at": "2026-03-04T02:57:55Z",
+  "stage": "locate",
+  "message": "Could not find crate root for button_led_arduino_due=0.1.0 in /tmp/gnatdoc_vs0lgski"
+}

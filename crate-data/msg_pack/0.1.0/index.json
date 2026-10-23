@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "msg_pack",
+  "version": "0.1.0",
+  "documented_at": "2026-06-23T03:02:07Z",
+  "description": "Ada implementation of MessagePack serialization",
+  "authors": [
+    "mlorek"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "serialization",
+    "msgpack",
+    "messagepack",
+    "msg-pack"
+  ],
+  "website": "https://github.com/mlorek/msgpack",
+  "repository": {
+    "url": "https://github.com/mlorek/msgpack",
+    "host": "github",
+    "commit": "30c5bb53c36ffdcfb4bc3a849b6b847788965147"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Msg_Pack",
+      "id": "b7a2b82c81a8a79f",
+      "file": "msg_pack.json"
+    },
+    {
+      "name": "Msg_Pack.Packer",
+      "id": "5c8d83a428c507b5",
+      "file": "msg_pack-packer.json"
+    },
+    {
+      "name": "Msg_Pack.Unpacker",
+      "id": "7091e76633de11ef",
+      "file": "msg_pack-unpacker.json"
+    },
+    {
+      "name": "Msg_Pack_Config",
+      "id": "cadaee54f569b692",
+      "file": "msg_pack_config.json"
+    }
+  ]
+}

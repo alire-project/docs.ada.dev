@@ -1,0 +1,72 @@
+{
+  "schema_version": "1",
+  "crate": "image_io",
+  "version": "20240725.0.0",
+  "documented_at": "2026-03-04T16:51:00Z",
+  "description": "Output in BMP,PPM,QOI;input in BMP,GIF,JPG,PNG,PNM,QOI,TGA",
+  "long_description": "# Image_IO\nOutput in BMP, PNG, PPM, and QOI formats; input in BMP, GIF, JPG, PNG, PNM, QOI, and TGA formats\n\nPackage Image_IO.Operations provides the ability to input and output images.\n\nPNG is a lossless compressed format that is widely supported. Uncompressed BMP is a universal format that is very large. PPM is intended to be a set of portable formats, but lacks support by default on some platforms. QOI is a lossless compressed format, but not widely supported.\n\nWrite_P3 uses [PragmARC.Text_IO](https://github.com/jrcarter/PragmARC/blob/Ada-12/pragmarc-text_io.ads) to obtain uniform line terminators across platforms. This can be easily changed to Ada.Text_IO if the line terminators are not a concern.\n\nWrite_PNG uses [Z_Compression](https://github.com/jrcarter/Z_Compression) and [CRC-32](https://github.com/jrcarter/CRC-32).\n\nRead is a wrapper around [Generic Image Decoder (GID)](https://github.com/zertovitch/gid) for the most common use: reading an image from a file. GID may be used to decode images from other sources, but that generality makes it complex to use. Read ignores transparency (Alpha channel) and only reads the first frame of an animation.\n\nPure_RGB is a demo program that reads an image using Read, modifies it to change all color components to the closest of 0 or 255, and outputs the result using Write_PNG. It is invoked with\n\n     pure_rgb <name>\n\nThe output name is the input name with \".png\" appended. Pure_RGB does no error handling; if the input file name is omitted, doesn't exist, or is not a supported image format, the program will terminate with an unhandled exception.\n\nImage_IO and Pure_RGB have been compiled and tested with GNAT 12.3.0 on Linux and ObjectAda 10.5U7 on Windows.\n",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "image",
+    "io",
+    "bmp",
+    "ppm",
+    "qoi",
+    "gif",
+    "jpg",
+    "png",
+    "pnm",
+    "tga"
+  ],
+  "website": "https://github.com/bracke/Image_IO",
+  "repository": {
+    "url": "https://github.com/bracke/Image_IO",
+    "host": "github",
+    "commit": "e3fcdc57ed2f868e3ad21aeb3330d23c5ec3dbe5"
+  },
+  "dependencies": [
+    {
+      "crate": "pragmarc",
+      "version": "^20240323.0.0"
+    },
+    {
+      "crate": "gid",
+      "version": "^13.0.0"
+    },
+    {
+      "crate": "crc_32",
+      "version": "^20240725.0.0"
+    },
+    {
+      "crate": "z_compression",
+      "version": "^20240724.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Image_IO",
+      "id": "1e1c643c21a61191",
+      "file": "image_io.json"
+    },
+    {
+      "name": "Image_IO.Holders",
+      "id": "8b7efa0968651602",
+      "file": "image_io-holders.json"
+    },
+    {
+      "name": "Image_IO.Operations",
+      "id": "3f1043d8fad7d271",
+      "file": "image_io-operations.json"
+    },
+    {
+      "name": "Image_Io_Config",
+      "id": "503c84e3567ed5c6",
+      "file": "image_io_config.json"
+    }
+  ]
+}
