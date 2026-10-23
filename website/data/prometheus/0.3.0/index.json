@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "prometheus",
+  "version": "0.3.0",
+  "documented_at": "2026-10-23T02:24:29Z",
+  "description": "Prometheus client library for Ada",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "prometheus",
+    "metrics",
+    "monitoring"
+  ],
+  "website": "https://github.com/kokhlo/prometheus-ada",
+  "repository": {
+    "url": "https://github.com/kokhlo/prometheus-ada",
+    "host": "github",
+    "commit": "336f326f8a7a20b81d0824437d845e605900ad77"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Prometheus",
+      "id": "1809f7cd0c75acf3",
+      "file": "prometheus.json"
+    }
+  ]
+}
