@@ -1,0 +1,106 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_armv7m",
+  "version": "0.6.0",
+  "documented_at": "2026-10-29T02:21:02Z",
+  "description": "ARMv7-M support (Cortex-M3, Cortex-M4, Cortex-M7)",
+  "long_description": "Low-level Ada support for ARMv7-M processors (Cortex-M3, Cortex-M4, and\nCortex-M7) in the A0B embedded framework.\n\nThe crate provides register definitions for the NVIC, SysTick, System Control\nBlock, MPU, floating-point support, cache control, Debug Control Block, and\nData Watchpoint and Trace unit. It also includes wrappers for processor\ninstructions and access to system registers, interrupt control utilities,\ncache maintenance operations, and cycle-counter profiling utilities.\n\nStartup helpers support copying code and initialized data, clearing BSS\nsections, initializing ITCM and DTCM sections, and enabling the floating-point\ncoprocessor. These building blocks are intended for board support packages,\nruntime startup code, and other low-level components. Availability of\nindividual hardware features depends on the target processor.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "armv7m",
+    "cortex-m",
+    "cortex-m3",
+    "cortex-m4",
+    "cortex-m7"
+  ],
+  "website": "https://github.com/godunko/a0b-armv7m",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-armv7m",
+    "host": "github",
+    "commit": "e9b2abf426269d4dab2db1b8536c4fdcf22c17cd"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "^0.6.0"
+    },
+    {
+      "crate": "gnat_arm_elf",
+      "version": ">16"
+    }
+  ],
+  "units": [
+    {
+      "name": "A0B.ARMv7M",
+      "id": "db5e517a56b208c8",
+      "file": "a0b-armv7m.json"
+    },
+    {
+      "name": "A0B.ARMv7M.Cache_Utilities",
+      "id": "8dab5b8cfae40d39",
+      "file": "a0b-armv7m-cache_utilities.json"
+    },
+    {
+      "name": "A0B.ARMv7M.Instructions",
+      "id": "655b0b9aa51db996",
+      "file": "a0b-armv7m-instructions.json"
+    },
+    {
+      "name": "A0B.ARMv7M.NVIC_Utilities",
+      "id": "90252f2e65aa361b",
+      "file": "a0b-armv7m-nvic_utilities.json"
+    },
+    {
+      "name": "A0B.ARMv7M.Parameters",
+      "id": "c577e17103c2c08f",
+      "file": "a0b-armv7m-parameters.json"
+    },
+    {
+      "name": "A0B.ARMv7M.Profiling_Utilities",
+      "id": "d8d4fead6643b2b1",
+      "file": "a0b-armv7m-profiling_utilities.json"
+    },
+    {
+      "name": "A0B.ARMv7M.SCS",
+      "id": "441102af55df55ea",
+      "file": "a0b-armv7m-scs.json"
+    },
+    {
+      "name": "A0B.ARMv7M.SCS.Cache",
+      "id": "9bb1148ca05f7675",
+      "file": "a0b-armv7m-scs-cache.json"
+    },
+    {
+      "name": "A0B.ARMv7M.SCS.DWT",
+      "id": "7f9893facfeaa2d2",
+      "file": "a0b-armv7m-scs-dwt.json"
+    },
+    {
+      "name": "A0B.ARMv7M.SCS.NVIC",
+      "id": "dcc6e983e67571b3",
+      "file": "a0b-armv7m-scs-nvic.json"
+    },
+    {
+      "name": "A0B.ARMv7M.SCS.SCB",
+      "id": "751866a0d54d0dad",
+      "file": "a0b-armv7m-scs-scb.json"
+    },
+    {
+      "name": "A0B.ARMv7M.Startup_Utilities",
+      "id": "4560ed3865f382d9",
+      "file": "a0b-armv7m-startup_utilities.json"
+    },
+    {
+      "name": "A0B.ARMv7M.Startup_Utilities.Memory_Initialization",
+      "id": "dfa11503c2153468",
+      "file": "a0b-armv7m-startup_utilities-memory_initialization.json"
+    }
+  ]
+}
