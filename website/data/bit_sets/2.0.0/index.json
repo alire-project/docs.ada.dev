@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "crate": "bit_sets",
+  "version": "2.0.0",
+  "documented_at": "2026-10-30T02:15:50Z",
+  "description": "A packed boolean array that saves space and is performant",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later"
+  ],
+  "tags": [
+    "bit",
+    "set",
+    "boolean",
+    "array",
+    "packed",
+    "performance"
+  ],
+  "website": "https://github.com/michael-hardeman/bit_sets",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/bit_sets",
+    "host": "github",
+    "commit": "5df70bd753c4a8cb75eb28ec97dcc5346a26d723"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Bit_Sets",
+      "id": "a5c3c0ed570b2572",
+      "file": "bit_sets.json"
+    },
+    {
+      "name": "Bit_Sets.Generic_Sets",
+      "id": "9bde3b6b2f67f8b4",
+      "file": "bit_sets-generic_sets.json"
+    },
+    {
+      "name": "Bit_Sets_Config",
+      "id": "d81a4b4a43cea916",
+      "file": "bit_sets_config.json"
+    }
+  ]
+}
