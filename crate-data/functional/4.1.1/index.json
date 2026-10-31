@@ -1,0 +1,104 @@
+{
+  "schema_version": "1",
+  "crate": "functional",
+  "version": "4.1.1",
+  "documented_at": "2026-06-09T03:02:51Z",
+  "description": "Functional Programming Library for Ada 2022",
+  "authors": [
+    "A Bit of Help, Inc. - Michael Gardner"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "functional",
+    "fx",
+    "either",
+    "option",
+    "result",
+    "monad",
+    "error-handling",
+    "ada2022",
+    "spark",
+    "embedded"
+  ],
+  "website": "https://github.com/abitofhelp/functional",
+  "repository": {
+    "url": "https://github.com/abitofhelp/functional",
+    "host": "github",
+    "commit": "c1ff2600a58b24bf482ec1e44fb63c58c1b1e293"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Functional",
+      "id": "3b637864e75ab14e",
+      "file": "functional.json"
+    },
+    {
+      "name": "Functional.Either",
+      "id": "a7e44176edaf1e86",
+      "file": "functional-either.json"
+    },
+    {
+      "name": "Functional.Option",
+      "id": "77d35dce763c6264",
+      "file": "functional-option.json"
+    },
+    {
+      "name": "Functional.Result",
+      "id": "2cb5004ce1bc9137",
+      "file": "functional-result.json"
+    },
+    {
+      "name": "Functional.Scoped",
+      "id": "3299faad648efda9",
+      "file": "functional-scoped.json"
+    },
+    {
+      "name": "Functional.Scoped.Conditional_Guard_For",
+      "id": "6c81090195a10177",
+      "file": "functional-scoped-conditional_guard_for.json"
+    },
+    {
+      "name": "Functional.Scoped.Guard_For",
+      "id": "b16219ed8fa83986",
+      "file": "functional-scoped-guard_for.json"
+    },
+    {
+      "name": "Functional.Try",
+      "id": "f04200b41891fd24",
+      "file": "functional-try.json"
+    },
+    {
+      "name": "Functional.Try.Map_To_Result",
+      "id": "281d92ba5b4295e6",
+      "file": "functional-try-map_to_result.json"
+    },
+    {
+      "name": "Functional.Try.Map_To_Result_With_Param",
+      "id": "5c24330037638e44",
+      "file": "functional-try-map_to_result_with_param.json"
+    },
+    {
+      "name": "Functional.Try.To_Option",
+      "id": "d6a5ab5ac917cf3b",
+      "file": "functional-try-to_option.json"
+    },
+    {
+      "name": "Functional.Try.To_Result",
+      "id": "440011e3ff68b84a",
+      "file": "functional-try-to_result.json"
+    },
+    {
+      "name": "Functional.Version",
+      "id": "5e24a4f17d3639e2",
+      "file": "functional-version.json"
+    },
+    {
+      "name": "Functional_Config",
+      "id": "6d54ff3ecaefd2df",
+      "file": "functional_config.json"
+    }
+  ]
+}

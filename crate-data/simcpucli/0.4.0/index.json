@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "crate": "simcpucli",
+  "version": "0.4.0",
+  "documented_at": "2026-03-06T02:58:06Z",
+  "description": "CLI for CPU simulator",
+  "long_description": "This provides a simple command line interface to the CPU simulator library.\nIt has commands for setting and reading memory, reading registers, and\nexecuting instructions.  It also uses the Tiny-Lisp library so that many\nof these actions can be scripted.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "cpu-simulator"
+  ],
+  "website": "https://github.com/BrentSeidel/Sim-CPU",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/Sim-CPU",
+    "host": "github",
+    "commit": "6f2878a9f3785bb5fe8a3f1afcde4fe100b635b8",
+    "subdir": "cli/"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "bbs_lisp",
+      "version": "~0.2.1"
+    },
+    {
+      "crate": "bbs_simcpu",
+      "version": "~0.3.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "cli",
+      "id": "99bb88401742848e",
+      "file": "cli.json"
+    },
+    {
+      "name": "cli.Lisp",
+      "id": "c8665de6628927fe",
+      "file": "cli-lisp.json"
+    },
+    {
+      "name": "cli.parse",
+      "id": "43fd534555404fdb",
+      "file": "cli-parse.json"
+    }
+  ]
+}

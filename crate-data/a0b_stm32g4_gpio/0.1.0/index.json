@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_stm32g4_gpio",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:48:22Z",
+  "description": "A0B: STM32G4 GPIO",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "stm32",
+    "stm32g4",
+    "gpio",
+    "exti"
+  ],
+  "repository": {
+    "url": "https://github.com/godunko/a0b-stm32g4-gpio",
+    "host": "github",
+    "commit": "2bc15160646b448fd070310dfd2110419ed86a73"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_stm32f2_generic_exti",
+      "version": "*"
+    },
+    {
+      "crate": "a0b_stm32g4",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

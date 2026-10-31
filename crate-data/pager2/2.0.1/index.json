@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "crate": "pager2",
+  "version": "2.0.1",
+  "documented_at": "2026-03-05T03:00:36Z",
+  "description": "Manipulate \"paged files\" found on the Ada Software Repository",
+  "authors": [
+    "Richard Conn"
+  ],
+  "licenses": [
+    "custom-CC-PDM-1.0"
+  ],
+  "tags": [
+    "application",
+    "archive"
+  ],
+  "website": "https://chiselapp.com/user/dbane/repository/pager2",
+  "repository": {
+    "url": "https://chiselapp.com/user/dbane/repository/pager2/tarball/98275eae74/pager2-98275eae74.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "INCLUDE_FILE",
+      "id": "c801bf64a788113b",
+      "file": "include_file.json"
+    },
+    {
+      "name": "INPUT_FILE",
+      "id": "0cd6d68acc96d5e8",
+      "file": "input_file.json"
+    },
+    {
+      "name": "LINE_DEFINITION",
+      "id": "6ed66dfb76ecb557",
+      "file": "line_definition.json"
+    },
+    {
+      "name": "OUTPUT_FILE",
+      "id": "1eb53676da147ec5",
+      "file": "output_file.json"
+    },
+    {
+      "name": "PAGED_FILE",
+      "id": "12768fbdcee0b2ae",
+      "file": "paged_file.json"
+    },
+    {
+      "name": "Pager2_Config",
+      "id": "702e93932b157611",
+      "file": "pager2_config.json"
+    }
+  ]
+}

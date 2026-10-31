@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "mavlink_common_v2",
+  "version": "2.0.0",
+  "documented_at": "2026-10-29T02:21:42Z",
+  "description": "MAVLink v2-- Micro Air Vehicle Message Marshalling Library.",
+  "long_description": "# MAVLink -- Common Dialect (Ada Bindings)\n\nThis crate provides an Ada binding for the [MAVLink](https://mavlink.io)\n**`common`** dialect: the shared, vendor-neutral set of messages, enums\nand commands that most other MAVLink dialects (ArduPilot, PX4, ...)\nbuild on top of.\n\nThe code is **generated**, not hand-written. It comes straight from the\nofficial [MAVLink XML message definitions](https://github.com/mavlink/mavlink)\nvia [pymavlink](https://github.com/ArduPilot/pymavlink)'s `mavgen` tool\nwith its Ada backend, then lightly post-processed. This keeps the\nbinding faithful to the upstream specification and makes it\nstraightforward to refresh whenever `common.xml` changes.\n\n## What you get\n\n- Strongly typed Ada records for every `common` message, with fields,\n  arrays, enums and bitmasks represented as proper Ada types instead of\n  raw bytes.\n- Marshalling/unmarshalling subprograms for each message, plus the\n  frame header and CRC handling needed to talk MAVLink on the wire.\n- `pragma Pure`, bareboard-friendly packages, suitable for embedded\n  targets (e.g. STM32) as well as desktop ground control software.\n\n## Wire protocol version\n\nThis crate targets the **MAVLink 2.0** wire protocol. If you need the\nMAVLink 1.0 wire format (extended message IDs, message signing,\nextension fields), use the sibling crate\n[`mavlink_common`](https://alire.ada.dev/crates/mavlink_common)\ninstead -- it exposes the same `common` dialect messages, packed\ndifferently on the wire.\n\n## Related crates\n\n- [`mavlink_shared`](https://alire.ada.dev/crates/mavlink_shared) --\n  code shared by all the generated dialect crates (CRC, low-level\n  float/byte helpers, etc.). Pulled in automatically as a dependency;\n  you normally don't need to depend on it directly.\n- [`mavlink_ardupilotmega`](https://alire.ada.dev/crates/mavlink_ardupilotmega) --\n  the ArduPilot-specific `ardupilotmega` dialect, which *extends*\n  `common` with vendor messages. Depend on it instead of on this crate\n  if you're talking to ArduPilot/PX4 vehicles and need their custom\n  messages in addition to the standard ones.\n- [`mavlink_common`](https://alire.ada.dev/crates/mavlink_common_v2) --\n  same dialect, MAVLink 1.0 wire protocol.\n",
+  "authors": [
+    "Fil Andrii",
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "embedded",
+    "network",
+    "drone"
+  ],
+  "website": "https://mavlink.io",
+  "repository": {
+    "url": "https://github.com/reznikmm/mavlink_common",
+    "host": "github",
+    "commit": "900aae0eb821534d6df9aab13ce2ccb9f7cdff3b"
+  },
+  "dependencies": [
+    {
+      "crate": "mavlink_shared",
+      "version": "^1.0"
+    }
+  ],
+  "units": []
+}

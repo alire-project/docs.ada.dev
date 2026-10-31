@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_driver_i2c",
+  "version": "0.1.0",
+  "documented_at": "2026-04-22T03:01:02Z",
+  "description": "Ada/ESP-IDF I2C master/slave driver",
+  "long_description": "Ada bindings for the ESP-IDF esp_driver_i2c component. This crate provides a native Ada interface for I2C master and slave operations, compatible with ESP-IDF v6.0 and later.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "embedded",
+    "esp32",
+    "espidf",
+    "driver",
+    "i2c"
+  ],
+  "website": "https://github.com/godunko/espidf_driver_i2c",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_driver_i2c",
+    "host": "github",
+    "commit": "aceeebd8c0055fb4241608ac983ced6de8558bb9"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.Driver.I2C",
+      "id": "c3f9d9cda9f8d3d2",
+      "file": "espidf-driver-i2c.json"
+    },
+    {
+      "name": "ESPIDF.Driver.I2C.Master",
+      "id": "8605fa9dcfa953b6",
+      "file": "espidf-driver-i2c-master.json"
+    }
+  ]
+}

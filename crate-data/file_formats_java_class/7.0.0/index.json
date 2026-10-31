@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "file_formats_java_class",
+  "version": "7.0.0",
+  "documented_at": "2026-03-04T03:00:22Z",
+  "description": "File format reader for the Java programming language CLASS file format",
+  "long_description": "`file_formats_java_class` provides the facilities for reading CLASS files defined\nin the [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/),\n[Java SE 7, CLASS major file version 51](https://docs.oracle.com/javase/specs/jvms/se7/html/index.html),\n[chapter 4](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html).\n\nSupported Elements (Java SE 7)\n------------------------------\n- Class Access Flags (Table 4.1)\n  - `ACC_PUBLIC`\n  - `ACC_FINAL`\n  - `ACC_SUPER`\n  - `ACC_INTERFACE`\n  - `ACC_ABSTRACT`\n  - `ACC_SYNTHETIC`\n  - `ACC_ANNOTATION`\n  - `ACC_ENUM`\n- Constant Pool (Table 4.3)\n  - `CONSTANT_Class_info`\n  - `CONSTANT_Fieldref_info`\n  - `CONSTANT_Methodref_info`\n  - `CONSTANT_InterfaceMethodref_info`\n  - `CONSTANT_String_info`\n  - `CONSTANT_Integer_info`\n  - `CONSTANT_Float_info`\n  - `CONSTANT_Long_info`\n  - `CONSTANT_Double_info`\n  - `CONSTANT_NameAndType_info`\n  - `CONSTANT_Utf8_info`\n  - `CONSTANT_MethodHandle_info`\n  - `CONSTANT_MethodType_info`\n  - `CONSTANT_InvokeDynamic_info`\n- Field Access Flags (Table 4.4)\n  - `ACC_PUBLIC`\n  - `ACC_PRIVATE`\n  - `ACC_PROTECTED`\n  - `ACC_STATIC`\n  - `ACC_FINAL`\n  - `ACC_VOLATILE`\n  - `ACC_TRANSIENT`\n  - `ACC_SYNTHETIC`\n  - `ACC_ENUM`\n- Method Access Flags (Table 4.5)\n  - `ACC_PUBLIC`\n  - `ACC_PRIVATE`\n  - `ACC_PROTECTED`\n  - `ACC_STATIC`\n  - `ACC_FINAL`\n  - `ACC_SYNCHRONIZED`\n  - `ACC_BRIDGE`\n  - `ACC_VARARGS`\n  - `ACC_NATIVE`\n  - `ACC_ABSTRACT`\n  - `ACC_STRICT`\n  - `ACC_SYNTHETIC`\n- Attributes (Table 4.6)\n  - `ConstantValue`\n  - `Code`\n  - `StackMapTable`\n  - `Exceptions`\n  - `InnerClasses`\n  - `EnclosingMethod`\n  - `Synthetic`\n  - `Signature`\n  - `SourceFile`\n  - `SourceDebugExtension`\n  - `LineNumberTable`\n  - `LocalVariableTable`\n  - `LocalVariableTypeTable`\n  - `Deprecated`\n  - `RuntimeVisibleAnnotations`\n  - `RuntimeInvisibleAnnotations`\n  - `RuntimeVisibleParameterAnnotations`\n  - `RuntimeInvisibleParameterAnnotations`\n  - `AnnotationDefault`\n  - `BootstrapMethods`\n  - `Other` - Used for unrecognized/private attributes\n  - **NOTE:** All restrictions put in place of each attribute for determining the validity of a CLASS file may not be fully implemented at the current time.\n\nExample Use\n-----------\nAll pertinent types and subprograms are available within the package \n`File_Formats_Java_Class`. Reading `Class_File` is done primarily through the `Input` aspect,\nas shown below.\n```ada\nwith Ada.Text_IO;\n\nwith File_Formats_Java_Class;\nuse  File_Formats_Java_Class;\n\nprocedure Read_Class_File is\n    F : File_Type;\n    S : Stream_Access;\nbegin\n    Open (F, In_File, \"Example.class\");\n    S := Stream (F);\n    Ada.Text_IO.Put_Line (Class_File'Input (S));\n    Close (F);\nend Read_Class_File;\n```\n\nDevelopment Status\n------------------\nThis crate does not yet define operations for writing to CLASS files, but this is a priority.\nAfter writing is complete, this crate will be updated to support CLASS files of Java SE 8+.\nYou are free to report issues and contribute at the crate's [GitHub repository](https://github.com/Bread-Experts-Group/file_formats_java_class).\n",
+  "authors": [
+    "Miko Elbrecht"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "file",
+    "formats",
+    "java",
+    "class"
+  ],
+  "website": "https://github.com/Bread-Experts-Group/file_formats_java_class",
+  "repository": {
+    "url": "https://github.com/Bread-Experts-Group/file_formats_java_class",
+    "host": "github",
+    "commit": "1d232835ecd6829259d9124859fcaf62f111f924"
+  },
+  "dependencies": [
+    {
+      "crate": "byteflippers",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "File_Formats_Java_Class",
+      "id": "afded8d5c821cbc6",
+      "file": "file_formats_java_class.json"
+    },
+    {
+      "name": "File_Formats_Java_Class_Config",
+      "id": "eac736b05971758b",
+      "file": "file_formats_java_class_config.json"
+    }
+  ]
+}

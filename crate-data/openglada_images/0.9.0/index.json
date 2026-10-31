@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "openglada_images",
+  "version": "0.9.0",
+  "documented_at": "2026-03-05T02:59:22Z",
+  "description": "Image loading library for OpenGLAda",
+  "authors": [
+    "Felix Krause"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "opengl",
+    "rendering",
+    "graphics"
+  ],
+  "website": "http://flyx.github.io/OpenGLAda/",
+  "repository": {
+    "url": "https://github.com/flyx/OpenGLAda",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gid",
+      "version": "^9.0.0"
+    },
+    {
+      "crate": "openglada",
+      "version": "~0.9.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "GL.Images",
+      "id": "a4414908c9e0971f",
+      "file": "gl-images.json"
+    }
+  ]
+}

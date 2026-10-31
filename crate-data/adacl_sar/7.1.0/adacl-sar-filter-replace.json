@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"adacl_sar","version":"7.1.0","id":"ac1fe08ef1cc3aa7","name":"AdaCL.SAR.Filter.Replace","qualified_name":"AdaCL.SAR.Filter.Replace","kind":"ada_package","location":{"file":"src/adacl-sar-filter-replace.ads","line":26,"column":9},"code":"package AdaCL.SAR.Filter.Replace","documentation":{"description":"Documentation:\n   Filter who replace data."}}

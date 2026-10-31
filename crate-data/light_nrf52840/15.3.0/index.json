@@ -1,0 +1,1202 @@
+{
+  "schema_version": "1",
+  "crate": "light_nrf52840",
+  "version": "15.3.0",
+  "documented_at": "2026-04-15T03:01:57Z",
+  "description": "light runtime for the NRF52840 SoC",
+  "long_description": "## Usage\n\nFirst edit your `alire.toml` file and add the following elements:\n - Add `light_nrf52840` in the dependency list:\n   ```toml\n   [[depends-on]]\n   light_nrf52840 = \"*\"\n   ```\n\nThen edit your project file to add the following elements:\n - \"with\" the run-time project file. With this, gprbuild will compile the run-time before your application\n   ```ada\n   with \"$(runtime_proj_prefix)_build.gpr\";\n   ```\n - Specify the `Target` and `Runtime` attributes:\n   ```ada\n      for Target use $(runtime_proj_prefix)_build'Target;\n      for Runtime (\"Ada\") use $(runtime_proj_prefix)_build'Runtime (\"Ada\");\n   ```\n",
+  "authors": [
+    "AdaCore",
+    "Daniel King"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "embedded",
+    "runtime"
+  ],
+  "website": "https://github.com/damaki/community-bb-runtimes",
+  "repository": {
+    "url": "https://github.com/damaki/community-bb-runtimes",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnat_arm_elf",
+      "version": "^15"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ada",
+      "id": "fdee430d40bd57de",
+      "file": "ada.json"
+    },
+    {
+      "name": "Ada.Assertions",
+      "id": "f14ff5e258903851",
+      "file": "ada-assertions.json"
+    },
+    {
+      "name": "Ada.Characters",
+      "id": "88ccccd9c18adf27",
+      "file": "ada-characters.json"
+    },
+    {
+      "name": "Ada.Characters.Handling",
+      "id": "1853790f7dda8b92",
+      "file": "ada-characters-handling.json"
+    },
+    {
+      "name": "Ada.Characters.Latin_1",
+      "id": "d243ff69541fc5e7",
+      "file": "ada-characters-latin_1.json"
+    },
+    {
+      "name": "Ada.Exceptions",
+      "id": "810723b594d2ace2",
+      "file": "ada-exceptions.json"
+    },
+    {
+      "name": "Ada.Numerics",
+      "id": "e01927163277a070",
+      "file": "ada-numerics.json"
+    },
+    {
+      "name": "Ada.Numerics.Aux",
+      "id": "f2ce69da2b1fcc36",
+      "file": "ada-numerics-aux.json"
+    },
+    {
+      "name": "Ada.Numerics.Big_Numbers",
+      "id": "76a106294935b9b7",
+      "file": "ada-numerics-big_numbers.json"
+    },
+    {
+      "name": "Ada.Numerics.Big_Numbers.Big_Integers_Ghost",
+      "id": "bc7e0339f468ef5e",
+      "file": "ada-numerics-big_numbers-big_integers_ghost.json"
+    },
+    {
+      "name": "Ada.Numerics.Big_Numbers.Big_Integers_Ghost.Signed_Conversions",
+      "id": "2a5e767f8503dc59",
+      "file": "ada-numerics-big_numbers-big_integers_ghost-signed_conversions.json"
+    },
+    {
+      "name": "Ada.Numerics.Big_Numbers.Big_Integers_Ghost.Unsigned_Conversions",
+      "id": "49eb8ce725dfdb98",
+      "file": "ada-numerics-big_numbers-big_integers_ghost-unsigned_conversions.json"
+    },
+    {
+      "name": "Ada.Numerics.Generic_Elementary_Functions",
+      "id": "e8b322c1857d4a78",
+      "file": "ada-numerics-generic_elementary_functions.json"
+    },
+    {
+      "name": "Ada.Strings",
+      "id": "1d068bac68456c5c",
+      "file": "ada-strings.json"
+    },
+    {
+      "name": "Ada.Strings.Bounded",
+      "id": "7fdc3ed14703a0cb",
+      "file": "ada-strings-bounded.json"
+    },
+    {
+      "name": "Ada.Strings.Bounded.Generic_Bounded_Length",
+      "id": "dc869fbefeea1a16",
+      "file": "ada-strings-bounded-generic_bounded_length.json"
+    },
+    {
+      "name": "Ada.Strings.Fixed",
+      "id": "c1cba370d779a8a3",
+      "file": "ada-strings-fixed.json"
+    },
+    {
+      "name": "Ada.Strings.Maps",
+      "id": "80c4ac504e087ed7",
+      "file": "ada-strings-maps.json"
+    },
+    {
+      "name": "Ada.Strings.Maps.Constants",
+      "id": "69a6a76dbedd8d5b",
+      "file": "ada-strings-maps-constants.json"
+    },
+    {
+      "name": "Ada.Strings.Search",
+      "id": "55e4d05dc6e22bca",
+      "file": "ada-strings-search.json"
+    },
+    {
+      "name": "Ada.Strings.Superbounded",
+      "id": "058f50aa013d4335",
+      "file": "ada-strings-superbounded.json"
+    },
+    {
+      "name": "Ada.Tags",
+      "id": "abd86bffdfb5869d",
+      "file": "ada-tags.json"
+    },
+    {
+      "name": "Ada.Text_IO",
+      "id": "6c2fac7e2ea43af7",
+      "file": "ada-text_io.json"
+    },
+    {
+      "name": "GNAT",
+      "id": "6d0ed7a7e79fbdcd",
+      "file": "gnat.json"
+    },
+    {
+      "name": "GNAT.Debug_Utilities",
+      "id": "b94b498d14802ebe",
+      "file": "gnat-debug_utilities.json"
+    },
+    {
+      "name": "GNAT.IO",
+      "id": "5ae3a07c5ec95451",
+      "file": "gnat-io.json"
+    },
+    {
+      "name": "GNAT.Secondary_Stack_Info",
+      "id": "6a2f698ff1342ba8",
+      "file": "gnat-secondary_stack_info.json"
+    },
+    {
+      "name": "GNAT.Source_Info",
+      "id": "49141f88d566bbec",
+      "file": "gnat-source_info.json"
+    },
+    {
+      "name": "Interfaces",
+      "id": "0274021b904cdec6",
+      "file": "interfaces.json"
+    },
+    {
+      "name": "Interfaces.C",
+      "id": "a1821cabe66a1908",
+      "file": "interfaces-c.json"
+    },
+    {
+      "name": "Interfaces.C.Extensions",
+      "id": "93483dfe9d5283bb",
+      "file": "interfaces-c-extensions.json"
+    },
+    {
+      "name": "Interfaces.C.Pointers",
+      "id": "4a20461f643b2b82",
+      "file": "interfaces-c-pointers.json"
+    },
+    {
+      "name": "Interfaces.C.Strings",
+      "id": "5f17987a06ce27fb",
+      "file": "interfaces-c-strings.json"
+    },
+    {
+      "name": "Interfaces.NRF52",
+      "id": "52fdd5634aa11050",
+      "file": "interfaces-nrf52.json"
+    },
+    {
+      "name": "Interfaces.NRF52.CCM",
+      "id": "babd0f0a4c7c2b5a",
+      "file": "interfaces-nrf52-ccm.json"
+    },
+    {
+      "name": "Interfaces.NRF52.CLOCK",
+      "id": "bce806d3719a06c1",
+      "file": "interfaces-nrf52-clock.json"
+    },
+    {
+      "name": "Interfaces.NRF52.FICR",
+      "id": "3734cf03fced0502",
+      "file": "interfaces-nrf52-ficr.json"
+    },
+    {
+      "name": "Interfaces.NRF52.GPIO",
+      "id": "ec753b0b3875a975",
+      "file": "interfaces-nrf52-gpio.json"
+    },
+    {
+      "name": "Interfaces.NRF52.NVMC",
+      "id": "480bd69684b61d15",
+      "file": "interfaces-nrf52-nvmc.json"
+    },
+    {
+      "name": "Interfaces.NRF52.RTC",
+      "id": "66cd812bdccc2280",
+      "file": "interfaces-nrf52-rtc.json"
+    },
+    {
+      "name": "Interfaces.NRF52.TEMP",
+      "id": "00e46fcc88fdc8b8",
+      "file": "interfaces-nrf52-temp.json"
+    },
+    {
+      "name": "Interfaces.NRF52.UICR",
+      "id": "d832d60dcee5efcf",
+      "file": "interfaces-nrf52-uicr.json"
+    },
+    {
+      "name": "Light_Nrf52840_Config",
+      "id": "f7861c6cff93e609",
+      "file": "light_nrf52840_config.json"
+    },
+    {
+      "name": "System",
+      "id": "bbc5e661e106c6dc",
+      "file": "system.json"
+    },
+    {
+      "name": "System.Address_Operations",
+      "id": "a63d1c49064a5283",
+      "file": "system-address_operations.json"
+    },
+    {
+      "name": "System.Address_To_Access_Conversions",
+      "id": "79e7cc751053218d",
+      "file": "system-address_to_access_conversions.json"
+    },
+    {
+      "name": "System.Arith_32",
+      "id": "4f18f78b83a4c1f0",
+      "file": "system-arith_32.json"
+    },
+    {
+      "name": "System.Arith_64",
+      "id": "c1f7b15e8aebb06e",
+      "file": "system-arith_64.json"
+    },
+    {
+      "name": "System.Arith_Double",
+      "id": "1d542a80ed27153f",
+      "file": "system-arith_double.json"
+    },
+    {
+      "name": "System.Assertions",
+      "id": "fa3c29f20750844b",
+      "file": "system-assertions.json"
+    },
+    {
+      "name": "System.Atomic_Counters",
+      "id": "7ac27a6e9232e1ae",
+      "file": "system-atomic_counters.json"
+    },
+    {
+      "name": "System.Atomic_Primitives",
+      "id": "3e37f0f23cf3aae5",
+      "file": "system-atomic_primitives.json"
+    },
+    {
+      "name": "System.BB",
+      "id": "a910c6ecc2583fea",
+      "file": "system-bb.json"
+    },
+    {
+      "name": "System.BB.Armv6m_Atomic",
+      "id": "a74a7863a2ee92bf",
+      "file": "system-bb-armv6m_atomic.json"
+    },
+    {
+      "name": "System.BB.Board_Parameters",
+      "id": "8c9696253bc991a4",
+      "file": "system-bb-board_parameters.json"
+    },
+    {
+      "name": "System.BB.MCU_Parameters",
+      "id": "766ba0837dc2c4da",
+      "file": "system-bb-mcu_parameters.json"
+    },
+    {
+      "name": "System.Bit_Ops",
+      "id": "b34253201319ed0e",
+      "file": "system-bit_ops.json"
+    },
+    {
+      "name": "System.Boolean_Array_Operations",
+      "id": "42731ef1d51fc4db",
+      "file": "system-boolean_array_operations.json"
+    },
+    {
+      "name": "System.Byte_Swapping",
+      "id": "aa6637bb4107d0d5",
+      "file": "system-byte_swapping.json"
+    },
+    {
+      "name": "System.Case_Util",
+      "id": "5454a32ea67c339d",
+      "file": "system-case_util.json"
+    },
+    {
+      "name": "System.Compare_Array_Signed_16",
+      "id": "3d50042f0684e4c2",
+      "file": "system-compare_array_signed_16.json"
+    },
+    {
+      "name": "System.Compare_Array_Signed_32",
+      "id": "46d0f82c7a40a24f",
+      "file": "system-compare_array_signed_32.json"
+    },
+    {
+      "name": "System.Compare_Array_Signed_64",
+      "id": "27a481d21bedf099",
+      "file": "system-compare_array_signed_64.json"
+    },
+    {
+      "name": "System.Compare_Array_Signed_8",
+      "id": "1f270ac278155c9f",
+      "file": "system-compare_array_signed_8.json"
+    },
+    {
+      "name": "System.Compare_Array_Unsigned_16",
+      "id": "0b5a1bd9f497bf92",
+      "file": "system-compare_array_unsigned_16.json"
+    },
+    {
+      "name": "System.Compare_Array_Unsigned_32",
+      "id": "2488dd6ce4cc7833",
+      "file": "system-compare_array_unsigned_32.json"
+    },
+    {
+      "name": "System.Compare_Array_Unsigned_64",
+      "id": "0f0ca5a0d148e0d0",
+      "file": "system-compare_array_unsigned_64.json"
+    },
+    {
+      "name": "System.Compare_Array_Unsigned_8",
+      "id": "2439ada0adace430",
+      "file": "system-compare_array_unsigned_8.json"
+    },
+    {
+      "name": "System.Double_Real",
+      "id": "44a75a8cffd12958",
+      "file": "system-double_real.json"
+    },
+    {
+      "name": "System.Exn_Flt",
+      "id": "f6c36851cc9f1f0a",
+      "file": "system-exn_flt.json"
+    },
+    {
+      "name": "System.Exn_Int",
+      "id": "d7e67e6b0ea88bea",
+      "file": "system-exn_int.json"
+    },
+    {
+      "name": "System.Exn_LFlt",
+      "id": "32d3edc3fdc6e8a3",
+      "file": "system-exn_lflt.json"
+    },
+    {
+      "name": "System.Exn_LLF",
+      "id": "4194393a09121e92",
+      "file": "system-exn_llf.json"
+    },
+    {
+      "name": "System.Exn_LLI",
+      "id": "303e000c336f4ff2",
+      "file": "system-exn_lli.json"
+    },
+    {
+      "name": "System.Exp_Int",
+      "id": "c124eedce2951198",
+      "file": "system-exp_int.json"
+    },
+    {
+      "name": "System.Exp_LLI",
+      "id": "10b2d2bff69745d4",
+      "file": "system-exp_lli.json"
+    },
+    {
+      "name": "System.Exp_LLU",
+      "id": "8fc30cf2f38c450a",
+      "file": "system-exp_llu.json"
+    },
+    {
+      "name": "System.Exp_Mod",
+      "id": "6207166302bfe84b",
+      "file": "system-exp_mod.json"
+    },
+    {
+      "name": "System.Exp_Uns",
+      "id": "b54531635e69e3af",
+      "file": "system-exp_uns.json"
+    },
+    {
+      "name": "System.Exponn",
+      "id": "77373a4623651cca",
+      "file": "system-exponn.json"
+    },
+    {
+      "name": "System.Expont",
+      "id": "b28216d8ed64b30d",
+      "file": "system-expont.json"
+    },
+    {
+      "name": "System.Fat_Flt",
+      "id": "e9ab43c4a6a7e027",
+      "file": "system-fat_flt.json"
+    },
+    {
+      "name": "System.Fat_Gen",
+      "id": "63fe50cfbe3597f6",
+      "file": "system-fat_gen.json"
+    },
+    {
+      "name": "System.Fat_LFlt",
+      "id": "fd727197da7551e1",
+      "file": "system-fat_lflt.json"
+    },
+    {
+      "name": "System.Fat_LLF",
+      "id": "294bdb6fa768ecd4",
+      "file": "system-fat_llf.json"
+    },
+    {
+      "name": "System.Float_Control",
+      "id": "1e32918a3238ff84",
+      "file": "system-float_control.json"
+    },
+    {
+      "name": "System.Generic_C_Math_Interface",
+      "id": "814738738a4f0669",
+      "file": "system-generic_c_math_interface.json"
+    },
+    {
+      "name": "System.Generic_Vector_Operations",
+      "id": "c577c99a12adfeb2",
+      "file": "system-generic_vector_operations.json"
+    },
+    {
+      "name": "System.Image_D",
+      "id": "d4c9624bc52afb9f",
+      "file": "system-image_d.json"
+    },
+    {
+      "name": "System.Image_F",
+      "id": "22cce53e0c63fa62",
+      "file": "system-image_f.json"
+    },
+    {
+      "name": "System.Image_I",
+      "id": "0aced1fb630fc582",
+      "file": "system-image_i.json"
+    },
+    {
+      "name": "System.Image_N",
+      "id": "cd6894bd3de65618",
+      "file": "system-image_n.json"
+    },
+    {
+      "name": "System.Image_R",
+      "id": "0220abf8d93b939e",
+      "file": "system-image_r.json"
+    },
+    {
+      "name": "System.Image_U",
+      "id": "055bf4d220bb70ad",
+      "file": "system-image_u.json"
+    },
+    {
+      "name": "System.Image_W",
+      "id": "38cc9e8a49fd568e",
+      "file": "system-image_w.json"
+    },
+    {
+      "name": "System.Img_Bool",
+      "id": "d0973700a5d79b01",
+      "file": "system-img_bool.json"
+    },
+    {
+      "name": "System.Img_Char",
+      "id": "ad8de7250dba02ce",
+      "file": "system-img_char.json"
+    },
+    {
+      "name": "System.Img_Decimal_32",
+      "id": "6fcab16b0d61ed2a",
+      "file": "system-img_decimal_32.json"
+    },
+    {
+      "name": "System.Img_Decimal_64",
+      "id": "3bfc7f22a22f04ee",
+      "file": "system-img_decimal_64.json"
+    },
+    {
+      "name": "System.Img_Enum_16",
+      "id": "200a536ff7d95b7a",
+      "file": "system-img_enum_16.json"
+    },
+    {
+      "name": "System.Img_Enum_32",
+      "id": "f79683dcc55535f2",
+      "file": "system-img_enum_32.json"
+    },
+    {
+      "name": "System.Img_Enum_8",
+      "id": "b21e7c0bcf0fb539",
+      "file": "system-img_enum_8.json"
+    },
+    {
+      "name": "System.Img_Fixed_32",
+      "id": "b896fe457b8b5771",
+      "file": "system-img_fixed_32.json"
+    },
+    {
+      "name": "System.Img_Fixed_64",
+      "id": "2de8dab30d171650",
+      "file": "system-img_fixed_64.json"
+    },
+    {
+      "name": "System.Img_Flt",
+      "id": "80477b7e173d3c5b",
+      "file": "system-img_flt.json"
+    },
+    {
+      "name": "System.Img_Int",
+      "id": "af03b7169226751b",
+      "file": "system-img_int.json"
+    },
+    {
+      "name": "System.Img_LFlt",
+      "id": "68c654207b27e59d",
+      "file": "system-img_lflt.json"
+    },
+    {
+      "name": "System.Img_LLF",
+      "id": "748b677ec16f3e9f",
+      "file": "system-img_llf.json"
+    },
+    {
+      "name": "System.Img_LLI",
+      "id": "fb9cf1a1aca182a5",
+      "file": "system-img_lli.json"
+    },
+    {
+      "name": "System.Img_LLU",
+      "id": "8a63708b90a8cf07",
+      "file": "system-img_llu.json"
+    },
+    {
+      "name": "System.Img_LLW",
+      "id": "252afa3b734f0382",
+      "file": "system-img_llw.json"
+    },
+    {
+      "name": "System.Img_Uns",
+      "id": "9556a4b88858fe13",
+      "file": "system-img_uns.json"
+    },
+    {
+      "name": "System.Img_Util",
+      "id": "a267d227fb18dc7c",
+      "file": "system-img_util.json"
+    },
+    {
+      "name": "System.Img_WIU",
+      "id": "e53586f5bacfe6ff",
+      "file": "system-img_wiu.json"
+    },
+    {
+      "name": "System.Libm",
+      "id": "d4b0c4a2f9f77074",
+      "file": "system-libm.json"
+    },
+    {
+      "name": "System.Libm.Generic_Approximations",
+      "id": "950db84f12705bd8",
+      "file": "system-libm-generic_approximations.json"
+    },
+    {
+      "name": "System.Libm_Double",
+      "id": "9f9295ff8925c72e",
+      "file": "system-libm_double.json"
+    },
+    {
+      "name": "System.Libm_Double.Squareroot",
+      "id": "034c29a0fd600147",
+      "file": "system-libm_double-squareroot.json"
+    },
+    {
+      "name": "System.Libm_Prefix",
+      "id": "fde33825858ee50b",
+      "file": "system-libm_prefix.json"
+    },
+    {
+      "name": "System.Libm_Single",
+      "id": "3af0172fda55d339",
+      "file": "system-libm_single.json"
+    },
+    {
+      "name": "System.Libm_Single.Squareroot",
+      "id": "845dc69ec29c4ea7",
+      "file": "system-libm_single-squareroot.json"
+    },
+    {
+      "name": "System.Machine_Code",
+      "id": "ee8511a7b043b74a",
+      "file": "system-machine_code.json"
+    },
+    {
+      "name": "System.Machine_Reset",
+      "id": "17cefb184578e370",
+      "file": "system-machine_reset.json"
+    },
+    {
+      "name": "System.Memory",
+      "id": "0d96fcd3839fe5c5",
+      "file": "system-memory.json"
+    },
+    {
+      "name": "System.Memory_Compare",
+      "id": "208a95273bb6c4f8",
+      "file": "system-memory_compare.json"
+    },
+    {
+      "name": "System.Memory_Copy",
+      "id": "6da45226b3c6af66",
+      "file": "system-memory_copy.json"
+    },
+    {
+      "name": "System.Memory_Move",
+      "id": "59501eeec4bb8810",
+      "file": "system-memory_move.json"
+    },
+    {
+      "name": "System.Memory_Set",
+      "id": "6d4beebed793a377",
+      "file": "system-memory_set.json"
+    },
+    {
+      "name": "System.Memory_Types",
+      "id": "1aac27a4466fcab2",
+      "file": "system-memory_types.json"
+    },
+    {
+      "name": "System.Pack_03",
+      "id": "465f57fafe7b1256",
+      "file": "system-pack_03.json"
+    },
+    {
+      "name": "System.Pack_05",
+      "id": "197e3fc06e152176",
+      "file": "system-pack_05.json"
+    },
+    {
+      "name": "System.Pack_06",
+      "id": "30d42fe6dbc6388c",
+      "file": "system-pack_06.json"
+    },
+    {
+      "name": "System.Pack_07",
+      "id": "5a22ed7f0f596237",
+      "file": "system-pack_07.json"
+    },
+    {
+      "name": "System.Pack_09",
+      "id": "0893b4c380bd5849",
+      "file": "system-pack_09.json"
+    },
+    {
+      "name": "System.Pack_10",
+      "id": "a19a76eadfffdbe3",
+      "file": "system-pack_10.json"
+    },
+    {
+      "name": "System.Pack_11",
+      "id": "4b82eced658e94bb",
+      "file": "system-pack_11.json"
+    },
+    {
+      "name": "System.Pack_12",
+      "id": "ba83f57b0fe817e6",
+      "file": "system-pack_12.json"
+    },
+    {
+      "name": "System.Pack_13",
+      "id": "1edb4791271b1d63",
+      "file": "system-pack_13.json"
+    },
+    {
+      "name": "System.Pack_14",
+      "id": "4fe92c8fbc270dad",
+      "file": "system-pack_14.json"
+    },
+    {
+      "name": "System.Pack_15",
+      "id": "aa3b5ff21f412a30",
+      "file": "system-pack_15.json"
+    },
+    {
+      "name": "System.Pack_17",
+      "id": "5c4d1651d0ea4aa4",
+      "file": "system-pack_17.json"
+    },
+    {
+      "name": "System.Pack_18",
+      "id": "08c693cd6fbfe5f0",
+      "file": "system-pack_18.json"
+    },
+    {
+      "name": "System.Pack_19",
+      "id": "95ef37e143969714",
+      "file": "system-pack_19.json"
+    },
+    {
+      "name": "System.Pack_20",
+      "id": "a56d0ebd2cb74d38",
+      "file": "system-pack_20.json"
+    },
+    {
+      "name": "System.Pack_21",
+      "id": "a788f80d40b882ff",
+      "file": "system-pack_21.json"
+    },
+    {
+      "name": "System.Pack_22",
+      "id": "521d54c7ceb07563",
+      "file": "system-pack_22.json"
+    },
+    {
+      "name": "System.Pack_23",
+      "id": "b49905579724c35e",
+      "file": "system-pack_23.json"
+    },
+    {
+      "name": "System.Pack_25",
+      "id": "311cd698124c1f70",
+      "file": "system-pack_25.json"
+    },
+    {
+      "name": "System.Pack_26",
+      "id": "08002c6a2f8b2173",
+      "file": "system-pack_26.json"
+    },
+    {
+      "name": "System.Pack_27",
+      "id": "55f578218532e21c",
+      "file": "system-pack_27.json"
+    },
+    {
+      "name": "System.Pack_28",
+      "id": "8b8fc6dd2d25d1cd",
+      "file": "system-pack_28.json"
+    },
+    {
+      "name": "System.Pack_29",
+      "id": "926a06516337eaba",
+      "file": "system-pack_29.json"
+    },
+    {
+      "name": "System.Pack_30",
+      "id": "6ca3201a26875425",
+      "file": "system-pack_30.json"
+    },
+    {
+      "name": "System.Pack_31",
+      "id": "d7d411988a625d36",
+      "file": "system-pack_31.json"
+    },
+    {
+      "name": "System.Pack_33",
+      "id": "1cd8bd7e30e6f0aa",
+      "file": "system-pack_33.json"
+    },
+    {
+      "name": "System.Pack_34",
+      "id": "f46f317091da2be1",
+      "file": "system-pack_34.json"
+    },
+    {
+      "name": "System.Pack_35",
+      "id": "26893419ec1acdd7",
+      "file": "system-pack_35.json"
+    },
+    {
+      "name": "System.Pack_36",
+      "id": "b882fee1f7da3fd9",
+      "file": "system-pack_36.json"
+    },
+    {
+      "name": "System.Pack_37",
+      "id": "e443f212f3cb2083",
+      "file": "system-pack_37.json"
+    },
+    {
+      "name": "System.Pack_38",
+      "id": "c60b7c54543cd453",
+      "file": "system-pack_38.json"
+    },
+    {
+      "name": "System.Pack_39",
+      "id": "e8af4ad4ad4e5c9c",
+      "file": "system-pack_39.json"
+    },
+    {
+      "name": "System.Pack_41",
+      "id": "20b2d8760979efbe",
+      "file": "system-pack_41.json"
+    },
+    {
+      "name": "System.Pack_42",
+      "id": "039e51681902fd8c",
+      "file": "system-pack_42.json"
+    },
+    {
+      "name": "System.Pack_43",
+      "id": "c3bdfffde54c1637",
+      "file": "system-pack_43.json"
+    },
+    {
+      "name": "System.Pack_44",
+      "id": "17fda87b207941ac",
+      "file": "system-pack_44.json"
+    },
+    {
+      "name": "System.Pack_45",
+      "id": "f5543ac23e82fd2d",
+      "file": "system-pack_45.json"
+    },
+    {
+      "name": "System.Pack_46",
+      "id": "58ef59730e5cebe3",
+      "file": "system-pack_46.json"
+    },
+    {
+      "name": "System.Pack_47",
+      "id": "4eaa5b97e56a5af7",
+      "file": "system-pack_47.json"
+    },
+    {
+      "name": "System.Pack_49",
+      "id": "bfdeec4d115000af",
+      "file": "system-pack_49.json"
+    },
+    {
+      "name": "System.Pack_50",
+      "id": "9d5df0d1487d0b6a",
+      "file": "system-pack_50.json"
+    },
+    {
+      "name": "System.Pack_51",
+      "id": "7931657aa8861dd9",
+      "file": "system-pack_51.json"
+    },
+    {
+      "name": "System.Pack_52",
+      "id": "22d16bbb846736e6",
+      "file": "system-pack_52.json"
+    },
+    {
+      "name": "System.Pack_53",
+      "id": "e820afc9901cf7f1",
+      "file": "system-pack_53.json"
+    },
+    {
+      "name": "System.Pack_54",
+      "id": "d53ff1c80f5d14aa",
+      "file": "system-pack_54.json"
+    },
+    {
+      "name": "System.Pack_55",
+      "id": "5b54078ac9b7522e",
+      "file": "system-pack_55.json"
+    },
+    {
+      "name": "System.Pack_57",
+      "id": "5c9b8992e80bbdba",
+      "file": "system-pack_57.json"
+    },
+    {
+      "name": "System.Pack_58",
+      "id": "f6a1529ed8d4fc67",
+      "file": "system-pack_58.json"
+    },
+    {
+      "name": "System.Pack_59",
+      "id": "8e0f9f944a83953b",
+      "file": "system-pack_59.json"
+    },
+    {
+      "name": "System.Pack_60",
+      "id": "6295662069c3405b",
+      "file": "system-pack_60.json"
+    },
+    {
+      "name": "System.Pack_61",
+      "id": "8ca2f7184b05e606",
+      "file": "system-pack_61.json"
+    },
+    {
+      "name": "System.Pack_62",
+      "id": "3ac40b2c6130371a",
+      "file": "system-pack_62.json"
+    },
+    {
+      "name": "System.Pack_63",
+      "id": "330fe02126bd4c67",
+      "file": "system-pack_63.json"
+    },
+    {
+      "name": "System.Parameters",
+      "id": "d74ff6123d170e05",
+      "file": "system-parameters.json"
+    },
+    {
+      "name": "System.Powten_Flt",
+      "id": "096e9fe30ca00994",
+      "file": "system-powten_flt.json"
+    },
+    {
+      "name": "System.Powten_LFlt",
+      "id": "67ed73f1f739fba3",
+      "file": "system-powten_lflt.json"
+    },
+    {
+      "name": "System.Powten_LLF",
+      "id": "f3f1777b942bbdf0",
+      "file": "system-powten_llf.json"
+    },
+    {
+      "name": "System.Return_Stack",
+      "id": "c5b486df45789d84",
+      "file": "system-return_stack.json"
+    },
+    {
+      "name": "System.Secondary_Stack",
+      "id": "e1be837dd7c93ca9",
+      "file": "system-secondary_stack.json"
+    },
+    {
+      "name": "System.Secondary_Stack.Single_Task",
+      "id": "c8408cfa1814f098",
+      "file": "system-secondary_stack-single_task.json"
+    },
+    {
+      "name": "System.Semihosting",
+      "id": "e3d0cea7b287cc1f",
+      "file": "system-semihosting.json"
+    },
+    {
+      "name": "System.SPARK",
+      "id": "9e642ad4be25bead",
+      "file": "system-spark.json"
+    },
+    {
+      "name": "System.SPARK.Cut_Operations",
+      "id": "ff1c4dcbcb1225ad",
+      "file": "system-spark-cut_operations.json"
+    },
+    {
+      "name": "System.Stack_Checking",
+      "id": "6dd79ec3fd5bc60d",
+      "file": "system-stack_checking.json"
+    },
+    {
+      "name": "System.Storage_Elements",
+      "id": "a89cf829e01dbec1",
+      "file": "system-storage_elements.json"
+    },
+    {
+      "name": "System.Text_IO",
+      "id": "48905179a321e21f",
+      "file": "system-text_io.json"
+    },
+    {
+      "name": "System.Unsigned_Types",
+      "id": "ce7adb8ba0c3c6f4",
+      "file": "system-unsigned_types.json"
+    },
+    {
+      "name": "System.Val_Bool",
+      "id": "66333ac34d15801e",
+      "file": "system-val_bool.json"
+    },
+    {
+      "name": "System.Val_Char",
+      "id": "7141de1d6e07d9da",
+      "file": "system-val_char.json"
+    },
+    {
+      "name": "System.Val_Decimal_32",
+      "id": "166ec4eec4ba1fda",
+      "file": "system-val_decimal_32.json"
+    },
+    {
+      "name": "System.Val_Decimal_64",
+      "id": "3dcd872945e4ae19",
+      "file": "system-val_decimal_64.json"
+    },
+    {
+      "name": "System.Val_Enum_16",
+      "id": "e8c5bbab9a62c38f",
+      "file": "system-val_enum_16.json"
+    },
+    {
+      "name": "System.Val_Enum_32",
+      "id": "3de291c86add7039",
+      "file": "system-val_enum_32.json"
+    },
+    {
+      "name": "System.Val_Enum_8",
+      "id": "8c93e0a33407bd93",
+      "file": "system-val_enum_8.json"
+    },
+    {
+      "name": "System.Val_Fixed_32",
+      "id": "254b5888fbf81913",
+      "file": "system-val_fixed_32.json"
+    },
+    {
+      "name": "System.Val_Fixed_64",
+      "id": "a1b6c83bfba0d57f",
+      "file": "system-val_fixed_64.json"
+    },
+    {
+      "name": "System.Val_Flt",
+      "id": "ebd4ea0bb0f308bf",
+      "file": "system-val_flt.json"
+    },
+    {
+      "name": "System.Val_Int",
+      "id": "dbc6b658e635c466",
+      "file": "system-val_int.json"
+    },
+    {
+      "name": "System.Val_LFlt",
+      "id": "7524c20789f67d02",
+      "file": "system-val_lflt.json"
+    },
+    {
+      "name": "System.Val_LLF",
+      "id": "9a09281cd680b397",
+      "file": "system-val_llf.json"
+    },
+    {
+      "name": "System.Val_LLI",
+      "id": "8dc68072a22c1cbc",
+      "file": "system-val_lli.json"
+    },
+    {
+      "name": "System.Val_LLU",
+      "id": "8109420aba6d38dc",
+      "file": "system-val_llu.json"
+    },
+    {
+      "name": "System.Val_Real",
+      "id": "435237d73d193118",
+      "file": "system-val_real.json"
+    },
+    {
+      "name": "System.Val_Spec",
+      "id": "af6860c31b615875",
+      "file": "system-val_spec.json"
+    },
+    {
+      "name": "System.Val_Uns",
+      "id": "97de7b6657bff467",
+      "file": "system-val_uns.json"
+    },
+    {
+      "name": "System.Val_Util",
+      "id": "43ea79b62f74ff15",
+      "file": "system-val_util.json"
+    },
+    {
+      "name": "System.Value_D",
+      "id": "0d117ae0ac891141",
+      "file": "system-value_d.json"
+    },
+    {
+      "name": "System.Value_F",
+      "id": "61528437cf2e187e",
+      "file": "system-value_f.json"
+    },
+    {
+      "name": "System.Value_I",
+      "id": "cd3b75bb16dbcc5a",
+      "file": "system-value_i.json"
+    },
+    {
+      "name": "System.Value_I_Spec",
+      "id": "450ac6ca50a6c71c",
+      "file": "system-value_i_spec.json"
+    },
+    {
+      "name": "System.Value_N",
+      "id": "b64b91996533e68a",
+      "file": "system-value_n.json"
+    },
+    {
+      "name": "System.Value_R",
+      "id": "c11d4d59c9583b3e",
+      "file": "system-value_r.json"
+    },
+    {
+      "name": "System.Value_U",
+      "id": "9a94caf1b0fe319b",
+      "file": "system-value_u.json"
+    },
+    {
+      "name": "System.Value_U_Spec",
+      "id": "daa8af708f5978a7",
+      "file": "system-value_u_spec.json"
+    },
+    {
+      "name": "System.Vectors",
+      "id": "791e82c426df13f1",
+      "file": "system-vectors.json"
+    },
+    {
+      "name": "System.Vectors.Boolean_Operations",
+      "id": "1ec3b540875cea77",
+      "file": "system-vectors-boolean_operations.json"
+    },
+    {
+      "name": "System.Vs_Int",
+      "id": "2d08d1bfd699cf3e",
+      "file": "system-vs_int.json"
+    },
+    {
+      "name": "System.Vs_LLI",
+      "id": "80e65a3eb330fc47",
+      "file": "system-vs_lli.json"
+    },
+    {
+      "name": "System.Vs_LLU",
+      "id": "fc12e4c99cfeb14d",
+      "file": "system-vs_llu.json"
+    },
+    {
+      "name": "System.Vs_Uns",
+      "id": "b363dbf5c3b75425",
+      "file": "system-vs_uns.json"
+    },
+    {
+      "name": "System.Wid_Int",
+      "id": "a13eb747f3c0d557",
+      "file": "system-wid_int.json"
+    },
+    {
+      "name": "System.Wid_LLI",
+      "id": "d721e15ff5f7c0be",
+      "file": "system-wid_lli.json"
+    },
+    {
+      "name": "System.Wid_LLU",
+      "id": "8fd28ba78a699e46",
+      "file": "system-wid_llu.json"
+    },
+    {
+      "name": "System.Wid_Uns",
+      "id": "75a5a67df262ede8",
+      "file": "system-wid_uns.json"
+    },
+    {
+      "name": "System.Width_U",
+      "id": "340b9e8042f29d4c",
+      "file": "system-width_u.json"
+    }
+  ]
+}

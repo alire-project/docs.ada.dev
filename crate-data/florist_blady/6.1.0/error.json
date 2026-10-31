@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "florist_blady",
+  "version": "6.1.0",
+  "failed_at": "2026-03-04T03:00:17Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1",
+  "crate": "gade",
+  "version": "0.2.0",
+  "documented_at": "2026-04-14T03:01:04Z",
+  "description": "A Game Boy emulation library in Ada",
+  "long_description": "Gade is Game Boy emulation library written in Ada. It is intended to be\nconsumed by different front ends, for easy portability.\n\nThe library currently includes CPU emulation, joypad, timer, audio,\nbackground/window/sprite rendering, and plain ROM, MBC1, MBC2, and MBC3\ncartridge support with save data and MBC3 RTC handling.\n\nThe project is primarily aimed at experimentation around emulator architecture,\nnative-code performance, and cross-language integration. The repository also\nincludes a C ABI bridge and C++ wrapper so alternate hosts can reuse the same\ncore.\n",
+  "authors": [
+    "ellamosi"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "ada",
+    "gameboy",
+    "emulator",
+    "library"
+  ],
+  "website": "https://github.com/ellamosi/gade",
+  "repository": {
+    "url": "https://github.com/ellamosi/gade",
+    "host": "github",
+    "commit": "89e1f37309dadad579d7e482e0113c1c1b10b881"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Gade",
+      "id": "3a7d979975613ddf",
+      "file": "gade.json"
+    },
+    {
+      "name": "Gade.Audio_Buffer",
+      "id": "bb19d4fea5a3c931",
+      "file": "gade-audio_buffer.json"
+    },
+    {
+      "name": "Gade.Cartridge_Info",
+      "id": "03b10cdcea927e22",
+      "file": "gade-cartridge_info.json"
+    },
+    {
+      "name": "Gade.Input",
+      "id": "5eab250a1281e7e7",
+      "file": "gade-input.json"
+    },
+    {
+      "name": "Gade.Interfaces",
+      "id": "fce862cf528feecf",
+      "file": "gade-interfaces.json"
+    },
+    {
+      "name": "Gade.Logging",
+      "id": "b0679c5bda0c259b",
+      "file": "gade-logging.json"
+    },
+    {
+      "name": "Gade.Timing",
+      "id": "9424e9f3cdc17a29",
+      "file": "gade-timing.json"
+    },
+    {
+      "name": "Gade.Video_Buffer",
+      "id": "c6d9e2c04082e55a",
+      "file": "gade-video_buffer.json"
+    }
+  ]
+}

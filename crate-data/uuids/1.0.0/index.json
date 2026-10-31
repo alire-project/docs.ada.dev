@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "crate": "uuids",
+  "version": "1.0.0",
+  "documented_at": "2026-03-07T02:49:46Z",
+  "description": "Implementation of RFC 9562 Universally Unique IDentifiers (UUIDs)",
+  "long_description": "This library is an attempt to implement UUIDs to the RFC 9562 standard located here: https://www.ietf.org/rfc/rfc9562.html\n\nAs of this writing it can identify any UUID's version or variant and create any kind of UUID in the spec:\n* UUIDv1: Gregorian Timestamp with constant data\n* UUIDv3: MD5-hashed\n* UUIDv4: Randomly-generated\n* UUIDv5: SHA1-hashed\n* UUIDv6: Gregorian Timestamp with constant data with better database locality \n* UUIDv7: UNIX Timestamp with random data, optimized for database locality\n* UUIDv8: Custom UUIDs\n\nAll of my unit tests are passing, but am open to more tests plus additional validation on other platforms, especially big endian.\n\nRefer to the [UUIDs Readme](https://github.com/AJ-Ianozi/uuids) for full description.\n\nYou can also read the [full API documentation](https://aj-ianozi.github.io/uuids/toc_index.html) which has been generated with [ROBODoc](https://github.com/gumpu/ROBODoc).\n\n",
+  "authors": [
+    "AJ Ianozi"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "uuid",
+    "guid"
+  ],
+  "website": "https://github.com/AJ-Ianozi/uuids",
+  "repository": {
+    "url": "https://github.com/AJ-Ianozi/uuids",
+    "host": "github",
+    "commit": "d5d6d70cab4d70e3e89bc9e04ff66ee90ac93924"
+  },
+  "dependencies": [
+    {
+      "crate": "system_random",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "UUIDs",
+      "id": "823418f07be43f87",
+      "file": "uuids.json"
+    },
+    {
+      "name": "UUIDs.V1",
+      "id": "17e71a142596a7eb",
+      "file": "uuids-v1.json"
+    },
+    {
+      "name": "UUIDs.V3",
+      "id": "bf6456991616a887",
+      "file": "uuids-v3.json"
+    },
+    {
+      "name": "UUIDs.V4",
+      "id": "b26f9e2f1e1609eb",
+      "file": "uuids-v4.json"
+    },
+    {
+      "name": "UUIDs.V5",
+      "id": "5b1bbb2cafd5153f",
+      "file": "uuids-v5.json"
+    },
+    {
+      "name": "UUIDs.V6",
+      "id": "c01e0d5625aa8afc",
+      "file": "uuids-v6.json"
+    },
+    {
+      "name": "UUIDs.V7",
+      "id": "7bde88ef288352c5",
+      "file": "uuids-v7.json"
+    },
+    {
+      "name": "UUIDs.V8",
+      "id": "78ac619c0309f7ed",
+      "file": "uuids-v8.json"
+    },
+    {
+      "name": "Uuids_Config",
+      "id": "bb27552e6c1ef56c",
+      "file": "uuids_config.json"
+    }
+  ]
+}

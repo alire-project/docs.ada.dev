@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "crate": "ieee_ethernet",
+  "version": "1.0.0",
+  "documented_at": "2026-08-07T03:11:54Z",
+  "description": "IEEE 802.3 Ethernet declarations, with the SMI and PHY interfaces",
+  "long_description": "Declarations from the IEEE 802.3 standard: frame and MTU lengths, Ethernet and IPv4 addresses, subnet masks, and the MII and RMII signal names.\n\nAlso provided are two abstractions defined by clause 22 of the standard, and therefore not vendor-specific:\n\n  The Serial Management Interface (SMI, also known as MDIO), including the Basic Register Set indexes and record representations of the Basic Control and Basic Status registers\n\n  An abstract PHY transceiver, whose auto-negotiation, loopback, power, reset, and link-state operations are concrete because the standard specifies them\n\nA target supplies the concrete SMI I/O driver, and a vendor supplies the concrete PHY. Nothing here is architecture-specific: the project file sets neither Target nor Runtime, taking both from the client project.\n",
+  "authors": [
+    "Pat Rogers"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "ethernet",
+    "networking",
+    "embedded",
+    "ieee802-3",
+    "phy"
+  ],
+  "website": "https://github.com/pat-rogers/ieee_ethernet",
+  "repository": {
+    "url": "https://github.com/pat-rogers/ieee_ethernet",
+    "host": "github",
+    "commit": "f0724274fec7077e4203c6be4fe9c8690d4823ac"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "IEEE_Ethernet",
+      "id": "df3361c5f47afbd7",
+      "file": "ieee_ethernet.json"
+    },
+    {
+      "name": "IEEE_Ethernet.Media",
+      "id": "2abb6c28b58f546e",
+      "file": "ieee_ethernet-media.json"
+    },
+    {
+      "name": "IEEE_Ethernet.PHY",
+      "id": "80d5c7fac2c5e771",
+      "file": "ieee_ethernet-phy.json"
+    },
+    {
+      "name": "IEEE_Ethernet.SMI",
+      "id": "b2511a31173e8f4d",
+      "file": "ieee_ethernet-smi.json"
+    },
+    {
+      "name": "IEEE_Ethernet.SMI.IO",
+      "id": "d4eb523824da9700",
+      "file": "ieee_ethernet-smi-io.json"
+    }
+  ]
+}

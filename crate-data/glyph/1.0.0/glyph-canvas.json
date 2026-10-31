@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"glyph","version":"1.0.0","id":"ed707c2c334077de","name":"Glyph.Canvas","qualified_name":"Glyph.Canvas","kind":"ada_package","location":{"file":"src/canvas/glyph-canvas.ads","line":1,"column":9},"code":"package Glyph.Canvas"}

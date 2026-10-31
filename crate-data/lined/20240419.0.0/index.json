@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "crate": "lined",
+  "version": "20240419.0.0",
+  "documented_at": "2026-03-04T16:55:37Z",
+  "description": "Ada Implementation of the Line Editor from Software Tools",
+  "long_description": "# Lined\nAda Implementation of the Line Editor from Software Tools\n\nI did this to see how it would compare with the Ratfor original, and provide it here for anyone with a similar interest. I can't imagine anyone actually using this, unless they wanted a scriptable tool with the alternative regular-expression syntax it uses, since it's a simplified version of ed.\n",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "line",
+    "editor"
+  ],
+  "website": "https://github.com/bracke/Lined",
+  "repository": {
+    "url": "https://github.com/bracke/Lined",
+    "host": "github",
+    "commit": "da23d88f80722f53df7b1c29ed124be12de981a3"
+  },
+  "dependencies": [
+    {
+      "crate": "pragmarc",
+      "version": "^20240323.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Lined",
+      "id": "1ed0c1f42d905532",
+      "file": "lined.json"
+    },
+    {
+      "name": "Lined.Buffer",
+      "id": "c4bc246b327a17a6",
+      "file": "lined-buffer.json"
+    },
+    {
+      "name": "Lined.Line_Numbers",
+      "id": "b29c73cf4f0fab69",
+      "file": "lined-line_numbers.json"
+    },
+    {
+      "name": "Lined.Searching",
+      "id": "0e6504eeea70ce64",
+      "file": "lined-searching.json"
+    },
+    {
+      "name": "Lined_Config",
+      "id": "c48f560783c3053e",
+      "file": "lined_config.json"
+    }
+  ]
+}

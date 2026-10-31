@@ -1,0 +1,120 @@
+{
+  "schema_version": "1",
+  "crate": "chipmunk2d",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:54:57Z",
+  "description": "Ada bindings for Chipmunk2D",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "gamedev",
+    "binding"
+  ],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/chipmunk2D-ada",
+    "host": "github",
+    "commit": "3fa66f621c575d7b6f36a1e61ceb1cec15ad6154"
+  },
+  "dependencies": [
+    {
+      "crate": "libchipmunk",
+      "version": "^7.0.3"
+    }
+  ],
+  "units": [
+    {
+      "name": "Chipmunk",
+      "id": "c2464d0af1adf47c",
+      "file": "chipmunk.json"
+    },
+    {
+      "name": "Chipmunk.Arbiters",
+      "id": "18bb888a321c1856",
+      "file": "chipmunk-arbiters.json"
+    },
+    {
+      "name": "Chipmunk.Bodies",
+      "id": "cd36c97909755450",
+      "file": "chipmunk-bodies.json"
+    },
+    {
+      "name": "Chipmunk.Constraints",
+      "id": "bbafe0e98a74fe62",
+      "file": "chipmunk-constraints.json"
+    },
+    {
+      "name": "Chipmunk.Damped_Rotary_Springs",
+      "id": "7e972a2bb209ca93",
+      "file": "chipmunk-damped_rotary_springs.json"
+    },
+    {
+      "name": "Chipmunk.Damped_Springs",
+      "id": "10c25434bc750aad",
+      "file": "chipmunk-damped_springs.json"
+    },
+    {
+      "name": "Chipmunk.Gear_Joints",
+      "id": "79075097ed24f89d",
+      "file": "chipmunk-gear_joints.json"
+    },
+    {
+      "name": "Chipmunk.Groove_Joints",
+      "id": "265e3b3a7e426653",
+      "file": "chipmunk-groove_joints.json"
+    },
+    {
+      "name": "Chipmunk.Pin_Joints",
+      "id": "d973e3b94025c974",
+      "file": "chipmunk-pin_joints.json"
+    },
+    {
+      "name": "Chipmunk.Pivot_Joints",
+      "id": "ba6320a590d994c9",
+      "file": "chipmunk-pivot_joints.json"
+    },
+    {
+      "name": "Chipmunk.PolyShapes",
+      "id": "14ed2db14cf449d2",
+      "file": "chipmunk-polyshapes.json"
+    },
+    {
+      "name": "Chipmunk.Ratchet_Joints",
+      "id": "d002ca460563e6ca",
+      "file": "chipmunk-ratchet_joints.json"
+    },
+    {
+      "name": "Chipmunk.Rotary_Limit_Joints",
+      "id": "930edc3b340e9c48",
+      "file": "chipmunk-rotary_limit_joints.json"
+    },
+    {
+      "name": "Chipmunk.Shapes",
+      "id": "f8061636d74c5d6d",
+      "file": "chipmunk-shapes.json"
+    },
+    {
+      "name": "Chipmunk.Simple_Motors",
+      "id": "03ae4d42f4be116a",
+      "file": "chipmunk-simple_motors.json"
+    },
+    {
+      "name": "Chipmunk.Slide_Joints",
+      "id": "310257a16582ff3e",
+      "file": "chipmunk-slide_joints.json"
+    },
+    {
+      "name": "Chipmunk.Spaces",
+      "id": "ab9e2ce670000888",
+      "file": "chipmunk-spaces.json"
+    },
+    {
+      "name": "Chipmunk2d_Config",
+      "id": "89fd63fa80a5c5fb",
+      "file": "chipmunk2d_config.json"
+    }
+  ]
+}

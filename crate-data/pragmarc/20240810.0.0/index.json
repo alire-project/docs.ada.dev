@@ -1,0 +1,540 @@
+{
+  "schema_version": "1",
+  "crate": "pragmarc",
+  "version": "20240810.0.0",
+  "documented_at": "2026-03-05T03:01:56Z",
+  "description": "The PragmAda Reusable Components",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "cards",
+    "conversions",
+    "datastructures",
+    "encryption",
+    "matching",
+    "randomness",
+    "safety",
+    "sorting",
+    "taskcom",
+    "tty",
+    "containers"
+  ],
+  "website": "https://github.com/bracke/PragmARC",
+  "repository": {
+    "url": "https://github.com/bracke/PragmARC",
+    "host": "github",
+    "commit": "fc017aa47449308c4fb7318120aab265607d3af2"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "PragmARC",
+      "id": "e31fc14be1adc509",
+      "file": "pragmarc.json"
+    },
+    {
+      "name": "PragmARC.Ansi_Tty_Control",
+      "id": "b897821f2b1c20e0",
+      "file": "pragmarc-ansi_tty_control.json"
+    },
+    {
+      "name": "PragmARC.B_Strings",
+      "id": "8d54911bf312744a",
+      "file": "pragmarc-b_strings.json"
+    },
+    {
+      "name": "PragmARC.Binary_Searcher",
+      "id": "b82b666c4f447e6b",
+      "file": "pragmarc-binary_searcher.json"
+    },
+    {
+      "name": "PragmARC.Binary_Semaphore_Handler",
+      "id": "08f97bae54827318",
+      "file": "pragmarc-binary_semaphore_handler.json"
+    },
+    {
+      "name": "PragmARC.Cards",
+      "id": "832848c7cbb26844",
+      "file": "pragmarc-cards.json"
+    },
+    {
+      "name": "PragmARC.Cards.Decks",
+      "id": "e1a46e7542e58690",
+      "file": "pragmarc-cards-decks.json"
+    },
+    {
+      "name": "PragmARC.Cards.Decks.General",
+      "id": "38081a6cd1a25359",
+      "file": "pragmarc-cards-decks-general.json"
+    },
+    {
+      "name": "PragmARC.Cards.Decks.US",
+      "id": "feec020afae44709",
+      "file": "pragmarc-cards-decks-us.json"
+    },
+    {
+      "name": "PragmARC.Cards.US",
+      "id": "1c0e3d95c6cfc3c9",
+      "file": "pragmarc-cards-us.json"
+    },
+    {
+      "name": "PragmARC.Comparisons",
+      "id": "208faee73f4a02c6",
+      "file": "pragmarc-comparisons.json"
+    },
+    {
+      "name": "PragmARC.Concurrent_Pipeline",
+      "id": "10642fd4689174a6",
+      "file": "pragmarc-concurrent_pipeline.json"
+    },
+    {
+      "name": "PragmARC.Concurrent_Pipeline.Sinks",
+      "id": "3c725d4efb4d42ae",
+      "file": "pragmarc-concurrent_pipeline-sinks.json"
+    },
+    {
+      "name": "PragmARC.Concurrent_Pipeline.Transformers",
+      "id": "8a947b84b79ba8f3",
+      "file": "pragmarc-concurrent_pipeline-transformers.json"
+    },
+    {
+      "name": "PragmARC.Conversions",
+      "id": "1c99a52b53db8ec5",
+      "file": "pragmarc-conversions.json"
+    },
+    {
+      "name": "PragmARC.Conversions.Unbounded_Strings",
+      "id": "57df19a79bc50217",
+      "file": "pragmarc-conversions-unbounded_strings.json"
+    },
+    {
+      "name": "PragmARC.Conversions.Vectors",
+      "id": "55130b9406d15383",
+      "file": "pragmarc-conversions-vectors.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures",
+      "id": "73ec157450da4688",
+      "file": "pragmarc-data_structures.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Bags",
+      "id": "390aa12124b8a365",
+      "file": "pragmarc-data_structures-bags.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Bags.Unbounded",
+      "id": "74b5eb187082b76b",
+      "file": "pragmarc-data_structures-bags-unbounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Bags.Unbounded.Protection",
+      "id": "084af98da1822f56",
+      "file": "pragmarc-data_structures-bags-unbounded-protection.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Bags.Unbounded.Unprotected",
+      "id": "e834a5f3d17a75b5",
+      "file": "pragmarc-data_structures-bags-unbounded-unprotected.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Lists",
+      "id": "def6828b3cf99721",
+      "file": "pragmarc-data_structures-lists.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Lists.Bounded",
+      "id": "34098b372ff12454",
+      "file": "pragmarc-data_structures-lists-bounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Lists.Bounded.Protection",
+      "id": "077a80536d9328b8",
+      "file": "pragmarc-data_structures-lists-bounded-protection.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Lists.Unbounded",
+      "id": "dfedaca2f1f4c8f7",
+      "file": "pragmarc-data_structures-lists-unbounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Lists.Unbounded.Protection",
+      "id": "ce4e3bdeb11e814a",
+      "file": "pragmarc-data_structures-lists-unbounded-protection.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues",
+      "id": "d4e6dc7c308e4aa2",
+      "file": "pragmarc-data_structures-queues.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Bounded",
+      "id": "89044a9382439f45",
+      "file": "pragmarc-data_structures-queues-bounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Bounded.Protection",
+      "id": "72091f0f1e326ca6",
+      "file": "pragmarc-data_structures-queues-bounded-protection.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Bounded.Protection.Blocking",
+      "id": "10882a6a9eae2a8f",
+      "file": "pragmarc-data_structures-queues-bounded-protection-blocking.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Bounded.Protection.Non_Blocking",
+      "id": "af251b05aabff218",
+      "file": "pragmarc-data_structures-queues-bounded-protection-non_blocking.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Bounded.Unprotected",
+      "id": "b04192645d6d3c6a",
+      "file": "pragmarc-data_structures-queues-bounded-unprotected.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Unbounded",
+      "id": "385e5a31349a726d",
+      "file": "pragmarc-data_structures-queues-unbounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Unbounded.Protection",
+      "id": "f631482d463680a7",
+      "file": "pragmarc-data_structures-queues-unbounded-protection.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Unbounded.Protection.Blocking",
+      "id": "75c2461b91ddd4a6",
+      "file": "pragmarc-data_structures-queues-unbounded-protection-blocking.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Unbounded.Protection.Non_Blocking",
+      "id": "361b6b6c08a3663a",
+      "file": "pragmarc-data_structures-queues-unbounded-protection-non_blocking.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Queues.Unbounded.Unprotected",
+      "id": "37c9658bfd6be464",
+      "file": "pragmarc-data_structures-queues-unbounded-unprotected.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Sets",
+      "id": "0561c005655c3cce",
+      "file": "pragmarc-data_structures-sets.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Sets.Discrete",
+      "id": "f1c2d282e87bfc96",
+      "file": "pragmarc-data_structures-sets-discrete.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Skip_Lists",
+      "id": "ea6ff93b25ab91b3",
+      "file": "pragmarc-data_structures-skip_lists.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Skip_Lists.Unbounded",
+      "id": "9d085a0e973c7ae0",
+      "file": "pragmarc-data_structures-skip_lists-unbounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Stacks",
+      "id": "5ed9d0c2fe38f869",
+      "file": "pragmarc-data_structures-stacks.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Stacks.Unbounded",
+      "id": "2a70a5959800f08c",
+      "file": "pragmarc-data_structures-stacks-unbounded.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Stacks.Unbounded.Protection",
+      "id": "b82bef32ec59b2c8",
+      "file": "pragmarc-data_structures-stacks-unbounded-protection.json"
+    },
+    {
+      "name": "PragmARC.Data_Structures.Stacks.Unbounded.Unprotected",
+      "id": "5bd89be0cf41c385",
+      "file": "pragmarc-data_structures-stacks-unbounded-unprotected.json"
+    },
+    {
+      "name": "PragmARC.Date_Handler",
+      "id": "26045d627b2ae92e",
+      "file": "pragmarc-date_handler.json"
+    },
+    {
+      "name": "PragmARC.Encryption",
+      "id": "432aeab8f4c94007",
+      "file": "pragmarc-encryption.json"
+    },
+    {
+      "name": "PragmARC.Encryption.Bifid",
+      "id": "935fc78219733c27",
+      "file": "pragmarc-encryption-bifid.json"
+    },
+    {
+      "name": "PragmARC.Encryption.Simple_XOR",
+      "id": "7ca11c26437ac724",
+      "file": "pragmarc-encryption-simple_xor.json"
+    },
+    {
+      "name": "PragmARC.Encryption.Threefish",
+      "id": "d606634a92da6e40",
+      "file": "pragmarc-encryption-threefish.json"
+    },
+    {
+      "name": "PragmARC.Encryption.Threefish.Block_1024",
+      "id": "780df615e74932d0",
+      "file": "pragmarc-encryption-threefish-block_1024.json"
+    },
+    {
+      "name": "PragmARC.Encryption.Threefish.Block_256",
+      "id": "7e7af345bdd1ed65",
+      "file": "pragmarc-encryption-threefish-block_256.json"
+    },
+    {
+      "name": "PragmARC.Encryption.Threefish.Block_512",
+      "id": "748b53088c462e3e",
+      "file": "pragmarc-encryption-threefish-block_512.json"
+    },
+    {
+      "name": "PragmARC.Hash_Fast_Variable_Length",
+      "id": "5ca3357ed180b455",
+      "file": "pragmarc-hash_fast_variable_length.json"
+    },
+    {
+      "name": "PragmARC.Images",
+      "id": "4df7402075b35171",
+      "file": "pragmarc-images.json"
+    },
+    {
+      "name": "PragmARC.Job_Pools",
+      "id": "3e32bb0428f9bb8d",
+      "file": "pragmarc-job_pools.json"
+    },
+    {
+      "name": "PragmARC.Least_Squares_Fitting",
+      "id": "8f38672c939abc1f",
+      "file": "pragmarc-least_squares_fitting.json"
+    },
+    {
+      "name": "PragmARC.Line_Fields",
+      "id": "0e0a13fee4280e10",
+      "file": "pragmarc-line_fields.json"
+    },
+    {
+      "name": "PragmARC.Luhn_Generation",
+      "id": "4070b04aaf597a87",
+      "file": "pragmarc-luhn_generation.json"
+    },
+    {
+      "name": "PragmARC.Matching",
+      "id": "e8eb18bab2fe6a52",
+      "file": "pragmarc-matching.json"
+    },
+    {
+      "name": "PragmARC.Matching.Character_Regular_Expression",
+      "id": "f451748994a78dc4",
+      "file": "pragmarc-matching-character_regular_expression.json"
+    },
+    {
+      "name": "PragmARC.Matching.Quick_String",
+      "id": "adae8d82b704290d",
+      "file": "pragmarc-matching-quick_string.json"
+    },
+    {
+      "name": "PragmARC.Matching.Regular_Expression",
+      "id": "485aa82ce146aa04",
+      "file": "pragmarc-matching-regular_expression.json"
+    },
+    {
+      "name": "PragmARC.Math",
+      "id": "f3ac82e9b0938c49",
+      "file": "pragmarc-math.json"
+    },
+    {
+      "name": "PragmARC.Menu_Handler",
+      "id": "53e4e3824b1f4c7d",
+      "file": "pragmarc-menu_handler.json"
+    },
+    {
+      "name": "PragmARC.Min_Max",
+      "id": "4827af78e5f3677e",
+      "file": "pragmarc-min_max.json"
+    },
+    {
+      "name": "PragmARC.Permutations",
+      "id": "1a32e4240e2d3da1",
+      "file": "pragmarc-permutations.json"
+    },
+    {
+      "name": "PragmARC.Persistent_Skip_List_Unbounded",
+      "id": "9371b4e4697f1e58",
+      "file": "pragmarc-persistent_skip_list_unbounded.json"
+    },
+    {
+      "name": "PragmARC.Postfix_Calculator",
+      "id": "81e7cf3510f6c4fe",
+      "file": "pragmarc-postfix_calculator.json"
+    },
+    {
+      "name": "PragmARC.Protected_Option",
+      "id": "2799ee24b90f32b5",
+      "file": "pragmarc-protected_option.json"
+    },
+    {
+      "name": "PragmARC.Randomness",
+      "id": "e3ea2cb24bc3c3c2",
+      "file": "pragmarc-randomness.json"
+    },
+    {
+      "name": "PragmARC.Randomness.Combined",
+      "id": "8304839faeb447f2",
+      "file": "pragmarc-randomness-combined.json"
+    },
+    {
+      "name": "PragmARC.Randomness.ISAAC",
+      "id": "5a55904182addc4d",
+      "file": "pragmarc-randomness-isaac.json"
+    },
+    {
+      "name": "PragmARC.Randomness.KISS",
+      "id": "2e7379c1ca002f69",
+      "file": "pragmarc-randomness-kiss.json"
+    },
+    {
+      "name": "PragmARC.Randomness.Real_Ranges",
+      "id": "79e475a749926304",
+      "file": "pragmarc-randomness-real_ranges.json"
+    },
+    {
+      "name": "PragmARC.Randomness.Real_Values",
+      "id": "2d23fc84e66a06af",
+      "file": "pragmarc-randomness-real_values.json"
+    },
+    {
+      "name": "PragmARC.Randomness.Threefry",
+      "id": "c5d24eacc2c55c49",
+      "file": "pragmarc-randomness-threefry.json"
+    },
+    {
+      "name": "PragmARC.Randomness.Universal",
+      "id": "f20e01f2e6780154",
+      "file": "pragmarc-randomness-universal.json"
+    },
+    {
+      "name": "PragmARC.Reflection",
+      "id": "22f36ce6dc56f13f",
+      "file": "pragmarc-reflection.json"
+    },
+    {
+      "name": "PragmARC.REM_NN_Wrapper",
+      "id": "2914078bd49eb2c1",
+      "file": "pragmarc-rem_nn_wrapper.json"
+    },
+    {
+      "name": "PragmARC.REM_NN_Wrapper.REM_NN",
+      "id": "dfe64c91f932a28b",
+      "file": "pragmarc-rem_nn_wrapper-rem_nn.json"
+    },
+    {
+      "name": "PragmARC.Safety",
+      "id": "668d878b8d90839a",
+      "file": "pragmarc-safety.json"
+    },
+    {
+      "name": "PragmARC.Safety.Pointers",
+      "id": "32cf1adcfaaebba3",
+      "file": "pragmarc-safety-pointers.json"
+    },
+    {
+      "name": "PragmARC.Safety.Semaphores",
+      "id": "feed577d2b187914",
+      "file": "pragmarc-safety-semaphores.json"
+    },
+    {
+      "name": "PragmARC.Safety.Suspension_Objects",
+      "id": "50335abc1563f852",
+      "file": "pragmarc-safety-suspension_objects.json"
+    },
+    {
+      "name": "PragmARC.Sorting",
+      "id": "9991961e80b59cb4",
+      "file": "pragmarc-sorting.json"
+    },
+    {
+      "name": "PragmARC.Sorting.Quick",
+      "id": "2c32d071bd2e4498",
+      "file": "pragmarc-sorting-quick.json"
+    },
+    {
+      "name": "PragmARC.Task_Communication",
+      "id": "bb9015f2e4d7b670",
+      "file": "pragmarc-task_communication.json"
+    },
+    {
+      "name": "PragmARC.Task_Communication.Forwarders",
+      "id": "a9240dcb87b68536",
+      "file": "pragmarc-task_communication-forwarders.json"
+    },
+    {
+      "name": "PragmARC.Task_Communication.Monitors",
+      "id": "0566036e3d2dbf16",
+      "file": "pragmarc-task_communication-monitors.json"
+    },
+    {
+      "name": "PragmARC.Task_Communication.Transporters",
+      "id": "9b866fc3941d7870",
+      "file": "pragmarc-task_communication-transporters.json"
+    },
+    {
+      "name": "PragmARC.Text_IO",
+      "id": "cb92784a3f5cef2e",
+      "file": "pragmarc-text_io.json"
+    },
+    {
+      "name": "PragmARC.Three_Way",
+      "id": "1edcc4657cb1b8df",
+      "file": "pragmarc-three_way.json"
+    },
+    {
+      "name": "PragmARC.Title_Comparisons",
+      "id": "9b563c1ab45db8a8",
+      "file": "pragmarc-title_comparisons.json"
+    },
+    {
+      "name": "PragmARC.Unbounded_Numbers",
+      "id": "e5c1b557bf454d98",
+      "file": "pragmarc-unbounded_numbers.json"
+    },
+    {
+      "name": "PragmARC.Unbounded_Numbers.Integers",
+      "id": "99ae56f24f792fe4",
+      "file": "pragmarc-unbounded_numbers-integers.json"
+    },
+    {
+      "name": "PragmARC.Unbounded_Numbers.Rationals",
+      "id": "24ec25eec0315575",
+      "file": "pragmarc-unbounded_numbers-rationals.json"
+    },
+    {
+      "name": "PragmARC.Word_Input",
+      "id": "4f78da49fd119d9c",
+      "file": "pragmarc-word_input.json"
+    },
+    {
+      "name": "PragmARC.Wrapping",
+      "id": "41254bb67d76b66c",
+      "file": "pragmarc-wrapping.json"
+    },
+    {
+      "name": "Pragmarc_Config",
+      "id": "7c6bbf4328cc450e",
+      "file": "pragmarc_config.json"
+    }
+  ]
+}

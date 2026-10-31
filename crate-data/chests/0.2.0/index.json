@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "chests",
+  "version": "0.2.0",
+  "documented_at": "2026-03-04T02:54:52Z",
+  "description": "Chests are bounded containers",
+  "authors": [
+    "Jeremy Grosser"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "containers",
+    "bounded",
+    "nostd",
+    "embedded"
+  ],
+  "website": "https://github.com/JeremyGrosser/chests",
+  "repository": {
+    "url": "https://github.com/JeremyGrosser/chests",
+    "host": "github",
+    "commit": "742eabfff2d3bff353a0dac6f32d3d2cbe9c835e"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Chests",
+      "id": "a06027d10f55834d",
+      "file": "chests.json"
+    },
+    {
+      "name": "Chests.Ring_Buffers",
+      "id": "085dff60476f4168",
+      "file": "chests-ring_buffers.json"
+    },
+    {
+      "name": "Chests.Stacks",
+      "id": "21ec0d161443bbc4",
+      "file": "chests-stacks.json"
+    },
+    {
+      "name": "Chests_Config",
+      "id": "e4f6f000992d21c3",
+      "file": "chests_config.json"
+    }
+  ]
+}

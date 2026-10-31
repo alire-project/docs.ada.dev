@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gnat_native",
+  "version": "16.2.0-pre0",
+  "failed_at": "2026-10-30T02:15:56Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "aor_jsona",
+  "version": "1.6.6",
+  "failed_at": "2026-03-03T17:51:03Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

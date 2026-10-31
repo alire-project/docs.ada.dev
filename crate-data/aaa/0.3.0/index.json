@@ -1,0 +1,103 @@
+{
+  "schema_version": "1",
+  "crate": "aaa",
+  "version": "0.3.0",
+  "documented_at": "2026-03-03T17:47:29Z",
+  "description": "Alex's Ada Assortment (of miscellaneous utilities)",
+  "long_description": "Alex's Ada Assortment of Utilities\n\n- Text formatting (paragraphs, tables).\n- Indefinite containers.\n- Enumeration validity/conversions of string images.\n- On-demand stack backtraces.\n- String containers and utilities.\n- Simple subprocess spawning.\n- Write-through minimal cache for objects stored in files\n",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "miscellanea",
+    "utility"
+  ],
+  "website": "https://github.com/mosteo/aaa",
+  "repository": {
+    "url": "https://github.com/mosteo/aaa",
+    "host": "github",
+    "commit": "7bfebd18eb1c9a7eb283ec1a8a05009449239c88",
+    "subdir": "aaa_base/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AAA",
+      "id": "9834876dcfb05cb1",
+      "file": "aaa.json"
+    },
+    {
+      "name": "AAA.Caches",
+      "id": "0b436b97854e3330",
+      "file": "aaa-caches.json"
+    },
+    {
+      "name": "AAA.Caches.Files",
+      "id": "62c334883e437a46",
+      "file": "aaa-caches-files.json"
+    },
+    {
+      "name": "AAA.Containers",
+      "id": "81ae73f6aebeb3ef",
+      "file": "aaa-containers.json"
+    },
+    {
+      "name": "AAA.Containers.Indefinite_Holders",
+      "id": "d9fa340fd9f02258",
+      "file": "aaa-containers-indefinite_holders.json"
+    },
+    {
+      "name": "AAA.Containers.Suite",
+      "id": "53eeec0a3598b3c3",
+      "file": "aaa-containers-suite.json"
+    },
+    {
+      "name": "AAA.Debug",
+      "id": "f9bc90290347a8d7",
+      "file": "aaa-debug.json"
+    },
+    {
+      "name": "AAA.Enum_Tools",
+      "id": "e97c9e9ab6e63efe",
+      "file": "aaa-enum_tools.json"
+    },
+    {
+      "name": "AAA.Filesystem",
+      "id": "bb4fa04422c1805a",
+      "file": "aaa-filesystem.json"
+    },
+    {
+      "name": "AAA.Processes",
+      "id": "d1e4d2508869a399",
+      "file": "aaa-processes.json"
+    },
+    {
+      "name": "AAA.Strings",
+      "id": "baaa52840b250e5e",
+      "file": "aaa-strings.json"
+    },
+    {
+      "name": "AAA.Traits",
+      "id": "ecd3202b5a183eda",
+      "file": "aaa-traits.json"
+    },
+    {
+      "name": "AAA.Traits.Containers",
+      "id": "6bc74ea2e4c1f37e",
+      "file": "aaa-traits-containers.json"
+    },
+    {
+      "name": "AAA.Traits.Types",
+      "id": "2c4b33781826cff5",
+      "file": "aaa-traits-types.json"
+    },
+    {
+      "name": "Aaa_Config",
+      "id": "e1fd48ad7696ad7c",
+      "file": "aaa_config.json"
+    }
+  ]
+}

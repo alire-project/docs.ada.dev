@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "markdown",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T16:57:17Z",
+  "description": "Markdown parser",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "markdown",
+    "gfm",
+    "commonmark"
+  ],
+  "repository": {
+    "url": "https://github.com/AdaCore/markdown",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "vss_extra",
+      "version": "~26.0.0"
+    },
+    {
+      "crate": "vss_text",
+      "version": "~26.0.0"
+    }
+  ],
+  "units": []
+}

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>remoteio — Ada/SPARK Documentation</title>
+  <meta name="description" content="Remote I/O Protocol Client Library for GNAT Ada">
+  <meta name="keywords" content="Ada, SPARK, Alire, remoteio, embedded, linux, remoteio, adc, dac, gpio, i2c, motor, pwm, sensor, serial, servo, spi, stepper, A4988, Accelerometer, ADC, ADC121C021, ADS1015, Analog, Angle, Arduino, BMP280, ClickBoard, Cytron_MD13S, DAC, Debug, Distance, errno, GPIO, Grove_ADC, Grove_TB6612, Grove_Temperature, Grove_Temperature_Humidity, Gyroscope, HDC1080, HID, HTS221, HTU21D, Humidity, I2C, IO_Interfaces, Joystick, Keyboard, LCD16397, LEGORC, libzmq, LPS25H, LSM9DS1, M5Stack_Ultrasonic_I2C, Magnetometer, MAX31855, MAX7219, MCP23x17, MCP3202, MCP3204, MCP3208, MCP4822, Messaging, Motor, MPL3115A2, PCA8574, PCA9534, PCA9685, Pressure, PWM, RemoteIO, Remoteio_Config, Resistance, Servo, SkidSteer2WD, SPI, Stepper, Stream_Framing_Protocol, TCS3472, Temperature, TH02, Thermistor, TLC1543, TMP102, TrueColor, Vehicle, Voltage, Watchdog, Wio_E5, ZeroMQ">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "remoteio",
+"version": "2.25279.1",  "description": "Remote I/O Protocol Client Library for GNAT Ada",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/remoteio/",
+  "codeRepository": "https://raw.githubusercontent.com/pmunts/alire-crates/e99e4174da737039f1d2fedf35dda6ecf51efdc6/remoteio/remoteio-2.25279.1.tbz2"
+  ,"author": [{"@type": "Person", "name": "Philip Munts"}]
+  ,"license": "BSD-1-Clause"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">remoteio</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>remoteio</h1>
+    <div class="version-controls">
+      <div class="version-selector">
+        <select id="version-select" aria-label="Select version">
+          <option value="2.25279.1" selected>2.25279.1 (latest)</option>
+          <option value="2.23808.1">2.23808.1</option>
+        </select>
+      </div>
+      <button id="compare-btn" class="compare-btn" title="Compare versions">
+        Compare versions
+      </button>
+    </div>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="2.25279.1">2.25279.1</option>
+              <option value="2.23808.1">2.23808.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="2.25279.1" selected>2.25279.1</option>
+              <option value="2.23808.1">2.23808.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Remote I/O Protocol Client Library for GNAT Ada</p>
+
+  <div class="long-description"><p>This crate contains a subset of the <a href="https://github.com/pmunts/libsimpleio"><strong>Linux Simple I/O<br />
+Library</strong></a> Ada packages that are<br />
+relevant for building <a href="https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf"><strong>Remote I/O<br />
+Protocol</strong></a><br />
+client programs.</p>
+<p>This crate can be built for Linux, MacOS, or Windows targets.</p>
+<p>The <strong>Remote I/O Protocol</strong> is a lightweight message protocol for<br />
+performing remote I/O operations. The protocol is implemented using a<br />
+request/reply pattern, where the master device (<em>e.g.</em> a Linux computer)<br />
+transmits an I/O request in a 64-byte message to the slave device<br />
+(<em>e.g.</em> a single chip microcontroller). The slave device performs the<br />
+requested I/O operation and returns an I/O response in a 64-byte message<br />
+back to the master device.</p>
+<p>The protocol is kept as simple as possible (exactly one 64-byte request<br />
+message and one 64- byte response message) to allow using low end single<br />
+chip microcontrollers such as the<br />
+<a href="https://www.microchip.com/en-us/product/PIC16F1455">PIC16F1455</a> for the<br />
+slave device. Although particularly suited for USB raw HID devices, this<br />
+protocol can use any transport mechanism that can reliably transmit and<br />
+receive 64-byte messages.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Philip Munts</dd>
+
+    <dt>License</dt>
+    <dd>BSD-1-Clause</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://raw.githubusercontent.com/pmunts/alire-crates/e99e4174da737039f1d2fedf35dda6ecf51efdc6/remoteio/remoteio-2.25279.1.tbz2">https://raw.githubusercontent.com/pmunts/alire-crates/e99e4174da737039f1d2fedf35dda6ecf51efdc6/remoteio/remoteio-2.25279.1.tbz2</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">embedded</span><span class="tag">linux</span><span class="tag">remoteio</span><span class="tag">adc</span><span class="tag">dac</span><span class="tag">gpio</span><span class="tag">i2c</span><span class="tag">motor</span><span class="tag">pwm</span><span class="tag">sensor</span><span class="tag">serial</span><span class="tag">servo</span><span class="tag">spi</span><span class="tag">stepper</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+    <h2>Dependencies</h2>
+    <ul class="dep-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/case(os)/">case(os)</a>
+        <span class="dep-version">{&#39;linux&#39;: {&#39;libhidapi&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/case(os)/">case(os)</a>
+        <span class="dep-version">{&#39;linux&#39;: {&#39;libusb&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/case(distribution)/">case(distribution)</a>
+        <span class="dep-version">{&#39;homebrew|macports&#39;: {&#39;libhidapi&#39;: &#39;*&#39;}}</span>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/case(distribution)/">case(distribution)</a>
+        <span class="dep-version">{&#39;homebrew|macports&#39;: {&#39;libusb&#39;: &#39;*&#39;}}</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/a4988/">A4988</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/accelerometer/">Accelerometer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/adc/">ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/adc-remoteio/">ADC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/adc121c021/">ADC121C021</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/ads1015/">ADS1015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/analog/">Analog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/angle/">Angle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/arduino/">Arduino</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/bmp280/">BMP280</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard/">ClickBoard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-adc/">ClickBoard.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-adc-remoteio/">ClickBoard.ADC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-altitude/">ClickBoard.Altitude</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-altitude-remoteio/">ClickBoard.Altitude.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-expand/">ClickBoard.Expand</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-expand-remoteio/">ClickBoard.Expand.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-expand2/">ClickBoard.Expand2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-expand2-remoteio/">ClickBoard.Expand2.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-htu21d/">ClickBoard.HTU21D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-htu21d-remoteio/">ClickBoard.HTU21D.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-leds_8x8/">ClickBoard.LEDs_8x8</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-leds_8x8-remoteio/">ClickBoard.LEDs_8x8.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-pwm_click/">ClickBoard.PWM_Click</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-pwm_click-remoteio/">ClickBoard.PWM_Click.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-relay/">ClickBoard.Relay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-relay-remoteio/">ClickBoard.Relay.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-remoteio/">ClickBoard.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-servers/">ClickBoard.Servers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-sevensegment/">ClickBoard.SevenSegment</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-sevensegment-remoteio/">ClickBoard.SevenSegment.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-template/">ClickBoard.Template</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-thermo/">ClickBoard.Thermo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-thermo-remoteio/">ClickBoard.Thermo.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-thermo3/">ClickBoard.Thermo3</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/clickboard-thermo3-remoteio/">ClickBoard.Thermo3.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/cytron_md13s/">Cytron_MD13S</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/dac/">DAC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/dac-remoteio/">DAC.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/debug/">Debug</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/distance/">Distance</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/errno/">errno</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/gpio/">GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/gpio-pwm/">GPIO.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/gpio-remoteio/">GPIO.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/grove_adc/">Grove_ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/grove_tb6612/">Grove_TB6612</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/grove_tb6612-motor/">Grove_TB6612.Motor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/grove_tb6612-stepper/">Grove_TB6612.Stepper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/grove_temperature/">Grove_Temperature</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/grove_temperature_humidity/">Grove_Temperature_Humidity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/gyroscope/">Gyroscope</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/hdc1080/">HDC1080</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/hid/">HID</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/hid-hidapi/">HID.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/hid-libusb/">HID.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/hid-munts/">HID.Munts</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/hts221/">HTS221</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/htu21d/">HTU21D</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/humidity/">Humidity</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/i2c/">I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/i2c-remoteio/">I2C.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/io_interfaces/">IO_Interfaces</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/joystick/">Joystick</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/keyboard/">Keyboard</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/lcd16397/">LCD16397</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/legorc/">LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/libzmq/">libzmq</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/lps25h/">LPS25H</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/lsm9ds1/">LSM9DS1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/m5stack_ultrasonic_i2c/">M5Stack_Ultrasonic_I2C</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/magnetometer/">Magnetometer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/max31855/">MAX31855</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/max7219/">MAX7219</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp23x17/">MCP23x17</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp23x17-byte/">MCP23x17.Byte</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp23x17-gpio/">MCP23x17.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp23x17-word/">MCP23x17.Word</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp3202/">MCP3202</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp3204/">MCP3204</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp3208/">MCP3208</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mcp4822/">MCP4822</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging/">Messaging</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging-fixed/">Messaging.Fixed</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging-fixed-ada_streams/">Messaging.Fixed.Ada_Streams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging-fixed-gnat_udp/">Messaging.Fixed.GNAT_UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging-fixed-wioe5_ham1/">Messaging.Fixed.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging-fixed-zeromq/">Messaging.Fixed.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/messaging-text/">Messaging.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/motor/">Motor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/motor-legorc/">Motor.LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/motor-pwm/">Motor.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/motor-servo/">Motor.Servo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/mpl3115a2/">MPL3115A2</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca8574/">PCA8574</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca8574-gpio/">PCA8574.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca9534/">PCA9534</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca9534-gpio/">PCA9534.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca9685/">PCA9685</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca9685-gpio/">PCA9685.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pca9685-pwm/">PCA9685.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pressure/">Pressure</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pwm/">PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/pwm-remoteio/">PWM.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio/">RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-abstract_device/">RemoteIO.Abstract_Device</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-adc_dac_pi_zero/">RemoteIO.ADC_DAC_Pi_Zero</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-arduino/">RemoteIO.Arduino</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-automation_phat/">RemoteIO.Automation_pHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-beaglebone/">RemoteIO.BeagleBone</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-beagleplay/">RemoteIO.BeaglePlay</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client/">RemoteIO.Client</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-hidapi/">RemoteIO.Client.hidapi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-libusb/">RemoteIO.Client.libusb</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-serial/">RemoteIO.Client.Serial</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-stream/">RemoteIO.Client.Stream</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-udp/">RemoteIO.Client.UDP</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-wioe5_ham1/">RemoteIO.Client.WioE5_Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-client-zeromq/">RemoteIO.Client.ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-enviro_phat/">RemoteIO.Enviro_pHAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-grove_base_hat_zero/">RemoteIO.Grove_Base_Hat_Zero</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-lpc1114/">RemoteIO.LPC1114</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-lpc1114-adc/">RemoteIO.LPC1114.ADC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-lpc1114-gpio/">RemoteIO.LPC1114.GPIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-lpc1114-legorc/">RemoteIO.LPC1114.LEGORC</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-lpc1114-pwm/">RemoteIO.LPC1114.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-lpc1114-timers/">RemoteIO.LPC1114.Timers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-munts_0008/">RemoteIO.MUNTS_0008</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-munts_0009/">RemoteIO.MUNTS_0009</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-munts_0015/">RemoteIO.MUNTS_0015</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-munts_0016/">RemoteIO.MUNTS_0016</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-munts_0018/">RemoteIO.MUNTS_0018</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-pocketbeagle/">RemoteIO.PocketBeagle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-qwiic_hat/">RemoteIO.Qwiic_HAT</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio-raspberrypi/">RemoteIO.RaspberryPi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/remoteio_config/">Remoteio_Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/resistance/">Resistance</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/servo/">Servo</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/servo-pwm/">Servo.PWM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/skidsteer2wd/">SkidSteer2WD</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/spi/">SPI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/spi-remoteio/">SPI.RemoteIO</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/stepper/">Stepper</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/stream_framing_protocol/">Stream_Framing_Protocol</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/tcs3472/">TCS3472</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/temperature/">Temperature</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/th02/">TH02</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/thermistor/">Thermistor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/thermistor-ntc_b_parms/">Thermistor.NTC_B_Parms</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/tlc1543/">TLC1543</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/tmp102/">TMP102</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/truecolor/">TrueColor</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/vehicle/">Vehicle</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/voltage/">Voltage</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/watchdog/">Watchdog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/wio_e5/">Wio_E5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/wio_e5-ham1/">Wio_E5.Ham1</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/zeromq/">ZeroMQ</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/zeromq-context/">ZeroMQ.Context</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/remoteio/2.25279.1/zeromq-sockets/">ZeroMQ.Sockets</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-10-31.
+    </p>
+  </footer>
+<script>
+(function () {
+  var select  = document.getElementById('version-select');
+  var crate   = "remoteio";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  select.addEventListener('change', function () {
+    var version = select.value;
+    var url = baseUrl + '/crate-data/' + crate + '/' + version + '/index.json';
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (m) { applyManifest(m, version); })
+      .catch(function (e) { console.error('Could not load version ' + version, e); });
+  });
+
+  function applyManifest(m, version) {
+    // Units
+    var uSection = document.getElementById('units-section');
+    if (uSection) {
+      var units = m.units || [];
+      if (units.length === 0) {
+        uSection.innerHTML = '<h2>API Units</h2><p>No API units indexed for this version.</p>';
+      } else {
+        var items = units.map(function (u) {
+          var stem = u.file.replace(/\.json$/, '');
+          var href = esc(baseUrl + '/c/' + crate + '/' + version + '/' + stem + '/');
+          return '<li><a href="' + href + '">' + esc(u.name) + '</a></li>';
+        }).join('');
+        uSection.innerHTML = '<h2>API Units</h2><ul class="unit-list">' + items + '</ul>';
+      }
+    }
+
+    // Dependencies
+    var dSection = document.getElementById('deps-section');
+    if (dSection) {
+      var deps = m.dependencies || [];
+      if (deps.length === 0) {
+        dSection.innerHTML = '';
+      } else {
+        var ditems = deps.map(function (d) {
+          return '<li><a href="' + esc(baseUrl + '/c/' + d.crate + '/') + '">' + esc(d.crate) + '</a>'
+               + ' <span class="dep-version">' + esc(d.version) + '</span></li>';
+        }).join('');
+        dSection.innerHTML = '<h2>Dependencies</h2><ul class="dep-list">' + ditems + '</ul>';
+      }
+    }
+
+    // Repository / website link
+    var repoEl = document.getElementById('meta-repo');
+    if (repoEl) {
+      var url = m.repository ? m.repository.url : (m.website || '');
+      var labelEl = document.getElementById('meta-repo-label') || repoEl.previousElementSibling;
+      if (url) {
+        repoEl.innerHTML = '<a href="' + esc(url) + '">' + esc(url) + '</a>';
+        repoEl.style.display = '';
+        if (labelEl) labelEl.style.display = '';
+      } else {
+        repoEl.innerHTML = '';
+        repoEl.style.display = 'none';
+        if (labelEl) labelEl.style.display = 'none';
+      }
+    }
+
+    // Page title
+    document.title = crate + ' ' + version + ' — Ada/SPARK Documentation';
+  }
+}());
+</script>
+
+<script>
+// Version comparison functionality
+(function () {
+  var modal = document.getElementById('compare-modal');
+  var compareBtn = document.getElementById('compare-btn');
+  var closeBtn = document.getElementById('close-modal');
+  var runCompareBtn = document.getElementById('run-compare');
+  var compareFrom = document.getElementById('compare-from');
+  var compareTo = document.getElementById('compare-to');
+  var resultsDiv = document.getElementById('compare-results');
+  var crate = "remoteio";
+  var baseUrl = "https://alire-project.github.io/docs.ada.dev";
+
+  if (!modal || !compareBtn) return;
+
+  // Open modal
+  compareBtn.addEventListener('click', function () {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Run comparison
+  runCompareBtn.addEventListener('click', function () {
+    var fromVersion = compareFrom.value;
+    var toVersion = compareTo.value;
+
+    if (fromVersion === toVersion) {
+      resultsDiv.innerHTML = '<p class="error">Please select different versions to compare.</p>';
+      return;
+    }
+
+    resultsDiv.innerHTML = '<p class="loading">Loading and comparing versions...</p>';
+
+    Promise.all([
+      fetch(baseUrl + '/crate-data/' + crate + '/' + fromVersion + '/index.json').then(r => r.json()),
+      fetch(baseUrl + '/crate-data/' + crate + '/' + toVersion + '/index.json').then(r => r.json())
+    ]).then(function (results) {
+      var oldManifest = results[0];
+      var newManifest = results[1];
+      var diff = computeDiff(oldManifest, newManifest);
+      displayDiff(diff, fromVersion, toVersion);
+    }).catch(function (err) {
+      resultsDiv.innerHTML = '<p class="error">Failed to load version data: ' + err.message + '</p>';
+    });
+  });
+
+  function computeDiff(oldManifest, newManifest) {
+    var oldUnits = oldManifest.units || [];
+    var newUnits = newManifest.units || [];
+    var oldDeps = oldManifest.dependencies || [];
+    var newDeps = newManifest.dependencies || [];
+
+    // Create maps for quick lookup
+    var oldUnitMap = {};
+    oldUnits.forEach(function (u) { oldUnitMap[u.name] = u; });
+    var newUnitMap = {};
+    newUnits.forEach(function (u) { newUnitMap[u.name] = u; });
+
+    var oldDepMap = {};
+    oldDeps.forEach(function (d) { oldDepMap[d.crate] = d; });
+    var newDepMap = {};
+    newDeps.forEach(function (d) { newDepMap[d.crate] = d; });
+
+    // Compare units
+    var addedUnits = [];
+    var removedUnits = [];
+    var unchangedUnits = [];
+
+    newUnits.forEach(function (u) {
+      if (!oldUnitMap[u.name]) {
+        addedUnits.push(u.name);
+      } else {
+        unchangedUnits.push(u.name);
+      }
+    });
+
+    oldUnits.forEach(function (u) {
+      if (!newUnitMap[u.name]) {
+        removedUnits.push(u.name);
+      }
+    });
+
+    // Compare dependencies
+    var addedDeps = [];
+    var removedDeps = [];
+    var modifiedDeps = [];
+
+    newDeps.forEach(function (d) {
+      if (!oldDepMap[d.crate]) {
+        addedDeps.push(d);
+      } else if (oldDepMap[d.crate].version !== d.version) {
+        modifiedDeps.push({ crate: d.crate, old: oldDepMap[d.crate].version, new: d.version });
+      }
+    });
+
+    oldDeps.forEach(function (d) {
+      if (!newDepMap[d.crate]) {
+        removedDeps.push(d);
+      }
+    });
+
+    return {
+      units: { added: addedUnits, removed: removedUnits, unchanged: unchangedUnits },
+      dependencies: { added: addedDeps, removed: removedDeps, modified: modifiedDeps }
+    };
+  }
+
+  function esc(text) {
+    return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function displayDiff(diff, fromVersion, toVersion) {
+    var html = '<div class="diff-summary">';
+    html += '<h3>Changes from ' + esc(fromVersion) + ' to ' + esc(toVersion) + '</h3>';
+
+    var totalChanges = diff.units.added.length + diff.units.removed.length +
+                       diff.dependencies.added.length + diff.dependencies.removed.length +
+                       diff.dependencies.modified.length;
+
+    if (totalChanges === 0) {
+      html += '<p class="no-changes">No API changes detected between these versions.</p>';
+    } else {
+      // Units changes
+      if (diff.units.added.length > 0 || diff.units.removed.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>API Units (' + (diff.units.added.length + diff.units.removed.length) + ' changes)</h4>';
+
+        if (diff.units.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.units.added.length + '):</strong>';
+          html += '<ul>';
+          diff.units.added.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.units.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.units.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.units.removed.forEach(function (name) {
+            html += '<li><code>' + esc(name) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+
+      // Dependencies changes
+      if (diff.dependencies.added.length > 0 || diff.dependencies.removed.length > 0 || diff.dependencies.modified.length > 0) {
+        html += '<div class="diff-section">';
+        html += '<h4>Dependencies (' + (diff.dependencies.added.length + diff.dependencies.removed.length + diff.dependencies.modified.length) + ' changes)</h4>';
+
+        if (diff.dependencies.added.length > 0) {
+          html += '<div class="diff-group added">';
+          html += '<strong>✓ Added (' + diff.dependencies.added.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.added.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code> ' + esc(d.version) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.modified.length > 0) {
+          html += '<div class="diff-group modified">';
+          html += '<strong>~ Modified (' + diff.dependencies.modified.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.modified.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code>: ' + esc(d.old) + ' → ' + esc(d.new) + '</li>';
+          });
+          html += '</ul></div>';
+        }
+
+        if (diff.dependencies.removed.length > 0) {
+          html += '<div class="diff-group removed">';
+          html += '<strong>✗ Removed (' + diff.dependencies.removed.length + '):</strong>';
+          html += '<ul>';
+          diff.dependencies.removed.forEach(function (d) {
+            html += '<li><code>' + esc(d.crate) + '</code></li>';
+          });
+          html += '</ul></div>';
+        }
+
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    resultsDiv.innerHTML = html;
+  }
+}());
+</script>
+</body>
+</html>

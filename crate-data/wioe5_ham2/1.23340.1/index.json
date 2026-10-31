@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "wioe5_ham2",
+  "version": "1.23340.1",
+  "documented_at": "2026-03-07T02:51:07Z",
+  "description": "Wio-E5 LoRa Transceiver Module Device Driver",
+  "long_description": "# Introduction\n\nThis crate provides the device driver package **Wio_E5.Ham2** for the\nSeeed Studio [Wio-E5 LoRa Transceiver\nModule](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module)\noperating in test *aka* P2P (so-called Peer to Peer or Point to Point)\nbroadcast mode.\n\nSee\n[WioE5LoRaP2P.pdf](https://repo.munts.com/libsimpleio/doc/WioE5LoRaP2P.pdf)\nfor more information about the [LoRa wireless\nsystem](https://www.semtech.com/lora/what-is-lora) and operating the\nWio-E5 module in P2P mode.\n\n**Wio_E5.Ham2** is derived from **Wio_E5.P2P** (see crate\n[wioe5_p2p](https://alire.ada.dev/crates/wioe5_p2p.html)). It reserves\nthe first twenty-two bytes of the payload for address information to\nimplement ***[Amateur\nRadio](https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service)\nUnicast Flavor #2***, which creates a amateur radio [Local Area\nNetwork](https://en.wikipedia.org/wiki/Local_area_network), operated\nunder a *Technician* or higher license, in the [33-cm\nband](https://en.wikipedia.org/wiki/33-centimeter_band) (902 to 928 MHz\nin the United States, 915 to 928 MHz in New Zealand, and possible\nallocations in other [ITU Region\n2](https://w6hs.net/itu-region-2-member-countries) countries).\n\n*The code for this crate has been extracted from the [Linux Simple I/O\nLibrary project](https://github.com/pmunts/libsimpleio).*\n\n# API\n\nThe API for this device driver is documented in the\n[Wio-E5.Ham2](https://github.com/pmunts/libsimpleio/blob/master/ada/devices/wioe5/wio_e5-ham2.ads)\npackage specification.\n\n**Wio-E5.Ham2** is a generic package that must be instantiated with two\n**Positive** value parameters, for maximum payload size (1 to 241 bytes)\nand FIFO queue depth. The default values for the generic formal\nparameters will prove satisfactory for most purposes. Depending on what\nkind of data you are going to be sending, you might want reduce the\nmaximum payload size to match some other protocol, such as 64 bytes for\nthe [Remote I/O\nProtocol](https://repo.munts.com/libsimpleio/doc/RemoteIOProtocol.pdf).\n\n# Minimal Test Program\n\n    WITH Wio_E5.Ham2;\n\n    PROCEDURE HelloWorld IS\n\n      PACKAGE LoRa IS NEW Wio_E5.Ham2;\n\n      dev : LoRa.Device;\n\n    BEGIN\n      dev := LoRa.Create(\"/dev/ttyUSB0\", 115200, \"XX0XXX    \", 1, 915.0);\n      dev.Send(\"Hello, World!\", \"YY0YYY    \", 1);\n      dev.Shutdown;\n    END HelloWorld;\n\nMore example programs are available at:\n<https://github.com/pmunts/libsimpleio/tree/master/ada/programs/wioe5/ham2>.\n",
+  "authors": [
+    "Philip Munts"
+  ],
+  "licenses": [
+    "BSD-1-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "linux",
+    "wioe5",
+    "lora",
+    "radio",
+    "wireless",
+    "ham"
+  ],
+  "website": "https://github.com/pmunts/libsimpleio",
+  "repository": {
+    "url": "https://raw.githubusercontent.com/pmunts/alire-crates/e9ba76f0065303a6c855598f0b349766c77c7243/wioe5_ham2/wioe5_ham2-1.23340.1.tbz2",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Wio_E5",
+      "id": "c529285857bcacef",
+      "file": "wio_e5.json"
+    },
+    {
+      "name": "Wio_E5.Ham2",
+      "id": "03e854fcb8cc4ce7",
+      "file": "wio_e5-ham2.json"
+    },
+    {
+      "name": "Wioe5_Ham2_Config",
+      "id": "29ec5862099b347e",
+      "file": "wioe5_ham2_config.json"
+    }
+  ]
+}

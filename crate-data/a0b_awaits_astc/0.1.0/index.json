@@ -1,0 +1,39 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_awaits_astc",
+  "version": "0.1.0",
+  "documented_at": "2026-10-30T02:16:12Z",
+  "description": "A0B: Await on Ada.Synchronous_Task_Control",
+  "long_description": "A0B: Portable wait and synchronization primitives for Ada applications running on standard GNAT tasking runtimes.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "await",
+    "embedded",
+    "tasking"
+  ],
+  "website": "https://github.com/godunko/a0b-awaits-astc",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-awaits-astc",
+    "host": "github",
+    "commit": "e70d19f379c7470f92159dcc97c45b718c77bc65"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_callbacks",
+      "version": "^0.3.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "A0B.Awaits",
+      "id": "be46a95d23afcf4f",
+      "file": "a0b-awaits.json"
+    }
+  ]
+}

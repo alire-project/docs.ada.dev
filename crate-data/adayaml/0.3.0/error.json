@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "adayaml",
+  "version": "0.3.0",
+  "failed_at": "2026-03-03T17:49:50Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

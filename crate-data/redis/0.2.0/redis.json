@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"redis","version":"0.2.0","id":"34fb46c847bb9df9","name":"Redis","qualified_name":"Redis","kind":"ada_package","location":{"file":"src/redis.ads","line":3,"column":9},"code":"package Redis","documentation":{"description":"Root package for redis-ada library.\nA Redis client for Ada supporting RESP2 protocol."}}

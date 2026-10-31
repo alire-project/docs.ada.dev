@@ -1,0 +1,97 @@
+{
+  "schema_version": "1",
+  "crate": "adacl_aunit",
+  "version": "7.1.0",
+  "documented_at": "2026-03-03T17:49:07Z",
+  "description": "Ada 2022 AUnit with readable asserts & paramerised test",
+  "long_description": "A versatile Ada 2022 testing library, enhancing AUnit with readable assertions and parameterised tests.\n\n## Features\n\n### AUnit-Compatible Assertions\n\n  - Generic support for access, array, discrete, floating-point, fixed-point, decimal, vector types, and files.\n  - **Readable Error Messages**: Assertions provide detailed feedback.\n\nExample for unbounded strings:\n\n```ada\n    procedure Equal\n       (Actual   : Ada.Strings.Unbounded.Unbounded_String;\n        Expected : String;\n        Name     : String;\n        Source   : String  := GNAT.Source_Info.File;\n        Line     : Natural := GNAT.Source_Info.Line)\n    is\n       use Ada.Strings.Unbounded;\n    begin\n       if not (Actual = Expected) then\n          Report_Assertion\n             (Message => \"In string «\" & Name & \"» the \" & Actual'Image & \" is not equal to \" & Expected'Image,\n              Source  => Source,\n              Line    => Line);\n       end if;\n    end Equal;\n```\n\nThis yields clear, context-rich error messages, surpassing standard AUnit\noutput.\n\n## Parameterised Tests\n\nRun the same test with varied inputs and expected values, boosting coverage\nefficiently.\n\nExample from hp41cx_tools:\n\n```ada\noverriding procedure Register_Tests (T : in out Test_Case) is\n   pragma Debug (AdaCL.Trace.Entering (In_Parameter => T.Name.all'Image));\nbegin\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"WAKE_UP\",      \"2024-12-01 08:00:00\",   [3, 9, 4, 2, 0, 2, 8, 8, 0, 0, 0], 3942028800.0);\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"^LBLTEST\",     \"2025-07-22 12:00:00\",   [3, 9, 6, 2, 1, 7, 4, 4, 0, 0, 0], 3962174400.0);\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"TONE\",         \"2025-11-12 09:12:34\",   [3, 9, 7, 1, 9, 2, 7, 5, 5, 4, 0], 3971927554.0);\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"FRACTION\",     \"2025-11-12 09:12:34.5\", [3, 9, 7, 1, 9, 2, 7, 5, 5, 4, 5], 3971927554.5);\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"REPEAT24\",     \"24:00:00\",              [0, 0, 0, 0, 0, 8, 6, 4, 0, 0, 0], 0000086400.0);\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"REPEAT'First\", \"0000:00:01.0\",          [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], 0000000010.0);\n   T.Parameter.Register_Routine (T, Test_To_HP_Duration_01'Access, \"REPEAT'Last\",  \"9999:59:59.9\",          [0, 0, 3, 5, 9, 9, 9, 9, 9, 9, 9], 0035999999.9);\n   pragma Debug (AdaCL.Trace.Exiting);\n   return;\nend Register_Tests;\n```\n\nRegistering tests multiple times with different data enhances test coverage\nwithout redundant code.\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_aunit/test/src/)\nDocumentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl_aunit_test/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "aunit",
+    "assert",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl_aunit/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^7.0.0"
+    },
+    {
+      "crate": "aunit",
+      "version": "25.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AdaCL.Assert",
+      "id": "6907e481d240792c",
+      "file": "adacl-assert.json"
+    },
+    {
+      "name": "AdaCL.Assert.Arrays",
+      "id": "1938c19167a7a440",
+      "file": "adacl-assert-arrays.json"
+    },
+    {
+      "name": "AdaCL.Assert.Decimal",
+      "id": "3b4469c13fccb5b7",
+      "file": "adacl-assert-decimal.json"
+    },
+    {
+      "name": "AdaCL.Assert.Discrete",
+      "id": "617128c03334a0d9",
+      "file": "adacl-assert-discrete.json"
+    },
+    {
+      "name": "AdaCL.Assert.Fixed",
+      "id": "4a37a0bce0a80ef4",
+      "file": "adacl-assert-fixed.json"
+    },
+    {
+      "name": "AdaCL.Assert.Float",
+      "id": "fa369f3e6947e042",
+      "file": "adacl-assert-float.json"
+    },
+    {
+      "name": "AdaCL.Assert.Indefinite_Vectors",
+      "id": "5d3b3722657dc2ba",
+      "file": "adacl-assert-indefinite_vectors.json"
+    },
+    {
+      "name": "AdaCL.Assert.Pointer",
+      "id": "6fc6359636a92ba9",
+      "file": "adacl-assert-pointer.json"
+    },
+    {
+      "name": "AdaCL.Assert.Vectors",
+      "id": "6a3f67dedb12c13d",
+      "file": "adacl-assert-vectors.json"
+    },
+    {
+      "name": "AdaCL.Test_Cases",
+      "id": "bcb58e02a439dce6",
+      "file": "adacl-test_cases.json"
+    },
+    {
+      "name": "AdaCL.Test_Cases.Parameters",
+      "id": "087c9ddf0f9d613a",
+      "file": "adacl-test_cases-parameters.json"
+    },
+    {
+      "name": "Adacl_Aunit_Config",
+      "id": "d59e676cc20db6ac",
+      "file": "adacl_aunit_config.json"
+    }
+  ]
+}

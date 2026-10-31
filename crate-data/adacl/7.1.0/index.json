@@ -1,0 +1,194 @@
+{
+  "schema_version": "1",
+  "crate": "adacl",
+  "version": "7.1.0",
+  "documented_at": "2026-03-03T17:48:49Z",
+  "description": "Ada Class Library: Strings, Tracing, AUnit, Smart Pointers, Getopt",
+  "long_description": "A versatile Ada 2022 class library for robust application development.\n\nFeatures:\n- Getopt: Command-line argument parser with wide character support\n- Strings: Utilities for String, Wide_String, and Wide_Wide_String\n- Calendar: Time and date utilities with wide character support\n- Tracing: Diagnostic trace utility with wide character support\n- Protected Queue: Supports finish, wait, and abort operations\n- Smart Pointers:\n  - Reference-counted pointers\n  - Unique pointers (C++-style)\n  - Shared pointers (C++-style)\n\nRelated crates:\n- AUnit: AUnit-Compatible Assertions for access, array, discrete, floating-point, fixed-point, decimal, and vector types\n- EAStrings: Encoding-aware string utilities\n- RegEx: SPITBOL-inspired pattern matching and regular expressions for String, Wide_String, and Wide_Wide_String\n- SAR: Text search and replace for String, Wide_String, and Wide_Wide_String\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl/src/)\nDocumentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "command-line",
+    "trace",
+    "logging",
+    "string",
+    "aunit",
+    "assert",
+    "container",
+    "smart-pointer",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AdaCL",
+      "id": "f869bd590f55044c",
+      "file": "adacl.json"
+    },
+    {
+      "name": "AdaCL.Base",
+      "id": "9c095d62552c891d",
+      "file": "adacl-base.json"
+    },
+    {
+      "name": "AdaCL.Calendar",
+      "id": "8e46554c76a678a8",
+      "file": "adacl-calendar.json"
+    },
+    {
+      "name": "AdaCL.Command_Line",
+      "id": "3a536709f526c8e4",
+      "file": "adacl-command_line.json"
+    },
+    {
+      "name": "AdaCL.Command_Line.GetOpt",
+      "id": "7947bdb8ffdc2d10",
+      "file": "adacl-command_line-getopt.json"
+    },
+    {
+      "name": "AdaCL.Limited_Base",
+      "id": "2309a3ffb58d4e31",
+      "file": "adacl-limited_base.json"
+    },
+    {
+      "name": "AdaCL.OS",
+      "id": "100bf45c72d751dd",
+      "file": "adacl-os.json"
+    },
+    {
+      "name": "AdaCL.OS.Low_Level",
+      "id": "895028c526b25bd2",
+      "file": "adacl-os-low_level.json"
+    },
+    {
+      "name": "AdaCL.Pointer",
+      "id": "8226c58c33a029bc",
+      "file": "adacl-pointer.json"
+    },
+    {
+      "name": "AdaCL.Pointer.Element",
+      "id": "6365d68769874520",
+      "file": "adacl-pointer-element.json"
+    },
+    {
+      "name": "AdaCL.Pointer.Holder",
+      "id": "ea1aa1f8fca2c9df",
+      "file": "adacl-pointer-holder.json"
+    },
+    {
+      "name": "AdaCL.Pointer.Shared",
+      "id": "3be215d95bbf554f",
+      "file": "adacl-pointer-shared.json"
+    },
+    {
+      "name": "AdaCL.Pointer.Shared_With_Delete",
+      "id": "5f04769215ae8c95",
+      "file": "adacl-pointer-shared_with_delete.json"
+    },
+    {
+      "name": "AdaCL.Pointer.Unique",
+      "id": "b9d40f4edef87935",
+      "file": "adacl-pointer-unique.json"
+    },
+    {
+      "name": "AdaCL.Pointer.Unique_With_Delete",
+      "id": "3c4ca149a9c39bce",
+      "file": "adacl-pointer-unique_with_delete.json"
+    },
+    {
+      "name": "AdaCL.Queue",
+      "id": "119b349fe3c8db88",
+      "file": "adacl-queue.json"
+    },
+    {
+      "name": "AdaCL.Queue.Interfaces",
+      "id": "0cf451059a832e9b",
+      "file": "adacl-queue-interfaces.json"
+    },
+    {
+      "name": "AdaCL.Queue.Protect",
+      "id": "1153f8b8868124e6",
+      "file": "adacl-queue-protect.json"
+    },
+    {
+      "name": "AdaCL.Strings",
+      "id": "de67a58eefac47fb",
+      "file": "adacl-strings.json"
+    },
+    {
+      "name": "AdaCL.Strings.Bin",
+      "id": "9b703b21081d992e",
+      "file": "adacl-strings-bin.json"
+    },
+    {
+      "name": "AdaCL.Strings.Hex",
+      "id": "172b9ef47453adb0",
+      "file": "adacl-strings-hex.json"
+    },
+    {
+      "name": "AdaCL.Strings.IO",
+      "id": "e4059f4ed1e98cee",
+      "file": "adacl-strings-io.json"
+    },
+    {
+      "name": "AdaCL.Trace",
+      "id": "1d35f888900f185f",
+      "file": "adacl-trace.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings",
+      "id": "5fe65f7e9b57ec10",
+      "file": "adacl-wide_strings.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings.Bin",
+      "id": "6794887def1c54d1",
+      "file": "adacl-wide_strings-bin.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings.Hex",
+      "id": "eff315b3f6a35a37",
+      "file": "adacl-wide_strings-hex.json"
+    },
+    {
+      "name": "AdaCL.Wide_Strings.IO",
+      "id": "7889a2c03e078cc9",
+      "file": "adacl-wide_strings-io.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings",
+      "id": "a29a80b44f818bdc",
+      "file": "adacl-wide_wide_strings.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings.Bin",
+      "id": "44247b27fa2b05ac",
+      "file": "adacl-wide_wide_strings-bin.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings.Hex",
+      "id": "59e1d68d62bd341e",
+      "file": "adacl-wide_wide_strings-hex.json"
+    },
+    {
+      "name": "AdaCL.Wide_Wide_Strings.IO",
+      "id": "46b8e6d99723acfb",
+      "file": "adacl-wide_wide_strings-io.json"
+    },
+    {
+      "name": "Adacl_Config",
+      "id": "652ce744b62f35d5",
+      "file": "adacl_config.json"
+    }
+  ]
+}
