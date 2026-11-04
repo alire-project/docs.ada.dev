@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"tresses","version":"2.0.0","id":"5d40242a7db52948","name":"Tresses.Voices","qualified_name":"Tresses.Voices","kind":"ada_package","location":{"file":"src/tresses-voices.ads","line":1,"column":9},"code":"package Tresses.Voices"}

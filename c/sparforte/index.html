@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>sparforte — Ada/SPARK Documentation</title>
+  <meta name="description" content="An open source scripting language for high integrity tasks">
+  <meta name="keywords" content="Ada, SPARK, Alire, sparforte, scripting, language, Base64, builtins, CGI, chain_util, compiler, interpreter, jobs, MD5, message_strings, os_defs, parser, parser_arrays, parser_aux, parser_btree_io, parser_cal, parser_cgi, parser_chains, parser_cmd, parser_containers, parser_dbm, parser_dht, parser_dirops, parser_doubly, parser_enums, parser_exceptions, parser_files, parser_gnat_cgi, parser_gnat_crc, parser_hash_io, parser_hmaps, parser_l10n, parser_lock, parser_logs, parser_memcache, parser_mysql, parser_mysqlm, parser_numerics, parser_os, parser_params, parser_pen, parser_pragmas, parser_records, parser_sessions, parser_sidefx, parser_sound, parser_stats, parser_strings, parser_strings_pcre, parser_tags, parser_teams, parser_templates, parser_tinyserve, parser_tio, parser_units, parser_vectors, pegasock, pegasoft, performance_monitoring, reports, scanner, scanner_restypes, signal_flags, software_models, spar_interface, symbol_table, Ustrings, value_conversion">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "sparforte",
+"version": "3.0.1",  "description": "An open source scripting language for high integrity tasks",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/sparforte/",
+  "codeRepository": "https://github.com/Blady-Com/SparForte"
+  ,"author": [{"@type": "Person", "name": "Ken Burtch \u003cken@pegasoft.ca\u003e"}]
+  ,"license": "GPL-2.0-only"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">sparforte</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>sparforte</h1>
+    <span class="version-tag">3.0.1</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="3.0.1">3.0.1</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="3.0.1" selected>3.0.1</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">An open source scripting language for high integrity tasks</p>
+
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Ken Burtch &lt;ken@pegasoft.ca&gt;</dd>
+
+    <dt>License</dt>
+    <dd>GPL-2.0-only</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/Blady-Com/SparForte">https://github.com/Blady-Com/SparForte</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">scripting</span><span class="tag">language</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/base64/">Base64</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/builtins/">builtins</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/builtins-help/">builtins.help</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/cgi/">CGI</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/chain_util/">chain_util</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/compiler/">compiler</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/interpreter/">interpreter</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/jobs/">jobs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/md5/">MD5</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/message_strings/">message_strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/os_defs/">os_defs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser/">parser</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser-decl/">parser.decl</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser-decl-as/">parser.decl.as</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser-decl-shell/">parser.decl.shell</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_arrays/">parser_arrays</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_aux/">parser_aux</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_btree_io/">parser_btree_io</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_cal/">parser_cal</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_cgi/">parser_cgi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_chains/">parser_chains</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_cmd/">parser_cmd</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_containers/">parser_containers</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_dbm/">parser_dbm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_dht/">parser_dht</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_dirops/">parser_dirops</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_doubly/">parser_doubly</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_enums/">parser_enums</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_exceptions/">parser_exceptions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_files/">parser_files</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_gnat_cgi/">parser_gnat_cgi</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_gnat_crc/">parser_gnat_crc</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_hash_io/">parser_hash_io</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_hmaps/">parser_hmaps</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_l10n/">parser_l10n</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_lock/">parser_lock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_logs/">parser_logs</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_memcache/">parser_memcache</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_mysql/">parser_mysql</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_mysqlm/">parser_mysqlm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_numerics/">parser_numerics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_os/">parser_os</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_params/">parser_params</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_pen/">parser_pen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_pragmas/">parser_pragmas</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_records/">parser_records</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_sessions/">parser_sessions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_sidefx/">parser_sidefx</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_sound/">parser_sound</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_stats/">parser_stats</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_strings/">parser_strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_strings_pcre/">parser_strings_pcre</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_tags/">parser_tags</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_teams/">parser_teams</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_templates/">parser_templates</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_tinyserve/">parser_tinyserve</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_tio/">parser_tio</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_units/">parser_units</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/parser_vectors/">parser_vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock/">pegasock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-http/">pegasock.http</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-memcache/">pegasock.memcache</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-memcache-highread/">pegasock.memcache.highread</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-smtp/">pegasock.smtp</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-syslog/">pegasock.syslog</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-tinyserve/">pegasock.tinyserve</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasock-tinyserve-http/">pegasock.tinyserve.http</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft/">pegasoft</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-gen_list/">pegasoft.gen_list</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-hmaps/">pegasoft.hmaps</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-hsets/">pegasoft.hsets</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-mysql/">pegasoft.mysql</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-numerics/">pegasoft.numerics</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-pen/">pegasoft.pen</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-pg/">pegasoft.pg</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-script_io/">pegasoft.script_io</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-strings/">pegasoft.strings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-user_io/">pegasoft.user_io</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-user_io-getline/">pegasoft.user_io.getline</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/pegasoft-vectors/">pegasoft.vectors</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/performance_monitoring/">performance_monitoring</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/reports/">reports</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/reports-comm/">reports.comm</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/reports-help/">reports.help</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/reports-prof/">reports.prof</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/reports-test/">reports.test</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/scanner/">scanner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/scanner-calendar/">Scanner.Calendar</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/scanner-communications/">scanner.communications</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/scanner-shell/">scanner.shell</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/scanner_restypes/">scanner_restypes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/signal_flags/">signal_flags</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/software_models/">software_models</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/spar_interface/">spar_interface</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/symbol_table/">symbol_table</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/ustrings/">Ustrings</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/sparforte/3.0.1/value_conversion/">value_conversion</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-11-04.
+    </p>
+  </footer>
+
+</body>
+</html>

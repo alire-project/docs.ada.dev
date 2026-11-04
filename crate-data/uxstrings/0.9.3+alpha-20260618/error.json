@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "uxstrings",
+  "version": "0.9.3+alpha-20260618",
+  "failed_at": "2026-06-23T03:04:10Z",
+  "stage": "index",
+  "message": "make_index.py exited with code 1"
+}

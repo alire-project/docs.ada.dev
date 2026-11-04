@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "tb6612_driver",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T03:00:02Z",
+  "description": "Driver for the TB6612 dual DC motor driver IC.",
+  "authors": [
+    "Karsten Lueth"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "motor",
+    "driver",
+    "embedded",
+    "hal"
+  ],
+  "website": "https://gitlab.com/KLOC-Karsten/tb6612_driver",
+  "repository": {
+    "url": "https://gitlab.com/KLOC-Karsten/tb6612_driver",
+    "host": "gitlab",
+    "commit": "e7bf4eb9d571d1cafa50dd6e83c503fd98fed119"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "TB6612_Driver",
+      "id": "40cc52a9f8e27f4b",
+      "file": "tb6612_driver.json"
+    },
+    {
+      "name": "Tb6612_Driver_Config",
+      "id": "a99831da07c35580",
+      "file": "tb6612_driver_config.json"
+    }
+  ]
+}

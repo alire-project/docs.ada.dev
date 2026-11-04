@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c05_rgb",
+  "version": "1.5.0",
+  "documented_at": "2026-04-15T03:03:38Z",
+  "description": "Chapter 4: RGBLED",
+  "long_description": "Contained in Chapter 05 are:\n\n2. sketch_05_1_random_color_light.adb   - Chapter 5.1 Random Color Light\n3. sketch_05_2_gradient_color_light.adb - Chapter 5.2 Gradient Color Light\n\nGNATdoc documentation:\nhttps://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c05_rgb/\n\nSourceForge repository:\nhttps://sourceforge.net/projects/pi-ada-tutorial/\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c05_rgb",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_rp2040",
+      "version": "^15.2"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "pico_xbsp",
+      "version": "^1.5"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C05_Rgb_Config",
+      "id": "2c647ceed7084daf",
+      "file": "pico_ada_c05_rgb_config.json"
+    }
+  ]
+}

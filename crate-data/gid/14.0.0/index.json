@@ -1,0 +1,84 @@
+{
+  "schema_version": "1",
+  "crate": "gid",
+  "version": "14.0.0",
+  "documented_at": "2026-03-24T02:57:12Z",
+  "description": "Generic Image Decoder - decode a broad variety of image formats",
+  "long_description": "&nbsp;<img src=\"https://gen-img-dec.sourceforge.io/transp.png\" alt=\"image\" width=\"200\" height=\"auto\">\n\nThe Generic Image Decoder (GID) is a low-level Ada package for decoding a broad variety of image formats,\nfrom any data stream, to any kind of medium, be it an in-memory bitmap, a GUI object, some other stream,\nfloating-point data for scientific calculations, a browser element, a device, ...\n\nCurrently supported formats are: BMP, GIF, JPEG, PNG, PNM (PBM, PGM, PPM), QOI, TGA\n\nAnimations (GIF, PNG) are supported. \n\nSome features:\n\n* **Fast**! Up to 2.8 times faster than ImageMagick\n* Task safe\n* Endian-neutral\n* Multi-platform, but native code build\n* Standalone (no dependency on other libraires, bindings, etc.; no extra component needed for running)\n* Unconditionally **portable**: OS-, CPU-, compiler- independent code (*)\n* Pure Ada 2012: this package can be used in projects in Ada 2012 and later versions of the Ada language\n* Tests, demos and tools included\n* **Free**, open-source\n\n______\n\n(*) within limits of compiler's provided integer types and target architecture capacity.\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "image",
+    "animated",
+    "animation",
+    "bitmap",
+    "color",
+    "decoder",
+    "decoding",
+    "decompress",
+    "digitization",
+    "graphic",
+    "lossless",
+    "lossy",
+    "raster",
+    "rgb",
+    "rgba",
+    "steganography",
+    "transparency",
+    "transparent",
+    "bmp",
+    "gif",
+    "jpeg",
+    "jpg",
+    "pbm",
+    "pgm",
+    "png",
+    "pnm",
+    "ppm",
+    "qoi",
+    "tga",
+    "targa"
+  ],
+  "website": "https://gen-img-dec.sourceforge.io/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/gen-img-dec",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Color_Distances",
+      "id": "cdd78900519b4d13",
+      "file": "color_distances.json"
+    },
+    {
+      "name": "Color_Statistics",
+      "id": "5fe5737e34354742",
+      "file": "color_statistics.json"
+    },
+    {
+      "name": "Dumb_PNG",
+      "id": "f8aecc36dea111d8",
+      "file": "dumb_png.json"
+    },
+    {
+      "name": "Fast_IO",
+      "id": "0ddd11b59bc50b78",
+      "file": "fast_io.json"
+    },
+    {
+      "name": "GID",
+      "id": "308e61cdbcfcd7cf",
+      "file": "gid.json"
+    },
+    {
+      "name": "GID.PNG_Defs",
+      "id": "e51a3a56ee55db00",
+      "file": "gid-png_defs.json"
+    }
+  ]
+}

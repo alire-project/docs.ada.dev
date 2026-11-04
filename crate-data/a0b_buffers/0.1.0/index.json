@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_buffers",
+  "version": "0.1.0",
+  "documented_at": "2026-09-29T02:25:01Z",
+  "description": "A0B: Buffers",
+  "long_description": "Provides memory-safe data buffer abstractions with customizable allocation strategies (fixed and dynamic capacity), optimized for I/O handling and serialization builders.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "buffers"
+  ],
+  "website": "https://github.com/godunko/a0b-buffers",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-buffers",
+    "host": "github",
+    "commit": "280d5d3d71ded322d08579dd7dc53684c9ec3f4f"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "A0B.Buffers",
+      "id": "76d95507622afee2",
+      "file": "a0b-buffers.json"
+    },
+    {
+      "name": "A0B.Buffers.Static",
+      "id": "a96298a5b6a8d73a",
+      "file": "a0b-buffers-static.json"
+    }
+  ]
+}

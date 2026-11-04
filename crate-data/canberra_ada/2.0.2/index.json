@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "canberra_ada",
+  "version": "2.0.2",
+  "documented_at": "2026-03-04T02:54:22Z",
+  "description": "Ada 2012 bindings for libcanberra",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "canberra",
+    "audio",
+    "sound",
+    "linux"
+  ],
+  "website": "https://github.com/onox/canberra-ada",
+  "repository": {
+    "url": "https://github.com/onox/canberra-ada",
+    "host": "github",
+    "commit": "75660acaba2656f3ef165d8a649f4a6e8e83a834"
+  },
+  "dependencies": [
+    {
+      "crate": "libcanberra",
+      "version": "~0.30.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Canberra",
+      "id": "d0bc5835c717795e",
+      "file": "canberra.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "orka_plugin_terrain",
+  "version": "1.0.0",
+  "failed_at": "2026-03-05T03:00:04Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

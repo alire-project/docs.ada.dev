@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "universal_text_file",
+  "version": "20220720.0.0",
+  "documented_at": "2026-03-07T02:49:20Z",
+  "description": "Proposed universal format for Unicode text files",
+  "long_description": "# Universal Text File Format\nProposed universal format for Unicode text files\n\nHere I propose a universal format for Unicode text files, specified by its Ada implementation. Some features of the format are\n\n* ASCII code points are encoded as themselves\n* At most three bytes are used to encode a code point\n* All code points may occur in a line\n* Lines may be any length (though the implementation is limited to Integer'Last)\n\nI have called this format Universal Text File format, with the acronym UTF. Like GNAT Programming Studio (GPS), this result is an acronym collision. Suggestions for alternative names are welcome.\n\n## Combined Specification and Ada Implementation\nThe format is specified here by its Ada implementation in package UTF, which is short and straightforward.\n\n## Tools\nThree simple tools are provided:\n* To_UTF, to convert an Ada.Text_IO file to UTF\n* From_UTF, to convert a UTF file into an Ada.Text_IO file\n* Umore, a simple `more` program for UTF files\n\n## Suitability\nMost tools for processing text files on the major platforms work with native text files from other platforms, and UTF-8 has been widely adopted for encoding Unicode text files, so it seems unlikely that an alternative will gain much traction. However, having done this, I thought I would share it should anyone be interested.\n\n## Standard Software-Engineering Practice\nEncodings should normally only be used externally to a program. Encoded input data should be decoded immediately upon input, and output data encoded immediatly before output.\n",
+  "authors": [
+    "Jeff Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "format",
+    "unicode",
+    "text"
+  ],
+  "website": "https://github.com/bracke/Universal-Text-File",
+  "repository": {
+    "url": "https://github.com/bracke/Universal-Text-File",
+    "host": "github",
+    "commit": "d58797dfdf1818ac064eba99e999bb8cc453d389"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Universal_Text_File_Config",
+      "id": "68875258130bb5fa",
+      "file": "universal_text_file_config.json"
+    },
+    {
+      "name": "UTF",
+      "id": "999e3bbc8148d633",
+      "file": "utf.json"
+    }
+  ]
+}

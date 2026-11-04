@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "crate": "avrada_examples",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:51:53Z",
+  "description": "Sample applications in Ada for AVR microcontrollers",
+  "authors": [
+    "Rolf Ebert"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "avr",
+    "embedded",
+    "demo"
+  ],
+  "website": "https://sourceforge.net/projects/avr-ada/",
+  "repository": {
+    "url": "https://github.com/RREE/AVRAda_Examples",
+    "host": "github",
+    "commit": "72780c766d5e3cb674d012c1775015d4442ce6e0"
+  },
+  "dependencies": [],
+  "units": []
+}

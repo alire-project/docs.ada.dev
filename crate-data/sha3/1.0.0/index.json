@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "sha3",
+  "version": "1.0.0",
+  "documented_at": "2026-07-11T03:00:57Z",
+  "description": "SPARK-proved SHA-3/SHAKE (FIPS 202) hash functions",
+  "long_description": "SPARK-proved SHA-3 and SHAKE implementations for Ada 2022. Implements FIPS 202\nwith SHA3-256, SHA3-512, SHAKE128, and SHAKE256. Keccak-f[1600] permutation\nand sponge construction are formally verified at SPARK level 2: 159/159 proof\nobligations discharged, zero pragma Assume, zero unproved VCs, termination\nverified via Always_Terminates aspects on every public subprogram.\n\nNo heap allocation, pragma Pure, suitable for embedded and safety-critical\nsystems. Incremental API (Init/Absorb/Squeeze) and one-shot convenience\nfunctions. Tested against NIST Known Answer Test vectors.\n\nConstant-time execution and FIPS 140-3 validation are out of scope for this\nrelease. See SECURITY.md for the full threat model.\n",
+  "authors": [
+    "Baris Erdem"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "sha3",
+    "keccak",
+    "hash",
+    "cryptography",
+    "spark",
+    "embedded",
+    "security",
+    "verified"
+  ],
+  "website": "https://github.com/b-erdem/sha3_ada",
+  "repository": {
+    "url": "https://github.com/b-erdem/sha3_ada",
+    "host": "github",
+    "commit": "dd0b8954860bf488a196f6e2ddc374a3ba9cf6dd"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SHA3",
+      "id": "4ff5a360d294c0a1",
+      "file": "sha3.json"
+    },
+    {
+      "name": "SHA3.Keccak",
+      "id": "3249076fd1c278be",
+      "file": "sha3-keccak.json"
+    },
+    {
+      "name": "SHA3.Wipe",
+      "id": "09fe965440d7ed89",
+      "file": "sha3-wipe.json"
+    }
+  ]
+}

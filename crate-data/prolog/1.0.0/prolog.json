@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"prolog","version":"1.0.0","id":"3592c3b3facfd1a3","name":"Prolog","qualified_name":"Prolog","kind":"ada_package","location":{"file":"source/prolog.ads","line":2,"column":9},"code":"package Prolog","documentation":{"description":"Parent of all the prolog packages"}}

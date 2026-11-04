@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "crate": "hungarian",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:51:02Z",
+  "description": "Ada wrapper for the fast Stachniss' Hungarian solver",
+  "authors": [
+    "alejandro@mosteo.com"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/mosteo/hungarian",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Hungarian_Solver",
+      "id": "3b178ac66a9975fa",
+      "file": "hungarian_solver.json"
+    },
+    {
+      "name": "Hungarian_Solver.Solver",
+      "id": "60cf68e07409da23",
+      "file": "hungarian_solver-solver.json"
+    }
+  ]
+}

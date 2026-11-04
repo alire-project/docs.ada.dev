@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "crate": "lace_shared",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:52:59Z",
+  "description": "Default settings for GPR files in the Lace project.",
+  "authors": [
+    "Rod Kay"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/charlie5/lace-alire",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": []
+}

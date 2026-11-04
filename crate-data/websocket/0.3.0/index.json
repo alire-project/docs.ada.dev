@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "websocket",
+  "version": "0.3.0",
+  "documented_at": "2026-10-15T02:17:15Z",
+  "description": "RFC 6455 WebSocket client: framing and handshake",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "websocket",
+    "networking"
+  ],
+  "website": "https://github.com/kokhlo/websocket-ada",
+  "repository": {
+    "url": "https://github.com/kokhlo/websocket-ada",
+    "host": "github",
+    "commit": "765d9cd612838eb00645037977c8cc9af7171c3e"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Websocket",
+      "id": "7ce54cbababdd648",
+      "file": "websocket.json"
+    },
+    {
+      "name": "Websocket.Base64",
+      "id": "f55edf214f96fa20",
+      "file": "websocket-base64.json"
+    },
+    {
+      "name": "Websocket.Frames",
+      "id": "77fed2055c741bc8",
+      "file": "websocket-frames.json"
+    },
+    {
+      "name": "Websocket.Handshake",
+      "id": "d768a0cb61440651",
+      "file": "websocket-handshake.json"
+    },
+    {
+      "name": "Websocket.Utf8",
+      "id": "bbe8fded3fb57db2",
+      "file": "websocket-utf8.json"
+    }
+  ]
+}

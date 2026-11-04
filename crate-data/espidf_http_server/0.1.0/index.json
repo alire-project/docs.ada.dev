@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_http_server",
+  "version": "0.1.0",
+  "documented_at": "2026-10-01T02:31:50Z",
+  "description": "Ada/ESP-IDF: HTTP Server bindings",
+  "long_description": "Ada bindings for the ESP-IDF HTTP Server component (`esp_http_server`).\n\nCovers:\n- starting and stopping the server;\n- registration of URI and error handlers;\n- reading request body and URL query parameters;\n- sending responses: status, headers, content type, complete and chunked bodies, errors.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "http-server"
+  ],
+  "website": "https://github.com/godunko/espidf_http_server",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_http_server",
+    "host": "github",
+    "commit": "7b94e6a89b40fb9ee418ada042fcfb2a2fa90a2f"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_buffers",
+      "version": "^0.1.0"
+    },
+    {
+      "crate": "espidf",
+      "version": "^0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.HTTP_Server",
+      "id": "db96f2985acc8d2b",
+      "file": "espidf-http_server.json"
+    }
+  ]
+}

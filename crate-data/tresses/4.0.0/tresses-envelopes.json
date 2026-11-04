@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"tresses","version":"4.0.0","id":"0c758ce59d12583e","name":"Tresses.Envelopes","qualified_name":"Tresses.Envelopes","kind":"ada_package","location":{"file":"src/tresses-envelopes.ads","line":1,"column":9},"code":"package Tresses.Envelopes"}

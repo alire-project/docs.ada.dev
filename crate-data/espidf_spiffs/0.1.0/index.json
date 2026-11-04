@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_spiffs",
+  "version": "0.1.0",
+  "documented_at": "2026-10-01T02:31:46Z",
+  "description": "Ada/ESP-IDF: SPIFFS filesystem bindings",
+  "long_description": "Ada bindings for the ESP-IDF SPIFFS (SPI Flash File System) component (`spiffs`).\n\nCovers registration of a SPIFFS partition in the ESP-IDF VFS (`esp_vfs_spiffs_register`),\nafter which its files are accessed through the VFS.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "spiffs"
+  ],
+  "website": "https://github.com/godunko/espidf_spiffs",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_spiffs",
+    "host": "github",
+    "commit": "1ed8d4d0aa428eddeedf20b75b7d9d9b3f507a73"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf",
+      "version": "^0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.SPIFFS",
+      "id": "8b9120c1d5565ef8",
+      "file": "espidf-spiffs.json"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "admpfr",
+  "version": "4.1.0+20220920",
+  "documented_at": "2026-03-03T17:49:44Z",
+  "description": "Ada bindings for MPFR",
+  "authors": [
+    "Laurent Thévenoux"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "mpfr",
+    "floating-point",
+    "bindings"
+  ],
+  "website": "https://github.com/thvnx/admpfr",
+  "repository": {
+    "url": "https://github.com/thvnx/admpfr",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "libmpfr",
+      "version": "^4.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Admpfr",
+      "id": "8406240dfe54772c",
+      "file": "admpfr.json"
+    }
+  ]
+}

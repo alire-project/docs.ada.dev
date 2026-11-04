@@ -1,0 +1,107 @@
+{
+  "schema_version": "1",
+  "crate": "mold_lib",
+  "version": "2.3.1",
+  "documented_at": "2026-03-05T02:57:53Z",
+  "description": "Meta-variable Operations for Lean Development (lib)",
+  "long_description": "[![Alire](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/mold_lib.json)](https://alire.ada.dev/crates/mold_lib.html)\n[![Alire CI/CD](https://img.shields.io/endpoint?url=https://alire-crate-ci.ada.dev/badges/mold_lib.json)](https://alire-crate-ci.ada.dev/crates/mold_lib.html)\n![unit-test](https://github.com/rocher/mold_lib/actions/workflows/unit-test.yml/badge.svg)\n[![codecov](https://codecov.io/gh/rocher/mold_lib/graph/badge.svg?token=LB83SI4I0Y)](https://codecov.io/gh/rocher/mold_lib)\n[![GitHub release](https://img.shields.io/github/release/rocher/mold_lib.svg)](https://github.com/rocher/mold_lib/releases/latest)\n[![License](https://img.shields.io/github/license/rocher/mold_lib.svg?color=blue)](https://github.com/rocher/mold_lib/blob/master/LICENSE)\n\n## Welcome to **Mold (lib)**\n\n> **MOLD**: *Meta-variable Operations for Lean Development*\n\nMold is a Template Processor, or Template Engine, to work with repository\ntemplates. The main motivation of Mold is to have repositories in GitHub used\nas template repositories to create new, customized repositories for other\nusers.\n\nMain features supported in Mold include\n\n  * variable replacement in mold files (*.mold)\n\n  * for a given directory, variable replacement recursively for all mold files\n    in all subdirectories\n\n  * variable replacement in file names\n\n  * inclusion of other templates\n\n  * definition of variables with a simple TOML file\n\n  * predefined and custom text filters to easy text transformations\n\n  * predefined variables to use in templates\n\n  * support for optional and mandatory variables\n\n  * support for custom filters and variables\n\nVariable replacement can be specified as *normal*, *optional* or *mandatory*.\nFor example, the variable `foo = \"bar\"` can be specified with `{{foo}}`,\n`{{?foo}}` (optional) or `{{#foo}}` (mandatory). The difference is the handling\nof errors when an undefined variable is encountered.\n\nAll mold files must end with the extension `.mold`, for example\n`README.md.mold`. Destination files (with variables replaced) have the same\nname without the mold extension: `README.md`. This simplifies the work done in\nlarge subdirectories with few templates.\n\nThis crate contains the Ada library and unit tests. For a CLI tool, please\ntake a look at the crate `mold`.\n\n## Reference Guide\n\nPlease visit [Mold documentation](https://rocher.github.io/mold) for more\ninformation.\n\n---\n## License\nMIT (c) 2023-2025 Francesc Rocher\n",
+  "authors": [
+    "Francesc Rocher"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "template",
+    "template-engine",
+    "template-repo"
+  ],
+  "website": "https://rocher.github.io/mold",
+  "repository": {
+    "url": "https://github.com/rocher/mold_lib",
+    "host": "github",
+    "commit": "4102d93fefbb39e6b454be79bb35a61835d46a99"
+  },
+  "dependencies": [
+    {
+      "crate": "ada_toml",
+      "version": "~0.3.0"
+    },
+    {
+      "crate": "simple_logging",
+      "version": "^1.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Log_Exceptions",
+      "id": "32b7b296ce20f64e",
+      "file": "log_exceptions.json"
+    },
+    {
+      "name": "Log_Wrapper",
+      "id": "b250c64fe13e176e",
+      "file": "log_wrapper.json"
+    },
+    {
+      "name": "Mold_Lib",
+      "id": "715e6bdb66aad993",
+      "file": "mold_lib.json"
+    },
+    {
+      "name": "Mold_Lib.Impl",
+      "id": "e84c427ef20f22b8",
+      "file": "mold_lib-impl.json"
+    },
+    {
+      "name": "Mold_Lib.Impl.Directory",
+      "id": "3dd4f4b857f6c0c7",
+      "file": "mold_lib-impl-directory.json"
+    },
+    {
+      "name": "Mold_Lib.Impl.File",
+      "id": "1fb6723c270c17c3",
+      "file": "mold_lib-impl-file.json"
+    },
+    {
+      "name": "Mold_Lib.Impl.Text",
+      "id": "c549211aa517b630",
+      "file": "mold_lib-impl-text.json"
+    },
+    {
+      "name": "Mold_Lib.Impl.Validation",
+      "id": "e4d3398c8497d395",
+      "file": "mold_lib-impl-validation.json"
+    },
+    {
+      "name": "Mold_Lib.Impl.Variables",
+      "id": "71c3573e5642d19c",
+      "file": "mold_lib-impl-variables.json"
+    },
+    {
+      "name": "Mold_Lib_Config",
+      "id": "01456fef5e01e44e",
+      "file": "mold_lib_config.json"
+    },
+    {
+      "name": "Text_Filters",
+      "id": "76cd42d2ace041c5",
+      "file": "text_filters.json"
+    },
+    {
+      "name": "Text_Filters_Custom",
+      "id": "6207b73c70293b54",
+      "file": "text_filters_custom.json"
+    },
+    {
+      "name": "Text_Filters_Data",
+      "id": "e8b6a81491b89ee4",
+      "file": "text_filters_data.json"
+    },
+    {
+      "name": "Text_Filters_Predefined",
+      "id": "77d7e29062e57c7b",
+      "file": "text_filters_predefined.json"
+    }
+  ]
+}

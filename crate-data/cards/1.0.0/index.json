@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "cards",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:54:16Z",
+  "description": "52-card deck playing card library",
+  "authors": [
+    "AJ Ianozi"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "playing-cards",
+    "deck",
+    "game"
+  ],
+  "website": "https://github.com/AJ-Ianozi/Cards",
+  "repository": {
+    "url": "https://github.com/AJ-Ianozi/Cards",
+    "host": "github",
+    "commit": "505f325f14618963a50353cb576695897929e1a8"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Cards",
+      "id": "6ac9a32c0ca8e84e",
+      "file": "cards.json"
+    },
+    {
+      "name": "Cards_Config",
+      "id": "aabdd228daa459bb",
+      "file": "cards_config.json"
+    }
+  ]
+}

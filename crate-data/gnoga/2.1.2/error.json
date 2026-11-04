@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gnoga",
+  "version": "2.1.2",
+  "failed_at": "2026-03-04T13:38:22Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

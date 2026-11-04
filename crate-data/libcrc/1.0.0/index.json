@@ -1,0 +1,78 @@
+{
+  "schema_version": "1",
+  "crate": "libcrc",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:53:36Z",
+  "description": "Cyclic Redundancy Check (CRC) Library",
+  "authors": [
+    "Daniel King"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "crc",
+    "crc32",
+    "spark",
+    "error-checking"
+  ],
+  "website": "https://github.com/damaki/libcrc",
+  "repository": {
+    "url": "https://github.com/damaki/libcrc",
+    "host": "github",
+    "commit": "bb1d5fd0b7fa209348ecf574f2d00ea333c33e79"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "LibCRC",
+      "id": "6f5865894bdc977e",
+      "file": "libcrc.json"
+    },
+    {
+      "name": "LibCRC.Generic_Nbit_CRCs",
+      "id": "b96a6b67c2d1ad1e",
+      "file": "libcrc-generic_nbit_crcs.json"
+    },
+    {
+      "name": "LibCRC.Generic_Nbit_CRCs.Bitwise",
+      "id": "998173780ca80422",
+      "file": "libcrc-generic_nbit_crcs-bitwise.json"
+    },
+    {
+      "name": "LibCRC.Generic_Nbit_CRCs.Table_Based",
+      "id": "c663be16a35654fa",
+      "file": "libcrc-generic_nbit_crcs-table_based.json"
+    },
+    {
+      "name": "LibCRC.Predefined",
+      "id": "a407a57f581a287c",
+      "file": "libcrc-predefined.json"
+    },
+    {
+      "name": "LibCRC.Predefined.Bitwise",
+      "id": "3b5c355749dc69c9",
+      "file": "libcrc-predefined-bitwise.json"
+    },
+    {
+      "name": "LibCRC.Predefined.RAM_Tables",
+      "id": "2bc83ad452288f05",
+      "file": "libcrc-predefined-ram_tables.json"
+    },
+    {
+      "name": "LibCRC.Predefined_Constant_Tables",
+      "id": "e69885acc5821dcb",
+      "file": "libcrc-predefined_constant_tables.json"
+    },
+    {
+      "name": "LibCRC.Predefined_Elaborated_Tables",
+      "id": "9b076dd7862a8a42",
+      "file": "libcrc-predefined_elaborated_tables.json"
+    },
+    {
+      "name": "Libcrc_Config",
+      "id": "b868e10980644725",
+      "file": "libcrc_config.json"
+    }
+  ]
+}

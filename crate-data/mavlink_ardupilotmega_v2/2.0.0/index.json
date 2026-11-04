@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "mavlink_ardupilotmega_v2",
+  "version": "2.0.0",
+  "documented_at": "2026-10-29T02:21:36Z",
+  "description": "MAVLink, ardupilotmega dialect",
+  "long_description": "# MAVLink -- ArduPilotMega Dialect (Ada Bindings)\n\nThis crate provides an Ada binding for the [MAVLink](https://mavlink.io)\n**`ardupilotmega`** dialect.\n\nThe code is **generated**, not hand-written. It comes straight from the\nofficial [MAVLink XML message definitions](https://github.com/mavlink/mavlink)\nvia [pymavlink](https://github.com/ArduPilot/pymavlink)'s `mavgen` tool\nwith its Ada backend, then lightly post-processed. This keeps the\nbinding faithful to the upstream specification and makes it\nstraightforward to refresh whenever `ardupilotmega.xml` changes.\n\n## What you get\n\n- Strongly typed Ada records for every `ardupilotmega` message, with fields,\n  arrays, enums and bitmasks represented as proper Ada types instead of\n  raw bytes.\n- Marshalling/unmarshalling subprograms for each message, plus the\n  frame header and CRC handling needed to talk MAVLink on the wire.\n- `pragma Pure`, bareboard-friendly packages, suitable for embedded\n  targets (e.g. STM32) as well as desktop ground control software.\n\n## Wire protocol version\n\nThis crate targets the **MAVLink 2.0** wire protocol. If you need the\nMAVLink 1.0 wire format (extended message IDs, message signing,\nextension fields), use the sibling crate\n[`mavlink_ardupilotmega`](https://alire.ada.dev/crates/mavlink_ardupilotmega)\ninstead -- it exposes the same dialect messages, packed\ndifferently on the wire.\n\n## Related crates\n\n- [`mavlink_shared`](https://alire.ada.dev/crates/mavlink_shared) --\n  code shared by all the generated dialect crates (CRC, low-level\n  float/byte helpers, etc.). Pulled in automatically as a dependency;\n  you normally don't need to depend on it directly.\n- [`mavlink_common`](https://alire.ada.dev/crates/mavlink_common) --\n  the shared `common` dialect with common messages.\n- [`mavlink_ardupilotmega`](https://alire.ada.dev/crates/mavlink_ardupilotmega) --\n  same dialect, MAVLink 1.0 wire protocol.\n",
+  "authors": [
+    "Fil Andrii",
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "embedded",
+    "network",
+    "drone"
+  ],
+  "website": "https://github.com/reznikmm/mavlink_ardupilotmega",
+  "repository": {
+    "url": "https://github.com/reznikmm/mavlink_ardupilotmega",
+    "host": "github",
+    "commit": "41576474358a619392885b6ecf2afcf1b9bc5478"
+  },
+  "dependencies": [
+    {
+      "crate": "mavlink_common_v2",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": []
+}

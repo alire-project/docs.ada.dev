@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"26cd41d2002afb49","name":"Agpl.Containers","qualified_name":"Agpl.Containers","kind":"ada_package","location":{"file":"src/agpl-containers.ads","line":3,"column":9},"code":"package Agpl.Containers","documentation":{"description":"Down here lie containers instantiated for readily use."}}

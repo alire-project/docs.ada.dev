@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "esp_idf",
+  "version": "5.0.2-1",
+  "failed_at": "2026-03-04T02:59:44Z",
+  "stage": "index",
+  "message": "make_index.py exited with code 1"
+}

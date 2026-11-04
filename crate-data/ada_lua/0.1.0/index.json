@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "crate": "ada_lua",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:48:39Z",
+  "description": "An Ada binding for lua",
+  "authors": [
+    "Nicolas Roche <roche@adacore.com>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "lua",
+    "binding",
+    "script"
+  ],
+  "website": "https://github.com/adacore/ada-lua",
+  "repository": {
+    "url": "https://github.com/AdaCore/ada-lua",
+    "host": "github",
+    "commit": "0aa4afc28577adf5106d6bd13bed6a086b6e9a8c"
+  },
+  "dependencies": [
+    {
+      "crate": "liblua",
+      "version": "~5.3"
+    }
+  ],
+  "units": [
+    {
+      "name": "Lua",
+      "id": "dc436b329f4da6c8",
+      "file": "lua.json"
+    },
+    {
+      "name": "Lua.Ada_Limited_Types",
+      "id": "09801db8878c3dc7",
+      "file": "lua-ada_limited_types.json"
+    },
+    {
+      "name": "Lua.Ada_Types",
+      "id": "d5f895dcf14da7bf",
+      "file": "lua-ada_types.json"
+    },
+    {
+      "name": "Lua.Utils",
+      "id": "9606ef0eeed5ad5e",
+      "file": "lua-utils.json"
+    }
+  ]
+}

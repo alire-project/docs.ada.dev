@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "crate": "mqttlib",
+  "version": "0.2.0",
+  "documented_at": "2026-03-05T02:58:05Z",
+  "description": "Ada binding to the mosquitto library for MQTT",
+  "authors": [
+    "R Srinivasan"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "mqtt",
+    "mosquitto"
+  ],
+  "repository": {
+    "url": "https://gitlab.com/ada23/bindings",
+    "host": "gitlab",
+    "commit": "4ab156ee358b739ff13dd4472db4864d08d9c116",
+    "subdir": "mqttlib/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "mosquitto",
+      "id": "7d1f5fe325866b74",
+      "file": "mosquitto.json"
+    },
+    {
+      "name": "mqtt",
+      "id": "046adb88a188465c",
+      "file": "mqtt.json"
+    },
+    {
+      "name": "mqtt.Publisher",
+      "id": "fb7d560991ebf83c",
+      "file": "mqtt-publisher.json"
+    },
+    {
+      "name": "mqtt.subscriber",
+      "id": "298c05269026459f",
+      "file": "mqtt-subscriber.json"
+    },
+    {
+      "name": "Mqttlib",
+      "id": "13a366ee6781a036",
+      "file": "mqttlib.json"
+    },
+    {
+      "name": "Mqttlib_Config",
+      "id": "696a7457e9e00095",
+      "file": "mqttlib_config.json"
+    },
+    {
+      "name": "revisions",
+      "id": "437f95fdeef12f7d",
+      "file": "revisions.json"
+    }
+  ]
+}

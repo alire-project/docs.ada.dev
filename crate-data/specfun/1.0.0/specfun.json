@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"specfun","version":"1.0.0","id":"6931b7f0656fe6e6","name":"Specfun","qualified_name":"Specfun","kind":"ada_package","location":{"file":"src/specfun.ads","line":1,"column":9},"code":"package Specfun"}

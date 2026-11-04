@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_tinyusb_msc",
+  "version": "0.1.0",
+  "documented_at": "2026-10-09T02:25:20Z",
+  "description": "Ada/ESP-IDF: TinyUSB Mass Storage Class bindings",
+  "long_description": "Ada bindings for the Mass Storage Class (MSC) part of Espressif's TinyUSB integration\n(`espressif/esp_tinyusb`).\n\nCovers creation of an MSC storage backed by a wear-levelled internal flash partition,\nand switching of its mount point between the application (VFS) and the USB host.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "tinyusb"
+  ],
+  "website": "https://github.com/godunko/espidf_tinyusb_msc",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_tinyusb_msc",
+    "host": "github",
+    "commit": "2b3f82e97f2b44063d4653593c4d7bc5d00985f8"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf_tinyusb",
+      "version": "^0.1.0"
+    },
+    {
+      "crate": "espidf_wear_levelling",
+      "version": "^0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.TinyUSB.MSC",
+      "id": "128550ebc258d1fe",
+      "file": "espidf-tinyusb-msc.json"
+    }
+  ]
+}

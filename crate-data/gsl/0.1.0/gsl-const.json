@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"gsl","version":"0.1.0","id":"286841b85e4d3b37","name":"gsl.const","qualified_name":"gsl.const","kind":"ada_package","location":{"file":"src/gsl-const.ads","line":5,"column":9},"code":"package gsl.const"}

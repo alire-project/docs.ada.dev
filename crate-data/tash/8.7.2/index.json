@@ -1,0 +1,187 @@
+{
+  "schema_version": "1",
+  "crate": "tash",
+  "version": "8.7.2",
+  "documented_at": "2026-03-06T02:59:49Z",
+  "description": "Binding to Tcl/Tk",
+  "long_description": "Tash (previously known as Tcl Ada Shell) is an Ada binding to Tcl/Tk.\n\nIts purpose is to\n\n* allow a Tcl program to use Ada in place of C to implement Tcl\n  commands where additional execution speed, more complex data\n  structures, or better name space management is needed, and\n\n* support the rapid development of Platform-Independent Graphical User\n  Interfaces via Tk.\n\nPlease note that, on macOS, tash assumes that Tcl/Tk is provided via\n[Homebrew](https://brew.sh).\n",
+  "authors": [
+    "Simon Wright"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later WITH GCC-exception-2.0"
+  ],
+  "tags": [
+    "scripting",
+    "tcl",
+    "tk"
+  ],
+  "website": "https://github.com/simonjwright/tcladashell",
+  "repository": {
+    "url": "https://github.com/simonjwright/tcladashell",
+    "host": "github",
+    "commit": "4c588c12752a81819b9e0cf186ffb765d86637c0"
+  },
+  "dependencies": [
+    {
+      "crate": "libtcl",
+      "version": "~8.6.0"
+    },
+    {
+      "crate": "libtk",
+      "version": "~8.6.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "CArgv",
+      "id": "8ccc2c0a659e037e",
+      "file": "cargv.json"
+    },
+    {
+      "name": "CHelper",
+      "id": "c4b58d1a3bba4cab",
+      "file": "chelper.json"
+    },
+    {
+      "name": "Tcl",
+      "id": "9daf09c8ca7a8982",
+      "file": "tcl.json"
+    },
+    {
+      "name": "Tcl.Ada",
+      "id": "bdf04b106e83e4eb",
+      "file": "tcl-ada.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_AssocData",
+      "id": "eaa2e354aa22231d",
+      "file": "tcl-ada-generic_assocdata.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_AsyncEvents",
+      "id": "cc036cc68c49573f",
+      "file": "tcl-ada-generic_asyncevents.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_CallWhenDeleted",
+      "id": "84afae42c02ff8c8",
+      "file": "tcl-ada-generic_callwhendeleted.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_Channel",
+      "id": "d2d69778697de652",
+      "file": "tcl-ada-generic_channel.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_ChannelDriver",
+      "id": "efe10a9a9712ca4a",
+      "file": "tcl-ada-generic_channeldriver.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_ChannelHandler",
+      "id": "e588901d645695cb",
+      "file": "tcl-ada-generic_channelhandler.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_CloseHandler",
+      "id": "0396be4df5d82623",
+      "file": "tcl-ada-generic_closehandler.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_Command",
+      "id": "55f37a61d3c33caf",
+      "file": "tcl-ada-generic_command.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_EventQueueAndNotifier",
+      "id": "4b743a56dd9eaf76",
+      "file": "tcl-ada-generic_eventqueueandnotifier.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_ExitHandler",
+      "id": "44169e4a20cf3c48",
+      "file": "tcl-ada-generic_exithandler.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_FileHandler",
+      "id": "5b9304c7f1253aaa",
+      "file": "tcl-ada-generic_filehandler.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_GetOpenFile",
+      "id": "7c0da0c8990822ad",
+      "file": "tcl-ada-generic_getopenfile.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_Hash",
+      "id": "f648e01706d4c340",
+      "file": "tcl-ada-generic_hash.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_Idle",
+      "id": "4e4f3788336e4a3f",
+      "file": "tcl-ada-generic_idle.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_ManageStorage",
+      "id": "f0385db2082b76be",
+      "file": "tcl-ada-generic_managestorage.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_MathFunc",
+      "id": "760b75ccf3d96e08",
+      "file": "tcl-ada-generic_mathfunc.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_ObjCommand",
+      "id": "ff6d62601c3289d4",
+      "file": "tcl-ada-generic_objcommand.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_PkgRequire",
+      "id": "337548e0bdc64bbf",
+      "file": "tcl-ada-generic_pkgrequire.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_StackChannel",
+      "id": "eb56a5ab8fd7c0b0",
+      "file": "tcl-ada-generic_stackchannel.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_TcpChannel",
+      "id": "7482a5ab68ae67ee",
+      "file": "tcl-ada-generic_tcpchannel.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_TimerHandler",
+      "id": "56d3af5a9dc692ce",
+      "file": "tcl-ada-generic_timerhandler.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_Trace",
+      "id": "9dd73bfc1f5c3f7e",
+      "file": "tcl-ada-generic_trace.json"
+    },
+    {
+      "name": "Tcl.Ada.Generic_TraceVar",
+      "id": "0fd96e0671fbd64c",
+      "file": "tcl-ada-generic_tracevar.json"
+    },
+    {
+      "name": "Tcl.Async",
+      "id": "1a0f369ae43cba61",
+      "file": "tcl-async.json"
+    },
+    {
+      "name": "Tcl.Tk",
+      "id": "92e6c4ade75c63e2",
+      "file": "tcl-tk.json"
+    },
+    {
+      "name": "Tcl.Tk.Ada",
+      "id": "c733201bc66bcffd",
+      "file": "tcl-tk-ada.json"
+    }
+  ]
+}

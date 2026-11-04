@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "musicplayer",
+  "version": "20210719.0.0",
+  "failed_at": "2026-03-05T02:58:56Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

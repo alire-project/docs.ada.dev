@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_base",
+  "version": "0.6.0",
+  "documented_at": "2026-10-29T02:21:02Z",
+  "description": "Fundamental types, GCC built-ins, and base packages for Ada projects",
+  "long_description": "The `a0b_base` crate provides the root package hierarchy and foundational components tailored for low-level, embedded, and bare-metal Ada applications.\n\nKey features include:\n- Foundational Numeric Types (`A0B.Types`):\n  - Fixed-size `Integer_*` and `Unsigned_*` types (1 to 64 bits).\n  - Bitwise shift and rotate operations for 8, 16, 32, and 64-bit unsigned types.\n- Array & Enumerable Utilities:\n  - `Unsigned_*_Array` types in `A0B.Types.Arrays`.\n  - Non-arithmetic modular index types (2 to 8 bits) for case statements and indexing in `A0B.Types.Enumerable`.\n- Low-Level & Protocol Utilities:\n  - Big-endian integer and unsigned types (`A0B.Types.Big_Endian`, sizes 16 to 64-bit) for wire-format protocols.\n  - SVD2Ada support types and definitions in `A0B.Types.SVD`.\n- Memory & Storage Abstractions (`A0B.Storage`):\n  - Foundational memory views, explicit alignment management, and address/storage offset definitions for bare-metal drivers.\n- Compiler & Target Optimization:\n  - Direct bindings to GCC intrinsics (`bswap`, `clz`, `ffs`, etc.) in `A0B.Types.GCC_Builtins`.\n- Build & Runtime Configuration:\n  - Exposes the `a0b_base.tasking` build variable to seamlessly propagate Ada tasking mode capabilities (`none`, `ada`, `a0b`) across dependent crates.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "types",
+    "builtins"
+  ],
+  "website": "https://github.com/godunko/a0b-base",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-base",
+    "host": "github",
+    "commit": "adaae5a530283e7080aa5cf42eeb66876ee1deea"
+  },
+  "dependencies": [],
+  "units": []
+}

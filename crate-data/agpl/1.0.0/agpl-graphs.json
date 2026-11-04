@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"64f826fceefe3643","name":"Agpl.Graphs","qualified_name":"Agpl.Graphs","kind":"ada_package","location":{"file":"src/agpl-graphs.ads","line":1,"column":9},"code":"package Agpl.Graphs"}

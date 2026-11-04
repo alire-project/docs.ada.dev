@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c01_blink",
+  "version": "1.3.1",
+  "documented_at": "2026-04-15T03:03:02Z",
+  "description": "Chapter 1: Blinking LEDs",
+  "long_description": "Getting Started with Ada on the Raspberry Pi Pico\nThis create implement the samples of Chapter 1 of the\n[Freenove Kit for Raspberry Pi Pico C Tutorial](https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/C.html)\n\nContained in Chapter 01 are:\n\n1. blink - Jeremy Grosser Ada sample \n2. - Chapter 1.1 Blink internal LED\n3. - Chapter 1.2 Blink external LED\n\nRead the full tutorial at [Chapter 1: Blinking LEDs - Getting Started with Ada\non the Raspberry Pi\nPico](https://pi-ada-tutorial.sourceforge.io/pico_ada_c01_blink)\n\n> Starting simple with LED blinking in Ada - internal LED, external LED with\n> proper renaming, and a look at why Ravenscar looks so clean (even if it's not\n> quite ready for everyday use yet).\n\nGNATdoc documentation:\nhttps://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c01_blink/\n\nSourceForge repository:\nhttps://sourceforge.net/projects/pi-ada-tutorial/\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c01_blink",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C01_Blink_Config",
+      "id": "adcecc1efb843ccc",
+      "file": "pico_ada_c01_blink_config.json"
+    }
+  ]
+}

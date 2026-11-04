@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "crate": "lace_xml",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:53:02Z",
+  "description": "Provides simple XML read/write support.",
+  "authors": [
+    "Rod Kay"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/charlie5/lace-alire",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "lace_shared",
+      "version": "~0.1"
+    },
+    {
+      "crate": "libexpat",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

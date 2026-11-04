@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "emojis",
+  "version": "1.0.1",
+  "documented_at": "2026-03-04T02:59:19Z",
+  "description": "A library to replace names between colons with emojis",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "emoji",
+    "string",
+    "text",
+    "unicode"
+  ],
+  "website": "https://github.com/onox/emojis",
+  "repository": {
+    "url": "https://github.com/onox/emojis",
+    "host": "github",
+    "commit": "915d688c0b28bc0850047a373336a15dacd19bef"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Emojis",
+      "id": "3badc5f5025e3296",
+      "file": "emojis.json"
+    },
+    {
+      "name": "Strings",
+      "id": "e967d16dae74a49b",
+      "file": "strings.json"
+    }
+  ]
+}

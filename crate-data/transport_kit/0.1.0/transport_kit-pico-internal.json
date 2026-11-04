@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"transport_kit","version":"0.1.0","id":"4d97155d923242d4","name":"Transport_Kit.Pico.Internal","qualified_name":"Transport_Kit.Pico.Internal","kind":"ada_package","location":{"file":"src/pico/internal/transport_kit-pico-internal.ads","line":1,"column":9},"code":"package Transport_Kit.Pico.Internal"}

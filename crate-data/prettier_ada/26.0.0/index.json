@@ -1,0 +1,68 @@
+{
+  "schema_version": "1",
+  "crate": "prettier_ada",
+  "version": "26.0.0",
+  "documented_at": "2026-03-05T03:02:06Z",
+  "description": "Port of the Prettier formatter to Ada",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "format",
+    "formatter"
+  ],
+  "repository": {
+    "url": "https://github.com/AdaCore/prettier-ada",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatcoll",
+      "version": "^26"
+    },
+    {
+      "crate": "vss_text",
+      "version": "^26"
+    }
+  ],
+  "units": [
+    {
+      "name": "Prettier_Ada",
+      "id": "e3d4ed767dac9b5b",
+      "file": "prettier_ada.json"
+    },
+    {
+      "name": "Prettier_Ada.Documents",
+      "id": "3b1ca3650fd14c21",
+      "file": "prettier_ada-documents.json"
+    },
+    {
+      "name": "Prettier_Ada.Documents.Builders",
+      "id": "7d54ae904fe78912",
+      "file": "prettier_ada-documents-builders.json"
+    },
+    {
+      "name": "Prettier_Ada.Documents.Json",
+      "id": "2dcb1fa690211ff9",
+      "file": "prettier_ada-documents-json.json"
+    },
+    {
+      "name": "Prettier_Ada.Generic_Formatters",
+      "id": "d33e14447ef886c2",
+      "file": "prettier_ada-generic_formatters.json"
+    },
+    {
+      "name": "Prettier_Ada.Optionals",
+      "id": "5a51aa0eb6c184e3",
+      "file": "prettier_ada-optionals.json"
+    },
+    {
+      "name": "Prettier_Ada.Optionals.Generic_Optional_Types",
+      "id": "6c6ef0b9a6b8fb42",
+      "file": "prettier_ada-optionals-generic_optional_types.json"
+    }
+  ]
+}

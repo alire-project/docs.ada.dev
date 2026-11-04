@@ -1,0 +1,138 @@
+{
+  "schema_version": "1",
+  "crate": "aflex",
+  "version": "1.7.0",
+  "documented_at": "2026-03-03T17:50:08Z",
+  "description": "An Ada Lexical Analyzer Generator",
+  "long_description": "Aflex is a lexical analyzer generating tool similar to the Unix tool lex.\n\nThe first implementation was written by John Self of the Arcadia project\nat the University of California, Irvine.  The last version that was released\nappeared to be the aflex 1.4a released in 1994.\n\nAflex was used and improved by P2Ada, the Pascal to Ada translator.\nThis version of Aflex is derived from the P2Ada aflex implementation\nreleased in August 2010.\n\nThis version brings a number of improvements:\n\n- Aflex generates the spec and body files as separate files so that\n  there is no need to use gnatchop to split the DFA and IO files.\n- Aflex uses the lex file name to generate the package name and\n  it supports child package with the `%unit` directive.\n- Aflex supports reentrant scanner through the use of `%option reentrant`,\n  `%yyvar` and `%yydecl` directives.\n\n",
+  "authors": [
+    "John Self"
+  ],
+  "licenses": [
+    "Unlicense"
+  ],
+  "tags": [
+    "parser",
+    "generator",
+    "grammar"
+  ],
+  "website": "https://github.com/Ada-France/aflex",
+  "repository": {
+    "url": "https://github.com/Ada-France/aflex",
+    "host": "github",
+    "commit": "77dbb4dadecc689de9e050652e8900ad40a47da5"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Aflex_Scanner",
+      "id": "0a3491fab6221b6b",
+      "file": "aflex_scanner.json"
+    },
+    {
+      "name": "ascan_DFA",
+      "id": "01406d0572771163",
+      "file": "ascan_dfa.json"
+    },
+    {
+      "name": "ascan_IO",
+      "id": "6570bf30f86476f6",
+      "file": "ascan_io.json"
+    },
+    {
+      "name": "Ccl",
+      "id": "8b9b3096bb7b92fa",
+      "file": "ccl.json"
+    },
+    {
+      "name": "Command_Line_Interface",
+      "id": "3439769a424e848a",
+      "file": "command_line_interface.json"
+    },
+    {
+      "name": "Dfa",
+      "id": "5dd336c3be7b217f",
+      "file": "dfa.json"
+    },
+    {
+      "name": "Ecs",
+      "id": "d940b56413af5848",
+      "file": "ecs.json"
+    },
+    {
+      "name": "External_File_Manager",
+      "id": "37e18cdc9ee50ab3",
+      "file": "external_file_manager.json"
+    },
+    {
+      "name": "Gen",
+      "id": "3b6a765ede676559",
+      "file": "gen.json"
+    },
+    {
+      "name": "Lex_Parser",
+      "id": "ae74e131d4b74548",
+      "file": "lex_parser.json"
+    },
+    {
+      "name": "Main_Body",
+      "id": "b5a9e28763c972e2",
+      "file": "main_body.json"
+    },
+    {
+      "name": "Misc",
+      "id": "9c32429c292637fd",
+      "file": "misc.json"
+    },
+    {
+      "name": "Misc_Defs",
+      "id": "cf572e23ffa7746a",
+      "file": "misc_defs.json"
+    },
+    {
+      "name": "Nfa",
+      "id": "2194d0f78b15f2bd",
+      "file": "nfa.json"
+    },
+    {
+      "name": "Parse_Tokens",
+      "id": "ff384640c4a31cf5",
+      "file": "parse_tokens.json"
+    },
+    {
+      "name": "scanner",
+      "id": "6105d8625ada3c9b",
+      "file": "scanner.json"
+    },
+    {
+      "name": "Skeleton_Manager",
+      "id": "0d4e24258f29b9e7",
+      "file": "skeleton_manager.json"
+    },
+    {
+      "name": "Sym",
+      "id": "0599b22abfb1eb4d",
+      "file": "sym.json"
+    },
+    {
+      "name": "Tblcmp",
+      "id": "ad1057dd4d3fce39",
+      "file": "tblcmp.json"
+    },
+    {
+      "name": "Template_Manager",
+      "id": "145eaaa98670e3c7",
+      "file": "template_manager.json"
+    },
+    {
+      "name": "Template_Manager.Templates",
+      "id": "1e33ec6b3b1b488f",
+      "file": "template_manager-templates.json"
+    },
+    {
+      "name": "Vstrings",
+      "id": "ed7bf57ab04e4a79",
+      "file": "vstrings.json"
+    }
+  ]
+}

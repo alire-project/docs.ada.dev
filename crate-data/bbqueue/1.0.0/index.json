@@ -1,0 +1,56 @@
+{
+  "schema_version": "1",
+  "crate": "bbqueue",
+  "version": "1.0.0",
+  "documented_at": "2026-03-03T17:52:43Z",
+  "description": "DMA friendly lock-free BipBuffer",
+  "long_description": "An Ada/SPARK proved implementation of James Munns'\nBBQueue (https://github.com/jamesmunns/bbqueue)",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "spark",
+    "nostd",
+    "embedded",
+    "lockfree",
+    "dma",
+    "bipbuffer"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/bbqueue-spark",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/bbqueue-spark",
+    "host": "github",
+    "commit": "f508818cae5c23e45864e19c618fe2b1dc7c6362"
+  },
+  "dependencies": [
+    {
+      "crate": "atomic",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBqueue",
+      "id": "b8e6299cd076c9a8",
+      "file": "bbqueue.json"
+    },
+    {
+      "name": "BBqueue.Buffers",
+      "id": "8a4ba7466db3bc72",
+      "file": "bbqueue-buffers.json"
+    },
+    {
+      "name": "BBqueue.Buffers.framed",
+      "id": "5a82decfef73f622",
+      "file": "bbqueue-buffers-framed.json"
+    },
+    {
+      "name": "Bbqueue_Config",
+      "id": "cd3587b48b0f4599",
+      "file": "bbqueue_config.json"
+    }
+  ]
+}

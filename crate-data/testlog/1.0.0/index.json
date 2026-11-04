@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "testlog",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T03:00:01Z",
+  "description": "Log test activity to support unit testing of Ada packages",
+  "authors": [
+    "Richard Conn"
+  ],
+  "licenses": [
+    "custom-CC-PDM-1.0"
+  ],
+  "tags": [
+    "unit",
+    "test",
+    "unit-test"
+  ],
+  "website": "https://chiselapp.com/user/dbane/repository/testlog",
+  "repository": {
+    "url": "https://chiselapp.com/user/dbane/repository/testlog/tarball/74096bcd3e/testlog-74096bcd3e.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Test_Log",
+      "id": "817a1d5a33978dbb",
+      "file": "test_log.json"
+    },
+    {
+      "name": "Testlog_Config",
+      "id": "6e9c770d5f1277e8",
+      "file": "testlog_config.json"
+    }
+  ]
+}

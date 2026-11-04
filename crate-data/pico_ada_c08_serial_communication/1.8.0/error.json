@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c08_serial_communication",
+  "version": "1.8.0",
+  "failed_at": "2026-06-23T03:03:16Z",
+  "stage": "build",
+  "message": "alr build exited with code 1"
+}

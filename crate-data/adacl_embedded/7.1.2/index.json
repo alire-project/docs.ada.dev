@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "adacl_embedded",
+  "version": "7.1.2",
+  "documented_at": "2026-06-23T03:02:10Z",
+  "description": "Ada Embedded Library",
+  "long_description": "## AdaCL Embedded - Lightweight Embedded Ada Library\n\nAdaCL-Embedded focuses on embedded and real-time programming on the Raspberry Pi and similar platforms.\n\nIt favours predictability, minimal runtime overhead, and static data structures. Object-oriented programming, unbounded\nstrings, and wide strings are avoided or kept to an absolute minimum.\n\n### Current Features\n\n* **AdaCL.Embedded.Trace** - Interrupt-safe, lightweight tracing facility using a ring buffer.\n* **AdaCL.Embedded.Text_IO** - Extended Ada.Text_IO.\n\n### Configuration Options\n\n* `Variant`\n  * `no_tasking`  - for the lightest runtimes (no protected objects). Also works well with interrupt-driven runtimes.\n  * `tasking`\t  - for runtimes with tasking support.\n* `Event_Log_Buffer_Length` - maximum length of each trace line (default: 200, min: 1, max: 1024)\n* `Event_Log_Buffer_Size`   - number of entries in the ring buffer (default: 0, max: 1024, min: 0 (buffer disabled))\n\nA text length of 200 is the standart minimum used in the Ada Standart (i.E. `Ada.Text_IO.Get_Line`, exception messages,\netc.pp).\n\nMemory needed is approximately `(Event_Log_Buffer_Length + 4) * Event_Log_Buffer_Size` bytes, plus some overhead for the\nbuffer management. For example: 1024 buffer size with 200 line lenght is about the maximum size that can be used with\nthe static memory of Raspberry Pi Pico. The buffer size can be set to 0 to disable the trace buffer and the related code\ncompletely.\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl-embedded/src/)\nDocumentation: [GNATdoc](https://adacl-embedded.sourceforge.net/gnatdoc/adael/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "embedded",
+    "trace",
+    "logging",
+    "raspberry-pi",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AdaCL",
+      "id": "f869bd590f55044c",
+      "file": "adacl.json"
+    },
+    {
+      "name": "AdaCL.Text_IO",
+      "id": "3d3ebfcecad49c2d",
+      "file": "adacl-text_io.json"
+    },
+    {
+      "name": "AdaCL.Trace",
+      "id": "1d35f888900f185f",
+      "file": "adacl-trace.json"
+    },
+    {
+      "name": "Adacl_Embedded_Config",
+      "id": "14caaf1224540fb7",
+      "file": "adacl_embedded_config.json"
+    }
+  ]
+}

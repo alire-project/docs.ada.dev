@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "crate": "simple_logging",
+  "version": "3.0.0",
+  "documented_at": "2026-03-06T02:58:05Z",
+  "description": "Simple logging to console",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "logging",
+    "utility"
+  ],
+  "website": "https://github.com/alire-project/simple_logging",
+  "repository": {
+    "url": "https://github.com/alire-project/simple_logging",
+    "host": "github",
+    "commit": "7bad200f8fc154f7d8eff191aa37306ba54ff853"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Simple_Logging",
+      "id": "74c445f50fbc1605",
+      "file": "simple_logging.json"
+    },
+    {
+      "name": "Simple_Logging.Artsy",
+      "id": "07e5f9207a462e36",
+      "file": "simple_logging-artsy.json"
+    },
+    {
+      "name": "Simple_Logging.C",
+      "id": "a572839213d76169",
+      "file": "simple_logging-c.json"
+    },
+    {
+      "name": "Simple_Logging.Decorators",
+      "id": "ef3c53c30a5442f8",
+      "file": "simple_logging-decorators.json"
+    },
+    {
+      "name": "Simple_Logging.Filtering",
+      "id": "df73f34634312461",
+      "file": "simple_logging-filtering.json"
+    },
+    {
+      "name": "Simple_Logging.Spinners",
+      "id": "30aabbc578b0cdc6",
+      "file": "simple_logging-spinners.json"
+    },
+    {
+      "name": "Simple_Logging.Support",
+      "id": "0e69956db3c55d8e",
+      "file": "simple_logging-support.json"
+    }
+  ]
+}
