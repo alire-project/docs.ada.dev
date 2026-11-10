@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"blinkenlights","version":"0.3.0","id":"2affb7b078dbcc3a","name":"web.xml","qualified_name":"web.xml","kind":"ada_package","location":{"file":"src/web-xml.ads","line":6,"column":9},"code":"package web.xml","documentation":{"description":"\nGet and optionally set the state of the auto_man flag"}}

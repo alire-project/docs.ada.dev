@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcov_bin",
+  "version": "26.2.1",
+  "failed_at": "2026-05-05T03:01:30Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1",
+  "crate": "microbit_bsp",
+  "version": "0.2.1",
+  "documented_at": "2026-03-05T02:57:25Z",
+  "description": "Board Support Package for the BBC micro:bit v1",
+  "long_description": "# microbit BSP\n\nBoard Support Package for the BBC micro:bit https://microbit.org/\n\nThis crate is a snapshot of [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/middleware).\n\nAny bug report, issue, contribution must be adressed to the [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/) repo.\n\n",
+  "authors": [],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "microbit",
+    "bbc",
+    "nrf51",
+    "bsp"
+  ],
+  "website": "https://github.com/AdaCore/Ada_Drivers_Library/",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/microbit_bsp",
+    "host": "github",
+    "commit": "6e957aa83afff9c164f1eb68f5fb5a59cc94ac45"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_components",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "hal",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "nrf5x_hal",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "MicroBit",
+      "id": "8741e2d5b2edb189",
+      "file": "microbit.json"
+    },
+    {
+      "name": "MicroBit.Accelerometer",
+      "id": "28f0123fe54d5951",
+      "file": "microbit-accelerometer.json"
+    },
+    {
+      "name": "MicroBit.Buttons",
+      "id": "39f1772eb44cdfce",
+      "file": "microbit-buttons.json"
+    },
+    {
+      "name": "MicroBit.Console",
+      "id": "a759a875238be064",
+      "file": "microbit-console.json"
+    },
+    {
+      "name": "MicroBit.Display",
+      "id": "29a3f1d1fb8ac8e5",
+      "file": "microbit-display.json"
+    },
+    {
+      "name": "MicroBit.Display.Symbols",
+      "id": "5c5deb48138f9173",
+      "file": "microbit-display-symbols.json"
+    },
+    {
+      "name": "MicroBit.I2C",
+      "id": "dc1f4caea067a145",
+      "file": "microbit-i2c.json"
+    },
+    {
+      "name": "MicroBit.IOs",
+      "id": "283c95a24de47c3f",
+      "file": "microbit-ios.json"
+    },
+    {
+      "name": "MicroBit.IOs.NeoPixel",
+      "id": "d47d3cebc6bb0160",
+      "file": "microbit-ios-neopixel.json"
+    },
+    {
+      "name": "MicroBit.Music",
+      "id": "cfd4af0cf71a9979",
+      "file": "microbit-music.json"
+    },
+    {
+      "name": "MicroBit.Servos",
+      "id": "3b27a307a6e39a76",
+      "file": "microbit-servos.json"
+    },
+    {
+      "name": "MicroBit.SPI",
+      "id": "faff3c31ca587345",
+      "file": "microbit-spi.json"
+    },
+    {
+      "name": "MicroBit.Time",
+      "id": "4b2f7bfeaa5001f0",
+      "file": "microbit-time.json"
+    },
+    {
+      "name": "Microbit_Bsp",
+      "id": "e326f5aa8db0d480",
+      "file": "microbit_bsp.json"
+    }
+  ]
+}

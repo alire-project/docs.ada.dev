@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "dir_iterators",
+  "version": "0.0.5",
+  "documented_at": "2026-03-04T02:56:33Z",
+  "description": "Ways of moving around directory trees",
+  "long_description": "[![Build Status](https://github.com/pyjarrett/dir_iterators/actions/workflows/build.yml/badge.svg)](https://github.com/pyjarrett/dir_iterators/actions)\n[![Alire](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/dir_iterators.json)](https://alire.ada.dev/crates/dir_iterators.html)\n\n## Iterator-based directory walks\n\nProvides convenient ways to walk directories based on Ada 2012 user-defined\niterators.\n\nInspired by [walkdir for Rust](https://github.com/BurntSushi/walkdir).\n\n\n## Walking a directory tree recursively\n\n```ada\nwith Ada.Directories;\nwith Ada.Text_IO;\nwith Dir_Iterators.Recursive;\n\n-- ...\n\nDir_Walk : constant Dir_Iterators.Recursive.Recursive_Dir_Walk\n    := Dir_Iterators.Recursive.Walk (Dir);\n\nfor Dir_Entry of Dir_Walk loop\n    Ada.Text_IO.Put_Line(Ada.Directories.Full_Name(Dir_Entry));\nend loop;\n```\n\n## Walking a directory tree recursively with a filter\n\nUse a filter to prune directories and files from the walk.\n\n```ada\nwith Ada.Directories;\nwith Ada.Text_IO;\nwith Dir_Iterators.Recursive;\n\npackage AD renames Ada.Directories;\n\n-- ...\n\n    procedure Foo (Include_Dot_Files : Boolean; Dir_Root : String) is\n        function Filter (E : Ada.Directories.Directory_Entry_Type) return Boolean is\n            Name : constant String := Ada.Directories.Simple_Name(E);\n        begin\n            return Include_Dot_Files\n                or else (not (Name'Length > 1 and then Name(1) = '.'));\n        end Filter;\n\n        Walk : constant Dir_Iterators.Recursive.Recursive_Dir_Walk :=\n            Dir_Iterators.Recursive.Walk (Dir_Root, Filter'Access);\n    begin\n        for Dir_Entry of Walk loop\n            Ada.Text_IO.Put_Line(Ada.Directories.Full_Name(Dir_Entry));\n        end loop;\n    end Foo;\n```\n",
+  "authors": [
+    "Paul Jarrett"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "dir",
+    "files",
+    "walk"
+  ],
+  "website": "https://github.com/pyjarrett/dir_iterators",
+  "repository": {
+    "url": "https://github.com/pyjarrett/dir_iterators",
+    "host": "github",
+    "commit": "bd7687be6165c7dc622871b5e74e08a6e5915491"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Dir_Iterators",
+      "id": "8e0160a7a351dc4b",
+      "file": "dir_iterators.json"
+    },
+    {
+      "name": "Dir_Iterators.Ancestor",
+      "id": "cd4c058bd376f884",
+      "file": "dir_iterators-ancestor.json"
+    },
+    {
+      "name": "Dir_Iterators.Recursive",
+      "id": "de909dff69c176c4",
+      "file": "dir_iterators-recursive.json"
+    }
+  ]
+}

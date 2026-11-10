@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"microbit_bsp","version":"0.2.1","id":"e326f5aa8db0d480","name":"Microbit_Bsp","qualified_name":"Microbit_Bsp","kind":"ada_package","location":{"file":"src/microbit_bsp.ads","line":1,"column":9},"code":"package Microbit_Bsp"}

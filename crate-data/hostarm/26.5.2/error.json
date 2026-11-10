@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "hostarm",
+  "version": "26.5.2",
+  "failed_at": "2026-07-29T03:13:17Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": "1",
+  "crate": "iterators",
+  "version": "0.2.0",
+  "documented_at": "2026-03-04T16:51:34Z",
+  "description": "Functional iterators a la Rust",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "iterators",
+    "functional"
+  ],
+  "website": "https://github.com/mosteo/iterators",
+  "repository": {
+    "url": "https://github.com/mosteo/iterators",
+    "host": "github",
+    "commit": "18995a4dc100b945a63ba49861d14a015a36a527"
+  },
+  "dependencies": [
+    {
+      "crate": "aaa",
+      "version": "~0.2.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Iterators",
+      "id": "0c86ddfed0f7ccfd",
+      "file": "iterators.json"
+    },
+    {
+      "name": "Iterators.Collectors",
+      "id": "efe0ef0d18bdc7f6",
+      "file": "iterators-collectors.json"
+    },
+    {
+      "name": "Iterators.Collectors.Mappings",
+      "id": "09ae9e75a59c67a1",
+      "file": "iterators-collectors-mappings.json"
+    },
+    {
+      "name": "Iterators.Collectors.Sequences",
+      "id": "9e68a94945fa32df",
+      "file": "iterators-collectors-sequences.json"
+    },
+    {
+      "name": "Iterators.Collectors.Sequences.Linking",
+      "id": "d99f3e7620a6a1f7",
+      "file": "iterators-collectors-sequences-linking.json"
+    },
+    {
+      "name": "Iterators.From",
+      "id": "7a122eaed68861c9",
+      "file": "iterators-from.json"
+    },
+    {
+      "name": "Iterators.From.Elements",
+      "id": "5e2797f1e3b8ca3b",
+      "file": "iterators-from-elements.json"
+    },
+    {
+      "name": "Iterators.From.Elements.Lists",
+      "id": "8ab645b1d9ee7668",
+      "file": "iterators-from-elements-lists.json"
+    },
+    {
+      "name": "Iterators.From.Keyed",
+      "id": "4aa67bbbfd31b7be",
+      "file": "iterators-from-keyed.json"
+    },
+    {
+      "name": "Iterators.From.Lists",
+      "id": "5529c670e67e0b79",
+      "file": "iterators-from-lists.json"
+    },
+    {
+      "name": "Iterators.From.Ordered_Maps",
+      "id": "ed7fc57fa660e31d",
+      "file": "iterators-from-ordered_maps.json"
+    },
+    {
+      "name": "Iterators.From.Vectors",
+      "id": "3d77cbcb36f69728",
+      "file": "iterators-from-vectors.json"
+    },
+    {
+      "name": "Iterators.Generators",
+      "id": "154808d3a58a1694",
+      "file": "iterators-generators.json"
+    },
+    {
+      "name": "Iterators.Generators.Arrays",
+      "id": "dcfbde22a792b3ef",
+      "file": "iterators-generators-arrays.json"
+    },
+    {
+      "name": "Iterators.Generators.Containers",
+      "id": "b2e5d2386dcc1fb9",
+      "file": "iterators-generators-containers.json"
+    },
+    {
+      "name": "Iterators.Generators.Containers.Keyed",
+      "id": "80b4302ff3361014",
+      "file": "iterators-generators-containers-keyed.json"
+    },
+    {
+      "name": "Iterators.Keyed",
+      "id": "9d8c2edf67feedb6",
+      "file": "iterators-keyed.json"
+    },
+    {
+      "name": "Iterators.Linkers",
+      "id": "ec1143b433a53722",
+      "file": "iterators-linkers.json"
+    },
+    {
+      "name": "Iterators.Linkers.Mappings",
+      "id": "028b255737a8b4ae",
+      "file": "iterators-linkers-mappings.json"
+    },
+    {
+      "name": "Iterators.Linkers.Sequences",
+      "id": "f422af4aa3539edc",
+      "file": "iterators-linkers-sequences.json"
+    },
+    {
+      "name": "Iterators.Meta",
+      "id": "49ff998310d35a3f",
+      "file": "iterators-meta.json"
+    },
+    {
+      "name": "Iterators.Meta.Linking",
+      "id": "0f33c582b95690ba",
+      "file": "iterators-meta-linking.json"
+    },
+    {
+      "name": "Iterators.Operators",
+      "id": "10abeeed8098cead",
+      "file": "iterators-operators.json"
+    },
+    {
+      "name": "Iterators.Operators.Linking",
+      "id": "84885463257929e6",
+      "file": "iterators-operators-linking.json"
+    },
+    {
+      "name": "Iterators.Pairs",
+      "id": "f07c28f50c484f93",
+      "file": "iterators-pairs.json"
+    },
+    {
+      "name": "Iterators.Root",
+      "id": "9f08c5d825cbcb22",
+      "file": "iterators-root.json"
+    },
+    {
+      "name": "Iterators.Root.Operators",
+      "id": "d2732c16a24ea51c",
+      "file": "iterators-root-operators.json"
+    },
+    {
+      "name": "Iterators.Root.Operators.Impl_Empty",
+      "id": "c3881d4bb341cef8",
+      "file": "iterators-root-operators-impl_empty.json"
+    },
+    {
+      "name": "Iterators.Root.Operators.Impl_Just",
+      "id": "a773189d134646cb",
+      "file": "iterators-root-operators-impl_just.json"
+    },
+    {
+      "name": "Iterators.Root.Operators.Linking",
+      "id": "2e2c94b260a5195e",
+      "file": "iterators-root-operators-linking.json"
+    },
+    {
+      "name": "Iterators.Shebang",
+      "id": "4dd37c3a3467b3a9",
+      "file": "iterators-shebang.json"
+    },
+    {
+      "name": "Iterators.Std",
+      "id": "36c0f06aab56d514",
+      "file": "iterators-std.json"
+    },
+    {
+      "name": "Iterators.Text_IO",
+      "id": "1b78d408dd5c5a59",
+      "file": "iterators-text_io.json"
+    },
+    {
+      "name": "Iterators.Traits",
+      "id": "850de115b1bf37ce",
+      "file": "iterators-traits.json"
+    },
+    {
+      "name": "Iterators.Traits.Containers",
+      "id": "b334fda971ff2393",
+      "file": "iterators-traits-containers.json"
+    },
+    {
+      "name": "Iterators.Traits.Containers.Appendable",
+      "id": "bb8e7e18ce4357ea",
+      "file": "iterators-traits-containers-appendable.json"
+    },
+    {
+      "name": "Iterators.Traits.Containers.Keyed",
+      "id": "71b9badaebfd54b8",
+      "file": "iterators-traits-containers-keyed.json"
+    }
+  ]
+}

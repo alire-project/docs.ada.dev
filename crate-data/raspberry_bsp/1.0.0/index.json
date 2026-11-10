@@ -1,0 +1,66 @@
+{
+  "schema_version": "1",
+  "crate": "raspberry_bsp",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:55:45Z",
+  "description": "Board Support package for Raspberry PI v1, v2 and B+",
+  "authors": [
+    "Tama McGlinn"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "raspberry",
+    "pi"
+  ],
+  "website": "https://github.com/TamaMcGlinn/ada_raspio",
+  "repository": {
+    "url": "https://github.com/TamaMcGlinn/ada_raspio",
+    "host": "github",
+    "commit": "a15c773223e31c3ba97dc806897ab1feec2ff5a3"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "bcm2835_h",
+      "id": "0605a7a3d30ea50f",
+      "file": "bcm2835_h.json"
+    },
+    {
+      "name": "Raspio",
+      "id": "d47c1b979ec6b1ff",
+      "file": "raspio.json"
+    },
+    {
+      "name": "Raspio.GPIO",
+      "id": "35b9f37a4ef8bae7",
+      "file": "raspio-gpio.json"
+    },
+    {
+      "name": "Raspio.GPIO.Encoder",
+      "id": "f833af381cb55d93",
+      "file": "raspio-gpio-encoder.json"
+    },
+    {
+      "name": "stdint_h",
+      "id": "746b413f8fbd62dc",
+      "file": "stdint_h.json"
+    },
+    {
+      "name": "x86_64_linux_gnu_bits_stdint_intn_h",
+      "id": "3341ce6885abee5d",
+      "file": "x86_64_linux_gnu_bits_stdint_intn_h.json"
+    },
+    {
+      "name": "x86_64_linux_gnu_bits_stdint_uintn_h",
+      "id": "965643cc1b6a152c",
+      "file": "x86_64_linux_gnu_bits_stdint_uintn_h.json"
+    },
+    {
+      "name": "x86_64_linux_gnu_bits_types_h",
+      "id": "c12096bfc35c0769",
+      "file": "x86_64_linux_gnu_bits_types_h.json"
+    }
+  ]
+}

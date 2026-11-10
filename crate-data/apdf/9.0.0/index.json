@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "crate": "apdf",
+  "version": "9.0.0",
+  "documented_at": "2026-03-03T17:51:16Z",
+  "description": "Portable package for producing dynamically PDF documents",
+  "long_description": "**PDF_Out** is an Ada package for producing easily and automatically PDF files, from an Ada program, with text, vector graphics and raster graphics.\n\n![Ada PDF Screenshot](https://apdf.sourceforge.io/pw_ari_delivery_m.png \"Screenshot of a page produced by PDF_Out\")\n![Ada PDF Screenshot](https://apdf.sourceforge.io/pw_sowebio_m.jpg      \"Screenshot of a report produced by PDF_Out\")\n\n* Ideal for the dynamic production of reports, invoices, tickets, labels, delivery notes, charts, maps etc.\n* Vector graphics\n* Inclusion of JPEG images\n* Object oriented\n* Task safe\n* Endian-neutral\n* Multi-platform, but native code build\n* Unconditionally portable code: OS-, CPU-, compiler- independent code\n* Pure Ada 2012: this package can be used in projects in Ada 2012 and later language versions\n* *Free*, open-source \n\nThe creation of a PDF file is as simple as this small procedure:\n\n```ada\nwith PDF_Out;\n\nprocedure Small_Demo is\n  pdf : PDF_Out.PDF_Out_File;\nbegin\n  pdf.Create (\"small.pdf\");\n  pdf.Put_Line (\"This is a very small demo for PDF_Out...\");\n  pdf.Close;\nend Small_Demo;\n```\n\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "pdf",
+    "adobe",
+    "acrobat"
+  ],
+  "website": "https://github.com/zertovitch/ada-pdf-writer",
+  "repository": {
+    "url": "https://sourceforge.net/projects/apdf",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "gid",
+      "version": ">=13.0.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Bar_code",
+      "id": "8b3f1358e14b9375",
+      "file": "bar_code.json"
+    },
+    {
+      "name": "Fancy_Page",
+      "id": "b2b4548c74118dfc",
+      "file": "fancy_page.json"
+    },
+    {
+      "name": "PDF_Out",
+      "id": "5b274c6071facdc2",
+      "file": "pdf_out.json"
+    },
+    {
+      "name": "QR_code",
+      "id": "b5bd8b11299ba5fb",
+      "file": "qr_code.json"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"shoot_n_loot","version":"1.0.0","id":"146d64a86eb2cb03","name":"Chests","qualified_name":"Game_Assets.level_4.Chests","kind":"ada_package","location":{"file":"src/assets/game_assets-level_4.ads","line":124,"column":12},"code":"package Chests"}

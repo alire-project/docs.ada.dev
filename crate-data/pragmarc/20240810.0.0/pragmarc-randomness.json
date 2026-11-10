@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"e3ea2cb24bc3c3c2","name":"PragmARC.Randomness","qualified_name":"PragmARC.Randomness","kind":"ada_package","location":{"file":"src/pragmarc-randomness.ads","line":16,"column":9},"code":"package PragmARC.Randomness","documentation":{"description":"Empty"}}

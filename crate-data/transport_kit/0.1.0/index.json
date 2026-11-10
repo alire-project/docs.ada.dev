@@ -1,0 +1,92 @@
+{
+  "schema_version": "1",
+  "crate": "transport_kit",
+  "version": "0.1.0",
+  "documented_at": "2026-09-02T02:34:48Z",
+  "description": "Lightweight transport abstraction library for embedded Ada systems",
+  "authors": [
+    "Lokesh"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "embedded",
+    "ada",
+    "rp2040",
+    "transport",
+    "gpio",
+    "spi",
+    "i2c",
+    "uart"
+  ],
+  "website": "https://github.com/thirstymelon/transport_kit",
+  "repository": {
+    "url": "https://github.com/thirstymelon/Transport_Kit",
+    "host": "github",
+    "commit": "90a189c94ae0a8f11efa6c0a8e509b4779bea424"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Transport_Kit",
+      "id": "37fe0df8c6803c6c",
+      "file": "transport_kit.json"
+    },
+    {
+      "name": "Transport_Kit.Pico",
+      "id": "2aa6cd86604e6ff9",
+      "file": "transport_kit-pico.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.GPIO",
+      "id": "c87bc17b1fc4c5c7",
+      "file": "transport_kit-pico-gpio.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.I2C",
+      "id": "6debdbf3d823d39a",
+      "file": "transport_kit-pico-i2c.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.Internal",
+      "id": "4d97155d923242d4",
+      "file": "transport_kit-pico-internal.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.Internal.Mapping",
+      "id": "8374f6e11c431884",
+      "file": "transport_kit-pico-internal-mapping.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.SPI",
+      "id": "a8d667022c61a935",
+      "file": "transport_kit-pico-spi.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.UART",
+      "id": "8058d1fd7b14db92",
+      "file": "transport_kit-pico-uart.json"
+    },
+    {
+      "name": "Transport_Kit.Pico.Wait",
+      "id": "a6b520f58e53a450",
+      "file": "transport_kit-pico-wait.json"
+    },
+    {
+      "name": "Transport_Kit.Types",
+      "id": "861ced159f43227c",
+      "file": "transport_kit-types.json"
+    },
+    {
+      "name": "Transport_Kit_Config",
+      "id": "ddd731646297de11",
+      "file": "transport_kit_config.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "keynub_licdongle",
+  "version": "1.1.1",
+  "failed_at": "2026-09-23T02:19:34Z",
+  "stage": "locate",
+  "message": "Could not find crate root for keynub_licdongle=1.1.1 in /tmp/gnatdoc_zjnqt7hs"
+}

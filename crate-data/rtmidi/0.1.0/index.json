@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "crate": "rtmidi",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:56:41Z",
+  "description": "Ada \"middleweight\" binding for the rtMIDI library",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "midi",
+    "rtmidi",
+    "music"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/rtmidi_ada",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/rtmidi_ada",
+    "host": "github",
+    "commit": "bae317e44152832eb0e4b6883a34cddb19a6107a"
+  },
+  "dependencies": [
+    {
+      "crate": "librtmidi",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "RtMIDI",
+      "id": "38c8b2b984897d49",
+      "file": "rtmidi.json"
+    },
+    {
+      "name": "Rtmidi_Config",
+      "id": "2ba4d78bb21d1e06",
+      "file": "rtmidi_config.json"
+    }
+  ]
+}

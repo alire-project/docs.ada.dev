@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "itsybitsy_bsp",
+  "version": "0.0.4",
+  "documented_at": "2026-03-04T16:51:53Z",
+  "description": "Board support package for Arduino ItsyBitsy",
+  "authors": [
+    "Holger Rodriguez"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "itsybitsy",
+    "rp2040",
+    "bsp"
+  ],
+  "website": "https://pico-doc.synack.me/",
+  "repository": {
+    "url": "https://github.com/hgrodriguez/itsybitsy_bsp",
+    "host": "github",
+    "commit": "7d01d9d21b36f10312c11a5b9d682feee85645de"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "~0.1"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Itsybitsy_Bsp",
+      "id": "1df6976ed52a275d",
+      "file": "itsybitsy_bsp.json"
+    }
+  ]
+}

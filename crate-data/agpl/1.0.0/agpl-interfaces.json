@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"2ca6ddae0a5a9bad","name":"Agpl.Interfaces","qualified_name":"Agpl.Interfaces","kind":"ada_package","location":{"file":"src/agpl-interfaces.ads","line":1,"column":9},"code":"package Agpl.Interfaces"}

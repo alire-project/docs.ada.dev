@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"70a87d60cafad393","name":"Agpl.Gtk.Tree_Utils","qualified_name":"Agpl.Gtk.Tree_Utils","kind":"ada_package","location":{"file":"src/agpl-gtk-tree_utils.ads","line":3,"column":9},"code":"package Agpl.Gtk.Tree_Utils"}

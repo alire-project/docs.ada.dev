@@ -1,0 +1,144 @@
+{
+  "schema_version": "1",
+  "crate": "elada",
+  "version": "1.8.8",
+  "documented_at": "2026-03-04T02:57:17Z",
+  "description": "Expression Language Library (JSR245)",
+  "long_description": "[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-el/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-el/summary)\n[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-el/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-el/xunits)\n[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-el/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-el/summary)\n\nThis Ada05 library provides the support for a simple Expression Language\nclose to the Java Unified Expression Language (EL).\n\nThe API provided by the EL library is inspired from the Java\nUnified Expression Language shared by the JSP 2.1 and JSF 1.2 technologies.\nSee Expression Language specification in JSR245\n(https://jcp.org/en/jsr/summary?id=245)\n\nThe EL expression is intensively used in web development applications built\non top of various Java technologies but also on top of\n[Ada Web Application](https://gitlab.com/stcarrez/ada-awa)\nand [Ada Server Faces](https://gitlab.com/stcarrez/ada-asf).\n\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "web",
+    "expression",
+    "expander",
+    "parser"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-el",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-el",
+    "host": "gitlab",
+    "commit": "4da951462a1b381ef23fe156b8c2273d4745c0b2"
+  },
+  "dependencies": [
+    {
+      "crate": "utilada",
+      "version": "^2.8.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "EL",
+      "id": "d65c3e892354b17a",
+      "file": "el.json"
+    },
+    {
+      "name": "EL.Beans",
+      "id": "a6347d5f79a1f9d3",
+      "file": "el-beans.json"
+    },
+    {
+      "name": "EL.Contexts",
+      "id": "5958880a6e43f181",
+      "file": "el-contexts.json"
+    },
+    {
+      "name": "EL.Contexts.Default",
+      "id": "9b14899d8eb92a35",
+      "file": "el-contexts-default.json"
+    },
+    {
+      "name": "EL.Contexts.Properties",
+      "id": "b1c6d0852aa1e1d4",
+      "file": "el-contexts-properties.json"
+    },
+    {
+      "name": "EL.Contexts.TLS",
+      "id": "ecf765fcea297f2a",
+      "file": "el-contexts-tls.json"
+    },
+    {
+      "name": "EL.Expressions",
+      "id": "fe574275cfc1ed5b",
+      "file": "el-expressions.json"
+    },
+    {
+      "name": "EL.Functions",
+      "id": "3463342516b8b947",
+      "file": "el-functions.json"
+    },
+    {
+      "name": "EL.Functions.Default",
+      "id": "25d3429742a5862a",
+      "file": "el-functions-default.json"
+    },
+    {
+      "name": "EL.Functions.Namespaces",
+      "id": "20e90e1fff68239b",
+      "file": "el-functions-namespaces.json"
+    },
+    {
+      "name": "EL.Methods",
+      "id": "db06c6c6b7f1bc02",
+      "file": "el-methods.json"
+    },
+    {
+      "name": "EL.Methods.Func_1",
+      "id": "df3fb20867e02ff6",
+      "file": "el-methods-func_1.json"
+    },
+    {
+      "name": "EL.Methods.Func_1.Bind",
+      "id": "2669a0f7aeecb242",
+      "file": "el-methods-func_1-bind.json"
+    },
+    {
+      "name": "EL.Methods.Proc_1",
+      "id": "7a0148b18d1bc5ea",
+      "file": "el-methods-proc_1.json"
+    },
+    {
+      "name": "EL.Methods.Proc_1.Bind",
+      "id": "9831f2ee5713f0da",
+      "file": "el-methods-proc_1-bind.json"
+    },
+    {
+      "name": "EL.Methods.Proc_2",
+      "id": "ee86935dafa3b181",
+      "file": "el-methods-proc_2.json"
+    },
+    {
+      "name": "EL.Methods.Proc_2.Bind",
+      "id": "0883e625943df88d",
+      "file": "el-methods-proc_2-bind.json"
+    },
+    {
+      "name": "EL.Methods.Proc_In",
+      "id": "076fced9a386e45d",
+      "file": "el-methods-proc_in.json"
+    },
+    {
+      "name": "EL.Methods.Proc_In.Bind",
+      "id": "c82b41e5e5a69781",
+      "file": "el-methods-proc_in-bind.json"
+    },
+    {
+      "name": "EL.Utils",
+      "id": "c506b6fa7d13d130",
+      "file": "el-utils.json"
+    },
+    {
+      "name": "EL.Variables",
+      "id": "c3b35e93502c76a1",
+      "file": "el-variables.json"
+    },
+    {
+      "name": "EL.Variables.Default",
+      "id": "652e898d11f677ec",
+      "file": "el-variables-default.json"
+    }
+  ]
+}

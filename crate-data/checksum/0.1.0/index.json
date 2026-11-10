@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "checksum",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T02:54:40Z",
+  "description": "Algorithms for error-checking",
+  "authors": [
+    "Miko Elbrecht"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "crc",
+    "crc32",
+    "adler32",
+    "redundancy",
+    "error",
+    "checking",
+    "error-checking"
+  ],
+  "website": "https://github.com/ATPStorages/checksum.git",
+  "repository": {
+    "url": "https://github.com/ATPStorages/checksum",
+    "host": "github",
+    "commit": "b79b8b5be6d9e5f1b705ccd5385010544bd12a78"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Checksum",
+      "id": "96fa8f226d380174",
+      "file": "checksum.json"
+    },
+    {
+      "name": "Checksum.Adler",
+      "id": "d18f70efd4ff374c",
+      "file": "checksum-adler.json"
+    },
+    {
+      "name": "Checksum.CRC",
+      "id": "9cf748ae26128e14",
+      "file": "checksum-crc.json"
+    },
+    {
+      "name": "Checksum_Config",
+      "id": "beb6e991b3ac2aaf",
+      "file": "checksum_config.json"
+    }
+  ]
+}

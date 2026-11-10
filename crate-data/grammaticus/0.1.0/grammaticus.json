@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"grammaticus","version":"0.1.0","id":"e27379030d97fbd3","name":"Grammaticus","qualified_name":"Grammaticus","kind":"ada_package","location":{"file":"src/grammaticus.ads","line":6,"column":9},"code":"package Grammaticus","documentation":{"description":"\nCopyright 2026 (C) Daniel King\n\nSPDX-License-Identifier: Apache-2.0 WITH LLVM-exception"}}

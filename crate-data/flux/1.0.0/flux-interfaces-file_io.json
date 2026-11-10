@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"flux","version":"1.0.0","id":"9d071e77b92b9276","name":"Flux.Interfaces.File_IO","qualified_name":"Flux.Interfaces.File_IO","kind":"ada_package","location":{"file":"src/file_io/flux-interfaces-file_io.ads","line":1,"column":9},"code":"package Flux.Interfaces.File_IO"}

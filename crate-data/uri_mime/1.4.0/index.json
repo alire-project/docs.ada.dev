@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "uri_mime",
+  "version": "1.4.0",
+  "documented_at": "2026-03-07T02:49:13Z",
+  "description": "URI & MIME Type Parsing and Manupulation",
+  "authors": [
+    "nytpu"
+  ],
+  "licenses": [
+    "MPL-2.0"
+  ],
+  "tags": [
+    "uri",
+    "url",
+    "mime",
+    "media-type"
+  ],
+  "website": "https://git.sr.ht/~nytpu/uri-mime-ada",
+  "repository": {
+    "url": "https://git.sr.ht/~nytpu/uri-mime-ada/archive/v1.4.0.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "MIME",
+      "id": "caadff608748403a",
+      "file": "mime.json"
+    },
+    {
+      "name": "URI",
+      "id": "70e5d7b6a29b392f",
+      "file": "uri.json"
+    }
+  ]
+}

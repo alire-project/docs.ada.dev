@@ -1,0 +1,112 @@
+{
+  "schema_version": "1",
+  "crate": "lml",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T16:56:11Z",
+  "description": "Lightweight Markup Language conversions",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "markup",
+    "language",
+    "conversion",
+    "json",
+    "yaml",
+    "toml"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/lml_ada",
+    "host": "github",
+    "commit": "34b9824dcf6cbe1c8d71bbff16539afa938ef48a"
+  },
+  "dependencies": [
+    {
+      "crate": "ada_toml",
+      "version": "~0.4.0"
+    },
+    {
+      "crate": "json",
+      "version": "^6.0.0"
+    },
+    {
+      "crate": "yeison_12",
+      "version": "~0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "LML",
+      "id": "33c6ded4c534e2c0",
+      "file": "lml.json"
+    },
+    {
+      "name": "LML.Conversions",
+      "id": "88ac7812b1ed3572",
+      "file": "lml-conversions.json"
+    },
+    {
+      "name": "LML.Conversions.TOML_JSON",
+      "id": "0d1e1dcdd51f8da2",
+      "file": "lml-conversions-toml_json.json"
+    },
+    {
+      "name": "LML.Input",
+      "id": "d21cdd930da79b81",
+      "file": "lml-input.json"
+    },
+    {
+      "name": "LML.Input.JSON",
+      "id": "6ac4f7e9cee73e7c",
+      "file": "lml-input-json.json"
+    },
+    {
+      "name": "LML.Input.TOML",
+      "id": "dec99091f78248d1",
+      "file": "lml-input-toml.json"
+    },
+    {
+      "name": "LML.Output",
+      "id": "c1ddf3e59dcdfe3e",
+      "file": "lml-output.json"
+    },
+    {
+      "name": "LML.Output.Factory",
+      "id": "53733e5608eaa3c6",
+      "file": "lml-output-factory.json"
+    },
+    {
+      "name": "LML.Output.JSON",
+      "id": "50619a6cc94b1b39",
+      "file": "lml-output-json.json"
+    },
+    {
+      "name": "LML.Output.JSON.Export",
+      "id": "87575bbad5d5566a",
+      "file": "lml-output-json-export.json"
+    },
+    {
+      "name": "LML.Output.TOML",
+      "id": "98f94886cd22699a",
+      "file": "lml-output-toml.json"
+    },
+    {
+      "name": "LML.Output.YAML",
+      "id": "da41497c7608ab1f",
+      "file": "lml-output-yaml.json"
+    },
+    {
+      "name": "LML.Output.Yeison",
+      "id": "9e2a21e1ba7d50b6",
+      "file": "lml-output-yeison.json"
+    },
+    {
+      "name": "Lml_Config",
+      "id": "d5d7c36ef3503c34",
+      "file": "lml_config.json"
+    }
+  ]
+}

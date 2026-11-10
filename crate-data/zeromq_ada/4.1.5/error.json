@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "zeromq_ada",
+  "version": "4.1.5",
+  "failed_at": "2026-03-07T02:52:41Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

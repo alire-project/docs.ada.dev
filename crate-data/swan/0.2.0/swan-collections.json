@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"swan","version":"0.2.0","id":"28808a00a002153b","name":"Swan.Collections","qualified_name":"Swan.Collections","kind":"ada_package","location":{"file":"src/swan-collections.ads","line":1,"column":9},"code":"package Swan.Collections"}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"pragmarc","version":"20240810.0.0","id":"1c99a52b53db8ec5","name":"PragmARC.Conversions","qualified_name":"PragmARC.Conversions","kind":"ada_package","location":{"file":"src/pragmarc-conversions.ads","line":12,"column":9},"code":"package PragmARC.Conversions","documentation":{"description":"Empty"}}

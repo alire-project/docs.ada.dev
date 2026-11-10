@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"task_coroutines","version":"0.1.0","id":"7448e06fec69af55","name":"Task_Coroutines","qualified_name":"Task_Coroutines","kind":"ada_package","location":{"file":"src/task_coroutines.ads","line":1,"column":9},"code":"package Task_Coroutines"}

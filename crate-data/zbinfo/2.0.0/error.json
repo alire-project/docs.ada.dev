@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "zbinfo",
+  "version": "2.0.0",
+  "failed_at": "2026-06-29T03:02:32Z",
+  "stage": "locate",
+  "message": "Could not find crate root for zbinfo=2.0.0 in /tmp/gnatdoc_va4nbk14"
+}

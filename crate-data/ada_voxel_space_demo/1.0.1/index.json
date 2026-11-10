@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "crate": "ada_voxel_space_demo",
+  "version": "1.0.1",
+  "documented_at": "2026-03-03T17:49:11Z",
+  "description": "Voxel Space render engine demo in Ada",
+  "authors": [],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/ada-voxel-space-demo",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "sdlada",
+      "version": "^2.3.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Ada_Voxel",
+      "id": "06be379dc61b1615",
+      "file": "ada_voxel.json"
+    },
+    {
+      "name": "Color_Map",
+      "id": "f89be3d04c605851",
+      "file": "color_map.json"
+    },
+    {
+      "name": "Height_Map",
+      "id": "0f0b62534e88eb06",
+      "file": "height_map.json"
+    },
+    {
+      "name": "Keyboard",
+      "id": "91f060a9ad4b39eb",
+      "file": "keyboard.json"
+    },
+    {
+      "name": "SDL_Display",
+      "id": "98761a0275e6eb96",
+      "file": "sdl_display.json"
+    }
+  ]
+}

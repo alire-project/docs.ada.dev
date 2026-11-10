@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"linux_hal","version":"1.2.0","id":"caf90169eefa5f80","name":"Linux","qualified_name":"Linux","kind":"ada_package","location":{"file":"src/linux.ads","line":6,"column":9},"code":"package Linux","documentation":{"description":"\nCopyright (C) 2023 Jeremy Grosser <jeremy@synack.me>\n\nSPDX-License-Identifier: BSD-3-Clause"}}

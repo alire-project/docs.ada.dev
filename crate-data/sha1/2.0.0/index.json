@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "crate": "sha1",
+  "version": "2.0.0",
+  "documented_at": "2026-03-06T02:57:38Z",
+  "description": "Secure Hash Algorithm 1 implemented in Ada",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "cryptography",
+    "security",
+    "sha1"
+  ],
+  "website": "https://github.com/AntonMeep/sha1",
+  "repository": {
+    "url": "https://github.com/AntonMeep/sha1",
+    "host": "github",
+    "commit": "0ab37e5c71289465fafe1324384a8ddcac256e5f"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SHA1_Generic",
+      "id": "cb839d2b0fb0b321",
+      "file": "sha1_generic.json"
+    }
+  ]
+}

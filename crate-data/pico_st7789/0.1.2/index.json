@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "crate": "pico_st7789",
+  "version": "0.1.2",
+  "documented_at": "2026-03-31T03:01:11Z",
+  "description": "ST7789 display driver for RP2040 (PIO parallel + SPI)",
+  "authors": [
+    "Mark Hermeling"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "embedded",
+    "st7789",
+    "display",
+    "rp2040",
+    "pio",
+    "spi"
+  ],
+  "website": "https://gitlab.com/mhermeling/st7789",
+  "repository": {
+    "url": "https://gitlab.com/mhermeling/st7789",
+    "host": "gitlab",
+    "commit": "8f4687e1a526c0c91f4b753d8cea9a4ebe043228"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "*"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_St7789_Config",
+      "id": "0f08828e25c92679",
+      "file": "pico_st7789_config.json"
+    },
+    {
+      "name": "ST7789",
+      "id": "f86ad64b05402857",
+      "file": "st7789.json"
+    }
+  ]
+}

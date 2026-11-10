@@ -1,0 +1,445 @@
+{
+  "schema_version": "1",
+  "crate": "mcp2221",
+  "version": "2.22792.1",
+  "documented_at": "2026-03-05T02:57:10Z",
+  "description": "MCP2221 USB Raw HID I/O Expander Library for GNAT Ada",
+  "long_description": "This crate contains a subset of the [**Linux Simple I/O\nLibrary**](https://github.com/pmunts/libsimpleio) Ada packages that are\nrelevant for building programs for the MCP2221 USB Raw HID I/O expander.\n\nThis crate can be built for Linux, MacOS, or Windows targets.\n\nThe [MCP2221A](https://www.microchip.com/en-us/product/MCP2221A) is a\n[PIC16F1455](https://www.microchip.com/en-us/product/PIC16F1455)\nmicrocontroller that has been preprogrammed with firmware to implement\n*two* USB devices: a USB serial port and a raw HID device that acts as\nan I/O expander providing one [I2C](https://i2c.info/) bus controller\n(master only) and four\n[GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output) pins\n(**`GP0`**, **`GP1`**, **`GP2`**, and **`GP3`**).\n\nThe GPIO pins **`GP1`**, **`GP2`**, and **`GP3`** can be configured for\nsome alternate functions, including 10-bit A/D inputs or 5-bit D/A\noutputs:\n\n**`GP1`** : **`GPIO ADC1`**  \n**`GP2`** : **`GPIO ADC2 DAC1`**  \n**`GP3`** : **`GPIO ADC3 DAC2`**\n\nThe MCP2221A replaces an earlier part, the MCP2221. The only difference\nbetween the older MCP2221 and the newer MCP2221A is that the latter\nsupports some higher baud rates on the USB serial port device. Since\nthis crate only deals with the raw HID I/O expander functions, it will\nwork fine with either the older MCP2221 or the newer MCP2221A.\n",
+  "authors": [
+    "Philip Munts"
+  ],
+  "licenses": [
+    "BSD-1-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "linux",
+    "mcp2221",
+    "adc",
+    "dac",
+    "gpio",
+    "i2c",
+    "motor",
+    "pwm",
+    "sensor",
+    "serial",
+    "servo",
+    "spi",
+    "stepper"
+  ],
+  "website": "https://github.com/pmunts/libsimpleio",
+  "repository": {
+    "url": "https://raw.githubusercontent.com/pmunts/alire-crates/64af9db57a890c68ed8908cde834357cd498d8fb/mcp2221/mcp2221-2.22792.1.tbz2",
+    "host": "git"
+  },
+  "dependencies": [
+    {
+      "crate": "case(os)",
+      "version": "{'linux': {'libhidapi': '*'}}"
+    },
+    {
+      "crate": "case(os)",
+      "version": "{'linux': {'libusb': '*'}}"
+    },
+    {
+      "crate": "case(distribution)",
+      "version": "{'homebrew|macports': {'libhidapi': '*'}}"
+    },
+    {
+      "crate": "case(distribution)",
+      "version": "{'homebrew|macports': {'libusb': '*'}}"
+    }
+  ],
+  "units": [
+    {
+      "name": "A4988",
+      "id": "b2825dd5b33effeb",
+      "file": "a4988.json"
+    },
+    {
+      "name": "Accelerometer",
+      "id": "4344d8dbe5087a44",
+      "file": "accelerometer.json"
+    },
+    {
+      "name": "ADC",
+      "id": "576d1184c541e9f9",
+      "file": "adc.json"
+    },
+    {
+      "name": "ADC121C021",
+      "id": "e796a55b6117aea9",
+      "file": "adc121c021.json"
+    },
+    {
+      "name": "ADS1015",
+      "id": "8a8730ce8eaf77e8",
+      "file": "ads1015.json"
+    },
+    {
+      "name": "Analog",
+      "id": "895f7dcdf72d7dd4",
+      "file": "analog.json"
+    },
+    {
+      "name": "Angle",
+      "id": "49387897bee2bee3",
+      "file": "angle.json"
+    },
+    {
+      "name": "BMP280",
+      "id": "91fe747f42dcc925",
+      "file": "bmp280.json"
+    },
+    {
+      "name": "Cytron_MD13S",
+      "id": "950b22f980463c65",
+      "file": "cytron_md13s.json"
+    },
+    {
+      "name": "DAC",
+      "id": "718f66104aad311b",
+      "file": "dac.json"
+    },
+    {
+      "name": "Debug",
+      "id": "0b8e9e995d8d77f1",
+      "file": "debug.json"
+    },
+    {
+      "name": "errno",
+      "id": "3c0b378b6fa50759",
+      "file": "errno.json"
+    },
+    {
+      "name": "GPIO",
+      "id": "722a08a99490cd9e",
+      "file": "gpio.json"
+    },
+    {
+      "name": "GPIO.PWM",
+      "id": "8f8e29b2402311de",
+      "file": "gpio-pwm.json"
+    },
+    {
+      "name": "Grove_ADC",
+      "id": "117a21925cc30cc6",
+      "file": "grove_adc.json"
+    },
+    {
+      "name": "Grove_TB6612",
+      "id": "3df8b79c34a005dd",
+      "file": "grove_tb6612.json"
+    },
+    {
+      "name": "Grove_TB6612.Motor",
+      "id": "326208a13d97adc1",
+      "file": "grove_tb6612-motor.json"
+    },
+    {
+      "name": "Grove_TB6612.Stepper",
+      "id": "d7b87fb273207ded",
+      "file": "grove_tb6612-stepper.json"
+    },
+    {
+      "name": "Grove_Temperature",
+      "id": "0cbf6481dca12cde",
+      "file": "grove_temperature.json"
+    },
+    {
+      "name": "Grove_Temperature_Humidity",
+      "id": "72766094ec8ba44f",
+      "file": "grove_temperature_humidity.json"
+    },
+    {
+      "name": "Gyroscope",
+      "id": "76d5b4bad06220c2",
+      "file": "gyroscope.json"
+    },
+    {
+      "name": "HDC1080",
+      "id": "00d402891acbee60",
+      "file": "hdc1080.json"
+    },
+    {
+      "name": "HID",
+      "id": "87102ab9bf41d9bc",
+      "file": "hid.json"
+    },
+    {
+      "name": "HID.hidapi",
+      "id": "0d35f79cbe15fb29",
+      "file": "hid-hidapi.json"
+    },
+    {
+      "name": "HID.libusb",
+      "id": "dc429abaef640133",
+      "file": "hid-libusb.json"
+    },
+    {
+      "name": "HID.Munts",
+      "id": "3a071121ad3231d9",
+      "file": "hid-munts.json"
+    },
+    {
+      "name": "HTS221",
+      "id": "ae478c1b78975488",
+      "file": "hts221.json"
+    },
+    {
+      "name": "HTU21D",
+      "id": "c251125482fef7fb",
+      "file": "htu21d.json"
+    },
+    {
+      "name": "Humidity",
+      "id": "ba3fb020c49e3489",
+      "file": "humidity.json"
+    },
+    {
+      "name": "I2C",
+      "id": "85ac83cb04df5961",
+      "file": "i2c.json"
+    },
+    {
+      "name": "IO_Interfaces",
+      "id": "40b0a8bb27a559ce",
+      "file": "io_interfaces.json"
+    },
+    {
+      "name": "Joystick",
+      "id": "39a39d1bfab5e142",
+      "file": "joystick.json"
+    },
+    {
+      "name": "LCD16397",
+      "id": "9efd58f7c2404bb6",
+      "file": "lcd16397.json"
+    },
+    {
+      "name": "LPS25H",
+      "id": "81db153cadbcf4db",
+      "file": "lps25h.json"
+    },
+    {
+      "name": "LSM9DS1",
+      "id": "87839287ef586539",
+      "file": "lsm9ds1.json"
+    },
+    {
+      "name": "Magnetometer",
+      "id": "11180e90bb86a135",
+      "file": "magnetometer.json"
+    },
+    {
+      "name": "MCP2221",
+      "id": "6141787af794c686",
+      "file": "mcp2221.json"
+    },
+    {
+      "name": "MCP2221.ADC",
+      "id": "f8670a3a755b1468",
+      "file": "mcp2221-adc.json"
+    },
+    {
+      "name": "MCP2221.GPIO",
+      "id": "1613ec1f0b60a0ec",
+      "file": "mcp2221-gpio.json"
+    },
+    {
+      "name": "MCP2221.hidapi",
+      "id": "ac9467fdd7ad26a7",
+      "file": "mcp2221-hidapi.json"
+    },
+    {
+      "name": "MCP2221.I2C",
+      "id": "217a75e3731f247e",
+      "file": "mcp2221-i2c.json"
+    },
+    {
+      "name": "MCP2221.libusb",
+      "id": "9c4343f01cda59c1",
+      "file": "mcp2221-libusb.json"
+    },
+    {
+      "name": "Mcp2221_Config",
+      "id": "8f5bf734d790be65",
+      "file": "mcp2221_config.json"
+    },
+    {
+      "name": "MCP23x17",
+      "id": "5ad7c101eb661ff2",
+      "file": "mcp23x17.json"
+    },
+    {
+      "name": "MCP23x17.Byte",
+      "id": "8e544c4129852356",
+      "file": "mcp23x17-byte.json"
+    },
+    {
+      "name": "MCP23x17.GPIO",
+      "id": "9dff4d609da7b804",
+      "file": "mcp23x17-gpio.json"
+    },
+    {
+      "name": "MCP23x17.Word",
+      "id": "815a4f50e7f2f22d",
+      "file": "mcp23x17-word.json"
+    },
+    {
+      "name": "Messaging",
+      "id": "e2dcc34d45138381",
+      "file": "messaging.json"
+    },
+    {
+      "name": "Messaging.Fixed",
+      "id": "995dadf88b565f05",
+      "file": "messaging-fixed.json"
+    },
+    {
+      "name": "Messaging.Text",
+      "id": "84c079cd3f192ca9",
+      "file": "messaging-text.json"
+    },
+    {
+      "name": "Motor",
+      "id": "02983856320b180c",
+      "file": "motor.json"
+    },
+    {
+      "name": "Motor.PWM",
+      "id": "e4e8b4d05fbc76bb",
+      "file": "motor-pwm.json"
+    },
+    {
+      "name": "Motor.Servo",
+      "id": "b591a6e109a29736",
+      "file": "motor-servo.json"
+    },
+    {
+      "name": "MPL3115A2",
+      "id": "31568a04620e2d47",
+      "file": "mpl3115a2.json"
+    },
+    {
+      "name": "PCA8574",
+      "id": "84d8c12ef6989a4a",
+      "file": "pca8574.json"
+    },
+    {
+      "name": "PCA8574.GPIO",
+      "id": "d0895e20c58077b1",
+      "file": "pca8574-gpio.json"
+    },
+    {
+      "name": "PCA9534",
+      "id": "6f09a54c962d8149",
+      "file": "pca9534.json"
+    },
+    {
+      "name": "PCA9534.GPIO",
+      "id": "9fe8733e6109158c",
+      "file": "pca9534-gpio.json"
+    },
+    {
+      "name": "PCA9685",
+      "id": "f7e7eb31ac170789",
+      "file": "pca9685.json"
+    },
+    {
+      "name": "PCA9685.GPIO",
+      "id": "69f4cba381782102",
+      "file": "pca9685-gpio.json"
+    },
+    {
+      "name": "PCA9685.PWM",
+      "id": "2d6857329102bdc5",
+      "file": "pca9685-pwm.json"
+    },
+    {
+      "name": "Pressure",
+      "id": "b667446e6eb2552f",
+      "file": "pressure.json"
+    },
+    {
+      "name": "PWM",
+      "id": "3c017f717b39247c",
+      "file": "pwm.json"
+    },
+    {
+      "name": "Resistance",
+      "id": "be970d090a9b0a23",
+      "file": "resistance.json"
+    },
+    {
+      "name": "Servo",
+      "id": "0069df340f9aff7c",
+      "file": "servo.json"
+    },
+    {
+      "name": "Servo.PWM_Template",
+      "id": "52fad8819494ef7f",
+      "file": "servo-pwm_template.json"
+    },
+    {
+      "name": "SPI",
+      "id": "8f3c56908f47fbc9",
+      "file": "spi.json"
+    },
+    {
+      "name": "Stepper",
+      "id": "3ea764f126993db3",
+      "file": "stepper.json"
+    },
+    {
+      "name": "TCS3472",
+      "id": "667195f5685cda2b",
+      "file": "tcs3472.json"
+    },
+    {
+      "name": "Temperature",
+      "id": "b314ae60cb741e69",
+      "file": "temperature.json"
+    },
+    {
+      "name": "TH02",
+      "id": "eb4c2f2015c9a4c1",
+      "file": "th02.json"
+    },
+    {
+      "name": "Thermistor",
+      "id": "4b9747fbf15de062",
+      "file": "thermistor.json"
+    },
+    {
+      "name": "Thermistor.NTC_B_Parms",
+      "id": "4c1d8ebb7aea23e7",
+      "file": "thermistor-ntc_b_parms.json"
+    },
+    {
+      "name": "TLC1543",
+      "id": "97c461d316fb673c",
+      "file": "tlc1543.json"
+    },
+    {
+      "name": "TMP102",
+      "id": "84afa767c796581e",
+      "file": "tmp102.json"
+    },
+    {
+      "name": "TrueColor",
+      "id": "4a5e83365abe1ee0",
+      "file": "truecolor.json"
+    },
+    {
+      "name": "Voltage",
+      "id": "01112e706d9eaf72",
+      "file": "voltage.json"
+    },
+    {
+      "name": "Watchdog",
+      "id": "422718fe17b063bc",
+      "file": "watchdog.json"
+    }
+  ]
+}

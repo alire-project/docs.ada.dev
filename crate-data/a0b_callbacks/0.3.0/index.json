@@ -1,0 +1,72 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_callbacks",
+  "version": "0.3.0",
+  "documented_at": "2026-10-29T02:21:03Z",
+  "description": "A0B Callbacks",
+  "long_description": "Provides type-safe mechanisms to invoke user-defined callback subprograms with optional user data, designed specifically for embedded systems and light runtimes without tasking constructs.\n\nThe library offers a core `Callback` type alongside several generic child packages tailored for different parameter types:\n- `Generic_Parameterless`: For parameterless procedures.\n- `Generic_Subprogram`: For procedures accepting parameters of unconstrained limited types.\n- `Generic_Non_Dispatching`: For procedures with class-wide type parameters.\n- `Generic_Dispatching`: For procedures with unconstrained abstract tagged type parameters.\n- `Generic_Discrete`: For procedures with discrete type parameters.\n\nIdeal for interrupt handlers, event-driven device drivers, and lightweight task synchronization in bare-metal environments.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "callbacks"
+  ],
+  "website": "https://github.com/godunko/a0b-callbacks",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-callbacks",
+    "host": "github",
+    "commit": "a7a1644543aba2797fbe68911d7cd26ced336a62"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "^0.6.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "A0B.Callbacks",
+      "id": "9f1c825c118c8277",
+      "file": "a0b-callbacks.json"
+    },
+    {
+      "name": "A0B.Callbacks.Empty",
+      "id": "b832863f54407fb2",
+      "file": "a0b-callbacks-empty.json"
+    },
+    {
+      "name": "A0B.Callbacks.Generic_Discrete",
+      "id": "08d2d50bd0a1b95b",
+      "file": "a0b-callbacks-generic_discrete.json"
+    },
+    {
+      "name": "A0B.Callbacks.Generic_Non_Dispatching",
+      "id": "f437dfaed54f0dc4",
+      "file": "a0b-callbacks-generic_non_dispatching.json"
+    },
+    {
+      "name": "A0B.Callbacks.Generic_Object_Aliased",
+      "id": "0b96672efcbe78e7",
+      "file": "a0b-callbacks-generic_object_aliased.json"
+    },
+    {
+      "name": "A0B.Callbacks.Generic_Parameterless",
+      "id": "d10b114e58ad05d3",
+      "file": "a0b-callbacks-generic_parameterless.json"
+    },
+    {
+      "name": "A0B.Callbacks.Generic_Subprogram",
+      "id": "a1016341ea005612",
+      "file": "a0b-callbacks-generic_subprogram.json"
+    },
+    {
+      "name": "A0B.Callbacks.No_Operation",
+      "id": "19d821247b95ae51",
+      "file": "a0b-callbacks-no_operation.json"
+    }
+  ]
+}

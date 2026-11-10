@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>smb — Ada/SPARK Documentation</title>
+  <meta name="description" content="Pure Ada SMB 2.1 client library with a SPARK-proved protocol core">
+  <meta name="keywords" content="Ada, SPARK, Alire, smb, smb, smb2, ntlm, network, client, spark, SMB">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "smb",
+"version": "0.1.0",  "description": "Pure Ada SMB 2.1 client library with a SPARK-proved protocol core",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/smb/",
+  "codeRepository": "https://github.com/gomurin0428/AdaSMB"
+  ,"author": [{"@type": "Person", "name": "Go Komura"}]
+  ,"license": "MIT OR Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">smb</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>smb</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">Pure Ada SMB 2.1 client library with a SPARK-proved protocol core</p>
+
+  <div class="long-description"><p>AdaSMB is a synchronous SMB 2.1 (dialect 0x0210) client library written in<br />
+Ada. It authenticates with NTLMv2 inside SPNEGO, requires SMB signing<br />
+(HMAC-SHA256) for the final session setup response and all later traffic, and<br />
+supports file open/read/write/close, directory listing, mkdir, delete and<br />
+rename on one share per connection.</p>
+<p>It uses only the regular GNAT runtime (GNAT.Sockets, Ada.Streams) and links no<br />
+C SMB or crypto library. Hashes, HMAC, NTLM and signing are implemented in Ada.<br />
+The default entropy source is /dev/urandom on Unix and BCryptGenRandom on<br />
+Windows.</p>
+<p>The protocol core (crypto, UTF-8/UTF-16 conversion, NTLMv2/SPNEGO, SMB header<br />
+and body parsing/building, framing, transfer progress, session and handle<br />
+state) is in SPARK and proved free of run-time errors together with its stated<br />
+contracts. Sockets, OS entropy and clock, allocation and the public facade<br />
+remain trusted. This is not a proof of cryptographic strength or of full SMB<br />
+conformance.</p>
+<p>Not supported: SMB1, SMB3, encryption, compression, compound requests,<br />
+Kerberos, guest/anonymous fallback and concurrent requests. The project is<br />
+experimental.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Go Komura</dd>
+
+    <dt>License</dt>
+    <dd>MIT OR Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/gomurin0428/AdaSMB">https://github.com/gomurin0428/AdaSMB</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">smb</span><span class="tag">smb2</span><span class="tag">ntlm</span><span class="tag">network</span><span class="tag">client</span><span class="tag">spark</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb/">SMB</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-client/">SMB.Client</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-clock/">SMB.Clock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_auth/">SMB.Core_Auth</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_client/">SMB.Core_Client</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_clock/">SMB.Core_Clock</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_connection/">SMB.Core_Connection</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_framing/">SMB.Core_Framing</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_ntlm/">SMB.Core_NTLM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_protocol/">SMB.Core_Protocol</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_text/">SMB.Core_Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_transport/">SMB.Core_Transport</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-core_wire/">SMB.Core_Wire</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-crypto/">SMB.Crypto</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-engine/">SMB.Engine</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-entropy/">SMB.Entropy</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-ntlm/">SMB.NTLM</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-text/">SMB.Text</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-transport/">SMB.Transport</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/smb/0.1.0/smb-wire/">SMB.Wire</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-11-10.
+    </p>
+  </footer>
+
+</body>
+</html>

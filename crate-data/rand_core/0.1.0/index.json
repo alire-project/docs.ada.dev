@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "rand_core",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:55:42Z",
+  "description": "Core interfaces for random number generation",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [],
+  "website": "https://github.com/AldanTanneo/rand-ada",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/rand-ada",
+    "host": "github",
+    "commit": "6d1af921227f1e7e0d61bf3cee431af701b99508",
+    "subdir": "rand_core/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Rand_Core",
+      "id": "4ff4e7d2f130e70f",
+      "file": "rand_core.json"
+    },
+    {
+      "name": "Rand_Core.Generators",
+      "id": "b7b68cc86188c206",
+      "file": "rand_core-generators.json"
+    },
+    {
+      "name": "Rand_Core.Utils",
+      "id": "00934a2c53157055",
+      "file": "rand_core-utils.json"
+    },
+    {
+      "name": "Rand_Core_Config",
+      "id": "53272ab0ad82483c",
+      "file": "rand_core_config.json"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1",
+  "crate": "wren",
+  "version": "0.1.0",
+  "documented_at": "2026-11-10T02:16:42Z",
+  "description": "A simple and fast linear algebra library for games and graphics",
+  "authors": [
+    "Azural"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "math"
+  ],
+  "website": "https://codeberg.org/Ada_Xerxes/Wren",
+  "repository": {
+    "url": "https://codeberg.org/Ada_Xerxes/Wren",
+    "host": "codeberg"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Wren",
+      "id": "b1e3c2ec1a80a8cc",
+      "file": "wren.json"
+    },
+    {
+      "name": "Wren.Dim2",
+      "id": "0ef39ed89a323a5f",
+      "file": "wren-dim2.json"
+    },
+    {
+      "name": "Wren.Dim3",
+      "id": "b4349c0620ac1338",
+      "file": "wren-dim3.json"
+    },
+    {
+      "name": "Wren.Euler",
+      "id": "e37717edc85ea454",
+      "file": "wren-euler.json"
+    },
+    {
+      "name": "Wren.Mat2",
+      "id": "2c57b7b54c2dfeef",
+      "file": "wren-mat2.json"
+    },
+    {
+      "name": "Wren.Mat3",
+      "id": "e9a62205fc3d80c0",
+      "file": "wren-mat3.json"
+    },
+    {
+      "name": "Wren.Quat",
+      "id": "103daa1dab58006d",
+      "file": "wren-quat.json"
+    },
+    {
+      "name": "Wren_Config",
+      "id": "021d69423ae66fa3",
+      "file": "wren_config.json"
+    }
+  ]
+}

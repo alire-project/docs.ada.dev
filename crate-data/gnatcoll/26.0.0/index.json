@@ -1,0 +1,373 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T12:27:14Z",
+  "description": "GNAT Components Collection - Core packages",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "gnatcoll",
+    "json",
+    "email",
+    "refcount",
+    "vfs"
+  ],
+  "website": "https://github.com/adacore/gnatcoll-core",
+  "repository": {
+    "url": "https://github.com/AdaCore/gnatcoll-core",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatcoll_minimal",
+      "version": "~26.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "GNATCOLL.Arg_Lists",
+      "id": "fa0b28e85f28e704",
+      "file": "gnatcoll-arg_lists.json"
+    },
+    {
+      "name": "GNATCOLL.Buffer",
+      "id": "c8f012270a42c2d6",
+      "file": "gnatcoll-buffer.json"
+    },
+    {
+      "name": "GNATCOLL.Config",
+      "id": "ed5bcc221b6ede12",
+      "file": "gnatcoll-config.json"
+    },
+    {
+      "name": "GNATCOLL.Directed_Graph",
+      "id": "0b465d33289b83f6",
+      "file": "gnatcoll-directed_graph.json"
+    },
+    {
+      "name": "GNATCOLL.Email",
+      "id": "c875c533efc415c4",
+      "file": "gnatcoll-email.json"
+    },
+    {
+      "name": "GNATCOLL.Email.Mailboxes",
+      "id": "052b71b01b6ce569",
+      "file": "gnatcoll-email-mailboxes.json"
+    },
+    {
+      "name": "GNATCOLL.Email.Parser",
+      "id": "b353b9f058032b87",
+      "file": "gnatcoll-email-parser.json"
+    },
+    {
+      "name": "GNATCOLL.Email.Utils",
+      "id": "e6c62cdeb3f32035",
+      "file": "gnatcoll-email-utils.json"
+    },
+    {
+      "name": "GNATCOLL.File_Indexes",
+      "id": "010bc4ba88681a99",
+      "file": "gnatcoll-file_indexes.json"
+    },
+    {
+      "name": "GNATCOLL.File_Paths",
+      "id": "b544f24b1422680a",
+      "file": "gnatcoll-file_paths.json"
+    },
+    {
+      "name": "GNATCOLL.Formatters",
+      "id": "afaa97a9f9c0c2f1",
+      "file": "gnatcoll-formatters.json"
+    },
+    {
+      "name": "GNATCOLL.Geometry",
+      "id": "b5bfaf9e9794bd2a",
+      "file": "gnatcoll-geometry.json"
+    },
+    {
+      "name": "GNATCOLL.Hash",
+      "id": "f9ea089755886ca6",
+      "file": "gnatcoll-hash.json"
+    },
+    {
+      "name": "GNATCOLL.Hash.Blake3",
+      "id": "28c881cb951808e0",
+      "file": "gnatcoll-hash-blake3.json"
+    },
+    {
+      "name": "GNATCOLL.Hash.xxHash",
+      "id": "b15ee5d2e410a7d6",
+      "file": "gnatcoll-hash-xxhash.json"
+    },
+    {
+      "name": "GNATCOLL.JSON",
+      "id": "f7214aae0f81e722",
+      "file": "gnatcoll-json.json"
+    },
+    {
+      "name": "GNATCOLL.Mmap",
+      "id": "d9d7fe991030c34d",
+      "file": "gnatcoll-mmap.json"
+    },
+    {
+      "name": "GNATCOLL.Mmap.Data_Getters",
+      "id": "22c14a71243068e4",
+      "file": "gnatcoll-mmap-data_getters.json"
+    },
+    {
+      "name": "GNATCOLL.Mmap.System",
+      "id": "d2aecf1d88c2e8aa",
+      "file": "gnatcoll-mmap-system.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse",
+      "id": "997c0f37f92efa77",
+      "file": "gnatcoll-opt_parse.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Misc_Parsers",
+      "id": "1657305ab991efe2",
+      "file": "gnatcoll-opt_parse-misc_parsers.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Misc_Parsers.Parse_Indexed_Option_List",
+      "id": "16c9cb42e1e584a8",
+      "file": "gnatcoll-opt_parse-misc_parsers-parse_indexed_option_list.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Parse_Enum_Option",
+      "id": "bd636fcc5f44da1a",
+      "file": "gnatcoll-opt_parse-parse_enum_option.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Parse_Flag",
+      "id": "25d054a180a2a4b3",
+      "file": "gnatcoll-opt_parse-parse_flag.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Parse_Option",
+      "id": "5554468e7902b10c",
+      "file": "gnatcoll-opt_parse-parse_option.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Parse_Option_List",
+      "id": "19f88bc3c511e393",
+      "file": "gnatcoll-opt_parse-parse_option_list.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Parse_Positional_Arg",
+      "id": "a1e85a890278b399",
+      "file": "gnatcoll-opt_parse-parse_positional_arg.json"
+    },
+    {
+      "name": "GNATCOLL.Opt_Parse.Parse_Positional_Arg_List",
+      "id": "fee41d166fdda5a2",
+      "file": "gnatcoll-opt_parse-parse_positional_arg_list.json"
+    },
+    {
+      "name": "GNATCOLL.OS",
+      "id": "27fdda9bdf6b6d1a",
+      "file": "gnatcoll-os.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Constants",
+      "id": "e915d608fa53a61b",
+      "file": "gnatcoll-os-constants.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Dir",
+      "id": "ab6511370a9dfbef",
+      "file": "gnatcoll-os-dir.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Dir_Types",
+      "id": "3784c3be31748c61",
+      "file": "gnatcoll-os-dir_types.json"
+    },
+    {
+      "name": "GNATCOLL.OS.FS",
+      "id": "41115d3bda7af4de",
+      "file": "gnatcoll-os-fs.json"
+    },
+    {
+      "name": "GNATCOLL.OS.FSUtil",
+      "id": "eb497c1d30d29310",
+      "file": "gnatcoll-os-fsutil.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Libc",
+      "id": "89ab1d0ad95e248a",
+      "file": "gnatcoll-os-libc.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Libc.Dirent",
+      "id": "3fa15dad8a1cd0a0",
+      "file": "gnatcoll-os-libc-dirent.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Libc.Spawn",
+      "id": "4843ce3ae28fd764",
+      "file": "gnatcoll-os-libc-spawn.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Libc.Stat",
+      "id": "f0ec82e47ccd8b8a",
+      "file": "gnatcoll-os-libc-stat.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Libc.Utime",
+      "id": "a9feba65b89fa3fb",
+      "file": "gnatcoll-os-libc-utime.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Libc_Constants",
+      "id": "64e5f5e8a86470fe",
+      "file": "gnatcoll-os-libc_constants.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Process",
+      "id": "01bec47624965892",
+      "file": "gnatcoll-os-process.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Process_Types",
+      "id": "f3ee36c4dd0bed8f",
+      "file": "gnatcoll-os-process_types.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Random",
+      "id": "240b64804503ab74",
+      "file": "gnatcoll-os-random.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Stat",
+      "id": "4fdb50a5046e5333",
+      "file": "gnatcoll-os-stat.json"
+    },
+    {
+      "name": "GNATCOLL.OS.Temp",
+      "id": "94a3f26ff7927e02",
+      "file": "gnatcoll-os-temp.json"
+    },
+    {
+      "name": "GNATCOLL.Paragraph_Filling",
+      "id": "7c34671fe85af83f",
+      "file": "gnatcoll-paragraph_filling.json"
+    },
+    {
+      "name": "GNATCOLL.Plugins",
+      "id": "c7db9c1a44db6aa4",
+      "file": "gnatcoll-plugins.json"
+    },
+    {
+      "name": "GNATCOLL.Pools",
+      "id": "5251ab3750288891",
+      "file": "gnatcoll-pools.json"
+    },
+    {
+      "name": "GNATCOLL.Random",
+      "id": "05d2835004f0b53a",
+      "file": "gnatcoll-random.json"
+    },
+    {
+      "name": "GNATCOLL.Remote",
+      "id": "ca92b7f4dbc5c473",
+      "file": "gnatcoll-remote.json"
+    },
+    {
+      "name": "GNATCOLL.Remote.Db",
+      "id": "7816f813d9b6673b",
+      "file": "gnatcoll-remote-db.json"
+    },
+    {
+      "name": "GNATCOLL.Scripts",
+      "id": "d174e9a861221d43",
+      "file": "gnatcoll-scripts.json"
+    },
+    {
+      "name": "GNATCOLL.Scripts.Impl",
+      "id": "58425d294a5e81db",
+      "file": "gnatcoll-scripts-impl.json"
+    },
+    {
+      "name": "GNATCOLL.Scripts.Utils",
+      "id": "88960e55da339800",
+      "file": "gnatcoll-scripts-utils.json"
+    },
+    {
+      "name": "GNATCOLL.String_Builders",
+      "id": "cd9e32f7e9f9db27",
+      "file": "gnatcoll-string_builders.json"
+    },
+    {
+      "name": "GNATCOLL.String_List_Builders",
+      "id": "cff4250366c325a5",
+      "file": "gnatcoll-string_list_builders.json"
+    },
+    {
+      "name": "GNATCOLL.Strings_Impl",
+      "id": "7181ed6b4331cce8",
+      "file": "gnatcoll-strings_impl.json"
+    },
+    {
+      "name": "GNATCOLL.Strings_Impl.Strings",
+      "id": "b88fbc547830dd00",
+      "file": "gnatcoll-strings_impl-strings.json"
+    },
+    {
+      "name": "GNATCOLL.Symbols",
+      "id": "1199ed262fb646f0",
+      "file": "gnatcoll-symbols.json"
+    },
+    {
+      "name": "GNATCOLL.Templates",
+      "id": "11d3dd13b60046aa",
+      "file": "gnatcoll-templates.json"
+    },
+    {
+      "name": "GNATCOLL.Terminal",
+      "id": "dff0f9b25e066bff",
+      "file": "gnatcoll-terminal.json"
+    },
+    {
+      "name": "GNATCOLL.Traces",
+      "id": "94b3a01313d3b481",
+      "file": "gnatcoll-traces.json"
+    },
+    {
+      "name": "GNATCOLL.Utils",
+      "id": "3eab529ba2c02070",
+      "file": "gnatcoll-utils.json"
+    },
+    {
+      "name": "GNATCOLL.VFS",
+      "id": "89530babf646fa9b",
+      "file": "gnatcoll-vfs.json"
+    },
+    {
+      "name": "GNATCOLL.VFS_Types",
+      "id": "8096a25e67d5af85",
+      "file": "gnatcoll-vfs_types.json"
+    },
+    {
+      "name": "GNATCOLL.VFS_Utils",
+      "id": "fc8aa3ea06fb0bcb",
+      "file": "gnatcoll-vfs_utils.json"
+    },
+    {
+      "name": "GNATCOLL.WString_Builders",
+      "id": "3f5e403401fed927",
+      "file": "gnatcoll-wstring_builders.json"
+    },
+    {
+      "name": "GNATCOLL.WString_List_Builders",
+      "id": "e9bca8902bfa4897",
+      "file": "gnatcoll-wstring_list_builders.json"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1",
+  "crate": "bigints",
+  "version": "0.2.0",
+  "documented_at": "2026-03-07T02:49:18Z",
+  "description": "Experimental SPARK Constant Time Big Integer library",
+  "long_description": "# SPARK Constant Time Big Integer library\n\nImplementation of a constant time big integer library, inspired by [crypto-bigint](https://github.com/RustCrypto/crypto-bigint).\n\nAll functions are implemented in constant time, except those with an explicit `_Vartime` suffix. Overloaded operators are also constant time.\n\n> ⚠️ The constant time choice primitives like `Ct_Eq`, `Ct_Gt`, `Cond_Select` and `CSwap` rely on best-effort optimisation barriers.\n\n## Usage\n\nThe implementations are generic over the size of the integer:\n\n```ada\npackage U256 is new Bigints.Uint (256);\npackage U1024 is new Bigints.Uint (1024);\n```\n\nThere is also a generic package to deal with modular integers (over a prime field):\n\n```ada\nP : U256.Uint := ... --  a big prime, like 2**255 - 19\npackage GF_P is new Bigints.Modular (U256, P);\n```\n\nIt is up to the user of the library to ensure the chosen modulus is effectively prime. Otherwise, operations like field inversion become invalid (as it relies on Fermat's little theorem).\n\n## Formal proof\n\nThe preinstantations in the library (packages `U256s` and `F25519`), as well as the constant time primitives and basic limb primitives, are formally checked using GNATprove.\n",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "bigint",
+    "cryptography",
+    "constant-time",
+    "spark",
+    "ada2022"
+  ],
+  "website": "https://github.com/AldanTanneo/bigints",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/bigints",
+    "host": "github",
+    "commit": "414589c10e5dec87aebf9cfe8fda675a047d45b1"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Bigints",
+      "id": "e0f591e9a6df67dd",
+      "file": "bigints.json"
+    },
+    {
+      "name": "Bigints.Const_Choice",
+      "id": "c4dd2a7164408a4c",
+      "file": "bigints-const_choice.json"
+    },
+    {
+      "name": "Bigints.Machine_Ints",
+      "id": "d21dc2cd2aae0156",
+      "file": "bigints-machine_ints.json"
+    },
+    {
+      "name": "Bigints.Machine_Ints.Builtins",
+      "id": "eafd5ceb3a8e9a0e",
+      "file": "bigints-machine_ints-builtins.json"
+    },
+    {
+      "name": "Bigints.Modular",
+      "id": "0698690c5ca5beae",
+      "file": "bigints-modular.json"
+    },
+    {
+      "name": "Bigints.Primitives",
+      "id": "b195cb837a0c6d0e",
+      "file": "bigints-primitives.json"
+    },
+    {
+      "name": "Bigints.Uints",
+      "id": "1e1569b49f1ff514",
+      "file": "bigints-uints.json"
+    },
+    {
+      "name": "Bigints.Uints.Modulo_Ops",
+      "id": "4f93e2b952bd76cf",
+      "file": "bigints-uints-modulo_ops.json"
+    },
+    {
+      "name": "Bigints_Config",
+      "id": "7d45150f5ca255c4",
+      "file": "bigints_config.json"
+    }
+  ]
+}
