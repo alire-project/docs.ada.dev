@@ -1,0 +1,65 @@
+{
+  "schema_version": "1",
+  "crate": "neural_kit",
+  "version": "0.2.0",
+  "documented_at": "2026-11-15T02:14:50Z",
+  "description": "A neural network and deep learning framework written in Ada 2022",
+  "authors": [
+    "Lokesh Panditi <lokesh.panditi.29@gmail.com>"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "ai",
+    "deep-learning",
+    "ml",
+    "neural-network",
+    "linear-algebra",
+    "ada"
+  ],
+  "website": "https://github.com/thirstymelon/Neural_Kit",
+  "repository": {
+    "url": "https://github.com/thirstymelon/Neural_Kit",
+    "host": "github",
+    "commit": "56edecc00edfbcf55d442e6ba452548d988c134b"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Neural_Kit",
+      "id": "7d9b7281ddaae8b3",
+      "file": "neural_kit.json"
+    },
+    {
+      "name": "Neural_Kit.Layer",
+      "id": "5adb381a16bad770",
+      "file": "neural_kit-layer.json"
+    },
+    {
+      "name": "Neural_Kit.Math",
+      "id": "933eefbe14fa1ff1",
+      "file": "neural_kit-math.json"
+    },
+    {
+      "name": "Neural_Kit.Neuron",
+      "id": "2ad83193dc92f290",
+      "file": "neural_kit-neuron.json"
+    },
+    {
+      "name": "Neural_Kit.Random",
+      "id": "eb8cf245901fd53a",
+      "file": "neural_kit-random.json"
+    },
+    {
+      "name": "Neural_Kit.Types",
+      "id": "20cbb7685a45b940",
+      "file": "neural_kit-types.json"
+    },
+    {
+      "name": "Neural_Kit_Config",
+      "id": "e8a5bf1026eefdf8",
+      "file": "neural_kit_config.json"
+    }
+  ]
+}
