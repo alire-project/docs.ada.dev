@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"glyph","version":"1.2.0","id":"92731ba7ab7b4c38","name":"Glyph.Display","qualified_name":"Glyph.Display","kind":"ada_package","location":{"file":"src/display/glyph-display.ads","line":1,"column":9},"code":"package Glyph.Display"}
