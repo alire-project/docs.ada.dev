@@ -1,0 +1,131 @@
+{
+  "schema_version": "1",
+  "crate": "smb",
+  "version": "0.1.0",
+  "documented_at": "2026-11-04T02:19:31Z",
+  "description": "Pure Ada SMB 2.1 client library with a SPARK-proved protocol core",
+  "long_description": "AdaSMB is a synchronous SMB 2.1 (dialect 0x0210) client library written in\nAda. It authenticates with NTLMv2 inside SPNEGO, requires SMB signing\n(HMAC-SHA256) for the final session setup response and all later traffic, and\nsupports file open/read/write/close, directory listing, mkdir, delete and\nrename on one share per connection.\n\nIt uses only the regular GNAT runtime (GNAT.Sockets, Ada.Streams) and links no\nC SMB or crypto library. Hashes, HMAC, NTLM and signing are implemented in Ada.\nThe default entropy source is /dev/urandom on Unix and BCryptGenRandom on\nWindows.\n\nThe protocol core (crypto, UTF-8/UTF-16 conversion, NTLMv2/SPNEGO, SMB header\nand body parsing/building, framing, transfer progress, session and handle\nstate) is in SPARK and proved free of run-time errors together with its stated\ncontracts. Sockets, OS entropy and clock, allocation and the public facade\nremain trusted. This is not a proof of cryptographic strength or of full SMB\nconformance.\n\nNot supported: SMB1, SMB3, encryption, compression, compound requests,\nKerberos, guest/anonymous fallback and concurrent requests. The project is\nexperimental.\n",
+  "authors": [
+    "Go Komura"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0"
+  ],
+  "tags": [
+    "smb",
+    "smb2",
+    "ntlm",
+    "network",
+    "client",
+    "spark"
+  ],
+  "website": "https://github.com/gomurin0428/AdaSMB",
+  "repository": {
+    "url": "https://github.com/gomurin0428/AdaSMB",
+    "host": "github",
+    "commit": "ac5c6fb46d047d7ed54ac0ed232a948c06d758f4"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SMB",
+      "id": "ddc59701c6bdd9c4",
+      "file": "smb.json"
+    },
+    {
+      "name": "SMB.Client",
+      "id": "2517bfe6b32dfb6d",
+      "file": "smb-client.json"
+    },
+    {
+      "name": "SMB.Clock",
+      "id": "a3edd62b54ca027c",
+      "file": "smb-clock.json"
+    },
+    {
+      "name": "SMB.Core_Auth",
+      "id": "fede0c86498caf34",
+      "file": "smb-core_auth.json"
+    },
+    {
+      "name": "SMB.Core_Client",
+      "id": "50f071d909c9987a",
+      "file": "smb-core_client.json"
+    },
+    {
+      "name": "SMB.Core_Clock",
+      "id": "ef1a837ea10078fc",
+      "file": "smb-core_clock.json"
+    },
+    {
+      "name": "SMB.Core_Connection",
+      "id": "4018fd8e49d2e51b",
+      "file": "smb-core_connection.json"
+    },
+    {
+      "name": "SMB.Core_Framing",
+      "id": "478fa6db5ac36776",
+      "file": "smb-core_framing.json"
+    },
+    {
+      "name": "SMB.Core_NTLM",
+      "id": "e0cea950e33525bd",
+      "file": "smb-core_ntlm.json"
+    },
+    {
+      "name": "SMB.Core_Protocol",
+      "id": "7cb2047d99a549a6",
+      "file": "smb-core_protocol.json"
+    },
+    {
+      "name": "SMB.Core_Text",
+      "id": "26160bc5b549fe0a",
+      "file": "smb-core_text.json"
+    },
+    {
+      "name": "SMB.Core_Transport",
+      "id": "4d9f2f34fe6974e4",
+      "file": "smb-core_transport.json"
+    },
+    {
+      "name": "SMB.Core_Wire",
+      "id": "96766bc938d7cd4a",
+      "file": "smb-core_wire.json"
+    },
+    {
+      "name": "SMB.Crypto",
+      "id": "2a3e226eaf829123",
+      "file": "smb-crypto.json"
+    },
+    {
+      "name": "SMB.Engine",
+      "id": "ee0d6abed5e5d2c3",
+      "file": "smb-engine.json"
+    },
+    {
+      "name": "SMB.Entropy",
+      "id": "c9ae55ab4736d5f2",
+      "file": "smb-entropy.json"
+    },
+    {
+      "name": "SMB.NTLM",
+      "id": "4f63ab08697a7248",
+      "file": "smb-ntlm.json"
+    },
+    {
+      "name": "SMB.Text",
+      "id": "35927cc3ec9a718c",
+      "file": "smb-text.json"
+    },
+    {
+      "name": "SMB.Transport",
+      "id": "16cba027761c8040",
+      "file": "smb-transport.json"
+    },
+    {
+      "name": "SMB.Wire",
+      "id": "225a0d3210429a15",
+      "file": "smb-wire.json"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1",
+  "crate": "trendy_terminal",
+  "version": "0.0.6",
+  "documented_at": "2026-05-05T03:02:38Z",
+  "description": "Terminal options, setup, tab completion and hinting.",
+  "authors": [
+    "Paul Jarrett"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "terminal",
+    "command-line",
+    "console",
+    "vt100"
+  ],
+  "website": "https://github.com/pyjarrett/trendy_terminal",
+  "repository": {
+    "url": "https://github.com/pyjarrett/trendy_terminal",
+    "host": "github",
+    "commit": "b839446ae9d7b0344c50fd4bebaa4deaaf192d14"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Trendy_Terminal",
+      "id": "756f7f60053cc775",
+      "file": "trendy_terminal.json"
+    },
+    {
+      "name": "Trendy_Terminal.Completions",
+      "id": "0ca1eec6a73f9d84",
+      "file": "trendy_terminal-completions.json"
+    },
+    {
+      "name": "Trendy_Terminal.Environments",
+      "id": "68476b8d11d02725",
+      "file": "trendy_terminal-environments.json"
+    },
+    {
+      "name": "Trendy_Terminal.Histories",
+      "id": "4d94e276cad0e626",
+      "file": "trendy_terminal-histories.json"
+    },
+    {
+      "name": "Trendy_Terminal.IO",
+      "id": "e1bef3c201fed457",
+      "file": "trendy_terminal-io.json"
+    },
+    {
+      "name": "Trendy_Terminal.IO.Line_Editors",
+      "id": "1e2a7bf651573946",
+      "file": "trendy_terminal-io-line_editors.json"
+    },
+    {
+      "name": "Trendy_Terminal.Lines",
+      "id": "aa53b8c0faa3db22",
+      "file": "trendy_terminal-lines.json"
+    },
+    {
+      "name": "Trendy_Terminal.Linux",
+      "id": "4d038aa5c5ae20f6",
+      "file": "trendy_terminal-linux.json"
+    },
+    {
+      "name": "Trendy_Terminal.Maps",
+      "id": "fee14500df991de5",
+      "file": "trendy_terminal-maps.json"
+    },
+    {
+      "name": "Trendy_Terminal.Platform",
+      "id": "cbf1182cb742f868",
+      "file": "trendy_terminal-platform.json"
+    },
+    {
+      "name": "Trendy_Terminal.VT100",
+      "id": "c20d11dc36544f2c",
+      "file": "trendy_terminal-vt100.json"
+    }
+  ]
+}

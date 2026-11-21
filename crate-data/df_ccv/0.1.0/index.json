@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "df_ccv",
+  "version": "0.1.0",
+  "documented_at": "2026-06-23T03:02:17Z",
+  "description": "Ada bindings to Liu Liu's CCV computer vision library",
+  "authors": [
+    "The Dark Factory Ltd"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "binding",
+    "image",
+    "computer-vision",
+    "ccv"
+  ],
+  "website": "https://github.com/the-dark-factory/ccv-ada",
+  "repository": {
+    "url": "https://github.com/the-dark-factory/ccv-ada",
+    "host": "github",
+    "commit": "ec4e224e77c7ec669663a887b80bec416f1dec84"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Ccv",
+      "id": "2cabcae64dace8ca",
+      "file": "ccv.json"
+    },
+    {
+      "name": "Ccv.C",
+      "id": "8e21304fc0d200f9",
+      "file": "ccv-c.json"
+    },
+    {
+      "name": "Ccv.Image",
+      "id": "b432d93b5a1b2de2",
+      "file": "ccv-image.json"
+    },
+    {
+      "name": "Ccv.Io",
+      "id": "53fe00ed4615f9e4",
+      "file": "ccv-io.json"
+    }
+  ]
+}

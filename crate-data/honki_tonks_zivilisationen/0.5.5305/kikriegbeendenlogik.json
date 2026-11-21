@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"honki_tonks_zivilisationen","version":"0.5.5305","id":"55c4cfe768a6ff0f","name":"KIKriegBeendenLogik","qualified_name":"KIKriegBeendenLogik","kind":"ada_package","location":{"file":"src/Logik/KI/Diplomatie/KIKriegBeendenLogik.ads","line":1,"column":9},"code":"package KIKriegBeendenLogik"}

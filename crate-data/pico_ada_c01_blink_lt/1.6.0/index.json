@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c01_blink_lt",
+  "version": "1.6.0",
+  "documented_at": "2026-05-05T03:02:04Z",
+  "description": "Chapter 1 Reloaded: Blinking LEDs on Both Cores",
+  "long_description": "Blinking LEDs on Both Cores Updated Chapter 1 using the new light_tasking_rp2040\nruntime - now with proper multi-core support, Ada.Real_Time, and delay until for accurate, slippage-free LED blinking on\nRaspberry Pi Pico.\n\nAfter quick community help, I rewrote Chapter 1 to use light tasking on both RP2040 cores. No more manual timers -\nclean, precise dual-LED blinking with zero slippage.\n\nContained in Chapter 01 reloaded are:\n\n1. blink\t     - Jeremy Grosser Ada sample\n2. sketch_01_1_blink - Chapter 1.1 Blink internal LED\n3. sketch_01_2_blink - Chapter 1.2 Blink external LED\n4. double_blink-main - double blink using both cores.\n\nRead the full tutorial at [Chapter 1 Reloaded: Dual-Core Light Tasking - Blinking LEDs on Both\nCores](https://pi-ada-tutorial.sourceforge.io/pico_ada_c01_blink_lt), [GNATdoc\ndocumentation](https://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c01_blink_lt/), [SourceForge\nrepository](https://sourceforge.net/p/pi-ada-tutorial/code/ci/master/tree/pico2_ada_c01_blink_lt/)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c01_blink_lt",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "^15.3"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Double_Blink",
+      "id": "a1b94568e7d2b05d",
+      "file": "double_blink.json"
+    },
+    {
+      "name": "Pico_Ada_C01_Blink_Lt_Config",
+      "id": "9970b56c94e59eca",
+      "file": "pico_ada_c01_blink_lt_config.json"
+    }
+  ]
+}

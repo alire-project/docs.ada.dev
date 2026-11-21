@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"474d2539107a1771","name":"Agpl.Gtk","qualified_name":"Agpl.Gtk","kind":"ada_package","location":{"file":"src/agpl-gtk.ads","line":3,"column":9},"code":"package Agpl.Gtk"}

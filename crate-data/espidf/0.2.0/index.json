@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "crate": "espidf",
+  "version": "0.2.0",
+  "documented_at": "2026-09-30T02:27:54Z",
+  "description": "Ada/ESP-IDF: common types and utilities for ESP-IDF bindings",
+  "long_description": "Root crate of the Ada bindings for the Espressif IoT Development Framework (ESP-IDF).\n\nProvides definitions shared by all `espidf_*` binding crates:\n- C types used across ESP-IDF APIs (`esp_err_t`, `size_t`, ...);\n- conversion of strings between Ada and C;\n- conversion of `esp_err_t` error codes into Ada exceptions.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf"
+  ],
+  "website": "https://github.com/godunko/espidf",
+  "repository": {
+    "url": "https://github.com/godunko/espidf",
+    "host": "github",
+    "commit": "180c1c28078d5e6ce432c48d9d1f35fe668b6047"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "^0.5.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF",
+      "id": "59b6020c741b4814",
+      "file": "espidf.json"
+    },
+    {
+      "name": "ESPIDF.C_Strings",
+      "id": "4a37cd82c2a225ae",
+      "file": "espidf-c_strings.json"
+    },
+    {
+      "name": "ESPIDF.Driver",
+      "id": "41e9ba672eaaf48c",
+      "file": "espidf-driver.json"
+    },
+    {
+      "name": "ESPIDF.HAL",
+      "id": "aa08b16d4e5b43dc",
+      "file": "espidf-hal.json"
+    }
+  ]
+}

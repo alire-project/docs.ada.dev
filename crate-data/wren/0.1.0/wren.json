@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"wren","version":"0.1.0","id":"b1e3c2ec1a80a8cc","name":"Wren","qualified_name":"Wren","kind":"ada_package","location":{"file":"src/wren.ads","line":1,"column":9},"code":"package Wren"}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "orka",
+  "version": "1.0.0",
+  "failed_at": "2026-03-05T02:59:38Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "1",
+  "crate": "sparknacl",
+  "version": "4.0.1",
+  "documented_at": "2026-03-06T02:58:48Z",
+  "description": "Verified SPARK 2014 re-implementation of TweetNaCl cryptographic library",
+  "long_description": "SPARK 2014 re-implementation of TweetNaCl cryptographic library, with fully automated proofs of type safety and some correctness properties",
+  "authors": [
+    "Rod Chapman"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "spark",
+    "cryptography",
+    "security",
+    "nacl",
+    "curve25519",
+    "ed25519",
+    "tweetnacl"
+  ],
+  "website": "https://github.com/rod-chapman/SPARKNaCl",
+  "repository": {
+    "url": "https://github.com/rod-chapman/sparknacl",
+    "host": "github",
+    "commit": "8e3cc2e6a67826cbfb1e36559238e03cb024a706"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "SPARKNaCl",
+      "id": "72605bb96fd50128",
+      "file": "sparknacl.json"
+    },
+    {
+      "name": "SPARKNaCl.AES",
+      "id": "cb24fab4411b944b",
+      "file": "sparknacl-aes.json"
+    },
+    {
+      "name": "SPARKNaCl.Core",
+      "id": "9f39f825de3bc1d1",
+      "file": "sparknacl-core.json"
+    },
+    {
+      "name": "SPARKNaCl.Cryptobox",
+      "id": "7f0d586f2805908c",
+      "file": "sparknacl-cryptobox.json"
+    },
+    {
+      "name": "SPARKNaCl.Debug",
+      "id": "6849a680bd8b0ab4",
+      "file": "sparknacl-debug.json"
+    },
+    {
+      "name": "SPARKNaCl.Hashing",
+      "id": "d4022af6257d0d70",
+      "file": "sparknacl-hashing.json"
+    },
+    {
+      "name": "SPARKNaCl.Hashing.RFSB509",
+      "id": "60f2373161d7b0c4",
+      "file": "sparknacl-hashing-rfsb509.json"
+    },
+    {
+      "name": "SPARKNaCl.Hashing.SHA256",
+      "id": "744df954658866d1",
+      "file": "sparknacl-hashing-sha256.json"
+    },
+    {
+      "name": "SPARKNaCl.Hashing.SHA2_Common",
+      "id": "5b2bffe5b283d117",
+      "file": "sparknacl-hashing-sha2_common.json"
+    },
+    {
+      "name": "SPARKNaCl.Hashing.SHA384",
+      "id": "87dd8ff0c219cae0",
+      "file": "sparknacl-hashing-sha384.json"
+    },
+    {
+      "name": "SPARKNaCl.Hashing.SHA512",
+      "id": "66510d044a800036",
+      "file": "sparknacl-hashing-sha512.json"
+    },
+    {
+      "name": "SPARKNaCl.HKDF",
+      "id": "85e7e2a13b4ec22e",
+      "file": "sparknacl-hkdf.json"
+    },
+    {
+      "name": "SPARKNaCl.MAC",
+      "id": "a4794ea875e7e176",
+      "file": "sparknacl-mac.json"
+    },
+    {
+      "name": "SPARKNaCl.Scalar",
+      "id": "cf46bcfd7b61ea1b",
+      "file": "sparknacl-scalar.json"
+    },
+    {
+      "name": "SPARKNaCl.Secretbox",
+      "id": "d3b6e1fd463cd6a0",
+      "file": "sparknacl-secretbox.json"
+    },
+    {
+      "name": "SPARKNaCl.Sign",
+      "id": "662f1e638146b233",
+      "file": "sparknacl-sign.json"
+    },
+    {
+      "name": "SPARKNaCl.Sign.Utils",
+      "id": "70ae6d11e2d37424",
+      "file": "sparknacl-sign-utils.json"
+    },
+    {
+      "name": "SPARKNaCl.Stream",
+      "id": "9ea98d396ee04299",
+      "file": "sparknacl-stream.json"
+    }
+  ]
+}

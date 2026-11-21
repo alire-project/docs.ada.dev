@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "hmac",
+  "version": "2.0.0",
+  "documented_at": "2026-03-04T15:17:17Z",
+  "description": "HMAC implemented in Ada",
+  "authors": [
+    "Anton Fediushin"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "tags": [
+    "cryptography",
+    "security",
+    "hmac"
+  ],
+  "website": "https://github.com/AntonMeep/hmac",
+  "repository": {
+    "url": "https://github.com/AntonMeep/hmac",
+    "host": "github",
+    "commit": "d8046c212cc27744710cfa075462ac4ff766f1c6"
+  },
+  "dependencies": [
+    {
+      "crate": "sha1",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "sha2",
+      "version": "^2.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "HMAC",
+      "id": "f9ccd92bb6af4cb4",
+      "file": "hmac.json"
+    },
+    {
+      "name": "HMAC_Generic",
+      "id": "6e100c399795ceb0",
+      "file": "hmac_generic.json"
+    }
+  ]
+}

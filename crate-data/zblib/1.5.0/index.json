@@ -1,0 +1,258 @@
+{
+  "schema_version": "1",
+  "crate": "zblib",
+  "version": "1.5.0",
+  "documented_at": "2026-05-12T03:04:31Z",
+  "description": "Library for ZanyBlue Ada Localization",
+  "authors": [
+    "Michael Rohan"
+  ],
+  "licenses": [
+    "custom-zanyblue"
+  ],
+  "tags": [
+    "localization",
+    "l10n",
+    "international",
+    "i18n"
+  ],
+  "website": "https://sourceforge.net/projects/zanyblue",
+  "repository": {
+    "url": "https://github.com/Blady-Com/zanyblue",
+    "host": "github",
+    "commit": "12b866dd373d38d7528aed858b022c75cd4bef5f"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "ZanyBlue",
+      "id": "4c7c902e2e5a14bc",
+      "file": "zanyblue.json"
+    },
+    {
+      "name": "ZanyBlue.OS",
+      "id": "82ad6f6e0a7b35df",
+      "file": "zanyblue-os.json"
+    },
+    {
+      "name": "ZanyBlue.OS.Ld_Run_Path",
+      "id": "a30b1c9a7d9e553e",
+      "file": "zanyblue-os-ld_run_path.json"
+    },
+    {
+      "name": "ZanyBlue.Parameters",
+      "id": "a78eca9dc9c200e8",
+      "file": "zanyblue-parameters.json"
+    },
+    {
+      "name": "ZanyBlue.Parameters.Scopes",
+      "id": "99342673afa9860e",
+      "file": "zanyblue-parameters-scopes.json"
+    },
+    {
+      "name": "ZanyBlue.Parameters.Sets",
+      "id": "6c56d9047af644a7",
+      "file": "zanyblue-parameters-sets.json"
+    },
+    {
+      "name": "ZanyBlue.Parameters.Values",
+      "id": "e39199e1ba0a7bb9",
+      "file": "zanyblue-parameters-values.json"
+    },
+    {
+      "name": "ZanyBlue.Text",
+      "id": "73a91821991161a3",
+      "file": "zanyblue-text.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Arguments",
+      "id": "2a0f4ce19b5fd5c6",
+      "file": "zanyblue-text-arguments.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Booleans",
+      "id": "f18ddb660324bf09",
+      "file": "zanyblue-text-booleans.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Catalogs",
+      "id": "5bde330b92352d3a",
+      "file": "zanyblue-text-catalogs.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Characters",
+      "id": "b3d92722aef114e0",
+      "file": "zanyblue-text-characters.json"
+    },
+    {
+      "name": "ZanyBlue.Text.CLDR",
+      "id": "31b236b9dee8552e",
+      "file": "zanyblue-text-cldr.json"
+    },
+    {
+      "name": "ZanyBlue.Text.CLDR_Data",
+      "id": "27ef984a141e5db1",
+      "file": "zanyblue-text-cldr_data.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Codecs",
+      "id": "9376f0f50935bae7",
+      "file": "zanyblue-text-codecs.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Durations",
+      "id": "9bdf3d94fdd00a9c",
+      "file": "zanyblue-text-durations.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Exceptions",
+      "id": "af338873552a7d57",
+      "file": "zanyblue-text-exceptions.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Filter",
+      "id": "3aa62df7a396c591",
+      "file": "zanyblue-text-filter.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Format_Errors",
+      "id": "fb150b0023705605",
+      "file": "zanyblue-text-format_errors.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Format_Parser",
+      "id": "26e51ea9835e0634",
+      "file": "zanyblue-text-format_parser.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Formatting",
+      "id": "05c4c1b236517efe",
+      "file": "zanyblue-text-formatting.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Generic_Buffer",
+      "id": "c22b39140f01cf1f",
+      "file": "zanyblue-text-generic_buffer.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Generic_Enumerations",
+      "id": "c9b71a93bc4413c2",
+      "file": "zanyblue-text-generic_enumerations.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Generic_Fixed",
+      "id": "2aaf403b6e513095",
+      "file": "zanyblue-text-generic_fixed.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Generic_Floats",
+      "id": "fb301ba2e1d006fa",
+      "file": "zanyblue-text-generic_floats.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Generic_Integers",
+      "id": "0dfef050d470b13b",
+      "file": "zanyblue-text-generic_integers.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Generic_Modulars",
+      "id": "8cdde792dd78ca2d",
+      "file": "zanyblue-text-generic_modulars.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Locales",
+      "id": "57ab125541719149",
+      "file": "zanyblue-text-locales.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Message_Maps",
+      "id": "28011e366715dcb2",
+      "file": "zanyblue-text-message_maps.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Metrics",
+      "id": "f3a2119f3ce493f5",
+      "file": "zanyblue-text-metrics.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Null_Object",
+      "id": "83853e2766aad1b3",
+      "file": "zanyblue-text-null_object.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Printer",
+      "id": "24d87a58d67d3620",
+      "file": "zanyblue-text-printer.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Properties_Parser",
+      "id": "59c39e79a49a80f9",
+      "file": "zanyblue-text-properties_parser.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Pseudo",
+      "id": "d0a16cc7952f9d2b",
+      "file": "zanyblue-text-pseudo.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Strings",
+      "id": "f49f52f71456d8c1",
+      "file": "zanyblue-text-strings.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Times",
+      "id": "615e205f94013682",
+      "file": "zanyblue-text-times.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Unbounded_Strings",
+      "id": "8d3ba6bacfa4dd47",
+      "file": "zanyblue-text-unbounded_strings.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Unbounded_Wide_Strings",
+      "id": "79cd383f6dd1d770",
+      "file": "zanyblue-text-unbounded_wide_strings.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Utils",
+      "id": "c02ffbf1bf319a12",
+      "file": "zanyblue-text-utils.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Wide_Characters",
+      "id": "dbb4e1f56fdb6df3",
+      "file": "zanyblue-text-wide_characters.json"
+    },
+    {
+      "name": "ZanyBlue.Text.Wide_Strings",
+      "id": "5671eb4f4b7f59d5",
+      "file": "zanyblue-text-wide_strings.json"
+    },
+    {
+      "name": "ZanyBlue.Utils",
+      "id": "497e8e82c5003417",
+      "file": "zanyblue-utils.json"
+    },
+    {
+      "name": "ZanyBlue.Utils.DateTimes",
+      "id": "5b6d9095086ff98f",
+      "file": "zanyblue-utils-datetimes.json"
+    },
+    {
+      "name": "ZanyBlue.Wide_Command_Line",
+      "id": "2c01c81721043d43",
+      "file": "zanyblue-wide_command_line.json"
+    },
+    {
+      "name": "ZanyBlue.Wide_Directories",
+      "id": "8f291876327c0ce3",
+      "file": "zanyblue-wide_directories.json"
+    },
+    {
+      "name": "ZanyBlue.Wide_Regexp",
+      "id": "abed1c626d8f01bb",
+      "file": "zanyblue-wide_regexp.json"
+    }
+  ]
+}

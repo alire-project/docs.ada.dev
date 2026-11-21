@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "wolfssl",
+  "version": "5.9.2",
+  "failed_at": "2026-07-03T03:02:37Z",
+  "stage": "locate",
+  "message": "Could not find crate root for wolfssl=5.9.2 in /tmp/gnatdoc_wm5jdrys"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1",
+  "crate": "uxstrings",
+  "version": "0.9.4+alpha-20260718",
+  "documented_at": "2026-07-22T03:01:25Z",
+  "description": "Unicode Extended Strings utilities",
+  "authors": [
+    "Pascal Pignard"
+  ],
+  "licenses": [
+    "CECILL-C"
+  ],
+  "tags": [
+    "unicode",
+    "dynamic",
+    "string"
+  ],
+  "website": "https://github.com/Blady-Com/UXStrings",
+  "repository": {
+    "url": "https://github.com/Blady-Com/UXStrings",
+    "host": "github",
+    "commit": "7f4c341c8a78afa3252145da03a1b76ae41fbbe6"
+  },
+  "dependencies": [
+    {
+      "crate": "simple_components",
+      "version": "^4.62"
+    }
+  ],
+  "units": [
+    {
+      "name": "UXStrings",
+      "id": "499fdc759a499f66",
+      "file": "uxstrings.json"
+    },
+    {
+      "name": "UXStrings.Conversions",
+      "id": "87dd59e4f463c718",
+      "file": "uxstrings-conversions.json"
+    },
+    {
+      "name": "UXStrings.Formatting",
+      "id": "05ebd8fa61cbe2dc",
+      "file": "uxstrings-formatting.json"
+    },
+    {
+      "name": "UXStrings.Lists",
+      "id": "8b9c1edcd5e06f62",
+      "file": "uxstrings-lists.json"
+    },
+    {
+      "name": "UXStrings.Text_IO",
+      "id": "bdac4925addb727f",
+      "file": "uxstrings-text_io.json"
+    },
+    {
+      "name": "UXStrings.Text_IO.Text_Streams",
+      "id": "11e8d2ee7946db9a",
+      "file": "uxstrings-text_io-text_streams.json"
+    }
+  ]
+}

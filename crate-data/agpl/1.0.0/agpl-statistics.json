@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"agpl","version":"1.0.0","id":"21314ac53da321c3","name":"Agpl.Statistics","qualified_name":"Agpl.Statistics","kind":"ada_package","location":{"file":"src/agpl-statistics.ads","line":1,"column":9},"code":"package Agpl.Statistics"}

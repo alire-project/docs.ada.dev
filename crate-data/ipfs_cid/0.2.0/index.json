@@ -1,0 +1,59 @@
+{
+  "schema_version": "1",
+  "crate": "ipfs_cid",
+  "version": "0.2.0",
+  "documented_at": "2026-10-23T02:24:05Z",
+  "description": "IPFS CID library for Ada: varint, multihash, multibase, CIDv0/v1",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "ipfs",
+    "cid",
+    "multihash",
+    "multibase",
+    "p2p"
+  ],
+  "website": "https://github.com/kokhlo/ipfs_cid",
+  "repository": {
+    "url": "https://github.com/kokhlo/ipfs_cid",
+    "host": "github",
+    "commit": "9e3e1c3193773d304805f4e09a16064fe62ce54d"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "IPFS",
+      "id": "b63927b164266bef",
+      "file": "ipfs.json"
+    },
+    {
+      "name": "IPFS.Base32",
+      "id": "a337c8c6df13f0f7",
+      "file": "ipfs-base32.json"
+    },
+    {
+      "name": "IPFS.Base58",
+      "id": "341ee32e8a3f9564",
+      "file": "ipfs-base58.json"
+    },
+    {
+      "name": "IPFS.CID",
+      "id": "52dc46b9a32cfe21",
+      "file": "ipfs-cid.json"
+    },
+    {
+      "name": "IPFS.Multihash",
+      "id": "0f3d4411af261c87",
+      "file": "ipfs-multihash.json"
+    },
+    {
+      "name": "IPFS.Varint",
+      "id": "32f7b69ec1050e96",
+      "file": "ipfs-varint.json"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "1",
+  "crate": "rand",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:55:39Z",
+  "description": "Random number generation toolkit",
+  "long_description": "# Random number generation toolkit for Ada\n\nDesign principles mostly inspired by the [rand](https://github.com/rust-random/rand) Rust crate.\n\nThe project is split into several subcrates. `rand_core`, `rand_chacha`, `rand_xoshiro256` and `rand_distributions` can be used on embedded; However, `rand_sys` (and its dependent `rand`, the main crate) pull entropy from system sources, using the [`system_random`](https://alire.ada.dev/crates/system_random) Alire crate.\n\n## Usage examples\n\nGet a thread local instance of a secure Random Number Generator (RNG), seeded with system entropy:\n\n```ada\nwith Rand;\nR : Rand.Rng := Rand.Thread_Rng;\n--  alternatively:\nR : Rand.Rng := Rand.Small_Rng;\n   --  a fast, unsecure RNG seeded with system entropy\nR : Rand.Rng := Rand.Sys.Get;\n   --  RNG based on system randomness sources\n   --  (OS-dependent)\n```\n\nUse convenience methods on the RNG to generate basic types:\n\n```ada\nV1 : Float := R.Gen;        --  a float in the range [0, 1)\nV2 : Long_Integer := R.Gen; --  a long integer over the whole range\n```\n\nYou can also define your own random number generators by implementing the `Rand.Core_Rng` interface (alias for `Rand_Core.Rng`).\n\nUse `Next` and `Next_Bytes` to get the raw output of any RNG:\n\n```ada\nBuf : Rand.Core.Bytes (1 .. 256);\nR.Next_Bytes (Buf);\nX : Rand.Core.U64 := R.Next;\n```\n\nUse a predefined random distribution to get finer random value selection:\n\n```ada\nuse Rand.Distributions;\nD1 : Uniform_Nat.Distribution := Uniform_Nat.Create (8, 27);\nS : Natural := D1.Sample (R);\n   --  sample in the inclusive range [8, 27]\n\nD2 : Bernoulli := Bernoulli.Create (0.25);\nS : Boolean := D2.Sample (R);\n   --  a boolean that is True 25% of the time\n```\n\nOr define your own distributions:\n\n```ada\nuse Rand.Distributions;\n\ntype Gaussian is new Long_Float_Distr.Distribution with record\n   Sigma : Long_Float;\nend record;\n\noverriding\nfunction Sample (D : Gaussian; R : in out Rand.Rng) return Long_Float\nis (...); --  sampling the custom distribution\n```\n\nEven on your own types:\n\n```ada\nwith Rand_Distributions; use Rand_Distributions;\n\ntype My_Rec is record\n   A : Integer;\n   B : Float;\nend record;\n\npackage I is new Generic_Distribution (My_Rec);\n--  define the interface distributions over your type must implement\n\ntype My_Distr is new I.Distribution with null record;\n\noverriding\nfunction Sample (D : My_Distr; R : in out Rand.Rng) return My_Rec\nis (A => 4, --  chosen by fair dice roll\n    B => R.Gen);\n```\n",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "random",
+    "chacha20",
+    "rng",
+    "getrandom",
+    "security"
+  ],
+  "website": "https://github.com/AldanTanneo/rand-ada",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/rand-ada",
+    "host": "github",
+    "commit": "6d1af921227f1e7e0d61bf3cee431af701b99508"
+  },
+  "dependencies": [
+    {
+      "crate": "rand_chacha",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "rand_core",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "rand_distributions",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "rand_sys",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "rand_xoshiro256",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Rand",
+      "id": "1c1c65e8f2de96f1",
+      "file": "rand.json"
+    },
+    {
+      "name": "Rand.Distributions",
+      "id": "2ad98049633cb580",
+      "file": "rand-distributions.json"
+    },
+    {
+      "name": "Rand.Distributions.Interfaces",
+      "id": "f16ed23cf7eb7e61",
+      "file": "rand-distributions-interfaces.json"
+    },
+    {
+      "name": "Rand.Distributions.Standard_Uniform",
+      "id": "a6b6df147e15486e",
+      "file": "rand-distributions-standard_uniform.json"
+    },
+    {
+      "name": "Rand.Sequence",
+      "id": "650d8ab8e7026b28",
+      "file": "rand-sequence.json"
+    },
+    {
+      "name": "Rand.Thread_Local",
+      "id": "a64ed4d06f9ea45c",
+      "file": "rand-thread_local.json"
+    },
+    {
+      "name": "Rand_Config",
+      "id": "53fb5a0edf4864d0",
+      "file": "rand_config.json"
+    }
+  ]
+}

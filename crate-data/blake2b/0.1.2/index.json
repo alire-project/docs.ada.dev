@@ -1,0 +1,80 @@
+{
+  "schema_version": "1",
+  "crate": "blake2b",
+  "version": "0.1.2",
+  "documented_at": "2026-10-23T02:23:59Z",
+  "description": "BLAKE2b (RFC 7693) in SPARK, proven against a tested specification",
+  "authors": [
+    "Matt Doughty"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "spark",
+    "blake2b",
+    "blake2",
+    "hash",
+    "crypto",
+    "proof"
+  ],
+  "website": "https://github.com/m-doughty/blake2b",
+  "repository": {
+    "url": "https://github.com/m-doughty/blake2b",
+    "host": "github",
+    "commit": "fec91ab72758a7c5d1d06450f78615c793352440"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Blake2b",
+      "id": "d9db3558fa99d3be",
+      "file": "blake2b.json"
+    },
+    {
+      "name": "Blake2b.Hashing",
+      "id": "dcd14f50f8f4401e",
+      "file": "blake2b-hashing.json"
+    },
+    {
+      "name": "Blake2b.Hashing.Big",
+      "id": "a2ac561b503bd64d",
+      "file": "blake2b-hashing-big.json"
+    },
+    {
+      "name": "Blake2b.Spec",
+      "id": "c7b1c84bad731633",
+      "file": "blake2b-spec.json"
+    },
+    {
+      "name": "Blake2b.Spec.Incremental",
+      "id": "15eac9f703e86bc7",
+      "file": "blake2b-spec-incremental.json"
+    },
+    {
+      "name": "Blake2b.Streaming",
+      "id": "d370aeb4bfdbb091",
+      "file": "blake2b-streaming.json"
+    },
+    {
+      "name": "Blake2b.Streaming.Consistency",
+      "id": "ef1f11e92e820691",
+      "file": "blake2b-streaming-consistency.json"
+    },
+    {
+      "name": "Blake2b.Streaming.Example",
+      "id": "8c719286e4f98dd4",
+      "file": "blake2b-streaming-example.json"
+    },
+    {
+      "name": "Blake2b.Streaming.Theory",
+      "id": "25a38db3d96acb5f",
+      "file": "blake2b-streaming-theory.json"
+    },
+    {
+      "name": "Blake2b_Config",
+      "id": "a9e46e5285e18412",
+      "file": "blake2b_config.json"
+    }
+  ]
+}

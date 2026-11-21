@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gwindows",
+  "version": "1.5.4",
+  "failed_at": "2026-05-15T03:05:08Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

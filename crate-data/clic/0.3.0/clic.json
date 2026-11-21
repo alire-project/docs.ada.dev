@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"clic","version":"0.3.0","id":"5ab7da6d3cbdac6c","name":"CLIC","qualified_name":"CLIC","kind":"ada_package","location":{"file":"src/clic.ads","line":3,"column":9},"code":"package CLIC"}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"sparklib","version":"15.1.0","id":"140cacfa5ffcf3e2","name":"SPARK.Tests","qualified_name":"SPARK.Tests","kind":"ada_package","location":{"file":"src/spark-tests.ads","line":7,"column":9},"code":"package SPARK.Tests","documentation":{"description":"\nCopyright (C) 2022-2025, AdaCore\n\nSPDX-License-Identifier: Apache-2.0 WITH LLVM-exception"}}

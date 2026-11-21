@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"flux","version":"1.0.0","id":"9725a55cf0b2332d","name":"Flux.Interfaces","qualified_name":"Flux.Interfaces","kind":"ada_package","location":{"file":"src/flux-interfaces.ads","line":1,"column":9},"code":"package Flux.Interfaces"}

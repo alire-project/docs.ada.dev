@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "z_compression",
+  "version": "20240724.0.0",
+  "documented_at": "2026-03-07T02:52:19Z",
+  "description": "Standalone version of the Zlib Deflate compression algorithm",
+  "long_description": "# Z_Compression\nStandalone version of the Zlib Deflate compression algorithm, derived from de Montmollin's Zip-Ada\n\nZ_Compression.Compress applies Deflate to an input stream of bytes, defined by its generic formal subprograms Out_Of_Data and Next, producing an output stream of bytes that are passed to the generic formal procedure Put. The output may be in Zlib or raw Deflate formats.\n\nZC_Test is a test/demo program for Z_Compression. Building it should also compile Z_Compression. It is invoked as\n\n```\nzc_test <file name>\n```\n\nNo error checking or handling is done. It compresses the given file into a Zlib format file. The output file name is the input file name with \".zc\" appended.\n",
+  "authors": [
+    "Jeffrey R. Carter"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "zlib",
+    "deflate",
+    "compression"
+  ],
+  "website": "https://github.com/bracke/Z_Compression",
+  "repository": {
+    "url": "https://github.com/bracke/Z_Compression",
+    "host": "github",
+    "commit": "f116f336e7d0b24f7af2a22f44d1e9e1491159ec"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Z_Compression",
+      "id": "c63d47f78bca8dc5",
+      "file": "z_compression.json"
+    },
+    {
+      "name": "Z_Compression.LZ77",
+      "id": "5e4615faaa3c13cf",
+      "file": "z_compression-lz77.json"
+    },
+    {
+      "name": "Z_Compression_Config",
+      "id": "265103e270230a7e",
+      "file": "z_compression_config.json"
+    }
+  ]
+}

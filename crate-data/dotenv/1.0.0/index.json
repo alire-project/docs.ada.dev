@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "dotenv",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T02:56:40Z",
+  "description": "Loads environment variables from .env for Ada projects.",
+  "authors": [
+    "Heziode"
+  ],
+  "licenses": [
+    "BSD-2-Clause"
+  ],
+  "tags": [
+    "dotenv",
+    "env",
+    "environment",
+    "variables",
+    "config",
+    "settings"
+  ],
+  "website": "https://github.com/Heziode/ada-dotenv",
+  "repository": {
+    "url": "https://github.com/Heziode/ada-dotenv",
+    "host": "github",
+    "commit": "a19c7797b88954d90e3b11bc003eca0d262f3a39"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Dotenv",
+      "id": "0261167f888c18cb",
+      "file": "dotenv.json"
+    }
+  ]
+}

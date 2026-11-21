@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "json",
+  "version": "6.0.0",
+  "documented_at": "2026-03-04T16:51:36Z",
+  "description": "An Ada 2012 library for parsing JSON",
+  "authors": [
+    "onox"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "json"
+  ],
+  "website": "https://github.com/onox/json-ada",
+  "repository": {
+    "url": "https://github.com/onox/json-ada",
+    "host": "github",
+    "commit": "511489d4cf3bba05ca1376b36664ebe619004221",
+    "subdir": "json/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "JSON",
+      "id": "02bd175f32972037",
+      "file": "json.json"
+    },
+    {
+      "name": "JSON.Parsers",
+      "id": "df8e1ef548987280",
+      "file": "json-parsers.json"
+    },
+    {
+      "name": "JSON.Streams",
+      "id": "9f7f2cfd3a3b632e",
+      "file": "json-streams.json"
+    },
+    {
+      "name": "JSON.Tokenizers",
+      "id": "52c4890f1aed68f4",
+      "file": "json-tokenizers.json"
+    },
+    {
+      "name": "JSON.Types",
+      "id": "b66bdc460c1d502f",
+      "file": "json-types.json"
+    }
+  ]
+}

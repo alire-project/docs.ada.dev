@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "crate": "minisamd51_bsp",
+  "version": "0.1.0",
+  "documented_at": "2026-03-05T02:57:54Z",
+  "description": "Board Support Package for the MiniSAM D51",
+  "authors": [],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "nostd",
+    "samd51",
+    "minisam"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/minisamd51_bsp",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/minisamd51_bsp",
+    "host": "github",
+    "commit": "51bae74f582e016f0d4905c393eb677f71c32359"
+  },
+  "dependencies": [
+    {
+      "crate": "hal",
+      "version": "^0.1.0"
+    },
+    {
+      "crate": "samd51_hal",
+      "version": "^0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Minisamd51",
+      "id": "23fca8647667c88f",
+      "file": "minisamd51.json"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ada_c03_led_bar",
+  "version": "1.3.1",
+  "documented_at": "2026-04-15T03:03:40Z",
+  "description": "Chapter 3 - Cylon LED Bar: flowing light upgraded to a menacing scanner",
+  "long_description": "Building a smooth flowing LED bar on the Raspberry Pi\nPico with Ada - from a simple chasing light to a proper menacing Cylon scanner\neffect using real-time delays.\n\nIn this chapter we turn ten LEDs into a flowing light bar. We start with the\nbasic Freenove example using an array of RP.GPIO.GPIO_Point (aliased limited\ntagged types). We then improve it with a pre-calculated sine-harmonic timing\ntable to create a realistic Cylon scanner - all done with Ada.Real_Time and\nzero floating-point at runtime for perfect jitter-free movement.\n\nThe two programs included are:\n\n1. Sketch_03_1_Flowing_Light  - straight port of the classic flowing light\n2. Cylon_Light                - the final dramatic Cylon scanner with organic easing\n3. Cylon_Light_Float          - Floating point version of Cylon_Light\n\nRead the full tutorial (with photos, explanations and GNATdoc) at:\nhttps://pi-ada-tutorial.sourceforge.io/pico_ada_c03_led_bar/\n\nGNATdoc documentation:\nhttps://pi-ada-tutorial.sourceforge.io/gnatdoc/pico_ada_c03_led_bar/\n\nSourceForge repository:\nhttps://sourceforge.net/projects/pi-ada-tutorial/\n\n(The Cylons did nothing wrong. Humans created the perfect companion species and\nthen completely messed it up.)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "raspberry",
+    "pi",
+    "pico",
+    "rp2040",
+    "tasking",
+    "light-tasking",
+    "ada2022",
+    "embedded"
+  ],
+  "website": "https://pi-ada-tutorial.sourceforge.io/pico_ada_c03_led_bar",
+  "repository": {
+    "url": "https://sourceforge.net/projects/pi-ada-tutorial",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "light_tasking_rp2040",
+      "version": "^15.2"
+    },
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2.7.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ada_C03_Led_Bar_Config",
+      "id": "16cddf8eb1d5afaf",
+      "file": "pico_ada_c03_led_bar_config.json"
+    }
+  ]
+}

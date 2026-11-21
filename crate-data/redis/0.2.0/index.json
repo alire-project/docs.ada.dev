@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "redis",
+  "version": "0.2.0",
+  "documented_at": "2026-10-13T02:31:06Z",
+  "description": "Redis client library for Ada: RESP2 protocol codec and connection layer",
+  "authors": [
+    "Konstantin Khlopkov"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "redis",
+    "resp",
+    "database",
+    "client",
+    "network"
+  ],
+  "repository": {
+    "url": "https://github.com/kokhlo/redis-ada",
+    "host": "github",
+    "commit": "2a2f9525cb853f2069ebc5bc8224e68ecaef7da9"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Redis",
+      "id": "34fb46c847bb9df9",
+      "file": "redis.json"
+    },
+    {
+      "name": "Redis.Connection",
+      "id": "354492cce50c3644",
+      "file": "redis-connection.json"
+    },
+    {
+      "name": "Redis.RESP2",
+      "id": "ccca4aa3539284ce",
+      "file": "redis-resp2.json"
+    }
+  ]
+}

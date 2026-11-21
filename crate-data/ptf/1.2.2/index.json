@@ -1,0 +1,85 @@
+{
+  "schema_version": "1",
+  "crate": "ptf",
+  "version": "1.2.2",
+  "documented_at": "2026-03-06T02:55:09Z",
+  "description": "Portable Text Formatter",
+  "authors": [
+    "Richard Conn"
+  ],
+  "licenses": [
+    "custom-CC-PDM-1.0"
+  ],
+  "tags": [
+    "documentation",
+    "tools"
+  ],
+  "website": "https://chiselapp.com/user/dbane/repository/ptf",
+  "repository": {
+    "url": "https://chiselapp.com/user/dbane/repository/ptf/tarball/9db8b66170/ptf-9db8b66170.tar.gz",
+    "host": "git"
+  },
+  "dependencies": [
+    {
+      "crate": "scatcdsk_lib",
+      "version": "^1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Command",
+      "id": "5d347fd948b66308",
+      "file": "command.json"
+    },
+    {
+      "name": "Command_Symbols",
+      "id": "6b06983330780aa7",
+      "file": "command_symbols.json"
+    },
+    {
+      "name": "Contents",
+      "id": "d1b2a59fbea7e200",
+      "file": "contents.json"
+    },
+    {
+      "name": "Environment",
+      "id": "ba5285161ba6eed0",
+      "file": "environment.json"
+    },
+    {
+      "name": "Error_Log",
+      "id": "a32481c3dbbeb282",
+      "file": "error_log.json"
+    },
+    {
+      "name": "Formatted_Output_File",
+      "id": "2edd9b66ecc0ed80",
+      "file": "formatted_output_file.json"
+    },
+    {
+      "name": "Index",
+      "id": "1bc04b5291c26a46",
+      "file": "index.json"
+    },
+    {
+      "name": "Macro",
+      "id": "27d66c0dcef19a92",
+      "file": "macro.json"
+    },
+    {
+      "name": "Ptf_Config",
+      "id": "1ef11fe60e3936ca",
+      "file": "ptf_config.json"
+    },
+    {
+      "name": "Variable",
+      "id": "3b325109deb02ebf",
+      "file": "variable.json"
+    },
+    {
+      "name": "Word_Processor",
+      "id": "58a041bd8429549a",
+      "file": "word_processor.json"
+    }
+  ]
+}

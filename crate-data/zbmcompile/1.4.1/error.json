@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "zbmcompile",
+  "version": "1.4.1",
+  "failed_at": "2026-05-12T03:04:26Z",
+  "stage": "locate",
+  "message": "Could not find crate root for zbmcompile=1.4.1 in /tmp/gnatdoc_h4l8zral"
+}

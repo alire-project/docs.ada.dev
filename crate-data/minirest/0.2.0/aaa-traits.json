@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"minirest","version":"0.2.0","id":"ecd3202b5a183eda","name":"AAA.Traits","qualified_name":"AAA.Traits","kind":"ada_package","location":{"file":"../../../home/runner/.local/share/alire/builds/aaa_7bfebd18/a5e34316c51f27821c1d6af4892d72891048caf6ee04f2dfcd8976a5f8d8e351/aaa_base/src/aaa-traits.ads","line":1,"column":9},"code":"package AAA.Traits"}

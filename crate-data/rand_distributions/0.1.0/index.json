@@ -1,0 +1,64 @@
+{
+  "schema_version": "1",
+  "crate": "rand_distributions",
+  "version": "0.1.0",
+  "documented_at": "2026-03-06T02:55:55Z",
+  "description": "Collection of standard random distributions",
+  "authors": [
+    "César SAGAERT"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [],
+  "website": "https://github.com/AldanTanneo/rand-ada",
+  "repository": {
+    "url": "https://github.com/AldanTanneo/rand-ada",
+    "host": "github",
+    "commit": "6d1af921227f1e7e0d61bf3cee431af701b99508",
+    "subdir": "rand_distributions/"
+  },
+  "dependencies": [
+    {
+      "crate": "rand_core",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Rand_Distributions",
+      "id": "d3fca5efc2147f41",
+      "file": "rand_distributions.json"
+    },
+    {
+      "name": "Rand_Distributions.Bernoulli",
+      "id": "0f725ec6855cb1f7",
+      "file": "rand_distributions-bernoulli.json"
+    },
+    {
+      "name": "Rand_Distributions.Generic_Distribution",
+      "id": "1c2f2c65e7924cd7",
+      "file": "rand_distributions-generic_distribution.json"
+    },
+    {
+      "name": "Rand_Distributions.Uniform",
+      "id": "f9519898f2fe3caa",
+      "file": "rand_distributions-uniform.json"
+    },
+    {
+      "name": "Rand_Distributions.Uniform.Discrete",
+      "id": "21b82151cb5d342f",
+      "file": "rand_distributions-uniform-discrete.json"
+    },
+    {
+      "name": "Rand_Distributions.Uniform.Floating_Point",
+      "id": "586a9f651d9e842f",
+      "file": "rand_distributions-uniform-floating_point.json"
+    },
+    {
+      "name": "Rand_Distributions_Config",
+      "id": "3c52ee199bb4ab96",
+      "file": "rand_distributions_config.json"
+    }
+  ]
+}

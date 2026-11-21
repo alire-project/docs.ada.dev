@@ -1,0 +1,361 @@
+{
+  "schema_version": "1",
+  "crate": "gsl",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T13:38:08Z",
+  "description": "Ada binding to Gnu Scientific Library 2.7",
+  "authors": [
+    "R Srinivasan"
+  ],
+  "licenses": [],
+  "tags": [],
+  "repository": {
+    "url": "https://gitlab.com/ada23/adagsl",
+    "host": "gitlab",
+    "commit": "335d13f08758121dde7d508ab7093ed449aa33d6",
+    "subdir": "gsl/"
+  },
+  "dependencies": [
+    {
+      "crate": "libgsl",
+      "version": "^2.7"
+    }
+  ],
+  "units": [
+    {
+      "name": "errno",
+      "id": "3c0b378b6fa50759",
+      "file": "errno.json"
+    },
+    {
+      "name": "gsl",
+      "id": "654c6580ef363134",
+      "file": "gsl.json"
+    },
+    {
+      "name": "gsl.blas_types",
+      "id": "2301f62c1514a510",
+      "file": "gsl-blas_types.json"
+    },
+    {
+      "name": "gsl.block",
+      "id": "79a3d48af1c062cc",
+      "file": "gsl-block.json"
+    },
+    {
+      "name": "gsl.block_double",
+      "id": "9e5f5561081d4e02",
+      "file": "gsl-block_double.json"
+    },
+    {
+      "name": "gsl.bspline",
+      "id": "746e44f613e0673a",
+      "file": "gsl-bspline.json"
+    },
+    {
+      "name": "gsl.bst",
+      "id": "d538615a6e08bc9c",
+      "file": "gsl-bst.json"
+    },
+    {
+      "name": "gsl.bst_avl",
+      "id": "1af2db985df0dac5",
+      "file": "gsl-bst_avl.json"
+    },
+    {
+      "name": "gsl.bst_rb",
+      "id": "08a026033dc2e6c0",
+      "file": "gsl-bst_rb.json"
+    },
+    {
+      "name": "gsl.bst_types",
+      "id": "e180077b1b2c4275",
+      "file": "gsl-bst_types.json"
+    },
+    {
+      "name": "gsl.cblas",
+      "id": "6c03ebc05ee9044a",
+      "file": "gsl-cblas.json"
+    },
+    {
+      "name": "gsl.chebyshev",
+      "id": "a928b18738565c64",
+      "file": "gsl-chebyshev.json"
+    },
+    {
+      "name": "gsl.combination",
+      "id": "63700f2e1937f15d",
+      "file": "gsl-combination.json"
+    },
+    {
+      "name": "gsl.complex",
+      "id": "c22a7ea6d31936e0",
+      "file": "gsl-complex.json"
+    },
+    {
+      "name": "gsl.complex.math",
+      "id": "b260729a45d76294",
+      "file": "gsl-complex-math.json"
+    },
+    {
+      "name": "gsl.const",
+      "id": "286841b85e4d3b37",
+      "file": "gsl-const.json"
+    },
+    {
+      "name": "gsl.const.cgs",
+      "id": "40edeae16033d8ee",
+      "file": "gsl-const-cgs.json"
+    },
+    {
+      "name": "gsl.const.cgsm",
+      "id": "ad00e960bfe4a21a",
+      "file": "gsl-const-cgsm.json"
+    },
+    {
+      "name": "gsl.const.mks",
+      "id": "f1bba633a28a3a5e",
+      "file": "gsl-const-mks.json"
+    },
+    {
+      "name": "gsl.const.mksa",
+      "id": "960f75f77495b2b3",
+      "file": "gsl-const-mksa.json"
+    },
+    {
+      "name": "gsl.const.num",
+      "id": "6b5890114ec7f4b4",
+      "file": "gsl-const-num.json"
+    },
+    {
+      "name": "gsl.deriv",
+      "id": "19351478bcbdedc3",
+      "file": "gsl-deriv.json"
+    },
+    {
+      "name": "gsl.errno",
+      "id": "c4b6f58708029050",
+      "file": "gsl-errno.json"
+    },
+    {
+      "name": "gsl.fft",
+      "id": "653ea4a2a1d53f73",
+      "file": "gsl-fft.json"
+    },
+    {
+      "name": "gsl.fft.complex",
+      "id": "bc85f23d2aed2166",
+      "file": "gsl-fft-complex.json"
+    },
+    {
+      "name": "gsl.fft.halfcomplex",
+      "id": "5180ebfe0a6225fc",
+      "file": "gsl-fft-halfcomplex.json"
+    },
+    {
+      "name": "gsl.fft.real",
+      "id": "f2479ddf925166a8",
+      "file": "gsl-fft-real.json"
+    },
+    {
+      "name": "gsl.filter",
+      "id": "9b76bd559cf1a328",
+      "file": "gsl-filter.json"
+    },
+    {
+      "name": "gsl.fit",
+      "id": "51a88e8b672a5237",
+      "file": "gsl-fit.json"
+    },
+    {
+      "name": "gsl.integration",
+      "id": "fd8866110d8a272d",
+      "file": "gsl-integration.json"
+    },
+    {
+      "name": "gsl.interp",
+      "id": "af0afd51a9a80469",
+      "file": "gsl-interp.json"
+    },
+    {
+      "name": "gsl.interp2d",
+      "id": "0909537bd40f21c9",
+      "file": "gsl-interp2d.json"
+    },
+    {
+      "name": "gsl.math",
+      "id": "b1f93835fec7bd77",
+      "file": "gsl-math.json"
+    },
+    {
+      "name": "gsl.matrix_double",
+      "id": "deca078ee5018969",
+      "file": "gsl-matrix_double.json"
+    },
+    {
+      "name": "gsl.mode",
+      "id": "0fda09a4ab8b19de",
+      "file": "gsl-mode.json"
+    },
+    {
+      "name": "gsl.movstat",
+      "id": "083dc4b6084a2575",
+      "file": "gsl-movstat.json"
+    },
+    {
+      "name": "gsl.multifit",
+      "id": "d03839444beda62c",
+      "file": "gsl-multifit.json"
+    },
+    {
+      "name": "gsl.permutation",
+      "id": "ac51b932c29f3ab6",
+      "file": "gsl-permutation.json"
+    },
+    {
+      "name": "gsl.pow_int",
+      "id": "d8e6c2097bffebff",
+      "file": "gsl-pow_int.json"
+    },
+    {
+      "name": "gsl.qrng",
+      "id": "64e5ea442f7811a9",
+      "file": "gsl-qrng.json"
+    },
+    {
+      "name": "gsl.randist",
+      "id": "15e1e91335cc2897",
+      "file": "gsl-randist.json"
+    },
+    {
+      "name": "gsl.rng",
+      "id": "91a5bf1dc4543b69",
+      "file": "gsl-rng.json"
+    },
+    {
+      "name": "gsl.rstat",
+      "id": "9906a104c1ee311b",
+      "file": "gsl-rstat.json"
+    },
+    {
+      "name": "gsl.sf",
+      "id": "735e00b7b731f700",
+      "file": "gsl-sf.json"
+    },
+    {
+      "name": "gsl.sf.airy",
+      "id": "22393d2ac42f7f28",
+      "file": "gsl-sf-airy.json"
+    },
+    {
+      "name": "gsl.sf.bessel",
+      "id": "6ebcd8d038f94154",
+      "file": "gsl-sf-bessel.json"
+    },
+    {
+      "name": "gsl.sf.clausen",
+      "id": "b074d7f4b65934ec",
+      "file": "gsl-sf-clausen.json"
+    },
+    {
+      "name": "gsl.sf.coulomb",
+      "id": "fab826ab12105306",
+      "file": "gsl-sf-coulomb.json"
+    },
+    {
+      "name": "gsl.sf.gamma",
+      "id": "25f835afa613e2c6",
+      "file": "gsl-sf-gamma.json"
+    },
+    {
+      "name": "gsl.sf.result",
+      "id": "34f8ddd0822d4431",
+      "file": "gsl-sf-result.json"
+    },
+    {
+      "name": "gsl.sf.trig",
+      "id": "2f3c1b40f41dc4c1",
+      "file": "gsl-sf-trig.json"
+    },
+    {
+      "name": "gsl.sf.zeta",
+      "id": "96ac38a767eeeae4",
+      "file": "gsl-sf-zeta.json"
+    },
+    {
+      "name": "gsl.sort_double",
+      "id": "3527b22cf2e450d3",
+      "file": "gsl-sort_double.json"
+    },
+    {
+      "name": "gsl.spblas",
+      "id": "b1100798be73bb2d",
+      "file": "gsl-spblas.json"
+    },
+    {
+      "name": "gsl.spline",
+      "id": "03c35999fb153f8d",
+      "file": "gsl-spline.json"
+    },
+    {
+      "name": "gsl.spline2d",
+      "id": "1662bbb21e3473db",
+      "file": "gsl-spline2d.json"
+    },
+    {
+      "name": "gsl.spmatrix_double",
+      "id": "fadee99daf0f43de",
+      "file": "gsl-spmatrix_double.json"
+    },
+    {
+      "name": "gsl.statistics",
+      "id": "f7f69da6a030831b",
+      "file": "gsl-statistics.json"
+    },
+    {
+      "name": "gsl.sys",
+      "id": "ec1bceeadd888611",
+      "file": "gsl-sys.json"
+    },
+    {
+      "name": "gsl.vector",
+      "id": "ea341914dfa2c1a0",
+      "file": "gsl-vector.json"
+    },
+    {
+      "name": "gsl.vector_double",
+      "id": "34d926b0b2cb84bf",
+      "file": "gsl-vector_double.json"
+    },
+    {
+      "name": "gsl.vector_int",
+      "id": "90c273fc6a26a921",
+      "file": "gsl-vector_int.json"
+    },
+    {
+      "name": "gsl.version",
+      "id": "a72d982b3f8f48f0",
+      "file": "gsl-version.json"
+    },
+    {
+      "name": "gsl.wavelet",
+      "id": "4d089e8d9367b998",
+      "file": "gsl-wavelet.json"
+    },
+    {
+      "name": "gsl.wavelet2d",
+      "id": "fe463a4146557dcb",
+      "file": "gsl-wavelet2d.json"
+    },
+    {
+      "name": "Gsl_Config",
+      "id": "80a354baddef2413",
+      "file": "gsl_config.json"
+    },
+    {
+      "name": "math",
+      "id": "58a6d6801ae771e6",
+      "file": "math.json"
+    }
+  ]
+}

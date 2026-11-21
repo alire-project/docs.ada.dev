@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "adalang_analyzer",
+  "version": "1.11.0",
+  "failed_at": "2026-10-28T02:20:25Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "crate": "spawn",
+  "version": "26.0.0",
+  "documented_at": "2026-03-06T02:58:39Z",
+  "description": "A simple library to spawn processes and communicate with them.",
+  "long_description": "This is Glib independent implementation of a spawn processes interface.",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "process",
+    "launch",
+    "pipe"
+  ],
+  "website": "https://github.com/AdaCore/spawn",
+  "repository": {
+    "url": "https://github.com/AdaCore/spawn",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": []
+}

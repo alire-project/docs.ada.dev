@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_nvs_flash",
+  "version": "0.1.0",
+  "documented_at": "2026-10-01T02:32:00Z",
+  "description": "Ada/ESP-IDF: Non-Volatile Storage (NVS) bindings",
+  "long_description": "Ada bindings for the ESP-IDF Non-Volatile Storage library (`nvs_flash`).\n\nCovers initialization of the NVS partition, opening/closing namespaces, key lookup,\nreading and writing string values, and committing changes.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "nvs-flash"
+  ],
+  "website": "https://github.com/godunko/espidf_nvs_flash",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_nvs_flash",
+    "host": "github",
+    "commit": "f0d92de5210dcfa71b6497fdc7aa2a615bd4daf6"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf",
+      "version": "^0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.NVS_Flash",
+      "id": "6f2601e933f86803",
+      "file": "espidf-nvs_flash.json"
+    }
+  ]
+}

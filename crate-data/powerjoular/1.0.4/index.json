@@ -1,0 +1,82 @@
+{
+  "schema_version": "1",
+  "crate": "powerjoular",
+  "version": "1.0.4",
+  "documented_at": "2026-03-05T03:01:23Z",
+  "description": "Monitoring the power consumption of multiple platforms and processes",
+  "authors": [
+    "Adel Noureddine"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "linux",
+    "power",
+    "energy"
+  ],
+  "website": "https://www.noureddine.org/research/joular/powerjoular",
+  "repository": {
+    "url": "https://github.com/joular/powerjoular",
+    "host": "github",
+    "commit": "a5d3337af1871eaeb10ed174a319b85cb719417e"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CPU_Cycles",
+      "id": "fb0178c16adf7593",
+      "file": "cpu_cycles.json"
+    },
+    {
+      "name": "CPU_STAT_App",
+      "id": "770915dacba7547e",
+      "file": "cpu_stat_app.json"
+    },
+    {
+      "name": "CPU_STAT_PID",
+      "id": "5888555364cc00a5",
+      "file": "cpu_stat_pid.json"
+    },
+    {
+      "name": "CPU_STAT_TID",
+      "id": "31d5d249e574a61b",
+      "file": "cpu_stat_tid.json"
+    },
+    {
+      "name": "CSV_Power",
+      "id": "2415acbeac8aa0fc",
+      "file": "csv_power.json"
+    },
+    {
+      "name": "Help_Info",
+      "id": "d4dacba8a83d5101",
+      "file": "help_info.json"
+    },
+    {
+      "name": "Intel_RAPL_sysfs",
+      "id": "42046e61e786ef8a",
+      "file": "intel_rapl_sysfs.json"
+    },
+    {
+      "name": "Nvidia_SMI",
+      "id": "be05cf61ea7596aa",
+      "file": "nvidia_smi.json"
+    },
+    {
+      "name": "OS_Utils",
+      "id": "fa43d7124972dd6a",
+      "file": "os_utils.json"
+    },
+    {
+      "name": "Raspberry_Pi_CPU_Formula",
+      "id": "ec10f82a800df983",
+      "file": "raspberry_pi_cpu_formula.json"
+    },
+    {
+      "name": "Virtual_Machine",
+      "id": "0a070eb931ac2c83",
+      "file": "virtual_machine.json"
+    }
+  ]
+}

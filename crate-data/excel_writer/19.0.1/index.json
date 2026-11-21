@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "excel_writer",
+  "version": "19.0.1",
+  "documented_at": "2026-03-04T03:00:08Z",
+  "description": "Produce Excel spreadsheets",
+  "long_description": "![Excel Writer logo](https://excel-writer.sourceforge.io/ew_logo_no_shadow.png)\n\nExcel_Out is a standalone, portable Ada package for writing Excel spreadsheets with basic formattings and formulas, easily and programmatically.\n\n* Enables the automatic production of reports\n* Fast: 50 sheets per second, with 10,000 data cells each on a slow 1.66 GHz computer\n* No interaction needed with Excel or MS Office\n* Unconditionally portable (*)\n* Endian-neutral\n* Object oriented\n* Task safe\n* Pure Ada 95 (nothing compiler/system specific), can be used in projects in Ada 95, Ada 2005, Ada 2012 and later versions of the language\n* Floating-point hardware neutral: no IEEE hardware required\n* Tests and demos included\n* Includes a CSV parser with related tools.\n* Free, open-source\n\nThe creation of an Excel file is as simple as this small procedure:\n\n```ada\nwith Excel_Out;\n\nprocedure Small_Demo is\n  xl : Excel_Out.Excel_Out_File;\nbegin\n  xl.Create (\"small.xls\");\n  xl.Put_Line (\"This is a small demo for Excel_Out\");\n  for row in 3 .. 8 loop\n    for column in 1 .. 8 loop\n      xl.Write (row, column, row * 1000 + column);\n    end loop;\n  end loop;\n  xl.Close;\nend Small_Demo;\n```\n\n___\n\n(*) within limits of compiler's provided integer types and target architecture capacity.\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "excel",
+    "spreadsheet",
+    "xls",
+    "csv"
+  ],
+  "website": "https://excel-writer.sourceforge.io/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/excel-writer",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "CSV",
+      "id": "53bb9b0b38ac8125",
+      "file": "csv.json"
+    },
+    {
+      "name": "Excel_Out",
+      "id": "9e6b2a473d9daab9",
+      "file": "excel_out.json"
+    },
+    {
+      "name": "Spreadsheet_References",
+      "id": "3f294fce61b7386c",
+      "file": "spreadsheet_references.json"
+    }
+  ]
+}

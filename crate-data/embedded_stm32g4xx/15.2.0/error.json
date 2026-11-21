@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "embedded_stm32g4xx",
+  "version": "15.2.0",
+  "failed_at": "2026-03-13T02:55:05Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

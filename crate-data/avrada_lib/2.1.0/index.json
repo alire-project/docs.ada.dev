@@ -1,0 +1,210 @@
+{
+  "schema_version": "1",
+  "crate": "avrada_lib",
+  "version": "2.1.0",
+  "documented_at": "2026-03-03T17:51:57Z",
+  "description": "Library of drivers for AVR microcontrollers",
+  "authors": [
+    "Rolf Ebert"
+  ],
+  "licenses": [
+    "GPL-2.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "avr",
+    "embedded",
+    "drivers"
+  ],
+  "website": "https://sourceforge.net/projects/avr-ada/",
+  "repository": {
+    "url": "https://github.com/RREE/AVRAda_Lib",
+    "host": "github",
+    "commit": "fe38c6dcc93dc2210cdb1704d9ca2592c5657495"
+  },
+  "dependencies": [
+    {
+      "crate": "avrada_mcu",
+      "version": "^2.1"
+    },
+    {
+      "crate": "avrada_rts",
+      "version": "^2.0.1"
+    },
+    {
+      "crate": "gnat_avr_elf",
+      "version": "^11 | ^12.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "AVR.ADC",
+      "id": "4674e6d44055cf23",
+      "file": "avr-adc.json"
+    },
+    {
+      "name": "AVR.Containers8",
+      "id": "a123263aedd7b595",
+      "file": "avr-containers8.json"
+    },
+    {
+      "name": "AVR.Containers8.Generic_Bounded_Priority_Queues",
+      "id": "1c1abd7f9da2b627",
+      "file": "avr-containers8-generic_bounded_priority_queues.json"
+    },
+    {
+      "name": "AVR.EEprom",
+      "id": "3fd6737505d01a97",
+      "file": "avr-eeprom.json"
+    },
+    {
+      "name": "AVR.Ext_Int",
+      "id": "687baae3a82958bb",
+      "file": "avr-ext_int.json"
+    },
+    {
+      "name": "AVR.Generic_Text_IO",
+      "id": "c399c1fc36187b20",
+      "file": "avr-generic_text_io.json"
+    },
+    {
+      "name": "AVR.I2C",
+      "id": "3723d62c410fa492",
+      "file": "avr-i2c.json"
+    },
+    {
+      "name": "AVR.I2C.Master",
+      "id": "ba88279c9ac0faa7",
+      "file": "avr-i2c-master.json"
+    },
+    {
+      "name": "AVR.Int_Img",
+      "id": "27f5745a3dbf91b2",
+      "file": "avr-int_img.json"
+    },
+    {
+      "name": "AVR.Int_Val",
+      "id": "1448bb59860ffc89",
+      "file": "avr-int_val.json"
+    },
+    {
+      "name": "AVR.Interrupts",
+      "id": "eba670f6e6d14c8a",
+      "file": "avr-interrupts.json"
+    },
+    {
+      "name": "AVR.Programspace",
+      "id": "7df327d201fde9f0",
+      "file": "avr-programspace.json"
+    },
+    {
+      "name": "AVR.Real_Time",
+      "id": "bd2cf94ea36aef58",
+      "file": "avr-real_time.json"
+    },
+    {
+      "name": "AVR.Real_Time.Delays",
+      "id": "173d661bac7a41d3",
+      "file": "avr-real_time-delays.json"
+    },
+    {
+      "name": "AVR.Real_Time.Timing_Events",
+      "id": "184f588e1e8c3286",
+      "file": "avr-real_time-timing_events.json"
+    },
+    {
+      "name": "AVR.Serial_Polled",
+      "id": "ea7af51dbda3ae37",
+      "file": "avr-serial_polled.json"
+    },
+    {
+      "name": "AVR.Sleep",
+      "id": "d54902088b267cd5",
+      "file": "avr-sleep.json"
+    },
+    {
+      "name": "AVR.SPI",
+      "id": "c03e9e8e84d20bf6",
+      "file": "avr-spi.json"
+    },
+    {
+      "name": "AVR.SPI.Master",
+      "id": "cbdf96216d196e33",
+      "file": "avr-spi-master.json"
+    },
+    {
+      "name": "AVR.SPI.Slave",
+      "id": "b01a35c9ec51c75c",
+      "file": "avr-spi-slave.json"
+    },
+    {
+      "name": "AVR.Strings",
+      "id": "2c2ff50a9c8cd5b3",
+      "file": "avr-strings.json"
+    },
+    {
+      "name": "AVR.Strings.Edit",
+      "id": "6ba72e2fe4d0adb6",
+      "file": "avr-strings-edit.json"
+    },
+    {
+      "name": "AVR.Strings.Edit.Generic_Integers",
+      "id": "c2df0721826f6d0a",
+      "file": "avr-strings-edit-generic_integers.json"
+    },
+    {
+      "name": "AVR.Strings.Edit.Integers",
+      "id": "ece6324714277974",
+      "file": "avr-strings-edit-integers.json"
+    },
+    {
+      "name": "AVR.Strings.Progmem",
+      "id": "46768d96a0f78c45",
+      "file": "avr-strings-progmem.json"
+    },
+    {
+      "name": "AVR.Strings.Search",
+      "id": "f8b8cd4555ae9feb",
+      "file": "avr-strings-search.json"
+    },
+    {
+      "name": "AVR.Timer0",
+      "id": "f5c5879efc73ead0",
+      "file": "avr-timer0.json"
+    },
+    {
+      "name": "AVR.Timer1",
+      "id": "c24246847c431ddf",
+      "file": "avr-timer1.json"
+    },
+    {
+      "name": "AVR.Timer2",
+      "id": "92e4a5ee8b1a08d4",
+      "file": "avr-timer2.json"
+    },
+    {
+      "name": "AVR.UART",
+      "id": "8e139db57c7d0f49",
+      "file": "avr-uart.json"
+    },
+    {
+      "name": "AVR.UART_Base_Polled",
+      "id": "77df9061f517bb1e",
+      "file": "avr-uart_base_polled.json"
+    },
+    {
+      "name": "AVR.Wait",
+      "id": "4afe27f1fbba4ac6",
+      "file": "avr-wait.json"
+    },
+    {
+      "name": "AVR.Watchdog",
+      "id": "24d92986dcab285d",
+      "file": "avr-watchdog.json"
+    },
+    {
+      "name": "Avrada_Lib_Config",
+      "id": "bb6bad277a38b782",
+      "file": "avrada_lib_config.json"
+    }
+  ]
+}

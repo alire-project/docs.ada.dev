@@ -1,0 +1,187 @@
+{
+  "schema_version": "1",
+  "crate": "wikiada",
+  "version": "1.5.0",
+  "documented_at": "2026-03-07T02:51:20Z",
+  "description": "Parser and renderer for Markdown and other wiki syntaxes",
+  "long_description": "[![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-wiki/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-wiki/summary)\n[![Test Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-wiki/badges/tests.json)](https://porion.vacs.fr/porion/projects/view/ada-wiki/xunits)\n[![Coverage](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-wiki/badges/coverage.json)](https://porion.vacs.fr/porion/projects/view/ada-wiki/summary)\n\nAda Wiki is a small library that provides a parser and renderer for Markdown and several\nother Wiki syntaxes.  The library allows to:\n\n* Parse a Markdown text but other Wiki such as Mediawiki, Creole, PhpBB, Dotclear and Google Code,\n* Parse HTML content in embedded wiki text,\n* Filter out the wiki, HTML or text through customizable filters,\n* Render the wiki text in HTML, text or another wiki format\n\nThe Ada Wiki library is used by [Ada Web Application](https://gitlab.com/stcarrez/ada-awa)\nfor the implementation of the blog and wiki online plugins and by [mdshow](https://gitlab.com/stcarrez/mdshow) a terminal based\nMarkdown viewer.\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "wiki-engine",
+    "markdown",
+    "mediawiki",
+    "dotclear",
+    "html",
+    "parser",
+    "renderer"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-wiki",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-wiki",
+    "host": "gitlab",
+    "commit": "3e5dac64f570d60d8e8f9b078a1efabead129244"
+  },
+  "dependencies": [
+    {
+      "crate": "utilada",
+      "version": "^2.8.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Wiki",
+      "id": "12a435ec8454c6d1",
+      "file": "wiki.json"
+    },
+    {
+      "name": "Wiki.Attributes",
+      "id": "86f25dbc74976eeb",
+      "file": "wiki-attributes.json"
+    },
+    {
+      "name": "Wiki.Documents",
+      "id": "b2c4f687442264ae",
+      "file": "wiki-documents.json"
+    },
+    {
+      "name": "Wiki.Filters",
+      "id": "1a4107f7a3e99d3a",
+      "file": "wiki-filters.json"
+    },
+    {
+      "name": "Wiki.Filters.Autolink",
+      "id": "0008b16271c9507d",
+      "file": "wiki-filters-autolink.json"
+    },
+    {
+      "name": "Wiki.Filters.Collectors",
+      "id": "10daeb02c729ed71",
+      "file": "wiki-filters-collectors.json"
+    },
+    {
+      "name": "Wiki.Filters.Html",
+      "id": "d21068d0aa5009a1",
+      "file": "wiki-filters-html.json"
+    },
+    {
+      "name": "Wiki.Filters.TOC",
+      "id": "0e70e7d20b81f410",
+      "file": "wiki-filters-toc.json"
+    },
+    {
+      "name": "Wiki.Filters.Variables",
+      "id": "5b76b46b8283859a",
+      "file": "wiki-filters-variables.json"
+    },
+    {
+      "name": "Wiki.Helpers",
+      "id": "fb55708f2ea0157a",
+      "file": "wiki-helpers.json"
+    },
+    {
+      "name": "Wiki.Nodes",
+      "id": "176d50d819023313",
+      "file": "wiki-nodes.json"
+    },
+    {
+      "name": "Wiki.Nodes.Lists",
+      "id": "712c3496cc988bbe",
+      "file": "wiki-nodes-lists.json"
+    },
+    {
+      "name": "Wiki.Parsers",
+      "id": "1ab9b6ef4dd956f1",
+      "file": "wiki-parsers.json"
+    },
+    {
+      "name": "Wiki.Plugins",
+      "id": "fac5f0047a9495ba",
+      "file": "wiki-plugins.json"
+    },
+    {
+      "name": "Wiki.Plugins.Conditions",
+      "id": "a53402dbb58e2657",
+      "file": "wiki-plugins-conditions.json"
+    },
+    {
+      "name": "Wiki.Plugins.Templates",
+      "id": "e131faf8c0a0b96c",
+      "file": "wiki-plugins-templates.json"
+    },
+    {
+      "name": "Wiki.Plugins.Variables",
+      "id": "2d8163a2da651af4",
+      "file": "wiki-plugins-variables.json"
+    },
+    {
+      "name": "Wiki.Render",
+      "id": "14f2dadd3d8cd51d",
+      "file": "wiki-render.json"
+    },
+    {
+      "name": "Wiki.Render.Html",
+      "id": "e0127b0720d34aef",
+      "file": "wiki-render-html.json"
+    },
+    {
+      "name": "Wiki.Render.Links",
+      "id": "d0b4bfe0106e0a5a",
+      "file": "wiki-render-links.json"
+    },
+    {
+      "name": "Wiki.Render.Text",
+      "id": "d5241a1a578df1e2",
+      "file": "wiki-render-text.json"
+    },
+    {
+      "name": "Wiki.Render.Wiki",
+      "id": "378784ecfac61ec2",
+      "file": "wiki-render-wiki.json"
+    },
+    {
+      "name": "Wiki.Stacks",
+      "id": "d16fd54961ac5c43",
+      "file": "wiki-stacks.json"
+    },
+    {
+      "name": "Wiki.Streams",
+      "id": "d52f1b163635f716",
+      "file": "wiki-streams.json"
+    },
+    {
+      "name": "Wiki.Streams.Builders",
+      "id": "10b355ef2b92112f",
+      "file": "wiki-streams-builders.json"
+    },
+    {
+      "name": "Wiki.Streams.Html",
+      "id": "6ed3d42c6cfe6f76",
+      "file": "wiki-streams-html.json"
+    },
+    {
+      "name": "Wiki.Streams.Html.Stream",
+      "id": "8f961db6fea600e3",
+      "file": "wiki-streams-html-stream.json"
+    },
+    {
+      "name": "Wiki.Streams.Text_IO",
+      "id": "4b8827dd6abd1f07",
+      "file": "wiki-streams-text_io.json"
+    },
+    {
+      "name": "Wiki.Strings",
+      "id": "cfdb242a0f471007",
+      "file": "wiki-strings.json"
+    },
+    {
+      "name": "Wiki.Utils",
+      "id": "f3fa41f1ed5234d8",
+      "file": "wiki-utils.json"
+    }
+  ]
+}

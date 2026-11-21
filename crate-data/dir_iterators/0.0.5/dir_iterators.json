@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"dir_iterators","version":"0.0.5","id":"8e0160a7a351dc4b","name":"Dir_Iterators","qualified_name":"Dir_Iterators","kind":"ada_package","location":{"file":"src/dir_iterators.ads","line":1,"column":9},"code":"package Dir_Iterators"}

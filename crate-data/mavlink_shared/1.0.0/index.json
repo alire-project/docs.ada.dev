@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "crate": "mavlink_shared",
+  "version": "1.0.0",
+  "documented_at": "2026-03-05T02:56:57Z",
+  "description": "MAVLink -- Micro Air Vehicle Message Marshalling Library (shared code).",
+  "authors": [
+    "Fil Andrii",
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "embedded",
+    "network",
+    "drone"
+  ],
+  "website": "https://mavlink.io",
+  "repository": {
+    "url": "https://github.com/reznikmm/mavlink_shared",
+    "host": "github",
+    "commit": "31d662d1a7ef5736f3fdff6cde5c0bdf0e6c1ef0"
+  },
+  "dependencies": [],
+  "units": []
+}

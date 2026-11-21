@@ -1,0 +1,94 @@
+{
+  "schema_version": "1",
+  "crate": "adacl_eastrings",
+  "version": "7.1.0",
+  "documented_at": "2026-03-03T17:48:59Z",
+  "description": "AdaCL: Encoding-Aware String Utilities",
+  "long_description": "Encoding-aware string utilities for Ada 2022, developed by Björn Persson for robust internationalization (i18n).\n\nSupports text processing with the following encodings:\n- Universal Character Set 4, Big-Endian (UCS-4 BE)\n- Universal Character Set 4, Little-Endian (UCS-4 LE)\n- Universal Character Set 2, Big-Endian (UCS-2 BE)\n- Universal Character Set 2, Little-Endian (UCS-2 LE)\n- Unicode Transformation Format 16, Big-Endian (UTF-16 BE)\n- Unicode Transformation Format 16, Little-Endian (UTF-16 LE)\n- Unicode Transformation Format 8 (UTF-8)\n- American Standard Code for Information Interchange (ASCII)\n- ISO/IEC 8859-1 (Latin-1)\n- Code Page 850 (DOS Latin-1)\n- Windows Code Page 1252\n\nAdditional features:\n- Text I/O for encoding-aware input/output\n- Basic command-line parsing for internationalized text\n\nLicensed under GPL-3.0-or-later. Integrates with the Ada Class Library (AdaCL).\n\nSource: [SourceForge](https://sourceforge.net/p/adacl/git/ci/master/tree/adacl_eastrings/src/)\nDocumentation: [GNATdoc](https://adacl.sourceforge.net/gnatdoc/adacl_eastrings/index.html)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>",
+    "Björn Persson <rombobeorn@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "strings",
+    "i18n",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^7.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AdaCL.EAstrings",
+      "id": "7f4b4d23a146d583",
+      "file": "adacl-eastrings.json"
+    },
+    {
+      "name": "AdaCL.EAstrings.Character_Encodings",
+      "id": "a4be537196a055b0",
+      "file": "adacl-eastrings-character_encodings.json"
+    },
+    {
+      "name": "AdaCL.EAstrings.IO",
+      "id": "96f2b4b90c219418",
+      "file": "adacl-eastrings-io.json"
+    },
+    {
+      "name": "AdaCL.EAstrings.Latin_1",
+      "id": "51379c5ff9b05ee5",
+      "file": "adacl-eastrings-latin_1.json"
+    },
+    {
+      "name": "AdaCL.EAstrings.OS",
+      "id": "15da4c572f59a40a",
+      "file": "adacl-eastrings-os.json"
+    },
+    {
+      "name": "AdaCL.EAstrings.OS.Command_Line",
+      "id": "857ecf740150e24d",
+      "file": "adacl-eastrings-os-command_line.json"
+    },
+    {
+      "name": "AdaCL.EAstrings.UCS_2",
+      "id": "3d4fd20ef3fd6549",
+      "file": "adacl-eastrings-ucs_2.json"
+    },
+    {
+      "name": "AdaCL.Interfaces",
+      "id": "f38d52fdfd380fff",
+      "file": "adacl-interfaces.json"
+    },
+    {
+      "name": "AdaCL.Interfaces.C",
+      "id": "b4333a68dc0ba3e9",
+      "file": "adacl-interfaces-c.json"
+    },
+    {
+      "name": "AdaCL.Interfaces.C.LibC",
+      "id": "e367435c31ae5b5a",
+      "file": "adacl-interfaces-c-libc.json"
+    },
+    {
+      "name": "AdaCL.Interfaces.C.Wide_Strings",
+      "id": "3072bfc1f5c9e489",
+      "file": "adacl-interfaces-c-wide_strings.json"
+    },
+    {
+      "name": "Adacl_Eastrings_Config",
+      "id": "090f32a20c7a1fe3",
+      "file": "adacl_eastrings_config.json"
+    }
+  ]
+}

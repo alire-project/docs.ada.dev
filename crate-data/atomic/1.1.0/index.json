@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "crate": "atomic",
+  "version": "1.1.0",
+  "documented_at": "2026-03-19T03:00:30Z",
+  "description": "Standalone Ada/SPARK bindings to GCC atomic built-ins",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "atomic",
+    "spark",
+    "embedded",
+    "nostd"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/atomic",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/atomic",
+    "host": "github",
+    "commit": "5e6250a055565914cd614f38855b0cb14620b889"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Atomic",
+      "id": "fd43322a4da6f0e9",
+      "file": "atomic.json"
+    },
+    {
+      "name": "Atomic.Basic_Operations",
+      "id": "22bf5cdbf4241cf2",
+      "file": "atomic-basic_operations.json"
+    },
+    {
+      "name": "Atomic.Signed",
+      "id": "bbd54b1083d34642",
+      "file": "atomic-signed.json"
+    },
+    {
+      "name": "Atomic.Unsigned",
+      "id": "21f593b963ec1fb3",
+      "file": "atomic-unsigned.json"
+    },
+    {
+      "name": "Atomic_Config",
+      "id": "243107e10c2b1774",
+      "file": "atomic_config.json"
+    }
+  ]
+}

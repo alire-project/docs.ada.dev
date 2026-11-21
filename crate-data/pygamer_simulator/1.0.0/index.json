@@ -1,0 +1,66 @@
+{
+  "schema_version": "1",
+  "crate": "pygamer_simulator",
+  "version": "1.0.0",
+  "documented_at": "2026-03-06T02:55:20Z",
+  "description": "SDL simulator of the AdaFruit PyGamer console",
+  "authors": [],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "pygamer",
+    "adafruit",
+    "game",
+    "console",
+    "simulator"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/pygamer-simulator",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/pygamer-simulator",
+    "host": "github",
+    "commit": "c0b428bdaf94de296ec3591a11f8ae79f48cc0d3"
+  },
+  "dependencies": [
+    {
+      "crate": "asfml",
+      "version": "2.5.1"
+    },
+    {
+      "crate": "hal",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "PyGamer",
+      "id": "f982bb6ad5c4cb03",
+      "file": "pygamer.json"
+    },
+    {
+      "name": "PyGamer.Audio",
+      "id": "656ac3d55b70c852",
+      "file": "pygamer-audio.json"
+    },
+    {
+      "name": "PyGamer.Controls",
+      "id": "715ed84fbdedcc28",
+      "file": "pygamer-controls.json"
+    },
+    {
+      "name": "PyGamer.Screen",
+      "id": "705576c1c78c4521",
+      "file": "pygamer-screen.json"
+    },
+    {
+      "name": "PyGamer.Time",
+      "id": "2b886101e3eb1884",
+      "file": "pygamer-time.json"
+    },
+    {
+      "name": "simulator_assets",
+      "id": "d97371d67e77823d",
+      "file": "simulator_assets.json"
+    }
+  ]
+}
