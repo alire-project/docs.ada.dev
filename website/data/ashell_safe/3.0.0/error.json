@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "ashell_safe",
+  "version": "3.0.0",
+  "failed_at": "2026-11-22T02:12:57Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}
