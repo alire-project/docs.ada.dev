@@ -1,0 +1,63 @@
+{
+  "schema_version": "1",
+  "crate": "sparrow_postgres",
+  "version": "1.0.0",
+  "documented_at": "2026-11-26T02:13:43Z",
+  "description": "Sparrow web stack: PostgreSQL over libpq with typed pipelines",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "postgresql",
+    "database",
+    "sql",
+    "spark"
+  ],
+  "website": "https://github.com/michael-hardeman/sparrow",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/sparrow",
+    "host": "github",
+    "commit": "0ae415dade34b1ae5e9a932459a958f530fa3a49",
+    "subdir": "sparrow_postgres/"
+  },
+  "dependencies": [
+    {
+      "crate": "libpq",
+      "version": "*"
+    },
+    {
+      "crate": "sparrow_core",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Sparrow.Postgres",
+      "id": "ea60d3e74bd144ef",
+      "file": "sparrow-postgres.json"
+    },
+    {
+      "name": "Sparrow.Postgres.Migrations",
+      "id": "4c4bce3929a1428b",
+      "file": "sparrow-postgres-migrations.json"
+    },
+    {
+      "name": "Sparrow.Postgres.Queries",
+      "id": "8a3aff89e66d43d6",
+      "file": "sparrow-postgres-queries.json"
+    },
+    {
+      "name": "Sparrow.Postgres_Wire",
+      "id": "a20e353c3cd51bdd",
+      "file": "sparrow-postgres_wire.json"
+    },
+    {
+      "name": "Sparrow_Postgres_Config",
+      "id": "81562c85a9dcd134",
+      "file": "sparrow_postgres_config.json"
+    }
+  ]
+}
