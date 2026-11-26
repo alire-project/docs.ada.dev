@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "crate": "sparrow_sqlite",
+  "version": "1.0.0",
+  "documented_at": "2026-11-26T02:13:49Z",
+  "description": "Sparrow web stack: thin SQLite binding",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "sqlite",
+    "database",
+    "sql"
+  ],
+  "website": "https://github.com/michael-hardeman/sparrow",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/sparrow",
+    "host": "github",
+    "commit": "0ae415dade34b1ae5e9a932459a958f530fa3a49",
+    "subdir": "sparrow_sqlite/"
+  },
+  "dependencies": [
+    {
+      "crate": "libsqlite3",
+      "version": "*"
+    },
+    {
+      "crate": "sparrow_core",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Sparrow.Sqlite",
+      "id": "a7db71df583f1ecd",
+      "file": "sparrow-sqlite.json"
+    },
+    {
+      "name": "Sparrow.Sqlite.Migrations",
+      "id": "953f1812e6a4882b",
+      "file": "sparrow-sqlite-migrations.json"
+    },
+    {
+      "name": "Sparrow.Sqlite.Per_Worker",
+      "id": "354df0e7d1c27fa8",
+      "file": "sparrow-sqlite-per_worker.json"
+    },
+    {
+      "name": "Sparrow_Sqlite_Config",
+      "id": "1163cf0770e79987",
+      "file": "sparrow_sqlite_config.json"
+    }
+  ]
+}
