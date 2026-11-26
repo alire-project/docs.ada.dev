@@ -1,0 +1,74 @@
+{
+  "schema_version": "1",
+  "crate": "sparrow_io",
+  "version": "1.0.0",
+  "documented_at": "2026-11-26T02:13:49Z",
+  "description": "Sparrow web stack: portable sockets, readiness events and clocks",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "sockets",
+    "epoll",
+    "kqueue",
+    "network"
+  ],
+  "website": "https://github.com/michael-hardeman/sparrow",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/sparrow",
+    "host": "github",
+    "commit": "0ae415dade34b1ae5e9a932459a958f530fa3a49",
+    "subdir": "sparrow_io/"
+  },
+  "dependencies": [
+    {
+      "crate": "sparrow_core",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Sparrow.IO",
+      "id": "2e97b0800365e444",
+      "file": "sparrow-io.json"
+    },
+    {
+      "name": "Sparrow.IO.Addresses",
+      "id": "42df8b139488e2a2",
+      "file": "sparrow-io-addresses.json"
+    },
+    {
+      "name": "Sparrow.IO.Events",
+      "id": "3606f0c48970a463",
+      "file": "sparrow-io-events.json"
+    },
+    {
+      "name": "Sparrow.IO.Process",
+      "id": "029b6a694124dcaa",
+      "file": "sparrow-io-process.json"
+    },
+    {
+      "name": "Sparrow.IO.Sockets",
+      "id": "d2e4b9e551dc868b",
+      "file": "sparrow-io-sockets.json"
+    },
+    {
+      "name": "Sparrow.Logs",
+      "id": "01a5fa6dbd23b5d1",
+      "file": "sparrow-logs.json"
+    },
+    {
+      "name": "Sparrow.Metrics",
+      "id": "77e7799d98d4d195",
+      "file": "sparrow-metrics.json"
+    },
+    {
+      "name": "Sparrow_Io_Config",
+      "id": "7e4c842da1e661ea",
+      "file": "sparrow_io_config.json"
+    }
+  ]
+}
