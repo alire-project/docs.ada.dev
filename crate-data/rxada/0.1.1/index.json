@@ -1,0 +1,558 @@
+{
+  "schema_version": "1",
+  "crate": "rxada",
+  "version": "0.1.1",
+  "documented_at": "2026-03-06T02:56:39Z",
+  "description": "Experimental implementation of ReactiveX in Ada",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "rx",
+    "reactive",
+    "reactivex",
+    "observer"
+  ],
+  "website": "https://github.com/mosteo/rxada",
+  "repository": {
+    "url": "https://github.com/mosteo/rxada",
+    "host": "github",
+    "commit": "dd9da799f34674bf8f890392e3b96fedc0cc9cda"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Rx",
+      "id": "501bdc4f8cb2ded4",
+      "file": "rx.json"
+    },
+    {
+      "name": "Rx.Actions",
+      "id": "5584859076122eaf",
+      "file": "rx-actions.json"
+    },
+    {
+      "name": "Rx.Actions.Transform",
+      "id": "1cb948544a863a06",
+      "file": "rx-actions-transform.json"
+    },
+    {
+      "name": "Rx.Actions.Typed",
+      "id": "29069f0e7c7064c8",
+      "file": "rx-actions-typed.json"
+    },
+    {
+      "name": "Rx.Collections",
+      "id": "43fbc8d6a5cb2898",
+      "file": "rx-collections.json"
+    },
+    {
+      "name": "Rx.Contracts",
+      "id": "918df7a0919519da",
+      "file": "rx-contracts.json"
+    },
+    {
+      "name": "Rx.Conversions",
+      "id": "dea2d26f7a75eccb",
+      "file": "rx-conversions.json"
+    },
+    {
+      "name": "Rx.Debug",
+      "id": "56cdc15948960ad5",
+      "file": "rx-debug.json"
+    },
+    {
+      "name": "Rx.Debug.Heavy",
+      "id": "ec983a5b73088c51",
+      "file": "rx-debug-heavy.json"
+    },
+    {
+      "name": "Rx.Debug.Observers",
+      "id": "aa06d38fca0b4476",
+      "file": "rx-debug-observers.json"
+    },
+    {
+      "name": "Rx.Defaults",
+      "id": "d7f43441433a55d9",
+      "file": "rx-defaults.json"
+    },
+    {
+      "name": "Rx.Definites",
+      "id": "7c331a4487ea4f28",
+      "file": "rx-definites.json"
+    },
+    {
+      "name": "Rx.Dispatchers",
+      "id": "2d92d9cc7d4d1f78",
+      "file": "rx-dispatchers.json"
+    },
+    {
+      "name": "Rx.Dispatchers.Events",
+      "id": "b81095c9047334e1",
+      "file": "rx-dispatchers-events.json"
+    },
+    {
+      "name": "Rx.Dispatchers.Immediate",
+      "id": "1cb5e97f54b0ff6b",
+      "file": "rx-dispatchers-immediate.json"
+    },
+    {
+      "name": "Rx.Dispatchers.Pools",
+      "id": "608457853254caca",
+      "file": "rx-dispatchers-pools.json"
+    },
+    {
+      "name": "Rx.Dispatchers.Single",
+      "id": "48a93b86555d6041",
+      "file": "rx-dispatchers-single.json"
+    },
+    {
+      "name": "Rx.Dispatchers.Subscribe",
+      "id": "0b952175d4ff1158",
+      "file": "rx-dispatchers-subscribe.json"
+    },
+    {
+      "name": "Rx.Errors",
+      "id": "1c25d19cd175236e",
+      "file": "rx-errors.json"
+    },
+    {
+      "name": "Rx.Factories",
+      "id": "57864259200439be",
+      "file": "rx-factories.json"
+    },
+    {
+      "name": "Rx.Impl",
+      "id": "7b43107dbbd5cf97",
+      "file": "rx-impl.json"
+    },
+    {
+      "name": "Rx.Impl.Casts",
+      "id": "ec7aa87f044165e1",
+      "file": "rx-impl-casts.json"
+    },
+    {
+      "name": "Rx.Impl.Definite_Observables",
+      "id": "bbef949bd9f7ff23",
+      "file": "rx-impl-definite_observables.json"
+    },
+    {
+      "name": "Rx.Impl.Definite_Observers",
+      "id": "a777657754189bf6",
+      "file": "rx-impl-definite_observers.json"
+    },
+    {
+      "name": "Rx.Impl.Events",
+      "id": "e6b6f8ddfa34a46c",
+      "file": "rx-impl-events.json"
+    },
+    {
+      "name": "Rx.Impl.Holders",
+      "id": "5172aef38704c08e",
+      "file": "rx-impl-holders.json"
+    },
+    {
+      "name": "Rx.Impl.Links",
+      "id": "5752ed3af2b337a3",
+      "file": "rx-impl-links.json"
+    },
+    {
+      "name": "Rx.Impl.Preservers",
+      "id": "5366484645fcfe88",
+      "file": "rx-impl-preservers.json"
+    },
+    {
+      "name": "Rx.Impl.Shared_Observer",
+      "id": "5c844d011abebef9",
+      "file": "rx-impl-shared_observer.json"
+    },
+    {
+      "name": "Rx.Impl.Std",
+      "id": "7976145931c1948b",
+      "file": "rx-impl-std.json"
+    },
+    {
+      "name": "Rx.Impl.Std.Numeric",
+      "id": "95c76e42ced9b3d5",
+      "file": "rx-impl-std-numeric.json"
+    },
+    {
+      "name": "Rx.Impl.Transformers",
+      "id": "1a00892d18307a77",
+      "file": "rx-impl-transformers.json"
+    },
+    {
+      "name": "Rx.Impl.Transformers.Linkers",
+      "id": "99d615301e019c14",
+      "file": "rx-impl-transformers-linkers.json"
+    },
+    {
+      "name": "Rx.Impl.Typed",
+      "id": "99256bcf4587ac80",
+      "file": "rx-impl-typed.json"
+    },
+    {
+      "name": "Rx.Indefinites",
+      "id": "3d94cefa0d5718a0",
+      "file": "rx-indefinites.json"
+    },
+    {
+      "name": "Rx.Numeric_Observables",
+      "id": "04f2570d4c70d57b",
+      "file": "rx-numeric_observables.json"
+    },
+    {
+      "name": "Rx.Numeric_Operators",
+      "id": "ac2f1f8b2bda04dc",
+      "file": "rx-numeric_operators.json"
+    },
+    {
+      "name": "Rx.Observables",
+      "id": "4ce3c418c6243458",
+      "file": "rx-observables.json"
+    },
+    {
+      "name": "Rx.Observables.Image",
+      "id": "d84670470dcdd546",
+      "file": "rx-observables-image.json"
+    },
+    {
+      "name": "Rx.Observables.Linkers",
+      "id": "e64c145001633380",
+      "file": "rx-observables-linkers.json"
+    },
+    {
+      "name": "Rx.Op",
+      "id": "f37db23dcbac4683",
+      "file": "rx-op.json"
+    },
+    {
+      "name": "Rx.Op.Buffer",
+      "id": "677435752e184c68",
+      "file": "rx-op-buffer.json"
+    },
+    {
+      "name": "Rx.Op.Count",
+      "id": "74105a7fedee627b",
+      "file": "rx-op-count.json"
+    },
+    {
+      "name": "Rx.Op.Debounce",
+      "id": "9e83f78dfe65bc6d",
+      "file": "rx-op-debounce.json"
+    },
+    {
+      "name": "Rx.Op.Distinct",
+      "id": "111c482a4864b405",
+      "file": "rx-op-distinct.json"
+    },
+    {
+      "name": "Rx.Op.Do_On",
+      "id": "1595861c5b719d9f",
+      "file": "rx-op-do_on.json"
+    },
+    {
+      "name": "Rx.Op.Element_At",
+      "id": "3008efcf9c6fd95d",
+      "file": "rx-op-element_at.json"
+    },
+    {
+      "name": "Rx.Op.Filter",
+      "id": "48f0ff743b79aa41",
+      "file": "rx-op-filter.json"
+    },
+    {
+      "name": "Rx.Op.Flatmap",
+      "id": "e854ef350fe9c9f9",
+      "file": "rx-op-flatmap.json"
+    },
+    {
+      "name": "Rx.Op.Funnel",
+      "id": "50abce124fc6d38f",
+      "file": "rx-op-funnel.json"
+    },
+    {
+      "name": "Rx.Op.Hold",
+      "id": "607512700ddb25c2",
+      "file": "rx-op-hold.json"
+    },
+    {
+      "name": "Rx.Op.Last",
+      "id": "1c61317592b3598d",
+      "file": "rx-op-last.json"
+    },
+    {
+      "name": "Rx.Op.Length",
+      "id": "449398b9fd08f236",
+      "file": "rx-op-length.json"
+    },
+    {
+      "name": "Rx.Op.Limit",
+      "id": "404d6a8f52ca54dc",
+      "file": "rx-op-limit.json"
+    },
+    {
+      "name": "Rx.Op.Map",
+      "id": "544886d90350fbc7",
+      "file": "rx-op-map.json"
+    },
+    {
+      "name": "Rx.Op.Merge",
+      "id": "dbd8f7376c0d4e22",
+      "file": "rx-op-merge.json"
+    },
+    {
+      "name": "Rx.Op.No_Op",
+      "id": "8c238ce2021bcc8e",
+      "file": "rx-op-no_op.json"
+    },
+    {
+      "name": "Rx.Op.Observe_On",
+      "id": "90fe99701570f438",
+      "file": "rx-op-observe_on.json"
+    },
+    {
+      "name": "Rx.Op.Print",
+      "id": "2786648da55e7eee",
+      "file": "rx-op-print.json"
+    },
+    {
+      "name": "Rx.Op.Repeat",
+      "id": "3d3ea32324f7c4ee",
+      "file": "rx-op-repeat.json"
+    },
+    {
+      "name": "Rx.Op.Sample",
+      "id": "3c31978dd25c30f1",
+      "file": "rx-op-sample.json"
+    },
+    {
+      "name": "Rx.Op.Scan",
+      "id": "b59e810963c59dec",
+      "file": "rx-op-scan.json"
+    },
+    {
+      "name": "Rx.Op.Serialize",
+      "id": "f729548aa296c73f",
+      "file": "rx-op-serialize.json"
+    },
+    {
+      "name": "Rx.Op.Split",
+      "id": "b7df787e3c8075dc",
+      "file": "rx-op-split.json"
+    },
+    {
+      "name": "Rx.Op.Stopwatch",
+      "id": "350eca59be85e1a8",
+      "file": "rx-op-stopwatch.json"
+    },
+    {
+      "name": "Rx.Op.Subscribe_On",
+      "id": "38708910187d01e9",
+      "file": "rx-op-subscribe_on.json"
+    },
+    {
+      "name": "Rx.Op.Take",
+      "id": "6912a8bf65a5f53f",
+      "file": "rx-op-take.json"
+    },
+    {
+      "name": "Rx.Operators",
+      "id": "0bcd1db0527dae54",
+      "file": "rx-operators.json"
+    },
+    {
+      "name": "Rx.Operators.Counters",
+      "id": "a35b0fd11b1172fe",
+      "file": "rx-operators-counters.json"
+    },
+    {
+      "name": "Rx.Operators.Linkers",
+      "id": "09daf32ff9f34638",
+      "file": "rx-operators-linkers.json"
+    },
+    {
+      "name": "Rx.Schedulers",
+      "id": "5009a3634c77b0a6",
+      "file": "rx-schedulers.json"
+    },
+    {
+      "name": "Rx.Schedulers.Pools",
+      "id": "571e4df1ca018f36",
+      "file": "rx-schedulers-pools.json"
+    },
+    {
+      "name": "Rx.Src",
+      "id": "c5f331dd8706de66",
+      "file": "rx-src.json"
+    },
+    {
+      "name": "Rx.Src.Create",
+      "id": "dcb0367dbcdb74bd",
+      "file": "rx-src-create.json"
+    },
+    {
+      "name": "Rx.Src.Create.With_State",
+      "id": "efa76369e8348159",
+      "file": "rx-src-create-with_state.json"
+    },
+    {
+      "name": "Rx.Src.Defer",
+      "id": "fca103608d477419",
+      "file": "rx-src-defer.json"
+    },
+    {
+      "name": "Rx.Src.Empty",
+      "id": "97febbecc35fc504",
+      "file": "rx-src-empty.json"
+    },
+    {
+      "name": "Rx.Src.From",
+      "id": "2a06b06e999f273d",
+      "file": "rx-src-from.json"
+    },
+    {
+      "name": "Rx.Src.From.From_Array",
+      "id": "4b844613c9fef0fc",
+      "file": "rx-src-from-from_array.json"
+    },
+    {
+      "name": "Rx.Src.From.From_Iterable",
+      "id": "7e1a74f29c8d7cc0",
+      "file": "rx-src-from-from_iterable.json"
+    },
+    {
+      "name": "Rx.Src.Interval",
+      "id": "d53e8e25fb507c53",
+      "file": "rx-src-interval.json"
+    },
+    {
+      "name": "Rx.Src.Just",
+      "id": "5cb5b7eeaab90a7d",
+      "file": "rx-src-just.json"
+    },
+    {
+      "name": "Rx.Src.Ranges",
+      "id": "ff0ad540046eecc7",
+      "file": "rx-src-ranges.json"
+    },
+    {
+      "name": "Rx.Src.Start",
+      "id": "97043494e0cb1392",
+      "file": "rx-src-start.json"
+    },
+    {
+      "name": "Rx.Src.Timer",
+      "id": "2c716a3e8907c53d",
+      "file": "rx-src-timer.json"
+    },
+    {
+      "name": "Rx.Std",
+      "id": "12f7f9537ea33819",
+      "file": "rx-std.json"
+    },
+    {
+      "name": "Rx.Std.Casts",
+      "id": "b0966c77fcca1b67",
+      "file": "rx-std-casts.json"
+    },
+    {
+      "name": "Rx.Std.Images",
+      "id": "6564b49513bc4fc4",
+      "file": "rx-std-images.json"
+    },
+    {
+      "name": "Rx.Subjects",
+      "id": "27a03e4480578fc7",
+      "file": "rx-subjects.json"
+    },
+    {
+      "name": "Rx.Subscribe",
+      "id": "ed87357b1b35d020",
+      "file": "rx-subscribe.json"
+    },
+    {
+      "name": "Rx.Subscribers",
+      "id": "13657d21bc78c29b",
+      "file": "rx-subscribers.json"
+    },
+    {
+      "name": "Rx.Subscriptions",
+      "id": "188ba8796602cb60",
+      "file": "rx-subscriptions.json"
+    },
+    {
+      "name": "Rx.Tests",
+      "id": "b419e679fb7a71e3",
+      "file": "rx-tests.json"
+    },
+    {
+      "name": "Rx.Tools",
+      "id": "51715d13afeeed56",
+      "file": "rx-tools.json"
+    },
+    {
+      "name": "Rx.Tools.Holders",
+      "id": "791c9e8dcd9e8e46",
+      "file": "rx-tools-holders.json"
+    },
+    {
+      "name": "Rx.Tools.Lazies",
+      "id": "9aa3fcc0c1a05b78",
+      "file": "rx-tools-lazies.json"
+    },
+    {
+      "name": "Rx.Tools.Semaphores",
+      "id": "3da2d2a4e3bcddf1",
+      "file": "rx-tools-semaphores.json"
+    },
+    {
+      "name": "Rx.Tools.Shared_Data",
+      "id": "4962582d9500d540",
+      "file": "rx-tools-shared_data.json"
+    },
+    {
+      "name": "Rx.Traits",
+      "id": "b9d07cea74c4c131",
+      "file": "rx-traits.json"
+    },
+    {
+      "name": "Rx.Traits.Arrays",
+      "id": "54c223ed90e04f7e",
+      "file": "rx-traits-arrays.json"
+    },
+    {
+      "name": "Rx.Traits.Definite_Defaults",
+      "id": "e3519a65b5ca732d",
+      "file": "rx-traits-definite_defaults.json"
+    },
+    {
+      "name": "Rx.Traits.Indefinite_Defaults",
+      "id": "46f9ddaf4466a4e2",
+      "file": "rx-traits-indefinite_defaults.json"
+    },
+    {
+      "name": "Rx.Traits.Iterable",
+      "id": "76aa8a15e05701e0",
+      "file": "rx-traits-iterable.json"
+    },
+    {
+      "name": "Rx.Traits.Types",
+      "id": "6eb915c55012e90f",
+      "file": "rx-traits-types.json"
+    },
+    {
+      "name": "Rx.Types",
+      "id": "f3addddb95e624b7",
+      "file": "rx-types.json"
+    },
+    {
+      "name": "Rx.Valueless",
+      "id": "bf35cefb46f4dde9",
+      "file": "rx-valueless.json"
+    }
+  ]
+}

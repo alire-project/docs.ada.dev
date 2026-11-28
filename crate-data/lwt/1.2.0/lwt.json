@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lwt","version":"1.2.0","id":"41502a2a4240e1eb","name":"LWT","qualified_name":"LWT","kind":"ada_package","location":{"file":"lwt.ads","line":24,"column":9},"code":"package LWT","documentation":{"description":"A light-weight thread scheduling subsystem"}}

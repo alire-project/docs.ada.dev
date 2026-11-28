@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "sdlada",
+  "version": "2.5.20",
+  "documented_at": "2026-03-06T02:57:29Z",
+  "description": "Ada 2012 SDL 2.x bindings.",
+  "authors": [
+    "Luke A. Guest"
+  ],
+  "licenses": [
+    "Zlib"
+  ],
+  "tags": [
+    "gamedev",
+    "games",
+    "portable",
+    "cross-platform"
+  ],
+  "website": "https://github.com/Lucretia/sdlada",
+  "repository": {
+    "url": "https://github.com/Lucretia/sdlada",
+    "host": "github",
+    "commit": "cd53c280e95697ad7f1b2151f1bad68742a0e7b8"
+  },
+  "dependencies": [
+    {
+      "crate": "libsdl2",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "libsdl2_image",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "libsdl2_mixer",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "libsdl2_ttf",
+      "version": "^2.0.0"
+    },
+    {
+      "crate": "make",
+      "version": "*"
+    }
+  ],
+  "units": []
+}

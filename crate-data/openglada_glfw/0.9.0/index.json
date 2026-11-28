@@ -1,0 +1,96 @@
+{
+  "schema_version": "1",
+  "crate": "openglada_glfw",
+  "version": "0.9.0",
+  "documented_at": "2026-03-05T02:59:34Z",
+  "description": "GLFW binding for use with OpenGLAda",
+  "authors": [
+    "Felix Krause"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "opengl",
+    "glfw",
+    "binding",
+    "gui"
+  ],
+  "website": "http://flyx.github.io/OpenGLAda/",
+  "repository": {
+    "url": "https://github.com/flyx/OpenGLAda",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "libglfw3",
+      "version": "^3"
+    },
+    {
+      "crate": "openglada",
+      "version": "~0.9.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Glfw",
+      "id": "e22ee237ce7aa553",
+      "file": "glfw.json"
+    },
+    {
+      "name": "Glfw.Errors",
+      "id": "a4e4b9d043fa8692",
+      "file": "glfw-errors.json"
+    },
+    {
+      "name": "Glfw.Input",
+      "id": "9f5d10e20383cfef",
+      "file": "glfw-input.json"
+    },
+    {
+      "name": "Glfw.Input.Joysticks",
+      "id": "f1c2ca8367fc7f75",
+      "file": "glfw-input-joysticks.json"
+    },
+    {
+      "name": "Glfw.Input.Keys",
+      "id": "ab8d15d1d0bcd98b",
+      "file": "glfw-input-keys.json"
+    },
+    {
+      "name": "Glfw.Input.Mouse",
+      "id": "1a08e7e83ee2bd96",
+      "file": "glfw-input-mouse.json"
+    },
+    {
+      "name": "Glfw.Monitors",
+      "id": "4387f12cc10302cb",
+      "file": "glfw-monitors.json"
+    },
+    {
+      "name": "Glfw.Windows",
+      "id": "262337818fdd28ea",
+      "file": "glfw-windows.json"
+    },
+    {
+      "name": "Glfw.Windows.Callbacks",
+      "id": "e64e1c4bae57f61c",
+      "file": "glfw-windows-callbacks.json"
+    },
+    {
+      "name": "Glfw.Windows.Clipboard",
+      "id": "f2d1abb4873bc6d6",
+      "file": "glfw-windows-clipboard.json"
+    },
+    {
+      "name": "Glfw.Windows.Context",
+      "id": "e4a0cd997420d9ba",
+      "file": "glfw-windows-context.json"
+    },
+    {
+      "name": "Glfw.Windows.Hints",
+      "id": "d3aac37ddd2bd07f",
+      "file": "glfw-windows-hints.json"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "crate": "rsfile",
+  "version": "1.0.1",
+  "documented_at": "2026-03-06T02:56:30Z",
+  "description": "Randomly pick a file with probability proportional to its size",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "GPL-3.0-only"
+  ],
+  "tags": [
+    "command-line",
+    "tool",
+    "random",
+    "file-size"
+  ],
+  "repository": {
+    "url": "https://github.com/mosteo/rsfile",
+    "host": "github",
+    "commit": "f3d684685a9f41a94a20f80ce114a33cca028475"
+  },
+  "dependencies": [],
+  "units": []
+}

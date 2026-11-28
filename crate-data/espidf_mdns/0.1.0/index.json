@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_mdns",
+  "version": "0.1.0",
+  "documented_at": "2026-10-01T02:32:08Z",
+  "description": "Ada/ESP-IDF: mDNS bindings",
+  "long_description": "Ada bindings for the mDNS (Multicast DNS) component from Espressif's ESP-Protocols\n(`espressif/mdns`).\n\nCovers initialization of the mDNS service and setting of the host name,\nso the device is reachable as `<hostname>.local` on the local network.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "mdns"
+  ],
+  "website": "https://github.com/godunko/espidf_mdns",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_mdns",
+    "host": "github",
+    "commit": "f05747c3e865def8290cfba0b90de448158bbcd8"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf",
+      "version": "^0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.mDNS",
+      "id": "3763cbdfbbf7efef",
+      "file": "espidf-mdns.json"
+    }
+  ]
+}

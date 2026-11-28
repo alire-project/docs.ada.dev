@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "gprbuild",
+  "version": "26.0.1",
+  "failed_at": "2026-05-12T03:02:48Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

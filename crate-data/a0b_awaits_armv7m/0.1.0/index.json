@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_awaits_armv7m",
+  "version": "0.1.0",
+  "documented_at": "2026-10-30T02:16:08Z",
+  "description": "A0B: Await for ARMv7M",
+  "long_description": "ARMv7-M specific wait and synchronization primitives for bare-metal Ada applications, built explicitly for GNAT `light` runtimes on Cortex-M3/M4/M7 microcontrollers.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "await",
+    "armv7m",
+    "embedded"
+  ],
+  "website": "https://github.com/godunko/a0b-awaits-armv7m",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-awaits-armv7m",
+    "host": "github",
+    "commit": "cadba3ee312d72184e1f6dd81f3dbaf20ca0bd22"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_armv7m",
+      "version": "^0.6.0"
+    },
+    {
+      "crate": "a0b_callbacks",
+      "version": "^0.3.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "A0B.Awaits",
+      "id": "be46a95d23afcf4f",
+      "file": "a0b-awaits.json"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": "1",
+  "crate": "zipada",
+  "version": "62.0.0",
+  "documented_at": "2026-03-17T02:56:48Z",
+  "description": "Manage Zip Archives and raw BZip2 and LZMA streams",
+  "long_description": "![Zip-Ada logo](https://unzip-ada.sourceforge.io/za_logo.png)\n\n**Zip-Ada** is a free, open-source programming library for dealing with the Zip compressed archive file format.\nThe full sources of Zip-Ada are in Ada, compilable on every compiler and for every system (*).\n\nKey features of Zip-Ada:\n\n* Files and streams supported, for archives and entries, for compression and decompression\n* Task safe\n* Endian-neutral\n* Standalone\n* Zip methods supported for compression: Reduce, Shrink, Deflate, BZip2, LZMA.\n* Zip methods supported for decompression: the above methods, plus: Implode, Deflate64\n* Library is in pure Ada 2012 (nothing compiler/system specific), can be used in projects in Ada 2012 and later versions of the language\n* Unconditionally **portable**: OS-, CPU-, compiler- independent code (*)\n* Tests and demos included\n* **Free**, open-source\n\nThe library includes **LZMA** & **BZip2** independant encoder & decoder pairs\n(can be used outside of the Zip archive context).\n\nNote that the **BZip2** encoder is the best of its kind in terms of compression ratio!\n\n___\n\n(*) within limits of compiler's provided integer types and target architecture capacity.\n",
+  "authors": [
+    "Gautier de Montmollin"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "zip",
+    "zip64",
+    "archive",
+    "lossless",
+    "compression",
+    "decompression",
+    "encoding",
+    "decoding",
+    "lz77",
+    "deflate",
+    "lzma",
+    "bwt",
+    "bzip2",
+    "lzw",
+    "shrink"
+  ],
+  "website": "https://github.com/zertovitch/zip-ada",
+  "repository": {
+    "url": "https://sourceforge.net/projects/unzip-ada",
+    "host": "sourceforge"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "BWT",
+      "id": "7bed79fdd7e4907d",
+      "file": "bwt.json"
+    },
+    {
+      "name": "BZip2",
+      "id": "09e61bc3a2412f61",
+      "file": "bzip2.json"
+    },
+    {
+      "name": "BZip2.Decoding",
+      "id": "ec28a58c55bbfec1",
+      "file": "bzip2-decoding.json"
+    },
+    {
+      "name": "BZip2.Encoding",
+      "id": "ff48831ac1253adf",
+      "file": "bzip2-encoding.json"
+    },
+    {
+      "name": "Data_Segmentation",
+      "id": "9cd1d01421f5e48a",
+      "file": "data_segmentation.json"
+    },
+    {
+      "name": "Dual_IO",
+      "id": "2049d18f6f16d2dd",
+      "file": "dual_io.json"
+    },
+    {
+      "name": "Dual_IO.Decimal_IO",
+      "id": "1ef29d552a2a460d",
+      "file": "dual_io-decimal_io.json"
+    },
+    {
+      "name": "Dual_IO.Enumeration_IO",
+      "id": "bb275b04d0d57c40",
+      "file": "dual_io-enumeration_io.json"
+    },
+    {
+      "name": "Dual_IO.Fixed_IO",
+      "id": "2e9b073c29b60074",
+      "file": "dual_io-fixed_io.json"
+    },
+    {
+      "name": "Dual_IO.Float_IO",
+      "id": "7c435d86c70792a7",
+      "file": "dual_io-float_io.json"
+    },
+    {
+      "name": "Dual_IO.Integer_IO",
+      "id": "c7982a75e4fb7377",
+      "file": "dual_io-integer_io.json"
+    },
+    {
+      "name": "Dual_IO.Modular_IO",
+      "id": "1a880a89a2e63d48",
+      "file": "dual_io-modular_io.json"
+    },
+    {
+      "name": "Flexible_temp_files",
+      "id": "5f586d3b3c44a434",
+      "file": "flexible_temp_files.json"
+    },
+    {
+      "name": "Huffman",
+      "id": "733aff8cfe8bd640",
+      "file": "huffman.json"
+    },
+    {
+      "name": "Huffman.Encoding",
+      "id": "daca494ea4f6e485",
+      "file": "huffman-encoding.json"
+    },
+    {
+      "name": "LZ77",
+      "id": "b2c8283eef88189d",
+      "file": "lz77.json"
+    },
+    {
+      "name": "LZH",
+      "id": "69d1d4f4ccba984b",
+      "file": "lzh.json"
+    },
+    {
+      "name": "LZMA",
+      "id": "3b5d113903aa0d10",
+      "file": "lzma.json"
+    },
+    {
+      "name": "LZMA.Decoding",
+      "id": "a770d1344c6c7c5d",
+      "file": "lzma-decoding.json"
+    },
+    {
+      "name": "LZMA.Encoding",
+      "id": "a932a9517c44b0ce",
+      "file": "lzma-encoding.json"
+    },
+    {
+      "name": "Rezip_lib",
+      "id": "9e72adb8c0c02aa5",
+      "file": "rezip_lib.json"
+    },
+    {
+      "name": "Shrink",
+      "id": "66b490dd60054469",
+      "file": "shrink.json"
+    },
+    {
+      "name": "Suffix_Arrays",
+      "id": "d6d7c73001eec499",
+      "file": "suffix_arrays.json"
+    },
+    {
+      "name": "UnZip",
+      "id": "13bf820502ca7e43",
+      "file": "unzip.json"
+    },
+    {
+      "name": "UnZip.Streams",
+      "id": "e4bcc0b9b9261c27",
+      "file": "unzip-streams.json"
+    },
+    {
+      "name": "Zip",
+      "id": "4a70fe9aa6436e02",
+      "file": "zip.json"
+    },
+    {
+      "name": "Zip.Compress",
+      "id": "5108a7893c66644f",
+      "file": "zip-compress.json"
+    },
+    {
+      "name": "Zip.CRC_Crypto",
+      "id": "407dc8806bd2fac3",
+      "file": "zip-crc_crypto.json"
+    },
+    {
+      "name": "Zip.Create",
+      "id": "60531abf9e725ee1",
+      "file": "zip-create.json"
+    },
+    {
+      "name": "Zip.Headers",
+      "id": "94645ebb3d0c130d",
+      "file": "zip-headers.json"
+    },
+    {
+      "name": "Zip_Console_IO",
+      "id": "35edb07b012c2188",
+      "file": "zip_console_io.json"
+    },
+    {
+      "name": "Zip_Console_IO.Summary",
+      "id": "ac2b8ee8f3d71f0e",
+      "file": "zip_console_io-summary.json"
+    },
+    {
+      "name": "Zip_Streams",
+      "id": "48766949faa44ca8",
+      "file": "zip_streams.json"
+    },
+    {
+      "name": "Zip_Streams.Calendar",
+      "id": "d56da6ffdda61d1a",
+      "file": "zip_streams-calendar.json"
+    }
+  ]
+}

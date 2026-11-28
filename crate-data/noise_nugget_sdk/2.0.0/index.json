@@ -1,0 +1,92 @@
+{
+  "schema_version": "1",
+  "crate": "noise_nugget_sdk",
+  "version": "2.0.0",
+  "documented_at": "2026-03-05T03:02:03Z",
+  "description": "Ada Software Development Kit for the Noise Nugget",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "embedded",
+    "audio",
+    "synth",
+    "dsp"
+  ],
+  "website": "https://weenoisemakers.com/noise-nugget-2040/",
+  "repository": {
+    "url": "https://github.com/wee-noise-maker/noise-nugget-ada-sdk",
+    "host": "github",
+    "commit": "14119923fc23bfd528cffdefac7fd97e19e643a8"
+  },
+  "dependencies": [
+    {
+      "crate": "midi",
+      "version": "^1.0.0"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "~2.5.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Noise_Nugget_SDK",
+      "id": "278d30ad89035c7e",
+      "file": "noise_nugget_sdk.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.Audio",
+      "id": "d2334d3657d74844",
+      "file": "noise_nugget_sdk-audio.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.Audio.PIO_I2S_ASM",
+      "id": "36f716144d415d85",
+      "file": "noise_nugget_sdk-audio-pio_i2s_asm.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.Button_Matrix",
+      "id": "d36d3ee42d010af2",
+      "file": "noise_nugget_sdk-button_matrix.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.Button_Matrix_Definition",
+      "id": "1f701acf906e5740",
+      "file": "noise_nugget_sdk-button_matrix_definition.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.I2C",
+      "id": "9e7bc9a718298dee",
+      "file": "noise_nugget_sdk-i2c.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.MIDI",
+      "id": "789ece788fac8ee8",
+      "file": "noise_nugget_sdk-midi.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.Screen",
+      "id": "532911fefad23176",
+      "file": "noise_nugget_sdk-screen.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.Screen.SSD1306",
+      "id": "945984e6c76bdfeb",
+      "file": "noise_nugget_sdk-screen-ssd1306.json"
+    },
+    {
+      "name": "Noise_Nugget_SDK.WS2812",
+      "id": "705c16af4d3ef1f7",
+      "file": "noise_nugget_sdk-ws2812.json"
+    },
+    {
+      "name": "Noise_Nugget_Sdk_Config",
+      "id": "3ca11db91392b445",
+      "file": "noise_nugget_sdk_config.json"
+    }
+  ]
+}

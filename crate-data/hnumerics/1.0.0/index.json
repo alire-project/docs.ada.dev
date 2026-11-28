@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "hnumerics",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T15:17:12Z",
+  "description": "Operations for dual numbers",
+  "authors": [
+    "Rene Hartmann"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "dual-numbers",
+    "numerics"
+  ],
+  "website": "https://github.com/rehartmann/hnumerics",
+  "repository": {
+    "url": "https://github.com/rehartmann/hnumerics",
+    "host": "github",
+    "commit": "d52fd514a649eef5f3e683607b05299abdb7c039"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Hnumerics",
+      "id": "6b533d90887af8e0",
+      "file": "hnumerics.json"
+    },
+    {
+      "name": "Hnumerics.Generic_Dual_Types",
+      "id": "bb08fadabcd5ee80",
+      "file": "hnumerics-generic_dual_types.json"
+    },
+    {
+      "name": "Hnumerics_Config",
+      "id": "63551ec6ef0595bf",
+      "file": "hnumerics_config.json"
+    }
+  ]
+}

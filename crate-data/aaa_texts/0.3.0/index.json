@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "crate": "aaa_texts",
+  "version": "0.3.0",
+  "documented_at": "2026-03-03T17:47:29Z",
+  "description": "Utilities to deal with enriched human texts (ANSI, Unicode)",
+  "authors": [
+    "Alejandro R. Mosteo"
+  ],
+  "licenses": [
+    "LGPL-3.0-only"
+  ],
+  "tags": [
+    "unicode",
+    "ansi",
+    "console",
+    "terminal",
+    "tables"
+  ],
+  "website": "https://github.com/mosteo/aaa",
+  "repository": {
+    "url": "https://github.com/mosteo/aaa",
+    "host": "github",
+    "commit": "7bfebd18eb1c9a7eb283ec1a8a05009449239c88",
+    "subdir": "aaa_texts/"
+  },
+  "dependencies": [
+    {
+      "crate": "aaa",
+      "version": "~0.3.0"
+    },
+    {
+      "crate": "ansiada",
+      "version": "^1.1.0"
+    },
+    {
+      "crate": "lml",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "umwi",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "AAA.ANSI",
+      "id": "ac631c1c6e9accde",
+      "file": "aaa-ansi.json"
+    },
+    {
+      "name": "AAA.Table_IO",
+      "id": "7e59b4ab7b6d23cc",
+      "file": "aaa-table_io.json"
+    },
+    {
+      "name": "AAA.Text_IO",
+      "id": "906ac20a6a5b5c6e",
+      "file": "aaa-text_io.json"
+    },
+    {
+      "name": "Aaa_Texts_Config",
+      "id": "342dc4a5f7a2918f",
+      "file": "aaa_texts_config.json"
+    }
+  ]
+}

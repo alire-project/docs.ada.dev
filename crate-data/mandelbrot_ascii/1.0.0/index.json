@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "crate": "mandelbrot_ascii",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:56:49Z",
+  "description": "Mandelbrot renderer using Unicode glyphs",
+  "authors": [
+    "David Given"
+  ],
+  "licenses": [],
+  "tags": [],
+  "repository": {
+    "url": "https://github.com/mosteo/mandelbrot_ascii",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": []
+}

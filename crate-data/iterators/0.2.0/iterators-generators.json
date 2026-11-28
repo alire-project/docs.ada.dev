@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"iterators","version":"0.2.0","id":"154808d3a58a1694","name":"Iterators.Generators","qualified_name":"Iterators.Generators","kind":"ada_package","location":{"file":"src/iterators-generators.ads","line":1,"column":9},"code":"package Iterators.Generators"}

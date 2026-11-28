@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "crate": "bbs",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:52:48Z",
+  "description": "Root package for other crates and contains some physical units",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "0BSD"
+  ],
+  "tags": [
+    "units"
+  ],
+  "website": "https://github.com/BrentSeidel/BBS-Ada",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/BBS-Ada",
+    "host": "github",
+    "commit": "d0806fabe7cd506e0be1c8cbaf9bc7e806c2c193"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "BBS",
+      "id": "781764868fa9abb3",
+      "file": "bbs.json"
+    },
+    {
+      "name": "BBS.units",
+      "id": "b3bb4dd573aa81a4",
+      "file": "bbs-units.json"
+    }
+  ]
+}

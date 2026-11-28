@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"wl_lib","version":"0.1.4","id":"a79b83a21638afe5","name":"WL.Numerics","qualified_name":"WL.Numerics","kind":"ada_package","location":{"file":"src/wl-numerics.ads","line":1,"column":9},"code":"package WL.Numerics"}

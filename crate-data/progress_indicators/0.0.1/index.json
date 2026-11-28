@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "crate": "progress_indicators",
+  "version": "0.0.1",
+  "documented_at": "2026-03-06T02:55:14Z",
+  "description": "Ways of displaying progress in command line tools.",
+  "authors": [
+    "the progress_indicators authors"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "command-line",
+    "console",
+    "terminal",
+    "progress"
+  ],
+  "website": "https://github.com/pyjarrett/progress_indicators",
+  "repository": {
+    "url": "https://github.com/pyjarrett/progress_indicators",
+    "host": "github",
+    "commit": "863e14c48ee885efeb6faab594455e632443278c"
+  },
+  "dependencies": [
+    {
+      "crate": "ansiada",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Progress_Indicators",
+      "id": "59514cc2c2ca8d02",
+      "file": "progress_indicators.json"
+    },
+    {
+      "name": "Progress_Indicators.Bars",
+      "id": "91ee9f94dbe53cd5",
+      "file": "progress_indicators-bars.json"
+    },
+    {
+      "name": "Progress_Indicators.Spinners",
+      "id": "4a10bf72becb7fef",
+      "file": "progress_indicators-spinners.json"
+    },
+    {
+      "name": "Progress_Indicators.Work_Trackers",
+      "id": "5d0df5cec6caabfc",
+      "file": "progress_indicators-work_trackers.json"
+    }
+  ]
+}

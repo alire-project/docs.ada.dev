@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "adacl_serial",
+  "version": "7.2.1",
+  "documented_at": "2026-08-27T03:54:06Z",
+  "description": "SPARK-friendly character and string I/O helpers for GNAT serial ports",
+  "long_description": "Thin, SPARK-friendly helpers for character and string I/O on a\nGNAT.Serial_Communications port.\n\nThe package is deliberately compact - it contains only AdaCL.Serial_IO.\n\nIt extends GNAT.Serial_Communications.Serial_Port (itself a descendant of Ada.Streams.Root_Stream_Type) with a\nnull-record derivation, turning the type into a true class.  Consequently all operations can be written with the\nconvenient Class.Method syntax (Port.Get, Port.Put_Line, Port.Expect, ...).\n\nProvided facilities:\n* Conversion helpers between Stream_Element / Stream_Element_Array and Character / String\n* Classic Get / Put / Get_Line / Put_Line operations\n* High-level Expect procedures (discard or capture skipped text until a given sequence arrives)\n* Full SPARK contracts; the package is proven to SPARK bronze level\n\nIntended for console-style protocols used by classic and modern retro calculators (SwissMicros DM-series, HP-IL\nemulators, etc.).\n\nLicensed under the GNU Library General Public License version 3 (or later).\nIntegrates with the Ada Class Library (AdaCL).\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "library",
+    "serial",
+    "io",
+    "streams",
+    "communication",
+    "spark",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/adacl/",
+  "repository": {
+    "url": "https://sourceforge.net/projects/adacl",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^7.2"
+    }
+  ],
+  "units": [
+    {
+      "name": "AdaCL.Serial_IO",
+      "id": "9edaeb8fbe1d1c21",
+      "file": "adacl-serial_io.json"
+    },
+    {
+      "name": "Adacl_Serial_Config",
+      "id": "464830dbd4d9a764",
+      "file": "adacl_serial_config.json"
+    }
+  ]
+}

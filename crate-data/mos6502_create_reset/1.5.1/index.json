@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "mos6502_create_reset",
+  "version": "1.5.1",
+  "documented_at": "2026-03-05T02:58:02Z",
+  "description": "Create ROM with reset vector",
+  "long_description": "This is a tool to create a rom image with reset vector.\n\nThis program can be used to create a ROM immage for the MOS 6502 tutorial from Ben Eater.\n\nDevelopment versions available with:\n\n```sh\nalr index --add \"git+https://github.com/krischik/alire-index.git#develop\" --name krischik\n```\n\nSource code and testsuite available on [SourceForge](https://git.code.sf.net/p/tutorial-6502/git)\n",
+  "authors": [
+    "Martin Krischik <krischik@users.sourceforge.net>"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "mos-6502",
+    "tools",
+    "retrocomputing",
+    "ada2022"
+  ],
+  "website": "https://sourceforge.net/projects/tutorial-6502",
+  "repository": {
+    "url": "https://sourceforge.net/projects/tutorial-6502",
+    "host": "sourceforge"
+  },
+  "dependencies": [
+    {
+      "crate": "adacl",
+      "version": "^6.3.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Mos6502_Create_Reset_Config",
+      "id": "7f7eea2fb5a1102e",
+      "file": "mos6502_create_reset_config.json"
+    }
+  ]
+}

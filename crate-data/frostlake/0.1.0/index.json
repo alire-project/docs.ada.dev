@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "crate": "frostlake",
+  "version": "0.1.0",
+  "documented_at": "2026-09-22T02:20:24Z",
+  "description": "Ada driver for Frostlake, speaking the engine's HTTP protocol",
+  "long_description": "A dependency-free Ada 2022 client for Frostlake's DatabaseHttpServer:\nDSN-based connections, client-side parameter binding, typed result cells\n(exact NUMBER digits, DATE/TIMESTAMP values, BINARY bytes), transactions,\nand session handling. Needs nothing beyond GNAT's own runtime library.\n",
+  "authors": [
+    "Michal Lorek"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "database",
+    "sql",
+    "driver",
+    "frostlake",
+    "snowflake"
+  ],
+  "website": "https://github.com/Frostlake-DB/frostlake-ada",
+  "repository": {
+    "url": "https://github.com/Frostlake-DB/frostlake-ada",
+    "host": "github",
+    "commit": "e12c3edb81748595991b1393bcbf0ce5b8132e01"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Frostlake",
+      "id": "9816c943c453fbcb",
+      "file": "frostlake.json"
+    },
+    {
+      "name": "Frostlake.Http",
+      "id": "cf297d375b3e9373",
+      "file": "frostlake-http.json"
+    },
+    {
+      "name": "Frostlake.Sql",
+      "id": "27ac0937cc4696ca",
+      "file": "frostlake-sql.json"
+    },
+    {
+      "name": "Frostlake.Wire",
+      "id": "3c473cde99f7ff5b",
+      "file": "frostlake-wire.json"
+    }
+  ]
+}

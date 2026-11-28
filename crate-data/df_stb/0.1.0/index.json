@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "df_stb",
+  "version": "0.1.0",
+  "documented_at": "2026-06-20T03:01:23Z",
+  "description": "Ada bindings to Sean Barrett's STB header-only utility libraries",
+  "authors": [
+    "The Dark Factory Ltd"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "binding",
+    "image",
+    "stb",
+    "stb-image",
+    "stb-truetype"
+  ],
+  "website": "https://github.com/the-dark-factory/stb-ada",
+  "repository": {
+    "url": "https://github.com/the-dark-factory/stb-ada",
+    "host": "github",
+    "commit": "c3442adac650bff870167ba26b718115deb780b9"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Stb",
+      "id": "ade47e00f9bd1f1b",
+      "file": "stb.json"
+    },
+    {
+      "name": "Stb.Image",
+      "id": "1151c88cf576f713",
+      "file": "stb-image.json"
+    },
+    {
+      "name": "Stb.Image.C",
+      "id": "69fa9eea86fde73b",
+      "file": "stb-image-c.json"
+    }
+  ]
+}

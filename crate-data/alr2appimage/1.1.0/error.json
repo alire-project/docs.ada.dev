@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "alr2appimage",
+  "version": "1.1.0",
+  "failed_at": "2026-11-15T02:14:46Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

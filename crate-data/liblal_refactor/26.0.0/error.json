@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "liblal_refactor",
+  "version": "26.0.0",
+  "failed_at": "2026-03-04T16:54:17Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

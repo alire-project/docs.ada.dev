@@ -1,0 +1,93 @@
+{
+  "schema_version": "1",
+  "crate": "bbs_embed_linux",
+  "version": "0.2.0",
+  "documented_at": "2026-03-03T17:53:06Z",
+  "description": "Physical device drivers for Raspberry Pi and BeagleBone Black",
+  "long_description": "This contains device drivers for unix-type systems.  The physical devices\nare defined for the Raspberry Pi and BeagleBone Black, but it should\ncompile on any unix-type environment.\n",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "embedded",
+    "devices",
+    "hardware"
+  ],
+  "website": "https://github.com/BrentSeidel/BBS-BBB-Ada",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/BBS-BBB-Ada",
+    "host": "github",
+    "commit": "bc3a1eafa18eb9aa755631b198455dd6b9bb6c09",
+    "subdir": "src-linux/"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    },
+    {
+      "crate": "bbs_embed_common",
+      "version": "~0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBS.embed.AIN.linux",
+      "id": "433592909dcd7887",
+      "file": "bbs-embed-ain-linux.json"
+    },
+    {
+      "name": "BBS.embed.BBB",
+      "id": "c51ac56265a012a2",
+      "file": "bbs-embed-bbb.json"
+    },
+    {
+      "name": "BBS.embed.GPIO.Linux",
+      "id": "04456709c1367a08",
+      "file": "bbs-embed-gpio-linux.json"
+    },
+    {
+      "name": "BBS.embed.GPIO.Linux_sysfs",
+      "id": "59a17e3f9c959e05",
+      "file": "bbs-embed-gpio-linux_sysfs.json"
+    },
+    {
+      "name": "BBS.embed.i2c.linux",
+      "id": "4ecb77575c8659e3",
+      "file": "bbs-embed-i2c-linux.json"
+    },
+    {
+      "name": "BBS.embed.LED",
+      "id": "cb17ce5d68a08646",
+      "file": "bbs-embed-led.json"
+    },
+    {
+      "name": "BBS.embed.Linux",
+      "id": "7ea88d3608a6e5fa",
+      "file": "bbs-embed-linux.json"
+    },
+    {
+      "name": "BBS.embed.log.linux",
+      "id": "016c796597c8bffb",
+      "file": "bbs-embed-log-linux.json"
+    },
+    {
+      "name": "BBS.embed.PWM",
+      "id": "eac21295ed0cc666",
+      "file": "bbs-embed-pwm.json"
+    },
+    {
+      "name": "BBS.embed.RPI",
+      "id": "b7f8884b3fd0c8ea",
+      "file": "bbs-embed-rpi.json"
+    },
+    {
+      "name": "BBS.embed.SPI.Linux",
+      "id": "f50e898cf7452d86",
+      "file": "bbs-embed-spi-linux.json"
+    }
+  ]
+}

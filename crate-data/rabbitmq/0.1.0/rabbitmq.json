@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"rabbitmq","version":"0.1.0","id":"7b173343f539cdc4","name":"RabbitMQ","qualified_name":"RabbitMQ","kind":"ada_package","location":{"file":"src/rabbitmq.ads","line":3,"column":9},"code":"package RabbitMQ","documentation":{"description":"RabbitMQ Ada bindings\nRoot package for the RabbitMQ client library"}}

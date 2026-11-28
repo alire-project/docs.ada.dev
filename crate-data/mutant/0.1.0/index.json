@@ -1,0 +1,90 @@
+{
+  "schema_version": "1",
+  "crate": "mutant",
+  "version": "0.1.0",
+  "documented_at": "2026-11-16T02:15:55Z",
+  "description": "AdaMutant: mutation testing for Ada and SPARK (Stryker.NET-style)",
+  "long_description": "AdaMutant is a mutation testing tool for Ada and SPARK, in the spirit of\nStryker.NET. It makes small changes (mutants) to the sources, checks whether\nthe tests or the GNATprove proofs detect each change, and reports the\nmutation score.\n\nIt has its own lexer for Ada up to Ada 2022 and does not depend on\nlibadalang. A mutant is killed by a failing test or, for SPARK, by a failing\nproof. Where it can, AdaMutant builds all the mutants once (mutant schemata)\nand switches the active mutant with an environment variable while the tests\nrun; the other mutants are built one at a time. Mutants run in parallel in\ncopies of the project, with a time limit and an optional memory limit for\nthe tests.\n\nThe mutators cover arithmetic, relational, logical, unary and membership\noperators, Boolean, numeric and string literals, conditions, and statement\ndeletion. Comments in the source can disable them, and `--since` limits a\nrun to the lines changed since a git revision.\n\nThe reports are a console table, a self-contained HTML file and JSON in\nmutation-testing-report-schema v2. AdaMutant runs on Linux, macOS and\nWindows.\n",
+  "authors": [
+    "Go Komura"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "mutation",
+    "testing",
+    "spark",
+    "verification",
+    "tool"
+  ],
+  "website": "https://github.com/gomurin0428/AdaMutant",
+  "repository": {
+    "url": "https://github.com/gomurin0428/AdaMutant",
+    "host": "github",
+    "commit": "22c0fcb60cd22fe93133d38efa289f70d1249bdc"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "AdaMutant",
+      "id": "74187bc4bf5e731a",
+      "file": "adamutant.json"
+    },
+    {
+      "name": "AdaMutant.Changes",
+      "id": "65978ea761608cac",
+      "file": "adamutant-changes.json"
+    },
+    {
+      "name": "AdaMutant.Config",
+      "id": "1a5f682513efc4db",
+      "file": "adamutant-config.json"
+    },
+    {
+      "name": "AdaMutant.Files",
+      "id": "70fbb29bac02d34b",
+      "file": "adamutant-files.json"
+    },
+    {
+      "name": "AdaMutant.Lexer",
+      "id": "14ab0f68f6c64fb7",
+      "file": "adamutant-lexer.json"
+    },
+    {
+      "name": "AdaMutant.Mutators",
+      "id": "3d048f6baeb1be94",
+      "file": "adamutant-mutators.json"
+    },
+    {
+      "name": "AdaMutant.Positions",
+      "id": "adcd52b2f3d84083",
+      "file": "adamutant-positions.json"
+    },
+    {
+      "name": "AdaMutant.Processes",
+      "id": "2fe5b54894bf3d56",
+      "file": "adamutant-processes.json"
+    },
+    {
+      "name": "AdaMutant.Reports",
+      "id": "88fcf2a69b1de281",
+      "file": "adamutant-reports.json"
+    },
+    {
+      "name": "AdaMutant.Results",
+      "id": "b7f1e3729eb068c2",
+      "file": "adamutant-results.json"
+    },
+    {
+      "name": "AdaMutant.Runner",
+      "id": "b623412ef32a87d5",
+      "file": "adamutant-runner.json"
+    },
+    {
+      "name": "AdaMutant.Schemata",
+      "id": "81b348e62acc3a52",
+      "file": "adamutant-schemata.json"
+    }
+  ]
+}

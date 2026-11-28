@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_tinyusb",
+  "version": "0.1.0",
+  "documented_at": "2026-10-01T02:31:45Z",
+  "description": "Ada/ESP-IDF: TinyUSB device stack bindings",
+  "long_description": "Ada bindings for Espressif's TinyUSB integration (`espressif/esp_tinyusb`).\n\nCovers configuration and installation of the TinyUSB device driver. USB device classes\nare provided by separate crates, e.g. `espidf_tinyusb_msc` for Mass Storage Class.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "tinyusb"
+  ],
+  "website": "https://github.com/godunko/espidf_tinyusb",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_tinyusb",
+    "host": "github",
+    "commit": "75b23d3b293ae398a16ab88e535d380d39bc2759"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf",
+      "version": "^0.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.TinyUSB",
+      "id": "1dc5a060a633e5bb",
+      "file": "espidf-tinyusb.json"
+    }
+  ]
+}

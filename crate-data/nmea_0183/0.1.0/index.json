@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "crate": "nmea_0183",
+  "version": "0.1.0",
+  "documented_at": "2026-03-05T02:58:33Z",
+  "description": "NMEA 0183 message decoder",
+  "authors": [
+    "Max Reznik"
+  ],
+  "licenses": [
+    "MIT OR Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "gps",
+    "parser"
+  ],
+  "website": "https://github.com/reznikmm/nmea-0183",
+  "repository": {
+    "url": "https://github.com/reznikmm/nmea-0183",
+    "host": "github",
+    "commit": "6f0c8b4b2d70d703881e8bda3c05c01db357501c"
+  },
+  "dependencies": [],
+  "units": []
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "crate": "gnatcoll_lzma",
+  "version": "26.0.0",
+  "documented_at": "2026-03-04T12:52:21Z",
+  "description": "GNAT Components Collection - lzma binding",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "gnatcoll",
+    "bindings",
+    "lzma",
+    "compression",
+    "7z",
+    "7zip"
+  ],
+  "website": "https://github.com/adacore/gnatcoll-bindings",
+  "repository": {
+    "url": "https://github.com/AdaCore/gnatcoll-bindings",
+    "host": "github"
+  },
+  "dependencies": [
+    {
+      "crate": "gnatcoll_minimal",
+      "version": "~26.0.0"
+    },
+    {
+      "crate": "liblzma",
+      "version": "*"
+    }
+  ],
+  "units": [
+    {
+      "name": "GNATCOLL.Coders.LZMA",
+      "id": "81409b6d0f614179",
+      "file": "gnatcoll-coders-lzma.json"
+    },
+    {
+      "name": "GNATCOLL.Coders.LZMA.Thin",
+      "id": "52d0c6b190aa880d",
+      "file": "gnatcoll-coders-lzma-thin.json"
+    }
+  ]
+}

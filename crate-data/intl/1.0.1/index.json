@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "intl",
+  "version": "1.0.1",
+  "documented_at": "2026-03-04T16:50:50Z",
+  "description": "NLS thin Ada binding",
+  "long_description": "This is a small Ada library that provides NLS support by using\n[gettext (3)](https://linux.die.net/man/3/gettext),\n[textdomain (3)](https://linux.die.net/man/3/textdomain) and\n[bindtextdomain (3)](https://linux.die.net/man/3/bindtextdomain).\n\nWhen NLS is not supported or disabled, the Ada library implements the\nNLS operations by using empty suitable stubs that skip the NLS transformation\nand emit the English default message.\n\n## Using the library\n\nThe first step in using the NLS library is to call the `Initialize` procedure\nthat handles the setup of `textdomain` and `bindtextdomain` to configure the\nlanguage according to the user's locale.  The program localized messages are\nstored in a catalog file that is created by `msginit (1)` and `msgfmt (1)` tools.\nIn most cases catalog file are identified by a unique name that must be given\nto the `Initialize` procedure (below, it will be `mytool`).\n\n```\nwith Intl;\n...\n   PROG_NAME : constant String := \"mytool\";\n ...\n   Intl.Initialize (PROG_NAME, \"/usr/share/locale\");\n```\n\nTo localize a message, the `\"-\"` function is provided to encapsulate the call\nto the [gettext (3)](https://linux.die.net/man/3/gettext) method.  If the message\nis translated and the catalog contains it in the user's language, it will be\nconverted by `gettext` and the `\"-\"` function returns the localized message.\n\n```\nwith GNAT.IO;\n   ...\n   function \"-\" (Message : in String) return String is (Intl.\"-\" (Message));\n   ...\n   GNAT.IO.Put_Line (-(\"Hello world!\"));\n```\n\nTo build the message translation file (`PO files`), a tool can be used to extract\nfrom the source code the default messages.  This process is\nexplained in the [GNU gettext](https://www.gnu.org/software/gettext/manual/) documentation.\n\n",
+  "authors": [
+    "Stephane.Carrez@gmail.com"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "i18n",
+    "nls",
+    "bindings"
+  ],
+  "website": "https://gitlab.com/stcarrez/ada-intl",
+  "repository": {
+    "url": "https://gitlab.com/stcarrez/ada-intl",
+    "host": "gitlab",
+    "commit": "881966ea8636d4f0f64bb7e59107d446f812fffa"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Intl",
+      "id": "5a23f056b2280da3",
+      "file": "intl.json"
+    }
+  ]
+}

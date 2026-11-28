@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "opencv_imgproc",
+  "version": "0.2.1",
+  "failed_at": "2026-10-16T02:17:34Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

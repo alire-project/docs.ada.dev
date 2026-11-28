@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"libkeccak","version":"3.0.0","id":"486d622ee03ad381","name":"Keccak","qualified_name":"Keccak","kind":"ada_package","location":{"file":"src/common/keccak.ads","line":30,"column":9},"code":"package Keccak","documentation":{"description":"@summary\nParent package for the Keccak-related components."}}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "crate": "jintp",
+  "version": "1.1.0",
+  "documented_at": "2026-11-24T02:20:48Z",
+  "description": "Template parser in Ada based on Jinja2",
+  "authors": [
+    "Rene Hartmann"
+  ],
+  "licenses": [
+    "BSD-2-Clause"
+  ],
+  "tags": [
+    "templates",
+    "jinja",
+    "jinja2"
+  ],
+  "website": "https://github.com/rehartmann/JinTP",
+  "repository": {
+    "url": "https://github.com/rehartmann/JinTP",
+    "host": "github",
+    "commit": "c9241ed6a878ef665fd570aa7d60593eec02462d"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Jintp",
+      "id": "2976661fb1f0b3ce",
+      "file": "jintp.json"
+    },
+    {
+      "name": "Jintp.Input",
+      "id": "d3c7fdeedff017bb",
+      "file": "jintp-input.json"
+    },
+    {
+      "name": "Jintp.Scanner",
+      "id": "d46b2e3d43f1f2d7",
+      "file": "jintp-scanner.json"
+    },
+    {
+      "name": "Jintp_Config",
+      "id": "9f3d37594743dda5",
+      "file": "jintp_config.json"
+    }
+  ]
+}

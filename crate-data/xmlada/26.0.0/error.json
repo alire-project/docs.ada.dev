@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "xmlada",
+  "version": "26.0.0",
+  "failed_at": "2026-03-07T02:52:07Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

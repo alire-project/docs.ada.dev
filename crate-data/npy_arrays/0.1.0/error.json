@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "npy_arrays",
+  "version": "0.1.0",
+  "failed_at": "2026-11-16T02:15:50Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

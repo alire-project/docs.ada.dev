@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "crate": "sparrow_json",
+  "version": "1.0.0",
+  "documented_at": "2026-11-26T02:13:43Z",
+  "description": "Sparrow web stack: allocation-free JSON reader and streaming writer",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "json",
+    "parser",
+    "spark"
+  ],
+  "website": "https://github.com/michael-hardeman/sparrow",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/sparrow",
+    "host": "github",
+    "commit": "0ae415dade34b1ae5e9a932459a958f530fa3a49",
+    "subdir": "sparrow_json/"
+  },
+  "dependencies": [
+    {
+      "crate": "sparrow_core",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Sparrow.Json",
+      "id": "87ede7d111499f62",
+      "file": "sparrow-json.json"
+    },
+    {
+      "name": "Sparrow.Json.Builders",
+      "id": "7e5a068955ccdac1",
+      "file": "sparrow-json-builders.json"
+    },
+    {
+      "name": "Sparrow.Json.Iteration",
+      "id": "5133e3092b8ffc68",
+      "file": "sparrow-json-iteration.json"
+    },
+    {
+      "name": "Sparrow.Json.Writers",
+      "id": "04c4d8f3057c39c8",
+      "file": "sparrow-json-writers.json"
+    },
+    {
+      "name": "Sparrow_Json_Config",
+      "id": "25092773354c6027",
+      "file": "sparrow_json_config.json"
+    }
+  ]
+}

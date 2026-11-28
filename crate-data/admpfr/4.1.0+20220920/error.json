@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "admpfr",
+  "version": "4.1.0+20220920",
+  "failed_at": "2026-03-03T17:49:44Z",
+  "stage": "index",
+  "message": "make_index.py exited with code 1"
+}

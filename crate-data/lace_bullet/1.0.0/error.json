@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "lace_bullet",
+  "version": "1.0.0",
+  "failed_at": "2026-07-02T03:02:48Z",
+  "stage": "locate",
+  "message": "Could not find crate root for lace_bullet=1.0.0 in /tmp/gnatdoc_9zdj4wu3"
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mutant — Ada/SPARK Documentation</title>
+  <meta name="description" content="AdaMutant: mutation testing for Ada and SPARK (Stryker.NET-style)">
+  <meta name="keywords" content="Ada, SPARK, Alire, mutant, mutation, testing, spark, verification, tool, AdaMutant">
+  <link rel="stylesheet" href="https://alire-project.github.io/docs.ada.dev/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "mutant",
+"version": "0.1.0",  "description": "AdaMutant: mutation testing for Ada and SPARK (Stryker.NET-style)",
+  "programmingLanguage": ["Ada", "SPARK"],
+  "url": "https://alire-project.github.io/docs.ada.dev/mutant/",
+  "codeRepository": "https://github.com/gomurin0428/AdaMutant"
+  ,"author": [{"@type": "Person", "name": "Go Komura"}]
+  ,"license": "Apache-2.0"
+}
+</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-logo" href="https://alire-project.github.io/docs.ada.dev/">Ada/SPARK Docs</a>
+<ol class="breadcrumb">
+  <li><a href="https://alire-project.github.io/docs.ada.dev/">Registry</a></li>
+  <li><a href="https://alire-project.github.io/docs.ada.dev/c/">Crates</a></li>
+  <li aria-current="page">mutant</li>
+</ol>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<div class="page-crate">
+
+  <div class="crate-header">
+    <h1>mutant</h1>
+    <span class="version-tag">0.1.0</span>
+  </div>
+
+  <!-- Version comparison modal -->
+  <div id="compare-modal" class="modal" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Compare Versions</h2>
+        <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="compare-selectors">
+          <div class="compare-select-group">
+            <label for="compare-from">From:</label>
+            <select id="compare-from">
+              <option value="0.1.0">0.1.0</option>
+            </select>
+          </div>
+          <span class="compare-arrow">→</span>
+          <div class="compare-select-group">
+            <label for="compare-to">To:</label>
+            <select id="compare-to">
+              <option value="0.1.0" selected>0.1.0</option>
+            </select>
+          </div>
+          <button id="run-compare" class="btn-primary">Compare</button>
+        </div>
+        <div id="compare-results" class="compare-results">
+          <p class="compare-hint">Select versions and click Compare to see API changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="crate-description">AdaMutant: mutation testing for Ada and SPARK (Stryker.NET-style)</p>
+
+  <div class="long-description"><p>AdaMutant is a mutation testing tool for Ada and SPARK, in the spirit of<br />
+Stryker.NET. It makes small changes (mutants) to the sources, checks whether<br />
+the tests or the GNATprove proofs detect each change, and reports the<br />
+mutation score.</p>
+<p>It has its own lexer for Ada up to Ada 2022 and does not depend on<br />
+libadalang. A mutant is killed by a failing test or, for SPARK, by a failing<br />
+proof. Where it can, AdaMutant builds all the mutants once (mutant schemata)<br />
+and switches the active mutant with an environment variable while the tests<br />
+run; the other mutants are built one at a time. Mutants run in parallel in<br />
+copies of the project, with a time limit and an optional memory limit for<br />
+the tests.</p>
+<p>The mutators cover arithmetic, relational, logical, unary and membership<br />
+operators, Boolean, numeric and string literals, conditions, and statement<br />
+deletion. Comments in the source can disable them, and <code>--since</code> limits a<br />
+run to the lines changed since a git revision.</p>
+<p>The reports are a console table, a self-contained HTML file and JSON in<br />
+mutation-testing-report-schema v2. AdaMutant runs on Linux, macOS and<br />
+Windows.</p></div>
+
+  <dl class="meta-list">
+    <dt>Authors</dt>
+    <dd>Go Komura</dd>
+
+    <dt>License</dt>
+    <dd>Apache-2.0</dd>
+
+    <dt>Repository</dt>
+    <dd id="meta-repo"><a href="https://github.com/gomurin0428/AdaMutant">https://github.com/gomurin0428/AdaMutant</a></dd>
+
+    <dt>Tags</dt>
+    <dd><span class="tag">mutation</span><span class="tag">testing</span><span class="tag">spark</span><span class="tag">verification</span><span class="tag">tool</span></dd>
+  </dl>
+
+  <section id="deps-section" class="deps-section">
+  </section>
+
+  <section id="units-section" class="units-section">
+    <h2>API Units</h2>
+    <ul class="unit-list">
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant/">AdaMutant</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-changes/">AdaMutant.Changes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-config/">AdaMutant.Config</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-files/">AdaMutant.Files</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-lexer/">AdaMutant.Lexer</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-mutators/">AdaMutant.Mutators</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-positions/">AdaMutant.Positions</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-processes/">AdaMutant.Processes</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-reports/">AdaMutant.Reports</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-results/">AdaMutant.Results</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-runner/">AdaMutant.Runner</a>
+      </li>
+      <li>
+        <a href="https://alire-project.github.io/docs.ada.dev/c/mutant/0.1.0/adamutant-schemata/">AdaMutant.Schemata</a>
+      </li>
+    </ul>
+  </section>
+
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/AdaCore/gnatdoc">gnatdoc</a>
+      from crates in the
+      <a href="https://alire.ada.dev">Alire</a> index.
+      Generated 2026-11-28.
+    </p>
+  </footer>
+
+</body>
+</html>

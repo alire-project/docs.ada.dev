@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"lml","version":"0.1.0","id":"d21cdd930da79b81","name":"LML.Input","qualified_name":"LML.Input","kind":"ada_package","location":{"file":"src/impl/lml-input.ads","line":1,"column":9},"code":"package LML.Input"}

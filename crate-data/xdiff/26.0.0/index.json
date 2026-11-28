@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "crate": "xdiff",
+  "version": "26.0.0",
+  "documented_at": "2026-03-07T02:51:51Z",
+  "description": "This is an Ada binding and C xdiff library",
+  "authors": [
+    "AdaCore"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "text",
+    "diff"
+  ],
+  "website": "https://github.com/AdaCore/xdiff",
+  "repository": {
+    "url": "https://github.com/AdaCore/xdiff",
+    "host": "github"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Ada_XDiff",
+      "id": "669f067618b9b841",
+      "file": "ada_xdiff.json"
+    }
+  ]
+}

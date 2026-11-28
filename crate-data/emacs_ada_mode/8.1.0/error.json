@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "emacs_ada_mode",
+  "version": "8.1.0",
+  "failed_at": "2026-03-04T02:58:52Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "crate": "gfx_core",
+  "version": "0.1.0",
+  "documented_at": "2026-03-04T03:01:06Z",
+  "description": "Modular Portable Graphics Library, Core Components",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "graphics"
+  ],
+  "repository": {
+    "url": "https://github.com/godunko/gfx-core",
+    "host": "github",
+    "commit": "0ad900030f4d80d80792c61f0a0382876a471db8"
+  },
+  "dependencies": [],
+  "units": []
+}

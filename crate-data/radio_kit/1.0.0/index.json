@@ -1,0 +1,128 @@
+{
+  "schema_version": "1",
+  "crate": "radio_kit",
+  "version": "1.0.0",
+  "documented_at": "2026-10-27T02:23:06Z",
+  "description": "Experimental RP2040 radio framework using native clock outputs",
+  "authors": [
+    "Lokesh"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "ada",
+    "embedded",
+    "rp2040",
+    "radio",
+    "rf",
+    "wireless",
+    "communication",
+    "carrier",
+    "gpio"
+  ],
+  "website": "https://github.com/thirstymelon/Radio_Kit",
+  "repository": {
+    "url": "https://github.com/thirstymelon/Radio_Kit",
+    "host": "github",
+    "commit": "4153b8ddb5880899e993daeace90b7dcc1013ba5"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Radio_Kit",
+      "id": "431479b6fe413717",
+      "file": "radio_kit.json"
+    },
+    {
+      "name": "Radio_Kit.Modulation",
+      "id": "1cccfdce2285844d",
+      "file": "radio_kit-modulation.json"
+    },
+    {
+      "name": "Radio_Kit.Modulation.Audio_FM",
+      "id": "164af2c7511ff89a",
+      "file": "radio_kit-modulation-audio_fm.json"
+    },
+    {
+      "name": "Radio_Kit.Modulation.FSK",
+      "id": "958960e31eec03ff",
+      "file": "radio_kit-modulation-fsk.json"
+    },
+    {
+      "name": "Radio_Kit.Modulation.Morse",
+      "id": "f1a9e45c5f63e1ed",
+      "file": "radio_kit-modulation-morse.json"
+    },
+    {
+      "name": "Radio_Kit.Protocol",
+      "id": "0c4cc6a222386e73",
+      "file": "radio_kit-protocol.json"
+    },
+    {
+      "name": "Radio_Kit.Protocol.Channels",
+      "id": "057baf9cf7031765",
+      "file": "radio_kit-protocol-channels.json"
+    },
+    {
+      "name": "Radio_Kit.Protocol.CRC",
+      "id": "8858d7bccb9b8e8a",
+      "file": "radio_kit-protocol-crc.json"
+    },
+    {
+      "name": "Radio_Kit.Protocol.Crypto",
+      "id": "c8840cb882f7a993",
+      "file": "radio_kit-protocol-crypto.json"
+    },
+    {
+      "name": "Radio_Kit.Protocol.Framing",
+      "id": "40a6b84163abdf5b",
+      "file": "radio_kit-protocol-framing.json"
+    },
+    {
+      "name": "Radio_Kit.System",
+      "id": "700ea767fee892d2",
+      "file": "radio_kit-system.json"
+    },
+    {
+      "name": "Radio_Kit.System.Clock",
+      "id": "f6e356f9ab0dcdbe",
+      "file": "radio_kit-system-clock.json"
+    },
+    {
+      "name": "Radio_Kit.System.Engine",
+      "id": "c5783aeec80c6bf6",
+      "file": "radio_kit-system-engine.json"
+    },
+    {
+      "name": "Radio_Kit.System.Health",
+      "id": "ae61bbfe7035f1f2",
+      "file": "radio_kit-system-health.json"
+    },
+    {
+      "name": "Radio_Kit.System.Multicore",
+      "id": "34d5df9d5f1a27f3",
+      "file": "radio_kit-system-multicore.json"
+    },
+    {
+      "name": "Radio_Kit.System.Watchdog",
+      "id": "204da3ee28fe8481",
+      "file": "radio_kit-system-watchdog.json"
+    },
+    {
+      "name": "Radio_Kit.Types",
+      "id": "dfe6fa52138e960d",
+      "file": "radio_kit-types.json"
+    },
+    {
+      "name": "Radio_Kit_Config",
+      "id": "48de1259c381d5ff",
+      "file": "radio_kit_config.json"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"neural_kit","version":"0.2.0","id":"7d9b7281ddaae8b3","name":"Neural_Kit","qualified_name":"Neural_Kit","kind":"ada_package","location":{"file":"src/neural_kit.ads","line":1,"column":9},"code":"package Neural_Kit"}

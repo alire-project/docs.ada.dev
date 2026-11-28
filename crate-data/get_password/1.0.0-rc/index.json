@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "crate": "get_password",
+  "version": "1.0.0-rc",
+  "documented_at": "2026-03-04T03:00:49Z",
+  "description": "Read a string without echo, in password-like style",
+  "long_description": "This is a small Ada library that provides a procedure Get_Password that reads a string from the terminal replacing each character with a *. The input can be terminated both by the user pressing end-of-line or when the buffer is filled.  Currently it works only on POSIX-based system.  This version was checked with Spark",
+  "authors": [
+    "Riccardo Bernardini"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "password",
+    "echo",
+    "textio"
+  ],
+  "website": "https://gitlab.com/my-ada-library/get_password",
+  "repository": {
+    "url": "https://gitlab.com/my-ada-library/get_password",
+    "host": "gitlab",
+    "commit": "0999eb5b4890649c73fc0327ef7514de4fb73df7"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Get_Password",
+      "id": "a029c02a4c15d001",
+      "file": "get_password.json"
+    }
+  ]
+}

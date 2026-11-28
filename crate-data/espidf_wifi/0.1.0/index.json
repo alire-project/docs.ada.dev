@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_wifi",
+  "version": "0.1.0",
+  "documented_at": "2026-10-09T02:25:14Z",
+  "description": "Ada/ESP-IDF: Wi-Fi driver bindings",
+  "long_description": "Ada bindings for the ESP-IDF Wi-Fi driver (`esp_wifi`).\n\nCovers:\n- driver initialization, start/stop, connect/disconnect;\n- mode selection (station, access point) and configuration storage;\n- station and access point configuration (SSID, password, authentication mode, PMF);\n- creation of default network interfaces for station and access point.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "espidf",
+    "wifi"
+  ],
+  "website": "https://github.com/godunko/espidf_wifi",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_wifi",
+    "host": "github",
+    "commit": "bf7178396359544708ce7fdad4e481addbc384b8"
+  },
+  "dependencies": [
+    {
+      "crate": "espidf_netif",
+      "version": "^0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "ESPIDF.WiFi",
+      "id": "23ccb3ed92faa638",
+      "file": "espidf-wifi.json"
+    },
+    {
+      "name": "ESPIDF.WiFi.Default",
+      "id": "b947efc5c8900059",
+      "file": "espidf-wifi-default.json"
+    }
+  ]
+}

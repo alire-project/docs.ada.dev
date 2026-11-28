@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "crate": "radio_kit",
+  "version": "0.2.0",
+  "documented_at": "2026-09-02T02:34:44Z",
+  "description": "Experimental RP2040 radio framework using native clock outputs",
+  "authors": [
+    "Lokesh"
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ],
+  "tags": [
+    "ada",
+    "embedded",
+    "rp2040",
+    "radio",
+    "rf",
+    "wireless",
+    "communication",
+    "carrier",
+    "gpio"
+  ],
+  "website": "https://github.com/thirstymelon/Radio_Kit",
+  "repository": {
+    "url": "https://github.com/thirstymelon/Radio_Kit",
+    "host": "github",
+    "commit": "f19690ecc2edf4865b66f6a7d5dce641c32f7d90"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Radio_Kit",
+      "id": "431479b6fe413717",
+      "file": "radio_kit.json"
+    },
+    {
+      "name": "Radio_Kit.Radio_Clock",
+      "id": "108bd964814c9467",
+      "file": "radio_kit-radio_clock.json"
+    },
+    {
+      "name": "Radio_Kit.Types",
+      "id": "dfe6fa52138e960d",
+      "file": "radio_kit-types.json"
+    },
+    {
+      "name": "Radio_Kit_Config",
+      "id": "48de1259c381d5ff",
+      "file": "radio_kit_config.json"
+    }
+  ]
+}

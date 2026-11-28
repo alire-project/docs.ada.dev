@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"adacl","version":"8.1.0","id":"100bf45c72d751dd","name":"AdaCL.OS","qualified_name":"AdaCL.OS","kind":"ada_package","location":{"file":"src/adacl-os.ads","line":29,"column":9},"code":"package AdaCL.OS","documentation":{"description":"-\n  @summary\n  Operating System Tools.\n\n  @description"}}

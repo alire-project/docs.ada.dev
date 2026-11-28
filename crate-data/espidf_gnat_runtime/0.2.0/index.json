@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "crate": "espidf_gnat_runtime",
+  "version": "0.2.0",
+  "documented_at": "2026-09-29T02:24:56Z",
+  "description": "Ada/ESP-IDF: GNAT runtime",
+  "long_description": "The `espidf_gnat_runtime` provides the runtime support libraries required to develop Ada and SPARK applications for Espressif SoCs.\nIt serves as the foundational layer that enables the GNAT compiler to target Espressif's hardware, providing the essential infrastructure to bridge Ada language features with the underlying system.\n\nBy using this runtime, developers can leverage the safety, strong typing, and formal verification capabilities of Ada and SPARK on popular, low-cost microcontrollers.\n\n### Supported Architectures\n* **Xtensa:** Full support for the **ESP32**, **ESP32-S3** series.\n* **RISC-V:** Full support for the **ESP32-C3** series.\n\n### Key Features\n* **Ada Language Support:** Implements essential Ada features, including exception handling, controlled types, and secondary stacks.\n* **Standard Library:** Supports a rich set of standard packages, including `Ada.Numerics`, `Ada.Strings`, `Ada.Containers`, and more.\n* **Real-Time Concurrency:** Provides support for the **Jorvik profile**, enabling the use of Ada tasks and protected objects for safe, concurrent programming.\n* **Hardware Interoperability:** Designed to support applications running alongside the ESP-IDF environment, allowing Ada code to coexist with Espressif's system services.\n* **Verified Quality:** Validated using the **ACATS** (Ada Conformity Assessment Test Suite) to ensure language compliance and runtime stability on both Xtensa and RISC-V targets.\n\n### Usage\nThe runtime is generated at build time by the `a0b-runtime` tool (crate `a0b_tools`) from the SoC-specific `runtime-<soc>.json` description and `svd/<soc>.svd` file provided by this crate.\nStart a new project from one of the SoC-specific templates\n([ESP32](https://github.com/RREE/esp32_template),\n[ESP32-C3](https://github.com/godunko/esp32c3_template),\n[ESP32-S3](https://github.com/godunko/esp32s3_template)),\nwhich set up the toolchain, linker, and build system configuration.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later WITH GCC-exception-3.1"
+  ],
+  "tags": [
+    "a0b",
+    "embedded",
+    "esp",
+    "esp32",
+    "esp32c3",
+    "esp32s3",
+    "espidf",
+    "runtime",
+    "xtensa",
+    "riscv",
+    "freertos",
+    "jorvik"
+  ],
+  "website": "https://github.com/godunko/espidf_gnat_runtime",
+  "repository": {
+    "url": "https://github.com/godunko/espidf_gnat_runtime",
+    "host": "github",
+    "commit": "9174cca92e329b95f1df4d3f7072fa4e3082a0da"
+  },
+  "dependencies": [],
+  "units": []
+}

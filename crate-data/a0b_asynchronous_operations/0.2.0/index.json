@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "crate": "a0b_asynchronous_operations",
+  "version": "0.2.0",
+  "documented_at": "2026-10-29T02:21:01Z",
+  "description": "A0B: Asynchronous Operations",
+  "long_description": "Common Ada types and utilities for describing asynchronous operations in\nthe A0B embedded framework.\n\nThe crate provides transfer descriptors that track a buffer address, the\nrequested transfer length, the number of bytes transferred, and the operation\nstate (inactive, active, success, or failure). It also includes arrays of\ntransfer descriptors for batch operations and helper procedures to initialize\ndescriptors and record successful or failed completion.\n",
+  "authors": [
+    "Vadim Godunko"
+  ],
+  "licenses": [
+    "Apache-2.0 WITH LLVM-exception"
+  ],
+  "tags": [
+    "a0b",
+    "asynchronous"
+  ],
+  "website": "https://github.com/godunko/a0b-asynchronous_operations",
+  "repository": {
+    "url": "https://github.com/godunko/a0b-asynchronous_operations",
+    "host": "github",
+    "commit": "022c2fa04136558459fffa40bbd990881faf0099"
+  },
+  "dependencies": [
+    {
+      "crate": "a0b_base",
+      "version": "^0.6.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "A0B.Asynchronous_Transfers",
+      "id": "f575c311a5432302",
+      "file": "a0b-asynchronous_transfers.json"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "1",
+  "crate": "munts_rp2040_lib_embedded",
+  "version": "16.25343.1",
+  "documented_at": "2026-10-27T02:22:48Z",
+  "description": "Phil's RP2040 Microcontroller Embedded Profile Library",
+  "authors": [
+    "Philip Munts"
+  ],
+  "licenses": [
+    "BSD-1-Clause"
+  ],
+  "tags": [
+    "gpio",
+    "microcontroller",
+    "rp2040"
+  ],
+  "website": "https://github.com/pmunts/arm-mcu",
+  "repository": {
+    "url": "https://raw.githubusercontent.com/pmunts/alire-crates/171674773462da77fac749526ad8ea71aa26dca3/munts_rp2040_lib_embedded/munts_rp2040_lib_embedded-16.25343.1.tbz2",
+    "host": "git"
+  },
+  "dependencies": [
+    {
+      "crate": "embedded_rp2040",
+      "version": "^16"
+    },
+    {
+      "crate": "gnat_arm_elf",
+      "version": "^16"
+    },
+    {
+      "crate": "rp2040_hal",
+      "version": "^2"
+    }
+  ],
+  "units": [
+    {
+      "name": "Analog",
+      "id": "895f7dcdf72d7dd4",
+      "file": "analog.json"
+    },
+    {
+      "name": "GPIO",
+      "id": "722a08a99490cd9e",
+      "file": "gpio.json"
+    },
+    {
+      "name": "GPIO.RP2040",
+      "id": "8b011188535f183e",
+      "file": "gpio-rp2040.json"
+    },
+    {
+      "name": "IO_Interfaces",
+      "id": "40b0a8bb27a559ce",
+      "file": "io_interfaces.json"
+    },
+    {
+      "name": "Motor",
+      "id": "02983856320b180c",
+      "file": "motor.json"
+    },
+    {
+      "name": "Motor.PWM",
+      "id": "e4e8b4d05fbc76bb",
+      "file": "motor-pwm.json"
+    },
+    {
+      "name": "Munts_Rp2040_Lib_Embedded_Config",
+      "id": "1eb337e8a5cdf1a5",
+      "file": "munts_rp2040_lib_embedded_config.json"
+    },
+    {
+      "name": "PWM",
+      "id": "3c017f717b39247c",
+      "file": "pwm.json"
+    },
+    {
+      "name": "PWM.RP2040",
+      "id": "5e8720436bfcfe2a",
+      "file": "pwm-rp2040.json"
+    },
+    {
+      "name": "RP2040_USB_Console",
+      "id": "3d2129f090f4dd7f",
+      "file": "rp2040_usb_console.json"
+    },
+    {
+      "name": "Seeed_Xiao_RP2040",
+      "id": "dd6950812d1483ac",
+      "file": "seeed_xiao_rp2040.json"
+    },
+    {
+      "name": "Servo",
+      "id": "0069df340f9aff7c",
+      "file": "servo.json"
+    },
+    {
+      "name": "SkidSteer",
+      "id": "7989972956642a83",
+      "file": "skidsteer.json"
+    },
+    {
+      "name": "SparkFun_ProMicro_RP2040",
+      "id": "7d1e83040460c3c2",
+      "file": "sparkfun_promicro_rp2040.json"
+    },
+    {
+      "name": "Vehicle",
+      "id": "b404ed3c370c8c26",
+      "file": "vehicle.json"
+    }
+  ]
+}

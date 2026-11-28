@@ -1,0 +1,94 @@
+{
+  "schema_version": "1",
+  "crate": "sparrow_crypto",
+  "version": "1.0.0",
+  "documented_at": "2026-11-26T02:13:48Z",
+  "description": "Sparrow web stack: hashes, AEAD, Argon2id, Ed25519 and TLS over OpenSSL",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "openssl",
+    "tls",
+    "argon2",
+    "hmac",
+    "cryptography"
+  ],
+  "website": "https://github.com/michael-hardeman/sparrow",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/sparrow",
+    "host": "github",
+    "commit": "0ae415dade34b1ae5e9a932459a958f530fa3a49",
+    "subdir": "sparrow_crypto/"
+  },
+  "dependencies": [
+    {
+      "crate": "openssl",
+      "version": "*"
+    },
+    {
+      "crate": "sparrow_core",
+      "version": "~1.0.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Sparrow.Crypto",
+      "id": "e40edc850b87c3c4",
+      "file": "sparrow-crypto.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Ciphers",
+      "id": "83cfcd80da434e47",
+      "file": "sparrow-crypto-ciphers.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Hashes",
+      "id": "846efa3577cc64f0",
+      "file": "sparrow-crypto-hashes.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Key_Derivation",
+      "id": "4bdfa2aae224e422",
+      "file": "sparrow-crypto-key_derivation.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Macs",
+      "id": "295426961848b570",
+      "file": "sparrow-crypto-macs.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Passwords",
+      "id": "5688b4a1b9161da5",
+      "file": "sparrow-crypto-passwords.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Public_Keys",
+      "id": "b058d70b876dd2e4",
+      "file": "sparrow-crypto-public_keys.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Random",
+      "id": "400af820e17d5c88",
+      "file": "sparrow-crypto-random.json"
+    },
+    {
+      "name": "Sparrow.Crypto.Signatures",
+      "id": "65e9bc019b45acdc",
+      "file": "sparrow-crypto-signatures.json"
+    },
+    {
+      "name": "Sparrow.Tls",
+      "id": "4fab866c8561194e",
+      "file": "sparrow-tls.json"
+    },
+    {
+      "name": "Sparrow_Crypto_Config",
+      "id": "12ca95a6c5fc49d0",
+      "file": "sparrow_crypto_config.json"
+    }
+  ]
+}

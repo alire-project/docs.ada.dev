@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "crate": "vaton",
+  "version": "0.1.0",
+  "documented_at": "2026-03-07T02:50:11Z",
+  "description": "Verified Ascii To Number conversion written in Ada/SPARK",
+  "long_description": "This library offers formally verified functions to convert character streams into the smallest standard type representation the resulting number may fit in.\nThe allowed formats are based on the [JSON-Number format](https://www.json.org/json-en.html), with the addition to allow single underscores between digits.\n\n**Note:** Only decimal based numbers are supported!\n\n**Examples:**\n\n```\n-10_000 -> Standard.Integer\n1.0 -> Standard.Float\n1e4 -> Standard.Float\n```\n",
+  "authors": [
+    "Manuel Hatzl"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "spark"
+  ],
+  "website": "https://github.com/mhatzl/vaton",
+  "repository": {
+    "url": "https://github.com/mhatzl/vaton",
+    "host": "github",
+    "commit": "c07eed4c36f9950c4bf93efb069eb6346fcca07f"
+  },
+  "dependencies": [
+    {
+      "crate": "spark_unbound",
+      "version": "~0.2.1"
+    }
+  ],
+  "units": [
+    {
+      "name": "Vaton",
+      "id": "13aba166509c740a",
+      "file": "vaton.json"
+    },
+    {
+      "name": "Vaton.Float_Conversions",
+      "id": "c608b239a9a26b7c",
+      "file": "vaton-float_conversions.json"
+    },
+    {
+      "name": "Vaton.Integer_Conversions",
+      "id": "42e296501318cbe2",
+      "file": "vaton-integer_conversions.json"
+    },
+    {
+      "name": "Vaton_Config",
+      "id": "b9f9b83197695efc",
+      "file": "vaton_config.json"
+    }
+  ]
+}

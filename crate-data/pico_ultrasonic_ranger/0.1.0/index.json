@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "crate": "pico_ultrasonic_ranger",
+  "version": "0.1.0",
+  "documented_at": "2026-03-05T03:01:44Z",
+  "description": "Driver for the Grove ultrasonic ranger. Depends on the RP Pico HAL.",
+  "authors": [
+    "Karsten Lueth"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "pico",
+    "ranger",
+    "distance",
+    "grove",
+    "ultrasonic"
+  ],
+  "website": "https://github.com/KLOC-Karsten/pico_ultrasonic_ranger",
+  "repository": {
+    "url": "https://github.com/KLOC-Karsten/pico_ultrasonic_ranger",
+    "host": "github",
+    "commit": "cfb2f7ffd88ee7b23a5b6466b513f34257773bd8"
+  },
+  "dependencies": [
+    {
+      "crate": "pico_bsp",
+      "version": "^2.2.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "Pico_Ultrasonic_Ranger",
+      "id": "b0c924e39c61429a",
+      "file": "pico_ultrasonic_ranger.json"
+    },
+    {
+      "name": "Pico_Ultrasonic_Ranger_Config",
+      "id": "9ba51ed6555e47a4",
+      "file": "pico_ultrasonic_ranger_config.json"
+    }
+  ]
+}

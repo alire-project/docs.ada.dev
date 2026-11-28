@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"espidf","version":"0.2.0","id":"aa08b16d4e5b43dc","name":"ESPIDF.HAL","qualified_name":"ESPIDF.HAL","kind":"ada_package","location":{"file":"source/espidf-hal.ads","line":7,"column":9},"code":"package ESPIDF.HAL","documentation":{"description":"\nCopyright (C) 2026, Vadim Godunko\n\nSPDX-License-Identifier: Apache-2.0 WITH LLVM-exception"}}

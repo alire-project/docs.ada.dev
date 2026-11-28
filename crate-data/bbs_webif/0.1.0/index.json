@@ -1,0 +1,68 @@
+{
+  "schema_version": "1",
+  "crate": "bbs_webif",
+  "version": "0.1.0",
+  "documented_at": "2026-03-03T17:53:09Z",
+  "description": "Simple web server to provide an interface to embedded instruments",
+  "authors": [
+    "Brent Seidel"
+  ],
+  "licenses": [
+    "GPL-3.0-or-later"
+  ],
+  "tags": [
+    "http",
+    "html",
+    "embedded",
+    "web"
+  ],
+  "website": "https://github.com/BrentSeidel/Ada-Web-Server",
+  "repository": {
+    "url": "https://github.com/BrentSeidel/Ada-Web-Server",
+    "host": "github",
+    "commit": "3aacf5100d2b648569f8a4b47b0bb92c50725837"
+  },
+  "dependencies": [
+    {
+      "crate": "bbs",
+      "version": "~0.1.0"
+    }
+  ],
+  "units": [
+    {
+      "name": "BBS.web",
+      "id": "cc7c39e993db5a29",
+      "file": "bbs-web.json"
+    },
+    {
+      "name": "BBS.web.files",
+      "id": "3e7fcf28af30ed89",
+      "file": "bbs-web-files.json"
+    },
+    {
+      "name": "BBS.web.html",
+      "id": "b0f93dfe52042521",
+      "file": "bbs-web-html.json"
+    },
+    {
+      "name": "BBS.web.http",
+      "id": "754975fde36cc603",
+      "file": "bbs-web-http.json"
+    },
+    {
+      "name": "BBS.web.internal",
+      "id": "a3ee8805d51bdd20",
+      "file": "bbs-web-internal.json"
+    },
+    {
+      "name": "BBS.web.server",
+      "id": "e2a66faad03d12a5",
+      "file": "bbs-web-server.json"
+    },
+    {
+      "name": "BBS.web.svg",
+      "id": "4c1969bc4fc666b3",
+      "file": "bbs-web-svg.json"
+    }
+  ]
+}

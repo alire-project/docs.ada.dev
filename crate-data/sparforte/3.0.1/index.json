@@ -1,0 +1,511 @@
+{
+  "schema_version": "1",
+  "crate": "sparforte",
+  "version": "3.0.1",
+  "documented_at": "2026-11-04T02:19:42Z",
+  "description": "An open source scripting language for high integrity tasks",
+  "authors": [
+    "Ken Burtch <ken@pegasoft.ca>"
+  ],
+  "licenses": [
+    "GPL-2.0-only"
+  ],
+  "tags": [
+    "scripting",
+    "language"
+  ],
+  "website": "http://sparforte.com",
+  "repository": {
+    "url": "https://github.com/Blady-Com/SparForte",
+    "host": "github",
+    "commit": "caa82b9052ce22d0138b42eb31538a89119b2ee0"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Base64",
+      "id": "371a286d5872a373",
+      "file": "base64.json"
+    },
+    {
+      "name": "builtins",
+      "id": "e513fb1f0504a951",
+      "file": "builtins.json"
+    },
+    {
+      "name": "builtins.help",
+      "id": "ea065fd755c15837",
+      "file": "builtins-help.json"
+    },
+    {
+      "name": "CGI",
+      "id": "f1111223887f55ca",
+      "file": "cgi.json"
+    },
+    {
+      "name": "chain_util",
+      "id": "902043a067e5b503",
+      "file": "chain_util.json"
+    },
+    {
+      "name": "compiler",
+      "id": "e996bb0ea465fae7",
+      "file": "compiler.json"
+    },
+    {
+      "name": "interpreter",
+      "id": "9666d9e889944773",
+      "file": "interpreter.json"
+    },
+    {
+      "name": "jobs",
+      "id": "5d9a17cb70b9733a",
+      "file": "jobs.json"
+    },
+    {
+      "name": "MD5",
+      "id": "3ebff31b62c0637c",
+      "file": "md5.json"
+    },
+    {
+      "name": "message_strings",
+      "id": "7ba128e4b8d95b6d",
+      "file": "message_strings.json"
+    },
+    {
+      "name": "os_defs",
+      "id": "8095c4d711618bfe",
+      "file": "os_defs.json"
+    },
+    {
+      "name": "parser",
+      "id": "b17d45121150928f",
+      "file": "parser.json"
+    },
+    {
+      "name": "parser.decl",
+      "id": "408f7a8e7fe45d9d",
+      "file": "parser-decl.json"
+    },
+    {
+      "name": "parser.decl.as",
+      "id": "91171366f9fc1315",
+      "file": "parser-decl-as.json"
+    },
+    {
+      "name": "parser.decl.shell",
+      "id": "0c77a813b5d7bbc2",
+      "file": "parser-decl-shell.json"
+    },
+    {
+      "name": "parser_arrays",
+      "id": "d17360de175a098c",
+      "file": "parser_arrays.json"
+    },
+    {
+      "name": "parser_aux",
+      "id": "02b402ae55a75636",
+      "file": "parser_aux.json"
+    },
+    {
+      "name": "parser_btree_io",
+      "id": "c2df6c9126924c96",
+      "file": "parser_btree_io.json"
+    },
+    {
+      "name": "parser_cal",
+      "id": "a8e8d575209596b5",
+      "file": "parser_cal.json"
+    },
+    {
+      "name": "parser_cgi",
+      "id": "e9a97021b4cdfa7c",
+      "file": "parser_cgi.json"
+    },
+    {
+      "name": "parser_chains",
+      "id": "274e8777f2e92a8f",
+      "file": "parser_chains.json"
+    },
+    {
+      "name": "parser_cmd",
+      "id": "896fe4fb50de28cf",
+      "file": "parser_cmd.json"
+    },
+    {
+      "name": "parser_containers",
+      "id": "e148217134723f45",
+      "file": "parser_containers.json"
+    },
+    {
+      "name": "parser_dbm",
+      "id": "4ebc875ef9ccfc45",
+      "file": "parser_dbm.json"
+    },
+    {
+      "name": "parser_dht",
+      "id": "c4ba59eb32142451",
+      "file": "parser_dht.json"
+    },
+    {
+      "name": "parser_dirops",
+      "id": "a59b7ebe1f57ee97",
+      "file": "parser_dirops.json"
+    },
+    {
+      "name": "parser_doubly",
+      "id": "aba8dfef3a811d7c",
+      "file": "parser_doubly.json"
+    },
+    {
+      "name": "parser_enums",
+      "id": "01d05d53b8e14c2e",
+      "file": "parser_enums.json"
+    },
+    {
+      "name": "parser_exceptions",
+      "id": "47e25ddb5732dfa1",
+      "file": "parser_exceptions.json"
+    },
+    {
+      "name": "parser_files",
+      "id": "ca6129e068b3ce6b",
+      "file": "parser_files.json"
+    },
+    {
+      "name": "parser_gnat_cgi",
+      "id": "0347a28b61d9d4a3",
+      "file": "parser_gnat_cgi.json"
+    },
+    {
+      "name": "parser_gnat_crc",
+      "id": "89e0bbe782d97758",
+      "file": "parser_gnat_crc.json"
+    },
+    {
+      "name": "parser_hash_io",
+      "id": "aacd0502803fb3b8",
+      "file": "parser_hash_io.json"
+    },
+    {
+      "name": "parser_hmaps",
+      "id": "b88097b4592908ea",
+      "file": "parser_hmaps.json"
+    },
+    {
+      "name": "parser_l10n",
+      "id": "0e631750c77996ef",
+      "file": "parser_l10n.json"
+    },
+    {
+      "name": "parser_lock",
+      "id": "bff8c183770d6e56",
+      "file": "parser_lock.json"
+    },
+    {
+      "name": "parser_logs",
+      "id": "8d1541ade1919020",
+      "file": "parser_logs.json"
+    },
+    {
+      "name": "parser_memcache",
+      "id": "4e8ad3f20667fc63",
+      "file": "parser_memcache.json"
+    },
+    {
+      "name": "parser_mysql",
+      "id": "99f1da8e87cf7452",
+      "file": "parser_mysql.json"
+    },
+    {
+      "name": "parser_mysqlm",
+      "id": "5f7471cad6091b4c",
+      "file": "parser_mysqlm.json"
+    },
+    {
+      "name": "parser_numerics",
+      "id": "9d9901a215094ac8",
+      "file": "parser_numerics.json"
+    },
+    {
+      "name": "parser_os",
+      "id": "0c2939ec69b9e221",
+      "file": "parser_os.json"
+    },
+    {
+      "name": "parser_params",
+      "id": "50f9f7814e39d1fb",
+      "file": "parser_params.json"
+    },
+    {
+      "name": "parser_pen",
+      "id": "88b3569fb6af04ad",
+      "file": "parser_pen.json"
+    },
+    {
+      "name": "parser_pragmas",
+      "id": "7894ad1ec8372304",
+      "file": "parser_pragmas.json"
+    },
+    {
+      "name": "parser_records",
+      "id": "93152abdf93b38e5",
+      "file": "parser_records.json"
+    },
+    {
+      "name": "parser_sessions",
+      "id": "32c337eaf597d125",
+      "file": "parser_sessions.json"
+    },
+    {
+      "name": "parser_sidefx",
+      "id": "e45d5d1f71f8b5cb",
+      "file": "parser_sidefx.json"
+    },
+    {
+      "name": "parser_sound",
+      "id": "24c06ec5b1e465dc",
+      "file": "parser_sound.json"
+    },
+    {
+      "name": "parser_stats",
+      "id": "383c8da399882146",
+      "file": "parser_stats.json"
+    },
+    {
+      "name": "parser_strings",
+      "id": "3ac111d7d5f54e30",
+      "file": "parser_strings.json"
+    },
+    {
+      "name": "parser_strings_pcre",
+      "id": "b38ed82fcf9de2f3",
+      "file": "parser_strings_pcre.json"
+    },
+    {
+      "name": "parser_tags",
+      "id": "d47e36bd4f68855b",
+      "file": "parser_tags.json"
+    },
+    {
+      "name": "parser_teams",
+      "id": "1a9f5c81a6b2f623",
+      "file": "parser_teams.json"
+    },
+    {
+      "name": "parser_templates",
+      "id": "a923da16ad5bc08e",
+      "file": "parser_templates.json"
+    },
+    {
+      "name": "parser_tinyserve",
+      "id": "27593a79435c4b84",
+      "file": "parser_tinyserve.json"
+    },
+    {
+      "name": "parser_tio",
+      "id": "6c7300303ba4a6b5",
+      "file": "parser_tio.json"
+    },
+    {
+      "name": "parser_units",
+      "id": "3f78f7fd0cb5b49f",
+      "file": "parser_units.json"
+    },
+    {
+      "name": "parser_vectors",
+      "id": "5842ef7cb6e8bf56",
+      "file": "parser_vectors.json"
+    },
+    {
+      "name": "pegasock",
+      "id": "b5aa85b92988871a",
+      "file": "pegasock.json"
+    },
+    {
+      "name": "pegasock.http",
+      "id": "dd0f5b5d11eca208",
+      "file": "pegasock-http.json"
+    },
+    {
+      "name": "pegasock.memcache",
+      "id": "482aad71afbee878",
+      "file": "pegasock-memcache.json"
+    },
+    {
+      "name": "pegasock.memcache.highread",
+      "id": "cdc9d19b374429e9",
+      "file": "pegasock-memcache-highread.json"
+    },
+    {
+      "name": "pegasock.smtp",
+      "id": "4c4b9260d45f54b7",
+      "file": "pegasock-smtp.json"
+    },
+    {
+      "name": "pegasock.syslog",
+      "id": "a569dcd724b67674",
+      "file": "pegasock-syslog.json"
+    },
+    {
+      "name": "pegasock.tinyserve",
+      "id": "d9b1e7d9bdf70cc8",
+      "file": "pegasock-tinyserve.json"
+    },
+    {
+      "name": "pegasock.tinyserve.http",
+      "id": "d7c61ceb1be32d1e",
+      "file": "pegasock-tinyserve-http.json"
+    },
+    {
+      "name": "pegasoft",
+      "id": "fa70551f2b6338b4",
+      "file": "pegasoft.json"
+    },
+    {
+      "name": "pegasoft.gen_list",
+      "id": "4a05795eee714449",
+      "file": "pegasoft-gen_list.json"
+    },
+    {
+      "name": "pegasoft.hmaps",
+      "id": "56c2cc9225ab5cbc",
+      "file": "pegasoft-hmaps.json"
+    },
+    {
+      "name": "pegasoft.hsets",
+      "id": "8c21c6e132d89497",
+      "file": "pegasoft-hsets.json"
+    },
+    {
+      "name": "pegasoft.mysql",
+      "id": "4f270d346591d1c9",
+      "file": "pegasoft-mysql.json"
+    },
+    {
+      "name": "pegasoft.numerics",
+      "id": "c8386800da6a9716",
+      "file": "pegasoft-numerics.json"
+    },
+    {
+      "name": "pegasoft.pen",
+      "id": "bc6e0926c4e73786",
+      "file": "pegasoft-pen.json"
+    },
+    {
+      "name": "pegasoft.pg",
+      "id": "191ea821c4ff7f19",
+      "file": "pegasoft-pg.json"
+    },
+    {
+      "name": "pegasoft.script_io",
+      "id": "62d3e0b261f1de21",
+      "file": "pegasoft-script_io.json"
+    },
+    {
+      "name": "pegasoft.strings",
+      "id": "fd52278a2547a9c9",
+      "file": "pegasoft-strings.json"
+    },
+    {
+      "name": "pegasoft.user_io",
+      "id": "1886b83fa33431aa",
+      "file": "pegasoft-user_io.json"
+    },
+    {
+      "name": "pegasoft.user_io.getline",
+      "id": "aef8644964531552",
+      "file": "pegasoft-user_io-getline.json"
+    },
+    {
+      "name": "pegasoft.vectors",
+      "id": "000e297eec8a14b9",
+      "file": "pegasoft-vectors.json"
+    },
+    {
+      "name": "performance_monitoring",
+      "id": "1e29e38ec7ba54a9",
+      "file": "performance_monitoring.json"
+    },
+    {
+      "name": "reports",
+      "id": "7f26104f77a7ce47",
+      "file": "reports.json"
+    },
+    {
+      "name": "reports.comm",
+      "id": "07ae94e454f5c98b",
+      "file": "reports-comm.json"
+    },
+    {
+      "name": "reports.help",
+      "id": "3b4ea01869d51260",
+      "file": "reports-help.json"
+    },
+    {
+      "name": "reports.prof",
+      "id": "4e2b762d9446aac6",
+      "file": "reports-prof.json"
+    },
+    {
+      "name": "reports.test",
+      "id": "addbbf1eb8ad7490",
+      "file": "reports-test.json"
+    },
+    {
+      "name": "scanner",
+      "id": "6105d8625ada3c9b",
+      "file": "scanner.json"
+    },
+    {
+      "name": "Scanner.Calendar",
+      "id": "24d7da5eba3ab9c1",
+      "file": "scanner-calendar.json"
+    },
+    {
+      "name": "scanner.communications",
+      "id": "ce139b645f366b3d",
+      "file": "scanner-communications.json"
+    },
+    {
+      "name": "scanner.shell",
+      "id": "65b928896fea6937",
+      "file": "scanner-shell.json"
+    },
+    {
+      "name": "scanner_restypes",
+      "id": "db983f258fd033c6",
+      "file": "scanner_restypes.json"
+    },
+    {
+      "name": "signal_flags",
+      "id": "ba43d2d2412ce6ce",
+      "file": "signal_flags.json"
+    },
+    {
+      "name": "software_models",
+      "id": "656b26273fdab9d9",
+      "file": "software_models.json"
+    },
+    {
+      "name": "spar_interface",
+      "id": "c65229c257d6f67c",
+      "file": "spar_interface.json"
+    },
+    {
+      "name": "symbol_table",
+      "id": "ba3e33f1d5e43c48",
+      "file": "symbol_table.json"
+    },
+    {
+      "name": "Ustrings",
+      "id": "75c2963392b3cfed",
+      "file": "ustrings.json"
+    },
+    {
+      "name": "value_conversion",
+      "id": "336523eceb794385",
+      "file": "value_conversion.json"
+    }
+  ]
+}

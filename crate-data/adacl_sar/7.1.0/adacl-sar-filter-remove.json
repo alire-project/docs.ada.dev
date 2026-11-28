@@ -1,0 +1,1 @@
+{"schema_version":"1","crate":"adacl_sar","version":"7.1.0","id":"0d94f78d41f0fb58","name":"AdaCL.SAR.Filter.Remove","qualified_name":"AdaCL.SAR.Filter.Remove","kind":"ada_package","location":{"file":"src/adacl-sar-filter-remove.ads","line":26,"column":9},"code":"package AdaCL.SAR.Filter.Remove","documentation":{"description":"Documentation:\n   Filter who remove data."}}

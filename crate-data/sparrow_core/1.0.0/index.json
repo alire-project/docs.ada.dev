@@ -1,0 +1,84 @@
+{
+  "schema_version": "1",
+  "crate": "sparrow_core",
+  "version": "1.0.0",
+  "documented_at": "2026-11-24T02:20:55Z",
+  "description": "Sparrow web stack: byte buffers, text and time formats, Base64",
+  "authors": [
+    "Michael Hardeman"
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "tags": [
+    "buffer",
+    "base64",
+    "utf8",
+    "spark"
+  ],
+  "website": "https://github.com/michael-hardeman/sparrow",
+  "repository": {
+    "url": "https://github.com/michael-hardeman/sparrow",
+    "host": "github",
+    "commit": "0ae415dade34b1ae5e9a932459a958f530fa3a49",
+    "subdir": "sparrow_core/"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Sparrow",
+      "id": "0454d527a7fa92d7",
+      "file": "sparrow.json"
+    },
+    {
+      "name": "Sparrow.Base64",
+      "id": "8cb426fdc17cd805",
+      "file": "sparrow-base64.json"
+    },
+    {
+      "name": "Sparrow.Buffers",
+      "id": "c76f43d53880598e",
+      "file": "sparrow-buffers.json"
+    },
+    {
+      "name": "Sparrow.Chunked",
+      "id": "a4206ae6e0293ebc",
+      "file": "sparrow-chunked.json"
+    },
+    {
+      "name": "Sparrow.Deflate",
+      "id": "76688152ab29b8e6",
+      "file": "sparrow-deflate.json"
+    },
+    {
+      "name": "Sparrow.Encoding",
+      "id": "c0ed57941d47f72f",
+      "file": "sparrow-encoding.json"
+    },
+    {
+      "name": "Sparrow.Gzip",
+      "id": "208eda757ff56251",
+      "file": "sparrow-gzip.json"
+    },
+    {
+      "name": "Sparrow.Migrations",
+      "id": "096e836a7f41c8e1",
+      "file": "sparrow-migrations.json"
+    },
+    {
+      "name": "Sparrow.Stores",
+      "id": "5bf4eed2bbd73e34",
+      "file": "sparrow-stores.json"
+    },
+    {
+      "name": "Sparrow.Times",
+      "id": "a9fa23b26c28a5eb",
+      "file": "sparrow-times.json"
+    },
+    {
+      "name": "Sparrow_Core_Config",
+      "id": "0e4c401cff54a2b5",
+      "file": "sparrow_core_config.json"
+    }
+  ]
+}

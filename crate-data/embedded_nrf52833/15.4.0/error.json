@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "embedded_nrf52833",
+  "version": "15.4.0",
+  "failed_at": "2026-05-12T03:02:16Z",
+  "stage": "gnatdoc",
+  "message": "gnatdoc exited with code 1"
+}

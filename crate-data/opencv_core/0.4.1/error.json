@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "crate": "opencv_core",
+  "version": "0.4.1",
+  "failed_at": "2026-10-13T02:31:29Z",
+  "stage": "fetch",
+  "message": "alr get exited with code 1"
+}

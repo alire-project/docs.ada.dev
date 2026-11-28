@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "crate": "littlefs",
+  "version": "1.0.0",
+  "documented_at": "2026-03-04T16:56:08Z",
+  "description": "Ada/SPARK binding for the LittleFS flash embedded filesystem",
+  "authors": [
+    "Fabien Chouteau"
+  ],
+  "licenses": [
+    "BSD-3-Clause"
+  ],
+  "tags": [
+    "embedded",
+    "filesystem",
+    "nostd",
+    "flash"
+  ],
+  "website": "https://github.com/Fabien-Chouteau/littlefs-ada",
+  "repository": {
+    "url": "https://github.com/Fabien-Chouteau/littlefs-ada",
+    "host": "github",
+    "commit": "b899127ccb86bd7779d681fb35cda3b9be4fdd47"
+  },
+  "dependencies": [],
+  "units": [
+    {
+      "name": "Littlefs",
+      "id": "8e9ccec2f90a3f57",
+      "file": "littlefs.json"
+    },
+    {
+      "name": "Littlefs_Config",
+      "id": "6386ed1054a1e46c",
+      "file": "littlefs_config.json"
+    }
+  ]
+}
